@@ -1,0 +1,743 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../../../../Dynamic%20Web%20Templates/English.dwt" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>Untitled 1</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">עברית</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<!-- Genesis Unit 2 Commentary Content - Goes inside DWT writehere region -->
+<!-- Page Title: Genesis Unit 2: The Generations of Heaven and Earth - Commentary -->
+
+<div id="top"></div>
+
+<style type="text/css">
+
+
+
+
+
+/* Commentary-specific styles */
+.commentary-header {
+    border-left: 4px solid #7ab0f7;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    border-radius: 8px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.commentary-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.commentary-header .subtitle {
+    color: #ecf0f1;
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.unit-overview {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border: 1px solid #e9ecef;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.overview-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 3px solid #7ab0f7;
+}
+
+.overview-item strong {
+    color: #7ab0f7;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.commentary-nav {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.commentary-nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    background-color: white;
+    color: #7ab0f7;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.commentary-nav a:hover {
+    background-color: #7ab0f7;
+    color: white;
+}
+
+.section-header {
+    color: #7ab0f7;
+    border-bottom: 2px solid #7ab0f7;
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.key-insight {
+    background-color: #e8f0fe;
+    border-left: 4px solid #5090f0;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+}
+
+.matrix-diagram {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.matrix-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.matrix-table th,
+.matrix-table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.matrix-table th {
+    background-color: #7ab0f7;
+    color: white;
+    font-weight: bold;
+}
+
+.matrix-table .row-label {
+    background-color: #f0f4f8;
+    font-weight: bold;
+    color: #7ab0f7;
+}
+
+.divine-name {
+    font-weight: bold;
+    color: #c41e3a;
+}
+
+.view-original {
+    background-color: #e8f0fe;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 3rem 0;
+}
+
+.button {
+    background-color: #7ab0f7;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #5a90d7;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .commentary-header {
+        padding-left: 1rem;
+    }
+    
+    .commentary-header h1 {
+        font-size: 2rem;
+    }
+    
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .commentary-nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+</style>
+
+<header class="commentary-header">
+    <h1>Genesis Unit 2: The Generations of Heaven and Earth</h1>
+    <p class="subtitle">A Commentary on the Woven Structure</p>
+</header>
+
+<div class="unit-overview">
+    <h3>Unit Overview</h3>
+    <div class="overview-grid">
+        <div class="overview-item">
+            <strong>Structure:</strong> 3×2 Regular Unit
+        </div>
+        <div class="overview-item">
+            <strong>Verses:</strong> Genesis 2:4-4:26
+        </div>
+        <div class="overview-item">
+            <strong>Divine Names:</strong> <span class="divine-name">YHWH Elohim</span> → <span class="divine-name">YHWH</span> → <span class="divine-name">Elohim</span>
+        </div>
+        <div class="overview-item">
+            <strong>Key Insight:</strong> Tracks the separation of heaven and earth through divine name patterns and relational breakdown
+        </div>
+    </div>
+</div>
+
+<nav class="commentary-nav">
+    <a href="#introduction">Introduction</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#columns">Columns</a>
+    <a href="#rows">Rows</a>
+    <a href="#divine-names">Divine Names</a>
+    <a href="#lineages">Two Lineages</a>
+    <a href="#patterns">Patterns</a>
+    <a href="#conclusion">Conclusion</a>
+</nav>
+
+<section id="introduction">
+    <h2 class="section-header">Why Does Eve Use Different Divine Names?</h2>
+    
+    <p>When Eve gives birth to Cain, she declares: "I have acquired a man את־יהוה (with YHWH)." When Seth is born, she says: "Elohim has appointed for me another seed." This distinction—unique in Torah—provides our entry point into the profound structural theology of Genesis Unit 2. Eve alone demonstrates the ability to distinguish between aspects of divinity, a discrimination that appears to flow directly from eating from the Tree of Knowledge of Good and Evil—literally, the Tree of Knowing Distinctions.</p>
+    
+    <p>This puzzle opens into the unit's deeper architecture: a systematic account of how heaven and earth, initially united, progressively separate through human action.</p>
+</section>
+
+<div class="back-to-top">
+    <a href="#top">↑ Back to Top</a>
+</div>
+
+<section id="architecture">
+    <h2 class="section-header">Section 1: The Architecture of Separation</h2>
+    
+    <h3>Reading the Title as Blueprint</h3>
+    <p>"These are the generations of the heavens and the earth when they were created." This opening provides both title and interpretive key. Unlike Unit 1's cosmic creation account, Unit 2 traces the genealogy of relationship—how heaven and earth, initially interwoven, pull apart.</p>
+    
+    <div class="matrix-diagram">
+        <h4>The 3×2 Structure</h4>
+        <table class="matrix-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Column a<br/>Ground Relationship</th>
+                    <th>Column b<br/>Human Relationships</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row-label">Row 1<br/>Heaven's Perspective</td>
+                    <td>Formation and Garden<br/><span class="divine-name">YHWH Elohim</span></td>
+                    <td>"Not Good" to "Very Good"<br/><span class="divine-name">YHWH Elohim</span></td>
+                </tr>
+                <tr>
+                    <td class="row-label">Row 2<br/>Collision Zone</td>
+                    <td>Garden Transgression<br/><span class="divine-name">YHWH Elohim</span></td>
+                    <td>Brother Murder<br/><span class="divine-name">YHWH</span> only</td>
+                </tr>
+                <tr>
+                    <td class="row-label">Row 3<br/>Earth's Perspective</td>
+                    <td>Technological Line<br/>No divine speech</td>
+                    <td>Spiritual Line<br/>Calls on <span class="divine-name">YHWH</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="key-insight">
+        <strong>Key Insight:</strong> The crucial fracture occurs precisely between cells 2a and 2b—at Eden's gate, where the unified YHWH Elohim separates into YHWH and Elohim appearing independently.
+    </div>
+    
+    <h3>The Inverse of Creation</h3>
+    <p>Where Unit 1 moved from separation to unity ("very good"), Unit 2 moves from unity to separation. Unit 1 built up through three cosmic levels (Sky/Middle/Earth) with increasing complexity. Unit 2 breaks down through three relational levels with increasing isolation. The architectural symmetry is precise—creation's scaffolding becomes de-creation's map.</p>
+</section>
+
+<div class="back-to-top">
+    <a href="#top">↑ Back to Top</a>
+</div>
+
+<section id="columns">
+    <h2 class="section-header">Section 2: The Columnar Threads</h2>
+    
+    <h3>Column a: The Adamah Thread</h3>
+    <p>The ground (adamah) appears in every cell of Column a, creating vertical continuity:</p>
+    
+    <p><strong>1a: Foundation and Formation</strong><br/>
+    Mist rises from adamah (positive moisture) → Human (adam) formed from adamah (intimate connection) → YHWH Elohim plants garden in the adamah (divine cultivation)</p>
+    
+    <p><strong>2a: Alienation and Curse</strong><br/>
+    Serpent tempts regarding the tree → Eyes opened, nakedness realized → Divine interrogation: "Where are you?" → Judgments and expulsion from Garden</p>
+    
+    <p><strong>3a: Violence and Boasting</strong><br/>
+    Cain builds city → Cultural developments through Lamech's line → Lamech's boast of seventy-sevenfold vengeance</p>
+    
+    <p>The progression from blessed source to cursed enemy to abandoned relationship traces humanity's environmental catastrophe in three acts.</p>
+    
+    <h3>Column b: The Relationship Thread</h3>
+    <p><strong>1b: "Not Good" to "Very Good"</strong><br/>
+    Recognition of relational need → Woman's creation from shared substance → "Therefore shall a man leave...and cleave" (relationship paradigm)</p>
+    
+    <p><strong>2b: Brother as Enemy</strong><br/>
+    Cain's rejected offering → Abel's murder → "Am I my brother's keeper?" (relationship denied) → Cain becomes fugitive and wanderer</p>
+    
+    <p><strong>3b: Seeking Reconnection</strong><br/>
+    Eve's recognition: "Elohim has appointed another seed" → "Then people began to call upon the name of YHWH" (vertical relationship sought)</p>
+</section>
+
+<section id="rows">
+    <h2 class="section-header">Section 3: The Row-by-Row Descent</h2>
+    
+    <h3>Row 1: Heaven's Careful Construction</h3>
+    <p>Row 1 presents YHWH Elohim's deliberate formation of human life. Uniquely, this row contains subdivisions (A and B) in both columns, creating internal structure where A sections present problems or needs, and B sections show divine solutions.</p>
+    
+    <h3>Row 2: The Collision Zone</h3>
+    <p>Row 2 contains the unit's dramatic core—where heavenly intention meets earthly reality. Crucially, it also contains the boundary between unified and fractured divine presence.</p>
+    
+    <div class="key-insight">
+        <strong>Critical Boundary:</strong> The divine names separate exactly at the Garden's boundary. Cell 2a (Inside Garden) maintains YHWH Elohim throughout the confrontation. Cell 2b (Outside Garden) shows only YHWH speaking to Cain.
+    </div>
+    
+    <h3>Row 3: Earth Alone</h3>
+    <p>By Row 3, divine speech vanishes entirely. We hear only human voices revealing two divergent paths:</p>
+    <ul>
+        <li><strong>3a - Cain's Line:</strong> Horizontal expansion through technology, cities, cultural achievement, climaxing in violence</li>
+        <li><strong>3b - Seth's Line:</strong> Vertical seeking, calling upon YHWH, attempting to restore broken connection</li>
+    </ul>
+</section>
+
+<div class="back-to-top">
+    <a href="#top">↑ Back to Top</a>
+</div>
+
+<section id="divine-names">
+    <h2 class="section-header">Section 4: The Divine Name Journey</h2>
+    
+    <h3>The Pattern of Separation</h3>
+    <p>The divine name pattern reveals the precise moment of cosmic fracture. Throughout Row 1 and into the Garden confrontation (2a), the text consistently uses "YHWH Elohim"—the unified divine name suggesting heaven and earth in harmony.</p>
+    
+    <p>The separation occurs exactly at the Garden's boundary:</p>
+    <ul>
+        <li><strong>2a (Inside Garden):</strong> YHWH Elohim still speaks unified during confrontation</li>
+        <li><strong>2b (Outside Garden):</strong> Only YHWH appears—the compound name separates</li>
+    </ul>
+    
+    <h3>Eve's Unique Discrimination</h3>
+    <p>Eve's ability to distinguish between YHWH and Elohim gains deeper significance when we realize she experienced both realities—inside Eden with unified presence and outside Eden with separated names. Her experience of eating from the Tree of Knowledge (literally, the Tree of Distinctions) enables her theological discrimination.</p>
+</section>
+
+<div class="back-to-top">
+    <a href="#top">↑ Back to Top</a>
+</div>
+
+<section id="lineages">
+    <h2 class="section-header">Section 5: The Two Lineages Revealed</h2>
+    
+    <h3>The Textual Evidence</h3>
+    <p>Careful attention to the Hebrew reveals two different beings:</p>
+    <ul>
+        <li>4:1: "HaAdam (האדם) knew his wife Eve" (with definite article)</li>
+        <li>4:25: "Adam (אדם) knew his wife again" (without article)</li>
+    </ul>
+    
+    <p>This distinction points back to Unit 1, where cosmic Adam was created "male and female" in the divine image, while Unit 2's HaAdam was formed from dust.</p>
+    
+    <h3>Two Incompatible Orientations</h3>
+    <p><strong>HaAdam → Cain → Technological Line:</strong> Horizontal expansion, mastery over nature, cultural achievement, climaxes in violence</p>
+    
+    <p><strong>Adam → Seth → Spiritual Line:</strong> Vertical connection, calling upon YHWH, recognition of mortality (Enosh), seeks restoration</p>
+    
+    <p>The murder of Abel represents more than sibling rivalry—it's the collision of two incompatible modes of being.</p>
+</section>
+
+<div class="back-to-top">
+    <a href="#top">↑ Back to Top</a>
+</div>
+
+<section id="patterns">
+    <h2 class="section-header">Section 6: Patterns of Meaning</h2>
+    
+    <h3>Verbal Threads Across the Structure</h3>
+    <p><strong>The "Good" (טוב) Deterioration:</strong></p>
+    <ul>
+        <li>1a: Trees "good for food"</li>
+        <li>2a: Woman sees tree is "good for food" (same phrase, corrupted context)</li>
+        <li>2a: "knowing good and evil" (good now paired with opposite)</li>
+        <li>Row 3: The word "good" vanishes entirely</li>
+    </ul>
+    
+    <p><strong>The "Take" (לקח) Pattern of Increasing Violation:</strong></p>
+    <ul>
+        <li>1a: YHWH Elohim "takes" human, places in garden (protective)</li>
+        <li>1b: "From man she was taken" (creative)</li>
+        <li>2a: "She took from its fruit" (transgressive)</li>
+        <li>3a: Lamech "took two wives" (excessive)</li>
+    </ul>
+</section>
+
+<div class="back-to-top">
+    <a href="#top">↑ Back to Top</a>
+</div>
+
+<section id="conclusion">
+    <h2 class="section-header">Conclusion: The Generations Continue</h2>
+    
+    <p>Unit 2's title promised the "generations of heaven and earth," and the structure delivers—literally unfolding from heaven (Row 1) through collision (Row 2) to earth (Row 3). But these generations continue beyond this unit:</p>
+    
+    <ul>
+        <li>Unit 3 will show these two lineages playing out cosmically</li>
+        <li>Violence will necessitate the flood</li>
+        <li>Noah will unite both lines, enabling a new beginning</li>
+    </ul>
+    
+    <p>The fractures revealed in Unit 2—vertical and horizontal, theological and relational, environmental and social—establish the agenda for the entire Torah. Each dimension of separation requires healing.</p>
+    
+    <div class="key-insight">
+        <strong>Central Insight:</strong> The woven structure insists that what appears broken in linear sequence remains whole in the deeper pattern. Learning to perceive that pattern is itself the beginning of repair.
+    </div>
+</section>
+
+<div class="view-original">
+    <h3>View the Original Torah Unit</h3>
+    <p>This commentary analyzes the woven structure. To see the original Hebrew text with color-coded parallels:</p>
+    <a href="../../../../woven/genesis-unit-2/" class="button">
+        View Genesis Unit 2 →
+    </a>
+</div>
+
+<script>
+// Smooth scrolling for all navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>  
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">התורה כדרכה</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="http://www.facebook.com/woventorah/">Facebook Discussion</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

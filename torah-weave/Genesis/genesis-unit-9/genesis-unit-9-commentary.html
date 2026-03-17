@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Genesis Unit 9: Abraham and Abimelech - Commentary | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="/torah-weave/">Torah Weave</a> &gt; 
+    <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis</a> &gt; 
+    Unit 9 Commentary
+</nav>
+
+<!-- Header -->
+<header class="unit-header-section">
+    <h1>Genesis Unit 9: Abraham and Abimelech</h1>
+    <div class="unit-meta">Genesis 20:1–22:24</div>
+</header>
+
+<!-- Small position map -->
+<aside class="unit-position-map">
+    <svg viewBox="0 0 280 100" width="280" height="100" style="display: block; margin: 1em auto;">
+        <!-- Column headers -->
+        <text x="50" y="15" font-size="9" text-anchor="middle" fill="#666">A</text>
+        <text x="80" y="15" font-size="9" text-anchor="middle" fill="#666">B</text>
+        <text x="110" y="15" font-size="9" text-anchor="middle" fill="#666">C</text>
+        <text x="140" y="15" font-size="9" text-anchor="middle" fill="#666">D</text>
+        <text x="170" y="15" font-size="9" text-anchor="middle" fill="#666">E</text>
+        <text x="200" y="15" font-size="9" text-anchor="middle" fill="#666">F</text>
+        <text x="230" y="15" font-size="9" text-anchor="middle" fill="#666">G</text>
+        
+        <!-- Row headers -->
+        <text x="20" y="40" font-size="9" text-anchor="middle" fill="#666">1</text>
+        <text x="20" y="60" font-size="9" text-anchor="middle" fill="#666">2</text>
+        <text x="20" y="80" font-size="9" text-anchor="middle" fill="#666">3</text>
+        
+        <!-- Row 1 -->
+        <rect x="35" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="25" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="25" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="155" y="25" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="185" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 2 -->
+        <rect x="35" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="45" width="25" height="18" fill="#ffe6e6" stroke="#ccc"/>
+        <rect x="95" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="45" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="155" y="45" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="185" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 3: Unit 9 highlighted -->
+        <rect x="35" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="65" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="65" width="25" height="18" fill="#e6ffee" stroke="#333" stroke-width="2"/>
+        <rect x="125" y="65" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="155" y="65" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="185" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Unit numbers -->
+        <text x="47" y="37" font-size="8" text-anchor="middle">1</text>
+        <text x="107" y="37" font-size="8" text-anchor="middle">5</text>
+        <text x="137" y="37" font-size="8" text-anchor="middle">6</text>
+        <text x="167" y="37" font-size="8" text-anchor="middle">11</text>
+        <text x="197" y="37" font-size="8" text-anchor="middle">12</text>
+        <text x="227" y="37" font-size="8" text-anchor="middle">17</text>
+        
+        <text x="47" y="57" font-size="8" text-anchor="middle">2</text>
+        <text x="77" y="57" font-size="8" text-anchor="middle">4</text>
+        <text x="107" y="57" font-size="8" text-anchor="middle">7</text>
+        <text x="137" y="57" font-size="8" text-anchor="middle">8</text>
+        <text x="167" y="57" font-size="8" text-anchor="middle">13</text>
+        <text x="197" y="57" font-size="8" text-anchor="middle">14</text>
+        <text x="227" y="57" font-size="8" text-anchor="middle">18</text>
+        
+        <text x="47" y="77" font-size="8" text-anchor="middle">3</text>
+        <text x="107" y="77" font-size="8" text-anchor="middle" font-weight="bold">9</text>
+        <text x="137" y="77" font-size="8" text-anchor="middle">10</text>
+        <text x="167" y="77" font-size="8" text-anchor="middle">15</text>
+        <text x="197" y="77" font-size="8" text-anchor="middle">16</text>
+        <text x="227" y="77" font-size="8" text-anchor="middle">19</text>
+    </svg>
+    <p class="map-caption">Unit 9 position: Row 3 (Elohim), Column C (Covenant track). Corner unit of the patriarchal matrix.</p>
+</aside>
+
+<!-- MAIN COMMENTARY -->
+<article>
+
+<section class="commentary-section">
+    <h2>Who Judges Whom</h2>
+    
+    <p>The unit opens with Abraham judging a foreign place. When Abimelech asks why Abraham lied about Sarah, Abraham explains: "Because I thought: Surely the fear of Elohim is not in this place, and they will slay me for my wife's sake" (20:11). Abraham assumed he knew where Elohim was feared and where Elohim was not. He judged Gerar and found it wanting.</p>
+    
+    <p>The unit closes with Abraham being judged. After he raises the knife over Isaac, the angel calls: "Lay not thy hand upon the lad, neither do thou any thing unto him; for now I know that thou art a God-fearing man" (22:12). The same Hebrew root—יָרֵא אֱלֹהִים, fear of Elohim—now applies to Abraham himself. He began by assessing others; he ends by being assessed.</p>
+    
+    <p>This envelope frames everything between. Abraham assumed Gerar lacked what he possessed. The unit will test whether Abraham possesses what he assumed. Between the opening judgment and the closing verdict, the covenant faces death at every turn: Sarah endangered, Isaac born, Ishmael expelled into the wilderness, Isaac bound on the altar. The one who judged others must now demonstrate what he claimed to have.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Architecture of Testing</h2>
+    
+    <p>Unit 9 organizes as a 2×2 matrix, with Column A containing encounters with Abimelech and Column B containing the sons—their births, their near-deaths, their fates:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Column A<br><small>Abimelech</small></th>
+                <th>Column B<br><small>The Sons</small></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header"><strong>Row 1</strong></td>
+                <td><strong>1A:</strong> Sarah with Abimelech (20:1–18)<br><em>"No fear of Elohim in this place"</em></td>
+                <td><strong>1B:</strong> Isaac born; Ishmael expelled (21:1–21)<br><em>Angel calls to Hagar from heaven</em></td>
+            </tr>
+            <tr>
+                <td class="row-header"><strong>Row 2</strong></td>
+                <td><strong>2A:</strong> Abimelech treaty at Beer-sheba (21:22–34)<br><em>Dispute over well; oath sworn</em></td>
+                <td><strong>2B:</strong> The Akedah (22:1–24)<br><em>Angel calls to Abraham from heaven</em></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>The columns create a distinction between what Abraham can control and what he cannot. In Column A, Abraham navigates relationships with a foreign king—the sister-wife deception, then the treaty negotiation. These are the tools patriarchs use: women for alliance, livestock and oaths for treaties. Abraham deploys what he has to secure his position. In Column B, Abraham faces what cannot be negotiated—Elohim's direct commands about his sons. No alliance, no treaty, no oath can help him here.</p>
+    
+    <p>But the two columns are not separate. What happens with Abimelech prepares for what happens with the sons. The sister-wife deception endangers the promise; Isaac's birth fulfills it. The treaty secures Abraham's place in the land; the Akedah secures his place in the covenant. The unit juxtaposes what Abraham can manage (alliances) with what he must release (sons). And certain phrases connect the columns directly, revealing that the same Abraham acts in both—but with opposite logic.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Abraham Rose Early in the Morning</h2>
+    
+    <p>The same phrase appears twice in Column B: "And Abraham arose up early in the morning" (וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר). First when he sends Hagar away (21:14). Then when he takes Isaac toward Moriah (22:3). Both times Abraham obeys a command he does not want to obey. Both times he rises early—not delaying, not negotiating, not finding excuses.</p>
+    
+    <p>The phrase marks the two hardest moments in the unit. Sarah demands that Abraham cast out Hagar and Ishmael; Elohim confirms the demand; Abraham rises early and sends them into the wilderness with bread and water. Elohim commands that Abraham sacrifice Isaac; Abraham rises early, saddles his donkey, and sets out. The vocabulary connects these scenes: in both, a son faces death. In both, Abraham acts at dawn. The parallel asks whether the father who sent one son into the wilderness can also bring another son to the altar.</p>
+    
+    <p>A third early rising appears in Column A: "And Abimelech rose early in the morning" (20:8)—to confront Abraham about the deception. The phrase appears in all three narrative sections of the unit. But Abimelech rises to accuse; Abraham rises to obey. The same action, different purposes. Abimelech's early rising exposes Abraham's failure of trust. Abraham's early risings demonstrate trust restored.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Angel Called from Heaven</h2>
+    
+    <p>Another phrase connects the two Column B scenes: "The angel of... called... out of heaven" (21:17, 22:11, 22:15). In Hagar's story: "the angel of Elohim called to Hagar out of heaven" (21:17). In the Akedah: "the angel of YHWH called unto him out of heaven" (22:11), and again "a second time out of heaven" (22:15).</p>
+    
+    <p>Both sons face death. Both are rescued by a voice from heaven. Ishmael lies under a shrub while his mother sits a bow-shot away, unable to watch him die. The angel calls; Elohim opens Hagar's eyes; she sees a well; the boy lives. Isaac lies bound on the altar while his father reaches for the knife. The angel calls; Abraham lifts his eyes; he sees a ram; the boy lives. Water saves one son; a ram saves the other. But in both cases, the mechanism is the same: divine voice from above, eyes opened, provision seen.</p>
+    
+    <p>The parallel complicates any reading that separates these sons too neatly. Ishmael is not Isaac; the text is clear about that. But both are Abraham's seed, both face death, both are rescued by angelic intervention from heaven. The father who cast out one son and nearly sacrificed the other loses neither. Fear of Elohim, it turns out, does not mean the sons will die. It means the father will act as commanded and trust the outcome to the one who commanded.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>I Know / I Know Not</h2>
+    
+    <p>A horizontal parallel crosses the unit's second row. When Abraham confronts Abimelech about the seized well, Abimelech responds: "I know not who hath done this thing" (לֹא יָדַעְתִּי, 21:26). When the angel stops Abraham's hand, he says: "Now I know that thou art a God-fearing man" (עַתָּה יָדַעְתִּי, 22:12). The Hebrew root ידע—to know—connects the two scenes with opposite valences.</p>
+    
+    <p>Abimelech does not know. His servants seized Abraham's well; he was unaware. This is the limitation of human knowledge—even a king cannot know everything his servants do. But the angel now knows. What was in question has been demonstrated. Abraham's fear of Elohim, which he claimed to possess while judging Gerar, has now been proven through action. The "now" (עַתָּה) marks a transition: before, it was assertion; now, it is knowledge.</p>
+    
+    <p>The parallel suggests that the Abimelech scenes and the Akedah are not separate topics randomly joined. They form a single argument about knowledge and testing. Abimelech did not know what his servants did; he learned through Abraham's complaint. The deity did not know (in the narrative's terms) whether Abraham would withhold his son; the deity learned through the test. Human ignorance and divine testing mirror each other across the unit's structure.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Swearing and Covenant</h2>
+    
+    <p>Two oaths frame the unit's resolution. In 2Aa, Abimelech asks Abraham: "Swear unto me here by Elohim" (הִשָּׁבְעָה לִּי בֵאלֹהִים, 21:23). Abraham swears, they make a covenant, and the place is called Beer-sheba—"well of the oath" (21:31). In 2Bc, YHWH swears to Abraham: "By Myself have I sworn, saith YHWH" (בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה, 22:16). Human oath to human; divine oath to human. Both use the same Hebrew root (שׁבע).</p>
+    
+    <p>The movement is from Abraham swearing to Abimelech to YHWH swearing to Abraham. In Column A, Abraham binds himself by oath to a foreign king—promising not to deal falsely with Abimelech's descendants. In Column B, YHWH binds the deity by oath to Abraham—promising blessing, multiplication, and victory over enemies. Abraham's oath secures his relationship with the nations; YHWH's oath secures his relationship with the divine. Both are necessary for the covenant to function: peace with neighbors, favor from above.</p>
+    
+    <p>The oath sequence also completes the triad. <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a> promised seed and land. <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a> established two covenants—one sealed by vision, one by circumcision. Unit 9 tests whether Abraham will return the promised son, and when he does not withhold, YHWH seals everything with an oath. Promise, covenant, oath: the triad moves from word to ceremony to irrevocable commitment.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Well of Water</h2>
+    
+    <p>A chiastic pattern connects Column A with Column B through wells. When Elohim opens Hagar's eyes in the wilderness, "she saw a well of water" (בְּאֵר מָיִם, 21:19). When Abraham confronts Abimelech, it is "because of the well of water" (בְּאֵר הַמַּיִם, 21:25) that Abimelech's servants seized. The same phrase in both scenes.</p>
+    
+    <p>In Hagar's story, the well is deliverance—Ishmael was dying of thirst, and the well saves him. In the Abimelech story, the well is dispute—Abraham's property rights are being violated, and the well becomes the occasion for treaty. Water that saves; water that is contested. The chiastic connection suggests these are two aspects of the same resource. Wells mean life in the wilderness (Hagar discovers this), which is precisely why they are worth fighting over (Abraham discovers this).</p>
+    
+    <p>The place where Abraham and Abimelech swear their oath is Beer-sheba—"well of the oath" or "well of seven" (from the seven ewe-lambs). The well dispute becomes the well covenant. And after the Akedah, Abraham returns to Beer-sheba (22:19). The well where he made peace with Abimelech is the home to which he comes back after the test. Life-giving water, contested water, covenanted water: the chiastic structure traces what a well means across the unit.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Abraham Took and Gave</h2>
+    
+    <p>The unit's resolution in each column involves Abraham taking animals and offering them. In 2Ab, "Abraham took sheep and oxen and gave them unto Abimelech; and they two made a covenant" (21:27). In 2Bb, "Abraham went and took the ram and offered him up for a burnt-offering in the stead of his son" (22:13). Taking and giving animals to seal a relationship—with a king in one column, with YHWH in the other.</p>
+    
+    <p>The parallel structure implies that what Abraham does with Abimelech mirrors what he does at Moriah. The treaty requires gifts; the test provides a substitute. In both cases, animals given or offered resolve what was at stake. With Abimelech, sheep and oxen secure the well and the relationship. At Moriah, a ram secures Isaac's life and the covenant blessing. The human covenant and the divine covenant are completed through the same gesture: Abraham takes, Abraham gives.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Sent Away, Returned</h2>
+    
+    <p>The unit's geography traces departure and return. Abraham "caused me to wander from my father's house" (20:13), he tells Abimelech—using the sister-wife deception since Elohim first called him away. Hagar "departed and strayed in the wilderness" (21:14) after Abraham sends her away. But after the Akedah, "Abraham returned unto his young men, and they rose up and went together to Beer-sheba; and Abraham dwelt at Beer-sheba" (22:19).</p>
+    
+    <p>The vocabulary shifts from wandering and straying to returning and dwelling. Abraham's journey began with departure from his father's house—rootless, dependent on deception for protection. It ends with return to Beer-sheba—settled, covenanted with the local king, confirmed by divine oath. Hagar's straying leads to well and survival. Abraham's testing leads to home and blessing. The unit moves from displacement to settlement, from wandering to dwelling.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Row 3 and the Earth</h2>
+    
+    <p>Unit 9 sits in Row 3, which Part C describes as the "earth" register—Day 3 (land appears) through Day 6 (life multiplying freely across earth's surface). All four middle Row 3 units employ Elohim as active divine subject and focus on death or fear of death. Unit 9 fits this pattern exactly: "Elohim did test Abraham" (22:1), and death threatens everywhere—Sarah taken by a king, Ishmael dying of thirst, Isaac bound for sacrifice.</p>
+    
+    <p>But YHWH is not absent. YHWH's angel calls from heaven when death approaches (22:11, 22:15). The Row 3 pattern holds—Elohim operates at the earthly level—but YHWH intervenes from above. This is Row 3's signature: Elohim works through circumstance and testing; YHWH calls from the transcendent position when the knife is raised. The rows do not eliminate the other divine name; they distribute the roles.</p>
+    
+    <p>Row 3's theme of boundary violation also appears. Sarah is taken by Abimelech—a sexual endangerment threatening covenant continuity. The corner units of the patriarchal matrix (<a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Units 5</a>, 9, <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a>, <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a>) all contain sister-wife material or sexual boundary crises. Unit 9 is a corner unit, and the sister-wife scene opens it. The pattern is structural: corner positions mark where covenant identity faces testing.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Completing the Covenant Track</h2>
+    
+    <p>Why does Abraham try to kill both his sons? The answer lies in <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>, where YHWH and Elohim established different covenants with different scopes. The YHWH covenant (Genesis 15) operates in the heart—through belief, vision, speech. Abram sleeps while YHWH passes between the cut pieces. This covenant extends to all Abraham's seed without limitation; Ishmael is included. The Elohim covenant (Genesis 17) operates in the flesh—through wholeheartedness and cutting the body. Abraham circumcises himself and every male in his household. This covenant is limited to Isaac alone: "My covenant will I establish with Isaac" (17:21). Two covenants, two modes: word for all seed, flesh for the chosen line.</p>
+    
+    <p>Unit 9 tests both covenants in their proper modes. Ishmael, who belongs to the word-covenant, is tested through word. Abraham sends him into the wilderness with bread and water, his fate entrusted to the promise YHWH made: "I will make him a great nation" (17:20). The angel confirms this destiny in the wilderness (21:18), using the same words. But the verse that precedes the rescue deserves attention: "For Elohim heard the voice of the lad where he is" (כִּי שָׁמַע אֱלֹהִים אֶל־קוֹל הַנַּעַר בַּאֲשֶׁר הוּא שָׁם, 21:17). Ishmael's name means "El hears" (יִשְׁמָעֵאל). When Hagar fled in <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>, the angel said "YHWH hath heard thy affliction" (16:11)—and she named him for YHWH's hearing. Now Elohim fulfills the name: Elohim hears. And "where he is"—not where he should be, not in Abraham's household, not in the covenant line. Elohim hears Ishmael in his actual place: the wilderness, outside, expelled. He doesn't need to be Isaac to be heard. He is heard as himself, where he is. Elohim releases him from the Elohim-covenant sphere but confirms he is still heard—heard by Elohim, in his own place, under his own destiny.</p>
+    
+    <p>Isaac, who belongs to the flesh-covenant, is tested through flesh. "Elohim did test Abraham" (22:1)—take the son, bind him, raise the knife. The Elohim covenant demanded that Abraham cut his own body in circumcision; now it demands that he offer his son's body as burnt-offering. Abraham proves faithful by acting: binding Isaac, laying him on the altar, stretching forth his hand with the knife. The test is in the flesh, as the Elohim covenant requires.</p>
+    
+    <p>But here is what the structure reveals: Elohim commands the sacrifice, yet only YHWH requires sacrifice. Elohim does not receive burnt-offerings; YHWH does. So Elohim commands what Elohim does not want. This IS the test—and it can only be stopped from outside, by the one who actually receives sacrifice. The angel of YHWH calls from heaven (22:11), and Abraham names the place יְהוָה יִרְאֶה, "YHWH will see" or "YHWH will provide" (22:14). Not Elohim-yireh. Abraham knows who provides the sacrifice. The ram that replaces Isaac is offered as burnt-offering—to YHWH, in YHWH's domain. Elohim tested in the flesh; YHWH provided the sacrifice.</p>
+    
+    <p>The divine names in the rescues now make sense. Ishmael, tested under the word-covenant of YHWH, is rescued by the angel of Elohim (21:17)—released from the Elohim-covenant sphere to the destiny YHWH promised. Isaac, tested under the flesh-covenant of Elohim, is rescued by the angel of YHWH (22:11)—because sacrifice belongs to YHWH, and only YHWH can provide what YHWH requires. The rescues come from outside each test's register. Neither covenant operates alone; both divine aspects work together, each limiting and completing the other.</p>
+    
+    <p>Abraham proves faithful to both covenants by releasing both sons—one to the wilderness under YHWH's promise, one to the altar under Elohim's test. And when both tests are complete, YHWH seals everything with an oath: "By Myself have I sworn... because thou hast not withheld thy son, thine only son" (22:16). The triad that began with promise (<a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a>) and moved through establishment in word and flesh (<a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>) concludes with testing in both modes (Unit 9). Abraham has demonstrated fear of Elohim in the flesh and trust in YHWH's word. The covenant track is complete.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Columns Across the Triad</h2>
+    
+    <p>The covenant track (<a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Units 5</a>, <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">7</a>, 9) maintains a consistent column structure: Column A contains male-focused material—divine promise, covenant ceremony, political treaty. Column B contains female-focused material—the women, what they bear, what must be released. Tracing this structure across the three units reveals a progression.</p>
+    
+    <p><a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a>: Column A presents the male genealogy (Shem to Terah, no women named) and YHWH's sevenfold promise to Abram alone. Column B introduces women as obstacle—"Sarai was barren; she had no child" (11:30)—and women endangered (the sister-wife crisis in Egypt). The female column presents what threatens the promise: barrenness, foreign kings taking the matriarch.</p>
+    
+    <p><a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>: Column A contains the covenant ceremonies—cut pieces, smoking torch, circumcision—all focused on Abraham's body and Abraham's relationship with YHWH. Column B contains the maternal line: Hagar's story (flight, angel, return), Sarah's promise (name change, laughter, Isaac announced). The female column presents women as channel—through them the promise will be embodied. Hagar bears Ishmael; Sarah is promised Isaac.</p>
+    
+    <p>Unit 9: Column A contains Abraham's political maneuvering—Sarah given to Abimelech, then the treaty negotiated with oaths and livestock. Column B contains the sons—what the women of <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a> produced. Isaac is born to Sarah; Ishmael (Hagar's son) is expelled; Isaac is bound. The female column has become the sons. The mothers recede; what they bore takes center stage.</p>
+    
+    <p>The progression: obstacle → channel → test. Women threatened the promise in <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a>. Women embodied the promise in <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>. What women produced is tested in Unit 9. And throughout, Column A shows Abraham managing horizontal relationships—with YHWH, with foreign kings—while Column B shows what cannot be managed but must be trusted to the vertical relationship.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Alliances and the Sons</h2>
+    
+    <p>The four corner units of the patriarchal matrix—<a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Units 5</a>, 9, <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a>, and <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a>—all involve the same gesture: using women to make alliances with foreign powers. Sarah is given to Pharaoh (<a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a>) and to Abimelech (Unit 9). Rebekah is presented as sister to Abimelech (<a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a>). Shechem seeks marriage with Dinah to create alliance with Jacob's family (<a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a>). These are not random endangerments—they are political marriages, women deployed as instruments of horizontal relationship-making between families and nations.</p>
+    
+    <p>Unit 9's structure reveals this logic with particular clarity. Column A contains Abraham's alliance-making: the sister-wife deception secures his safety with Abimelech (1A), then the treaty with oaths and gifts secures his property rights and peaceful dwelling (2A). Abraham does what patriarchs do—he uses the available tools (women, livestock, oaths) to establish his position among the nations. This is horizontal security.</p>
+    
+    <p>Column B contains the sons. And here the logic breaks. Ishmael and Isaac cannot be used for alliance-making. They are not instruments of horizontal security—they belong to the vertical relationship with Elohim. When Sarah demands "Cast out this bondwoman and her son" and Elohim confirms it, Abraham cannot negotiate. When Elohim says "Take thy son, thine only son, whom thou lovest," Abraham cannot bargain. The sons are not deployable resources.</p>
+    
+    <p>This explains why each Abimelech narrative precedes an attempt on a son's life. The structure juxtaposes what Abraham CAN control (alliances through women and treaties) with what he CANNOT control (the fate of his sons). The Abimelech scenes show Abraham securing his position through human means. The son scenes strip those means away. You cannot ally your way into covenant security. You cannot use the sons the way you use the wives. You can only obey.</p>
+    
+    <p>The "fear of Elohim" envelope now takes on sharper meaning. Abraham judged Gerar—"no fear of Elohim in this place"—and used Sarah accordingly, treating her as an alliance tool because he assumed the locals would kill him otherwise. But fear of Elohim, as demonstrated in the Akedah, means releasing what cannot be traded. It means rising early to send Ishmael into the wilderness without negotiating a better outcome. It means binding Isaac without securing guarantees. The sons are not for horizontal deployment. They are for vertical trust.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit 9 and Unit 12: Two Abimelech Units</h2>
+    
+    <p>Units 9 and 12 both contain Abimelech material: sister-wife deception, confrontation, well disputes, treaties at Beer-sheba. But the divine name distribution reveals their different functions. Unit 9 sits in Row 3 (Elohim as active subject); <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a> sits in Row 1 (YHWH as active subject). Elohim tests; YHWH blesses. The same narrative elements serve opposite purposes.</p>
+    
+    <p>Unit 9's theme is testing: Abraham must prove fear of Elohim by releasing what he cannot control. Column A contains alliance-making (Sarah for protection, treaty for property rights); Column B contains the sons who cannot be alliance-made. The structure juxtaposes horizontal security (what Abraham can manage) with vertical obedience (what Abraham must release). Both sons face death; both are rescued. Abraham is judged.</p>
+    
+    <p><a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a>'s theme is differentiation: Isaac must step out of Abraham's shadow and become his own patriarch. The three rows trace this progression. In Row 1, Isaac is compared WITH Abraham—YHWH promises "I WILL be with thee and WILL bless thee" while referencing "Abraham thy father" (26:3-5). In Row 2, Isaac is wealthy but still using Abraham's wells—he re-digs "the wells which they had digged in the days of Abraham his father" (26:18). In Row 3, Isaac produces his OWN well at Beer-sheba, and YHWH says "I AM with thee" (26:24)—present tense, Isaac's own blessing.</p>
+    
+    <p>The Abimelech encounters function as the mechanism of differentiation. Disputes over Abraham's wells force Isaac to move; he digs new wells; finally he digs his own at Beer-sheba. Then Abimelech comes to HIM—"we saw plainly that YHWH was with thee" (26:28). The treaty confirms Isaac as independent patriarch, no longer just "Abraham's son" benefiting from Abraham's arrangements. What Abraham pioneered in Unit 9, Isaac must earn independently in <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a>.</p>
+    
+    <p>This explains why <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a> has no sons. The unit isn't about what Isaac must release (that comes in <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a> with the blessing deception). It's about what Isaac must BECOME. Abraham was tested on fear of Elohim—would he release the sons? Isaac is blessed by YHWH as he becomes independent—will he step out of Abraham's shadow? Same Abimelech, same wells, same Beer-sheba. Different question, different divine name, different function in the architecture.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit 9 and Unit 16</h2>
+    
+    <p>Unit 9 corresponds to <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a> in the Isaac-Jacob cycle—both occupy Row 3 of their respective covenant tracks, and both are corner units of the patriarchal matrix. Part C notes that both units "specifically involve sexual/bodily boundary violations threatening covenant continuity." Sarah is taken by Abimelech in Unit 9; Dinah is violated at Shechem in <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a>, and Reuben lies with Bilhah.</p>
+    
+    <p>Both units are dominated by death. In Unit 9, Sarah faces potential death, Ishmael nearly dies in the wilderness, Isaac is bound for sacrifice. In <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a>, the Shechemites are massacred, Deborah dies, Rachel dies in childbirth, Isaac dies. Row 3's signature theme—mortality pervading earthly affairs—appears in both corresponding positions.</p>
+    
+    <p>The corner units mark boundary crises. The four corners of the matrix (<a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Units 5</a>, 9, <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a>, <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a>) all contain sister-wife material or sexual endangerment. Unit 9 opens with the sister-wife deception at Gerar; <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a> opens with Dinah's violation. The structural placement is not coincidental—corners are where covenant identity faces its sharpest testing.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Position and Connections</h2>
+    
+    <p>Unit 9 sits on the covenant track between <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a> (covenant ceremonies) and <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">Unit 10</a> (deaths and marriage). <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a> ended with Abraham circumcising his household—the covenant sign cut in flesh. <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a> (on the family track) showed YHWH appearing at Mamre with the promise of Isaac's birth. Unit 9 delivers what <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a> promised: Isaac is born (21:2-3).</p>
+    
+    <p>The laughter motif completes across these units. Sarah laughed within herself at the promise (<a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>, 18:12). Now "Elohim hath made laughter for me; every one that heareth will laugh on account of me" (21:6). The name יִצְחָק (Isaac, "he laughs") embeds the laughter in the covenant line. What began as doubt becomes celebration becomes identity.</p>
+    
+    <p><a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">Unit 10</a> will complete Abraham's story with deaths and transitions: Sarah dies, Abraham purchases Machpelah, the servant finds Rebekah, Abraham dies. The Akedah in Unit 9 is Abraham's final active test; what follows are conclusions and arrangements. The "fear of Elohim" that the angel confirms at Moriah is the last thing Abraham must demonstrate before his narrative arc closes.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Conclusion</h2>
+    
+    <p>Abraham began this unit judging others. "Surely the fear of Elohim is not in this place," he said of Gerar—and used Sarah as an alliance tool because he assumed the locals would kill him. This is what patriarchs do: they secure their position through women and treaties, through horizontal relationships with the nations.</p>
+    
+    <p>But the sons cannot be used this way. When Elohim commands, Abraham cannot negotiate Ishmael's fate or bargain for Isaac's life. The Column A logic—alliance, treaty, oath with Abimelech—does not work in Column B. The sons belong to the vertical relationship. They are not deployable resources for securing Abraham's position. They must be released.</p>
+    
+    <p>This is what fear of Elohim means: not the absence of fear (Abraham clearly feared Gerar's inhabitants), but the willingness to give up what cannot be traded. Abraham rose early to send Ishmael into the wilderness. Abraham rose early to take Isaac to Moriah. He did not delay, negotiate, or seek a better arrangement. The angel called from heaven for both sons—and both lived. But Abraham could not know that when he rose early.</p>
+    
+    <p>"Now I know that thou art a God-fearing man, seeing thou hast not withheld thy son, thine only son, from Me." The fear of Elohim that Abraham attributed to himself while doubting others has now been demonstrated. And YHWH responds with an oath: "By Myself have I sworn." The one who made alliance with Abimelech through human oaths now receives divine oath in return. Promise becomes covenant becomes irrevocable commitment.</p>
+    
+    <p>Abraham returns to Beer-sheba—to the well of the oath, to the place where he secured peace with the nations. But he returns as one who has been tested and confirmed. The wanderer who used women for protection now dwells as one who did not withhold his son. The covenant track is complete.</p>
+</section>
+
+</article>
+
+<!-- Link to unit text -->
+<aside class="unit-link-box">
+    <p><strong>Read the structured text:</strong> <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Genesis Unit 9 with color-coded patterns</a></p>
+</aside>
+
+<!-- Bottom Navigation -->
+<nav class="unit-navigation">
+    <div class="nav-arrows">
+        <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8-commentary.html" rel="prev">← Unit 8 Commentary</a>
+        <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10-commentary.html" rel="next">Unit 10 Commentary →</a>
+    </div>
+</nav>
+
+<!-- Citation Box -->
+<aside class="citation-box">
+    <p><strong>Suggested citation:</strong> "Genesis Unit 9: Abraham and Abimelech – Commentary." <em>Torah Weave</em>, [date]. https://chaver.com/torah-weave/Genesis/genesis-unit-9/genesis-unit-9-commentary.html</p>
+</aside>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

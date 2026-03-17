@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Genesis Unit 10: The Death of Sarah (Genesis 22:20-25:11) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <!-- Top Navigation -->
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis</a> → Unit 10
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html" rel="prev">← Unit 9</a>
+            <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html" rel="next">Unit 11 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <!-- Unit Header -->
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Genesis Unit 10: The Death of Sarah</h1>
+                <div class="unit-meta">
+                    <span itemprop="citation">Genesis 22:20-25:11</span>
+                </div>
+            </header>
+
+            <!-- Commentary Link -->
+            <aside class="commentary-link">
+                For detailed analysis of this unit's structure, see 
+                <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10-commentary.html">Genesis Unit 10 Commentary</a>
+            </aside>
+
+            <!-- Unit Content -->
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="cell-label col-left">1A</th><th class="cell-label col-right">1B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>22:20</b></span> And it came to pass
+  after these things, that it was told Abraham, saying: <span class="closure"><b>'Behold,
+  Milcah, she also hath borne children unto thy brother Nahor</b></span>: <span class="VerseNumber"><b>22:21</b></span> Uz his first-born, and Buz his brother,
+  and Kemuel the father of Aram; <span class="VerseNumber"><b>22:22</b></span>
+  and Chesed, and Hazo, and Pildash, and Jidlaph, and Bethuel.' <span class="VerseNumber"><b>22:23</b></span> <span class="vertical1"><b>And Bethuel
+  begot Rebekah</b></span>; these eight did Milcah bear to Nahor, Abraham's
+  brother. <span class="VerseNumber"><b>22:24</b></span> And his concubine, whose
+  name was Reumah, she also bore Tebah, and Gaham, and Tahash, and Maacah. <span class="HebrewParagraph"><span>{P}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b>23:1</b></span> <span class="closure"><b>And the life of Sarah was a hundred and seven and twenty
+  years; these were the years of the life of Sarah</b></span>. <span class="VerseNumber"><b>23:2</b></span> And Sarah died in Kiriatharba--the same
+  is Hebron--in the land of Canaan; and Abraham came to mourn for Sarah, and to
+  weep for her. <span class="VerseNumber"><b>23:3</b></span> And Abraham rose up
+  from before his dead, and spoke unto the children of Heth, saying: <span class="VerseNumber"><b>23:4</b></span> 'I am a stranger and a sojourner with
+  you: give me a possession of a burying-place with you, that I may bury my
+  dead out of my sight.' <span class="VerseNumber"><b>23:5</b></span> And the
+  children of Heth answered Abraham, saying unto him: <span class="VerseNumber"><b>23:6</b></span>
+  'Hear us, my lord: thou art a mighty prince among us; in the choice of our
+  sepulchres bury thy dead; none of us shall withhold from thee his sepulchre,
+  but that thou mayest bury thy dead.' <span class="VerseNumber"><b>23:7</b></span>
+  And Abraham rose up, and bowed down to the people of the land, even to the
+  children of Heth. <span class="VerseNumber"><b>23:8</b></span> And he spoke
+  with them, saying: 'If it be your mind that I should bury my dead out of my
+  sight, hear me, and entreat for me to Ephron the son of Zohar, <span class="VerseNumber"><b>23:9</b></span> that he may give me the cave of
+  Machpelah, which he hath, which is in the end of his field; for the full
+  price let him give it to me in the midst of you for a possession of a
+  burying-place.' <span class="VerseNumber"><b>23:10</b></span> Now Ephron was
+  sitting in the midst of the children of Heth; and Ephron the Hittite answered
+  Abraham in the hearing of the children of Heth, even of all that went in at
+  the gate of his city, saying: <span class="VerseNumber"><b>23:11</b></span>
+  'Nay, my lord, hear me: the field give I thee, and the cave that is therein,
+  I give it thee; in the presence of the sons of my people give I it thee; bury
+  thy dead.' <span class="VerseNumber"><b>23:12</b></span> And Abraham bowed down
+  before the people of the land. <span class="VerseNumber"><b>23:13</b></span>
+  And he spoke unto Ephron in the hearing of the people of the land, saying:
+  'But if thou wilt, I pray thee, hear me: I will give the price of the field;
+  take it of me, and I will bury my dead there.' <span class="VerseNumber"><b>23:14</b></span>
+  And Ephron answered Abraham, saying unto him: <span class="VerseNumber"><b>23:15</b></span>
+  'My lord, hearken unto me: a piece of land worth four hundred shekels of
+  silver, what is that betwixt me and thee? bury therefore thy dead.' <span class="VerseNumber"><b>23:16</b></span> And Abraham hearkened unto Ephron; and
+  Abraham weighed to Ephron the silver, which he had named in the hearing of
+  the children of Heth, four hundred shekels of silver, current money with the
+  merchant. <span class="VerseNumber"><b>23:17</b></span> So the field of Ephron,
+  which was in Machpelah, which was before Mamre, the field, and the cave which
+  was therein, and all the trees that were in the field, that were in all the
+  border thereof round about, were made sure <span class="VerseNumber"><b>23:18</b></span>
+  unto Abraham for a possession in the presence of the children of Heth, before
+  all that went in at the gate of his city. <span class="VerseNumber"><b>23:19</b></span>
+  And after this, Abraham buried Sarah his wife in the cave of the field of
+  Machpelah before Mamre--the same is Hebron--in the land of Canaan. <span class="VerseNumber"><b>23:20</b></span> And the field, and the cave that is
+  therein, were made sure unto Abraham for a possession of a burying-place by
+  the children of Heth. <span class="HebrewParagraph"><span >{S}</span></span></p></td></tr></tbody></table>
+
+<div class="page-break"></div>
+
+<table class="scripture-table"><thead><tr><th class="cell-label col-left">2A</th><th class="cell-label col-right">2B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>24:1</b></span> And
+  Abraham was old, well stricken in age; <span class="internalparallel"><b>and
+  the LORD had blessed Abraham in all things</b></span>. <span class="VerseNumber"><b>24:2</b></span> <span class="horizontal1"><b>And Abraham
+  said unto his servant</b></span>, the elder of his house, that ruled over all
+  that he had: 'Put, I pray thee, thy hand under my thigh. <span class="VerseNumber"><b>24:3</b></span> <span class="horizontal1"><b>And I will
+  make thee swear by the LORD, the God of heaven and the God of the earth, that
+  thou shalt not take a wife for my son of the daughters of the Canaanites,
+  among whom I dwell</b></span>. <span class="VerseNumber"><b>24:4</b></span> <span class="horizontal1"><b>But thou shalt go unto my country, and to my kindred,
+  and take a wife for my son, even for Isaac</b></span>.' <span class="VerseNumber"><b>24:5</b></span> <span class="horizontal1"><b>And the
+  servant said unto him: 'Peradventure the woman will not be willing to follow
+  me unto this land; must I needs bring thy son back unto the land from whence
+  thou camest</b></span>?' <span class="VerseNumber"><b>24:6</b></span> And
+  Abraham said unto him: 'Beware thou that thou bring not my son back thither. <span class="VerseNumber"><b>24:7</b></span> <span class="horizontal1"><b>The LORD, the
+  God of heaven, who took me from my father's house, and from the land of my
+  nativity, and who spoke unto me, and who swore unto me, saying: Unto thy seed
+  will I give this land; He will send His angel before thee, and thou shalt
+  take a wife for my son from thence</b></span>. <span class="VerseNumber"><b>24:8</b></span>
+  <span class="horizontal1"><b>And if the woman be not willing to follow thee,
+  then thou shalt be clear from this my oath; only thou shalt not bring my son
+  back thither</b></span>.' <span class="VerseNumber"><b>24:9</b></span> And the
+  servant put his hand under the thigh of Abraham his master, and swore to him
+  concerning this matter. </span></p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>24:28</b></span> And the
+  damsel ran, and told her mother's house according to these words. <span class="VerseNumber"><b>24:29</b></span> And Rebekah had a brother, and his name
+  was Laban; and Laban ran out unto the man, unto the fountain. <span class="VerseNumber"><b>24:30</b></span> And it came to pass, when he saw the
+  ring, and the bracelets upon his sister's hands, and when he heard the words
+  of Rebekah his sister, saying: 'Thus spoke the man unto me,' that he came
+  unto the man; and, behold, he stood by the camels at the fountain. <span class="VerseNumber"><b>24:31</b></span> And he said: 'Come in, thou blessed of
+  the LORD; wherefore standest thou without? for I have cleared the house, and
+  made room for the camels.' <span class="VerseNumber"><b>24:32</b></span> And
+  the man came into the house, and he ungirded the camels; and he gave straw
+  and provender for the camels, and water to wash his feet and the feet of the
+  men that were with him. <span class="VerseNumber"><b>24:33</b></span> And there
+  was set food before him to eat; but he said: 'I will not eat, until I have
+  told mine errand.' And he said: 'Speak on.' <span class="VerseNumber"><b>24:34</b></span>
+  <span class="horizontal1"><b>And he said: 'I am Abraham's servant</b></span>. <span class="VerseNumber"><b>24:35</b></span> And the LORD hath blessed my master
+  greatly; and he is become great; and He hath given him flocks and herds, and
+  silver and gold, and men-servants and maid-servants, and camels and asses. <span class="VerseNumber"><b>24:36</b></span> And Sarah my master's wife bore a son
+  to my master when she was old; and unto him hath he given all that he hath. <span class="VerseNumber"><b>24:37</b></span> <span class="horizontal1"><b>And my
+  master made me swear, saying: Thou shalt not take a wife for my son of the
+  daughters of the Canaanites, in whose land I dwell</b></span>. <span class="VerseNumber"><b>24:38</b></span> <span class="horizontal1"><b>But thou
+  shalt go unto my father's house, and to my kindred, and take a wife for my
+  son</b></span>. <span class="VerseNumber"><b>24:39</b></span> <span class="horizontal1"><b>And I said unto my master: Peradventure the woman will
+  not follow me</b></span>. <span class="VerseNumber"><b>24:40</b></span> <span class="horizontal1"><b>And he said unto me: The LORD, before whom I walk, will
+  send His angel with thee, and prosper thy way; and thou shalt take a wife for
+  my son of my kindred, and of my father's house;</b></span> <span class="VerseNumber"><b>24:41</b></span> <span class="horizontal1"><b>then shalt
+  thou be clear from my oath, when thou comest to my kindred; and if they give
+  her not to thee, thou shalt be clear from my oath</b></span>. </span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>24:10</b></span> And the
+  servant took ten camels, of the camels of his master, and departed; <span class="internalparallel"><b>having all goodly things of his master's in his
+  hand</b></span>; and he arose, and went to Aram-naharaim, unto the city of
+  Nahor. <span class="VerseNumber"><b>24:11</b></span> And he made the camels to
+  kneel down without the city by the well of water at the time of evening, the
+  time that women go out to draw water. <span class="VerseNumber"><b>24:12</b></span>
+  <span class="horizontal1"><b>And he said: 'O LORD, the God of my master
+  Abraham, send me, I pray Thee, good speed this day, and show kindness unto my
+  master Abraham</b></span>. <span class="VerseNumber"><b>24:13</b></span> <span class="horizontal1"><b>Behold, I stand by the fountain of water; and the
+  daughters of the men of the city come out to draw water</b></span>. <span class="VerseNumber"><b>24:14</b></span> <span class="horizontal1"><b>So let it
+  come to pass, that the damsel to whom I shall say: Let down thy pitcher, I
+  pray thee, that I may drink; and she shall say: Drink, and I will give thy
+  camels drink also; let the same be she that Thou hast appointed for Thy
+  servant, even for Isaac; and thereby shall I know that Thou hast shown
+  kindness unto my master.</b></span>' <span class="VerseNumber"><b>24:15</b></span>
+  <span class="horizontal1"><b>And it came to pass, before he had done speaking,
+  that, behold</b></span>, <span class="vertical1"><b>Rebekah came out, who was
+  born to Bethuel the son of Milcah, the wife of Nahor, Abraham's brother</b></span>,
+  with her pitcher upon her shoulder. <span class="VerseNumber"><b>24:16</b></span>
+  And the damsel was very fair to look upon, a virgin, neither had any man known
+  her; and she went down to the fountain, and filled her pitcher, and came up. <span class="VerseNumber"><b>24:17</b></span> <span class="horizontal1"><b>And the
+  servant ran to meet her, and said: 'Give me to drink, I pray thee, a little
+  water of thy pitcher</b></span>.' <span class="VerseNumber"><b>24:18</b></span>
+  <span class="horizontal1"><b>And she said: 'Drink, my lord'; and she hastened,
+  and let down her pitcher upon her hand, and gave him drink</b></span>. <span class="VerseNumber"><b>24:19</b></span> And when she had done giving him drink,
+  she said: 'I will draw for thy camels also, until they have done drinking.' <span class="VerseNumber"><b>24:20</b></span> And she hastened, and emptied her
+  pitcher into the trough, and ran again unto the well to draw, and drew for
+  all his camels. <span class="VerseNumber"><b>24:21</b></span> And the man
+  looked stedfastly on her; holding his peace, to know whether the LORD had
+  made his journey prosperous or not. <span class="VerseNumber"><b>24:22</b></span>
+  And it came to pass, as the camels had done drinking, that <span class="vertical1"><b>the man took a golden ring of half a shekel weight, and
+  two bracelets for her hands of ten shekels weight of gold</b></span>; <span class="VerseNumber"><b>24:23</b></span> <span class="horizontal1"><b>and said:
+  'Whose daughter art thou? tell me, I pray thee. Is there room in thy father's
+  house for us to lodge in</b></span>?' <span class="VerseNumber"><b>24:24</b></span>
+  <span class="horizontal1"><b>And she said unto him: 'I am the daughter of
+  Bethuel the son of Milcah, whom she bore unto Nahor</b></span>.' <span class="VerseNumber"><b>24:25</b></span> <span class="horizontal1"><b>She said
+  moreover unto him: 'We have both straw and provender enough, and room to
+  lodge in</b></span>.' <span class="VerseNumber"><b>24:26</b></span> <span class="horizontal1"><b>And the man bowed his head, and prostrated himself
+  before the LORD</b></span>. <span class="VerseNumber"><b>24:27</b></span> <span class="horizontal1"><b>And he said: 'Blessed be the LORD, the God of my master
+  Abraham, who hath not forsaken His mercy and His truth toward my master; as
+  for me, the LORD hath led me in the way to the house of my master's brethren</b></span>.'</span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>24:42</b></span> <span class="horizontal1"><b>And I came this day unto the fountain, and said: O LORD,
+  the God of my master Abraham, if now Thou do prosper my way which I go</b></span>:
+  <span class="VerseNumber"><b>24:43</b></span> <span class="horizontal1"><b>behold,
+  I stand by the fountain of water; and let it come to pass, that the maiden
+  that cometh forth to draw, to whom I shall say: Give me, I pray thee, a
+  little water from thy pitcher to drink</b></span>; <span class="VerseNumber"><b>24:44</b></span>
+  <span class="horizontal1"><b>and she shall say to me: Both drink thou, and I
+  will also draw for thy camels; let the same be the woman whom the LORD hath
+  appointed for my master's son</b></span>. <span class="VerseNumber"><b>24:45</b></span>
+  <span class="horizontal1"><b>And before I had done speaking to my heart,
+  behold, Rebekah came forth with her pitcher on her shoulder; and she went
+  down unto the fountain, and drew. And I said unto her: Let me drink, I pray
+  thee</b></span>. <span class="VerseNumber"><b>24:46</b></span> <span class="horizontal1"><b>And she made haste, and let down her pitcher from her
+  shoulder, and said: Drink, and I will give thy camels drink also. So I drank,
+  and she made the camels drink also</b></span>. <span class="VerseNumber"><b>24:47</b></span>
+  <span class="horizontal1"><b>And I asked her, and said: Whose daughter art thou?
+  And she said: The daughter of Bethuel, Nahor's son, whom Milcah bore unto
+  him. And I put the ring upon her nose, and the bracelets upon her hands</b></span>.
+  <span class="VerseNumber"><b>24:48</b></span> <span class="horizontal1"><b>And I
+  bowed my head, and prostrated myself before the LORD, and blessed the LORD,
+  the God of my master Abraham, who had led me in the right way to take my
+  master's brother's daughter for his son</b></span>. <span class="VerseNumber"><b>24:49</b></span>
+  And now if ye will deal kindly and truly with my master, tell me; and if not,
+  tell me; that I may turn to the right hand, or to the left.' <span class="VerseNumber"><b>24:50</b></span> Then Laban and Bethuel answered and
+  said: 'The thing proceedeth from the LORD; we cannot speak unto thee bad or
+  good. <span class="VerseNumber"><b>24:51</b></span> Behold, Rebekah is before
+  thee, take her, and go, and let her be thy master's son's wife, as the LORD
+  hath spoken.' <span class="VerseNumber"><b>24:52</b></span> And it came to
+  pass, that, when Abraham's servant heard their words, he bowed himself down
+  to the earth unto the LORD.</span></p></td></tr></tbody></table>
+
+<div class="page-break"></div>
+
+<table class="scripture-table"><thead><tr><th class="cell-label col-left">3A</th><th class="cell-label col-right">3B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>24:53</b></span> <span class="vertical1"><b>And the servant brought forth jewels of silver, and jewels
+  of gold, and raiment, and gave them to Rebekah; he gave also to her brother
+  and to her mother precious things</b></span>. <span class="VerseNumber"><b>24:54</b></span>
+  And they did eat and drink, he and the men that were with him, and tarried
+  all night; and they rose up in the morning, and he said: 'Send me away unto
+  my master.' <span class="VerseNumber"><b>24:55</b></span> And her brother and
+  her mother said: 'Let the damsel abide with us a few days, at the least ten;
+  after that she shall go.' <span class="VerseNumber"><b>24:56</b></span> And he
+  said unto them: 'Delay me not, seeing the LORD hath prospered my way; send me
+  away that I may go to my master.' <span class="VerseNumber"><b>24:57</b></span>
+  And they said: 'We will call the damsel, and inquire at her mouth.' <span class="VerseNumber"><b>24:58</b></span> And they called Rebekah, and said unto
+  her: 'Wilt thou go with this man?' And she said: 'I will go.' <span class="VerseNumber"><b>24:59</b></span> And they sent away Rebekah their
+  sister, and her nurse, and Abraham's servant, and his men. <span class="VerseNumber"><b>24:60</b></span> And they blessed Rebekah, and said unto
+  her: 'Our sister, be thou the mother of thousands of ten thousands, and let
+  thy seed possess the gate of those that hate them.'</p></td><td><p class="torah"><span class="VerseNumber"><b>24:61</b></span> And Rebekah arose,
+  and her damsels, and they rode upon the camels, and followed the man. And the
+  servant took Rebekah, and went his way. <span class="VerseNumber"><b>24:62</b></span>
+  <span class="vertical1"><b>And Isaac came from the way of Beer-lahai-roi; for
+  he dwelt in the land of the South</b></span>. <span class="VerseNumber"><b>24:63</b></span>
+  And Isaac went out to meditate in the field at the eventide; and he lifted up
+  his eyes, and saw, and, behold, there were camels coming. <span class="VerseNumber"><b>24:64</b></span> And Rebekah lifted up her eyes, and
+  when she saw Isaac, she alighted from the camel. <span class="VerseNumber"><b>24:65</b></span>
+  And she said unto the servant: 'What man is this that walketh in the field to
+  meet us?' And the servant said: 'It is my master.' And she took her veil, and
+  covered herself. <span class="VerseNumber"><b>24:66</b></span> And the servant
+  told Isaac all the things that he had done. <span class="VerseNumber"><b>24:67</b></span>
+  And Isaac brought her into his mother Sarah's tent, and took Rebekah, and she
+  became his wife; and he loved her. And Isaac was comforted for his mother. <span class="HebrewParagraph"><span>{P}</span></span></p></td></tr></tbody></table>
+
+<table class="scripture-table"><thead><tr><th class="cell-label col-left">4A</th><th class="cell-label col-right">4B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>25:1</b></span> And Abraham took
+  another wife, and her name was Keturah. <span class="VerseNumber"><b>25:2</b></span>
+  <span class="closure"><b>And she bore him Zimran, and Jokshan, and Medan, and
+  Midian, and Ishbak, and Shuah</b></span>. <span class="VerseNumber"><b>25:3</b></span>
+  And Jokshan begot Sheba, and Dedan. And the sons of Dedan were Asshurim, and
+  Letushim, and Leummim. <span class="VerseNumber"><b>25:4</b></span> And the
+  sons of Midian: Ephah, and Epher, and Hanoch, and Abida, and Eldaah. All
+  these were the children of Keturah. <span class="VerseNumber"><b>25:5</b></span>
+  And Abraham gave all that he had unto Isaac. <span class="VerseNumber"><b>25:6</b></span>
+  <span class="vertical1"><b>But unto the sons of the concubines, that Abraham
+  had, Abraham gave gifts</b></span>; and he sent them away from Isaac his son,
+  while he yet lived, eastward, unto the east country.</p></td><td><p class="torah"><span class="VerseNumber"><b>25:7</b></span> <span class="closure"><b>And these are the days of the years of Abraham's life which
+  he lived, a hundred threescore and fifteen years</b></span>. <span class="VerseNumber"><b>25:8</b></span> And Abraham expired, and died in a good
+  old age, an old man, and full of years; and was gathered to his people. <span class="VerseNumber"><b>25:9</b></span> And Isaac and Ishmael his sons buried
+  him in the cave of Machpelah, in the field of Ephron the son of Zohar the
+  Hittite, which is before Mamre; <span class="VerseNumber"><b>25:10</b></span>
+  the field which Abraham purchased of the children of Heth; there was Abraham
+  buried, and Sarah his wife. <span class="VerseNumber"><b>25:11</b></span> And
+  it came to pass after the death of Abraham, that God blessed Isaac his son; <span class="vertical1"><b>and Isaac dwelt by Beer-lahai-roi</b></span>. <span class="HebrewParagraph"><span>{P}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <!-- Citation Box - AT BOTTOM -->
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Genesis Unit 10: The Death of Sarah (Genesis 22:20-25:11)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html
+            </aside>
+        </article>
+    </main>
+
+    <!-- Unit Footer Navigation -->
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html" rel="prev">← Unit 9: Abraham and Abimelech</a>
+            <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html" rel="next">Unit 11: Isaac and Ishmael →</a>
+        </div>
+        <div>
+            <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">→ Genesis Overview</a>
+        </div>
+    </nav>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

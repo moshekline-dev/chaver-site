@@ -1,0 +1,650 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torah Commentary Project - Style Guide</title>
+<style>
+body {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f5f5f5;
+}
+.container {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #9b59b6;
+    padding-bottom: 10px;
+}
+h2 {
+    color: #34495e;
+    margin-top: 40px;
+    border-left: 4px solid #9b59b6;
+    padding-left: 15px;
+}
+h3 {
+    color: #555;
+    margin-top: 25px;
+}
+.toc {
+    background: #f4ecf7;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 30px 0;
+    border: 2px solid #9b59b6;
+}
+.toc h2 {
+    margin-top: 0;
+    border: none;
+    padding: 0;
+    color: #9b59b6;
+}
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+.toc li {
+    margin: 8px 0;
+}
+.toc a {
+    color: #8e44ad;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.toc a:hover {
+    color: #9b59b6;
+    text-decoration: underline;
+}
+.color-swatch {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    vertical-align: middle;
+}
+.color-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+.color-box h4 {
+    margin-top: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background: #9b59b6;
+    color: white;
+}
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+.example {
+    background: #fffbea;
+    border: 1px solid #f39c12;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 3px;
+}
+.example h4 {
+    color: #f39c12;
+    margin-top: 0;
+}
+pre {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 0.9em;
+}
+code {
+    background: #ecf0f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+pre code {
+    background: transparent;
+    padding: 0;
+}
+.pattern-demo {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.tip {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 10px 15px;
+    margin: 15px 0;
+}
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 15px 0;
+    border-top: 2px solid #ddd;
+}
+.nav-buttons a {
+    background: #9b59b6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.nav-buttons a:hover {
+    background: #8e44ad;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Torah Commentary Project: Style Guide</h1>
+
+<p><strong>Purpose:</strong> Maintain visual and textual consistency across all project content</p>
+<p><strong>Last Updated:</strong> October 2025</p>
+
+<div class="toc">
+<h2>Quick Navigation</h2>
+<ul>
+<li><a href="#colors">Color System</a></li>
+<li><a href="#typography">Typography Standards</a></li>
+<li><a href="#patterns">Pattern Highlighting</a></li>
+<li><a href="#tables">Table Structures</a></li>
+<li><a href="#hebrew">Hebrew Text</a></li>
+<li><a href="#css">CSS Classes Reference</a></li>
+<li><a href="#examples">Code Examples</a></li>
+</ul>
+</div>
+
+<h2 id="colors">Color System</h2>
+
+<h3>Unit Background Colors</h3>
+<p>Each unit is assigned a background color based on its position in the book's structure:</p>
+
+<table>
+<tr>
+<th>Color Hex</th>
+<th>Visual</th>
+<th>Used In</th>
+<th>Meaning/Position</th>
+</tr>
+<tr>
+<td><code>#d4f2ff</code></td>
+<td><span class="color-swatch" style="background: #d4f2ff;"></span></td>
+<td>Genesis, Leviticus, Deuteronomy</td>
+<td>Light Blue - Column A / Row 1 positions</td>
+</tr>
+<tr>
+<td><code>#e6ffee</code></td>
+<td><span class="color-swatch" style="background: #e6ffee;"></span></td>
+<td>Genesis, Leviticus, Deuteronomy</td>
+<td>Light Green - Column B / Covenant track</td>
+</tr>
+<tr>
+<td><code>#d4d4ff</code></td>
+<td><span class="color-swatch" style="background: #d4d4ff;"></span></td>
+<td>Genesis, Leviticus</td>
+<td>Light Purple - Column C / Row 2 positions</td>
+</tr>
+<tr>
+<td><code>#ffe6e6</code></td>
+<td><span class="color-swatch" style="background: #ffe6e6;"></span></td>
+<td>All books</td>
+<td>Light Pink - Special/Independent units</td>
+</tr>
+<tr>
+<td><code>#ffccaa</code></td>
+<td><span class="color-swatch" style="background: #ffccaa;"></span></td>
+<td>Exodus, Numbers</td>
+<td>Light Orange - Vertical thread units</td>
+</tr>
+<tr>
+<td><code>#c8e6d2</code></td>
+<td><span class="color-swatch" style="background: #c8e6d2;"></span></td>
+<td>Exodus, Numbers</td>
+<td>Sage Green - Tabernacle-related units</td>
+</tr>
+<tr>
+<td><code>#f0f0f0</code></td>
+<td><span class="color-swatch" style="background: #f0f0f0;"></span></td>
+<td>Leviticus</td>
+<td>Light Gray - Center/neutral positions</td>
+</tr>
+</table>
+
+<h3>Book Identification Colors</h3>
+<table>
+<tr>
+<th>Book</th>
+<th>Primary Color</th>
+<th>Hex Code</th>
+<th>Visual</th>
+</tr>
+<tr>
+<td>Genesis</td>
+<td>Blue</td>
+<td><code>#5090f0</code></td>
+<td><span class="color-swatch" style="background: #5090f0;"></span></td>
+</tr>
+<tr>
+<td>Exodus</td>
+<td>Orange</td>
+<td><code>#e89040</code></td>
+<td><span class="color-swatch" style="background: #e89040;"></span></td>
+</tr>
+<tr>
+<td>Leviticus</td>
+<td>Green</td>
+<td><code>#50c080</code></td>
+<td><span class="color-swatch" style="background: #50c080;"></span></td>
+</tr>
+<tr>
+<td>Numbers</td>
+<td>Orange</td>
+<td><code>#e89040</code></td>
+<td><span class="color-swatch" style="background: #e89040;"></span></td>
+</tr>
+<tr>
+<td>Deuteronomy</td>
+<td>Blue</td>
+<td><code>#5090f0</code></td>
+<td><span class="color-swatch" style="background: #5090f0;"></span></td>
+</tr>
+</table>
+
+<div class="tip">
+Genesis and Deuteronomy share blue (horizontal thread), while Exodus and Numbers share orange (vertical thread). Leviticus uses green as the intersection point.
+</div>
+
+<h2 id="patterns">Pattern Highlighting System</h2>
+
+<p><strong>Critical:</strong> These colors highlight verbal patterns, structural relationships, and literary devices WITHIN the unit text. They are applied to spans of Hebrew/English text, not backgrounds.</p>
+
+<h3>Established Pattern Colors</h3>
+
+<div class="color-box">
+<h4 style="color: #3399FF;">Blue - Horizontal Parallels</h4>
+<p><strong>CSS Class:</strong> <code>.horizontal1</code></p>
+<p><strong>Hex:</strong> <code>#3399FF</code></p>
+<p><strong>What it shows:</strong> Connections across rows in the same column. Parallel structures, repeated phrases, or thematic echoes that run horizontally.</p>
+<div class="pattern-demo" style="background: #e6f2ff; color: #3399FF;">
+Example: "vayomer Elohim" ... "vayomer Elohim" (repeated formula across creation days)
+</div>
+</div>
+
+<div class="color-box">
+<h4 style="color: teal;">Teal - Secondary Horizontal</h4>
+<p><strong>CSS Class:</strong> <code>.horizontal2</code></p>
+<p><strong>Hex:</strong> <code>teal</code></p>
+<p><strong>What it shows:</strong> A second layer of horizontal parallels, when multiple distinct patterns exist in the same unit.</p>
+</div>
+
+<div class="color-box">
+<h4 style="color: maroon;">Maroon - Tertiary Horizontal</h4>
+<p><strong>CSS Class:</strong> <code>.horizontal3</code></p>
+<p><strong>Hex:</strong> <code>maroon</code></p>
+<p><strong>What it shows:</strong> A third layer of horizontal parallels for complex units.</p>
+</div>
+
+<div class="color-box">
+<h4 style="color: #C09200;">Gold - Vertical Threads</h4>
+<p><strong>CSS Class:</strong> <code>.vertical1</code></p>
+<p><strong>Hex:</strong> <code>#C09200</code></p>
+<p><strong>What it shows:</strong> Column-wise progressions. Themes or vocabulary that develop vertically down a column (warp thread).</p>
+<div class="pattern-demo" style="background: #fef9e6; color: #C09200;">
+Example: Divine name patterns down Column A, blessing formulas down Column B
+</div>
+</div>
+
+<div class="color-box">
+<h4 style="color: #CC0066;">Pink - Closure/Frame Patterns</h4>
+<p><strong>CSS Class:</strong> <code>.closure</code></p>
+<p><strong>Hex:</strong> <code>#CC0066</code></p>
+<p><strong>What it shows:</strong> Inclusios, envelope structures, bookends. Opening and closing phrases that frame a unit or section.</p>
+<div class="pattern-demo" style="background: #ffe6f0; color: #CC0066;">
+Example: "the heavens and the earth" (1:1) ... "the heavens and the earth" (2:1)
+</div>
+</div>
+
+<div class="color-box">
+<h4 style="color: #7030A0;">Purple - Primary Chiasm</h4>
+<p><strong>CSS Class:</strong> <code>.ciasm1</code></p>
+<p><strong>Hex:</strong> <code>#7030A0</code></p>
+<p><strong>What it shows:</strong> Chiastic structures (A-B-B'-A' patterns). Elements that reverse or mirror across the unit center.</p>
+<div class="pattern-demo" style="background: #f0e6f6; color: #7030A0;">
+Example: Abraham's transformation from accuser to God-fearer
+</div>
+</div>
+
+<div class="color-box">
+<h4 style="color: #FB81EC;">Light Purple - Secondary Chiasm</h4>
+<p><strong>CSS Class:</strong> <code>.ciasm2</code></p>
+<p><strong>Hex:</strong> <code>#FB81EC</code></p>
+<p><strong>What it shows:</strong> A second chiastic pattern within the same unit, or sub-chiasms within larger structures.</p>
+</div>
+
+<div class="color-box">
+<h4 style="color: lime;">Lime - Internal Parallels</h4>
+<p><strong>CSS Class:</strong> <code>.internalparallel</code></p>
+<p><strong>Hex:</strong> <code>lime</code></p>
+<p><strong>What it shows:</strong> Within-unit correspondences that don't fit the other categories. Verbal echoes, wordplay, or thematic links internal to the narrative.</p>
+<div class="pattern-demo" style="background: #f0ffe6; color: #228B22;">
+Example: "knowing" theme connecting tree of knowledge, sexual knowledge, and murder
+</div>
+</div>
+
+<h2 id="typography">Typography Standards</h2>
+
+<h3>Font Families</h3>
+<pre><code>body {
+    font-family: Georgia, serif;
+    /* For body text, commentary */
+}
+
+.hebrew-text {
+    font-family: 'David Libre', 'Frank Ruehl CLM', 'SBL Hebrew', serif;
+    /* For Hebrew biblical text */
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    /* Headers match body */
+}
+
+code, .verse-number {
+    font-family: 'Courier New', monospace;
+    /* For code and verse references */
+}</code></pre>
+
+<h3>Font Sizes</h3>
+<table>
+<tr>
+<th>Element</th>
+<th>Size</th>
+<th>Line Height</th>
+</tr>
+<tr>
+<td>Body text</td>
+<td>16px</td>
+<td>1.6</td>
+</tr>
+<tr>
+<td>H1 (Page title)</td>
+<td>32px</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>H2 (Major sections)</td>
+<td>24px</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>H3 (Subsections)</td>
+<td>20px</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>H4 (Minor headings)</td>
+<td>18px</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>Biblical text (in tables)</td>
+<td>16px</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>Highlighted patterns</td>
+<td>16px (bold)</td>
+<td>1.5</td>
+</tr>
+</table>
+
+<h3>Text Styling Rules</h3>
+<ul>
+<li><strong>Bold:</strong> Use for emphasis, pattern highlights, verse numbers, cell subdivisions</li>
+<li><strong>Italic:</strong> Use for Hebrew transliteration, book/unit titles when referenced inline, foreign terms</li>
+<li><strong>Underlining:</strong> Avoid (reserved for hyperlinks)</li>
+<li><strong>ALL CAPS:</strong> Use sparingly, only for acronyms or special emphasis</li>
+</ul>
+
+<h2 id="tables">Table Structures for Units</h2>
+
+<h3>Standard 2-Column Table</h3>
+<pre><code>&lt;table class="torah-table two-col"&gt;
+    &lt;tr&gt;
+        &lt;td class="torah-column"&gt;
+            &lt;div class="torah-text"&gt;
+                &lt;span class="verse-number"&gt;1:1&lt;/span&gt;
+                In the beginning God created the heavens and the earth.
+            &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td class="torah-column"&gt;
+            &lt;div class="torah-text"&gt;
+                &lt;span class="verse-number"&gt;1:3&lt;/span&gt;
+                And God said, "Let there be light," and there was light.
+            &lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+<h3>3-Column Table</h3>
+<pre><code>&lt;table class="torah-table three-col"&gt;
+    &lt;tr&gt;
+        &lt;td class="torah-column"&gt;Column A content&lt;/td&gt;
+        &lt;td class="torah-column"&gt;Column B content&lt;/td&gt;
+        &lt;td class="torah-column"&gt;Column C content&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+<h3>Irregular Structure (e.g., 13331)</h3>
+<pre><code>&lt;!-- Row 1: Single column --&gt;
+&lt;table class="torah-table single-col"&gt;
+    &lt;tr&gt;
+        &lt;td class="torah-column"&gt;Single column content&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;!-- Rows 2-4: Three columns --&gt;
+&lt;table class="torah-table three-col"&gt;
+    &lt;tr&gt;
+        &lt;td class="torah-column"&gt;Column A&lt;/td&gt;
+        &lt;td class="torah-column"&gt;Column B&lt;/td&gt;
+        &lt;td class="torah-column"&gt;Column C&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;!-- Row 5: Single column --&gt;
+&lt;table class="torah-table single-col"&gt;
+    &lt;tr&gt;
+        &lt;td class="torah-column"&gt;Single column content&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+<h3>Table Styling Rules</h3>
+<ul>
+<li>Always wrap text content in <code>&lt;div class="torah-text"&gt;</code></li>
+<li>Use <code>torah-column</code> class for all table cells</li>
+<li>Verse numbers in <code>&lt;span class="verse-number"&gt;</code></li>
+<li>Cell subdivisions (A, B, C) in <code>&lt;span class="section-label"&gt;</code></li>
+<li>No inline styles except those specified in cleanup guide</li>
+</ul>
+
+<h2 id="hebrew">Hebrew Text Standards</h2>
+
+<h3>Hebrew Display</h3>
+<pre><code>&lt;p class="hebrew-text" dir="rtl"&gt;
+    בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+&lt;/p&gt;</code></pre>
+
+<h3>Transliteration Standards</h3>
+<ul>
+<li><strong>Format:</strong> Italic, lowercase except proper names</li>
+<li><strong>Example:</strong> <em>bereshit</em>, <em>toledot</em>, <em>YHWH</em></li>
+<li><strong>Divine names:</strong> YHWH (all caps), Elohim (capital E)</li>
+<li><strong>In tables:</strong> Hebrew in <code>&lt;span class="hebrew"&gt;</code></li>
+</ul>
+
+<h3>Divine Name Usage</h3>
+<table>
+<tr>
+<th>Hebrew</th>
+<th>Transliteration</th>
+<th>English</th>
+<th>When to Use</th>
+</tr>
+<tr>
+<td>יהוה</td>
+<td>YHWH</td>
+<td>YHWH or "the LORD"</td>
+<td>Technical analysis, structural discussion</td>
+</tr>
+<tr>
+<td>אלהים</td>
+<td>Elohim</td>
+<td>Elohim or "God"</td>
+<td>Technical analysis, structural discussion</td>
+</tr>
+<tr>
+<td>יהוה אלהים</td>
+<td>YHWH Elohim</td>
+<td>YHWH Elohim</td>
+<td>Eden narrative, compound name discussion</td>
+</tr>
+</table>
+
+<h2 id="css">CSS Classes Reference</h2>
+
+<h3>Structural Classes</h3>
+<pre><code>/* Tables */
+.torah-table           /* Base table class */
+.two-col              /* 2-column layout */
+.three-col            /* 3-column layout */
+.single-col           /* Single column (full width) */
+.four-col             /* 4-column layout */
+
+/* Cells */
+.torah-column         /* Individual table cells */
+.torah-text           /* Text wrapper inside cells */
+
+/* Text Elements */
+.verse-number         /* Verse references */
+.section-label        /* Cell subdivisions (A, B, C) */
+.hebrew-text          /* Hebrew biblical text */</code></pre>
+
+<h3>Pattern Highlighting Classes</h3>
+<pre><code>/* Primary patterns */
+.horizontal1          /* Blue horizontal parallels */
+.vertical1            /* Gold vertical threads */
+.closure              /* Pink closure/frame */
+.ciasm1               /* Purple primary chiasm */
+.internalparallel     /* Lime internal parallels */
+
+/* Secondary patterns */
+.horizontal2          /* Teal secondary horizontal */
+.horizontal3          /* Maroon tertiary horizontal */
+.ciasm2               /* Light purple secondary chiasm */</code></pre>
+
+<h3>Unit Background Classes</h3>
+<pre><code>/* Unit container backgrounds */
+.unit-bg-blue         /* #d4f2ff */
+.unit-bg-green        /* #e6ffee */
+.unit-bg-purple       /* #d4d4ff */
+.unit-bg-pink         /* #ffe6e6 */
+.unit-bg-orange       /* #ffccaa */
+.unit-bg-sage         /* #c8e6d2 */
+.unit-bg-gray         /* #f0f0f0 */</code></pre>
+
+<h2 id="examples">Complete Code Examples</h2>
+
+<h3>Example 1: Unit with Multiple Patterns</h3>
+<pre><code>&lt;table class="torah-table two-col"&gt;
+    &lt;tr&gt;
+        &lt;td class="torah-column"&gt;
+            &lt;div class="torah-text"&gt;
+                &lt;span class="section-label"&gt;A.&lt;/span&gt;
+                &lt;span class="verse-number"&gt;1:1&lt;/span&gt;
+                In the beginning 
+                &lt;span class="horizontal1"&gt;God created&lt;/span&gt; 
+                &lt;span class="closure"&gt;the heavens and the earth&lt;/span&gt;.
+            &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td class="torah-column"&gt;
+            &lt;div class="torah-text"&gt;
+                &lt;span class="section-label"&gt;B.&lt;/span&gt;
+                &lt;span class="verse-number"&gt;1:3&lt;/span&gt;
+                And &lt;span class="horizontal1"&gt;God said&lt;/span&gt;, 
+                "&lt;span class="vertical1"&gt;Let there be light&lt;/span&gt;," 
+                and there was light.
+            &lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+<h3>Example 2: Color Legend</h3>
+<pre><code>&lt;div class="color-legend"&gt;
+    &lt;h3&gt;Pattern Color Guide&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;span class="horizontal1"&gt;Blue&lt;/span&gt; - Horizontal parallels&lt;/li&gt;
+        &lt;li&gt;&lt;span class="vertical1"&gt;Gold&lt;/span&gt; - Vertical threads&lt;/li&gt;
+        &lt;li&gt;&lt;span class="closure"&gt;Pink&lt;/span&gt; - Closure patterns&lt;/li&gt;
+        &lt;li&gt;&lt;span class="ciasm1"&gt;Purple&lt;/span&gt; - Chiastic structures&lt;/li&gt;
+        &lt;li&gt;&lt;span class="internalparallel"&gt;Lime&lt;/span&gt; - Internal parallels&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+<h3>Example 3: Unit Header</h3>
+<pre><code>&lt;div class="unit-header"&gt;
+    &lt;h1&gt;Genesis Unit 1: Creation in Seven Days&lt;/h1&gt;
+    &lt;div class="unit-metadata"&gt;
+        &lt;p&gt;&lt;strong&gt;Structure:&lt;/strong&gt; 2×3 Regular&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Biblical Reference:&lt;/strong&gt; Genesis 1:1-2:3&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Theme:&lt;/strong&gt; Cosmic order through divine speech&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Position:&lt;/strong&gt; Row 1, Column A&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<div class="tip">
+Always validate your HTML after adding patterns. Nested spans and unclosed tags are the most common errors when adding color-coded patterns.
+</div>
+
+<div class="nav-buttons">
+<a href="workflow-guide.html">← Workflow Guide</a>
+<a href="project-organizational-plan.html">Organizational Plan →</a>
+</div>
+
+<hr style="margin: 40px 0;">
+
+<p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
+<strong>Torah Commentary Project</strong><br>
+Style Guide | Last Updated: October 2025
+</p>
+
+</div>
+</body>
+</html>

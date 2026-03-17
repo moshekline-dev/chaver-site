@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>פורטל המשנה | The Structured Mishnah Portal</title>
+    <!-- Page-specific meta tags can be added here -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- Page-specific style overrides can go here -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+        /* Landscape phones - hamburger menu */
+@media (max-height: 500px) and (orientation: landscape) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav li {
+        width: 100%;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+    }
+    
+    main.content-wrapper {
+        padding: 15px 10px;
+    }
+}
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">עברית</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        
+<div class="mishnah-container" dir="rtl">
+    <header class="mishnah-header">
+        <h1>המשנה כדרכה</h1>
+        <p class="subtitle">The Structured Mishnah: Visual Literary Analysis</p>
+    </header>
+
+    <div class="resources-container">
+        <div class="resource-card">
+            <h3>English Articles &amp; Downloads</h3>
+            <ul class="resource-list">
+                <li><a href="Articles/Introduction%20to%20the%20Structured%20Mishnah.htm"><span class="resource-icon">📄</span> Introduction to The Structured Mishnah</a></li>
+                <li><a href="Articles/TheArt-H.htm"><span class="resource-icon">📄</span> The Art of Writing the Oral Tradition</a></li>
+                <li><a href="../../General/Color%20Codes/English%20Color%20Code.htm"><span class="resource-icon">🎨</span> Color Code Guide</a></li>
+                <li><a href="../Hebrew/Text/The%20Structured%20Mishnah.pdf" target="_blank"><span class="resource-icon">⬇️</span> <strong>Download Full Mishnah PDF</strong></a></li>
+            </ul>
+            <h4>The Woven Table: Avot Series</h4>
+            <ul class="resource-list">
+                <li><a href="Articles/men-of-kfar-hananya.html"><span class="resource-icon">📄</span> Part 1: The Men of Kfar Hananya (4×2)</a></li>
+                <li><a href="Articles/five-pairs-avot-1.html"><span class="resource-icon">📄</span> Part 2: The Five Pairs (5×2)</a></li>
+                <li><a href="Articles/avot-chapter-4.html"><span class="resource-icon">📄</span> Part 3: Avot Chapter 4 (5×4)</a></li>
+                <li><a href="Articles/the-esoteric-decalogue.html"><span class="resource-icon">📄</span> Part 4: The Esoteric Decalogue</a></li>
+                <li><a href="Articles/"><span class="resource-icon">📚</span> <strong>Series Overview</strong></a></li>
+            </ul>
+        </div>
+        <div class="resource-card">
+            <h3>מאמרים בעברית</h3>
+            <ul class="resource-list">
+                <li><a href="../Hebrew/Articles/MAVO.htm"><span class="resource-icon">📄</span> מבוא למשנה כדרכה</a></li>
+                <li><a href="../Hebrew/Articles/TheWholeStructure.pdf" target="_blank"><span class="resource-icon">📄</span> כל חלקי הבית אחוזים זה בזה</a></li>
+                <li><a href="../Hebrew/Articles/מבוא%20למשנה%20כדרכה%20כולל%20דוגמאות.pdf" target="_blank"><span class="resource-icon">📄</span> מבוא מורחב (כולל דוגמאות)</a></li>
+                <li><a href="../../General/Color%20Codes/Hebrew-Color-Code.html"><span class="resource-icon">🎨</span> מדריך קוד הצבעים</a></li>
+                <li><a href="../Hebrew/Text/The%20Structured%20Mishnah.pdf" target="_blank"><span class="resource-icon">⬇️</span> <strong>הורד את כל המשנה (PDF)</strong></a></li>
+            </ul>
+        </div>
+    </div>
+    <hr class="portal-divider">
+
+    <!-- SEDER ZERAIM -->
+    <div class="seder-block">
+        <div class="seder-header">סדר זרעים <span class="english-seder">Seder Zeraim</span></div>
+        <div class="tractate-grid">
+            <div class="tractate-card"><span class="tractate-title">ברכות</span><span class="tractate-eng">Berakhot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Brachot/Mesechet%20Brachot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Brachot/Mesechet%20Brachot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Brachot/Mesechet%20Brachot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Brachot/Mesechet%20Brachot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Brachot/Mesechet%20Brachot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Brachot/Mesechet%20Brachot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Brachot/Mesechet%20Brachot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Brachot/Mesechet%20Brachot%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Brachot/Mesechet%20Brachot%20Perek%209.htm" class="ch-btn">ט</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">פאה</span><span class="tractate-eng">Peah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Peah/Mesechet%20Peah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Peah/Mesechet%20Peah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Peah/Mesechet%20Peah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Peah/Mesechet%20Peah%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Peah/Mesechet%20Peah%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Peah/Mesechet%20Peah%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Peah/Mesechet%20Peah%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Peah/Mesechet%20Peah%20Perek%208.htm" class="ch-btn">ח</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">דמאי</span><span class="tractate-eng">Demai</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%207.htm" class="ch-btn">ז</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">כלאים</span><span class="tractate-eng">Kilayim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Klayim/Masechet%20Klayim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Klayim/Masechet%20Klayim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Klayim/Masechet%20Klayim%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Klayim/Masechet%20Klayim%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Klayim/Masechet%20Klayim%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Klayim/Masechet%20Klayim%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Klayim/Masechet%20Klayim%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Klayim/Masechet%20Klayim%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Klayim/Masechet%20Klayim%20Perek%209.htm" class="ch-btn">ט</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">שביעית</span><span class="tractate-eng">Sheviit</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Zeraim/Mashechet%20Shviit/Masechet%20Shviit%20Perek%2010.htm" class="ch-btn">י</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">תרומות</span><span class="tractate-eng">Terumot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Trumot%20Perek%2011.htm" class="ch-btn">יא</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מעשרות</span><span class="tractate-eng">Maaserot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maasrot/Masechet%20Maasrot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maasrot/Masechet%20Maasrot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maasrot/Masechet%20Maasrot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maasrot/Masechet%20Maasrot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maasrot/Masechet%20Maasrot%20Perek%205.htm" class="ch-btn">ה</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מעשר שני</span><span class="tractate-eng">Maaser Sheni</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maaser%20Sheni/Masechet%20Maaser%20Sheni%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maaser%20Sheni/Masechet%20Maaser%20Sheni%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maaser%20Sheni/Masechet%20Maaser%20Sheni%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maaser%20Sheni/Masechet%20Maaser%20Sheni%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Maaser%20Sheni/Masechet%20Maaser%20Sheni%20Perek%205.htm" class="ch-btn">ה</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">חלה</span><span class="tractate-eng">Challah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Hallah/Masechet%20Hallah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Hallah/Masechet%20Hallah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Hallah/Masechet%20Hallah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Hallah/Masechet%20Hallah%20Perek%204.htm" class="ch-btn">ד</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">ערלה</span><span class="tractate-eng">Orlah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Orlah/Masechet%20Orlah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Orlah/Masechet%20Orlah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Orlah/Masechet%20Orlah%20Perek%203.htm" class="ch-btn">ג</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">ביכורים</span><span class="tractate-eng">Bikkurim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Bechorim/Masechet%20Bechorim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Bechorim/Masechet%20Bechorim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Zeraim/Masechet%20Bechorim/Masechet%20Bichorim%20Perek%203.htm" class="ch-btn">ג</a></div></div>
+        </div>
+    </div>
+
+    <!-- SEDER MOED -->
+    <div class="seder-block">
+        <div class="seder-header">סדר מועד <span class="english-seder">Seder Moed</span></div>
+        <div class="tractate-grid">
+            <div class="tractate-card"><span class="tractate-title">שבת</span><span class="tractate-eng">Shabbat</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2011.htm" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2012.htm" class="ch-btn">יב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2013.htm" class="ch-btn">יג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2014.htm" class="ch-btn">יד</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2015.htm" class="ch-btn">טו</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2016.htm" class="ch-btn">טז</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2017.htm" class="ch-btn">יז</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2018.htm" class="ch-btn">יח</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2019.htm" class="ch-btn">יט</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2020.htm" class="ch-btn">כ</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2021.htm" class="ch-btn">כא</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2022.htm" class="ch-btn">כב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2023.htm" class="ch-btn">כג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Shabbat/Masechet%20Shabbat%20Perek%2024.htm" class="ch-btn">כד</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">ערובין</span><span class="tractate-eng">Eruvin</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20perek%2010.htm" class="ch-btn">י</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">פסחים</span><span class="tractate-eng">Pesachim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Pesachim/Masechet%20Pesachim%20Perek%2010.htm" class="ch-btn">י</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">שקלים</span><span class="tractate-eng">Shekalim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Maschet%20Shekalim/Masechet%20Shekalim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Maschet%20Shekalim/Masechet%20Shekalim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Maschet%20Shekalim/Masechet%20Shekalim%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Maschet%20Shekalim/Masechet%20Shekalim%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Moed/Maschet%20Shekalim/Masechet%20Shekalim%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Moed/Maschet%20Shekalim/Masechet%20Shekalim%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Moed/Maschet%20Shekalim/Masechet%20Shekalim%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Moed/Maschet%20Shekalim/Masechet%20Shekalim%20Perek%208.htm" class="ch-btn">ח</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">יומא</span><span class="tractate-eng">Yoma</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yoma/Masechet%20Yoma%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yoma/Masechet%20Yoma%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yoma/Masechet%20Yoma%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yoma/Masechet%20Yoma%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yoma/Masechet%20Yoma%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yoma/Masechet%20Yoma%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yoma/Masechet%20Yoma%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yoma/Masechet%20Yoma%20Perek%208.htm" class="ch-btn">ח</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">סוכה</span><span class="tractate-eng">Sukkah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Sukkah/Masechet%20Sukkah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Sukkah/Masechet%20Sukkah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Sukkah/Masechet%20Sukkah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Sukkah/Masechet%20Sukkah%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Sukkah/Masechet%20Sukkah%20Perek%205.htm" class="ch-btn">ה</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">ביצה</span><span class="tractate-eng">Beitzah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yom%20Tov%20(Betzah)/Masechet%20Yom%20Tov%20(Betzeh)%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yom%20Tov%20(Betzah)/Masechet%20Yom%20Tov%20(Betzeh)%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yom%20Tov%20(Betzah)/Masechet%20Yom%20Tov%20(Betzeh)%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yom%20Tov%20(Betzah)/Masechet%20Yom%20Tov%20(Betzeh)%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Yom%20Tov%20(Betzah)/Masechet%20Yom%20Tov%20(Betzeh)%20Perek%205.htm" class="ch-btn">ה</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">ראש השנה</span><span class="tractate-eng">Rosh Hashanah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Rosh%20Hashanah/Masechet%20Rosh%20Hashanah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Rosh%20Hashanah/Masechet%20Rosh%20Hashanah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Rosh%20Hashanah/Masechet%20Rosh%20Hashanah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Rosh%20Hashanah/Masechet%20Rosh%20Hashanah%20Perek%204.htm" class="ch-btn">ד</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">תענית</span><span class="tractate-eng">Taanit</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Taanit/Masechet%20Taanit%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Taanit/Masechet%20Taanit%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Taanit/Masechet%20Taanit%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Taanit/Masechet%20Taanit%20Perek%204.htm" class="ch-btn">ד</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מגילה</span><span class="tractate-eng">Megillah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Megillah/Masechet%20Megillah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Megillah/Masechet%20Megillah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Megillah/Masechet%20Megillah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Megillah/Masechet%20Megillah%20Perek%204.htm" class="ch-btn">ד</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מועד קטן</span><span class="tractate-eng">Moed Katan</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Moed%20Katan/Masechet%20Moed%20Katan%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Moed%20Katan/Masechet%20Moed%20Katan%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Moed%20Katan/Masechet%20Moed%20Katan%20Perek%203.htm" class="ch-btn">ג</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">חגיגה</span><span class="tractate-eng">Chagigah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Chagigah/Masechet%20Chagigah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Chagigah/Masechet%20Chagigah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Moed/Masechet%20Chagigah/Masechet%20Chagigah%20Perek%203.htm" class="ch-btn">ג</a></div></div>
+        </div>
+    </div>
+
+    <!-- SEDER NASHIM -->
+    <div class="seder-block">
+        <div class="seder-header">סדר נשים <span class="english-seder">Seder Nashim</span></div>
+        <div class="tractate-grid">
+            <div class="tractate-card"><span class="tractate-title">יבמות</span><span class="tractate-eng">Yevamot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%2011.htm" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%2012.htm" class="ch-btn">יב</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%2013.htm" class="ch-btn">יג</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%2014.htm" class="ch-btn">יד</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%2015.htm" class="ch-btn">טו</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Yevamot/Masechet%20Yevamot%20Perek%2016.htm" class="ch-btn">טז</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">כתובות</span><span class="tractate-eng">Ketubot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%2011.htm" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%2012.htm" class="ch-btn">יב</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Ketubot/Masechet%20Ketubot%20Perek%2013.htm" class="ch-btn">יג</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">נדרים</span><span class="tractate-eng">Nedarim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%201.html" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nedarim/Masechet%20Nedarim%20Perek%2011.htm" class="ch-btn">יא</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">נזיר</span><span class="tractate-eng">Nazir</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nazir/Masechet%20Nazir%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nazir/Masechet%20Nazir%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nazir/Masechet%20Nazir%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nazir/Masechet%20Nazir%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nazir/Masechet%20Nazir%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nazir/Masechet%20Nazir%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nazir/Masechet%20Nazir%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nazir/Masechet%20Nazir%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Nazir/Masechet%20Nazir%20Perek%209.htm" class="ch-btn">ט</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">סוטה</span><span class="tractate-eng">Sotah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%209%20A.htm" class="ch-btn">ט.א</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Sotah/Masechet%20Sotah%20Perek%209%20B.htm" class="ch-btn">ט.ב</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">גיטין</span><span class="tractate-eng">Gittin</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Gittin/Masechet%20Gittin%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Gittin/Masechet%20Gittin%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Gittin/Masechet%20Gittin%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Gittin/Masechet%20Gittin%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Gittin/Masechet%20Gittin%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Gittin/Masechet%20Gittin%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Gittin/Masechet%20Gittin%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Gittin/Masechet%20Gittin%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Gittin/Masechet%20Gittin%20Perek%209.htm" class="ch-btn">ט</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">קידושין</span><span class="tractate-eng">Kiddushin</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Kiddushin/Masechet%20Kiddushin%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Kiddushin/Masechet%20Kiddushin%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Kiddushin/Masechet%20Kiddushin%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nashim/Masechet%20Kiddushin/Masechet%20Kiddushin%20Perek%204.htm" class="ch-btn">ד</a></div></div>
+        </div>
+    </div>
+
+    <!-- SEDER NEZIKIN -->
+    <div class="seder-block">
+        <div class="seder-header">סדר נזיקין <span class="english-seder">Seder Nezikin</span></div>
+        <div class="tractate-grid">
+            <div class="tractate-card"><span class="tractate-title">בבא קמא</span><span class="tractate-eng">Bava Kamma</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Baba%20Kama/Masechet%20Baba%20Kama%20Perek%2010.htm" class="ch-btn">י</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">בבא מציעא</span><span class="tractate-eng">Bava Metzia</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Nezikin/Baba%20Metzia/Baba%20Metzia%20Perek%2010.htm" class="ch-btn">י</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">בבא בתרא</span><span class="tractate-eng">Bava Batra</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Nezikin/Seder%20Baba%20Batra/Masechet%20Baba%20Batra%20Perek%2010.htm" class="ch-btn">י</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">סנהדרין</span><span class="tractate-eng">Sanhedrin</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Sanhedrin/Masechet%20Sanhedrin%20Perek%2011.htm" class="ch-btn">יא</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מכות</span><span class="tractate-eng">Makkot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Makkot/Masechet%20Makkot%20Perek%201%20.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Makkot/Masechet%20Makkot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Makkot/Masechet%20Makkot%20Perek%203.htm" class="ch-btn">ג</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">שבועות</span><span class="tractate-eng">Shevuot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Shavuot/Masechet%20Shavuot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Shavuot/Masechet%20Shavuot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Shavuot/Masechet%20Shavuot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Shavuot/Masechet%20Shavuot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Shavuot/Masechet%20Shavuot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Shavuot/Masechet%20Shavuot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Shavuot/Masechet%20Shavuot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Shavuot/Masechet%20Shavuot%20Perek%208.htm" class="ch-btn">ח</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">עדיות</span><span class="tractate-eng">Eduyot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Eduyot/Masechet%20Eduyot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Eduyot/Masechet%20Eduyot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Eduyot/Masechet%20Eduyot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Eduyot/Masechet%20Eduyot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Eduyot/Masechet%20Eduyot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Eduyot/Masechet%20Eduyot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Eduyot/Masechet%20Eduyot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Eduyot/Masechet%20Eduyot%20Perek%208.htm" class="ch-btn">ח</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">עבודה זרה</span><span class="tractate-eng">Avodah Zarah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avodah%20Zarah/Masechet%20Avodah%20Zarah%20Perek%201%20.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avodah%20Zarah/Masechet%20Avodah%20Zarah%20Perek%202%20.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avodah%20Zarah/Masechet%20Avodah%20Zarah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avodah%20Zarah/Masechet%20Avodah%20Zarah%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avodah%20Zarah/Masechet%20Avodah%20Zarah%20Perek%205.htm" class="ch-btn">ה</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">אבות</span><span class="tractate-eng">Avot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avot/Masechet%20Avot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avot/Masechet%20Avot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avot/Masechet%20Avot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avot/Masechet%20Avot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Avot/Masechet%20Avot%20Perek%205.htm" class="ch-btn">ה</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">הוריות</span><span class="tractate-eng">Horayot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Horayot/Masechet%20Horayot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Horayot/Masechet%20Horayot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Nezikin/Masechet%20Horayot/Masechet%20Horayot%20Perek%203.htm" class="ch-btn">ג</a></div></div>
+        </div>
+    </div>
+
+    <!-- SEDER KODASHIM -->
+    <div class="seder-block">
+        <div class="seder-header">סדר קדשים <span class="english-seder">Seder Kodashim</span></div>
+        <div class="tractate-grid">
+            <div class="tractate-card"><span class="tractate-title">זבחים</span><span class="tractate-eng">Zevachim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%201.html" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%202.html" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%203.html" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%204.html" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%205.html" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%206.html" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%207.html" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%208.html" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%209.html" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%2010.html" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%2011.html" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%2012.html" class="ch-btn">יב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%2013.html" class="ch-btn">יג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Zevachim/Masechet%20Zevachim%20Perek%2014.html" class="ch-btn">יד</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מנחות</span><span class="tractate-eng">Menachot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%2011.htm" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%2012.htm" class="ch-btn">יב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Menachot/Masechet%20Menachot%20Perek%2013.htm" class="ch-btn">יג</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">חולין</span><span class="tractate-eng">Chullin</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%2011.htm" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Chullin/Masechet%20Chullin%20Perek%2012.htm" class="ch-btn">יב</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">בכורות</span><span class="tractate-eng">Bekhorot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Bekhorot/Masechet%20Bekhorot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Bekhorot/Masechet%20Bekhorot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Bekhorot/Masechet%20Bekhorot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Bekhorot/Masechet%20Bekhorot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Bekhorot/Masechet%20Bekhorot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Bekhorot/Masechet%20Bekhorot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Bekhorot/Masechet%20Bekhorot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Bekhorot/Masechet%20Bekhorot%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Bekhorot/Masechet%20Bekhorot%20Perek%209.htm" class="ch-btn">ט</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">ערכין</span><span class="tractate-eng">Arakhin</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Arakhin/Masechet%20Arakhin%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Arakhin/Masechet%20Arakhin%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Arakhin/Masechet%20Arakhin%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Arakhin/Masechet%20Arakhin%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Arakhin/Masechet%20Arakhin%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Arakhin/Masechet%20Arakhin%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Arakhin/Masechet%20Arakhin%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Arakhin/Masechet%20Arakhin%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Arakhin/Masechet%20Arakhin%20Perek%209.htm" class="ch-btn">ט</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">תמורה</span><span class="tractate-eng">Temurah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Temurah/Masechet%20Temurah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Temurah/Masechet%20Temurah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Temurah/Masechet%20Temurah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Temurah/Masechet%20Temurah%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Temurah/Masechet%20Temurah%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Temurah/Masechet%20Temurah%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Temurah/Masechet%20Temurah%20Perek%207.htm" class="ch-btn">ז</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">כריתות</span><span class="tractate-eng">Keritot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Kritot/Masechet%20Kritot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Kritot/Masechet%20Kritot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Kritot/Masechet%20Kritot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Kritot/Masechet%20Kritot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Kritot/Masechet%20Kritot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Kritot/Masechet%20Kritot%20Perek%206.htm" class="ch-btn">ו</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מעילה</span><span class="tractate-eng">Meilah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Meilah/Masechet%20Meilah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Meilah/Masechet%20Meilah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Meilah/Masechet%20Meilah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Meilah/Masechet%20Meilah%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Meilah/Masechet%20Meilah%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Meilah/Masechet%20Meilah%20Perek%206.htm" class="ch-btn">ו</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">תמיד</span><span class="tractate-eng">Tamid</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Tamid/Masechet%20Tamid%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Tamid/Masechet%20Tamid%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Tamid/Masechet%20Tamid%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Tamid/Masechet%20Tamid%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Tamid/Masechet%20Tamid%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Tamid/Masechet%20Tamid%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Tamid/Masechet%20Tamid%20Perek%207.htm" class="ch-btn">ז</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מידות</span><span class="tractate-eng">Middot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Midot/Masechet%20Midot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Midot/Masechet%20Midot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Midot/Masechet%20Midot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Midot/Masechet%20Midot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Midot/Masechet%20Midot%20Perek%205.htm" class="ch-btn">ה</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">קנים</span><span class="tractate-eng">Kinnim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Kinnim/Masechet%20Kinnim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Kinnim/Masechet%20Kinnim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Kodashim/Masechet%20Kinnim/Masechet%20Kinnim%20Perek%203.htm" class="ch-btn">ג</a></div></div>
+        </div>
+    </div>
+
+    <!-- SEDER TOHOROT -->
+    <div class="seder-block">
+        <div class="seder-header">סדר טהרות <span class="english-seder">Seder Tohorot</span></div>
+        <div class="tractate-grid">
+            <div class="tractate-card"><span class="tractate-title">כלים</span><span class="tractate-eng">Kelim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2011.htm" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2012.htm" class="ch-btn">יב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2013.htm" class="ch-btn">יג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2014.htm" class="ch-btn">יד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2015.htm" class="ch-btn">טו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2016.htm" class="ch-btn">טז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2017.htm" class="ch-btn">יז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2018.htm" class="ch-btn">יח</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2019.htm" class="ch-btn">יט</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2020.htm" class="ch-btn">כ</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2021.htm" class="ch-btn">כא</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2022.htm" class="ch-btn">כב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2023.htm" class="ch-btn">כג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2024.htm" class="ch-btn">כד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2025.htm" class="ch-btn">כה</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2026.htm" class="ch-btn">כו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2027.htm" class="ch-btn">כז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2028.htm" class="ch-btn">כח</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2029.htm" class="ch-btn">כט</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Kelim/Masechet%20Kelim%20Perek%2030.htm" class="ch-btn">ל</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">אהלות</span><span class="tractate-eng">Ohalot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%2011.htm" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%2012.htm" class="ch-btn">יב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%2013.htm" class="ch-btn">יג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%2014.htm" class="ch-btn">יד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%2015.htm" class="ch-btn">טו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%2016.htm" class="ch-btn">טז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%2017.htm" class="ch-btn">יז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Ohalot/Masechet%20Ohalot%20Perek%2018.htm" class="ch-btn">יח</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">נגעים</span><span class="tractate-eng">Negaim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%2011.htm" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%2012.htm" class="ch-btn">יב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%2013.htm" class="ch-btn">יג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Negaim/Masechet%20Negaim%20Perek%2014.htm" class="ch-btn">יד</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">פרה</span><span class="tractate-eng">Parah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%2010.htm" class="ch-btn">י</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%2011.htm" class="ch-btn">יא</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Masechet%20Parah%20Perek%2012.htm" class="ch-btn">יב</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">טהרות</span><span class="tractate-eng">Tohorot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tohorot/Masechet%20Tohorot%20Perek%2010.htm" class="ch-btn">י</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מקואות</span><span class="tractate-eng">Mikvaot</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Mikvaot/Masechet%20Mikvaot%20Perek%2010.htm" class="ch-btn">י</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">נידה</span><span class="tractate-eng">Niddah</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%206.htm" class="ch-btn">ו</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%207.htm" class="ch-btn">ז</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%208.htm" class="ch-btn">ח</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%209.htm" class="ch-btn">ט</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Nidah/Masechet%20Nidah%20Perek%2010.htm" class="ch-btn">י</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">מכשירים</span><span class="tractate-eng">Makhshirin</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Makhshirin/Masechet%20Makhshirin%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Makhshirin/Masechet%20Makhshirin%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Makhshirin/Masechet%20Makhshirin%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Makhshirin/Masechet%20Makhshirin%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Makhshirin/Masechet%20Makhshirin%20Perek%205.htm" class="ch-btn">ה</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Makhshirin/Masechet%20Makhshirin%20Perek%206.htm" class="ch-btn">ו</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">זבים</span><span class="tractate-eng">Zavim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Zavim/Masechet%20Zavim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Zavim/Masechet%20Zavim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Zavim/Masechet%20Zavim%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Zavim/Masechet%20Zavim%20Perek%204.htm" class="ch-btn">ד</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Zavim/Masechet%20Zavim%20Perek%205.htm" class="ch-btn">ה</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">טבול יום</span><span class="tractate-eng">Tevul Yom</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tevul%20Yom/Masechet%20Tevul%20Yom%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tevul%20Yom/Masechet%20Tevul%20Yom%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tevul%20Yom/Masechet%20Tevul%20Yom%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Tevul%20Yom/Masechet%20Tevul%20Yom%20Perek%204.htm" class="ch-btn">ד</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">ידים</span><span class="tractate-eng">Yadayim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Yadayim/Masechet%20Yadayim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Yadayim/Masechet%20Yadayim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Yadayim/Masechet%20Yadayim%20Perek%203.htm" class="ch-btn">ג</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Yadayim/Masechet%20Yadayim%20Perek%204.htm" class="ch-btn">ד</a></div></div>
+            <div class="tractate-card"><span class="tractate-title">עוקצים</span><span class="tractate-eng">Uktzim</span><div class="chapter-list"><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Uktzim/Masechet%20Uktzim%20Perek%201.htm" class="ch-btn">א</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Uktzim/Masechet%20Uktzim%20Perek%202.htm" class="ch-btn">ב</a><a href="../Hebrew/Text/Seder%20Tohorot/Masechet%20Uktzim/Masechet%20Uktzim%20Perek%203.htm" class="ch-btn">ג</a></div></div>
+        </div>
+    </div>
+
+    <footer class="portal-footer">
+        <a href="../index.html">חזרה לדף הבית | Back to Chaver.com</a>
+    </footer>
+</div>
+
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">התורה כדרכה</a></li>
+                        <li>T<a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- Page-specific scripts can go here -->
+    </body>
+
+

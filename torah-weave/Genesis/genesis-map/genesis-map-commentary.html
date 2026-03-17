@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>How to Read the Genesis Map | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <!-- Navigation -->
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Genesis//torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis">Genesis Map</a> → How to Read This Map
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Genesis//torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis" rel="prev">← Back to Map</a>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <!-- Page Header -->
+            <header class="unit-header-section">
+                <h1>The Woven Structure of Genesis</h1>
+                <div class="unit-meta">
+                    How to Read the Map
+                </div>
+            </header>
+
+            <!-- Introduction -->
+            <section class="section-box">
+                <p>Genesis reveals itself as an intricate literary tapestry, with patterns that become visible when we understand its woven structure. Like a skilled weaver working at a loom, the author(s) of Genesis crafted a text where both the horizontal "warp" threads (rows) and vertical "weft" threads (columns) create meaningful patterns.</p>
+                
+                <p>The Genesis map displays this structure visually as a 3×7 matrix. This guide explains how to read that map and understand the relationships it reveals.</p>
+            </section>
+
+            <!-- The Weft Threads (Columns) -->
+            <section class="section-box">
+                <h2>The Weft Threads (Columns)</h2>
+                <p>The vertical weft threads, which pass through the warp, create the thematic variations across Genesis:</p>
+                
+                <ul>
+                    <li><strong>Outer Columns (Sets A and F)</strong> form the edges of the tapestry with complementary themes of order. Column A (Units 1-3) depicts <em>Cosmic Order</em> established by divine power in creation, while Column F (Units 17-19) portrays <em>Political Order</em> manifested through Joseph's administration in Egypt. These paired weft threads show how order is established at both cosmic and human levels.</li>
+                    
+                    <li><strong>Middle Columns (Sets B and E)</strong> introduce patterns of <em>Covenants</em>. Column B (Units 5, 7, 9) chronicles Abraham's initial covenant relationships through ceremonies, promises, and tests, while Column E (Units 12, 14, 16) shows these covenants extending to Isaac and Jacob through renewed promises and similar experiences. These weft threads emphasize formal agreements that establish identity.</li>
+                    
+                    <li><strong>Inner Columns (Sets C and D)</strong> form the central pattern with depictions of <em>Family Interactions</em>. Column C (Units 6, 8, 10) portrays Abraham's extended family dynamics with Lot, while Column D (Units 11, 13, 15) focuses on Jacob and Esau's brotherly relationship. These central weft threads highlight how family relationships form the core narrative tension.</li>
+                    
+                    <li><strong>Pivotal Unit (Unit 4)</strong> serves as a distinctive element that stands alone between the creation narratives and the patriarchal stories. The Tower of Babel connects to themes of authority, communication, and community fragmentation that recur throughout.</li>
+                </ul>
+            </section>
+
+            <!-- The Warp Threads (Rows) -->
+            <section class="section-box">
+                <h2>The Warp Threads (Rows)</h2>
+                <p>The horizontal warp threads, set on the loom first, create the foundational structure onto which the narrative is woven:</p>
+                
+                <ul>
+                    <li><strong>First Warp (Row 1: Birth/Creation)</strong> establishes beginnings across all narrative cycles. From cosmic creation to the birth of covenantal relationships and patriarchal families, this warp thread provides the primary structure for origins and new beginnings.</li>
+                    
+                    <li><strong>Second Warp (Row 2: Development)</strong> creates the framework for the complex development of what was established in the first warp. This thread structures how initial promises are tested and relationships grow increasingly complex through various challenges.</li>
+                    
+                    <li><strong>Third Warp (Row 3: Death/Closure)</strong> completes the structural foundation with themes of conclusion and fulfillment. From the Flood's devastation to the deaths of the patriarchs, this warp thread provides the framework for resolution and closure to each narrative cycle.</li>
+                </ul>
+            </section>
+
+            <!-- The Finished Tapestry -->
+            <section class="section-box">
+                <h2>The Finished Tapestry</h2>
+                <p>When viewed as a whole, Genesis reveals itself as a skillfully woven tapestry with intentional patterns. The concentric arrangement of weft threads (columns) creates thematic variations, while the foundational warp threads (rows) establish a consistent birth-development-death framework that provides structural integrity to the narrative.</p>
+                
+                <p>The matrix structure allows readers to trace patterns both through the weft threads (following thematic development vertically through different characters) and along the warp threads (observing horizontally how each character's story follows a similar pattern). Each unit in the tapestry contributes to the overall design while maintaining its own distinct pattern.</p>
+            </section>
+
+            <!-- The Concentric Structure -->
+            <section class="section-box">
+                <h2>The Three-Ring Concentric Structure</h2>
+                <p>When viewed holistically, Genesis forms a concentric three-ring structure, visible in the map as nested layers:</p>
+                
+                <h3>Outer Ring: Kingship (Sets A and F)</h3>
+                <ul>
+                    <li><strong>Creation Narratives (Set A, Units 1-3):</strong> Divine Kingship established through creation</li>
+                    <li><strong>Joseph Narrative (Set F, Units 17-19):</strong> Human Kingship through Joseph in Egypt</li>
+                </ul>
+                <p>These "bookends" establish a thematic frame for the entire book, demonstrating how divine order in creation finds its earthly counterpart in Joseph's administrative order in Egypt.</p>
+                
+                <h3>Middle Ring: Covenants (Sets B and E)</h3>
+                <ul>
+                    <li><strong>Abraham's Covenants (Set B: Units 5, 7, 9):</strong> Formal agreements between Abraham and deity/rulers</li>
+                    <li><strong>Isaac-Jacob's Covenants (Set E: Units 12, 14, 16):</strong> Parallel covenant experiences across generations</li>
+                </ul>
+                <p>The middle ring focuses on the establishment of formal relationships through covenants, altars, and sacred places that establish identity.</p>
+                
+                <h3>Inner Ring: Family (Sets C and D)</h3>
+                <ul>
+                    <li><strong>Abraham's Extended Family (Set C: Units 6, 8, 10):</strong> Focus on Lot and family interactions</li>
+                    <li><strong>Jacob-Esau Relationship (Set D: Units 11, 13, 15):</strong> Focus on brotherly relations and reconciliation</li>
+                </ul>
+                <p>The central focus of Genesis is the Abrahamic family itself, with its complex relationships, conflicts, and resolutions.</p>
+            </section>
+
+            <!-- The 19 Units -->
+            <section class="section-box">
+                <h2>The Nineteen Units of Genesis</h2>
+                <p>Genesis consists of nineteen literary units divided into six sets of three (A-F), plus the standalone pivot Unit 4:</p>
+                
+                <h3>Set A: Creation Narratives (Units 1-3)</h3>
+                <p>Each begins with "create" in its opening verse:</p>
+                <ul>
+                    <li><strong>Unit 1 (1:1-2:3):</strong> Seven days of creation</li>
+                    <li><strong>Unit 2 (2:4-4:26):</strong> Adam and Eve, Cain and Abel</li>
+                    <li><strong>Unit 3 (5:1-10:32):</strong> Noah and the Flood</li>
+                </ul>
+                
+                <h3>Unit 4: Tower of Babel (11:1-9) - The Pivotal Hinge</h3>
+                <ul>
+                    <li>A standalone transitional unit serving as critical hinge in the Torah</li>
+                    <li>First narrative devoted exclusively to YHWH without any mention of Elohim</li>
+                    <li>Marks the shift from universal narratives to focus on one nation</li>
+                    <li>Structured as two-dimensional construct: two perspectives (human/divine), three-part progression (unity → dialogue → diversity)</li>
+                </ul>
+                
+                <h3>Sets B-C: Abraham Narrative (Units 5-10)</h3>
+                <p><strong>Set B: Covenants/Alliances</strong></p>
+                <ul>
+                    <li><strong>Unit 5 (11:10-13:4):</strong> YHWH calls Abraham to Canaan</li>
+                    <li><strong>Unit 7 (15:1-17:27):</strong> Covenant ceremonies, promises, circumcision</li>
+                    <li><strong>Unit 9 (20:1-22:19):</strong> Covenant with Abimelech, binding of Isaac</li>
+                </ul>
+                
+                <p><strong>Set C: Family Interactions</strong></p>
+                <ul>
+                    <li><strong>Unit 6 (13:5-14:24):</strong> Separation from Lot, rescue of Lot</li>
+                    <li><strong>Unit 8 (18:1-19:38):</strong> Destruction of Sodom, saving of Lot</li>
+                    <li><strong>Unit 10 (22:20-25:11):</strong> Rebekah as bride, deaths of Sarah and Abraham</li>
+                </ul>
+                
+                <h3>Sets D-E: Isaac-Jacob Narrative (Units 11-16)</h3>
+                <p><strong>Set D: Family Interactions</strong></p>
+                <ul>
+                    <li><strong>Unit 11 (25:12-34):</strong> Jacob and Esau's birth, sale of birthright</li>
+                    <li><strong>Unit 13 (26:34-28:9):</strong> Jacob receives Isaac's blessing over Esau</li>
+                    <li><strong>Unit 15 (32:4-33:16):</strong> Jacob wrestles at Peniel, reconciles with Esau</li>
+                </ul>
+                
+                <p><strong>Set E: Covenants/Alliances</strong></p>
+                <ul>
+                    <li><strong>Unit 12 (26:1-33):</strong> Isaac's covenant with Abimelech</li>
+                    <li><strong>Unit 14 (28:10-32:3):</strong> Jacob's ladder, covenant with Laban</li>
+                    <li><strong>Unit 16 (33:17-35:29):</strong> Return to Bethel, altar building, deaths</li>
+                </ul>
+                
+                <h3>Set F: Joseph Narrative (Units 17-19)</h3>
+                <ul>
+                    <li><strong>Unit 17 (36:1-41:45):</strong> Joseph sold, interprets dreams, rises in Egypt</li>
+                    <li><strong>Unit 18 (41:46-47:26):</strong> Joseph administers Egypt, family reunion</li>
+                    <li><strong>Unit 19 (47:27-50:26):</strong> Jacob's blessings, deaths of Jacob and Joseph</li>
+                </ul>
+            </section>
+
+            <!-- The Significance of Unit 4 -->
+            <section class="section-box">
+                <h2>The Significance of Unit 4 (Tower of Babel)</h2>
+                <p>The Tower of Babel occupies a unique position as both culmination and transition:</p>
+                
+                <h3>A Narrative Hinge</h3>
+                <ul>
+                    <li>Completes the universal history of all humanity (Units 1-4)</li>
+                    <li>Prepares for patriarchal narratives focused on single lineage</li>
+                    <li>Occurs chronologically between Noah's descendants and Abram's birth</li>
+                </ul>
+                
+                <h3>A Theological Pivot</h3>
+                <ul>
+                    <li>First narrative where only YHWH appears (no mention of Elohim)</li>
+                    <li>Establishes YHWH as independently active in human affairs</li>
+                    <li>Sets up polarity between YHWH (heaven-focused) and Elohim (earth-focused)</li>
+                </ul>
+                
+                <h3>A Structural Microcosm</h3>
+                <ul>
+                    <li>Divided into two perspectives: human (earth) and divine (heaven)</li>
+                    <li>Organized in three columns: unity (A) → dialogue (B) → diversity (C)</li>
+                    <li>Reflects the pattern in Units 1-3: unity (Elohim) → dialogue (YHWH Elohim) → multiplicity (separated names)</li>
+                </ul>
+                
+                <h3>Visual Rhetoric</h3>
+                <p>The structure displays "visual rhetoric" where:</p>
+                <ul>
+                    <li>Column A represents unity/oneness (one language, one people)</li>
+                    <li>Column C represents diversity/many (scattered nations, multiple languages)</li>
+                    <li>Column B serves as crucial middle element - dialogue as bridge between unity and diversity</li>
+                </ul>
+            </section>
+
+            <!-- The Matrix Design -->
+            <section class="section-box">
+                <h2>The Matrix Design: Rows and Columns</h2>
+                <p>Genesis follows a matrix design that creates sophisticated literary weave:</p>
+                
+                <h3>Weft Threads (Columns)</h3>
+                <p>Six vertical threads (A-F) create thematic continuity:</p>
+                <ul>
+                    <li><strong>Columns A and F:</strong> Kingship themes (divine and human)</li>
+                    <li><strong>Columns B and E:</strong> Covenant themes</li>
+                    <li><strong>Columns C and D:</strong> Family themes</li>
+                </ul>
+                
+                <h3>Warp Threads (Rows)</h3>
+                <p>Three horizontal threads create structural continuity:</p>
+                <ul>
+                    <li><strong>Row 1 (Birth/Creation):</strong> Beginnings across all narrative cycles</li>
+                    <li><strong>Row 2 (Development):</strong> Complex development and testing</li>
+                    <li><strong>Row 3 (Death/Closure):</strong> Resolution and fulfillment</li>
+                </ul>
+            </section>
+
+            <!-- The Divine Names -->
+            <section class="section-box">
+                <h2>The Divine Names in Genesis</h2>
+                <p>The patterning of divine names (Elohim and YHWH) forms a crucial element running through the entire book:</p>
+                
+                <h3>Progressive Development in Units 1-4</h3>
+                <ul>
+                    <li><strong>Unit 1:</strong> Only "Elohim" appears - associated with creation and cosmic order</li>
+                    <li><strong>Unit 2:</strong> The combined name "YHWH Elohim" appears - introducing dialogue</li>
+                    <li><strong>Unit 3:</strong> Both names appear separately - showing differentiation</li>
+                    <li><strong>Unit 4:</strong> Only "YHWH" appears - establishing independence</li>
+                </ul>
+                
+                <h3>Patterning in Patriarchal Narratives (Units 5-19)</h3>
+                <p>The divine names follow a remarkable pattern across the three rows:</p>
+                <ul>
+                    <li><strong>Row 1 (Units 5, 6, 11, 12, 17):</strong> Only YHWH appears - associated with beginnings, generations, and expansive blessing</li>
+                    <li><strong>Row 3 (Units 9, 10, 15, 16, 19):</strong> Almost exclusively Elohim appears - associated with death, fear, and limitation</li>
+                    <li><strong>Row 2 (Units 7, 8, 13, 14, 18):</strong> Both YHWH and Elohim appear - creating interface between transcendent and immanent</li>
+                </ul>
+                
+                <h3>Spatial and Conceptual Distinctions</h3>
+                <p><strong>YHWH:</strong> Associated with heaven, transcendence, intentions, potential, supernatural, expansive blessings</p>
+                <ul>
+                    <li>Promises land "from the river of Egypt unto the great river Euphrates"</li>
+                    <li>Makes descendants "as the dust of the earth" or "as the stars of heaven"</li>
+                    <li>Associated with generation and abundant wealth</li>
+                </ul>
+                
+                <p><strong>Elohim:</strong> Associated with earth, immanence, practical acts, natural world, limitation</p>
+                <ul>
+                    <li>Promises more modest blessings</li>
+                    <li>Associated with death, fear, and physical circumcision</li>
+                    <li>Focuses on "nations" rather than individuals</li>
+                </ul>
+                
+                <h3>The Interface in Row 2</h3>
+                <p>Row 2 reveals how the two divine names interact:</p>
+                <ul>
+                    <li>In Jacob's dream (Unit 14), Elohim is at the bottom of the ladder, YHWH at the top</li>
+                    <li>Jacob's vow ("then shall YHWH be Elohim for me") points to eventual merging of the two aspects</li>
+                    <li>Jacob becomes the "ladder" through which YHWH descends to become known in Elohim's realm</li>
+                </ul>
+            </section>
+
+            <!-- Structural Markers -->
+            <section class="section-box">
+                <h2>Structural Markers and Patterns</h2>
+                
+                <h3>Patriarchal Block Markers</h3>
+                <p>Each patriarchal narrative (Sets B-C, D-E, and F) begins with "generations of":</p>
+                <ul>
+                    <li><strong>Abraham narrative:</strong> Shem and Terah</li>
+                    <li><strong>Isaac-Jacob narrative:</strong> Ishmael and Isaac</li>
+                    <li><strong>Joseph narrative:</strong> Esau and Jacob</li>
+                </ul>
+                <p>Each block also ends with two deaths and burials in Hebron.</p>
+                
+                <h3>Mirrored Patterns</h3>
+                <p>The six-unit Abraham narrative (B-C) and the six-unit Isaac-Jacob narrative (D-E) have similar structures but with reversed order:</p>
+                <ul>
+                    <li><strong>Abraham narrative:</strong> Alternates covenants (B) → family (C)</li>
+                    <li><strong>Isaac-Jacob narrative:</strong> Alternates family (D) → covenants (E)</li>
+                </ul>
+                
+                <h3>Sister-Wife Motif</h3>
+                <p>The "sister-wife" motif appears in the four "corner" units of the covenant ring (5, 9, 12, and 16):</p>
+                <ul>
+                    <li>Sarai presented as sister to Pharaoh (Unit 5)</li>
+                    <li>Sarah presented as sister to Abimelech (Unit 9)</li>
+                    <li>Rebekah presented as sister by Isaac (Unit 12)</li>
+                    <li>Dinah's marriage proposed as alliance (Unit 16)</li>
+                </ul>
+            </section>
+
+            <!-- Parallels With Other Structures -->
+            <section class="section-box">
+                <h2>Parallels With Other Structures</h2>
+                
+                <h3>Genesis Unit 3 (The Flood)</h3>
+                <p>The Flood narrative mirrors the three-ring pattern of the entire book:</p>
+                <ul>
+                    <li><strong>Threads 1 & 6:</strong> Generations before and after the flood</li>
+                    <li><strong>Threads 2 & 5:</strong> Covenants with Noah</li>
+                    <li><strong>Threads 3 & 4:</strong> Noah's family in the ark</li>
+                </ul>
+                
+                <h3>Book of Leviticus</h3>
+                <p>Leviticus also has a three-ring concentric structure with family at the center:</p>
+                <ul>
+                    <li><strong>Outer Ring:</strong> Place/Location themes</li>
+                    <li><strong>Middle Ring:</strong> Time/Calendar themes</li>
+                    <li><strong>Inner Ring:</strong> Family relationships</li>
+                </ul>
+            </section>
+
+            <!-- Literary Significance -->
+            <section class="section-box">
+                <h2>Literary Significance</h2>
+                <p>This structural analysis reveals Genesis as a "weave of weaves" - each unit is itself woven according to the same paradigm used for the entire book. The alternating and concentric patterns show deliberate design that enhances the text's meaning.</p>
+                
+                <p>The family-centered structure places human relationships at the core of the narrative, surrounded by the covenants that establish identity, and framed by the divine and human expressions of ordered governance.</p>
+                
+                <p>The patterning of divine names creates a theological framework for understanding the relationship between the transcendent (YHWH) and immanent (Elohim) aspects of divinity. This prepares for the eventual merging of these aspects in Exodus when YHWH becomes the national deity of Israel.</p>
+                
+                <p>The Tower of Babel narrative exemplifies how even a brief passage (just nine verses) contains sophisticated structural elements that mirror patterns in the larger text. This demonstrates the careful literary craftsmanship throughout Genesis.</p>
+                
+                <p>The Torah Weave approach makes these connections visible, revealing Genesis not as a simple collection of stories but as a unified literary masterpiece with deliberate patterns that enhance its meaning.</p>
+            </section>
+
+            <!-- Link to Commentary Series -->
+            <section class="commentary-link">
+                ������ <strong>For deeper theological analysis:</strong> This guide provides an overview of Genesis's structure. For detailed examination of how this architecture creates meaning through divine name distribution, concentric ring progression, and systematic correspondences, see <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture and Meaning in Genesis</a>.
+            </section>
+
+            <!-- Citation Box -->
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "How to Read the Genesis Map." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Genesis/genesis-map/genesis-map-commentary.html
+            </aside>
+        </article>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Genesis//torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis" rel="prev">← Back to Genesis Map</a>
+        </div>
+        <div>
+            <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis Commentary Series →</a>
+        </div>
+    </nav>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

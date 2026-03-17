@@ -1,0 +1,682 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>The Woven Torah: A Two-Dimensional Reading of the Five Books of Moses | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="unit-navigation">
+    <div class="nav-breadcrumb">
+        <a href="https://chaver.com">Home</a> &rarr;
+        <a href="/torah-weave/">Torah Weave</a> &rarr;
+        The Woven Torah Method
+    </div>
+</nav>
+
+<main>
+<article>
+
+<header class="unit-header-section">
+    <h1>The Woven Torah: A Two-Dimensional Reading of the Five Books of Moses</h1>
+    <div class="unit-meta">Moshe Kline &middot; Jerusalem &middot; chaver.com</div>
+</header>
+
+<!-- ========== SUMMARY BOX ========== -->
+<section class="structure-box">
+    <p>The Torah is composed of eighty-six discrete literary units&mdash;seventy-six regular and ten irregular&mdash;each organized internally as a two-dimensional matrix with rows and columns. When these units are mapped according to their structural markers, they reveal an architectural design that operates like a woven fabric: fixed structural threads (warp) establish the framework while content threads (weft) weave through them, producing a <strong>coordinate system of meaning</strong> in which the position of each passage communicates as much as its content. This principle operates at every scale&mdash;within individual units, across each of the five books, across the Torah as a whole, and throughout the five hundred twenty-four chapters of the Mishnah.</p>
+    <p>This page introduces the reading method. For the complete analysis, see the book-by-book studies linked below. For background on the project, see <a href="https://chaver.com/General/Woven%20Text.htm">About The Woven Torah</a>.</p>
+</section>
+
+<!-- ========== 1. THE PROBLEM ========== -->
+<section class="commentary-section">
+    <h2>The Problem: Linear Reading of a Non-Linear Text</h2>
+    
+    <p>Open any printed Bible and you encounter a continuous stream of numbered chapters and verses, flowing from Genesis 1:1 to Deuteronomy 34:12. This layout implies that the Torah is a sequential narrative&mdash;one event after another, beginning to end. But these chapter divisions were not part of the original text. They were introduced by Stephen Langton in the thirteenth century for reference convenience and later adopted into printed Hebrew Bibles. The Torah scroll itself contains no chapters, no verses, no punctuation.</p>
+    
+    <p>The question is whether these medieval divisions obscure an older, inherent structure. For over a century, scholars have observed textual features that resist linear explanation: doublets (the same event told twice), alternating divine names (YHWH and Elohim), apparent contradictions, and shifts in style and vocabulary. The Documentary Hypothesis proposed that these features result from the combination of originally independent source documents&mdash;J, E, P, and D&mdash;redacted into a single text.</p>
+    
+    <p>This study proposes a different explanation. The textual features that generated source criticism&mdash;doublets, divine-name alternation, stylistic variation&mdash;may be evidence of sophisticated literary architecture. The Torah may be non-linear by design: a fabric of interlocking literary units, each woven from intersecting thematic and theological threads, arranged in patterns that communicate through structure as much as through content.</p>
+</section>
+
+<!-- ========== 2. TEXT AS WEAVE ========== -->
+<section class="commentary-section">
+    <h2>Text as Weave: A Methodological Framework</h2>
+    
+    <p>The Latin <em>textus</em> derives from <em>textere</em>, &ldquo;to weave.&rdquo; This etymology preserves an insight that modern reading habits have obscured. Quintilian used the weaving metaphor to describe prose composition, and the connection between textile and text persisted through antiquity. We propose taking the metaphor literally: certain biblical texts are composed as literary weaves, with structural threads running in two perpendicular directions.</p>
+    
+    <h3>The Weaving Analogy</h3>
+    
+    <p>On an ancient loom, the warp threads are stretched taut between anchoring posts, providing the fixed framework&mdash;like the stone tablets of the Decalogue, they establish permanent structural relationships. The weft threads are then woven through the warp, carrying content that is organized by the framework. Neither set of threads alone produces the fabric; meaning emerges at their intersections. This principle operates at every scale of composition: within a single literary unit, across a book&rsquo;s matrix of units, across the five books of the Torah, and across the five hundred twenty-four chapters of the Mishnah.</p>
+    
+    <p>In a woven literary text, the same principle operates. One set of organizing threads runs vertically&mdash;in the Torah, these are the divine-name patterns (YHWH, Elohim, or both) that distribute systematically by row position. Another set runs horizontally&mdash;these are the thematic tracks (covenant material, family material) that organize content into columns. A given passage sits at the intersection of both threads. Its position in the vertical dimension determines its divine-name register; its position in the horizontal dimension determines its thematic track. To understand the passage fully, you must read along both axes.</p>
+    
+    <h3>The Coordinate System of Meaning</h3>
+    
+    <p>This two-dimensional arrangement creates what we call a <strong>coordinate system of meaning</strong>. Just as a point on a map is defined by its latitude and longitude, a passage in the woven Torah is defined by its row and column. The row tells you something about the passage&mdash;what aspect of the divine is active, what register the narrative operates in. The column tells you something else&mdash;which thematic track the passage belongs to, what it shares with passages above and below it. Neither coordinate alone gives the full picture. Meaning arises from the intersection.</p>
+    
+    <p>This is not a metaphor imposed on the text from outside. The text itself signals the structure through repeating literary devices: verbal echoes link passages in the same row, thematic parallels connect passages in the same column, and explicit cross-references teach the reader to compare positions across the matrix. The contemporary reader, trained to read linearly from beginning to end, may judge the resulting repetitions as redundant. The woven reading shows them to be architectural markers&mdash;the seams that reveal the fabric&rsquo;s structure.</p>
+</section>
+
+<!-- ========== 3. LITERARY UNITS ========== -->
+<section class="commentary-section">
+    <h2>The Literary Units: The Torah&rsquo;s Building Blocks</h2>
+    
+    <h3>Thematic Woven Units</h3>
+    
+    <p>The first step in reading the woven Torah is identifying its <strong>thematic woven units</strong>&mdash;the text&rsquo;s natural divisions. These are not the chapter divisions of Langton or the <em>parashot</em> of the synagogue reading cycle, though they sometimes coincide. They are the Torah&rsquo;s own structural building blocks, marked by boundary signals embedded in the text itself. Each unit is not simply a sequential block of text but contains internal weaves of its own, creating a coordinate system of meaning that reveals connections between passages that are not apparent in a linear reading.</p>
+    
+    <h3>Boundary Markers</h3>
+    
+    <p>Two complementary systems of markers identify unit boundaries. <strong>Type A (External Markers)</strong> are explicit textual signals that announce a new section: <em>toledot</em> formulas (&ldquo;These are the generations of&hellip;&rdquo;), death and burial notices, geographic envelopes (a unit opening and closing in the same location), and transitional formulas. <strong>Type B (Internal Structural Perfection)</strong> validates unit independence through internal architecture: three-part structures, verbal envelopes, chiastic arrangements, and thematic progression that mark a passage as a self-contained compositional whole.</p>
+    
+    <p>Using these criteria systematically across the five books yields eighty-six literary units: nineteen in Genesis, nineteen in Exodus, twenty-two in Leviticus, thirteen in Numbers, and thirteen in Deuteronomy. Each division rests on multiple converging lines of evidence. The number was not predetermined; it emerged from the analysis.</p>
+    
+    
+
+    
+    <!-- Genesis Matrix -->
+    <div class="structure-box">
+        <strong>The Genesis Matrix: 19 Units in 3 Rows &times; 7 Columns</strong>
+        <div class="table-responsive">
+        <table class="matrix-table" style="width:100%; border-collapse:collapse; text-align:center; margin-top:12px;">
+            <thead>
+                <tr>
+                    <th>Row</th>
+                    <th>A<br><small>Opening</small></th>
+                    <th>B<br><small>Pivot</small></th>
+                    <th>C<br><small>Abr. Cov.</small></th>
+                    <th>D<br><small>Abr. Fam.</small></th>
+                    <th>E<br><small>IJ Fam.</small></th>
+                    <th>F<br><small>IJ Cov.</small></th>
+                    <th>G<br><small>Closing</small></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row-label"><strong>1</strong><br><small>(YHWH)</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">U1</a><br><small>Creation</small></td>
+                    <td></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">U5</a><br><small>Call</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">U6</a><br><small>Lot</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">U11</a><br><small>Twins</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">U12</a><br><small>Isaac</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">U17</a><br><small>Joseph</small></td>
+                </tr>
+                <tr>
+                    <td class="row-label"><strong>2</strong><br><small>(Both)</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">U2</a><br><small>Eden</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4.html">U4</a><br><small>Babel</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">U7</a><br><small>Covenants</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">U8</a><br><small>Sodom</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">U13</a><br><small>Blessing</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">U14</a><br><small>Laban</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">U18</a><br><small>Famine</small></td>
+                </tr>
+                <tr>
+                    <td class="row-label"><strong>3</strong><br><small>(Elohim)</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">U3</a><br><small>Nations</small></td>
+                    <td></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">U9</a><br><small>Abimelech</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">U10</a><br><small>Machpelah</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">U15</a><br><small>Esau</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">U16</a><br><small>Shechem</small></td>
+                    <td><a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">U19</a><br><small>Blessings</small></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <p style="margin-top:8px;"><small>Rows distribute by divine-name register: Row 1 features YHWH as active subject, Row 3 features Elohim, and Row 2 features both names at the interface. Columns organize thematic content into alternating covenant and family tracks.</small></p>
+    </div>
+</section>
+
+<!-- ========== 4. IN ACTION ========== -->
+<section class="commentary-section">
+    <h2>The Weave in Action: How Structure Creates Meaning</h2>
+    
+    <h3>Alternating Tracks with Inversion</h3>
+    
+    <p>The Abraham cycle (columns C&ndash;D) alternates between covenant and family material: Unit 5 (Abraham&rsquo;s call and covenant) is followed by Unit 6 (Abraham and Lot), then Unit 7 (covenant ceremonies), Unit 8 (Sodom and Lot&rsquo;s family), Unit 9 (Abimelech and Isaac&rsquo;s birth), Unit 10 (Sarah&rsquo;s death and burial). Odd-numbered units carry the covenant track; even-numbered units carry the family track.</p>
+    
+    <p>The Isaac-Jacob cycle (columns E&ndash;F) inverts the pattern. Now even-numbered units carry the covenant track and odd-numbered units carry the family track. This inversion is structural. Each column, read vertically, tells a complete triadic story. Units 5&ndash;7&ndash;9 trace the covenant from call through ceremony to testing. Units 6&ndash;8&ndash;10 trace the family from Lot through Sodom to burial. The linear narrative gives you the patriarchal story. The columnar reading gives you the thematic architecture. Both are valid because the text supports both simultaneously.</p>
+    
+    <h3>Divine Names as Structural Threads</h3>
+    
+    <p>Perpendicular to the thematic tracks, the divine-name distribution creates a pattern across the matrix. In Row 1 units, YHWH acts as active subject&mdash;speaking, promising, appearing to individuals. In Row 3 units, Elohim acts as active subject&mdash;creating, testing, working through natural processes. In Row 2 units, both names operate, and the narratives take place at threshold zones where heaven and earth intersect: Eden, Babel, the covenant ceremonies, Bethel.</p>
+    
+    <p>This distribution is systematic. It generates testable predictions: if you know a unit&rsquo;s row position, you can predict its dominant divine-name register before reading it. The predictions hold across Genesis with consistency that is difficult to attribute to coincidence or to the mechanical combination of source documents.</p>
+    
+    <h3>Cross-References as Reading Instructions</h3>
+    
+    <p>The text itself teaches the reading method. Genesis 26:1 opens Unit 12 with an explicit backward reference: &ldquo;Now there was a famine in the land, besides the first famine that was in the days of Abraham.&rdquo; This connects Unit 12 directly to Unit 5&mdash;both of which occupy Row 1 corner positions in their respective cycles. The cross-reference functions as a reading instruction: when you reach Unit 12, compare it with Unit 5, because they occupy corresponding positions in the architectural design.</p>
+</section>
+
+<!-- ========== 5. BEYOND GENESIS ========== -->
+<section class="commentary-section">
+    <h2>Beyond Genesis: The Torah-Wide Architecture</h2>
+    
+    <p>Genesis provides the clearest demonstration of woven architecture, but the method extends across the entire Torah. Each of the five books organizes its literary units into two-dimensional structures, though each book has its own distinctive architectural pattern. Leviticus, for example, is organized as three concentric arrays around its central text (Chapter 19), analogous to the concentric rings of the Tabernacle. Exodus and Numbers divide into inversely parallel sections that mirror each other, creating a structure analogous to the desert encampment.</p>
+    
+    <div class="structure-box">
+        <strong>Literary Units Across the Five Books</strong>
+        <div class="table-responsive">
+        <table class="matrix-table" style="width:100%; border-collapse:collapse; text-align:center; margin-top:12px;">
+            <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Units</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Genesis</td><td>19</td></tr>
+                <tr><td>Exodus</td><td>19</td></tr>
+                <tr><td>Leviticus</td><td>22</td></tr>
+                <tr><td>Numbers</td><td>13</td></tr>
+                <tr><td>Deuteronomy</td><td>13</td></tr>
+                <tr style="font-weight:bold;"><td>Total</td><td>86</td></tr>
+            </tbody>
+        </table>
+        <p style="margin-top:8px;"><small>Of these eighty-six units, seventy-six are regular and ten are irregular. The numerical symmetry is deliberate: Genesis + Deuteronomy = 32 units (19 + 13), matching Exodus + Numbers = 32 units (19 + 13), with Leviticus&rsquo;s 22 units at the center.</small></p>
+        </div>
+    </div>
+    
+    <p>The seventy-six regular units organize into triads (groups of three read vertically through three rows), while the ten irregular units function as structural boundary markers&mdash;pivots, transitions, and independent compositions positioned outside the triadic patterns. Together, the eighty-six units account for every verse in the Torah.</p>
+    
+    <p>The woven architecture also extends beyond the Torah. In separate publications, we have demonstrated that Rabbi Yehuda HaNasi composed the Mishnah using the same two-dimensional method&mdash;all sixty-three tractates and five hundred twenty-four chapters organized as literary tables with row and column logic. Avot Chapter 1&rsquo;s Five Pairs mirror the five-pair structure of the Decalogue, suggesting a chain of transmission: the woven method originated at Sinai and was preserved through the generations that Avot Chapter 1 enumerates.</p>
+</section>
+
+<!-- ========== 6. SOURCE CRITICISM ========== -->
+<section class="commentary-section">
+    <h2>Relationship to Source-Critical Approaches</h2>
+    
+    <p>Source criticism emerged from real textual phenomena. Doublets, divine-name alternation, apparent contradictions, and stylistic variations are observable features of the Torah. The question has always been what best explains them.</p>
+    
+    <p>The woven reading does not deny these phenomena; it reinterprets them. Doublets become structural parallels&mdash;corresponding positions in different cycles that invite comparison. Divine-name alternation becomes architectural distribution&mdash;a systematic deployment of YHWH and Elohim according to row position for theological purposes. Stylistic variation becomes register differentiation&mdash;the distinct voices appropriate to different coordinates in the matrix.</p>
+    
+    <p>The architectural patterns documented here require explanation within any compositional theory. Whether these patterns reflect unitary composition, sophisticated final redaction, or something between, they demonstrate a level of compositional design that enriches our understanding of the Torah&rsquo;s literary achievement. The patterns are observable and falsifiable&mdash;they can be verified, challenged, or refined through continued analysis.</p>
+</section>
+
+<!-- ========== 7. HOW TO READ ========== -->
+<section class="commentary-section">
+    <h2>How to Read a Woven Text</h2>
+    
+    <p>The woven Torah supports multiple valid reading strategies, each revealing different dimensions of the compositional design:</p>
+    
+    <p><strong>Linear reading</strong> follows the narrative sequence as it appears in the scroll&mdash;the traditional reading from beginning to end. This remains valid. The woven structure does not replace it; it adds to it.</p>
+    
+    <p><strong>Columnar reading</strong> follows a thematic track vertically through the rows. Read Units 5&ndash;7&ndash;9 consecutively, and you trace the covenant from call through ceremony to testing. Read Units 6&ndash;8&ndash;10, and you follow the family dynamics from Lot&rsquo;s separation through Sodom&rsquo;s destruction to Sarah&rsquo;s burial.</p>
+    
+    <p><strong>Row reading</strong> follows a divine-name register horizontally across the matrix. Read all Row 1 units together, and you see YHWH&rsquo;s personal, promissory activity across every thematic domain. Read all Row 3 units, and you see Elohim&rsquo;s creative, testing activity in the corresponding domains.</p>
+    
+    <p><strong>Correspondence reading</strong> compares units in the same matrix position across different cycles. Unit 5 and Unit 12 both occupy Row 1 corner positions; comparing them reveals how the covenant relationship transforms from one generation to the next while preserving its structure.</p>
+    
+    <p>Each strategy works because the text was composed to support all of them simultaneously. The woven structure is not an overlay imposed by modern analysis; it is the compositional logic that generated the text in its received form.</p>
+</section>
+
+<!-- ========== 8. PUBLICATIONS ========== -->
+<section class="commentary-section">
+    <h2>Publications and Resources</h2>
+    
+    <p>The woven Torah method has been developed over four decades of research and has undergone peer review in leading biblical studies venues:</p>
+    
+    <p>Kline, Moshe. &ldquo;The Literary Structure of Mishnah Shviit Chapter 3.&rdquo; [Hebrew] <em>Shmaatin</em> (&#1513;&#1502;&#1506;&#1514;&#1497;&#1503;) (1987).</p>
+    
+    <p>Kline, Moshe. &ldquo;The Literary Structure of the Mishnah: Erubin Chapter X.&rdquo; [Hebrew] <em>Alei Sefer</em> 14 (1987): 5&ndash;28. <a href="http://www.jstor.org/stable/24158735">JSTOR: 24158735</a>.</p>
+    
+    <p>Kline, Moshe. &ldquo;The Editor Was Nodding: A Reading of Leviticus 19 in Memory of Mary Douglas.&rdquo; <em>Journal of Hebrew Scriptures</em> 8 (2008): art. 17, 1&ndash;59.</p>
+    
+    <p>Kline, Moshe. &ldquo;Structure Is Theology: The Composition of Leviticus.&rdquo; In <em>Current Issues in Priestly and Related Literature: The Legacy of Jacob Milgrom and Beyond</em>, edited by Roy E. Gane and Ada Taggar-Cohen, 225&ndash;264. Atlanta: Society of Biblical Literature Press, 2015. ISBN 978-1-62837-120-8.</p>
+    
+    <p>Hocking, Paul J. &ldquo;A New and Living Way: A Study of Leviticus as Rhetoric.&rdquo; PhD thesis, University of Chester, 2021.</p>
+    
+    <p>Kline, Moshe. <em>Before Chapter and Verse: Reading the Woven Torah.</em> Kindle Direct Publishing, 2022.</p>
+    
+    <p>Hocking, Paul, and Moshe Kline. &ldquo;The Covenant Code: A New Way of Reading the Writing.&rdquo; <em>Journal of Biblical Literature</em> 144, no. 2 (2025): 217&ndash;239.</p>
+</section>
+
+<!-- ========== 9. CONCLUSION ========== -->
+<section class="commentary-section">
+    <h2>Architecture as Meaning</h2>
+    
+    <p>The central claim of the woven Torah reading is that structure itself communicates. The Torah&rsquo;s architectural design is not merely organizational convenience&mdash;it is a meaning-generating system. When a passage about covenant testing is positioned in Row 3 (the Elohim register), the row position tells you something about the nature of the test that the passage&rsquo;s content alone does not say. When the same covenant story is repeated in a different generation at a corresponding matrix position, the structural parallel communicates continuity that no linear reading can express.</p>
+    
+    <p>The Torah scroll is a linear object&mdash;a single column of text unrolling from beginning to end. But the composition it contains is two-dimensional. The medieval chapter divisions reinforced the linearity; the woven reading recovers the depth. What has been read for centuries as a sequence of chapters turns out to be a matrix of intersecting threads, each unit a point where horizontal and vertical dimensions meet, each position meaningful in relation to every other position in the grid.</p>
+    
+    <p>The patterns documented here are available for examination, verification, and critique. They make testable predictions about textual relationships. They offer a framework for understanding features of the Torah that have puzzled readers for generations. And they suggest that the Torah&rsquo;s authors were more sophisticated composers than even their most sympathetic readers have imagined.</p>
+</section>
+
+</article>
+
+<!-- ========== NAVIGATION ========== -->
+<div class="series-navigation">
+    <h3>Explore the Woven Torah</h3>
+    <a href="https://chaver.com/General/Woven%20Text.htm">About The Woven Torah</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis Overview</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: The Units of Genesis</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: The Map of Genesis</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: The Three Rows</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture and Meaning</a>
+</div>
+
+<aside class="citation-box">
+    <strong>To cite:</strong> Kline, Moshe. &ldquo;The Woven Torah: A Two-Dimensional Reading of the Five Books of Moses.&rdquo; <em>Torah Weave</em>, 2025. <a href="https://chaver.com/torah-weave/Woven-Torah-Method.html">https://chaver.com/torah-weave/Woven-Torah-Method.html</a>.
+</aside>
+
+</main>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

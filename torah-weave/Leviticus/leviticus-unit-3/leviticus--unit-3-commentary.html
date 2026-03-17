@@ -1,0 +1,719 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>Leviticus Unit 3: Administrative Order | Torah Weave Commentary</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<main class="content-wrapper">
+
+<nav class="breadcrumb">
+    <a href="/torah-weave/index.html">Torah Weave</a> &raquo;
+    <a href="/torah-weave/commentary.html">Commentary</a> &raquo;
+    <a href="/torah-weave/Leviticus/leviticus-analysis/overview.html">Leviticus</a> &raquo;
+    Unit 3 Commentary
+</nav>
+
+<header class="unit-header-section">
+    <h1>Leviticus Unit 3: Administrative Order</h1>
+    <div class="unit-meta">Leviticus 6:1&ndash;7:38 | Commentary</div>
+</header>
+
+<aside class="unit-position-map">
+    <svg viewBox="0 0 310 100" width="310" height="100" style="display: block; margin: 1em auto;">
+        <text x="50" y="15" font-size="9" text-anchor="middle" fill="#666">A</text>
+        <text x="80" y="15" font-size="9" text-anchor="middle" fill="#666">B</text>
+        <text x="110" y="15" font-size="9" text-anchor="middle" fill="#666">C</text>
+        <text x="140" y="15" font-size="9" text-anchor="middle" fill="#666">D</text>
+        <text x="170" y="15" font-size="9" text-anchor="middle" fill="#666">E</text>
+        <text x="200" y="15" font-size="9" text-anchor="middle" fill="#666">F</text>
+        <text x="230" y="15" font-size="9" text-anchor="middle" fill="#666">G</text>
+        <text x="260" y="15" font-size="9" text-anchor="middle" fill="#666">H</text>
+        <text x="20" y="40" font-size="9" text-anchor="middle" fill="#666">1</text>
+        <text x="20" y="60" font-size="9" text-anchor="middle" fill="#666">2</text>
+        <text x="20" y="80" font-size="9" text-anchor="middle" fill="#666">3</text>
+        <rect x="35" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <text x="47" y="37" font-size="8" text-anchor="middle">1</text>
+        <rect x="65" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <text x="77" y="37" font-size="8" text-anchor="middle">4</text>
+        <rect x="95" y="25" width="25" height="18" fill="#f0f0f0" stroke="#ccc"/>
+        <text x="107" y="37" font-size="8" text-anchor="middle">7</text>
+        <rect x="125" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <text x="137" y="37" font-size="8" text-anchor="middle">10</text>
+        <rect x="155" y="25" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="185" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <text x="197" y="37" font-size="8" text-anchor="middle">14</text>
+        <rect x="215" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <text x="227" y="37" font-size="8" text-anchor="middle">17</text>
+        <rect x="245" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <text x="257" y="37" font-size="8" text-anchor="middle">20</text>
+        <rect x="35" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <text x="47" y="57" font-size="8" text-anchor="middle">2</text>
+        <rect x="65" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <text x="77" y="57" font-size="8" text-anchor="middle">5</text>
+        <rect x="95" y="45" width="25" height="18" fill="#f0f0f0" stroke="#ccc"/>
+        <text x="107" y="57" font-size="8" text-anchor="middle">8</text>
+        <rect x="125" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <text x="137" y="57" font-size="8" text-anchor="middle">11</text>
+        <rect x="155" y="45" width="25" height="18" fill="#ffe6e6" stroke="#CC0066" stroke-width="1.5"/>
+        <text x="167" y="57" font-size="8" text-anchor="middle" font-weight="bold">13</text>
+        <rect x="185" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <text x="197" y="57" font-size="8" text-anchor="middle">15</text>
+        <rect x="215" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <text x="227" y="57" font-size="8" text-anchor="middle">18</text>
+        <rect x="245" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <text x="257" y="57" font-size="8" text-anchor="middle">21</text>
+        <rect x="35" y="65" width="25" height="18" fill="#d4f2ff" stroke="#333" stroke-width="2"/>
+        <text x="47" y="77" font-size="8" text-anchor="middle" font-weight="bold">3</text>
+        <rect x="65" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <text x="77" y="77" font-size="8" text-anchor="middle">6</text>
+        <rect x="95" y="65" width="25" height="18" fill="#f0f0f0" stroke="#ccc"/>
+        <text x="107" y="77" font-size="8" text-anchor="middle">9</text>
+        <rect x="125" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <text x="137" y="77" font-size="8" text-anchor="middle">12</text>
+        <rect x="155" y="65" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="185" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <text x="197" y="77" font-size="8" text-anchor="middle">16</text>
+        <rect x="215" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <text x="227" y="77" font-size="8" text-anchor="middle">19</text>
+        <rect x="245" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <text x="257" y="77" font-size="8" text-anchor="middle">22</text>
+    </svg>
+</aside>
+
+<article>
+
+<section class="commentary-section">
+<h2>Taking Out the Ashes</h2>
+
+<p>The first image in the administrative unit of Leviticus is not a grand ritual. It is a man scooping ashes. &ldquo;The priest shall put on his linen garment, and his linen breeches shall he put upon his flesh; and he shall take up the ashes whereto the fire hath consumed the burnt-offering on the altar, and he shall put them beside the altar. And he shall put off his garments, and put on other garments, and carry forth the ashes without the camp unto a clean place&rdquo; (6:3&ndash;4).</p>
+
+<p>The priest dresses in special linen for the work. He scoops the remains of what others have offered. He changes clothes. He carries the ashes outside the camp. Then he comes back, kindles the morning fire, and lays out the next burnt-offering. This is janitorial work&mdash;cleaning the hearth so that the next offering can be received. And the text places it in cell 1A: Row 1, Column A, the strongest position in the grid. The most menial task occupies the most prominent cell.</p>
+
+<p>Why? Because this is a unit about what comes down. <a href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1-commentary.html">Unit 1</a> legislated what goes up&mdash;offerings ascending to the deity. <a href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2-commentary.html">Unit 2</a> legislated the repair of disruptions between the individual and the sacred order. Unit 3 legislates the institutional machinery: what the priest does with it all. And the first thing the priest does is tend the fire and remove the ash. Before you eat YHWH&rsquo;s food, you clean YHWH&rsquo;s hearth. Service before privilege.</p>
+</section>
+
+<section class="commentary-section">
+<h2>The Unit&rsquo;s Architecture</h2>
+
+<p>Unit 3 is a 3&times;3 matrix&mdash;the same format as Units 1 and 2, confirming all three as members of the same triad:</p>
+
+<table class="matrix-table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Column A<br><small>Strongest</small></th>
+            <th>Column B<br><small>Middle</small></th>
+            <th>Column C<br><small>Completion</small></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">Row 1<br><small>What the<br>priest does</small></td>
+            <td><strong>1A:</strong> Law of burnt-offering<br>Lev 6:1&ndash;6<br><em>&ldquo;The priest shall put on his linen garment... and he shall take up the ashes&rdquo;</em></td>
+            <td><strong>1B:</strong> Law of meal-offering<br>Lev 6:7&ndash;11<br><em>&ldquo;That which is left thereof shall Aaron and his sons eat&rdquo;</em></td>
+            <td><strong>1C:</strong> Priest&rsquo;s own meal-offering<br>Lev 6:12&ndash;16<br><em>&ldquo;This is the offering of Aaron and of his sons, which they shall offer unto YHWH&rdquo;</em></td>
+        </tr>
+        <tr>
+            <td class="row-header">Row 2<br><small>The legal<br>standard</small></td>
+            <td><strong>2A:</strong> Law of sin-offering<br>Lev 6:17&ndash;23<br><em>&ldquo;This is the law of the sin-offering: in the place where the burnt-offering is killed&rdquo;</em></td>
+            <td><strong>2B:</strong> Law of guilt-offering<br>Lev 7:1&ndash;6<br><em>&ldquo;This is the law of the guilt-offering: it is most holy&rdquo;</em></td>
+            <td><strong>2C:</strong> Combined law + priestly portions<br>Lev 7:7&ndash;10<br><em>&ldquo;As is the sin-offering, so is the guilt-offering; there is one law for them&rdquo;</em></td>
+        </tr>
+        <tr>
+            <td class="row-header">Row 3<br><small>Boundaries<br>of eating</small></td>
+            <td><strong>3A:</strong> Peace-offering varieties<br>Lev 7:11&ndash;21<br><em>&ldquo;This is the law of the sacrifice of peace-offerings&rdquo;</em></td>
+            <td><strong>3B:</strong> Fat and blood prohibitions<br>Lev 7:22&ndash;27<br><em>&ldquo;Ye shall eat no fat, of ox, or sheep, or goat&rdquo;</em></td>
+            <td><strong>3C:</strong> Priestly portions + closing summary<br>Lev 7:28&ndash;38<br><em>&ldquo;This is the law of the burnt-offering, of the meal-offering, and of the sin-offering...&rdquo;</em></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>The two axes represent two dimensions of institutional order. The rows ask: what kind of priestly work is this&mdash;practical handling (Row 1), legal classification (Row 2), or regulation of consumption (Row 3)? The columns move from the strongest form of each category toward its completion. And the grid as a whole mirrors the triad it closes.</p>
+
+<p>Notice the inversion between Unit 1 and Unit 3. In Unit 1, the offerings are the subject and the priest appears in the middle: Row 1 is the burnt-offering, Row 2 is the meal-offering where the priest mediates through the <span class="hebrew">&#1488;&#1494;&#1499;&#1512;&#1492;</span> (<em>azkarah</em>, &ldquo;memorial-part&rdquo;), Row 3 is the peace-offering. Offering&mdash;priest&mdash;offering. In Unit 3, the priest is the subject and the offering laws appear in the middle: Row 1 is what the priest does, Row 2 is the legal standard for the offerings themselves, Row 3 is the priest enforcing the boundaries of eating. Priest&mdash;offering&mdash;priest. The offerer&rsquo;s perspective and the priest&rsquo;s perspective are mirror images. What frames and what is framed switch places when you move from the individual&rsquo;s unit to the institution&rsquo;s unit.</p>
+</section>
+
+<section class="commentary-section">
+<h2>The Grid as a Mirror of the Triad</h2>
+
+<p>In the <a href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2-commentary.html">Unit 2 commentary</a>, we showed that Unit 3&rsquo;s internal grid maps directly onto the triad it completes:</p>
+
+<table class="matrix-table">
+    <caption><strong>What Unit 3 Administers</strong></caption>
+    <thead>
+        <tr>
+            <th>Unit 3 Row</th>
+            <th>Content</th>
+            <th>Administers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">Row 1</td>
+            <td>Burnt-offering (1A), meal-offering (1B), priest&rsquo;s own offering (1C)</td>
+            <td class="row-header">Unit 1: Rows 1&ndash;2</td>
+        </tr>
+        <tr>
+            <td class="row-header">Row 2</td>
+            <td>Sin-offering (2A), guilt-offering (2B), &ldquo;one law for them&rdquo; (2C)</td>
+            <td class="row-header">Unit 2</td>
+        </tr>
+        <tr>
+            <td class="row-header">Row 3</td>
+            <td>Peace-offering varieties (3A), fat/blood prohibitions (3B), priestly portions (3C)</td>
+            <td class="row-header">Unit 1: Row 3</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Unit 3 digests both preceding units into institutional order. Unit 1&rsquo;s voluntary offerings occupy Rows 1 and 3. Unit 2&rsquo;s compulsory offerings occupy Row 2&mdash;the middle, the position between. And the peace-offering, which was one row among three in Unit 1, gets a full row to itself in Unit 3 because it is the most complex offering from the institutional side: the one the layperson eats, requiring time limits, purity regulations, and the sharpest penalties for violation.</p>
+</section>
+
+<section class="commentary-section">
+<h2>Row 1: From Maintenance to Reception to Contribution</h2>
+
+<p>The flow across Row 1 tells a story about priestly service. In 1A (the burnt-offering), the priest maintains&mdash;he tends the fire, removes the ashes, kindles the morning wood. He receives nothing; the burnt-offering is entirely consumed. In 1B (the meal-offering), the priest receives for the first time: &ldquo;that which is left thereof shall Aaron and his sons eat; it shall be eaten without leaven in a holy place&rdquo; (6:9). And the text adds: &ldquo;I have given it as their portion of My offerings made by fire; it is most holy, as the sin-offering, and as the guilt-offering&rdquo; (6:10)&mdash;YHWH speaking in the first person, declaring that the priests eat his own food. In 1C (the priest&rsquo;s own meal-offering), the priest contributes&mdash;he offers from his own resources: &ldquo;the tenth part of an ephah of fine flour for a meal-offering perpetually, half of it in the morning, and half thereof in the evening&rdquo; (6:13). And this offering &ldquo;shall be wholly made to smoke unto YHWH. And every meal-offering of the priest shall be wholly made to smoke; it shall not be eaten&rdquo; (6:15&ndash;16). When the priest offers his own, nothing comes back. He gives as completely as the layperson&rsquo;s burnt-offering.</p>
+
+<p>Maintenance, reception, contribution. Servant, recipient, participant. The three cells of Row 1 trace the priest&rsquo;s full relationship to the cult across three postures. And the horizontal thread that stitches them together is the phrase <span class="hebrew">&#1488;&#1492;&#1512;&#1503; &#1493;&#1489;&#1504;&#1497;&#1493;</span> (<em>Aharon u-vanav</em>, &ldquo;Aaron and his sons&rdquo;)&mdash;appearing in every cell of the row (6:2, 6:9, 6:13). The subjects are always the same; what changes is what they are doing.</p>
+
+<p>Notice what happens at 6:10, the transition point. The meal-offering section describes the priests&rsquo; portion as &ldquo;most holy, as the sin-offering, and as the guilt-offering.&rdquo; Unit 2&rsquo;s offerings&mdash;the compulsory ones, the friction offerings&mdash;appear here as the standard of holiness for Unit 1&rsquo;s voluntary offering. The text stitches Units 1 and 2 together inside Unit 3&rsquo;s Row 1. The administrative unit does not merely process the other two in sequence. It weaves their material together.</p>
+</section>
+
+<section class="commentary-section">
+<h2>Row 2: One Law for Them</h2>
+
+<p>Row 2 administers Unit 2&rsquo;s offerings from the priestly side. Cell 2A gives the law of the sin-offering (<span class="hebrew">&#1514;&#1493;&#1512;&#1514; &#1492;&#1495;&#1496;&#1488;&#1514;</span>, <em>torat ha-hatat</em>, &ldquo;the law of the sin-offering,&rdquo; 6:18). Cell 2B gives the law of the guilt-offering (<span class="hebrew">&#1514;&#1493;&#1512;&#1514; &#1492;&#1488;&#1513;&#1501;</span>, <em>torat ha-asham</em>, &ldquo;the law of the guilt-offering,&rdquo; 7:1). The horizontal thread is the word <span class="hebrew">&#1514;&#1493;&#1512;&#1492;</span> (<em>torah</em>, &ldquo;law&rdquo;)&mdash;appearing as <span class="hebrew">&#1514;&#1493;&#1512;&#1514;</span> (<em>torat</em>) in 2A and 2B, and as the summative <span class="hebrew">&#1514;&#1493;&#1512;&#1492; &#1488;&#1495;&#1514;</span> (<em>torah ahat</em>, &ldquo;one law&rdquo;) in 2C. A second thread runs alongside it: <span class="hebrew">&#1499;&#1500; &#1494;&#1499;&#1512; &#1489;&#1499;&#1492;&#1504;&#1497;&#1501;</span> (<em>kol zakhar ba-kohanim</em>, &ldquo;every male among the priests&rdquo;) in 2A (6:22) and 2B (7:6)&mdash;specifying who may eat the offering in each cell.</p>
+
+<p>The offerer in Unit 2 experienced sin-offering and guilt-offering as two distinct obligations with different triggers&mdash;inadvertent transgression versus trespass in holy things or against a neighbor. The priest in Unit 3 experiences them as administrative categories with a shared procedure. Cell 2C makes this explicit: &ldquo;As is the sin-offering, so is the guilt-offering; there is one law for them; the priest that maketh atonement therewith, he shall have it&rdquo; (7:7). What was two for the offerer is one for the institution.</p>
+
+<p>Cell 2C then extends beyond Unit 2&rsquo;s material entirely: &ldquo;the priest that offereth any man&rsquo;s burnt-offering, even the priest shall have to himself the skin of the burnt-offering which he hath offered. And every meal-offering that is baked in the oven... shall be the priest&rsquo;s that offereth it&rdquo; (7:8&ndash;9). Having unified the sin and guilt offerings, the text gathers the priestly portions from Unit 1&rsquo;s offerings as well. The Column C cell is a summation cell: it draws together material from both preceding units into a single accounting of what belongs to the priest.</p>
+</section>
+
+<section class="commentary-section">
+<h2>Row 3: The Boundaries of Eating</h2>
+
+<p>Row 3 administers the peace-offering&mdash;and it is here that the text turns sharpest. The peace-offering is the communal meal, the offering the layperson eats. And the institutional question about a communal meal is: who may eat it, when, and what happens to those who violate the boundaries?</p>
+
+<p>Cell 3A (7:11&ndash;21) specifies the varieties of peace-offering&mdash;thanksgiving, vow, freewill&mdash;and their time limits. The thanksgiving must be eaten the same day; the vow and freewill may extend to the next day; by the third day, the remainder &ldquo;shall be burnt with fire&rdquo; (7:17). Then the text turns to the unclean: &ldquo;the soul that eateth of the flesh of the sacrifice of peace-offerings, that pertain unto YHWH, having his uncleanness upon him, that soul shall be cut off from his people&rdquo; (7:20).</p>
+
+<p>Cell 3B (7:22&ndash;27) prohibits eating fat and blood absolutely: &ldquo;Ye shall eat no fat, of ox, or sheep, or goat&rdquo; (7:23). &ldquo;Ye shall eat no manner of blood, whether it be of fowl or of beast&rdquo; (7:26). The penalty is the same: <span class="hebrew">&#1493;&#1504;&#1499;&#1512;&#1514;&#1492; &#1492;&#1504;&#1508;&#1513; &#1492;&#1492;&#1497;&#1488; &#1502;&#1506;&#1502;&#1497;&#1492;</span> (<em>ve-nikhretah ha-nefesh ha-hi me-ammeha</em>, &ldquo;that soul shall be cut off from his people,&rdquo; 7:25, 7:27).</p>
+
+<p>The phrase &ldquo;cut off from his people&rdquo; is Row 3&rsquo;s horizontal marker&mdash;it appears four times across 3A and 3B (7:20, 7:21, 7:25, 7:27) and nowhere else in the unit. This is the harshest language in the entire triad. Unit 1 ended with acceptance: <span class="hebrew">&#1500;&#1512;&#1510;&#1504;&#1493; &#1500;&#1508;&#1504;&#1497; &#1497;&#1492;&#1493;&#1492;</span> (<em>le-retzono lifnei YHWH</em>, &ldquo;that he may be accepted before YHWH,&rdquo; 1:3). Unit 2 ended with forgiveness: <span class="hebrew">&#1493;&#1504;&#1505;&#1500;&#1495; &#1500;&#1493;</span> (<em>ve-nislah lo</em>, &ldquo;and he shall be forgiven&rdquo;). Unit 3 ends with excision. The people-oriented unit&mdash;the unit about what comes down to the human level&mdash;is where the institution enforces its limits.</p>
+</section>
+
+<section class="commentary-section">
+<h2>The Vertical Threads</h2>
+
+<p>Two vertical threads run through the unit, each stitching its column together from top to bottom. Together they reveal a gradient running across the columns&mdash;from the deity&rsquo;s side to the priest&rsquo;s side.</p>
+
+<p>Column A is stitched by fire. In 1A: <span class="hebrew">&#1488;&#1513; &#1514;&#1502;&#1497;&#1491; &#1514;&#1493;&#1511;&#1491; &#1506;&#1500; &#1492;&#1502;&#1494;&#1489;&#1495; &#1500;&#1488; &#1514;&#1499;&#1489;&#1492;</span> (<em>esh tamid tukad al ha-mizbe&rsquo;ah lo tikhbeh</em>, &ldquo;fire shall be kept burning upon the altar continually; it shall not go out,&rdquo; 6:6). In 2A, the sin-offering whose blood enters the Tent of Meeting &ldquo;shall be burnt with fire&rdquo; (<span class="hebrew">&#1489;&#1488;&#1513; &#1514;&#1513;&#1512;&#1507;</span>, <em>ba-esh tisaref</em>, 6:23). In 3A, the peace-offering flesh remaining on the third day &ldquo;shall be burnt with fire&rdquo; (7:17), and flesh touching anything unclean &ldquo;shall be burnt with fire&rdquo; (7:19). Fire runs from top to bottom of Column A&mdash;from the perpetual flame on the altar through the incineration of what cannot be eaten. The fire that receives the offering also destroys what has expired or been contaminated. Fire does not distinguish between worship and disposal; it is the medium for both.</p>
+
+<p>But the fire thread signals something more than function. The altar is YHWH&rsquo;s point of contact in the courtyard. The offerings are <span class="hebrew">&#1500;&#1497;&#1492;&#1493;&#1492;</span> (&ldquo;to YHWH&rdquo;)&mdash;the phrase that saturated Unit 1. The blood on the altar, as we will see in the covenant ceremony of Exodus 24, represents YHWH&rsquo;s side of the covenant: Moses dashes half the blood on the altar and half on the people (Exodus 24:6&ndash;8), and the altar stands for the deity. The fire on the altar is, in some sense, YHWH&rsquo;s own fire&mdash;it will emerge from YHWH directly when the cult is inaugurated in <a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4.html">Unit 4</a>: &ldquo;there came forth fire from before YHWH, and consumed upon the altar the burnt-offering and the fat&rdquo; (9:24). The perpetual flame of 6:6 is the continuation of that fire. Column A, stitched by fire, is the deity-facing column&mdash;the column closest to YHWH&rsquo;s presence at the altar.</p>
+
+<p>Column C is stitched by the priest&rsquo;s person. In 1C: <span class="hebrew">&#1492;&#1499;&#1492;&#1503; &#1492;&#1502;&#1513;&#1497;&#1495;</span> (<em>ha-kohen ha-mashiah</em>, &ldquo;the anointed priest,&rdquo; 6:15) and &ldquo;in the day when he is anointed&rdquo; (<span class="hebrew">&#1489;&#1497;&#1493;&#1501; &#1492;&#1502;&#1513;&#1495; &#1488;&#1514;&#1493;</span>, <em>be-yom himasah oto</em>, 6:13). In 2C: &ldquo;the priest that maketh atonement therewith, he shall have it&rdquo; (7:7); &ldquo;the priest that offereth any man&rsquo;s burnt-offering&rdquo; (7:8); &ldquo;the priest&rsquo;s that offereth it&rdquo; (7:9). In 3C: &ldquo;he that offereth the blood of the peace-offerings, and the fat, shall have the right thigh for a portion&rdquo; (7:33); &ldquo;this is the consecrated portion of Aaron, and the consecrated portion of his sons... in the day that they were anointed&rdquo; (7:35&ndash;36). The thread runs from the anointed priest at the top to the anointed priesthood at the bottom&mdash;from the individual&rsquo;s consecration to the institutional establishment of priestly portions &ldquo;as a due for ever throughout their generations&rdquo; (7:36). Column C traces the priest&rsquo;s identity from personal anointing to permanent office. It is the people-facing column&mdash;the column about what comes down to the human side.</p>
+
+<p>The gradient across the columns thus runs from deity to priest: Column A is where YHWH&rsquo;s fire burns, Column C is where the priest receives his portion, and Column B mediates between them. This is the same hierarchy that governs the rows of the outer ring&mdash;deity-oriented (Row 1), interface (Row 2), people-oriented (Row 3)&mdash;but operating on the horizontal axis within a single unit. The altar&rsquo;s fire and the priest&rsquo;s person define the two poles of the administrative grid. Between them, the offerings move from one side to the other: what the fire consumes in Column A, the priest receives in Column C. The grid is a map of that transfer.</p>
+</section>
+
+<section class="commentary-section">
+<h2>The Chiastic Connections</h2>
+
+<p>Two chiastic markers link Rows 1 and 3 in reversed order. A chiasm is a reversal of sequence: A-B in one direction, B&rsquo;-A&rsquo; in the other. In Unit 3, the sequence of Row 1 (burnt-offering in Column A, priest&rsquo;s own offering in Column C) is mirrored in Row 3 (peace-offering in Column A, priestly portions in Column C). The connections run 1A&rarr;3C and 1C&rarr;3A because the order reverses: what comes first in Row 1 corresponds to what comes last in Row 3, and what comes last in Row 1 corresponds to what comes first in Row 3.</p>
+
+<p>The first chiastic marker runs from 1A to 3C. In the burnt-offering section (1A), the text says the priest shall lay the burnt-offering on the altar &ldquo;and shall make smoke thereon the fat of the peace-offerings&rdquo; (<span class="hebrew">&#1493;&#1492;&#1511;&#1496;&#1497;&#1512; &#1506;&#1500;&#1497;&#1492; &#1495;&#1500;&#1489;&#1497; &#1492;&#1513;&#1500;&#1502;&#1497;&#1501;</span>, <em>ve-hiktir aleha helvei ha-shelamim</em>, 6:5). The burnt-offering cell references the peace-offering. In the priestly portions section (3C): &ldquo;the priest shall make the fat smoke upon the altar&rdquo; (7:31). The peace-offering cell specifies what the priest does with the fat. The chiasm links what the priest burns in 1A to what the priest receives in 3C: the same offering system, seen from opposite ends&mdash;what goes up and what comes down.</p>
+
+<p>The second chiastic marker runs from 1C to 3A. In the priest&rsquo;s own meal-offering (1C): the flour is prepared on a griddle with oil, <span class="hebrew">&#1502;&#1512;&#1489;&#1499;&#1514;</span> (<em>murbekhet</em>, &ldquo;soaked,&rdquo; 6:14). In the thanksgiving peace-offering (3A): the cakes are of fine flour <span class="hebrew">&#1502;&#1512;&#1489;&#1499;&#1514;</span> (<em>murbekhet</em>, &ldquo;soaked,&rdquo; 7:12). The same word&mdash;appearing nowhere else in Leviticus&mdash;connects the priest&rsquo;s private offering to the layperson&rsquo;s thanksgiving. The priest&rsquo;s personal devotion and the layperson&rsquo;s communal celebration share a preparation technique.</p>
+
+<p>The reversal binds the unit into a single composition. Row 1 reads A (burnt-offering), B (meal-offering), C (priest&rsquo;s own). Row 3 reads A (peace-offering varieties), B (fat and blood prohibitions), C (priestly portions and closing). The chiastic markers show that 1&rsquo;s beginning connects to 3&rsquo;s end, and 1&rsquo;s end connects to 3&rsquo;s beginning. The two rows are not parallel&mdash;they are mirrored. Without the table, these connections are invisible; the cells are separated by chapters of text. With the table, the reversal is immediate.</p>
+</section>
+
+<section class="commentary-section">
+<h2>&ldquo;I Have Given It as Their Portion&rdquo;: The People-Oriented Unit</h2>
+
+<p>Unit 3 occupies Row 3 in the outer ring&mdash;the people-oriented position. In the creation paradigm, this corresponds to the earthly level: what belongs to the human domain, what comes down from the transcendent and reaches ordinary life. Unit 1 (Row 1) was deity-oriented&mdash;everything ascending to YHWH. Unit 2 (Row 2) mediated&mdash;the point of contact between free will and sacred boundary. Unit 3 is where the downward flow is specified: what YHWH gives to the priests.</p>
+
+<p>The key verse is 6:10: <span class="hebrew">&#1504;&#1514;&#1514;&#1497; &#1488;&#1514;&#1492; &#1495;&#1500;&#1511;&#1501; &#1502;&#1488;&#1513;&#1497;</span> (<em>natati otah helkam me-ishai</em>, &ldquo;I have given it as their portion of My offerings made by fire&rdquo;). YHWH speaks in the first person: I have given. This is not a regulation about priestly entitlement. It is a declaration of divine generosity. What goes up in Unit 1 comes back down in Unit 3 as the priests&rsquo; food. The fire on the altar transforms the offering from human gift into divine food, and then the deity shares that food with the priests who tend it. The cycle is complete: individual offers upward, institution processes, deity returns a portion downward.</p>
+</section>
+
+<section class="commentary-section">
+<h2>Unit 3 and Unit 20: What YHWH Shares</h2>
+
+<p>Unit 3&rsquo;s corresponding unit across the outer ring is <a href="/torah-weave/Leviticus/leviticus-unit-20/leviticus-unit-20.html">Unit 20</a> (Leviticus 25:1&ndash;55)&mdash;the jubilee, sabbatical year, and laws of redemption. Both units sit at Row 3 of their triads&mdash;the people-oriented position. Both concern what YHWH owns and what he shares.</p>
+
+<p>In Unit 3, YHWH shares his fire-offerings with individual priests: &ldquo;I have given it as their portion of My offerings made by fire&rdquo; (6:10). The breast and thigh are &ldquo;a due for ever from the children of Israel&rdquo; (7:34). In Unit 20, YHWH shares his land with the entire nation: &ldquo;the land is Mine; for ye are strangers and settlers with Me&rdquo; (25:23). &ldquo;They are My servants, whom I brought forth out of the land of Egypt&rdquo; (25:42, 25:55). What belongs to YHWH is entrusted to people&mdash;to priests in Unit 3, to all Israel in Unit 20.</p>
+
+<p>The one-and-many dyad operates clearly. Unit 3 addresses a specific class&mdash;Aaron and his sons&mdash;and legislates what they receive from specific offerings brought by specific individuals. Unit 20 addresses the nation as a whole and legislates the land tenure of all Israel across generations: sabbatical years, jubilee cycles, the redemption of persons sold under duress. What is intimate and individual in the first half&mdash;a priest eating a handful of flour in the court of the Tent of Meeting&mdash;becomes national and historical in the second half&mdash;the land resting every seventh year, all property reverting every fiftieth.</p>
+
+<p>And both units share a principle: nothing given by YHWH can be permanently alienated. The priestly portions in Unit 3 are &ldquo;a due for ever throughout their generations&rdquo; (6:11, 7:36). The land in Unit 20 reverts to its original holder at the jubilee because &ldquo;the land shall not be sold in perpetuity&rdquo; (25:23). What YHWH entrusts, YHWH protects. The people-oriented units of the outer ring establish that the downward flow from deity to people is permanent and non-negotiable.</p>
+</section>
+
+<section class="commentary-section">
+<h2>The Closing Summary: Mount Sinai</h2>
+
+<p>Unit 3 closes with a verse that seals not just this unit but the entire triad: &ldquo;This is the law of the burnt-offering, of the meal-offering, and of the sin-offering, and of the guilt-offering, and of the consecration-offering, and of the sacrifice of peace-offerings; which YHWH commanded Moses on Mount Sinai, in the day that he commanded the children of Israel to present their offerings unto YHWH, in the wilderness of Sinai&rdquo; (7:37&ndash;38).</p>
+
+<p>Every offering type from Units 1 and 2 is named in a single sentence. The burnt-offering, meal-offering, and peace-offering from Unit 1. The sin-offering and guilt-offering from Unit 2. Even the consecration-offering, which will not appear until Unit 4. The closing verse looks both backward (gathering what has been legislated) and forward (anticipating what comes next).</p>
+
+<p>And the place marker appears here: <span class="hebrew">&#1489;&#1492;&#1512; &#1505;&#1497;&#1504;&#1497;</span> (<em>be-har Sinai</em>, &ldquo;on Mount Sinai&rdquo;). Unit 1 opened with the Tent of Meeting. Unit 2 had neither. Unit 3 closes with Mount Sinai. The outer ring&rsquo;s place-of-revelation marker frames the triad from both ends&mdash;wrapping around Unit 2&rsquo;s disruption without entering it. The triad opens at the Tent and closes at Sinai: two names for the same relationship between YHWH and Israel, one portable and one fixed, one in the camp and one on the mountain.</p>
+</section>
+
+<section class="commentary-section">
+<h2>Reading the Unit</h2>
+
+<p>We began with a priest scooping ashes in linen&mdash;the least glamorous image the triad contains. The structural reading reveals why it comes first. Unit 3 is the people-oriented unit: the unit about what comes down, what the institution provides, what the priest receives. But the text insists that service precedes reception. Before &ldquo;I have given it as their portion&rdquo; (6:10), there is &ldquo;he shall take up the ashes&rdquo; (6:3). Before the priest eats YHWH&rsquo;s food, he maintains YHWH&rsquo;s fire. The fire that &ldquo;shall not go out&rdquo; (6:6)&mdash;the perpetual flame running down Column A&mdash;is both the medium of worship and the medium of disposal. It receives the offering and consumes what has expired. The priest&rsquo;s first task is to keep it burning.</p>
+
+<p>The grid shows how the triad fits together. Row 1 processes Unit 1&rsquo;s voluntary offerings, tracing the priest from servant (ashes) through recipient (meal-offering) to participant (his own offering). Row 2 processes Unit 2&rsquo;s compulsory offerings, unifying them into &ldquo;one law.&rdquo; Row 3 processes Unit 1&rsquo;s peace-offering, specifying the time limits, the purity requirements, and the penalty for violation. The chiastic markers mirror Rows 1 and 3: burnt-offering fat to priestly portions, priest&rsquo;s soaked offering to the layperson&rsquo;s thanksgiving. And the closing verse gathers every offering type into a single sentence sealed with Mount Sinai.</p>
+
+<p>With Unit 3, the first triad of Leviticus is complete. Voluntary approach (Unit 1), disruption and repair (Unit 2), institutional order (Unit 3). Individual, friction, system. Acceptance, forgiveness, excision. Tent of Meeting, silence, Mount Sinai. Three units, one 3&times;3 format, one outer ring. The courtyard is fully legislated. The reader is ready to step inward.</p>
+
+<p>One feature of this triad deserves final attention: every offering in it is private and situational. No communal sacrifice, no calendrical obligation, no public cult. The corresponding triad at the other end of the outer ring&mdash;Units 20&ndash;22&mdash;is the opposite: all three units presuppose life in the land of Canaan, legislating jubilee, sabbatical year, national blessings and curses, and the consecration of property. All private at one end of the ring; all national at the other. The one-and-many dyad that Part B identified between paired units operates between entire triads. The book opens with one person standing at the altar and closes with a nation settled in its land. The first triad is where the individual begins.</p>
+
+<p>The <a href="/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3.html">color-coded text of Leviticus Unit 3</a> makes the structural markers visible. The &ldquo;Aaron and his sons&rdquo; formula runs across Row 1. The <span class="hebrew">&#1514;&#1493;&#1512;&#1514;</span> (<em>torat</em>, &ldquo;law of&rdquo;) formula runs across Row 2. The &ldquo;cut off from his people&rdquo; formula runs across Row 3. The fire thread runs down Column A. The priest&rsquo;s identity runs down Column C. And the chiastic markers mirror Rows 1 and 3, connecting each row&rsquo;s beginning to the other&rsquo;s end.</p>
+</section>
+
+</article>
+
+<aside class="unit-link-box">
+    <p><strong>Read the structured text:</strong> <a href="/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3.html">Leviticus Unit 3 with color-coded patterns</a></p>
+</aside>
+
+<nav class="unit-navigation">
+    <div class="nav-arrows">
+        <a href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2-commentary.html" rel="prev">&larr; Unit 2: Sacrifices for Expiation</a>
+        <a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4-commentary.html" rel="next">Unit 4: Inauguration of the Cult &rarr;</a>
+    </div>
+</nav>
+
+<aside class="citation-box">
+    <strong>How to cite:</strong>
+    Kline, Moshe. &ldquo;Leviticus Unit 3: Administrative Order.&rdquo; <em>Torah Weave Commentary</em>,
+    <a href="https://chaver.com/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3-commentary.html">https://chaver.com/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3-commentary.html</a>.
+</aside>
+
+<nav class="series-navigation">
+    <h3>Leviticus Commentary Series</h3>
+    <a href="/torah-weave/Leviticus/leviticus-analysis/overview.html">Overview</a>
+    <a href="/torah-weave/Leviticus/leviticus-analysis/units-of-leviticus.html">Part A: The Units</a>
+    <a href="/torah-weave/Leviticus/leviticus-analysis/the-map-of-leviticus.html">Part B: The Map</a>
+    <a href="/torah-weave/Leviticus/leviticus-analysis/the-three-rows.html">Part C: The Three Rows</a>
+    <a href="/torah-weave/Leviticus/leviticus-analysis/architecture-and-meaning-in-leviticus.html">Part D: Architecture &amp; Meaning</a>
+</nav>
+</main>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,1180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>The Esoteric Decalogue: Where Did Rabbi Learn to Write in Tables?</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="unit-navigation">
+    <div class="nav-breadcrumb">
+        <a href="https://chaver.com">Home</a> &rarr; <a href="https://chaver.com/Mishnah-New/English/Articles/">Mishnah Articles</a> &rarr; The Esoteric Decalogue
+    </div>
+</nav>
+
+<main>
+<article>
+
+<header class="unit-header-section">
+    <h1>The Esoteric Decalogue: Where Did Rabbi Learn to Write in Tables?</h1>
+    <div class="unit-meta">Moshe Kline</div>
+</header>
+
+<section class="unit-content">
+    <blockquote>
+        <p>An exoteric book contains then two teachings: a popular teaching of an edifying character, which is in the foreground; and a philosophic teaching concerning the most important subject, which is indicated only between the lines.</p>
+        <p style="text-align: right;">&mdash; Leo Strauss, <em>Persecution and the Art of Writing</em></p>
+    </blockquote>
+</section>
+
+<!-- ========== INTRODUCTION ========== -->
+<section class="commentary-section">
+    <h2>Introduction</h2>
+
+    <h3>The Journey So Far</h3>
+
+    <p>This is the fourth article in a series on the literary structure of Tractate Avot. The first three established something unexpected: Rabbi Yehuda HaNasi, the compiler of the Mishnah, was not merely collecting earlier sayings but composing original literary works in which the arrangement itself generates meaning.</p>
+
+    <p>In <a href="men-of-kfar-hananya.html">Part 1</a>, we examined the Men of Kfar Hananya&mdash;eight statements arranged as a 4&times;2 matrix, where the silence of Shmuel HaKatan in the final position demonstrated that meaning arises from structure, not content alone. In <a href="five-pairs-avot-1.html">Part 2</a>, we analyzed the Five Pairs of Chapter 1&mdash;a 5&times;2 matrix tracing a developmental arc from the private householder to the self-realized individual, with a built-in process of reader education. In <a href="avot-chapter-4.html">Part 3</a>, we saw both structures combined in Chapter 4's 5&times;4 matrix, where Rabbi's own voice appeared once: "Do not look at the bottle but at what is in it. You can have a new bottle full of old wine."</p>
+
+    <p>Each article added a layer of complexity, but also raised a question: where did Rabbi learn this method? The woven format is not mentioned in classical sources. No commentary remarks on it. Yet the evidence shows that Rabbi employed it deliberately and systematically&mdash;not only in Avot but across all five hundred and twenty-four chapters of the Mishnah. We have chosen to demonstrate through Avot because its ethical content is accessible to readers unfamiliar with rabbinic legal discourse. But the same compositional logic governs the halakhic chapters as well.</p>
+
+    <h3>The Question Behind the Question</h3>
+
+    <p>The question of origin ("where did Rabbi learn this?") conceals a deeper question of purpose: why would anyone compose this way?</p>
+
+    <p>The woven format creates a layer of meaning&mdash;what we might call a supertext&mdash;that is invisible to readers who encounter the text linearly. Most readers, and certainly most hearers of oral tradition, would never detect it. The row-rules and column-rules that generate the composition remain hidden; only the surface text is apparent. This is a technique of information management that went unnoted by the ancients. Why would the author of a legal compendium&mdash;whose purpose is presumably to transmit law as clearly as possible&mdash;choose a format that conceals an entire dimension of meaning from most of his audience?</p>
+
+    <p>This article proposes an answer. But the answer is not merely historical ("Rabbi learned it from the Decalogue"). It is an invitation. The woven method does something to its readers. It trains them. The Five Pairs of Avot trace a developmental arc&mdash;from the householder who fills his home with sages, through the student, the judge, and the sage, to Hillel speaking in the first person: "If I am not for myself, who will be for me?" The reader who completes this arc does not merely receive wisdom. The reader becomes capable of creating it.</p>
+
+    <p>Rabbi is proof that the process works. He did not merely inherit the woven method; he used it to compose the entire Mishnah. His statement about the new bottle and old wine is a self-description. The method he received from the Torah became, in his hands, a new creation&mdash;one that preserved the ancient structure while filling it with new content. This is tradition-based creativity: not innovation from nothing, but creative extension of what was received.</p>
+
+    <p>The chain of transmission described in Avot's opening line&mdash;"Moses received <em>torah</em> from Sinai and transmitted it to Joshua"&mdash;is not a chain of passive recipients. It is a chain of creators. Each link received the method and used it to compose something new. The reader who learns to see the woven structure is being invited to join that chain.</p>
+
+    <h3>What This Article Will Show</h3>
+
+    <p>The first part of this article demonstrates that the Ten Words, when divided according to the Masoretic Text, form a 5&times;2 table&mdash;five pairs of commandments written across two tablets, with both a hierarchical row-progression and a consistent column-distinction. The Decalogue is not a list. It is the paradigmatic woven text&mdash;the only text the Torah claims was written directly by Elohim, inscribed on two tablets. A table.</p>
+
+    <p>The second part sets the Decalogue table beside the Avot Pairs table and shows that Rabbi constructed the latter as a precise structural commentary on the former. The parallels are extensive&mdash;linguistic, formal, and conceptual. We are forced to conclude that Rabbi possessed an esoteric reading of the Decalogue and embedded it in the fabric of his own composition. He composed the Mishnah as woven text because the Torah itself is woven text&mdash;and the Torah attributes that method to divine writing.</p>
+
+    <p>But the deepest parallel is developmental. Both structures trace a path from passive reception to active creation. The Decalogue descends from the deity to the subjective individual; the Avot Pairs ascend from the householder to the human "I" that answers the divine "I." Read together, the two texts form a circuit: what comes down from Sinai returns upward through the chain of creators. The reader who sees this is not merely learning about an ancient method. The reader is being equipped to use it.</p>
+
+    <h3>Two Exoteric Texts</h3>
+
+    <p>Both texts share a curious property. Read linearly, both appear to be collections: the Decalogue a list of ten laws, Avot a list of ten aphorisms. Read structurally, both reveal themselves as compositions&mdash;unified works in which the arrangement generates meaning that no single element contains. The linear reading is exoteric, available to anyone. The structural reading is esoteric, available only to the reader who discovers the table.</p>
+
+    <p>Leo Strauss argued that there are ancient texts which consist of exactly these two strata: a popular teaching in the foreground, and a philosophic teaching indicated only between the lines. What follows is an attempt to read between the lines of both texts&mdash;and to show that Rabbi read between them first.</p>
+</section>
+
+<!-- ========================================================================== -->
+<!-- PART ONE: THE DECALOGUE AS TABLE                                           -->
+<!-- ========================================================================== -->
+
+<section class="commentary-section">
+    <h2>Part One: The Decalogue in Pairs</h2>
+
+    <h3>The Division That No One Uses</h3>
+
+    <p>The Torah states that this text contains ten "Words" (<em>devarim</em>) but does not indicate how to divide it into ten components. Different traditions have developed regarding the division. The rabbinic tradition, codified in the Mekhilta, combines "I am YHWH your deity" with "You shall have no other gods" into a single Word, and treats the two prohibitions against coveting as one. The Masoretic Text&mdash;the very text inscribed in every Torah scroll read in synagogues&mdash;divides differently. It separates "I am YHWH" from "No other gods," and it separates the two "covets" into distinct Words.</p>
+
+    <p>There is good reason to prefer the Masoretic division. Both "covet" prohibitions begin with the identical phrase "You shall not covet" (<span dir="rtl">לא תחמד</span>), exactly as one would expect of two parallel statements. The two versions of the Decalogue&mdash;in Exodus and in Deuteronomy&mdash;preserve this distinction, even though the specific objects differ between the versions. And the MT division yields what the rabbinic division does not: a reading that integrates all ten Words into a coherent compositional whole.</p>
+
+    <p>That composition consists of five consecutive pairs.</p>
+
+    <h3>The Five Pairs</h3>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 8%;">Pair</th>
+                <th class="col-a" style="width: 46%;">Tablet A</th>
+                <th class="col-b" style="width: 46%;">Tablet B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1</strong></td>
+                <td><strong>1A.</strong> I am YHWH your deity who brought you out of the land of Egypt, the house of bondage. You shall have no other gods beside Me. You shall not make for yourself a sculptured image&hellip; For I YHWH your deity am a jealous deity&hellip; showing kindness to the thousandth generation of those who love Me and keep My commandments.</td>
+                <td><strong>1B.</strong> You shall not swear falsely by the name of YHWH your deity; for YHWH will not clear one who swears falsely by His name.</td>
+            </tr>
+            <tr>
+                <td><strong>2</strong></td>
+                <td><strong>2A.</strong> Remember the Sabbath day and keep it holy. Six days you shall labor and do all your work, but the seventh day is a sabbath of YHWH your deity&hellip; For in six days YHWH made heaven and earth and sea&hellip; therefore YHWH blessed the sabbath day and hallowed it.</td>
+                <td><strong>2B.</strong> Honor your father and your mother, that you may long endure on the land which YHWH your deity is giving you.</td>
+            </tr>
+            <tr>
+                <td><strong>3</strong></td>
+                <td><strong>3A.</strong> You shall not murder.</td>
+                <td><strong>3B.</strong> You shall not commit adultery.</td>
+            </tr>
+            <tr>
+                <td><strong>4</strong></td>
+                <td><strong>4A.</strong> You shall not steal.</td>
+                <td><strong>4B.</strong> You shall not bear false witness against your fellow man.</td>
+            </tr>
+            <tr>
+                <td><strong>5</strong></td>
+                <td><strong>5A.</strong> You shall not covet your fellow man's house.</td>
+                <td><strong>5B.</strong> You shall not covet your fellow man's wife, or his male or female slave, or his ox, or his donkey, or anything that is your fellow man's.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Written Across Both Tablets</h3>
+
+    <p>This arrangement places the Words in pairs across two tablets&mdash;the first Word of each pair on one tablet, the second on the other&mdash;rather than in two linear blocks of five. Tablet A contains the odd-numbered Words (1A, 2A, 3A, 4A, 5A), Tablet B the even-numbered Words (1B, 2B, 3B, 4B, 5B).</p>
+
+    <p>This may be what the Torah itself describes. Exodus 32:15 says the tablets were "written across both tablets; on one and on the other were they written" (<span dir="rtl">לחת כתבים משני עבריהם, מזה ומזה הם כתבים</span>). The Hebrew <span dir="rtl">עברים</span> means "sides," as in the two sides of a narrow pass (I Samuel 14:4), not "front and back" as the rabbinic commentators assumed. The literal sense of the verse is that the Words alternated from one tablet to the other&mdash;the first Word on one side, the second on the other, the third returning to the first, and so on. This is precisely the format of a table with two columns.</p>
+
+    <h3>The Hierarchical Flow</h3>
+
+    <p>The five pairs are ordered hierarchically, from the most encompassing subject to the most limited. Pair 1 concerns the deity: "I am YHWH your deity." Pair 2 concerns actions determined by divine will: observing the Sabbath and honoring parents, the only two positive commands in the Decalogue. Pair 3 concerns the physical existence of the other person: murder and adultery. Pair 4 concerns property and legal systems: theft and false testimony. Pair 5 concerns subjective emotion alone: coveting.</p>
+
+    <p>There is a graduated passage from the most encompassing of all possible subjects&mdash;the deity&mdash;to the most limited, a private human emotion that may be no more than a chimera. This flow has a clear direction, and interrupting or rearranging the pairs would destroy it.</p>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 10%;">Pair</th>
+                <th class="col-full" style="width: 90%;">Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>1</strong></td><td>The Deity</td></tr>
+            <tr><td><strong>2</strong></td><td>Actions based on divine will</td></tr>
+            <tr><td><strong>3</strong></td><td>Physical human life</td></tr>
+            <tr><td><strong>4</strong></td><td>Actions based on human will</td></tr>
+            <tr><td><strong>5</strong></td><td>Subjective human will</td></tr>
+        </tbody>
+    </table>
+
+    <h3>The Symmetry of the Pairs</h3>
+
+    <p>The five pairs also exhibit a concentric symmetry. Pair 3 divides the structure into an upper half connected to the deity (Pairs 1&ndash;2) and a lower half connected to human property and desire (Pairs 4&ndash;5). The extremities share a deeper similarity: Pairs 1 and 5 both describe sentient emotive beings. The deity describes himself as "a jealous deity" in Pair 1; human beings are commanded to restrain their passions in Pair 5. Between these two emotional poles stand three intermediary realms.</p>
+
+    <p>Pairs 2 and 4 mirror each other as expressions of will: divine will in 2 (the Sabbath and filial honor are divinely commanded), human will in 4 (theft and false testimony are acts of human choice). Pair 3&mdash;murder and adultery, the taking and the violation of life&mdash;stands at the meeting point between the divine and the human.</p>
+
+    <p>We can summarize the symmetry as follows: the deity (1) and the subjective individual (5) form the two poles of the structure. Between them, actions flowing from divine will (2) and actions flowing from human will (4) bracket the central encounter with the embodied other (3). The whole forms an integrated architecture in which each pair occupies a precise position.</p>
+
+    <h3>A Fractal Paradigm: Word 2A (The Sabbath)</h3>
+
+    <p>This five-part paradigm&mdash;two poles, two intermediaries, one center&mdash;appears not only in the full Decalogue but within individual Words. The Sabbath commandment (2A) divides into five elements, and the central element subdivides into five more:</p>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 8%;"></th>
+                <th class="col-full" style="width: 30%;">Element</th>
+                <th class="col-full" style="width: 62%;">Text</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>a</strong></td>
+                <td>Human holiness</td>
+                <td>Remember the Sabbath day to hallow it.</td>
+            </tr>
+            <tr>
+                <td><strong>b</strong></td>
+                <td>Human labor</td>
+                <td>Six days you shall work and do all your tasks.</td>
+            </tr>
+            <tr>
+                <td><strong>c</strong></td>
+                <td>Interface: the extended self</td>
+                <td>But the seventh day is a sabbath of YHWH your deity. You shall do no task&mdash;<br>
+                    &ensp; I. <em>you</em>,<br>
+                    &ensp; II. <em>your son or daughter</em>,<br>
+                    &ensp; III. <em>your male slave or slavegirl</em>,<br>
+                    &ensp; IV. <em>your beast</em>,<br>
+                    &ensp; V. <em>the sojourner who is within your gates</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>d</strong></td>
+                <td>Divine labor</td>
+                <td>For in six days YHWH made heaven and earth, the sea and all that is in it.</td>
+            </tr>
+            <tr>
+                <td><strong>e</strong></td>
+                <td>Divine holiness</td>
+                <td>And He rested on the seventh day. Therefore YHWH blessed the Sabbath day and hallowed it.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>The paradigm is visible at two levels. The outer five elements mirror the full Decalogue: human holiness (a) corresponds to the human pole (Pair 5), divine holiness (e) to the divine pole (Pair 1), human labor (b) to actions based on human will (Pair 4), divine labor (d) to actions based on divine will (Pair 2), and the interface (c)&mdash;the list of dependents who must also rest&mdash;to physical human life (Pair 3). The central element subdivides into its own five-part progression from self outward: the individual, offspring, slaves, livestock, the stranger. The relationship between the deity and the individual is tested by how the individual treats those who depend on him. Word 2A is a fractal of the five-pair structure.</p>
+
+    <h3 id="fractal-1a">A Fractal Paradigm: Word 1A (I Am YHWH)</h3>
+
+    <p>The first Word contains five elements with three nested triads&mdash;of time, person, and space&mdash;arranged like concentric rings:</p>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 8%;"></th>
+                <th class="col-full" style="width: 92%;">Text</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>a</strong></td>
+                <td><strong>I am YHWH</strong> your deity who brought you out of the land of Egypt, out of the house of bondage.</td>
+            </tr>
+            <tr>
+                <td><strong>b</strong></td>
+                <td>You shall have no other gods beside <strong>Me</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>c</strong></td>
+                <td><strong>You</strong> shall not make for yourself a carved image, or any likeness of what is in the <strong>heavens above</strong>, or on the <strong>earth below</strong>, or in the <strong>waters beneath the earth</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>d</strong></td>
+                <td>You shall not bow down to <strong>them</strong>, and you shall not serve them.</td>
+            </tr>
+            <tr>
+                <td><strong>e</strong></td>
+                <td>For <strong>I YHWH</strong> your deity am a jealous deity, visiting the guilt of fathers upon children, upon the third and fourth generations of those who reject Me, but showing kindness to the thousandth generation of those who love Me and keep My commandments.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>The three triads nest inside one another:</p>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 25%;">Dimension</th>
+                <th class="col-full" style="width: 15%;">a</th>
+                <th class="col-full" style="width: 15%;">b</th>
+                <th class="col-full" style="width: 15%;">c</th>
+                <th class="col-full" style="width: 15%;">d</th>
+                <th class="col-full" style="width: 15%;">e</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Time</strong></td>
+                <td>Past</td>
+                <td colspan="3" style="text-align: center;">Present</td>
+                <td>Future</td>
+            </tr>
+            <tr>
+                <td><strong>Person</strong></td>
+                <td></td>
+                <td>Me (1st)</td>
+                <td>You (2nd)</td>
+                <td>Them (3rd)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>Space</strong></td>
+                <td></td>
+                <td></td>
+                <td>Above / Earth / Below</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>The three dimensions converge on a single focal point: the center of time is the present, the center of person is "you," and the center of space is "the earth." The first Word announces through the middle element of its five-part structure that its focus is the individual, here, now, standing in relationship with the deity. This is the same interface we found at the center of the full Decalogue (Pair 3) and at the center of Word 2A (the list of dependents).</p>
+
+    <p>The recurrence of the five-part paradigm at multiple levels&mdash;within individual Words, within the full Decalogue, and eventually within the Mishnah&mdash;confirms that it is not an accident of the material but a deliberate compositional principle.</p>
+
+    <h3>Two Tablets, Two Principles</h3>
+
+    <p>If the five pairs define the rows of the table, the two tablets define the columns. And just as the rows have a consistent organizing principle (the hierarchical flow), the columns have one as well.</p>
+
+    <p>The clearest evidence comes from Pair 5, where both Words prohibit the same action&mdash;coveting&mdash;and the distinction between them lies entirely in the objects. Word 5A has a single object: "your fellow man's house." Word 5B has multiple objects: "your fellow man's wife, or his male or female slave, or his ox, or his donkey, or anything that is your fellow man's." This pattern&mdash;one object on Tablet A, many on Tablet B&mdash;holds in the Deuteronomy version as well, even though the specific objects differ.</p>
+
+    <p>The distinction between one and many extends through the tablets. Tablet B contains a concentration of interpersonal relationships&mdash;marriage appears in or near Words 2B, 3B, and 5B, while 4B requires the collusion of multiple witnesses. No Word on Tablet A involves such relationships. "You shall not steal" (4A) has a thief and a victim but no implied connection between them beyond the crime itself. "You shall not bear false witness" (4B) requires at least two witnesses conspiring against a third.</p>
+
+    <p>The Torah's own creation narrative provides the interpretive frame for this distinction. Days 1&ndash;3 of creation concern individual, separated entities&mdash;light separated from darkness, waters above from below, dry land from sea. Days 4&ndash;6 concern connected, multiplying groups&mdash;luminaries for signs and seasons, swarming life, fruitful beings. The same dyad of "separate and connected" appears in Eden's two named trees: the Tree of Life, whose effect is personal and existential, and the Tree of Knowledge of Good and Bad, which creates social awareness and language. It appears again in the two creation accounts of humanity: "the Man" (<span dir="rtl">האדם</span>) of Chapter 2, singular and alone, and "Humankind" (<span dir="rtl">אדם</span>) of Chapter 1, created male and female together.</p>
+
+    <p>The central pair of Words labels the tablets with these very trees. "You shall not murder" (3A) is linked to the Tree of Life; "You shall not commit adultery" (3B) is linked to the Tree of Knowledge, since the Hebrew word for "knowledge" (<span dir="rtl">דעת</span>) is identical to the word for carnal knowledge. Tablet A embodies the principle of the one, the separate, the intrinsic. Tablet B embodies the principle of the many, the connected, the extrinsic.</p>
+
+    <h3>The Decalogue Is a True Table</h3>
+
+    <p>We have now identified two independent organizing principles: the five hierarchically ordered pairs (rows) and the two tablets distinguished by the dyad of one-and-many (columns). The cumulative effect is to identify the two-tablet format as a true table. Each individual Word is defined by the intersection of two concepts: the subject of its pair and the subject of its tablet. The Decalogue is a two-dimensional text. It has a linear reading&mdash;a list of ten laws&mdash;and a structural reading, in which the arrangement carries content that the linear list does not.</p>
+
+    <p>The linear reading represents the exoteric Decalogue: "a popular teaching of an edifying character, which is in the foreground." The structural reading represents the esoteric Decalogue: "a philosophic teaching concerning the most important subject, which is indicated only between the lines." What was written on two tablets was not a list but a composition. And the composition requires a table to be read. (For the full analysis, see <a href="https://chaver.com/woven-torah/divine-speech-in-two-dimensions-the-paired-structure-of-the-decalogue-as-literary-paradigm/index.html">"Divine Speech in Two Dimensions"</a> and the <a href="https://chaver.com/torah-weave/introduction/decalogue-presentation/decalogue-woven-code.html">visual presentation of the Decalogue</a>.)</p>
+</section>
+
+<!-- ========================================================================== -->
+<!-- WHAT THE TWO TABLETS MEAN                                                  -->
+<!-- ========================================================================== -->
+
+<section class="commentary-section">
+    <h2>What the Two Tablets Mean</h2>
+
+    <h3>Two Narratives, Two Audiences</h3>
+
+    <p>The Torah narrates two occasions on which Moses received tablets. The details differ in ways that matter.</p>
+
+    <p>The first time, Moses descended from the mountain with the tablets in his hands. He approached the camp, apparently intending to present them to the entire nation. But when he saw the golden calf, he shattered the tablets before the people's eyes. No one saw the writing. The people saw only fragments.</p>
+
+    <p>The second time was different. Before ascending, Moses was instructed to prepare a wooden box and to place the tablets inside immediately upon receiving them. He did so. The tablets were hidden away at once. No one other than Moses ever saw them whole.</p>
+
+    <p>The two sets of tablets were intended for two different audiences. The first tablets, intended for all, represent the exoteric reading&mdash;available to anyone, but shattered into disconnected fragments. The second tablets, seen whole only by Moses and hidden in the Ark, represent the esoteric reading&mdash;available only to the initiated few who can grasp the text as an integrated composition.</p>
+
+    <p>Each set is also associated with a different divine name. The first tablets were "the work of Elohim" inscribed by "the finger of Elohim" on tablets "made by Elohim" (Exodus 31:18, 32:16). The second tablets were a joint venture: Moses carved the stone at YHWH's command, and YHWH inscribed them. The esoteric reading requires active participation by the recipient. Moses did not merely receive the second tablets; he prepared them.</p>
+
+    <h3 id="tablet-a">Tablet A: Blueprint for the Self</h3>
+
+    <p>When we examine the five Words on Tablet A (the odd-numbered Words: 1A, 2A, 3A, 4A, 5A), a coherent image emerges&mdash;a five-part portrait of the integrated individual:</p>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 15%;">Word</th>
+                <th class="col-a" style="width: 35%;">Content</th>
+                <th class="col-full" style="width: 50%;">Element of the Self</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>1A</strong></td><td>I am YHWH your deity</td><td>The divine source</td></tr>
+            <tr><td><strong>2A</strong></td><td>Remember the Sabbath</td><td>The human spirit (sabbath as spiritual act)</td></tr>
+            <tr><td><strong>3A</strong></td><td>You shall not murder</td><td>The physical body (protection of life)</td></tr>
+            <tr><td><strong>4A</strong></td><td>You shall not steal</td><td>Property (possessions as extension of self)</td></tr>
+            <tr><td><strong>5A</strong></td><td>You shall not covet your neighbor's house</td><td>Clan identity (house/lineage)</td></tr>
+        </tbody>
+    </table>
+
+    <p>These five elements form a nested structure. The divine source (1A) is "wrapped" in four successive garments: spirit (2A), body (3A), property (4A), and clan (5A). Each element contains and protects the previous one. The holy is nested in the human spirit, which is nested in the body, which is nested in property, which is nested in the clan. Tablet A presents a blueprint for what it means to be a self&mdash;from innermost divine spark to outermost social identity.</p>
+
+    <h3 id="tablet-b">Tablet B: Foundation for Society</h3>
+
+    <p>The five Words on Tablet B (the even-numbered Words: 1B, 2B, 3B, 4B, 5B) present a different vision&mdash;not the individual but the relationships that constitute society:</p>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 15%;">Word</th>
+                <th class="col-a" style="width: 35%;">Content</th>
+                <th class="col-full" style="width: 50%;">Type of Relationship</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>1B</strong></td><td>Do not take the name in vain</td><td>Bearer of divine name (inseparable bond)</td></tr>
+            <tr><td><strong>2B</strong></td><td>Honor your father and mother</td><td>Parents and children (blood relationship)</td></tr>
+            <tr><td><strong>3B</strong></td><td>You shall not commit adultery</td><td>Husband and wife (marriage bond)</td></tr>
+            <tr><td><strong>4B</strong></td><td>You shall not bear false witness</td><td>Witnesses in court (circumstantial bond)</td></tr>
+            <tr><td><strong>5B</strong></td><td>You shall not covet... wife, servants, animals</td><td>Owner and possessions (transferable bond)</td></tr>
+        </tbody>
+    </table>
+
+    <p>These five relationships are ordered by durability&mdash;from the most permanent (the divine name, which cannot be separated from its bearer) to the most transferable (possessions, which can change hands). The hierarchy can also be read from the bottom up as a chain of social dependencies: stable property rights (5B) enable functional courts (4B), which enable stable marriages (3B), which enable multigenerational family continuity (2B), which enables a society capable of preserving knowledge of the divine name (1B). Tablet B presents the foundation for society&mdash;the relationships that make collective life possible.</p>
+
+    <h3>Two Tablets, Two Principles</h3>
+
+    <p>The two tablets thus embody two complementary principles. Tablet A concerns the individual as a nested self, moving from the divine inward to clan identity outward. Tablet B concerns the relationships that connect individuals into society, moving from the most durable bonds to the most transferable. Together they present a complete anthropology: what a human being is (Tablet A) and how human beings live together (Tablet B).</p>
+
+    <p>This is not abstract philosophy imposed on the text. It is the content that emerges when the Decalogue is read as a table rather than a list. The column-distinction between the two tablets carries meaning that the linear reading cannot access. A reader who sees only a list of ten laws misses half of what the text says.</p>
+
+    <p>If the Decalogue is a literary table&mdash;five rows, two columns, meaning at every intersection&mdash;then it is the oldest exemplar of the very structure we have traced through Tractate Avot. The Five Pairs of Chapter 1 are a 5&times;2 matrix. The Decalogue is a 5&times;2 matrix. Both are hierarchically ordered. Both have a consistent column-distinction. Both can be read as collections or as compositions.</p>
+
+    <p>The two structures also share a contextual link to Sinai. The Decalogue was spoken there; the opening of Avot claims that what follows was received there. If we take this claim structurally&mdash;as pointing to a method of composition, whatever additional content it may also have included&mdash;then the Avot Pairs should reflect the Decalogue's structure in detail. We are about to see that they do.</p>
+
+    <p>There is a preliminary problem. The Decalogue is ordered from the top down&mdash;the deity in Pair 1, the subjective individual in Pair 5. The Avot Pairs are ordered from the bottom up&mdash;the private householder in Pair 1, the self-actualized individual in Pair 5. The hierarchies run in opposite directions. In order to compare them level by level, one must be inverted. The signal for doing so is built into the texts: both Words in Decalogue Pair 5 open with the identical phrase "You shall not covet," and both aphorisms in Avot Pair 1 open with the identical phrase "Let your house be." Identical openings mark the bottom of both hierarchies. The comparison therefore aligns Avot Pair 1 with Decalogue Pair 5, Avot Pair 2 with Decalogue Pair 4, and so on.</p>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 8%;">Set</th>
+                <th class="col-a" style="width: 46%;">Decalogue Pair</th>
+                <th class="col-b" style="width: 46%;">Avot Pair</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>I</strong></td><td>5 &mdash; Subjective Individual</td><td>1 &mdash; Householder / Layman</td></tr>
+            <tr><td><strong>II</strong></td><td>4 &mdash; Actions based on human will</td><td>2 &mdash; Student / Neighbor</td></tr>
+            <tr><td><strong>III</strong></td><td>3 &mdash; Physical human life</td><td>3 &mdash; Judge</td></tr>
+            <tr><td><strong>IV</strong></td><td>2 &mdash; Actions based on divine will</td><td>4 &mdash; Sage</td></tr>
+            <tr><td><strong>V</strong></td><td>1 &mdash; The Deity</td><td>5 &mdash; Reader / Singular Individual</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ========================================================================== -->
+<!-- PART TWO: THE MISHNAH READS THE DECALOGUE                                 -->
+<!-- ========================================================================== -->
+
+<section class="commentary-section">
+    <h2>Part Two: The Mishnah Reads the Decalogue</h2>
+
+    <h3>Two Blocks: Sets I&ndash;III and Sets IV&ndash;V</h3>
+
+    <p>Before examining the five sets individually, we should note that both the Decalogue and the Avot Pairs divide naturally into the same two groups: the first three sets and the last two. The division is marked in both texts.</p>
+
+    <p>In the Decalogue, all four Words in Sets IV&ndash;V (Decalogue Pairs 1&ndash;2) mention YHWH, while none of the Words in Sets I&ndash;III (Pairs 3&ndash;5) do. All the Words in Sets I&ndash;III begin with the word <span dir="rtl">לא</span>, "(you shall) not," while only one Word in Sets IV&ndash;V does. Rabbi divided the Avot Pairs along the same line, in two ways. The names of all speakers in Avot Pairs 1&ndash;3 (Sets I&ndash;III) are compound&mdash;including a first name with either a patronymic or a place of origin or both. The speakers in Pairs 4&ndash;5 (Sets IV&ndash;V) are introduced by single first names only: Shemaia, Avtalion, Hillel, Shammai. And the content shows the same division: in the first three Pairs, we could identify the audience from similarities within each Pair; in Pairs 4&ndash;5, the method changed.</p>
+
+    <p>This parallel division is not coincidental. It tells us that Rabbi was attentive not only to the content of individual Words but to the internal architecture of the Decalogue as a whole.</p>
+</section>
+
+<!-- ========== THE FLOW TECHNIQUE ========== -->
+<section class="commentary-section">
+    <h2>The Flow Technique</h2>
+
+    <p>The three sets in the first block (I&ndash;III) are held together by a compositional technique that operates in both the Decalogue and the Avot Pairs. In each case, the middle set (II) serves as a link between the sets that flank it, incorporating a characteristic of each. I call this "the flow technique." Rabbi found it in the Decalogue and amplified it in Avot.</p>
+
+    <h3>The Flow in the Decalogue</h3>
+
+    <p>Both Words in Decalogue Pair 3 (Set III) consist of exactly two Hebrew words: "not" (<span dir="rtl">לא</span>) followed by a single verb&mdash;"not murder" (<span dir="rtl">לא תרצח</span>), "not commit-adultery" (<span dir="rtl">לא תנאף</span>). Both Words in Pair 5 (Set I) contain the expression "your fellow man" (<span dir="rtl">רעך</span>). Pair 4 (Set II), which stands between them, incorporates one characteristic from each neighbor. Word 4A, "You shall not steal" (<span dir="rtl">לא תגנב</span>), has the same two-word, "not" + single verb format as Pair 3. Word 4B, "You shall not bear false witness against your fellow man" (<span dir="rtl">לא תענה ברעך עד שקר</span>), contains "your fellow man" (<span dir="rtl">רעך</span>) like Pair 5. Pair 4 thus links Pair 3 to Pair 5&mdash;one Word looks up, the other looks down.</p>
+
+    <h3>The Flow in the Names</h3>
+
+    <p>Rabbi reproduced this technique in the names of the Avot speakers. In Pair 1 (Set I), both names carry a place of origin: "of Zereda," "of Jerusalem." In Pair 3 (Set III), both names use only the patronymic form: "ben Tabbai," "ben Shetah." Pair 2 (Set II) combines one of each: "Joshua ben Perahia" (patronymic, like Pair 3) and "Nittai the Arbelite" (place of origin, like Pair 1). The middle Pair creates a transition from one format to the other.</p>
+
+    <h3>The Flow in the Content</h3>
+
+    <p>Rabbi amplified the technique still further in the content of Pair 2's aphorisms. Here are the two speeches, with their three elements marked:</p>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-a" style="width: 50%;">2A &mdash; Joshua ben Perahia</th>
+                <th class="col-b" style="width: 50%;">2B &mdash; Nittai the Arbelite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    a. Get yourself a teacher,<br>
+                    b. acquire a <strong>comrade</strong> (<span dir="rtl">חבר</span>),<br>
+                    c. and give the benefit of the doubt.
+                </td>
+                <td>
+                    a. Stay away from an evil neighbor,<br>
+                    b. do not <strong>associate</strong> (<span dir="rtl">תתחבר</span>) with the wicked,<br>
+                    c. and do not despair of retribution.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Each aphorism has three elements. In both, element (a) reflects the theme of Pair 1, element (c) reflects the theme of Pair 3, and element (b)&mdash;containing the shared root <span dir="rtl">חבר</span> ("connect")&mdash;is the link that makes Pair 2 a pair.</p>
+
+    <p>In 2A, "Get yourself a teacher" (a) echoes Pair 1's call to fill one's house with sages and drink in their words. "Acquire a comrade" (b) provides the linguistic bond. "Give the benefit of the doubt" (c)&mdash;more literally, "judge (<span dir="rtl">הוי דן</span>, "act as a judge") everyone favorably"&mdash;anticipates Pair 3's judges. In 2B, "Stay away from an evil neighbor" (a) echoes Pair 1's "evil" (<span dir="rtl">רע</span>), the same word that appears in 1B's "he brings evil upon himself." "Do not associate with the wicked" (b) contains <span dir="rtl">תתחבר</span>, the same root. "Do not despair of retribution" (c) again invokes judgment.</p>
+
+    <p>Pair 2 is a microcosm of the first three Pairs: a=1, b=2, c=3. The root <span dir="rtl">חבר</span> means "connect," and the Pair's function is to connect. Rabbi devoted extraordinary compositional effort to demonstrating this technique&mdash;in the names, in the content, in the shared root&mdash;because it is the key to understanding how the Decalogue itself flows from pair to pair.</p>
+</section>
+
+<!-- ========== SET-BY-SET READING ========== -->
+<section class="commentary-section">
+    <h2>Set I: The Inner Realm</h2>
+    <h3>Decalogue Pair 5, Avot Pair 1</h3>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 8%;"></th>
+                <th class="col-a" style="width: 46%;">A</th>
+                <th class="col-b" style="width: 46%;">B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Dec 5</strong></td>
+                <td>You shall not covet your fellow man's <em>house</em>.</td>
+                <td>You shall not covet your fellow man's <em>wife</em>, or his male or female slave, or his ox, or his donkey, or anything that is your fellow man's.</td>
+            </tr>
+            <tr>
+                <td><strong>Avot 1</strong></td>
+                <td>Let your <em>house</em> be a meeting place for the Sages; sit in the dust of their feet, and drink in their words thirstily.</td>
+                <td>Let your <em>house</em> be open wide; let the needy be part of your household. Do not speak too much with women. <em>They said this of one's own wife; how much more of another man's wife.</em></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Identical Openings: Rabbi's Signature</h3>
+
+    <p>The most consequential debate about the Decalogue's division turns on whether the two "covets" are one Word or two. Rabbi makes his position unmistakable by beginning both of his aphorisms with the identical phrase "Let your house be" (<span dir="rtl">יהי ביתך</span>)&mdash;mirroring the identical "You shall not covet" (<span dir="rtl">לא תחמד</span>) that opens both Decalogue Words. This is his testimony that the two "covets" are two separate Words. He reinforces the point by echoing both of the Decalogue's key terms within his own text: "house" (<span dir="rtl">בית</span>) appears in both aphorisms, and "your fellow man's wife" (<span dir="rtl">אשת רעך</span>) appears in the editorial gloss attached to 1B: "They said this of one's own wife; how much more of another man's wife."</p>
+
+    <p>The gloss is worth pausing over. It reads like an editorial addition&mdash;because it is one. Rabbi inserted it to create the parallel with the Decalogue. The heavy-handedness is deliberate: it is his signature on the composition, his way of telling the careful reader that this parallel is not an accident.</p>
+
+    <h3>What the Pair Teaches About the Words</h3>
+
+    <p>Placing the two texts side by side reveals a common theme. We identified the Decalogue pair as concerning "the subjective individual"&mdash;private emotion, interior desire. The Avot Pair echoes this by focusing on what happens within the confines of one's home. Both deal with an inner realm: the Decalogue in terms of subjective emotion, Avot in terms of the private domicile. Rabbi's response to the prohibition against coveting is not a further prohibition but a positive program: improve your own house so you have no need to covet your neighbor's. "Let your house be a meeting place for the Sages" reshapes the space that coveting would poison.</p>
+
+    <p>The column-distinction also carries through. We noted that Decalogue 5A has a single object (house) while 5B has many (wife, slaves, ox, donkey, "anything"). Rabbi sensitizes us to the same distinction through what he does with the Sages. In 1A, the Sages are intrinsic to the aphorism&mdash;inseparable from its meaning. In 1B, they appear only in an obviously editorial appendix: "Hence the Sages said&hellip;" The Sages are extrinsic, brought in third-hand. This mirrors the distinction between <span dir="rtl">בית</span> (house) as identity&mdash;what is intrinsic to the person&mdash;and the chattels of 5B as possessions extrinsic to identity. Rabbi has placed the Decalogue's column-dyad of intrinsic/extrinsic into his own text.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Set II: Connecting Self and Other</h2>
+    <h3>Decalogue Pair 4, Avot Pair 2</h3>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 8%;"></th>
+                <th class="col-a" style="width: 46%;">A</th>
+                <th class="col-b" style="width: 46%;">B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Dec 4</strong></td>
+                <td>You shall not steal.</td>
+                <td>You shall not bear false witness against your fellow man.</td>
+            </tr>
+            <tr>
+                <td><strong>Avot 2</strong></td>
+                <td>Get yourself a teacher, acquire a comrade, and give the benefit of the doubt.</td>
+                <td>Stay away from an evil neighbor, do not associate with the wicked, and do not despair of retribution.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Antidotes</h3>
+
+    <p>Rabbi constructed the central elements of Pair 2 as responses to the prohibitions in the parallel Words. "You shall not steal" draws Rabbi's response "acquire" (<span dir="rtl">קנה</span>)&mdash;also meaning "buy" in Hebrew. The antidote to taking what is not yours is to obtain what you need legitimately. "You shall not bear false witness" draws "do not associate with the wicked" (<span dir="rtl">אל תתחבר לרשע</span>). False testimony requires collusion&mdash;at least two lying witnesses conspiring against a third. The preventative is to avoid the association that makes collusion possible.</p>
+
+    <p>The distinction between the two Words is also preserved. The thief expects to benefit from his crime; the false witness aims to damage another, not necessarily for self-benefit. Rabbi's parallel to stealing&mdash;"acquire"&mdash;benefits the acquirer. His parallel to false testimony&mdash;"avoid the wicked"&mdash;prevents damage to others. Tablet A concerns the self acting alone; Tablet B concerns the self entangled with others.</p>
+
+    <h3>The Function of Set II</h3>
+
+    <p>We already know from the flow technique that Pair 2 connects Sets I and III. The root <span dir="rtl">חבר</span> means "connect," and Rabbi has structured the Pair to demonstrate connection in every dimension. If Avot Pair 2 connects Avot Pairs 1 and 3, then its Decalogue parallel&mdash;Pair 4&mdash;should connect Decalogue Pairs 5 and 3. And it does. Property (theft) and the legal system (testimony) define the sphere where self and other meet, interact, and are regulated. Set II is the interface between the private interior of Set I and the objective encounter with the other in Set III.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Set III: The Other</h2>
+    <h3>Decalogue Pair 3, Avot Pair 3</h3>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 8%;"></th>
+                <th class="col-a" style="width: 46%;">A</th>
+                <th class="col-b" style="width: 46%;">B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Dec 3</strong></td>
+                <td>You shall not murder.</td>
+                <td>You shall not commit adultery.</td>
+            </tr>
+            <tr>
+                <td><strong>Avot 3</strong></td>
+                <td>Act not the part of counsel; while the litigants stand before you, regard them as guilty, but as they leave, regard them as innocent, for they have accepted the verdict.</td>
+                <td>Examine the witnesses thoroughly, and watch your words, lest they learn from them to lie.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Examining the Witnesses</h3>
+
+    <p>This is the only set with no linguistic or formal link between the Avot Pair and its Decalogue parallel&mdash;no shared vocabulary, no structural echo. This absence is itself significant. The literary device of the third Pair, as we discovered in Part 2, is content analysis: judges examine testimony without relying on extrinsic cues. Rabbi maintains the same principle here. To find the connection, we must examine the witnesses&mdash;the content of each text&mdash;without help from language or structure.</p>
+
+    <p>Both Decalogue Words in this pair involve capital crimes requiring direct contact with another person. Murder and adultery are the most immediate forms of violating another's existence. Rabbi's response is the appropriate civil institution: the trial. Capital crimes are answered by capital judgment. The Avot aphorisms address two different participants in the judicial process&mdash;the litigants (3A) and the witnesses (3B)&mdash;and these correspond to the two types of crime. Murder directly connects criminal and victim; the litigants are the parties directly affected by the judge's decision. Adultery, by contrast, has an indirect victim&mdash;the husband, who is not a participant in the act. The witnesses are similarly indirect: they were present but are not parties to the dispute.</p>
+
+    <p>The column-distinction holds as well. Murder is intrinsic to the act itself&mdash;the killing is the crime regardless of circumstances. Adultery is extrinsic: the same act of intercourse is not a crime if the woman is unmarried, or if her husband had died. The status of the act depends on a relationship external to it. Rabbi mirrors this in the aphorisms. Ben Tabbai's advice (3A) concerns the judge's own character&mdash;intrinsic, affecting only himself: "Act not the part of counsel." Ben Shetah's warning (3B) is about the judge's effect on others&mdash;extrinsic, affecting the witnesses: "Watch your words, lest they learn from them to lie."</p>
+
+    <h3>A Lying Witness, or a Truthful One?</h3>
+
+    <p>There is a further connection between Sets II and III that deserves attention. In Set II, Decalogue 4B warns against bearing false witness. In Set III, Avot 3B warns the judge not to teach witnesses to lie. The common reference to lying witnesses in adjacent sets is so pointed that it cannot be ignored. But it is technically "out of place"&mdash;the Decalogue reference is in Set II, the Avot reference in Set III. Rabbi appears to have created what we might call a "lying witness": a parallel between the wrong pairs that is both a testimony to the link between Avot and the Decalogue (because the common subject is unmistakable) and a deliberate error (because it crosses set boundaries). <em>The text is self-referring: it is a witness that tells the truth by lying about its own location.</em></p>
+</section>
+
+<section class="commentary-section">
+    <h2>Integrating Sets I&ndash;III</h2>
+
+    <p>By means of the progression of literary devices in the first three Avot Pairs, Rabbi has led us to his understanding of the flow of subjects in the parallel Decalogue pairs. Set I is the self&mdash;subjective emotion, the inner realm. Set III is the other&mdash;the objective existence of another person whose life and body must not be violated. Set II is the interface where self and other meet: property and legal systems regulate the zone between the private individual and the social world.</p>
+
+    <p>The progression also maps onto the academic pyramid. The householder (Set I) inhabits the subjective realm. The student (Set II) begins to form connections beyond the self. The judge (Set III) confronts the objective reality of others. Each step in the Avot hierarchy corresponds to a step in the Decalogue's conceptual flow, and the literary devices that reveal the Avot hierarchy are the same devices that reveal the Decalogue's structure. Rabbi copied the devices from the Decalogue and amplified them so that they could not be missed.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Set IV: Responsibility as Link to the Transcendent</h2>
+    <h3>Decalogue Pair 2, Avot Pair 4</h3>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 8%;"></th>
+                <th class="col-a" style="width: 46%;">A</th>
+                <th class="col-b" style="width: 46%;">B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Dec 2</strong></td>
+                <td>Remember the Sabbath day and keep it holy. Six days you shall <em>labor</em>&hellip; For in six days YHWH made <em>heaven</em> and earth and <em>sea</em>&hellip; therefore YHWH blessed the Sabbath day and <em>hallowed</em> it.</td>
+                <td>Honor your father and your mother, that you may long endure on <em>the land</em> which YHWH your deity is giving you.</td>
+            </tr>
+            <tr>
+                <td><strong>Avot 4</strong></td>
+                <td>Love <em>labor</em>, hate domination, and do not make yourself known to the ruling powers.</td>
+                <td>Sages, watch your words, lest you incur the penalty of <em>exile</em>, and be banished to a place of evil <em>waters</em>, and the disciples that follow you drink and die, and the <em>Heavenly</em> Name be profaned.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>A Surfeit of Parallels</h3>
+
+    <p>Set IV breaks the pattern established in the first three sets. Where the earlier sets built connections through progressively subtler literary devices&mdash;identical words, then shared roots, then content alone&mdash;Set IV floods us with explicit parallels. The word <span dir="rtl">מלאכה</span> (labor) appears in both Decalogue 2A ("Six days you shall labor") and Avot 4A ("Love labor"). Both texts reference the possibility of dwelling on or being exiled from the land: "that you may long endure on the land" (2B) is mirrored by "lest you incur the penalty of exile" (4B). And Rabbi created a triple link between Avtalion's speech and the Sabbath commandment: heaven/heaven, sea/water, hallow/profane&mdash;the last pair especially telling, since <span dir="rtl">ויקדשהו</span> (hallowed it) and <span dir="rtl">מתחלל</span> (profaned) are the final Hebrew words in their respective passages.</p>
+
+    <p>This abundance of parallels may seem to abandon the progression of literary devices. It does not. In the analysis of the Avot Pairs alone, we found that Set IV's literary device transcended the content of its individual statements. The reader had to integrate all previous Pairs to identify Avtalion's audience as "Sages"&mdash;the fourth step in the academic pyramid. The device was not within the Pair but above it, in the cumulative progression. The same is true of the Decalogue parallels. The explicit linguistic links in Set IV do not replace the pyramid's logic; they supplement it. Having trained the reader through three stages of increasingly subtle detection, Rabbi now rewards that reader with unmistakable confirmation.</p>
+
+    <h3>Transcending the Other</h3>
+
+    <p>The first three sets established a progression: subjectivity (I), the interface between self and other (II), the objective existence of the other (III). The academic pyramid predicts that Set IV should transcend the other. And it does. Avtalion's speech begins by addressing its subject (Sages), references the other with whom Sages have contact (their students), and culminates in something beyond both&mdash;"the Heavenly Name." The progression within a single speech recapitulates the progression across the sets: self &rarr; other &rarr; transcendent.</p>
+
+    <p>Each Word and aphorism in this set involves an act done for the sake of another&mdash;observing the Sabbath for the sake of the divine, honoring parents, laboring modestly in public service, teaching wisely. This is the set where responsibility to others becomes the link to something beyond the human. The Decalogue here introduces YHWH by name for the first time since Pair 1. The Avot Pair introduces "the Heavenly Name." Both mark the transition from the purely human realm of Sets I&ndash;III to the realm where the human and the divine intersect.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Set V: The Divine and the Human Voice</h2>
+    <h3>Decalogue Pair 1, Avot Pair 5</h3>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 8%;"></th>
+                <th class="col-a" style="width: 46%;">A</th>
+                <th class="col-b" style="width: 46%;">B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Dec 1</strong></td>
+                <td>I am YHWH your deity who brought you out of the land of Egypt&hellip; You shall have no other gods beside Me&hellip; For I YHWH your deity am a jealous deity&hellip; showing kindness to the thousandth generation of those who <em>love Me</em> and keep My <em>commandments</em>.</td>
+                <td>You shall not swear falsely by <em>the name</em> of YHWH your deity; for YHWH will not clear one who swears falsely by His <em>name</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>Avot 5</strong></td>
+                <td>Hillel said: Be of the students of Aaron, <em>loving</em> peace, pursuing peace, <em>loving</em> one's fellowmen and drawing them close to the <em>Torah</em>.<br><br><em>He also said:</em> He who invokes <em>the Name</em> will lose his <em>name</em>&hellip;<br><br><em>He also said:</em> <em>If I am not for myself</em>, who will be for me; and if I am only for myself, what am I; and if not now, when?</td>
+                <td>Shammai said: Make regular your [study of the] Torah; say little and do much; and greet everyone cheerfully.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>First-Person Speech</h3>
+
+    <p>Both texts in this set open with first-person speech&mdash;and close the circle of the entire structure. The Decalogue begins with the deity speaking in the first person: "I am YHWH your deity" (<span dir="rtl">אנכי ה׳ אלהיך</span>). Hillel's climactic third speech places the first person in the reader's mouth: "If I am not for myself, who will be for me?" (<span dir="rtl">אם אין אני לי מי לי</span>). The divine "I" at the top of the Decalogue is answered by the human "I" at the apex of Avot. The entire five-set progression, read upward from Set I, traces the development from pure subjectivity (coveting, the interior of the house) through social connection, objective encounter, and transcendent responsibility, until the individual stands where the text began&mdash;before the demand of a first-person voice.</p>
+
+    <h3>The Name</h3>
+
+    <p>The most pointed linguistic parallel in this set involves "the Name." Decalogue 1B prohibits misusing "the name of YHWH your deity" (<span dir="rtl">שם ה׳ אלהיך</span>) and warns that "YHWH will not clear" the offender. Hillel's second speech warns: "He who invokes the Name will lose his name" (<span dir="rtl">נגד שמא אבד שמה</span>). In both texts, the misuse of the divine name brings consequences. And in both, "love" and "divine instruction" are joined: the Decalogue closes with "those who love Me and keep My commandments"; Hillel opens with "loving one's fellowmen and drawing them close to the Torah."</p>
+
+    <h3>Three Speeches and Five Parts</h3>
+
+    <p>Hillel's three speeches in 5A correspond to the three-part structure of Decalogue 1A. <a href="#fractal-1a">The first Word divides into five parts</a> within a framework of two first-person divine declarations (a, e) enclosing three prohibitions (b, c, d). The framework is temporal: the first declaration refers to the past ("who brought you out of Egypt"), the last to the future ("to the thousandth generation"), and the prohibitions occupy the present. Hillel's first speech refers to history (Aaron, the priestly tradition). His third speech is oriented toward the present and future ("if not now, when?"). His middle speech, in Aramaic rather than Hebrew, is conspicuously unlike the surrounding material&mdash;just as the three prohibitions in the middle of the first Word are conspicuously unlike the first-person revelations that frame them.</p>
+
+    <p>The deity, we might say, speaks in two registers&mdash;first-person revelation and second-person prohibition. Hillel speaks in two languages&mdash;Hebrew and Aramaic. In both cases, the central element is the foreign body: the non-revelation within divine speech, the non-Hebrew within Hillel's. The structure does not resolve this tension. It frames it.</p>
+</section>
+
+<!-- ========================================================================== -->
+<!-- THE THEORY                                                                 -->
+<!-- ========================================================================== -->
+
+<section class="commentary-section">
+    <h2>Elohim Speaks in Tables</h2>
+
+    <h3>What Did Rabbi Know?</h3>
+
+    <p>The cumulative evidence&mdash;identical openings, shared vocabulary, structural flow, column-distinctions preserved in detail across five sets&mdash;points to a single conclusion. Rabbi possessed the five-pair reading of the Decalogue and used it as the template for his composition in Avot Chapter 1. The Avot Pairs are not merely similar to the Decalogue pairs; they are a systematic commentary on them. Rabbi responded to the Decalogue Word by Word: "Don't covet" becomes "improve your house"; "don't steal" becomes "acquire legitimately"; capital crimes are met with proper judicial procedure; labor for the sake of heaven is matched by loving labor; and the divine first person is answered by the human first person.</p>
+
+    <p>This raises the question of why the five-pair reading was suppressed. The Mekhilta preserves a different division that combines the two "covets" into one Word and merges "I am YHWH" with "No other gods." Rabbi's own legal tradition apparently did not transmit the five-pair reading openly. Yet he embedded it in his literary composition with a precision that can only reflect firsthand knowledge. The reading was esoteric&mdash;available to the few who possessed it, hidden from the many.</p>
+
+    <h3>Two Voices</h3>
+
+    <p>The Torah records that "Elohim spoke to Moses, saying: speak to the children of Israel." The divine words were spoken twice&mdash;first to Moses, then by Moses to the people. The Torah contains both voices. Moses spoke linearly, one word after another, as any person must. Divine speech would not have been limited to linear discourse.</p>
+
+    <p>The exoteric reading of the Decalogue&mdash;a list of ten laws&mdash;represents Moses' voice, the limitations of human speech. The esoteric reading&mdash;a table with five rows and two columns, meaning at every intersection&mdash;represents the divine voice. The stone tablets are not merely a medium for the text; they are a statement about the nature of divine speech. Elohim writes on two tablets because Elohim speaks in tables. Linear speech requires one dimension; tabular composition requires two.</p>
+
+    <h3>Two Sets of Tablets</h3>
+
+    <p>The Torah narrates two occasions on which tablets were given. The first time, Moses descended with the tablets in his hands, apparently intending to present them to the nation. He shattered them when he saw the golden calf. The people never saw the writing. The second time, Moses was instructed to prepare a box before ascending&mdash;to place the tablets inside immediately upon receiving them. They went directly into the Ark in the Holy of Holies. No one other than Moses ever saw them.</p>
+
+    <p>The first tablets were exoteric, intended for all. They were shattered&mdash;like the linear reading that breaks the composition into disconnected laws. The second tablets were esoteric, intended for Moses alone. They remained whole&mdash;like the structural reading that sees the ten Words as a unified composition. The two narratives of the giving of the tablets embody the distinction between the two readings of the Torah itself.</p>
+
+    <h3>Rabbi's Accomplishment</h3>
+
+    <p>Rabbi's accomplishment is now legible. He possessed the esoteric reading of the Decalogue&mdash;the knowledge that the ten Words form a 5&times;2 table&mdash;and he encoded that knowledge in the literary structure of Avot Chapter 1 without ever stating it directly. He created a parallel esoteric text in order to preserve the knowledge of the esoteric Decalogue without revealing it. The new vessel&mdash;the Mishnah&mdash;contains the old wine: the structural principles of the Torah.</p>
+
+    <p>But the scope of what Rabbi preserved extends far beyond the Decalogue. The entire Torah is organized in literary units that exhibit the same two-dimensional, woven characteristics we have identified in the ten Words&mdash;units in which every element is a function of two independent organizing principles, a row-theme and a column-theme, read simultaneously. And the entire Mishnah&mdash;all sixty-three tractates, all five hundred and twenty-four chapters&mdash;was constructed according to the same non-linear principles. Each chapter is a literary table. It seems likely that the Torah's literary structure is the source of the Mishnah's, since no other woven texts have been discovered. But the Mishnah contains no direct statement of this dependence.</p>
+
+    <p>Avot Chapter 1 may be the key to making the connection. The opening line insists that the content of the chapter derives from something Moses received at Sinai and transmitted through a chain of select recipients. It does not say what <em>torah</em>. But the chapter itself demonstrates the answer through its structure: by mirroring the Decalogue precisely, it shows that what was received was the woven method. And the Torah itself points to the same source. The stone tablets are the only text claimed to have been written directly by Elohim&mdash;and they are explicitly <em>two</em> tablets. A table. The author of the Torah attributed the origin of woven composition to the Decalogue. Avot confirms the attribution from the rabbinic side.</p>
+
+    <p>The Pairs also trace a developmental process. The reader begins at Pair 1&mdash;the householder, the private realm, the interior of the house. Through student, judge, and sage, the reader ascends to Pair 5, where Hillel speaks in the first person: "If I am not for myself, who will be for me?" The divine "I" at the summit of the Decalogue is answered by the human "I" at the apex of Avot. The reader who completes the process does not merely receive <em>torah</em>&mdash;the reader becomes capable of creating it.</p>
+
+    <p>Rabbi is the proof that the process works. He did not merely receive the woven method; he used it to compose all five hundred and twenty-four chapters of the Mishnah. His statement in Chapter 4&mdash;"Do not look at the bottle but at what is in it; you can have a new bottle full of old wine"&mdash;is a self-description. The Mishnah is the new bottle. The method is old. Rabbi is what the developmental process of Avot produces: someone who creates woven text.</p>
+</section>
+
+<!-- ========== READING A LITERARY TABLE ========== -->
+<section class="commentary-section">
+    <h2>Reading a Literary Table</h2>
+
+    <p>The single most consequential characteristic of both texts is that they were composed as true tables. Consider what this means from the perspective of an author. An author who plans a text in the form of a table must begin with a set of organizing principles&mdash;what we described in the Avot analysis as the "dynamic" and "static" rules. Each segment of text must demonstrate the intersection of two different planning lines. The text that the author writes falls within the table; the organizing principles that generate the text surround it, embedded but unwritten.</p>
+
+    <p>We can illustrate this schematically:</p>
+
+    <table class="scripture-table">
+        <thead>
+            <tr>
+                <th class="col-full" style="width: 18%;"></th>
+                <th class="col-a" style="width: 41%;">Column A: The Rule of A</th>
+                <th class="col-b" style="width: 41%;">Column B: The Rule of B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Row 1: The Rule of 1</strong></td>
+                <td>1A: Intersection of Rules 1 and A</td>
+                <td>1B: Intersection of Rules 1 and B</td>
+            </tr>
+            <tr>
+                <td><strong>Row 2: The Rule of 2</strong></td>
+                <td>2A: Intersection of Rules 2 and A</td>
+                <td>2B: Intersection of Rules 2 and B</td>
+            </tr>
+            <tr>
+                <td><strong>Row 3: The Rule of 3</strong></td>
+                <td>3A: Intersection of Rules 3 and A</td>
+                <td>3B: Intersection of Rules 3 and B</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>The text within the cells is the exoteric layer&mdash;what the reader sees. The row-rules and column-rules are the esoteric layer&mdash;the unwritten superstructure that determines the meaning of each cell. The tabular structure, by its very nature, creates a two-faced text: the written text that falls within the table, and the unwritten principles that surround and organize it. Discovering the superstructure is the key to accessing the author's hidden agenda.</p>
+
+    <p>In the Decalogue, the row-rules are the five subjects of the pairs (the deity, divine will, human life, human will, subjectivity) and the column-rules are the principles of the two tablets (<a href="#tablet-a">the individual self</a> and <a href="#tablet-b">social relationships</a>). In Avot, the row-rules are the five levels of the academic pyramid (householder, student, judge, sage, realized individual) and the column-rules are internal and external, self and other&mdash;Column A focuses on the individual, Column B on the individual's contacts with the outside world. Both structures generate meaning at every intersection that neither the row-rule nor the column-rule contains on its own.</p>
+
+    <p>This is what was transmitted from Sinai: at minimum, a method of composition&mdash;a way of making text that encodes two dimensions of meaning in a single linear sequence, so that the exoteric reader sees a list and the esoteric reader sees a table. Whether the esoteric tradition also included specific content&mdash;teachings encoded in the structure itself&mdash;remains to be examined; we cannot rule it out until we have traced all the additional meanings the woven format transmits. Avot's chain of transmission&mdash;from Moses to Joshua to the Elders to the Prophets&mdash;is a chain of readers who knew that the text is woven, and who could see the warp threads running through what appeared to be a simple sequence of weft.</p>
+</section>
+
+<!-- ========== CONCLUSION ========== -->
+<section class="commentary-section">
+    <h2>Conclusion: The New Bottle and the Old Wine</h2>
+
+    <p>We began the series with a small table&mdash;eight statements by the Men of Kfar Hananya arranged as a 4&times;2 matrix. We moved to a more complex one: the Five Pairs of Chapter 1, a 5&times;2 matrix with a built-in process of reader education. We then saw both structures combined in Chapter 4's 5&times;4 matrix, where the silence of Shmuel HaKatan demonstrated that in a woven text, meaning arises from position.</p>
+
+    <p>Now the circle closes. The 5&times;2 structure of the Avot Pairs corresponds in precise detail to the 5&times;2 structure of the Decalogue. The literary devices that Rabbi used to connect his Pairs are amplifications of devices already present in the Decalogue itself. The academic pyramid that organizes Avot maps onto the hierarchical flow of the Decalogue's five pairs. And the column-distinction between self and other&mdash;Column A internal, Column B external&mdash;finds its source in the distinction between the two stone tablets: <a href="#tablet-a">the individual self</a> and <a href="#tablet-b">social relationships</a>.</p>
+
+    <p>What we have uncovered in these four articles is not a local phenomenon. The Decalogue is not the only passage in the Torah composed as a two-dimensional weave, and Avot is not the only tractate in the Mishnah built on the same principles. The entire Torah is organized in literary units&mdash;each one a table with rows and columns, warp threads and weft threads, exoteric sequence and esoteric structure. And the entire Mishnah, all five hundred and twenty-four chapters, was composed according to the same method. Rabbi did not borrow a technique from one passage in the Torah and apply it to one chapter of his own work. He replicated the compositional logic of the whole Torah across the whole Mishnah. The examples we have examined&mdash;Kfar Hananya, the Five Pairs, Chapter 4, and now the Decalogue&mdash;are windows into a phenomenon that encompasses both texts in their entirety.</p>
+
+    <p>Rabbi's own voice appears once in Avot Chapter 4, in a statement we can now read as a self-description of what he has done: "Do not look at the bottle but at what is in it. You can have a new bottle full of old wine." The Mishnah is the new bottle. The old wine is the esoteric teaching of the Torah&mdash;the knowledge that the text is a weave, and that the weave generates meaning at every intersection of its two dimensions.</p>
+
+    <p>The beloved little book of aphorisms, read for seventeen centuries as a collection of practical wisdom, turns out to be a map of the Decalogue. The author hid this map in plain sight&mdash;using the very method he learned from the tablets themselves. Those who read linearly find sound advice. Those who learn to read between the lines find an invitation: to join the chain of transmission, to receive the method, and to become partners in the ongoing work of making meaning from the intersection of what is written and what is not.</p>
+</section>
+
+</article>
+</main>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

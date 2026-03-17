@@ -1,0 +1,1876 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/English.dwt" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- #BeginEditable "doctitle" -->
+<title>Untitled 1</title>
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* Modern CSS Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+    }
+    
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+        background-color: #2c3e50;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 1rem 0;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+    
+    nav a:hover {
+        color: #3498db;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Hero Section - Reduced size */
+    .hero {
+        background: linear-gradient(135deg, #e6f2ff 0%, #cce7ff 100%);
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+    
+    /* Site Title - Smaller */
+    .site-title {
+        margin-bottom: 1rem;
+    }
+    
+    .site-title h1 {
+        font-size: 2.2rem;
+        color: #333;
+        margin-bottom: 0.25rem;
+        font-weight: normal;
+    }
+    
+    .site-title h2 {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: normal;
+    }
+    
+    /* Woven Torah Link Box - Smaller */
+    .woven-torah-link {
+        background-color: white;
+        border: 1px solid #5090f0;
+        padding: 0.8rem 1.2rem;
+        margin: 1rem auto;
+        border-radius: 6px;
+        max-width: 600px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .woven-torah-link h3 {
+        color: #5090f0;
+        font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .woven-torah-link p {
+        color: #666;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Buttons - Smaller */
+    .hero-buttons {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .hero-buttons a {
+        background-color: white;
+        color: #333;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border: 1px solid #ddd;
+    }
+    
+    .hero-buttons a:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        background-color: #f8f9fa;
+    }
+    
+    /* Main Content Area */
+    .main-content {
+        background-color: white;
+        padding: 3rem 0;
+        min-height: 400px;
+    }
+    
+    /* Main Content - Full Width */
+    #content {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 3rem 0 2rem;
+        margin-top: 4rem;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-section h4 {
+        margin-bottom: 1rem;
+        color: #ecf0f1;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+    }
+    
+    .footer-section li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a {
+        color: #bdc3c7;
+        text-decoration: none;
+    }
+    
+    .footer-section a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .footer-section p {
+        color: #bdc3c7;
+        line-height: 1.6;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #34495e;
+        color: #95a5a6;
+    }
+    
+    /* ===== TORAH UNIT STYLES (Compatible with Old DWT) ===== */
+    /* Base styles - maintain compatibility */
+    .unit-header {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 1.5rem 0 1rem;
+        page-break-before: always;
+        page-break-after: avoid;
+    }
+    
+    .cell-label {
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0;
+        page-break-after: avoid;
+    }
+    
+    .torah {
+        text-align: justify;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    /* Semantic highlighting */
+    .cell-subdivision {
+        font-weight: bold;
+    }
+    
+    .verse-number {
+        font-weight: bold;
+    }
+    
+    /* Color highlighting classes - original MS Word names preserved */
+    .horizontal1 {
+        color: #3399FF;
+        font-weight: normal;
+    }
+    
+    .vertical1 {
+        color: #C09200;
+        font-weight: normal;
+    }
+    
+    .internalparallel {
+        color: lime;
+        font-weight: normal;
+    }
+    
+    /* New semantic class names */
+    .horizontal-parallel {
+        color: #3399FF;
+        font-weight: normal;
+    }
+    
+    .vertical-parallel {
+        color: #C09200;
+        font-weight: normal;
+    }
+    
+    .internal-parallel {
+        color: lime;
+        font-weight: normal;
+    }
+    
+    /* Additional highlighting classes */
+    .closure {
+        color: #CC0066;
+        font-weight: normal;
+    }
+    
+    .ciasm1 {
+        color: #7030A0;
+        font-weight: normal;
+    }
+    
+    .ciasm2 {
+        color: #FB81EC;
+        font-weight: normal;
+    }
+    
+    .horizontal2 {
+        color: teal;
+        font-weight: normal;
+    }
+    
+    .horizontal3 {
+        color: maroon;
+        font-weight: normal;
+    }
+    
+    .hebrew-paragraph {
+        font-weight: bold;
+    }
+    
+    /* Layout */
+    .scripture-table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 900px;
+    }
+    
+    .scripture-table td {
+        padding: 0.5rem;
+        vertical-align: top;
+    }
+    
+    /* Page breaks */
+    .page-break {
+        page-break-before: always;
+        clear: both;
+    }
+    
+    /* ===== TORAH WEAVE SPECIFIC ADDITIONS ===== */
+    
+    /* Torah Weave Container */
+    .torah-weave-container {
+        font-family: Arial, 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    /* Book-specific heading colors */
+    .genesis-section h1, .genesis-section h2, .genesis-section h3 {
+        color: #7ab0f7 !important;
+    }
+    
+    .exodus-section h1, .exodus-section h2, .exodus-section h3 {
+        color: #f0b070 !important;
+    }
+    
+    .leviticus-section h1, .leviticus-section h2, .leviticus-section h3 {
+        color: #80d0a0 !important;
+    }
+    
+    .numbers-section h1, .numbers-section h2, .numbers-section h3 {
+        color: #f0b070 !important;
+    }
+    
+    .deuteronomy-section h1, .deuteronomy-section h2, .deuteronomy-section h3 {
+        color: #7ab0f7 !important;
+    }
+    
+    /* Full Torah Map Styles */
+    .map-container {
+        width: 100%;
+        max-width: 1170px;
+        height: 900px;
+        position: relative;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 1200px) {
+        .map-container {
+            width: 100%;
+            height: auto;
+            overflow-x: auto;
+        }
+        
+        .map-inner {
+            width: 1170px;
+            height: 900px;
+            position: relative;
+        }
+    }
+    
+    /* Book containers in full map */
+    .book {
+        position: absolute;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+    
+    .book-title {
+        position: absolute;
+        padding: 5px 0;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        z-index: 2;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Book positioning and colors */
+    .genesis {
+        left: 0px;
+        top: 351px;
+        width: 351px;
+        height: 216px;
+        border: 3px solid #7ab0f7;
+        background-color: rgba(122, 176, 247, 0.1);
+    }
+    
+    .genesis-title {
+        left: 0px;
+        top: 351px;
+        width: 351px;
+        background-color: #7ab0f7;
+    }
+    
+    .exodus {
+        left: 486px;
+        top: 27px;
+        width: 297px;
+        height: 297px;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+    }
+    
+    .exodus-title {
+        left: 486px;
+        top: 0px;
+        width: 297px;
+        background-color: #f0b070;
+    }
+    
+    .leviticus {
+        left: 378px;
+        top: 351px;
+        width: 459px;
+        height: 216px;
+        border: 3px solid #80d0a0;
+        background-color: rgba(128, 208, 160, 0.1);
+    }
+    
+    .leviticus-title {
+        left: 378px;
+        top: 351px;
+        width: 459px;
+        background-color: #80d0a0;
+    }
+    
+    .numbers {
+        left: 486px;
+        top: 621px;
+        width: 297px;
+        height: 297px;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+    }
+    
+    .numbers-title {
+        left: 486px;
+        top: 594px;
+        width: 297px;
+        background-color: #f0b070;
+    }
+    
+    .deuteronomy {
+        left: 864px;
+        top: 351px;
+        width: 270px;
+        height: 216px;
+        border: 3px solid #7ab0f7;
+        background-color: rgba(122, 176, 247, 0.1);
+    }
+    
+    .deuteronomy-title {
+        left: 864px;
+        top: 351px;
+        width: 270px;
+        background-color: #7ab0f7;
+    }
+    
+    /* Unit styles in full map */
+    .unit {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 12px;
+        z-index: 3;
+        transition: transform 0.2s;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .unit:hover {
+        transform: scale(1.2);
+        z-index: 10;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    
+    .unit.special {
+        border: 2px solid #CC0066;
+        width: 23px;
+        height: 23px;
+    }
+    
+    /* Unit background colors */
+    .color-d4f2ff { background-color: #d4f2ff; }
+    .color-e6ffee { background-color: #e6ffee; }
+    .color-d4d4ff { background-color: #d4d4ff; }
+    .color-ffe6e6 { background-color: #ffe6e6; }
+    .color-ffccaa { background-color: #ffccaa; }
+    .color-c8e6d2 { background-color: #c8e6d2; }
+    .color-f0f0f0 { background-color: #f0f0f0; }
+    
+    /* Exodus Quadrant Styles */
+    .exodus-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        height: 0;
+        padding-bottom: 100%;
+        margin: 30px auto;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .quadrant {
+        position: absolute;
+        width: 45%;
+        height: 42%;
+        z-index: 1;
+        border: 1px dashed rgba(240, 176, 112, 0.2);
+    }
+    
+    .quadrant-1 { top: 8%; left: 2%; }
+    .quadrant-2 { top: 8%; right: 2%; }
+    .quadrant-3 { bottom: 14%; left: 2%; }
+    .quadrant-4 { bottom: 14%; right: 2%; }
+    
+    /* Leviticus Concentric Rings */
+    .ring {
+        border: 2px solid #80d0a0;
+        border-radius: 50%;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .ring-outer { background-color: rgba(128, 208, 160, 0.1); }
+    .ring-middle { background-color: rgba(128, 208, 160, 0.2); }
+    .ring-inner { background-color: rgba(128, 208, 160, 0.3); }
+    .ring-center { 
+        background-color: #ffe6e6;
+        border-color: #CC0066;
+        font-weight: bold;
+    }
+    
+    /* ===== COMMENTARY-SPECIFIC STYLES ===== */
+    
+    /* Breadcrumb Navigation */
+    .breadcrumb {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 0.9em;
+    }
+    
+    .breadcrumb a {
+        color: #3498db;
+        text-decoration: none;
+    }
+    
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Unit Metadata */
+    .unit-metadata {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+        font-size: 0.95em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .unit-metadata span {
+        background-color: rgba(255,255,255,0.1);
+        padding: 5px 15px;
+        border-radius: 4px;
+    }
+    
+    /* Unit Navigation */
+    .unit-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0;
+        padding: 20px;
+        background-color: #ecf0f1;
+        border-radius: 6px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .unit-navigation a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .unit-navigation a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Book Map Container */
+    .book-map-container {
+        background-color: #f8f9fa;
+        border: 2px solid #dee2e6;
+        padding: 20px;
+        text-align: center;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+    
+    .deuteronomy-mini-map {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Opening Hook */
+    .opening-hook {
+        font-size: 1.2em;
+        font-style: italic;
+        color: #555;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-left: 4px solid #3498db;
+        margin-bottom: 30px;
+        line-height: 1.8;
+    }
+    
+    /* Torah Text Section */
+    .torah-text-section {
+        background-color: white;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .torah-text-section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    /* Color Legend */
+    .color-legend {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 6px;
+    }
+    
+    .color-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .color-swatch {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+    }
+    
+    /* Commentary Section */
+    .commentary-section {
+        background-color: white;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .commentary-section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .commentary-section h3 {
+        color: #3498db;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .commentary-section h4 {
+        color: #555;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    /* Structural Matrix Section */
+    .matrix-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .matrix-header h2 {
+        font-size: 28px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    .matrix-header p {
+        color: #666;
+        font-style: italic;
+    }
+    
+    /* Commentary Matrix Table */
+    .commentary-matrix {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+    
+    .commentary-matrix th,
+    .commentary-matrix td {
+        border: 2px solid #ddd;
+        padding: 20px;
+        vertical-align: top;
+    }
+    
+    /* Matrix headers */
+    .weft-rule {
+        background-color: #80d0a0;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        width: 180px;
+        font-size: 15px;
+    }
+    
+    .weft-rule .rule {
+        display: block;
+        font-weight: normal;
+        font-size: 13px;
+        margin-top: 8px;
+        font-style: italic;
+        line-height: 1.3;
+    }
+    
+    .column-header {
+        background-color: #7ab0f7;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .column-subtext {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    /* Matrix intersection cells */
+    .intersection {
+        background-color: #ffffff;
+        position: relative;
+    }
+    
+    .intersection-header {
+        color: #2c3e50;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+    
+    .intersection-content {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .intersection-note {
+        font-style: italic;
+        color: #666;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    
+    /* Variation boxes in matrix */
+    .variation-box {
+        background-color: #fef3c7;
+        border: 1px solid #f59e0b;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 13px;
+    }
+    
+    /* Framework cells */
+    .framework-row {
+        background-color: #f8f9fa;
+    }
+    
+    .framework-cell {
+        background-color: #f8f9fa;
+    }
+    
+    /* Matrix Table (simplified version) */
+    .matrix-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .matrix-table th,
+    .matrix-table td {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: left;
+    }
+    
+    .matrix-table th {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .matrix-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    
+    /* Theological Points */
+    .theological-point {
+        background-color: #e8f4fd;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 6px;
+        border-left: 4px solid #3498db;
+    }
+    
+    .theological-point h4 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    /* Conclusion Section */
+    .conclusion-section {
+        background-color: #f0f8f0;
+        border: 2px solid #80d0a0;
+        padding: 30px;
+        border-radius: 8px;
+        margin-top: 40px;
+    }
+    
+    .conclusion-section h2 {
+        color: #5da77a;
+        margin-bottom: 20px;
+    }
+    
+    /* Enhanced Mobile Responsive Design */
+    @media (max-width: 1024px) {
+        /* Tablet adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        /* MOBILE HEADER FIX - Remove sticky positioning */
+        header {
+            position: relative; /* Changed from sticky to relative */
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+        
+        nav {
+            position: relative;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background-color: #2c3e50;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Hero adjustments */
+        .hero {
+            padding: 1rem 0;
+        }
+        
+        .site-title h1 {
+            font-size: 1.8rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1rem;
+        }
+        
+        .woven-torah-link {
+            padding: 0.7rem 1rem;
+            margin: 0.8rem auto;
+        }
+        
+        .woven-torah-link h3 {
+            font-size: 1.1rem;
+        }
+        
+        .woven-torah-link p {
+            font-size: 0.85rem;
+        }
+        
+        /* Hero buttons stack on mobile */
+        .hero-buttons {
+            gap: 0.6rem;
+            margin-top: 0.8rem;
+        }
+        
+        .hero-buttons a {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+        
+        /* Unit metadata stacks on mobile */
+        .unit-metadata {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Unit navigation stacks */
+        .unit-navigation {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        /* Matrix tables scroll horizontally on mobile */
+        .commentary-matrix {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        /* Reduce padding on mobile */
+        .commentary-section,
+        .torah-text-section {
+            padding: 20px;
+        }
+        
+        /* Stack color legend vertically */
+        .color-legend {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        /* Content adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            gap: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        /* Small mobile adjustments */
+        .container {
+            padding: 0 15px;
+        }
+        
+        .site-title h1 {
+            font-size: 2rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1.1rem;
+        }
+        
+        .woven-torah-link {
+            padding: 1.25rem;
+            margin: 1.5rem auto;
+        }
+        
+        .woven-torah-link h3 {
+            font-size: 1.25rem;
+        }
+        
+        .opening-hook {
+            font-size: 1.1em;
+            padding: 15px;
+        }
+        
+        #content {
+            padding: 1rem;
+        }
+        
+        /* Stack footer sections */
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    /* Hebrew Text Support */
+    [lang=he], .hebrew {
+        font-family: 'David Libre', 'Arial', serif;
+        direction: rtl;
+        text-align: right;
+    }
+    
+    /* Print styles */
+    @media print {
+        header, footer, .menu-toggle {
+            display: none;
+        }
+        
+        .main-content {
+            padding: 0;
+        }
+        
+        .unit-navigation {
+            display: none;
+        }
+        
+        .book-map-container {
+            page-break-inside: avoid;
+        }
+        
+        .commentary-matrix {
+            page-break-inside: avoid;
+        }
+    }/* =======================================
+   Additional Matrix Table Styling for Genesis
+   ======================================= */
+
+/* Fix for matrix table units */
+.matrix-table .unit {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    text-align: left;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.matrix-table .unit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.matrix-table .unit-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.matrix-table .unit-reference {
+    font-style: italic;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: center;
+    font-size: 12px;
+}
+
+.matrix-table .unit-description {
+    font-size: 13px;
+    line-height: 1.3;
+    text-decoration: none !important;
+}
+
+/* Remove underlines from unit links */
+.matrix-table .unit,
+.matrix-table .unit:hover,
+.matrix-table .unit:focus,
+.matrix-table .unit:active,
+.matrix-table .unit * {
+    text-decoration: none !important;
+}
+
+/* Matrix table column header styles */
+.matrix-table .col-cosmic,
+.matrix-table .col-transition,
+.matrix-table .col-covenants,
+.matrix-table .col-family,
+.matrix-table .col-political {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+.matrix-table .col-cosmic { background-color: #7ab0f7; }
+.matrix-table .col-transition { background-color: #CC0066; }
+.matrix-table .col-covenants { background-color: #80d0a0; }
+.matrix-table .col-family { background-color: #9999FF; }
+.matrix-table .col-political { background-color: #7ab0f7; }
+
+/* Column letter and theme label styling */
+.matrix-table .column-letter {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.matrix-table .theme-label {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+/* Row label styling */
+.matrix-table .row-label {
+    background-color: #7ab0f7;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.matrix-table .row-number {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.matrix-table .row-desc {
+    font-size: 12px;
+}
+
+/* Fix empty cells */
+.matrix-table .empty-cell {
+    background-color: rgba(122, 176, 247, 0.1);
+    border: 1px solid rgba(122, 176, 247, 0.2);
+}
+    </style>
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="container">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                    <li><a href="/Mishnah-New/Hebrew/Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">Mishnah</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/hebrew%20index.html">עברית</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section - Shows on homepage and other general pages -->
+    <!-- #BeginEditable "writehere" -->
+<!-- Visual Mini-Map -->
+<div style="text-align: center; margin-bottom: 2rem;">
+    <svg width="250" height="100" viewBox="0 0 250 100" style="max-width: 100%; height: auto;">
+        <rect width="250" height="100" fill="#f0f4f8" stroke="#ddd" stroke-width="1"/>
+        <text x="125" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Deuteronomy Units Map</text>
+        
+        <!-- Row 1 -->
+        <rect x="5" y="30" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="25" y="43" text-anchor="middle" font-size="9" fill="#666">1</text>
+        
+        <rect x="55" y="30" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="75" y="43" text-anchor="middle" font-size="9" fill="#666">2</text>
+        
+        <rect x="105" y="30" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="125" y="43" text-anchor="middle" font-size="9" fill="#666">7</text>
+        
+        <rect x="155" y="30" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="175" y="43" text-anchor="middle" font-size="9" fill="#666">10</text>
+        
+        <rect x="205" y="30" width="40" height="20" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+        
+        <!-- Row 2 -->
+        <rect x="5" y="50" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="25" y="63" text-anchor="middle" font-size="9" fill="#666">3</text>
+        
+        <rect x="55" y="50" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="75" y="63" text-anchor="middle" font-size="9" fill="#666">4</text>
+        
+        <rect x="105" y="50" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="125" y="63" text-anchor="middle" font-size="9" fill="#666">8</text>
+        
+        <rect x="155" y="50" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="175" y="63" text-anchor="middle" font-size="9" fill="#666">11</text>
+        
+        <rect x="205" y="50" width="40" height="20" fill="#ffe6e6" stroke="#999" stroke-width="0.5"/>
+        <text x="225" y="63" text-anchor="middle" font-size="9" fill="#666">13</text>
+        
+        <!-- Row 3 -->
+        <rect x="5" y="70" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="25" y="83" text-anchor="middle" font-size="9" fill="#666">5</text>
+        
+        <rect x="55" y="70" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="75" y="83" text-anchor="middle" font-size="9" fill="#666">6</text>
+        
+        <rect x="105" y="70" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="125" y="83" text-anchor="middle" font-size="9" fill="#666">9</text>
+        
+        <rect x="155" y="70" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="175" y="83" text-anchor="middle" font-size="9" fill="#666">12</text>
+        
+        <rect x="205" y="70" width="40" height="20" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+    </svg>
+</div>
+
+<!-- Table of Contents -->
+<div id="top" style="background-color: #f8f8f8; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+    <h2>Table of Contents</h2>
+    <ol style="list-style-type: decimal; margin-left: 1.5rem;">
+        <li><a href="#overview" style="text-decoration: none; color: #333;">Understanding Deuteronomy's Literary Architecture</a></li>
+        <li><a href="#book-map" style="text-decoration: none; color: #333;">Deuteronomy Book Map</a></li>
+        <li><a href="#key-elements" style="text-decoration: none; color: #333;">Key Structural Elements</a></li>
+        <li><a href="#connections" style="text-decoration: none; color: #333;">Cross-Unit Connections and Patterns</a></li>
+        <li><a href="#opposition" style="text-decoration: none; color: #333;">The A-D Column Opposition</a></li>
+        <li><a href="#themes" style="text-decoration: none; color: #333;">Major Thematic Movements</a></li>
+        <li><a href="#torah-place" style="text-decoration: none; color: #333;">Deuteronomy's Place in the Torah</a></li>
+        <li><a href="#implications" style="text-decoration: none; color: #333;">Implications for Reading Deuteronomy</a></li>
+        <li><a href="#patterns" style="text-decoration: none; color: #333;">Structural Patterns: Three Examples</a></li>
+    </ol>
+</div>
+
+<!-- Book Overview -->
+<div id="overview" style="background-color: #f0f4f8; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+    <h2>Understanding Deuteronomy's Literary Architecture</h2>
+    <p>Deuteronomy, the fifth book of the Torah, presents Moses' final addresses to Israel as they prepare to enter the Promised Land. Its 13 units form a sophisticated 4×3 matrix (plus one independent unit) that creates meaning through position, progression, and interconnection. Every detail gains significance from its placement within this carefully woven structure.</p>
+    
+    <p>The book's architecture reveals that Deuteronomy functions not as a simple repetition of laws but as a transformation of Israel's entire covenant relationship. Through its unique structural design, past history becomes future prophecy, external law becomes internal commitment, and Moses' historical authority transforms into eternal witness.</p>
+    <div style="text-align: right; margin-top: 1rem;"><a href="#top" style="text-decoration: none; color: #666; font-size: 14px;">↑ Return to Top</a></div>
+</div>
+
+<!-- Deuteronomy Book Map -->
+<h2 id="book-map" style="text-align: center; margin-top: 3rem;">Deuteronomy Book Map</h2>
+<p style="text-align: center; color: #666; margin-bottom: 2rem;">Click on any unit to read its commentary</p>
+
+<div style="overflow-x: auto; margin-bottom: 3rem;">
+    <table style="border-collapse: collapse; width: 100%; min-width: 800px; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <thead>
+            <tr>
+                <th style="background-color: #2c3e50; color: white; padding: 15px; text-align: center; font-size: 14px;">Rows / Columns</th>
+                <th style="background-color: #3498db; color: white; padding: 15px; text-align: center; min-width: 150px;">
+                    A<br />
+                    <span style="font-size: 12px; font-weight: normal; font-style: italic;">Past<br />Before State Establishment</span>
+                </th>
+                <th style="background-color: #3498db; color: white; padding: 15px; text-align: center; min-width: 150px;">
+                    B<br />
+                    <span style="font-size: 12px; font-weight: normal; font-style: italic;">Performing Laws<br />State Establishment</span>
+                </th>
+                <th style="background-color: #3498db; color: white; padding: 15px; text-align: center; min-width: 150px;">
+                    C<br />
+                    <span style="font-size: 12px; font-weight: normal; font-style: italic;">Laws<br />Legal Corpus</span>
+                </th>
+                <th style="background-color: #3498db; color: white; padding: 15px; text-align: center; min-width: 150px;">
+                    D<br />
+                    <span style="font-size: 12px; font-weight: normal; font-style: italic;">Future<br />State Decline</span>
+                </th>
+                <th style="background-color: #3498db; color: white; padding: 15px; text-align: center; min-width: 150px;">
+                    E<br />
+                    <span style="font-size: 12px; font-weight: normal; font-style: italic;">Independent</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Row 1: Foundational (Human-Oriented) -->
+            <tr>
+                <td style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold;">
+                    1<br />
+                    <span style="font-size: 12px; font-weight: normal; font-style: italic;">Foundational<br />(Human-Oriented)</span>
+                </td>
+                <td style="background-color: #d4f2ff; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-1.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #3498db; font-weight: bold; font-size: 16px;">Unit 1</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Political History</div>
+                        <div style="color: #666; font-size: 13px;">1:1-3:23</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 13331</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Moses' revisionist history<br />40 years wandering<br />Giants removed<br />Begins without Shema</div>
+                    </a>
+                </td>
+                <td style="background-color: #e6ffee; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-2.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #27ae60; font-weight: bold; font-size: 16px;">Unit 2</div>
+                        <div style="font-weight: 600; margin: 5px 0;">God &amp; Israel</div>
+                        <div style="color: #666; font-size: 13px;">4:1-43</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 5×2</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Moses between God/Israel<br />Cities of refuge<br />Regular structure<br />First speech ends</div>
+                    </a>
+                </td>
+                <td style="background-color: #e6ffee; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-7.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #27ae60; font-weight: bold; font-size: 16px;">Unit 7</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Central Law Code</div>
+                        <div style="color: #666; font-size: 13px;">12:1-18:22</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 4×2</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Communal laws<br />Central sanctuary<br />Blesses/curses (beginning)<br />Cities of refuge (end)</div>
+                    </a>
+                </td>
+                <td style="background-color: #d4f2ff; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-10.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #3498db; font-weight: bold; font-size: 16px;">Unit 10</div>
+                        <div style="font-weight: 600; margin: 5px 0;">National Destiny</div>
+                        <div style="color: #666; font-size: 13px;">28:1-68</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 4×3</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Blessings and curses<br />Singular to collective<br />Captured by enemies<br />(reverses Unit 1 victories)</div>
+                    </a>
+                </td>
+                <td style="background-color: #f5f5f5; border: 1px solid #ddd; vertical-align: top;"></td>
+            </tr>
+            
+            <!-- Row 2: Mediating (Relational) -->
+            <tr>
+                <td style="background-color: #27ae60; color: white; padding: 15px; text-align: center; font-weight: bold;">
+                    2<br />
+                    <span style="font-size: 12px; font-weight: normal; font-style: italic;">Mediating<br />(Relational)</span>
+                </td>
+                <td style="background-color: #d4f2ff; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-3.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #3498db; font-weight: bold; font-size: 16px;">Unit 3</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Old Covenant</div>
+                        <div style="color: #666; font-size: 13px;">5:1-6:3</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 4×2</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Sinai revisited • Decalogue<br />Moses mediates<br />Fear of God<br />Begins new speech</div>
+                    </a>
+                </td>
+                <td style="background-color: #e6ffee; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-4.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #27ae60; font-weight: bold; font-size: 16px;">Unit 4</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Love of God</div>
+                        <div style="color: #666; font-size: 13px;">6:4-8:20</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 4×2</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Shema • Love reflected<br />Past/future reasons<br />Building houses<br />Eating to satiety (end)</div>
+                    </a>
+                </td>
+                <td style="background-color: #e6ffee; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-8.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #27ae60; font-weight: bold; font-size: 16px;">Unit 8</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Individual Laws</div>
+                        <div style="color: #666; font-size: 13px;">21:10-25:4</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 1×3</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Relationship hierarchy<br />Individual/community<br />Building houses (end)<br />(parallels Unit 4)</div>
+                    </a>
+                </td>
+                <td style="background-color: #d4f2ff; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-11.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #3498db; font-weight: bold; font-size: 16px;">Unit 11</div>
+                        <div style="font-weight: 600; margin: 5px 0;">New Covenant</div>
+                        <div style="color: #666; font-size: 13px;">28:69-30:20</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 3×2</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">After curses<br />Life/death choice<br />Mixed sing/plural<br />Begins new speech</div>
+                    </a>
+                </td>
+                <td style="background-color: #ffe6e6; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-13.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #e74c3c; font-weight: bold; font-size: 16px;">Unit 13</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Moses' Blessing</div>
+                        <div style="color: #666; font-size: 13px;">32:48-34:12</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Independent Unit</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Torah culmination<br />Tribal blessings<br />Moses' death</div>
+                    </a>
+                </td>
+            </tr>
+            
+            <!-- Row 3: Transcendent (Divine-Oriented) -->
+            <tr>
+                <td style="background-color: #3498db; color: white; padding: 15px; text-align: center; font-weight: bold;">
+                    3<br />
+                    <span style="font-size: 12px; font-weight: normal; font-style: italic;">Transcendent<br />(Divine-Oriented)</span>
+                </td>
+                <td style="background-color: #d4f2ff; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-5.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #3498db; font-weight: bold; font-size: 16px;">Unit 5</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Rebellion &amp; Renewal</div>
+                        <div style="color: #666; font-size: 13px;">9:1-10:11</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 4×2</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Great nations opening<br />Two tablets<br />God-oriented<br />Writing twice</div>
+                    </a>
+                </td>
+                <td style="background-color: #e6ffee; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-6.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #27ae60; font-weight: bold; font-size: 16px;">Unit 6</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Individual Response</div>
+                        <div style="color: #666; font-size: 13px;">10:12-11:32</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 3×2</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Heaven and earth • Doorposts<br />Great nations ending<br />Blesses/curses mentioned<br />(detailed in Unit 9)</div>
+                    </a>
+                </td>
+                <td style="background-color: #e6ffee; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-9.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #27ae60; font-weight: bold; font-size: 16px;">Unit 9</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Covenant Ceremony</div>
+                        <div style="color: #666; font-size: 13px;">25:5-27:26</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 4×2</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Writing twice (like Unit 5)<br />Individual blessings<br />Ceremony prep<br />Blesses/curses detailed</div>
+                    </a>
+                </td>
+                <td style="background-color: #d4f2ff; padding: 15px; text-align: center; border: 1px solid #ddd; vertical-align: top;">
+                    <a href="deuteronomy-unit-12.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="color: #3498db; font-weight: bold; font-size: 16px;">Unit 12</div>
+                        <div style="font-weight: 600; margin: 5px 0;">Moses' Song</div>
+                        <div style="color: #666; font-size: 13px;">31:1-32:47</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">Structure: 4×2</div>
+                        <div style="font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3;">Hiding of face • Joshua<br />Heaven and earth • Ha'azinu<br />Torah written<br />Addressed to plural</div>
+                    </a>
+                </td>
+                <td style="background-color: #f5f5f5; border: 1px solid #ddd; vertical-align: top;"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="text-align: right; margin-top: 1rem;"><a href="#top" style="text-decoration: none; color: #666; font-size: 14px;">↑ Return to Top</a></div>
+</div>
+
+
+<!-- Key Structural Elements -->
+<div id="key-elements" style="margin-top: 3rem;">
+    <h2>Key Structural Elements</h2>
+    
+    <!-- Primary Structural Analysis -->
+    <div style="background-color: #f8f8f8; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3>Reading the 4×3 Matrix</h3>
+        <p>Deuteronomy's sophisticated literary architecture creates meaning through:</p>
+        
+        <h4>Column Progression (Four-Column Design)</h4>
+        <ul>
+            <li><strong>Column A: Historical Narrative (Past)</strong> - Focuses on Israel's past experiences and historical foundations
+                <ul>
+                    <li>The number 40 descends: 40 years (Unit 1) → implicit 40 (Unit 3) → 40 days/nights 3x (Unit 5)</li>
+                    <li>Focus on rebellion and God's response</li>
+                    <li>Establishes historical foundations of covenant relationship</li>
+                </ul>
+            </li>
+            <li><strong>Column B: Covenant Principles</strong> - Establishes fundamental tenets of the God-Israel relationship
+                <ul>
+                    <li>Transforming history into law</li>
+                    <li>Building proper relationships</li>
+                    <li>Note: Units 1-6 alternate between columns A and B in a zigzag pattern</li>
+                </ul>
+            </li>
+            <li><strong>Column C: Legal Corpus</strong> - Provides detailed instructions for implementing covenant in daily life</li>
+            <li><strong>Column D: Covenant Future (Prophetic)</strong> - Projects forward to Israel's future with warnings and promises</li>
+        </ul>
+        
+        <h4>Row Dynamics (Three Levels of Relationship)</h4>
+        <ul>
+            <li><strong>Row 1: Foundational (Human-Oriented)</strong> - Israel as national, political entity
+                <ul>
+                    <li>Focus on visible manifestations of covenant (journey, laws, blessings/curses)</li>
+                    <li>Emphasis on collective experience and communal worship</li>
+                    <li>External obedience and visible results</li>
+                    <li>Historical and procedural language</li>
+                </ul>
+            </li>
+            <li><strong>Row 2: Mediating (Relational)</strong> - Interpersonal dimension bridging human and divine
+                <ul>
+                    <li>Emphasis on covenant loyalty through love, fear, and service</li>
+                    <li>Contains the Shema (6:4-9), Deuteronomy's central theological statement</li>
+                    <li>Integration of heart attitudes with outward actions</li>
+                    <li>Moses' mediating role between God and people</li>
+                    <li>Relational language describing Israel's bond with God</li>
+                </ul>
+            </li>
+            <li><strong>Row 3: Transcendent (Divine-Oriented)</strong> - Highest theological and spiritual dimension
+                <ul>
+                    <li>Focus on divine attributes (faithfulness, justice, mercy, sovereignty)</li>
+                    <li>Contains most theologically profound passages (Moses' intercession, Song of Moses)</li>
+                    <li>Emphasis on covenant as relationship, not merely legal obligation</li>
+                    <li>Exploration of divine election and unique relationship</li>
+                    <li>Language becomes poetic and exalted</li>
+                </ul>
+            </li>
+        </ul>
+        <div style="text-align: right; margin-top: 1rem;"><a href="#top" style="text-decoration: none; color: #666; font-size: 14px;">↑ Return to Top</a></div>
+    </div>
+    
+    <!-- Pattern Analysis -->
+    <div style="background-color: #f8f8f8; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3>Cross-Unit Connections and Patterns</h3>
+        
+        <h4>The "Shema" Pattern</h4>
+        <p>Units containing or lacking "Shema" create a deliberate pattern:</p>
+        <ul>
+            <li><strong>Units 2-5:</strong> All contain "Shema" (core covenant section)</li>
+            <li><strong>Units 1, 6-13:</strong> No "Shema" (framing the covenant core)</li>
+        </ul>
+        
+        <h4>The Alternating Pattern (Units 1-6)</h4>
+        <p>Notice how the first six units zigzag between columns A and B:</p>
+        <ul>
+            <li>Unit 1 (Column A) → Unit 2 (Column B)</li>
+            <li>Unit 3 (Column A) → Unit 4 (Column B)</li>
+            <li>Unit 5 (Column A) → Unit 6 (Column B)</li>
+        </ul>
+        <p>This alternating pattern establishes the historical-principles rhythm before settling into the more regular pattern of the book's second half.</p>
+        
+        <h4>Independent Unit Connections</h4>
+        <p>Unit 13 (Moses' Blessing) connects with other independent units across the Torah:</p>
+        <ul>
+            <li><strong>Genesis Unit 4:</strong> Tower of Babel (beginning)</li>
+            <li><strong>Leviticus Unit 13:</strong> Holiness Code (middle)</li>
+            <li><strong>Deuteronomy Unit 13:</strong> Moses' Blessing (end)</li>
+        </ul>
+        <p>These form a beginning-middle-end pattern across the Torah's horizontal thread.</p>
+        
+        <h4>Unit 13's Internal Structure Mirrors the Book</h4>
+        <p>Remarkably, Unit 13's internal structure reflects Deuteronomy's overall design. Moses' blessings are organized into <strong>three blocks of four tribes each</strong>, creating a 3×4 pattern that mirrors the book's 4×3 matrix structure. But the correspondence reveals a sophisticated inversion—while Row 3 maintains its bridging function, Rows 2 and 4 are inverted:</p>
+        <ul>
+            <li><strong>Row 2 tribes (Reuben, Judah, Levi, Benjamin):</strong> Like Row 3 of the book, focus on divine relationships—Levi's blessing specifically references the events at Massah and Meribah mentioned in Unit 6 (Row 3), emphasizing covenant keeping, teaching God's law, and priestly service.</li>
+            <li><strong>Row 3 tribes (Joseph, Zebulun/Issachar):</strong> Like Row 2 of the book, bridge earthly and heavenly realms—Joseph blessed with both heaven's dew and earth's abundance, Zebulun/Issachar mediating between commerce and worship.</li>
+            <li><strong>Row 4 tribes (Gad, Dan, Naphtali, Asher):</strong> Like Row 1 of the book, emphasize earthly, military concerns—Gad as lioness warrior, Dan as lion's whelp, territorial expansion, physical strength and security.</li>
+        </ul>
+        <p>This inverted correspondence (with the middle row remaining stable) creates a chiastic relationship between the book's structure and its culminating unit. The inversion suggests that as Moses prepares to depart, the earthly and divine perspectives rotate around the stable center of mediation—a final transformation before the Torah's conclusion.</p>
+        <p>Specific Hebrew phrases create connections across units:</p>
+        <ul>
+            <li><strong>"Great nations" (גוים גדולים):</strong> Opens Unit 5, closes Unit 6</li>
+            <li><strong>"Heaven and earth" (שמיים וארץ):</strong> Links Units 6 and 12</li>
+            <li><strong>"Cities of refuge":</strong> Ends Units 2 and 7</li>
+            <li><strong>"Writing twice":</strong> Connects Units 5 and 9</li>
+            <li><strong>"Blessings and curses":</strong> Begin in 7, mentioned in 6, detailed in 9-10</li>
+        </ul>
+        <div style="text-align: right; margin-top: 1rem;"><a href="#top" style="text-decoration: none; color: #666; font-size: 14px;">↑ Return to Top</a></div>
+    </div>
+    
+    <!-- The A-D Opposition -->
+    <div id="opposition" style="background-color: #e8f5e9; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3>The A-D Column Opposition: Past Victory ↔ Future Defeat</h3>
+        
+        <p>The most striking pattern in Deuteronomy's architecture is the systematic opposition between columns A and D. Each unit in column A (past victories) has its exact reversal in column D (future defeats):</p>
+        
+        <h4>Row 1: Units 1 ↔ 10 (National Level)</h4>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr>
+                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa;">Unit 1 (Past Victory)</th>
+                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa;">Unit 10 (Future Defeat)</th>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">God delivers enemies "into thy hands"</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Israel "smitten before enemies"</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Multiply "as stars of heaven"</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Become "few in number"</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Take enemies' cities and spoil</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Enemies take your possessions</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Journey from Egypt to Canaan</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">"Bring thee back into Egypt"</td>
+            </tr>
+        </table>
+        
+        <h4>Row 2: Units 3 ↔ 11 (Relational Level)</h4>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr>
+                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa;">Unit 3 (Old Covenant)</th>
+                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa;">Unit 11 (New Covenant)</th>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Made at Horeb</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">"Beside the covenant...in Horeb"</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">People stand "afar off" in fear</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">"Standing...before the LORD"</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">"I stood between" (mediator)</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Direct relationship</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Written on stone tablets</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">"In thy mouth and thy heart"</td>
+            </tr>
+        </table>
+        
+        <h4>Row 3: Units 5 ↔ 12 (Divine Level)</h4>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr>
+                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa;">Unit 5 (Golden Calf)</th>
+                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa;">Unit 12 (Future Rebellion)</th>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Past rebellion at Sinai</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Future rebellion predicted</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Moses' successful intercession</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Song as witness against Israel</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">40 days/nights on mountain</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Hiding of face (הסתרת פנים)</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Covenant renewed</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Covenant witnessed against them</td>
+            </tr>
+        </table>
+        
+        <p>This A-D opposition creates a theological framework where past divine deliverance becomes the measure of future divine judgment. The very victories that demonstrated God's power to save become, when reversed, demonstrations of His power to punish covenant unfaithfulness.</p>
+        <div style="text-align: right; margin-top: 1rem;"><a href="#top" style="text-decoration: none; color: #666; font-size: 14px;">↑ Return to Top</a></div>
+    </div>
+    
+    <!-- Secondary Themes -->
+    <div style="background-color: #f8f8f8; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3>Major Thematic Movements</h3>
+        <p>A primary movement across Deuteronomy transforms the motivation for obedience:</p>
+        <ul>
+            <li><strong>Early units (1-3):</strong> Emphasize fear—Israel "afraid by reason of the fire" (5:5)</li>
+            <li><strong>Unit 4:</strong> Introduces love—"Love YHWH thy God with all thine heart" (6:5)</li>
+            <li><strong>Later units:</strong> Love becomes the dominant motivation for covenant keeping</li>
+        </ul>
+        <h4>1. From Fear to Love</h4>
+        <p>A primary movement across Deuteronomy transforms the motivation for obedience:</p>
+        <ul>
+            <li><strong>Early units (1-3):</strong> Emphasize fear—Israel "afraid by reason of the fire" (5:5)</li>
+            <li><strong>Unit 4:</strong> Introduces love—"Love YHWH thy God with all thine heart" (6:5)</li>
+            <li><strong>Later units:</strong> Love becomes the dominant motivation for covenant keeping</li>
+        </ul>
+        <p>This progression from fear-based to love-based relationship marks Israel's maturation as a covenant people.</p>
+        
+        <h4>2. From External Law to Internal Commitment</h4>
+        <p>The book traces a movement from external imposition to internal appropriation:</p>
+        <ul>
+            <li><strong>Unit 3:</strong> Law on stone tablets, Moses as mediator</li>
+            <li><strong>Units 4-6:</strong> Teaching law to children, binding on hands and foreheads</li>
+            <li><strong>Unit 11:</strong> "The word is very nigh unto thee, in thy mouth and thy heart"</li>
+        </ul>
+        <p>This internalization of Torah represents the ultimate goal of Moses' pedagogical project.</p>
+        
+        <h4>3. From Historical Narrative to Prophetic Vision</h4>
+        <p>Moving across the columns reveals a temporal transformation:</p>
+        <ul>
+            <li><strong>Column A:</strong> Reviews the past—what God has done</li>
+            <li><strong>Column B:</strong> Establishes the present—how to live now</li>
+            <li><strong>Column C:</strong> Details the practice—specific laws for the land</li>
+            <li><strong>Column D:</strong> Envisions the future—both blessing and curse</li>
+        </ul>
+        <p>This movement transforms history into prophecy, making the past predictive of the future.</p>
+        <div style="text-align: right; margin-top: 1rem;"><a href="#top" style="text-decoration: none; color: #666; font-size: 14px;">↑ Return to Top</a></div>
+    </div>
+</div>
+
+<!-- Book Context -->
+<div id="torah-place" style="margin-top: 3rem;">
+    <h2>Deuteronomy's Place in the Torah</h2>
+    
+    <div style="background-color: #f8f8f8; padding: 2rem; border-radius: 8px;">
+        <h3>A Mirror to Genesis</h3>
+
+        <p>Where Genesis presents the divine perspective on creation and covenant, Deuteronomy presents the human perspective on law and choice. Their fundamental opposition reveals the Torah's grand design:</p>
+        <ul>
+            <li><strong>Single Character Focus:</strong> Genesis features only the deity (appearing as both Elohim and YHWH) throughout the entire book, while Deuteronomy features only Moses throughout.</li>
+            <li><strong>Divine vs. Human Perspective:</strong> Genesis presents divine creation and planning, while Deuteronomy presents human interpretation and application.</li>
+            <li><strong>Orientation Reversal:</strong> Genesis moves from "above to below" (heavenly to earthly), while Deuteronomy moves from "below to above" (earthly to heavenly).</li>
+        </ul>
+        <div style="text-align: right; margin-top: 1rem;"><a href="#top" style="text-decoration: none; color: #666; font-size: 14px;">↑ Return to Top</a></div>
+    </div>
+</div>
+
+<!-- Implications for Reading -->
+<div id="implications" style="margin-top: 3rem;">
+    <h2>Implications for Reading Deuteronomy</h2>
+    
+    <div style="background-color: #e8f5e9; padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px;">
+        <h3>The Web of Meaning</h3>
+        <p>Deuteronomy reveals itself as an intricately woven text where:</p>
+        <ul>
+            <li><strong>Position determines meaning:</strong> Each unit's location in the matrix shapes its significance</li>
+            <li><strong>Details create connections:</strong> Repeated words and phrases link units across columns and rows</li>
+            <li><strong>Structure embodies theology:</strong> The movement from past to future, external to internal, fear to love IS the message</li>
+            <li><strong>Every element has its precise opposite:</strong> The A-D column relationship creates exact theological reversals</li>
+        </ul>
+        
+        <p>This structural reading reveals that Deuteronomy is not merely Moses' farewell speeches but a carefully designed literary architecture that transforms Israel's understanding of covenant from historical event to eternal choice, from external law to internal commitment, from national identity to spiritual destiny.</p>
+    </div>
+    
+    <div style="background-color: #fff8dc; padding: 1.5rem; border-radius: 8px;">
+        <h3>Reading Individual Units</h3>
+        <p>When studying any specific unit within Deuteronomy, consider:</p>
+        <ol>
+            <li><strong>Column position:</strong> Is it focusing on past, principles, practice, or future?</li>
+            <li><strong>Row position:</strong> Is it addressing national, relational, or divine concerns?</li>
+            <li><strong>Vocabulary connections:</strong> What words link it to other units?</li>
+            <li><strong>Structural pairs:</strong> How does it relate to its A-D opposite or B-C bridge partner?</li>
+            <li><strong>Thematic threads:</strong> Which major themes does it develop or transform?</li>
+        </ol>
+        
+        <p>The full meaning of any passage emerges only when seen as a node in this carefully woven web of meaning.</p>
+        <div style="text-align: right; margin-top: 1rem;"><a href="#top" style="text-decoration: none; color: #666; font-size: 14px;">↑ Return to Top</a></div>
+    </div>
+</div>
+
+<!-- Structural Patterns Section -->
+<div id="patterns" style="margin-top: 3rem;">
+    <h2>Structural Patterns in Deuteronomy: Three Revealing Examples</h2>
+    <p>The woven structure of Deuteronomy reveals consistent patterns across its thirteen units. Here are three powerful examples of how these patterns illuminate the book's deeper meanings:</p>
+    
+    <div style="background-color: #f5f5f5; border-left: 4px solid #666; padding: 1.5rem; margin: 1.5rem 0;">
+        <h3>1. The Direct/Indirect Pattern (Unit 3 - The Decalogue)</h3>
+        <p>The most striking structural pattern appears in Deuteronomy's version of the Ten Commandments:</p>
+        <ul style="margin: 1rem 0;">
+            <li><strong>Column א:</strong> Contains every commandment identical to the Exodus version - representing direct divine speech</li>
+            <li><strong>Column ב:</strong> Contains ALL the variations and additions - representing Moses' mediated interpretation</li>
+        </ul>
+        <p>This isn't random. The structure itself teaches that divine law exists in two forms: the pure, unchanging word (column א) and its contextual application for real human circumstances (column ב). Moses doesn't just repeat the Decalogue; he demonstrates his authority to interpret it.</p>
+    </div>
+    
+    <div style="background-color: #f5f5f5; border-left: 4px solid #666; padding: 1.5rem; margin: 1.5rem 0;">
+        <h3>2. Temporal Inversion (Unit 2 - Moses Between God and Israel)</h3>
+        <p>Unit 2 reveals opposing time flows in its columns:</p>
+        <ul style="margin: 1rem 0;">
+            <li><strong>Column א:</strong> Moves chronologically from past (Sinai) → present → future (promised land)</li>
+            <li><strong>Column ב:</strong> Moves backwards from future (Torah teaching) → present → past (covenant foundation)</li>
+        </ul>
+        <p>These crossing temporal streams create a literary "figure-8" that positions Moses at the intersection of past and future, divine and human. The structure embodies his role as the mediator who brings eternal law into temporal experience.</p>
+    </div>
+    
+    <div style="background-color: #f5f5f5; border-left: 4px solid #666; padding: 1.5rem; margin: 1.5rem 0;">
+        <h3>3. Individual to Communal Transformation (Unit 11 - Choose Life)</h3>
+        <p>In this powerful unit near Deuteronomy's end:</p>
+        <ul style="margin: 1rem 0;">
+            <li><strong>Column א:</strong> Focuses on individual choice - "I have set before thee life and death"</li>
+            <li><strong>Column ב:</strong> Expands to communal destiny - "that thou and thy seed may live"</li>
+        </ul>
+        <p>The structure shows how individual spiritual decisions ripple outward to shape collective fate. What begins as personal choice in column א becomes national destiny in column ב, demonstrating that in Deuteronomy's theology, the individual and community are inseparable.</p>
+    </div>
+    
+    <p style="margin-top: 1.5rem; font-style: italic;">These examples merely hint at the rich structural patterns waiting to be discovered across Deuteronomy's thirteen units. Each unit's commentary will reveal how its unique woven structure illuminates theological meanings invisible in linear reading.</p>
+    <div style="text-align: right; margin-top: 1rem;"><a href="#top" style="text-decoration: none; color: #666; font-size: 14px;">↑ Return to Top</a></div>
+</div>
+    <!-- #EndEditable -->
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="container">
+            <div id="content">
+                <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+                <!-- #EndEditable -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Torah Resources</h4>
+                    <ul>
+                        <li><a href="/woven/">Woven Torah Units</a></li>
+                        <li><a href="/torah-commentary-project/">Torah Commentary Project</a></li>
+                        <li><a href="/articles/">Torah Articles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Mishnah Resources</h4>
+                    <ul>
+                        <li><a href="/mishnah/">Mishnah Chapters</a></li>
+                        <li><a href="/mishnah/structure/">Mishnah Structure</a></li>
+                        <li><a href="/mishnah/about/">About the Mishnah</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About This Site</h4>
+                    <p>This site offers a new approach to the study of the Torah and the Mishnah. It is based on an original discovery which has been published in peer-reviewed journals and is consistent with traditional Jewish understandings.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chaver.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Genesis Unit 15: Jacob and Esau Reconciliation - Commentary | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="/torah-weave/">Torah Weave</a> &gt; 
+    <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis</a> &gt; 
+    Unit 15 Commentary
+</nav>
+
+<!-- Header -->
+<header class="unit-header-section">
+    <h1>Genesis Unit 15: Jacob and Esau Reconciliation</h1>
+    <div class="unit-meta">Genesis 32:4–33:16</div>
+</header>
+
+<!-- Small position map -->
+<aside class="unit-position-map">
+    <svg viewBox="0 0 280 100" width="280" height="100" style="display: block; margin: 1em auto;">
+        <!-- Column headers -->
+        <text x="50" y="15" font-size="9" text-anchor="middle" fill="#666">A</text>
+        <text x="80" y="15" font-size="9" text-anchor="middle" fill="#666">B</text>
+        <text x="110" y="15" font-size="9" text-anchor="middle" fill="#666">C</text>
+        <text x="140" y="15" font-size="9" text-anchor="middle" fill="#666">D</text>
+        <text x="170" y="15" font-size="9" text-anchor="middle" fill="#666">E</text>
+        <text x="200" y="15" font-size="9" text-anchor="middle" fill="#666">F</text>
+        <text x="230" y="15" font-size="9" text-anchor="middle" fill="#666">G</text>
+        
+        <!-- Row headers -->
+        <text x="20" y="40" font-size="9" text-anchor="middle" fill="#666">1</text>
+        <text x="20" y="60" font-size="9" text-anchor="middle" fill="#666">2</text>
+        <text x="20" y="80" font-size="9" text-anchor="middle" fill="#666">3</text>
+        
+        <!-- Row 1 -->
+        <rect x="35" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="25" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 2 -->
+        <rect x="35" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="45" width="25" height="18" fill="#ffe6e6" stroke="#ccc"/>
+        <rect x="95" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 3: Unit 15 highlighted -->
+        <rect x="35" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="65" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="65" width="25" height="18" fill="#d4d4ff" stroke="#333" stroke-width="2"/>
+        <rect x="185" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Unit numbers -->
+        <text x="47" y="37" font-size="8" text-anchor="middle">1</text>
+        <text x="107" y="37" font-size="8" text-anchor="middle">5</text>
+        <text x="137" y="37" font-size="8" text-anchor="middle">6</text>
+        <text x="167" y="37" font-size="8" text-anchor="middle">11</text>
+        <text x="197" y="37" font-size="8" text-anchor="middle">12</text>
+        <text x="227" y="37" font-size="8" text-anchor="middle">17</text>
+        
+        <text x="47" y="57" font-size="8" text-anchor="middle">2</text>
+        <text x="77" y="57" font-size="8" text-anchor="middle">4</text>
+        <text x="107" y="57" font-size="8" text-anchor="middle">7</text>
+        <text x="137" y="57" font-size="8" text-anchor="middle">8</text>
+        <text x="167" y="57" font-size="8" text-anchor="middle">13</text>
+        <text x="197" y="57" font-size="8" text-anchor="middle">14</text>
+        <text x="227" y="57" font-size="8" text-anchor="middle">18</text>
+        
+        <text x="47" y="77" font-size="8" text-anchor="middle">3</text>
+        <text x="107" y="77" font-size="8" text-anchor="middle">9</text>
+        <text x="137" y="77" font-size="8" text-anchor="middle">10</text>
+        <text x="167" y="77" font-size="8" text-anchor="middle" font-weight="bold">15</text>
+        <text x="197" y="77" font-size="8" text-anchor="middle">16</text>
+        <text x="227" y="77" font-size="8" text-anchor="middle">19</text>
+    </svg>
+</aside>
+
+<!-- Main content -->
+<article class="commentary-content">
+
+<section class="commentary-section">
+    <h2>The Puzzle: From Mask to Face</h2>
+    
+    <p>In <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a>, Jacob wore Esau—goatskin on his hands, brother's garments on his body, voice speaking through material disguise. He received the blessing while mimicking his twin. The structure required it: twins cannot separate like nephews. What Lot's geographic removal accomplished for Abraham (<a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>), Jacob's wearing of Esau had to accomplish for the next generation. Voice within hands. Transcendent within immanent. Integration through external covering.</p>
+    
+    <p>But wearing is not reconciling. Jacob fled eastward, and the disguise that enabled blessing created a twenty-year debt. Now Jacob returns. He must face the brother he impersonated—not wear him this time, but encounter him. The question driving this unit: how does mask become face? How does the external protocol of Unit 13 become the internalized identity of Unit 15?</p>
+    
+    <p>The answer emerges through the unit's central events: a nocturnal wrestling match that permanently marks Jacob's body and changes his name, followed by a daylight meeting where Jacob declares that seeing Esau's face is "like seeing the face of Elohim" (33:10). The same Hebrew word—פנים, panim, face—connects the divine encounter at Peniel to the brotherly encounter that follows. Wrestling changes Jacob; that change enables reconciliation. What Jacob achieved through disguise in Unit 13 he must now achieve through direct confrontation.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Structure: Preparation and Confrontation</h2>
+    
+    <p>Unit 15 arranges its material in a 2×2 matrix:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Column A</th>
+                <th>Column B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Row 1</strong></td>
+                <td>1a: Messengers to Esau; dividing camp<br>1b: Prayer to YHWH</td>
+                <td>1a: Gift procession arranged<br>1b: Family sent across Jabbok</td>
+            </tr>
+            <tr>
+                <td><strong>Row 2</strong></td>
+                <td>Wrestling at Peniel; name change to Israel</td>
+                <td>Meeting Esau; reconciliation and parting</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Row 1 contains preparation—Jacob arranging his resources, praying for deliverance, positioning family and gifts. Row 2 contains confrontation—first with the divine figure at Jabbok, then with Esau in daylight. The structure moves from strategy to encounter, from planning to the unplannable moment of face-to-face meeting.</p>
+    
+    <p>The columns distinguish night from day, solitary from communal. Column A events happen when Jacob is alone or addressing the divine: the messengers and prayer, the nocturnal wrestling. Column B events involve others receiving what Jacob sends: the gift droves reaching Esau, the family crossing the ford, the actual meeting with the brother. Jacob prepares alone; the confrontations involve others.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Sending Pattern</h2>
+    
+    <p>A vertical thread runs through the unit, marked by the root שׁ-ל-ח (send/release). The pattern appears in the marked text:</p>
+    
+    <blockquote>
+        <p>"And Jacob <span class="vertical1"><b>sent</b></span> (וַיִּשְׁלַח) messengers before him to Esau" (32:4)</p>
+        <p>"<span class="vertical1"><b>I have sent</b></span> (וָאֶשְׁלְחָה) to tell my lord" (32:6)</p>
+        <p>"<span class="vertical1"><b>Let me go</b></span> (שַׁלְּחֵנִי), for the day breaks" (32:27)</p>
+        <p>"<span class="vertical1"><b>I will not let thee go</b></span> (לֹא אֲשַׁלֵּחֲךָ), except thou bless me" (32:27)</p>
+    </blockquote>
+    
+    <p>The same root operates in opposite directions. Jacob sends—messengers, gifts, family—projecting his resources forward to appease Esau. The divine figure requests release—sending away. Jacob refuses to release without blessing. The dynamic reverses: where Jacob sends outward, he holds inward. The blessing that came through disguise in Unit 13 now comes through refusal to release.</p>
+    
+    <p>This reversal matters. In the deception scene, Jacob took blessing passively—Rebekah orchestrated, Isaac blessed unwittingly, Jacob received. Here Jacob actively demands: "I will not let thee go except thou bless me." The supplanter becomes the wrestler. The one who grasped a heel now grasps a divine being and will not release. The sending pattern traces Jacob's transformation from passive recipient to active demander.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Face Pattern</h2>
+    
+    <p>The horizontal parallels connect through the word פנים (face):</p>
+    
+    <blockquote>
+        <p>"I will appease him with the present that goes before me, and afterward I will see his <b>face</b> (פָנָיו); perhaps he will accept me" (32:21)</p>
+        <p>"And Jacob called the name of the place <span class="horizontal1"><b>Peniel</b></span> (פְּנִיאֵל): 'for I have seen Elohim <span class="horizontal1"><b>face to face</b></span> (פָּנִים אֶל־פָּנִים), and my life is preserved'" (32:31)</p>
+        <p>"<span class="horizontal1"><b>I have seen thy face, as one seeth the face of Elohim</b></span> (כִּי עַל־כֵּן רָאִיתִי פָנֶיךָ כִּרְאֹת פְּנֵי אֱלֹהִים), and thou wast pleased with me" (33:10)</p>
+    </blockquote>
+    
+    <p>Three faces: the face Jacob hopes to appease, the face of Elohim seen at Peniel, the face of Esau that resembles Elohim's face. The pattern argues that these faces are connected. Jacob cannot face Esau until he has faced Elohim. The divine encounter prepares for the human one.</p>
+    
+    <p>Notice the visual language. "And Jacob lifted up his eyes and looked, and, behold, Esau came" (33:1). This is the structural antidote to Isaac's "dim eyes" in <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a>. Where the father could not see and therefore blessed blindly, the son lifts his eyes and sees directly. Isaac's blindness was positional—he faced outward while the blessing data resided inward. Jacob's lifted eyes face the brother he previously could only mimic. The geometry of perception that blocked Unit 13 resolves in Unit 15: eyes that could not see now see; the face that was hidden now appears.</p>
+
+    <p>At Peniel, Jacob survives seeing the divine face—an encounter that should have killed him. "My life is preserved" (וַתִּנָּצֵל נַפְשִׁי) expresses astonishment at survival. When he then faces Esau—the brother who swore to kill him—Jacob uses the same language: seeing Esau's face is like seeing Elohim's face. The comparison is not flattery. It identifies the stakes: both encounters carry mortal danger, and Jacob survives both. The face he feared would destroy him becomes the face that receives him.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Row 3 and the Domain of Elohim</h2>
+    
+    <p>Unit 15 occupies Row 3 in the matrix—the earthly register where Elohim operates and YHWH has withdrawn. The pattern holds precisely. YHWH appears only in Jacob's prayer (32:10), addressed by name but not responding. Elohim dominates the action:</p>
+    
+    <ul>
+        <li>"Thou hast striven with <b>Elohim</b> and with men" (32:29)</li>
+        <li>"I have seen <b>Elohim</b> face to face" (32:31)</li>
+        <li>"The children whom <b>Elohim</b> hath graciously given" (33:5)</li>
+        <li>"Seeing thy face as one seeth the face of <b>Elohim</b>" (33:10)</li>
+        <li>"<b>Elohim</b> hath dealt graciously with me" (33:11)</li>
+    </ul>
+    
+    <p>Jacob prays to YHWH but encounters Elohim. This follows Row 3's pattern across Genesis: transcendent prayer directed upward, immanent action experienced on earth. The wrestling figure never identifies himself—Jacob names the place Peniel based on inference, not revelation. In Row 3, Elohim works through earthly circumstance. The divine encounter happens through physical struggle, leaving permanent bodily mark. This is Elohim's domain: material reality, physical consequence, earthly navigation.</p>
+    
+    <p>The fear that opens the unit—"Deliver me from the hand of my brother, from the hand of Esau; for I fear him, lest he come and smite me, the mother with the children" (32:12)—belongs to Row 3's mortality theme. All four middle Row 3 units focus on death or fear of death. Unit 15 adds fear of fratricide: the brother Jacob deceived swore to kill him. The reconciliation that concludes the unit resolves this mortal threat within Elohim's earthly domain.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Gift-List Formula</h2>
+    
+    <p>Unit 15 employs a literary technique shared with its corresponding unit. In <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">Unit 10</a>, Abraham's servant describes his master's wealth to Rebekah's family: "YHWH has blessed my master greatly... sheep and cattle, silver and gold, male servants and female servants, camels and donkeys" (24:35). In Unit 15, Jacob's message to Esau uses the same formula: "I have ox and donkey, sheep, male servant and female servant" (32:5). Both Row 3 family units employ detailed wealth descriptions at moments of family transition.</p>
+    
+    <p>The parallel extends to the gift processions. Abraham's servant brings gifts—golden ring, bracelets—to secure the bride. Jacob sends droves of animals—goats, sheep, camels, cattle, donkeys—to appease the wronged brother. In both units, wealth mediates family relationship within Elohim's material domain. The formula marks corresponding positions: what the servant's gifts accomplished in Abraham's cycle, Jacob's gifts must accomplish in his own.</p>
+    
+    <p>But the gifts serve different purposes. In Unit 10, gifts celebrate a new alliance. In Unit 15, gifts seek to repair a broken one. Jacob's gift language carries the weight of the deception: "Please take my blessing (בִּרְכָתִי) that is brought to you" (33:11). The word for gift here is ברכה—the same word as blessing. This is restitution protocol: Jacob is literally attempting to return the specific object he took while wearing the mask. The blessing stolen in Unit 13 is offered back in Unit 15. What he acquired through disguise he now presents openly, using the precise term for what was transferred. The gift-list formula here carries weight beyond commerce: material wealth attempts to restore what spiritual theft removed.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>From Wearing to Embracing</h2>
+    
+    <p>The Unit 13/Unit 15 progression traces the arc from mask to face, from wearing to embracing:</p>
+    
+    <p><strong>Unit 13:</strong> Jacob wears Esau—goatskin hands, borrowed garments. Voice within hands. The blessing comes through external protocol, integration achieved through disguise. Isaac perceives two sons in one body: "The voice is the voice of Jacob, but the hands are the hands of Esau." The integration is artificial, imposed, temporary.</p>
+    
+    <p><strong>Unit 15:</strong> Jacob embraces Esau—"And Esau ran to meet him, and embraced him, and fell on his neck, and kissed him; and they wept" (33:4). Face to face. No disguise, no covering, no protocol. The brother who threatened murder responds with embrace. Integration achieved through mutual recognition.</p>
+    
+    <p>What changed between the units? Jacob himself. The wrestling at Jabbok changes identity: "Thy name shall be called no more Jacob, but Israel; for thou hast striven with Elohim and with men, and hast prevailed" (32:29). The supplanter becomes the Elohim-wrestler. The name change is permanent—Unit 15's envelope will use "Israel" at both opening and closing in subsequent references. Jacob no longer needs to wear Esau because Jacob no longer exists in the same form. Israel can face Esau directly.</p>
+    
+    <p>The physical mark confirms the change. Jacob's hip is touched; he limps. The disguise in Unit 13 left no permanent mark—Jacob removed the skins, returned the garments. The wrestling leaves a mark that cannot be removed. The limp is the physical manifestation of the structural change. In Unit 13, the "hands" were artificial goatskins—external, removable, borrowed. In Unit 15, the "hip" (the source of the walk) is permanently altered. Jacob doesn't just change his clothes; he changes his gait. He no longer walks as the heel-grabbing supplanter (יַעֲקֹב, from עָקֵב, heel), but as the striver who has integrated the wound. "Therefore the children of Israel eat not the sinew of the thigh-vein... unto this day" (32:33). The dietary law memorializes the permanent change. What covering concealed, wrestling revealed and marked permanently.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Unit in Genesis</h2>
+    
+    <p>Unit 15 completes the Jacob-Esau family triad (11-13-15). <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a> established the conflict: twins struggling in the womb, birthright sold for pottage, divided parental love. <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a> intensified it: blessing stolen through disguise, murderous threat, flight. Unit 15 resolves it: wrestling transformation, reconciliation, parting.</p>
+    
+    <p>Esau appears in all three units of this triad and nowhere else in the patriarchal matrix. His concentration in the Jacob cycle makes his reconciliation structurally necessary. Where Lot could be geographically removed (<a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>), Esau must be reconciled. Nephews permit distance; twins require integration. The family track demonstrates that covenant identity cannot be achieved by simply disposing of the problematic brother—it must be worked through.</p>
+    
+    <p>But notice what follows the reconciliation. <a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Unit 17</a> opens with parallel toledot formulas: "These are the generations of Esau—the same is Edom" (36:1), then "These are the generations of Jacob" (37:2). The toledot formula disposes of lines—it catalogs descendants before moving past them. Esau's toledot comes first: he takes his family "into a land away from his brother Jacob" (36:6), settling in Seir. The reconciliation of Unit 15 enables the separation of Unit 17. Because the brothers parted peacefully—"So Esau returned that day on his way unto Seir" (33:16)—Esau can now receive his toledot and be disposed of properly. The embrace makes the departure possible. What could not happen through geographic removal alone (<a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a>'s flight) now happens through reconciled parting. The twin is not abandoned but released.</p>
+    
+    <p>The corresponding unit, <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">Unit 10</a>, resolved Abraham's family matters through death and transition: Sarah dies, Isaac marries, Abraham dies, both sons bury him. Unit 15 resolves Jacob's family matters through living reconciliation: Jacob fears death but survives both divine and brotherly encounter, then the brothers part peacefully. Both units occupy Row 3's mortality-focused register. Both use the gift-list formula. But Unit 10 achieves closure through actual death; Unit 15 achieves it through feared death averted.</p>
+    
+    <p>The face motif connects Unit 15 to the larger divine name theology. Seeing Elohim's face at Peniel prepares for seeing Esau's face as Elohim's face. The comparison suggests that brother reconciliation participates in the larger project of divine reunification. If YHWH and Elohim separated after Eden and must eventually reunite, then working through brotherhood—achieving face-to-face encounter where disguise and violence had ruled—models that larger reconciliation. The human achievement prefigures the divine one.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>What the Structure Reveals</h2>
+    
+    <p>We began with a puzzle: how does the mask of Unit 13 become the face of Unit 15? The woven structure provides the answer.</p>
+    
+    <p>The vertical sending pattern traces Jacob's transformation from passive recipient to active demander. He sends messengers, gifts, family—projecting his resources outward. But when the divine figure requests release, Jacob refuses: "I will not let thee go except thou bless me." The one who received blessing through disguise now demands it through wrestling. The sending outward enables the holding inward.</p>
+    
+    <p>The horizontal face pattern connects divine encounter to brotherly encounter. Jacob cannot face Esau until he has faced Elohim. The survival of the first—"my life is preserved"—enables the survival of the second. Both carry mortal danger; both result in acceptance rather than destruction. The face that should have killed becomes the face that receives.</p>
+    
+    <p>The Row 3 position explains why Elohim dominates while YHWH appears only in prayer. This is the earthly register where physical struggle, material gifts, and bodily marks operate. The wrestling is not vision or dream but actual combat leaving permanent injury. The reconciliation happens through embrace, tears, gifts of livestock—earthly reality. Elohim's domain handles the working-through that the mortality-focused row requires.</p>
+    
+    <p>And the corresponding unit position explains the gift-list formula. What Abraham's servant accomplished with rings and bracelets, Jacob must accomplish with livestock droves. Material wealth mediates family transition in Row 3. But Jacob's gift carries additional weight: he offers his "blessing" (בִּרְכָתִי), attempting to return what he took. The formula shared with Unit 10 operates differently here—not celebration but restoration.</p>
+    
+    <p>Unit 13 hinted at integration through disguise. Unit 15 achieves integration through embrace. The mask becomes face. The protocol becomes presence. What Jacob wore he can now encounter. The transformation at Jabbok—name change, permanent mark, refusal to release without blessing—creates the Israel who can face Esau without pretending to be him. The twins cannot separate like nephews; they must reconcile as brothers. Unit 15 accomplishes what the family track requires: not disposal but face-to-face encounter, not geographic removal but mutual embrace, not death but the survival of both.</p>
+</section>
+
+</article>
+
+<!-- Link to unit text -->
+<aside class="unit-link-box">
+    <p><strong>Read the structured text:</strong> <a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">Genesis Unit 15 with color-coded patterns</a></p>
+</aside>
+
+<!-- Navigation -->
+<nav class="unit-navigation">
+    <div class="nav-arrows">
+        <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">← Unit 14: Jacob with Laban</a>
+        <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16: Transition to Isaac's Death →</a>
+    </div>
+    <div>
+        <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis Map</a>
+    </div>
+</nav>
+
+<!-- Citation -->
+<aside class="citation-box">
+    <strong>To cite:</strong> Torah Weave Project. "Genesis Unit 15: Jacob and Esau Reconciliation." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Genesis/genesis-unit-15/commentary.html
+</aside>
+
+<!-- Series Navigation -->
+<nav class="series-navigation">
+    <h3>Genesis Commentary Series</h3>
+    <div class="series-navigation-links">
+        <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Overview</a>
+        <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: Units</a>
+        <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: Map</a>
+        <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: Three Rows</a>
+        <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture</a>
+    </div>
+</nav>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

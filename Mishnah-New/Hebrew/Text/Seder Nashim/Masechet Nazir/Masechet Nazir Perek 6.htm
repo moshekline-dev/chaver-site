@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Structured Mishnah: Nazir 6 | מסכת נזיר</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<div align="right"><table border="0" cellpadding="0" cellspacing="0" dir="rtl" width="100%"><tr><td valign="top" width="31%"><p class="Mesechet" dir="rtl">מסכת נזיר</p></td><td colspan="2" valign="top" width="31%"><p class="logo" dir="rtl">המשנה כדרכה</p></td><td valign="top" width="31%"><p class="Perek" dir="rtl">פרק ו<br/></p></td></tr><tr><td colspan="2" valign="top" width="47%"><p dir="rtl"><span class="Subunit">1 א<br/>A </span>(א) שלשה מינין אסורין בנזיר<br/>הטמאה והתגלחת והיוצא מן הגפן<span class="Subunit"><br/>B </span>וכל היוצא מן הגפן מצטרפין זה עם זה<br/>ואינו חיב עד שיאכל מן הענבים כזית<br/>משנה ראשונה עד שישתה רביעית יין<br/>רבי עקיבא אומר אפלו שרה פתו ביין ויש בה כדי לצרף כזית חיב<span class="Subunit"><br/>C </span>(ב) וחיב על היין בפני עצמו ועל הענבים בפני עצמן<br/>ועל החרצנים בפני עצמן ועל הזגים בפני עצמן<br/>רבי אלעזר בן עזריה אומר אינו חיב עד שיאכל שני חרצנים וזגן<span class="Subunit"><br/>D </span>אלו הן חרצנים ואלו הן זגים<br/>החרצנים אלו החיצונים הזגים אלו הפנימים דברי רבי יהודה<br/>רבי יוסי אומר<br/>שלא תטעה כזוג של בהמה החיצון זוג והפנימי ענבל</p></td><td colspan="2" valign="top" width="47%"><p dir="rtl"><span class="Subunit">1 ב<br/>A </span>(ג) סתם נזירות שלשים יום<span class="Subunit"><br/>B </span>גלח או שגלחוהו לסטים סותר שלשים יום<span class="Subunit"><br/>C </span>נזיר שגלח בין בזוג בן בתער או שספסף כל שהוא חיב<span class="Subunit"><br/>D </span>נזיר חופף ומפספס אבל לא סורק<br/>רבי ישמעאל אומר<br/>לא יחף באדמה מפני שהיא משרת את השער</p></td></tr><tr><td valign="top" width="31%"><p dir="rtl"><span class="Subunit">2 א<br/>A </span>(ד) נזיר שהיה שותה יין כל היום<br/>אינו חיב אלא אחת<br/>אמרו לו אל תשתה אל תשתה<br/>והוא שותה חיב על כל אחת ואחת<span class="Subunit"><br/>B </span>היה מגלח כל היום אינו חיב אלא אחת<br/>אמרו לו אל תגלח אל תגלח<br/>והוא מגלח חיב על כל אחת ואחת<span class="Subunit"><br/>C </span>היה מטמא למתים כל היום<br/>אינו חיב אלא אחת<br/>אמרו לו אל תטמא אל תטמא<br/>והוא מטמא חיב על כל אחת ואחת</p></td><td colspan="2" valign="top" width="31%"><p dir="rtl"><span class="Subunit">2 ב</span><br/>(ה) שלשה מינין אסורין בנזיר<br/>הטמאה<br/>והתגלחת<br/>והיוצא מן הגפן</p></td><td valign="top" width="31%"><p dir="rtl"><span class="Subunit">2 ג<br/>A </span>חמר בטמאה ובתגלחת מביוצא מן הגפן<br/>שהטמאה והתגלחת סותרין<br/>והיוצא מן הגפן אינו סותר<span class="Subunit"><br/>B </span>חמר ביוצא מן הגפן מבטמאה ובתגלחת<br/>שהיוצא מן הגפן לא התר מכללו<br/>והטמאה והתגלחת התרו מכללן<br/>בתגלחת מצוה ובמת מצוה<span class="Subunit"><br/>C </span>וחמר בטמאה מבתגלחת<br/>שהטמאה סותרת את הכל<br/>וחיבין עליה קרבן<br/>והתגלחת אינה סותרת אלא שלשים יום<br/>ואין חיבין עליה קרבן</p></td></tr><tr><td valign="top" width="31%"><p dir="rtl"><span class="Subunit">3 א<br/>A </span>(ו) תגלחת הטמאה כיצד<br/>היה מזה בשלישי ובשביעי ומגלח בשביעי<br/>ומביא קרבנותיו בשמיני<br/>ואם גלח בשמיני מביא קרבנותיו בו ביום<br/>דברי רבי עקיבא<br/>אמר לו רבי טרפון מה בין זה למצרע<br/>אמר לו זה טהרתו תלויה בימיו<br/>ומצרע טהרתו תלויה בתגלחתו<br/>ואינו מביא קרבן<br/>אלא אם כן היה מערב שמש<span class="Subunit"><br/>B </span>(ז) תגלחת הטהרה כיצד<br/>היה מביא שלש בהמות חטאת עולה ושלמים<br/>ושוחט את השלמים ומגלח עליהם<br/>דברי רבי יהודה<br/>רבי אלעזר אומר<br/>לא היה מגלח אלא על החטאת<br/>שהחטאת קודמת בכל מקום<br/>ואם גלח על אחד משלשתן יצא</p></td><td colspan="2" valign="top" width="31%"><p dir="rtl"><span class="Subunit">3 ב</span><br/>(ח) רבן שמעון בן גמליאל אומר<br/>הביא שלש בהמות ולא פרש<br/>הראויה לחטאת תקרב חטאת<br/>לעולה תקרב עולה<br/>לשלמים תקרב שלמים</p></td><td valign="top" width="31%"><p dir="rtl"><span class="Subunit">3 ג<br/>A </span>היה נוטל שער ראש נזרו<br/>ומשלח תחת הדוד<br/>ואם גלח במדינה היה משלח תחת הדוד<br/>במה דברים אמורים בתגלחת הטהרה<br/>אבל בתגלחת הטמאה<br/>לא היה משלח תחת הדוד<br/>רבי מאיר אומר הכל משלחין תחת הדוד<br/>חוץ מן הטמא שבמדינה בלבד<span class="Subunit"><br/>B </span>(ט) היה מבשל את השלמים או שולקן<br/>הכהן נוטל את הזרוע בשלה מן האיל<br/>וחלת מצה אחת מן הסל ורקיק מצה אחד<br/>ונותן על כפי הנזיר ומניפן<br/>ואחר כך התר הנזיר<br/>לשתות יין ולהטמא למתים<br/>רבי שמעון אומר<br/>כיון שנזרק עליו אחד מן הדמים<br/>התר הנזיר לשתות ביין ולהטמא למתים</p></td></tr><tr><td colspan="2" valign="top" width="47%"><p dir="rtl"><span class="Subunit">4 א</span><br/>(י) גלח על הזבח ונמצא פסול תגלחתו פסולה וזבחיו לא עלו לו<br/>גלח על החטאת שלא לשמה ואחר כך הביא קרבנותיו לשמן<br/>תגלחתו פסולה וזבחיו לא עלו לו<br/>גלח על העולה או על השלמים שלא לשמן<br/>ואחר כך הביא קרבנותיו לשמן<br/>תגלחתו פסולה וזבחיו לא עלו לו<br/>רבי שמעון אומר אותו הזבח לא עלה לו אבל שאר זבחים עלו לו<br/>ואם גלח על שלשתן ונמצא אחד מהן כשר<br/>תגלחתו כשרה ויביא שאר הזבחים</p></td><td colspan="2" valign="top" width="47%"><p dir="rtl"><span class="Subunit">4 ב</span><br/>(יא) מי שנזרק עליו אחד מן הדמים ונטמא<br/>רבי אליעזר אומר סותר את הכל<br/>וחכמים אומרים יביא שאר קרבנותיו ויטהר<br/>אמרו לו מעשה במרים התדמורית<br/>שנזרק עליה אחד מן הדמים<br/>ובאו ואמרו לה על בתה שהיתה מסכנת<br/>והלכה ומצאתה שמתה<br/>ואמרו חכמים תביא שאר קרבנותיה ותטהר</p></td></tr></table></div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

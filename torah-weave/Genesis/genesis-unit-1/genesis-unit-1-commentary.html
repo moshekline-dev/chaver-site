@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/torah-weave/">Torah Weave</a> &gt; 
+    <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis</a> &gt; 
+    Unit 1 Extended Commentary
+</nav>
+
+<!-- Header -->
+<header class="unit-header-section">
+    <h1>Genesis Unit 1: The Creation Paradigm</h1>
+    <div class="unit-meta">Genesis 1:1–2:3 | Extended Commentary</div>
+</header>
+
+<!-- Small position map -->
+<aside class="unit-position-map">
+    <svg viewBox="0 0 280 100" width="280" height="100" style="display: block; margin: 1em auto;">
+        <!-- Column headers -->
+        <text x="50" y="15" font-size="9" text-anchor="middle" fill="#666">A</text>
+        <text x="80" y="15" font-size="9" text-anchor="middle" fill="#666">B</text>
+        <text x="110" y="15" font-size="9" text-anchor="middle" fill="#666">C</text>
+        <text x="140" y="15" font-size="9" text-anchor="middle" fill="#666">D</text>
+        <text x="170" y="15" font-size="9" text-anchor="middle" fill="#666">E</text>
+        <text x="200" y="15" font-size="9" text-anchor="middle" fill="#666">F</text>
+        <text x="230" y="15" font-size="9" text-anchor="middle" fill="#666">G</text>
+        
+        <!-- Row headers -->
+        <text x="20" y="40" font-size="9" text-anchor="middle" fill="#666">1</text>
+        <text x="20" y="60" font-size="9" text-anchor="middle" fill="#666">2</text>
+        <text x="20" y="80" font-size="9" text-anchor="middle" fill="#666">3</text>
+        
+        <!-- Row 1: Unit 1 highlighted -->
+        <rect x="35" y="25" width="25" height="18" fill="#d4f2ff" stroke="#333" stroke-width="2"/>
+        <rect x="65" y="25" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="155" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="215" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 2 -->
+        <rect x="35" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="45" width="25" height="18" fill="#ffe6e6" stroke="#ccc"/>
+        <rect x="95" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="155" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="215" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 3 -->
+        <rect x="35" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="65" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="155" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="215" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Unit numbers (Row 1) - Unit 1 bold -->
+        <text x="47" y="37" font-size="8" text-anchor="middle" font-weight="bold">1</text>
+        <text x="107" y="37" font-size="8" text-anchor="middle">5</text>
+        <text x="137" y="37" font-size="8" text-anchor="middle">6</text>
+        <text x="167" y="37" font-size="8" text-anchor="middle">11</text>
+        <text x="197" y="37" font-size="8" text-anchor="middle">12</text>
+        <text x="227" y="37" font-size="8" text-anchor="middle">17</text>
+        
+        <!-- Unit numbers (Row 2) -->
+        <text x="47" y="57" font-size="8" text-anchor="middle">2</text>
+        <text x="77" y="57" font-size="8" text-anchor="middle">4</text>
+        <text x="107" y="57" font-size="8" text-anchor="middle">7</text>
+        <text x="137" y="57" font-size="8" text-anchor="middle">8</text>
+        <text x="167" y="57" font-size="8" text-anchor="middle">13</text>
+        <text x="197" y="57" font-size="8" text-anchor="middle">14</text>
+        <text x="227" y="57" font-size="8" text-anchor="middle">18</text>
+        
+        <!-- Unit numbers (Row 3) -->
+        <text x="47" y="77" font-size="8" text-anchor="middle">3</text>
+        <text x="107" y="77" font-size="8" text-anchor="middle">9</text>
+        <text x="137" y="77" font-size="8" text-anchor="middle">10</text>
+        <text x="167" y="77" font-size="8" text-anchor="middle">15</text>
+        <text x="197" y="77" font-size="8" text-anchor="middle">16</text>
+        <text x="227" y="77" font-size="8" text-anchor="middle">19</text>
+    </svg>
+</aside>
+
+<!-- MAIN COMMENTARY BEGINS -->
+<article>
+
+<section class="commentary-section">
+    <h2>Six Days, Two Columns</h2>
+    
+    <p>Everyone knows the creation week unfolds in sequence: Day 1, Day 2, Day 3... through Day 6, then Sabbath rest. But something odd happens when we arrange the days spatially. Days 1-3 create realms—light separated from darkness, waters divided above and below, land emerging from sea. Days 4-6 fill those realms—luminaries to govern light and darkness, creatures to move through air and water, animals and humans to inhabit the land. The parallels are exact: Day 1 creates light, Day 4 creates its governors. Day 2 creates atmospheric space, Day 5 fills it with birds and fish. Day 3 creates land and vegetation, Day 6 creates land creatures who eat that vegetation.</p>
+    
+    <p>This isn't coincidence. The text marks these connections explicitly: "Let there be light" paired with "Let there be lights." "Firmament in the midst of the waters" paired with "Let the waters swarm." "Earth" appearing repeatedly in Day 3's cell, then again as animals emerge "from the earth" in Day 6. The structure suggests that creation proceeds not simply forward but also across—two parallel columns working simultaneously.</p>
+    
+    <p>What are we looking at? Two modes of creation operating in tandem: one that creates structure through separation, another that creates life through animation. One column divides—light from darkness, waters from waters, land from sea. The other column populates—filling the divided realms with living creatures of increasing independence. Column A substantiates; Column B animates. Together they weave reality into existence.</p>
+    
+    <p>The argument for arranging the parts in a weave is that this arrangement makes more information available about what the text says than the normal linear reading. The woven format gives us a set of instructions about how the parts relate to each other. By making these instructions so blatant in the first unit of the Torah, the text provides guidelines for how to study all the units that follow.</p>
+    
+    <p>To see this clearly, we need to lay out the architecture—the full matrix that organizes the seven days into their two-dimensional pattern.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Unit's Architecture</h2>
+    
+    <p>Unit 1 exhibits a 3×2 matrix with genuine sub-rows in Row 2—the most elaborate internal structure in the opening triad:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Column A<br><small>Substantiation through Separation</small></th>
+                <th>Column B<br><small>Animation through Spirit Transfer</small></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header">Row 1<br><small>Prologue</small></td>
+                <td><strong>1A:</strong> Beginning Statement<br>Gen 1:1<br><em>"In the beginning Elohim created the heaven and the earth."</em></td>
+                <td><strong>1B:</strong> Initial Chaos<br>Gen 1:2<br><em>"The spirit of Elohim hovered over the face of the waters."</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 2a<br><small>Heaven Level</small></td>
+                <td><strong>2Aa:</strong> Day 1—Light/Darkness<br>Gen 1:3-5<br><em>"Elohim divided the light from the darkness."</em></td>
+                <td><strong>2Ba:</strong> Day 4—Luminaries<br>Gen 1:14-19<br><em>Sun, moon, stars to rule day and night.</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 2b<br><small>Intermediate</small></td>
+                <td><strong>2Ab:</strong> Day 2—Firmament<br>Gen 1:6-8<br><em>Waters above divided from waters below.</em></td>
+                <td><strong>2Bb:</strong> Day 5—Fish and Birds<br>Gen 1:20-23<br><em>First blessing: "Be fruitful and multiply."</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 2c<br><small>Earth Level</small></td>
+                <td><strong>2Ac:</strong> Day 3—Land and Plants<br>Gen 1:9-13<br><em>Dry land, vegetation with seed.</em></td>
+                <td><strong>2Bc:</strong> Day 6—Animals and Humans<br>Gen 1:24-31<br><em>Divine image, full dominion.</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 3<br><small>Epilogue</small></td>
+                <td><strong>3A:</strong> Creation Finished<br>Gen 2:1<br><em>"The heaven and the earth were finished."</em></td>
+                <td><strong>3B:</strong> Elohim Rests<br>Gen 2:2-3<br><em>"He rested... blessed... hallowed."</em></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Notice how Row 2 subdivides into three levels—heaven (2a), intermediate (2b), earth (2c)—creating a vertical cosmic geography within the horizontal day sequence. Once the days are arranged in this weave, the grid clicks into place and we see stars above, earth below, and a middle level between them—the world as we experience it. This visualization serves as internal verification that the arrangement was planned. We are looking at a tapestry woven on a literary loom.</p>
+    
+    <p>But the architecture reveals more than spatial arrangement. The opening verses contain a precise structural pattern that governs everything that follows.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Chiasm That Locks Elohim to Earth</h2>
+    
+    <p>The first two verses of Genesis contain a precise structural pattern that sets the stage for everything that follows. Look at the key nouns in each segment:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1A (verse 1)</th>
+                <th>1B (verse 2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header">First element</td>
+                <td>Elohim</td>
+                <td>Earth</td>
+            </tr>
+            <tr>
+                <td class="row-header">Middle element</td>
+                <td>Heaven</td>
+                <td>The Deep</td>
+            </tr>
+            <tr>
+                <td class="row-header">Third element</td>
+                <td>Earth</td>
+                <td>Elohim</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Elohim appears at the beginning of 1A and at the end of 1B. Earth appears at the end of 1A and at the beginning of 1B. This reversal of order—A-B-C mirrored as C-B-A—is called a chiasm, from the Greek letter chi (Χ). It is one of the most fundamental principles of organization in the Torah, and it is established here in the very first two verses.</p>
+    
+    <p>The inversion is emphasized by the central terms: "heaven" and "the deep." They are opposite aspects of space—above and below. The Hebrew word תְּהוֹם (the deep) occurs only four other times in the Torah, and in all four it comes paired with "heaven." The chiasm is not merely a formal reversal; it demonstrates that its parts form a coherent block. Elohim and earth are locked together by this structure.</p>
+    
+    <p>This interlocking is the exact opposite of what we find in Row 3, where Elohim and creation are completely separated. The chiasm in Row 1 establishes the starting point: deity and world intertwined. The entire creation narrative traces the progressive separation of what begins locked together.</p>
+    
+    <p>The chiasm also illuminates a puzzle in the opening verses—a puzzle about how creation itself is understood.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Two Perspectives on Origins</h2>
+    
+    <p>The Hebrew of verse 1 is often translated "In the beginning God created," but a more precise rendering would be "In the beginning of Elohim's creating." This grammatical form suggests an incomplete action—creation in process. Combined with verse 2's description of earth as תֹהוּ וָבֹהוּ (unformed and void), we face an apparent contradiction: Did Elohim create earth, or did earth already exist in some inchoate state?</p>
+    
+    <p>The woven structure resolves this by presenting verses 1 and 2 as parallel headers for two distinct perspectives on creation. The Hebrew connective וְ (vav) at the start of verse 2, usually translated "and" or "now," can also introduce an alternative. Reading it this way yields two complementary accounts:</p>
+    
+    <p><strong>Column A header (1A):</strong> "In the beginning of Elohim's creating the heaven and the earth"—creation viewed from above, from the immaterial, ex nihilo.</p>
+    
+    <p><strong>Column B header (1B):</strong> "And the earth was unformed and void"—creation viewed from below, from the pre-existing, ex materia.</p>
+    
+    <p>The chiasm reinforces this dual perspective. 1A orders its elements from top down: Elohim, heaven, earth. 1B orders its elements from bottom up: earth, waters, the breath of Elohim above the waters. Two viewpoints on the same reality—creation from "above" and creation from "below." The text holds both simultaneously, suggesting that full understanding of origins requires embracing both perspectives.</p>
+    
+    <p>These two perspectives become two distinct processes running through the creation days. What does each column actually accomplish?</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Two Columns: What They Do</h2>
+    
+    <h3>Column A: Substantiation from Nothing</h3>
+    
+    <p>The text marks a distinctive pattern in Column A. Three times we find "Elohim called"—naming the Day and Night (1:5), naming the firmament Heaven (1:8), naming the dry land Earth and the gathered waters Seas (1:10). Naming establishes authority. Naming creates identity. Through Column A, Elohim separates the undifferentiated into distinct realities and names each one.</p>
+    
+    <p>The elements progress from ethereal to substantial, following the classical hierarchy. Day 1 creates light—אוֹר, which can also be read as אוּר (flame)—fire, the most insubstantial element. Day 2 creates atmospheric space—air. Day 3 creates water and earth—the solid ground emerging from gathered seas. The progression traces increasing substantiality: fire to air to water to earth.</p>
+    
+    <p>What, then, lies above fire in this hierarchy? Segment 1A sets the stage for the first creation but is itself so insubstantial that it precedes even light. Nothing is created in 1A; it is pure language, words used to set the stage. "In the beginning"—there is logos, an underlying order that can be verbalized. This order is realized in Row 2 as Elohim speaks the elements into being and gives them names. Column A describes the coming-into-being of the immanent physical universe from Elohim's words—creation ex nihilo.</p>
+    
+    <h3>Column B: Animation from Pre-Existing Matter</h3>
+    
+    <p>Column B shows a different pattern. "Elohim blessed" appears three times—blessing the sea creatures and birds (1:22), blessing the humans (1:28), and blessing the seventh day itself (2:3). Where Column A names, Column B blesses. Naming creates identity; blessing confers life-force.</p>
+    
+    <p>The key term in 1B is רוּחַ—spirit, breath, wind. The Latin equivalent, anima, captures the connection to animation. In 1B, Elohim's spirit "hovers" (מְרַחֶפֶת)—constant, restless activity. By 3B, Elohim "rests" (שָׁבַת). Between these poles, animation progressively transfers from deity to creation.</p>
+    
+    <p>Day 4's luminaries move in fixed orbits—animation but no freedom, locked to their medium. Day 5's fish and birds move on currents—partial independence, still influenced by their element. Day 6's land animals move fully under their own volition. Humanity, as divine image-bearers, receives not just mobility but dominion. The spirit that hovered over the waters has progressively transferred into creation. Column B describes the animation of a pre-existing world—creation ex materia.</p>
+    
+    <h3>The Dyad Integrated</h3>
+    
+    <p>The two columns present two ostensibly exclusive aspects of creation: ex nihilo and ex materia. Yet the structure insists they operate simultaneously. Neither alone suffices. Matter without spirit is "unformed and void." Spirit without matter has nowhere to dwell. The cosmos requires both: body and soul, structure and vitality, the named and the blessed.</p>
+    
+    <p>The processes themselves are inverted. Column A begins with the insubstantial (1A, pure language) and ends with the substantial (3A, finished cosmos). Column B reverses this: beginning with the substantial (1B, pre-existing matter) and ending with the insubstantial (3B, holiness). Elohim creates through two distinct, complementary principles—substance and spirit—woven together on the same loom.</p>
+    
+    <p>We have seen how the columns work through Row 2. But what happens when we reach Row 3—the conclusion of creation? Something worth noting occurs.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Complete Separation in Row 3</h2>
+    
+    <p>A detail easily missed in Row 3: Segment 3A is the only segment in the entire creation weave that does not mention Elohim. It contains only heaven, earth, and their contents: "The heaven and the earth were finished, and all the host of them." No deity appears.</p>
+    
+    <p>Segment 3B, on the other hand, is the only segment that mentions no created entity—no earth, no creatures, no specific objects. It speaks only of Elohim's activity and rest: a task performed and then ceased, blessing and hallowing the seventh day.</p>
+    
+    <p>The literary separation is total. What was locked together in the chiasm of Row 1 has now completely divided. Elohim stands in 3B; creation stands in 3A; they no longer overlap.</p>
+    
+    <p>Yet a subtle linguistic connection remains. Both segments open with the same Hebrew word: וַיְכֻלּוּ ("were finished") in 3A and וַיְכַל ("finished") in 3B. Word-for-word, the openings read: "Finished [were] the heaven and the earth..." and "Finished [was] Elohim on the seventh day..." The parallel forces us to compare two kinds of completion: that which describes the world, and that which applies to Elohim. The completion of creation (3A) is characterized by its separation from Elohim (3B).</p>
+    
+    <p>This explains how Row 3 can be "more immanent" than the earth of Row 2c. During the six days, Elohim remains involved with the world. In Row 3, deity and creation stand fully apart. Row 3 summarizes the goal of creation: Elohim has produced a self-sustaining mundane background (3A) against which holiness (3B) can now be revealed.</p>
+    
+    <p>The separation in Row 3 is framed by a larger pattern that binds the entire unit together.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Envelope That Contains It All</h2>
+    
+    <p>The phrase "heaven and earth" (הַשָּׁמַיִם וְהָאָרֶץ) appears twice—at the very beginning and the very end. "In the beginning Elohim created the heaven and the earth" (1:1). "The heaven and the earth were finished" (2:1). This envelope structure binds the unit into a single compositional whole. All three segments of Column A mention heaven and earth, indicating a single integrated process of substantiation.</p>
+    
+    <p>The envelope runs deeper. In 1B, "the spirit of Elohim hovered over the face of the waters"—divine presence in constant motion, not yet transferred to creation. In 3B, Elohim "rested"—the hovering has ceased. The spirit that hovered now rests because the animation transfer is complete. Creation has received what Elohim had to give.</p>
+    
+    <p>And something else appears for the first time in 3B: holiness. "Elohim blessed the seventh day and hallowed it" (וַיְקַדֵּשׁ אֹתוֹ). The word קָדַשׁ (to make holy) never appeared during the six days of creation. Holiness emerges only after separation is complete—after Elohim has distinguished light from darkness, waters from waters, land from sea, and finally work from rest. Holiness requires distinction. The structure that enables holiness is the structure that separation creates.</p>
+    
+    <p>This is the only mention of holiness in Genesis. It does not appear again until Elohim introduces himself to Moses at the burning bush. Immediately after the sanctification of the Sabbath, the name YHWH appears for the first time: "These are the generations of the heaven and of the earth when they were created, in the day that YHWH-Elohim made earth and heaven" (2:4). The separation achieved in Unit 1 creates the conditions for YHWH's entrance in Unit 2.</p>
+    
+    <p>The envelope structure confirms the unit's integrity. But one anomaly within the pattern demands explanation.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Missing "Good" and What It Suggests</h2>
+    
+    <p>Seven times in the creation account, Elohim pronounces creation "good" (טוֹב). But the formula is missing on Day 2. Elohim creates the firmament, divides the waters above from the waters below—and no "good" follows. Every other creative act receives the declaration: light is good, the gathered seas and dry land are good, vegetation is good, luminaries are good, sea creatures are good, land animals are good, all of it together is "very good." But not Day 2.</p>
+    
+    <p>Why? Day 2 only separates; it doesn't fill. The firmament divides waters above from waters below, but nothing yet moves through that divided space. The structural logic suggests that separation alone is incomplete. Only when Day 5 fills the separated realm with fish and birds does the creation sequence complete what Day 2 began. Together, Days 2 and 5 form a unit—and together, they receive the blessing that Day 2 alone cannot claim.</p>
+    
+    <p>This pattern—incompleteness resolved through pairing—becomes a principle for reading woven text. What seems lacking in Column A may find its completion in Column B. What begins in one cell may reach fulfillment in its horizontal partner. The two columns need each other.</p>
+    
+    <p>This principle of complementary pairing extends beyond structure into meaning. The two columns prefigure something that will appear explicitly in Unit 2.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Connection to the Edenic Trees</h2>
+    
+    <p>Unit 2 will introduce two trees at the garden's center: the tree of life and the tree of knowledge of good and bad. A close look at the creation columns reveals their prefiguration here in Unit 1.</p>
+    
+    <p>Column A contains a set of dyads presented as opposites or poles: light and darkness, waters above and waters below, land and sea. The tree of knowledge of good and bad is an icon of polarized thinking—distinguishing, separating, categorizing. Column A's work of separation aligns with the tree of knowledge.</p>
+    
+    <p>Column B traces the development of life: from the hovering spirit, through luminaries with cyclical motion, to creatures with independent motion, to humanity bearing the divine image. The tree of life is an icon of vitality and animation. Column B's work of transferring life-force aligns with the tree of life.</p>
+    
+    <p>The two trees in Eden, then, are not arbitrary markers but structural echoes of the creation dyad itself. Knowledge and life, separation and animation, Column A and Column B—the same fundamental duality underlies both Unit 1's cosmic creation and Unit 2's garden at the center of the world.</p>
+    
+    <p>The two-column structure is not only echoed in the garden; it reflects the structure of the Torah itself.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Fractal Structure: Creation as the Torah in Miniature</h2>
+    
+    <p>Unit 1 divides into three major horizontal divisions: Row 1 (prologue), Row 2 (the creation proper), Row 3 (epilogue). This format presents the creation as a fractal of the entire Torah, which is also divided into three parts: Genesis is the prologue to the forty-year redemption story in Exodus-Numbers, while Deuteronomy is an epilogue.</p>
+    
+    <p>Moreover, just as the Torah's core spans three books (Exodus, Leviticus, Numbers), the creation itself (Row 2) is detailed through a "threefold cord" of three sub-rows. Ecclesiastes 4:12 observes that "a threefold cord is not quickly broken." The strength of Row 2 resonates with this proverbial wisdom.</p>
+    
+    <p>The five-part figure created by integrating the threefold cord (Row 2) with the prologue (Row 1) and epilogue (Row 3) bears close resemblance to other hierarchical structures in the Torah: the five divisions of the Decalogue on each tablet, the five books of the Torah itself. The creation weave establishes at the outset that the Torah will organize itself in nested patterns—structures containing structures, the whole reflected in each part.</p>
+    
+    <p>One feature of Unit 1 deserves special attention: the divine name. Throughout this unit, only one name appears.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Elohim Alone</h2>
+    
+    <p>Unit 1 uses Elohim exclusively—thirty-five times the divine name appears, with no YHWH. This matters because Unit 2 will introduce the compound name YHWH Elohim, and subsequent Genesis units will distribute the names according to systematic patterns. But here, at the beginning, only Elohim.</p>
+    
+    <p>What does Elohim do in Unit 1? Elohim speaks: "Let there be light." Elohim creates through word, establishing order through divine command. Elohim sees that what is created is good. Elohim names and blesses. Elohim works and rests. This is the natural, orderly aspect of creation—the cosmic framework accessible through observation and reason. The sun rises, the seasons turn, creatures multiply according to their kinds.</p>
+    
+    <p>YHWH will enter in Unit 2, speaking personally to individuals, walking in the garden, forming relationships that transcend natural law. But the natural framework must exist first. Elohim alone creates the substrate upon which YHWH's personal revelation can operate. The duality inherent in Elohim's creative mode—ex nihilo and ex materia, Column A and Column B—may be hinted at by a plural form in 1:26: "Let us make man in our image, after our likeness." The duality of "image" and "likeness" reinforces this.</p>
+    
+    <p>But the duality embedded in the natural world is just a preview of the greater duality to come: the natural and the supernatural, Elohim and YHWH. Unit 1 creates the mundane backdrop; the revelation of holiness through YHWH will unfold across the rest of the Torah.</p>
+    
+    <p>Unit 1's position in Genesis's structure—Row 1, Column A—places it in correspondence with a unit at the far end of the book. Reading these two units together illuminates both.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit 1 and Unit 17: Creation and Re-Creation</h2>
+    
+    <p>Unit 1 opens Genesis; Unit 17 opens the Joseph cycle. Both belong to the Outer Ring that frames the entire book—the Creation Triad (Units 1-3) paired with the Joseph Triad (Units 17-19). The structural correspondence suggests we should read them together.</p>
+    
+    <p>Unit 17 contains three pairs of dreams that map onto Unit 1's three pairs of days:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Cosmic Level</th>
+                <th>Days (Unit 1)</th>
+                <th>Dreams (Unit 17)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header">Heaven</td>
+                <td>Days 1+4: Light and luminaries</td>
+                <td>Joseph's dreams: sun, moon, stars bowing—rulership established</td>
+            </tr>
+            <tr>
+                <td class="row-header">Intermediate</td>
+                <td>Days 2+5: Waters divided, birds and fish</td>
+                <td>Butler and Baker: birds above eating from basket, wine pressed below</td>
+            </tr>
+            <tr>
+                <td class="row-header">Earth</td>
+                <td>Days 3+6: Land, vegetation, creatures</td>
+                <td>Pharaoh's dreams: cattle emerging onto land, grain on earth</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>The Butler-Baker pair deserves attention. The text first says they had "a dream" (singular, 40:5)—then describes two separate dreams. This verbal enactment of unity becoming duality mirrors Day 2's separation of the waters. What was first presented as one is then revealed as two. Joseph's interpretation brings meaning to the divided visions, just as Day 5's creatures bring life to Day 2's empty expanse.</p>
+    
+    <p>Joseph's rise to power in Egypt becomes a "new creation"—the reconstitution of Israel through which blessing will flow to all nations. "All the earth came to Egypt to buy grain" (41:57). What Unit 1 establishes at cosmic scale, Unit 17 recapitulates at national scale. The outer ring bookends the narrative: from Elohim's creation through speech to Joseph's interpretation through dreams, from cosmic order to providential history.</p>
+    
+    <p>These correspondences confirm that Unit 1 is more than a creation narrative. It establishes a paradigm—a method for reading the entire Torah.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Paradigm for Woven Reading</h2>
+    
+    <p>Unit 1 holds a unique position in the Torah: it teaches us how to read what follows. The six-day structure—paired columns creating three cosmic levels—establishes the pattern that governs Genesis, Leviticus, and Deuteronomy. Paired triads. Concentric rings. Rows that carry meaning independent of linear sequence.</p>
+    
+    <p>Consider what the structure reveals that linear reading misses. Reading 1:1 through 2:3 sequentially, we experience a forward progression: Day 1, Day 2... Sabbath. But reading the matrix, we see simultaneous processes: Column A creating structure while Column B animates, separation and population working together. We see three cosmic levels stacked vertically: heaven, intermediate space, earth. We see envelope closures binding the unit together. We see the chiasm that locks and then releases Elohim from creation. The structure adds dimensions that sequence alone cannot convey.</p>
+    
+    <p>The days of creation, and their objects, are not the primordial elements of reality according to this narrative. They are logically preceded by the weave's organizational principles—the warp and weft that structure the tapestry. Each day is itself the knot where two threads cross. There are seven such underlying principles: two warp threads (Column A and Column B) and five horizontal pairs (Row 1, the three cosmic levels of Row 2, and Row 3). Seven enumerated "days" in the linear narrative are matched by seven embedded principles of organization accessible only through reconstructing the weave.</p>
+    
+    <p>If the days of creation express aspects of the physical world, then the embedded principles pertain to metaphysics—they logically precede the creation. The exoteric reading of creation as a description of the physical world is paralleled by the esoteric weave that reveals the metaphysical underpinnings of existence itself.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Reading the Unit</h2>
+    
+    <p>We opened with a puzzle: why do the six creation days fall so neatly into paired columns? The answer emerges from the structure itself. Creation isn't a single process but two—substantiation through separation in Column A, animation through spirit transfer in Column B. The Hebrew text even presents two perspectives on origins: verse 1 viewing creation from above (ex nihilo), verse 2 viewing it from below (ex materia). Neither alone suffices; reality is woven from both threads.</p>
+    
+    <p>The chiasm in Row 1 locks Elohim to earth; the complete separation in Row 3 releases them. Between these poles, the six days trace Elohim's progressive withdrawal from direct involvement with creation. The hovering spirit comes to rest. And holiness—that quality marking the difference between ordinary and set-apart—emerges only after sufficient separation has been achieved.</p>
+    
+    <p>Unit 1's position matters as well. Row 1, Column A—the opening of the Outer Ring, paired structurally with Unit 17 at the far end of Genesis. Between them, the entire patriarchal drama unfolds. But the frame reveals continuity: Elohim's creative word at the beginning, providential dreams at the end; cosmic ordering through separation, national formation through reconciliation; universal blessing promised, universal blessing channeled through one family's preservation in Egypt.</p>
+    
+    <p>The two columns prefigure the two trees of Eden. The fractal structure mirrors the Torah's own three-part organization. The divine name pattern establishes Elohim as the natural, orderly aspect of deity—the framework upon which YHWH's personal revelation will later unfold.</p>
+    
+    <p>If the familiar creation account contains these depths—if the six days organize into dual processes revealing fundamental metaphysics, if spatial arrangement shows three cosmic levels paradigmatic for all of the Torah, if the separation achieving holiness traces an arc visible only in two-dimensional structure—then every unit deserves similarly close attention. The paradigm authorizes the methodology: read linearly for narrative sequence, read spatially for structural relationships, integrate both dimensions for full comprehension.</p>
+    
+    <p>The architecture is the meaning. The weave is the revelation.</p>
+</section>
+
+</article>
+
+<!-- Link to unit text -->
+<aside class="unit-link-box">
+    <p><strong>Read the structured text:</strong> <a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Genesis Unit 1 with color-coded patterns</a></p>
+</aside>
+
+<!-- Navigation -->
+<nav class="unit-navigation">
+    <div class="nav-arrows">
+        <span>← [First Unit]</span>
+        <a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Unit 2: Eden and Cain →</a>
+    </div>
+    <div>
+        <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis Map</a>
+    </div>
+</nav>
+
+<!-- Citation -->
+<aside class="citation-box">
+    <strong>To cite:</strong> Torah Weave Project. "Genesis Unit 1: The Creation Paradigm - Extended Commentary." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Genesis/genesis-unit-1/commentary.html
+</aside>
+
+<!-- Series Navigation -->
+<nav class="series-navigation">
+    <h3>Genesis Commentary Series</h3>
+    <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Overview</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: Units</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: Map</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: Three Rows</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture</a>
+</nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

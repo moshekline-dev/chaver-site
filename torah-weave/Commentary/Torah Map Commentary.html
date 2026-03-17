@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags for AI SEO -->
+    <title>Torah Weave: Interactive Map of the Five Books | Literary Structure Revealed</title>
+    <meta name="title" content="Torah Weave: Interactive Map of the Five Books | Literary Structure Revealed">
+    <meta name="description" content="Explore the Torah's woven literary structure through interactive maps of Genesis, Exodus, Leviticus, Numbers, and Deuteronomy. Click any unit to view its two-dimensional literary architecture.">
+    <meta name="keywords" content="Torah map, Torah structure, five books of Moses, literary structure, biblical architecture, woven Torah, Genesis map, Exodus map, Leviticus map, Numbers map, Deuteronomy map">
+    <meta name="author" content="Torah Weave Project">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://chaver.com/torah-weave/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chaver.com/torah-weave/">
+    <meta property="og:title" content="Torah Weave: Interactive Map of the Five Books">
+    <meta property="og:description" content="Explore the Torah's woven literary structure through interactive maps">
+    <meta property="og:site_name" content="Torah Weave">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chaver.com/torah-weave/">
+    <meta property="twitter:title" content="Torah Weave">
+    <meta property="twitter:description" content="Interactive map revealing the Torah's two-dimensional literary structure">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Torah Weave",
+      "description": "Interactive map of the Torah's five books, revealing their woven literary structure through color-coded units and two-dimensional architecture.",
+      "url": "https://chaver.com/torah-weave/",
+      "about": [
+        {"@type": "Thing", "name": "Torah literary structure"},
+        {"@type": "Thing", "name": "Biblical architecture"},
+        {"@type": "Thing", "name": "Woven text"}
+      ],
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Torah Weave Project",
+        "url": "https://chaver.com"
+      }
+    }
+    </script>
+    
+    <style>
+        /* Override any body constraints */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: none;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdfcf8;
+        }
+        
+        /* Breadcrumb */
+        nav[aria-label=Breadcrumb] {
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        nav[aria-label=Breadcrumb] a {
+            color: #5d87a1;
+            text-decoration: none;
+        }
+        
+        nav[aria-label=Breadcrumb] a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Page header - match Genesis map style */
+        h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #8b7355;
+            padding-bottom: 15px;
+            margin-top: 30px;
+        }
+        
+        .page-intro {
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin: 20px auto 40px;
+            padding: 0 20px;
+            color: #2c3e50;
+        }
+        
+        .page-intro a {
+            color: #5d87a1;
+            text-decoration: none;
+            border-bottom: 1px dotted #5d87a1;
+        }
+        
+        .page-intro a:hover {
+            color: #3d5770;
+            border-bottom: 1px solid #3d5770;
+        }
+        
+        /* Citation box */
+        .citation-box {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        
+        /* Map container - needs specific sizing */
+        .map-outer {
+            width: 100%;
+            background: white;
+            padding: 20px 0;
+        }
+        
+        /* Only add scrolling on smaller screens */
+        @media (max-width: 1250px) {
+            .map-outer {
+                overflow-x: auto;
+            }
+        }
+        
+        .map-container {
+            width: 1170px;
+            height: 900px;
+            position: relative;
+            margin: 0 auto;
+            background-color: white;
+        }
+        
+        .book {
+            position: absolute;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        
+        .book-title {
+            position: absolute;
+            padding: 5px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            z-index: 2;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .book-title:hover {
+            opacity: 0.9;
+        }
+        
+        .unit {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 1px solid rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            z-index: 3;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .unit:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        
+        .unit.special {
+            border: 2px solid #CC0066;
+            width: 23px;
+            height: 23px;
+        }
+        
+        /* Color classes */
+        .color-d4f2ff { background-color: #D4F2FF; }
+        .color-ffe6e6 { background-color: #FFE6E6; }
+        .color-e6ffee { background-color: #E6FFEE; }
+        .color-d4d4ff { background-color: #D4D4FF; }
+        .color-ffccaa { background-color: #FFCCAA; }
+        .color-c8e6d2 { background-color: #C8E6D2; }
+        .color-f0f0f0 { background-color: #F0F0F0; }
+        
+        .page-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+<article itemscope itemtype="https://schema.org/WebPage">
+    <nav aria-label="Breadcrumb">
+        <a href="/" rel="home">Home</a> → <span itemprop="name">Torah Weave</span>
+    </nav>
+
+    <h1>Torah Weave Map</h1>
+    
+    <div class="page-intro">
+        <p>The Torah's five books revealed as a woven literary structure. Click on any book title to view its detailed map, or click individual units to explore their two-dimensional architecture.</p>
+        <p><a href="/torah-weave/Commentary/Torah Map Commentary.html" rel="related" style="font-weight: 600; font-size: 1.05em;">Read the full Torah commentary →</a></p>
+    </div>
+
+    <div class="map-outer">
+    <div class="map-container">
+        
+        <!-- Genesis - Left side -->
+        <div class="book" style="left: 0px; top: 351px; width: 351px; height: 216px; border: 3px solid #7ab0f7; background-color: rgba(122, 176, 247, 0.1);"></div>
+        <a class="book-title" href="/torah-weave/Genesis/genesis-map/genesis-map.html" style="left: 0px; top: 351px; width: 351px; background-color: #7ab0f7;">GENESIS</a>
+        
+        <!-- Genesis Units -->
+        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html" style="left: 27px; top: 405px;">U1</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html" style="left: 27px; top: 459px;">U2</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html" style="left: 27px; top: 513px;">U3</a>
+        <a class="unit color-ffe6e6 special" href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4.html" style="left: 81px; top: 459px;">U4</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html" style="left: 135px; top: 405px;">U5</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html" style="left: 162px; top: 405px;">U6</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html" style="left: 135px; top: 459px;">U7</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html" style="left: 162px; top: 459px;">U8</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html" style="left: 135px; top: 513px;">U9</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html" style="left: 162px; top: 513px;">U10</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html" style="left: 216px; top: 405px;">U11</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html" style="left: 243px; top: 405px;">U12</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html" style="left: 216px; top: 459px;">U13</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html" style="left: 243px; top: 459px;">U14</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html" style="left: 216px; top: 513px;">U15</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html" style="left: 243px; top: 513px;">U16</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html" style="left: 297px; top: 405px;">U17</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html" style="left: 297px; top: 459px;">U18</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html" style="left: 297px; top: 513px;">U19</a>
+        
+        <!-- Exodus - Top center -->
+        <div class="book" style="left: 486px; top: 27px; width: 297px; height: 297px; border: 3px solid #f0b070; background-color: rgba(240, 176, 112, 0.1);"></div>
+        <a class="book-title" href="/torah-weave/Exodus/exodus-map/exodus-map.html" style="left: 486px; top: 0px; width: 297px; background-color: #f0b070;">EXODUS</a>
+        
+        <!-- Exodus Units -->
+        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-1/exodus-unit-1.html" style="left: 513px; top: 54px;">U1</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-2/exodus-unit-2.html" style="left: 567px; top: 54px;">U2</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-3/exodus-unit-3.html" style="left: 513px; top: 108px;">U3</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-4/exodus-unit-4.html" style="left: 567px; top: 108px;">U4</a>
+        <a class="unit color-ffe6e6 special" href="/torah-weave/Exodus/exodus-unit-5/exodus-unit-5.html" style="left: 621px; top: 81px;">U5</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-6/exodus-unit-6.html" style="left: 675px; top: 54px;">U6</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-7/exodus-unit-7.html" style="left: 729px; top: 54px;">U7</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-8/exodus-unit-8.html" style="left: 675px; top: 108px;">U8</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-9/exodus-unit-9.html" style="left: 729px; top: 108px;">U9</a>
+        <a class="unit color-ffe6e6 special" href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10.html" style="left: 621px; top: 162px;">U10</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-11/exodus-unit-11.html" style="left: 513px; top: 216px;">U11</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-12/exodus-unit-12.html" style="left: 567px; top: 216px;">U12</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-13/exodus-unit-13.html" style="left: 513px; top: 270px;">U13</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-14/exodus-unit-14.html" style="left: 567px; top: 270px;">U14</a>
+        <a class="unit color-ffe6e6 special" href="/torah-weave/Exodus/exodus-unit-15/exodus-unit-15.html" style="left: 621px; top: 243px;">U15</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-16/exodus-unit-16.html" style="left: 675px; top: 216px;">U16</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-17/exodus-unit-17.html" style="left: 729px; top: 216px;">U17</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-18/exodus-unit-18.html" style="left: 675px; top: 270px;">U18</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-19/exodus-unit-19.html" style="left: 729px; top: 270px;">U19</a>
+        
+        <!-- Leviticus - Center -->
+        <div class="book" style="left: 378px; top: 351px; width: 459px; height: 216px; border: 3px solid #80d0a0; background-color: rgba(128, 208, 160, 0.1);"></div>
+        <a class="book-title" href="/torah-weave/Leviticus/leviticus-map/leviticus-map.html" style="left: 378px; top: 351px; width: 459px; background-color: #80d0a0;">LEVITICUS</a>
+        
+        <!-- Leviticus Units -->
+        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1.html" style="left: 405px; top: 405px;">U1</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2.html" style="left: 405px; top: 459px;">U2</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3.html" style="left: 405px; top: 513px;">U3</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4.html" style="left: 459px; top: 405px;">U4</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-5/leviticus-unit-5.html" style="left: 459px; top: 459px;">U5</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-6/leviticus-unit-6.html" style="left: 459px; top: 513px;">U6</a>
+        <a class="unit color-f0f0f0" href="/torah-weave/Leviticus/leviticus-unit-7/leviticus-unit-7.html" style="left: 513px; top: 405px;">U7</a>
+        <a class="unit color-f0f0f0" href="/torah-weave/Leviticus/leviticus-unit-8/leviticus-unit-8.html" style="left: 513px; top: 459px;">U8</a>
+        <a class="unit color-f0f0f0" href="/torah-weave/Leviticus/leviticus-unit-9/leviticus-unit-9.html" style="left: 513px; top: 513px;">U9</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10.html" style="left: 567px; top: 405px;">U10</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-11/leviticus-unit-11.html" style="left: 567px; top: 459px;">U11</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-12/leviticus-unit-12.html" style="left: 567px; top: 513px;">U12</a>
+        <a class="unit color-ffe6e6 special" href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13.html" style="left: 621px; top: 459px;">U13</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-14/leviticus-unit-14.html" style="left: 675px; top: 405px;">U14</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-15/leviticus-unit-15.html" style="left: 675px; top: 459px;">U15</a>
+        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-16/leviticus-unit-16.html" style="left: 675px; top: 513px;">U16</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-17/leviticus-unit-17.html" style="left: 729px; top: 405px;">U17</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-18/leviticus-unit-18.html" style="left: 729px; top: 459px;">U18</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-19/leviticus-unit-19.html" style="left: 729px; top: 513px;">U19</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-20/leviticus-unit-20.html" style="left: 783px; top: 405px;">U20</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-21/leviticus-unit-21.html" style="left: 783px; top: 459px;">U21</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22.html" style="left: 783px; top: 513px;">U22</a>
+        
+        <!-- Numbers - Bottom center -->
+        <div class="book" style="left: 486px; top: 621px; width: 297px; height: 297px; border: 3px solid #f0b070; background-color: rgba(240, 176, 112, 0.1);"></div>
+        <a class="book-title" href="/torah-weave/Numbers/numbers-map/numbers-map.html" style="left: 486px; top: 594px; width: 297px; background-color: #f0b070;">NUMBERS</a>
+        
+        <!-- Numbers Units -->
+        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-1/numbers-unit-1.html" style="left: 513px; top: 702px;">U1</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-2/numbers-unit-2.html" style="left: 513px; top: 756px;">U2</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-3/numbers-unit-3.html" style="left: 513px; top: 810px;">U3</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-4/numbers-unit-4.html" style="left: 567px; top: 648px;">U4</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-5/numbers-unit-5.html" style="left: 567px; top: 864px;">U5</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-6/numbers-unit-6.html" style="left: 621px; top: 648px;">U6</a>
+        <a class="unit color-ffe6e6 special" href="/torah-weave/Numbers/numbers-unit-7/numbers-unit-7.html" style="left: 621px; top: 756px;">U7</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-8/numbers-unit-8.html" style="left: 621px; top: 864px;">U8</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-9/numbers-unit-9.html" style="left: 675px; top: 648px;">U9</a>
+        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-10/numbers-unit-10.html" style="left: 675px; top: 864px;">U10</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-11/numbers-unit-11.html" style="left: 729px; top: 702px;">U11</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-12/numbers-unit-12.html" style="left: 729px; top: 756px;">U12</a>
+        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-13/numbers-unit-13.html" style="left: 729px; top: 810px;">U13</a>
+        
+        <!-- Deuteronomy - Right side -->
+        <div class="book" style="left: 864px; top: 351px; width: 270px; height: 216px; border: 3px solid #7ab0f7; background-color: rgba(122, 176, 247, 0.1);"></div>
+        <a class="book-title" href="/torah-weave/Deuteronomy/deuteronomy-map/deuteronomy-map.html" style="left: 864px; top: 351px; width: 270px; background-color: #7ab0f7;">DEUTERONOMY</a>
+        
+        <!-- Deuteronomy Units -->
+        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-1/deuteronomy-unit-1.html" style="left: 891px; top: 405px;">U1</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-2/deuteronomy-unit-2.html" style="left: 918px; top: 405px;">U2</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-3/deuteronomy-unit-3.html" style="left: 891px; top: 459px;">U3</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-4/deuteronomy-unit-4.html" style="left: 918px; top: 459px;">U4</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-5/deuteronomy-unit-5.html" style="left: 891px; top: 513px;">U5</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-6/deuteronomy-unit-6.html" style="left: 918px; top: 513px;">U6</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-7/deuteronomy-unit-7.html" style="left: 972px; top: 405px;">U7</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-8/deuteronomy-unit-8.html" style="left: 972px; top: 459px;">U8</a>
+        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-9/deuteronomy-unit-9.html" style="left: 972px; top: 513px;">U9</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-10/deuteronomy-unit-10.html" style="left: 1026px; top: 405px;">U10</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-11/deuteronomy-unit-11.html" style="left: 1026px; top: 459px;">U11</a>
+        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-12/deuteronomy-unit-12.html" style="left: 1026px; top: 513px;">U12</a>
+        <a class="unit color-ffe6e6 special" href="/torah-weave/Deuteronomy/deuteronomy-unit-13/deuteronomy-unit-13.html" style="left: 1080px; top: 459px;">U13</a>
+    </div>
+    </div>
+
+    <aside class="citation-box" style="max-width: 800px; margin: 30px auto;">
+        <strong>How to cite this map:</strong> Torah Weave Project. "Torah Weave Map." <em>Torah Weave</em>, https://chaver.com/torah-weave/. Accessed [date].
+    </aside>
+
+</article>
+
+</body>
+</html>

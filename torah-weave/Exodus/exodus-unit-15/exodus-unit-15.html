@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 15 (Exodus 31:18-34:35) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 15
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-14/exodus-unit-14.html" rel="prev">← Unit 14</a>
+            <a href="/torah-weave/Exodus/exodus-unit-16/exodus-unit-16.html" rel="next">Unit 16 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 15</h1>
+                <div class="unit-meta" itemprop="about">Exodus 31:18-34:35</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-left">1A</th><th class="col-right">1B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>31:18</b></span> And He
+  gave unto Moses, when He had made an end of speaking with him upon mount
+  Sinai, <span class="horizontal1"><b>the two tables of the testimony, tables of
+  stone, written with the finger of God</b></span>.</span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>32:15</b></span> And
+  Moses turned, and went down from the mount, with the two tables of the
+  testimony in his hand; tables that were written on both their sides; on the
+  one side and on the other were they written. <span class="VerseNumber"><b>32:16</b></span>
+<span class="horizontal1"><b>And the tables were the work of God, and the
+  writing was the writing of God, graven upon the tables</b></span>.</span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>32:1</b></span> And when
+  the people saw that Moses delayed to come down from the mount, <span class="horizontal1"><b>the people gathered themselves together unto Aaron, and
+  said unto him: 'Up, make us a god who shall go before us; for as for this
+  Moses, the man that brought us up out of the land of Egypt, we know not what
+  is become of him</b></span>.' <span class="VerseNumber"><b>32:2</b></span> <span class="horizontal1"><b>And Aaron said unto them: 'Break off the golden rings,
+  which are in the ears of your wives, of your sons, and of your daughters, and
+  bring them unto me</b></span>.' <span class="VerseNumber"><b>32:3</b></span> <span class="horizontal1"><b>And all the people broke off the golden rings which were
+  in their ears, and brought them unto Aaron</b></span>. <span class="VerseNumber"><b>32:4</b></span> <span class="horizontal1"><b>And he
+  received it at their hand, and fashioned it with a graving tool, and made it
+  a molten calf; and they said: 'This is thy god, O Israel, which brought thee
+  up out of the land of Egypt</b></span>.' <span class="VerseNumber"><b>32:5</b></span>
+  And when Aaron saw this, he built an altar before it; and Aaron made
+  proclamation, and said: 'To-morrow shall be a feast to the LORD.' <span class="VerseNumber"><b>32:6</b></span> And they rose up early on the morrow,
+  and offered burnt-offerings, and brought peace-offerings; and the people sat
+  down to eat and to drink, and rose up to make merry. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>32:17</b></span> And when
+  <span class="vertical1"><b>Joshua</b></span> heard the noise of the people as
+  they shouted, he said unto Moses: 'There is a noise of war in the camp.' <span class="VerseNumber"><b>32:18</b></span> And he said: 'It is not the voice of
+  them that shout for mastery, neither is it the voice of them that cry for
+  being overcome, but the noise of them that sing do I hear.' <span class="VerseNumber"><b>32:19</b></span> And it came to pass, as soon as he came
+  nigh unto the camp, that he saw the calf and the dancing; and Moses' anger
+  waxed hot, and he cast the tables out of his hands, and broke them beneath
+  the mount. <span class="VerseNumber"><b>32:20</b></span> And he took the calf
+  which they had made, and burnt it with fire, and ground it to powder, and
+  strewed it upon the water, and made the children of Israel drink of it. <span class="VerseNumber"><b>32:21</b></span> And Moses said unto Aaron: 'What did
+  this people unto thee, that thou hast brought a great sin upon them?' <span class="VerseNumber"><b>32:22</b></span> And Aaron said: 'Let not the anger of
+  my lord wax hot; thou knowest the people, that they are set on evil. <span class="VerseNumber"><b>32:23</b></span> <span class="horizontal1"><b>So they said
+  unto me: Make us a god, which shall go before us; for as for this Moses, the
+  man that brought us up out of the land of Egypt, we know not what is become
+  of him</b></span>. <span class="VerseNumber"><b>32:24</b></span> <span class="horizontal1"><b>And I said unto them: Whosoever hath any gold, let them
+  break it off; so they gave it me; and I cast it into the fire, and there came
+  out this calf.</b></span>'</span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">C</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>32:7</b></span> And the
+  LORD spoke unto Moses: 'Go, get thee down; for thy people, that thou
+  broughtest up out of the land of Egypt, have dealt corruptly; <span class="VerseNumber"><b>32:8</b></span> they have turned aside quickly out of
+  the way which I commanded them; they have made them a molten calf, and have
+  worshipped it, and have sacrificed unto it, and said: This is thy god, O
+  Israel, which brought thee up out of the land of Egypt.' <span class="VerseNumber"><b>32:9</b></span> And the LORD said unto Moses: 'I have
+  seen this people, and, behold, it is a stiffnecked people. <span class="VerseNumber"><b>32:10</b></span> <span class="horizontal1"><b>Now therefore
+  let Me alone, that My wrath may wax hot against them</b></span>, <span class="horizontal1"><b>and that I may</b></span> <span class="vertical1"><b>consume
+  them</b></span>; and I will make of thee a great nation.' <span class="VerseNumber"><b>32:11</b></span> And Moses besought the LORD his God,
+  and said: 'LORD, why doth Thy wrath wax hot against Thy people, that Thou
+  hast brought forth out of the land of Egypt with great power and with a
+  mighty hand? <span class="VerseNumber"><b>32:12</b></span> Wherefore should the
+  Egyptians speak, saying: For evil did He bring them forth, to slay them in
+  the mountains, and to consume them from the face of the earth? Turn from Thy
+  fierce wrath, and repent of this evil against Thy people. <span class="VerseNumber"><b>32:13</b></span> Remember Abraham, Isaac, and Israel,
+  Thy servants, to whom Thou didst swear by Thine own self, and saidst unto
+  them: I will multiply your seed as the stars of heaven, and all this land
+  that I have spoken of will I give unto your seed, and they shall inherit it
+  for ever.' <span class="VerseNumber"><b>32:14</b></span> And the LORD repented
+  of the evil which He said He would do unto His people. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">C</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>32:25</b></span> And when
+  Moses saw that the people were broken loose--for Aaron had let them loose for
+  a derision among their enemies-- <span class="VerseNumber"><b>32:26</b></span>
+  then Moses stood in the gate of the camp, and said: 'Whoso is on the LORD'S
+  side, let him come unto me.' And all the sons of Levi gathered themselves
+  together unto him. <span class="VerseNumber"><b>32:27</b></span> <span class="horizontal1"><b>And he said unto them: 'Thus saith the LORD, the God of
+  Israel: Put ye every man his sword upon his thigh, and go to and fro from
+  gate to gate throughout the camp, and slay every man his brother, and every
+  man his companion, and every man his neighbour</b></span>.' <span class="VerseNumber"><b>32:28</b></span> And the sons of Levi did according to
+  the word of Moses; and there fell of the people that day about three thousand
+  men. <span class="VerseNumber"><b>32:29</b></span> And Moses said: 'Consecrate
+  yourselves to-day to the LORD, for every man hath been against his son and
+  against his brother; that He may also bestow upon you a blessing this day.' <span class="VerseNumber"><b>32:30</b></span> And it came to pass on the morrow, that
+  Moses said unto the people: 'Ye have sinned a great sin; and now I will go up
+  unto the LORD, peradventure I shall make atonement for your sin.' <span class="VerseNumber"><b>32:31</b></span> And Moses returned unto the LORD, and
+  said: 'Oh, this people have sinned a great sin, and have made them a god of
+  gold. <span class="VerseNumber"><b>32:32</b></span> Yet now, if Thou wilt
+  forgive their sin--; and if not, blot me, I pray Thee, out of Thy book which
+  Thou hast written.' <span class="VerseNumber"><b>32:33</b></span> And the LORD
+  said unto Moses: 'Whosoever hath sinned against Me, him will I blot out of My
+  book. <span class="VerseNumber"><b>32:34</b></span> And now go, lead the people
+  unto the place of which I have spoken unto thee; behold, Mine angel shall go
+  before thee; nevertheless in the day when I visit, I will visit their sin
+  upon them.' <span class="VerseNumber"><b>32:35</b></span> And the LORD smote
+  the people, because they made the calf, which Aaron made. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-right">2B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">33:1</span></b></span><span style="font-size:8.5pt"> And the LORD spoke unto Moses: <span class="vertical1"><b>'Depart, go up hence, thou and the people that thou hast
+  brought up out of the land of Egypt</b></span>, unto the land of which I swore
+  unto Abraham, to Isaac, and to Jacob, saying: Unto thy seed will I give it-- <span class="VerseNumber"><b>33:2</b></span> and I will send an angel before thee;
+  and I will drive out the Canaanite, the Amorite, and the Hittite, and the
+  Perizzite, the Hivite, and the Jebusite-- <span class="VerseNumber"><b>33:3</b></span>
+  unto a land flowing with milk and honey; for I will not go up in the midst of
+  thee; for thou art a stiffnecked people; lest <span class="vertical1"><b>I
+  consume</b></span> thee in the way.' <span class="VerseNumber"><b>33:4</b></span>
+  And when the people heard these evil tidings, they mourned; and no man did
+  put on him his ornaments. <span class="VerseNumber"><b>33:5</b></span> And the
+  LORD said unto Moses: 'Say unto the children of Israel: Ye are a stiffnecked
+  people; if I go up into the midst of thee for one moment, I shall consume
+  thee; therefore now put off thy ornaments from thee, that I may know what to
+  do unto thee.' <span class="VerseNumber"><b>33:6</b></span> And the children of
+  Israel stripped themselves of their ornaments from mount Horeb onward.</span></p></td><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">33:7</span></b></span><span style="font-size:8.5pt"> Now Moses used to take the tent and to pitch it
+  without the camp, afar off from the camp; and he called it the tent of
+  meeting. And it came to pass, that every one that sought the LORD went out
+  unto the tent of meeting, which was without the camp. <span class="VerseNumber"><b>33:8</b></span> And it came to pass, when Moses went out
+  unto the Tent, that all the people rose up, and stood, every man at his tent
+  door, and looked after Moses, until he was gone into the Tent. <span class="VerseNumber"><b>33:9</b></span> And it came to pass, when Moses entered
+  into the Tent, the pillar of cloud descended, and stood at the door of the
+  Tent; and [the LORD] spoke with Moses. <span class="VerseNumber"><b>33:10</b></span>
+  And when all the people saw the pillar of cloud stand at the door of the
+  Tent, all the people rose up and worshipped, every man at his tent door. <span class="VerseNumber"><b>33:11</b></span> <span class="vertical1"><b>And the LORD
+  spoke unto Moses face to face</b></span>, as a man speaketh unto his friend.
+  And he would return into the camp; but his minister <span class="vertical1"><b>Joshua</b></span>,
+  the son of Nun, a young man, departed not out of the Tent. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">3A</th><th class="col-right">3B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">33:12</span></b></span><span style="font-size:8.5pt"> And Moses said unto the LORD: 'See, Thou sayest unto
+  me: <span class="vertical1"><b>Bring up this people</b></span>; and Thou hast
+  not let me know whom Thou wilt send with me. Yet <span class="horizontal1"><b>Thou
+  hast said: I know thee by name</b></span>, and thou hast also found grace in
+  My sight. <span class="VerseNumber"><b>33:13</b></span> Now therefore, I pray
+  Thee, if I have found grace in Thy sight, show me now Thy ways, that I may
+  know Thee, to the end that I may find grace in Thy sight; and consider that
+  this nation is Thy people.' <span class="VerseNumber"><b>33:14</b></span> And
+  He said: 'My presence shall go with thee, and I will give thee rest.' <span class="VerseNumber"><b>33:15</b></span> And he said unto Him: 'If Thy presence
+  go not with me, carry us not up hence. <span class="VerseNumber"><b>33:16</b></span>
+  For wherein now shall it be known that I have found grace in Thy sight, I and
+  Thy people? is it not in that Thou goest with us, so that we are
+  distinguished, I and Thy people, from all the people that are upon the face
+  of the earth?' </span><span class="HebrewParagraph"><span style="font-size:
+  8.5pt;font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">33:17</span></b></span><span style="font-size:8.5pt"> And the LORD said unto Moses: 'I will do this thing
+  also that thou hast spoken, for thou hast found grace in My sight, <span class="horizontal1"><b>and I know thee by name</b></span>.' <span class="VerseNumber"><b>33:18</b></span> And he said: 'Show me, I pray Thee, Thy
+  glory.' <span class="VerseNumber"><b>33:19</b></span> And He said: 'I will make
+  all My goodness pass before thee, and will proclaim the name of the LORD
+  before thee; and I will be gracious to whom I will be gracious, and will show
+  mercy on whom I will show mercy.' <span class="VerseNumber"><b>33:20</b></span>
+<span class="vertical1"><b>And He said: 'Thou canst not see My face</b></span>,
+  for man shall not see Me and live.' <span class="VerseNumber"><b>33:21</b></span>
+  And the LORD said: 'Behold, there is a place by Me, and thou shalt stand upon
+  the rock. <span class="VerseNumber"><b>33:22</b></span> And it shall come to
+  pass, while My glory passeth by, that I will put thee in a cleft of the rock,
+  and will cover thee with My hand until I have passed by. <span class="VerseNumber"><b>33:23</b></span> And I will take away My hand, and thou
+  shalt see My back; but My face shall not be seen.' </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">4A</th><th class="col-right">4B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">34:1</span></b></span><span style="font-size:8.5pt"> And the LORD said unto Moses: 'Hew thee two tables
+  of stone like unto the first; and I will write upon the tables the words that
+  were on the first tables, which thou didst break. <span class="VerseNumber"><b>34:2</b></span>
+  And be ready by the morning, and come up in the morning unto mount Sinai, and
+  present thyself there to Me on the top of the mount. <span class="VerseNumber"><b>34:3</b></span>
+  And no man shall come up with thee, neither let any man be seen throughout
+  all the mount; neither let the flocks nor herds feed before that mount.' <span class="VerseNumber"><b>34:4</b></span> And he hewed two tables of stone like
+  unto the first; and Moses rose up early in the morning, and went up unto
+  mount Sinai, as the LORD had commanded him, and took in his hand two tables
+  of stone. <span class="VerseNumber"><b>34:5</b></span> And the LORD descended
+  in the cloud, and stood with him there, and proclaimed the name of the LORD. <span class="VerseNumber"><b>34:6</b></span> And the LORD passed by before him, and
+  proclaimed: 'The LORD, the LORD, God, merciful and gracious, long-suffering,
+  and abundant in goodness and truth; <span class="VerseNumber"><b>34:7</b></span>
+  keeping mercy unto the thousandth generation, forgiving iniquity and
+  transgression and sin; and that will by no means clear the guilty; visiting
+  the iniquity of the fathers upon the children, and upon the children's
+  children, unto the third and unto the fourth generation.'</span></p></td><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">34:8</span></b></span><span style="font-size:8.5pt"> And Moses made haste, and bowed his head toward the
+  earth, and worshipped. <span class="VerseNumber"><b>34:9</b></span> And he
+  said: 'If now I have found grace in Thy sight, O Lord, let the Lord, I pray
+  Thee, go in the midst of us; for it is a stiffnecked people; and pardon our
+  iniquity and our sin, and take us for Thine inheritance.' <span class="VerseNumber"><b>34:10</b></span> And He said: 'Behold, I make a
+  covenant; before all thy people I will do marvels, such as have not been
+  wrought in all the earth, nor in any nation; and all the people among which
+  thou art shall see the work of the LORD that I am about to do with thee, that
+  it is tremendous. <span class="VerseNumber"><b>34:11</b></span> Observe thou
+  that which I am commanding thee this day; behold, I am driving out before
+  thee the Amorite, and the Canaanite, and the Hittite, and the Perizzite, and
+  the Hivite, and the Jebusite. <span class="VerseNumber"><b>34:12</b></span>
+  Take heed to thyself, lest thou make a covenant with the inhabitants of the
+  land whither thou goest, lest they be for a snare in the midst of thee. <span class="VerseNumber"><b>34:13</b></span> But ye shall break down their altars,
+  and dash in pieces their pillars, and ye shall cut down their Asherim. <span class="VerseNumber"><b>34:14</b></span> For thou shalt bow down to no other
+  god; for the LORD, whose name is Jealous, is a jealous God; <span class="VerseNumber"><b>34:15</b></span> lest thou make a covenant with the
+  inhabitants of the land, and they go astray after their gods, and do
+  sacrifice unto their gods, and they call thee, and thou eat of their
+  sacrifice; <span class="VerseNumber"><b>34:16</b></span> and thou take of their
+  daughters unto thy sons, and their daughters go astray after their gods, and
+  make thy sons go astray after their gods. <span class="VerseNumber"><b>34:17</b></span>
+  Thou shalt make thee no molten gods. <span class="VerseNumber"><b>34:18</b></span>
+  The feast of unleavened bread shalt thou keep. Seven days thou shalt eat
+  unleavened bread, as I commanded thee, at the time appointed in the month
+  Abib, for in the month Abib thou camest out from Egypt. <span class="VerseNumber"><b>34:19</b></span> All that openeth the womb is Mine; and
+  of all thy cattle thou shalt sanctify the males, the firstlings of ox and
+  sheep. <span class="VerseNumber"><b>34:20</b></span> And the firstling of an
+  ass thou shalt redeem with a lamb; and if thou wilt not redeem it, then thou
+  shalt break its neck. All the first-born of thy sons thou shalt redeem. And
+  none shall appear before Me empty. <span class="VerseNumber"><b>34:21</b></span>
+  Six days thou shalt work, but on the seventh day thou shalt rest; in plowing
+  time and in harvest thou shalt rest. <span class="VerseNumber"><b>34:22</b></span>
+  And thou shalt observe the feast of weeks, even of the first-fruits of wheat
+  harvest, and the feast of ingathering at the turn of the year. <span class="VerseNumber"><b>34:23</b></span> Three times in the year shall all thy
+  males appear before the Lord GOD, the God of Israel. <span class="VerseNumber"><b>34:24</b></span>
+  For I will cast out nations before thee, and enlarge thy borders; neither
+  shall any man covet thy land, when thou goest up to appear before the LORD
+  thy God three times in the year. <span class="VerseNumber"><b>34:25</b></span>
+  Thou shalt not offer the blood of My sacrifice with leavened bread; neither
+  shall the sacrifice of the feast of the passover be left unto the morning. <span class="VerseNumber"><b>34:26</b></span> The choicest first-fruits of thy land
+  thou shalt bring unto the house of the LORD thy God. Thou shalt not seethe a
+  kid in its mother's milk.' </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">5A</th><th class="col-right">5B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">34:27</span></b></span><span style="font-size:8.5pt"> And the LORD said unto Moses: 'Write thou these
+  words, for after the tenor of these words I have made a covenant with thee
+  and with Israel.' <span class="VerseNumber"><b>34:28</b></span> And he was
+  there with the LORD forty days and forty nights; he did neither eat bread,
+  nor drink water. And he wrote upon the tables the words of the covenant, the
+  ten words. <span class="VerseNumber"><b>34:29</b></span> And it came to pass,
+  when Moses came down from mount Sinai with the two tables of the testimony in
+  Moses' hand, when he came down from the mount, that Moses knew not that the
+  skin of his face sent forth beams while He talked with him.</span></p></td><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">34:30</span></b></span><span style="font-size:8.5pt"> And when Aaron and all the children of Israel saw
+  Moses, behold, the skin of his face sent forth beams; and they were afraid to
+  come nigh him. <span class="VerseNumber"><b>34:31</b></span> And Moses called
+  unto them; and Aaron and all the rulers of the congregation returned unto
+  him; and Moses spoke to them. <span class="VerseNumber"><b>34:32</b></span> And
+  afterward all the children of Israel came nigh, and he gave them in
+  commandment all that the LORD had spoken with him in mount Sinai. <span class="VerseNumber"><b>34:33</b></span> And when Moses had done speaking with
+  them, he put a veil on his face. <span class="VerseNumber"><b>34:34</b></span>
+  But when Moses went in before the LORD that He might speak with him, he took
+  the veil off, until he came out; and he came out; and spoke unto the children
+  of Israel that which he was commanded. <span class="VerseNumber"><b>34:35</b></span>
+  And the children of Israel saw the face of Moses, that the skin of Moses'
+  face sent forth beams; and Moses put the veil back upon his face, until he
+  went in to speak with Him. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 15 (Exodus 31:18-34:35)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-15/exodus-unit-15.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-14/exodus-unit-14.html" rel="prev">← Unit 14</a>
+            <a href="/torah-weave/Exodus/exodus-unit-16/exodus-unit-16.html" rel="next">Unit 16 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

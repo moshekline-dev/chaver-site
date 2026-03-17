@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 18 (Exodus 38:21-39:31) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 18
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-17/exodus-unit-17.html" rel="prev">← Unit 17</a>
+            <a href="/torah-weave/Exodus/exodus-unit-19/exodus-unit-19.html" rel="next">Unit 19 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 18</h1>
+                <div class="unit-meta" itemprop="about">Exodus 38:21-39:31</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-left">1A</th><th class="col-right">1B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">38:21</span></b></span><span style="font-size:8.5pt"> These are the accounts of the tabernacle, even the
+  tabernacle of the testimony, as they were rendered according to the
+  commandment of Moses, through the service of the <span class="vertical1"><b>Levites</b></span>,
+  by the hand of Ithamar, the son of Aaron the priest.-- <span class="VerseNumber"><b>38:22</b></span> And Bezalel the son of Uri, the son of
+  Hur, of the <span class="vertical1"><b>tribe</b></span> of Judah, made all that
+  the LORD commanded Moses. <span class="VerseNumber"><b>38:23</b></span> And
+  with him was Oholiab, the son of Ahisamach, of the <span class="vertical1"><b>tribe</b></span>
+  of Dan, a craftsman, and a skilful workman, and a weaver in colours, <span class="horizontal1"><b>in blue, and in purple, and in scarlet, and fine linen</b></span>.--
+  </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:
+  normal">{S}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">38:24</span></b></span><span style="font-size:8.5pt"> All the gold that was used for the work in all the
+  work of the sanctuary, even the gold of the offering, was twenty and nine
+  talents, and seven hundred and thirty shekels, after the shekel of the
+  sanctuary. <span class="VerseNumber"><b>38:25</b></span> And the silver of them
+  that were numbered of the congregation was a hundred talents, and a thousand
+  seven hundred and three-score and fifteen shekels, after the shekel of the
+  sanctuary: <span class="VerseNumber"><b>38:26</b></span> a beka a head, that
+  is, half a shekel, after the shekel of the sanctuary, for every one that
+  passed over to them that are numbered, from twenty years old and upward, for
+  six hundred thousand and three thousand and five hundred and fifty men. <span class="VerseNumber"><b>38:27</b></span> And the hundred talents of silver were
+  for casting the sockets of the sanctuary, and the sockets of the veil: a
+  hundred sockets for the hundred talents, a talent for a socket. <span class="VerseNumber"><b>38:28</b></span> And of the thousand seven hundred
+  seventy and five shekels he made hooks for the pillars, and overlaid their
+  capitals, and made fillets for them. <span class="VerseNumber"><b>38:29</b></span>
+  And the brass of the offering was seventy talents and two thousand and four
+  hundred shekels. <span class="VerseNumber"><b>38:30</b></span> And therewith he
+  made the sockets to the door of the tent of meeting, and the brazen altar,
+  and the brazen grating for it, and all the vessels of the altar, <span class="VerseNumber"><b>38:31</b></span> and the sockets of the court round
+  about, and the sockets of the gate of the court, and all the pins of the
+  tabernacle, and all the pins of the court round about. <span class="VerseNumber"><b>39:1</b></span> And of <span class="horizontal1"><b>the
+  blue, and purple, and scarlet, they made plaited garments,</b></span> for
+  ministering in the holy place, and made the holy garments for Aaron, as the
+  LORD commanded Moses. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-right">2B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>39:2</b></span> And he
+  made the ephod of gold, blue, and purple, and scarlet, and fine twined linen.
+  <span class="VerseNumber"><b>39:3</b></span> And they did beat the gold into thin
+  plates, and cut it into threads, to work it in the blue, and in the purple,
+  and in the scarlet, and in the fine linen, the work of the skilful workman. <span class="VerseNumber"><b>39:4</b></span> They made shoulder-pieces for it, joined
+  together; at the two ends was it joined together. <span class="VerseNumber"><b>39:5</b></span>
+  And the skilfully woven band, that was upon it, wherewith to gird it on, was
+  of the same piece and like the work thereof: of gold, of blue, and purple,
+  and scarlet, and fine twined linen, as the LORD commanded Moses. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>39:22</b></span> And he
+  made the robe of the ephod of woven work, all of blue; <span class="VerseNumber"><b>39:23</b></span> and the hole of the robe in the midst
+  thereof, as the hole of a coat of mail, with a binding round about the hole
+  of it, that it should not be rent. <span class="VerseNumber"><b>39:24</b></span>
+  And they made upon the skirts of the robe pomegranates of blue, and purple,
+  and scarlet, and twined linen. <span class="VerseNumber"><b>39:25</b></span>
+  And they made bells of pure gold, and put the bells between the pomegranates
+  upon the skirts of the robe round about, between the pomegranates: <span class="VerseNumber"><b>39:26</b></span> a bell and a pomegranate, a bell and a
+  pomegranate, upon the skirts of the robe round about, to minister in; as the
+  LORD commanded Moses. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>39:6</b></span> And they
+  wrought the onyx stones, inclosed in settings of gold, graven with the
+  engravings of a signet, according to the names of the children of Israel. <span class="VerseNumber"><b>39:7</b></span> And he put them on the shoulder-pieces
+  of the ephod, to be stones of memorial for the <span class="vertical1"><b>children
+  of Israel</b></span>, as the LORD commanded Moses. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>39:27</b></span> And they
+  made the tunics of fine linen of woven work for Aaron, and for his sons, <span class="VerseNumber"><b>39:28</b></span> and the mitre of fine linen, and the
+  goodly head-tires of fine linen, and the linen breeches of fine twined linen,
+  <span class="VerseNumber"><b>39:29</b></span> and the girdle of fine twined
+  linen, and blue, and purple, and scarlet, the work of the weaver in colours;
+  as the LORD commanded Moses. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">C</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>39:8</b></span> And he
+  made the breastplate, the work of the skilful workman, like the work of the
+  ephod: of gold, of blue, and purple, and scarlet, and fine twined linen. <span class="VerseNumber"><b>39:9</b></span> It was four-square; they made the
+  breastplate double; a span was the length thereof, and a span the breadth
+  thereof, being double. <span class="VerseNumber"><b>39:10</b></span> And they
+  set in it four rows of stones: a row of carnelian, topaz, and smaragd was the
+  first row. <span class="VerseNumber"><b>39:11</b></span> And the second row, a
+  carbuncle, a sapphire, and an emerald. <span class="VerseNumber"><b>39:12</b></span>
+  And the third row, a jacinth, an agate, and an amethyst. <span class="VerseNumber"><b>39:13</b></span> And the fourth row, a beryl, an onyx,
+  and a jasper; they were inclosed in fittings of gold in their settings. <span class="VerseNumber"><b>39:14</b></span> And the stones were according to the
+  names of the children of Israel, twelve, according to their names, like the
+  engravings of a signet, every one according to his name, for <span class="vertical1"><b>the twelve tribes</b></span>. <span class="VerseNumber"><b>39:15</b></span>
+  And they made upon the breastplate plaited chains, of wreathen work of pure
+  gold. <span class="VerseNumber"><b>39:16</b></span> And they made two settings
+  of gold, and two gold rings; and put the two rings on the two ends of the
+  breastplate. <span class="VerseNumber"><b>39:17</b></span> And they put the two
+  wreathen chains of gold on the two rings at the ends of the breastplate. <span class="VerseNumber"><b>39:18</b></span> And the other two ends of the two
+  wreathen chains they put on the two settings, and put them on the
+  shoulder-pieces of the ephod, in the forepart thereof. <span class="VerseNumber"><b>39:19</b></span> And they made two rings of gold, and
+  put them upon the two ends of the breastplate, upon the edge thereof, which
+  was toward the side of the ephod inward. <span class="VerseNumber"><b>39:20</b></span>
+  And they made two rings of gold, and put them on the two shoulder-pieces of
+  the ephod underneath, in the forepart thereof, close by the coupling thereof,
+  above the skilfully woven band of the ephod. <span class="VerseNumber"><b>39:21</b></span>
+<span class="horizontal1"><b>And they did bind the breastplate by the rings
+  thereof unto the rings of the ephod with a thread of blue</b></span>, that it
+  might be upon the skilfully woven band of the ephod, and that the breastplate
+  might not be loosed from the ephod; as the LORD commanded Moses. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">C</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>39:30</b></span> And they
+  made the plate of the holy crown of pure gold, and wrote upon it a writing,
+  like the engravings of a signet: HOLY TO THE LORD. <span class="VerseNumber"><b>39:31</b></span>
+<span class="horizontal1"><b>And they tied unto it a thread of blue,</b></span>
+  to fasten it upon the mitre above; as the LORD commanded Moses. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span><span style="font-size:8.5pt"> </span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 18 (Exodus 38:21-39:31)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-18/exodus-unit-18.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-17/exodus-unit-17.html" rel="prev">← Unit 17</a>
+            <a href="/torah-weave/Exodus/exodus-unit-19/exodus-unit-19.html" rel="next">Unit 19 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

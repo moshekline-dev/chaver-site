@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 9 (Exodus 22:17-23:19) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 9
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-8/exodus-unit-8.html" rel="prev">← Unit 8</a>
+            <a href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10.html" rel="next">Unit 10 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 9</h1>
+                <div class="unit-meta" itemprop="about">Exodus 22:17-23:19</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-left">1A</th><th class="col-middle">1B</th><th class="col-right">1C</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>22:17</b></span> Thou shalt <span class="horizontal1"><b>not</b></span> suffer a sorceress <span class="horizontal1"><b>to live</b></span>.</p></td><td><p class="torah"><span class="VerseNumber"><b>22:18</b></span> Whosoever lieth
+  with a <span class="vertical1"><b>beast</b></span> shall surely be <span class="horizontal1"><b>put to death</b></span>. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b>22:19</b></span> He that <span class="closure"><b>sacrificeth</b></span> unto the gods, save unto the <span class="vertical1"><b>LORD</b></span> only, shall be <span class="horizontal1"><b>utterly
+  destroyed</b></span>.</p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-middle">2B</th><th class="col-right">2C</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>22:20</b></span> <span class="horizontal1"><b>And a stranger shalt thou not wrong, neither shalt thou
+  oppress him</b></span>; <span class="ciasm1"><b>for ye were strangers in the
+  land of Egypt</b></span>.</p></td><td><p class="torah"><span class="VerseNumber"><b>22:21</b></span> <span class="horizontal1"><b>Ye shall not afflict any widow, or fatherless child</b></span>.
+  <span class="VerseNumber"><b>22:22</b></span> If thou afflict them in any
+  wise--for if they cry at all unto Me, I will surely hear their cry-- <span class="VerseNumber"><b>22:23</b></span> My wrath shall wax hot, and I will kill
+  you with the sword; and your wives shall be widows, and your children
+  fatherless. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b>22:24</b></span> <span class="horizontal1"><b>If thou lend money to any of My people, even to </b></span><span class="ciasm2"><b>the poor</b></span><span class="horizontal1"><b> with thee,
+  thou shalt not be to him as a creditor; neither shall ye lay upon him
+  interest</b></span>. <span class="VerseNumber"><b>22:25</b></span> If thou at
+  all take thy neighbour's garment to pledge, thou shalt restore it unto him by
+  that the sun goeth down; <span class="VerseNumber"><b>22:26</b></span> for that
+  is his only covering, it is his garment for his skin; wherein shall he sleep?
+  and it shall come to pass, when he crieth unto Me, that I will hear; <span class="vertical1"><b>for I am gracious</b></span>. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">3A</th><th class="col-middle">3B</th><th class="col-right">3C</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>22:27</b></span> Thou shalt not
+  revile God, nor curse a ruler of thy people.</p></td><td><p class="torah"><span class="VerseNumber"><b>22:28</b></span> Thou shalt not
+  delay to offer of the fulness of thy harvest, and of the outflow of thy
+  presses. The first-born of thy sons shalt thou give unto Me. <span class="VerseNumber"><b>22:29</b></span> Likewise shalt thou do <span class="vertical1"><b>with thine oxen, and with thy sheep</b></span>; seven days
+  it shall be with its dam; on the eighth day thou shalt give it Me.</p></td><td><p class="torah"><span class="VerseNumber"><b>22:30</b></span> <span class="vertical1"><b>And ye shall be holy men unto Me</b></span>; therefore ye
+  shall not eat any flesh that is torn of beasts in the field; ye shall cast it
+  to the dogs. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">4A</th><th class="col-middle">4B</th><th class="col-right">4C</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>23:1</b></span> Thou shalt not utter a false report; put
+  not thy hand with the wicked to be an unrighteous witness.</p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>23:4</b></span> If thou meet thine enemy's<span class="vertical1"><b> ox </b></span>or his<span class="vertical1"><b> ass </b></span>going
+  astray, thou shalt surely bring it back to him again. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>23:7</b></span> Keep thee far from a false matter; and
+  the innocent and righteous slay thou not; <span class="vertical1"><b>for I will
+  not justify</b></span> the wicked.</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>23:2</b></span> Thou shalt not follow a multitude to do
+  evil; neither shalt thou bear witness in a cause to turn aside after a
+  multitude to pervert justice;</p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>23:5</b></span> If thou see the ass of him that hateth
+  thee lying under its burden, thou shalt forbear to pass by him; thou shalt
+  surely release it with him. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>23:8</b></span> And thou shalt take no gift; for a gift
+  blindeth them that have sight, and perverteth the words of the righteous.</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>23:3</b></span> neither shalt thou favour <span class="ciasm2"><b>a poor man</b></span> <span class="horizontal2">in his cause</span>.
+  <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>23:6</b></span> Thou shalt not wrest the judgment of thy
+  poor <span class="horizontal2">in his cause</span>.</p></td><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>23:9</b></span> And a stranger shalt thou not oppress;
+  for ye know the heart of a stranger, <span class="ciasm1"><b>seeing ye were
+  strangers in the land of Egypt</b></span>.</p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">5A</th><th class="col-middle">5B</th><th class="col-right">5C</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>23:10</b></span> <span class="horizontal1"><b>And six years </b></span>thou shalt sow thy land, and
+  gather in the increase thereof; <span class="VerseNumber"><b>23:11</b></span>
+  but the seventh year thou shalt let it rest and lie fallow, that the poor of
+  thy people may eat; and what they leave the beast of the field shall eat. In
+  like manner thou shalt deal with thy vineyard, and with thy oliveyard.</p></td><td><p class="torah"><span class="VerseNumber"><b>23:12</b></span> <span class="horizontal1"><b>Six days</b></span> thou shalt do thy work, but on the
+  seventh day thou shalt rest; that thine <span class="vertical1"><b>ox and</b></span>
+  thine <span class="vertical1"><b>ass</b></span> may have rest, and the son of
+  thy handmaid, and the stranger, may be refreshed. <span class="VerseNumber"><b>23:13</b></span>
+  And in all things that I have said unto you take ye heed; and make no mention
+  of the name of other gods, neither let it be heard out of thy mouth.</p></td><td><p class="torah"><span class="VerseNumber"><b>23:14</b></span> <span class="horizontal1"><b>Three times</b></span> thou shalt keep a feast<span class="vertical1"><b> unto Me</b></span> in the year. <span class="VerseNumber"><b>23:15</b></span>
+  The feast of unleavened bread shalt thou keep; seven days thou shalt eat
+  unleavened bread, as I commanded thee, at the time appointed in the month
+  Abib--for in it thou camest out from Egypt; and none shall appear before Me
+  empty; <span class="VerseNumber"><b>23:16</b></span> and the feast of harvest,
+  the first-fruits of thy labours, which thou sowest in the field; and the
+  feast of ingathering, at the end of the year, when thou gatherest in thy
+  labours out of the field. <span class="VerseNumber"><b>23:17</b></span> Three
+  times in the year all thy males shall appear before the Lord GOD. <span class="VerseNumber"><b>23:18</b></span> Thou shalt not offer the blood of <span class="closure"><b>My sacrifice</b></span> with leavened bread; neither shall
+  the fat of My feast remain all night until the morning. <span class="VerseNumber"><b>23:19</b></span> The choicest first-fruits of thy land
+  thou shalt bring into the house of <span class="vertical1"><b>the LORD thy God</b></span>.
+  Thou shalt not seethe a kid in its mother's milk. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 9 (Exodus 22:17-23:19)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-9/exodus-unit-9.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-8/exodus-unit-8.html" rel="prev">← Unit 8</a>
+            <a href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10.html" rel="next">Unit 10 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

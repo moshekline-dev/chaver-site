@@ -1,0 +1,1833 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/English.dwt" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- #BeginEditable "doctitle" -->
+    <title>Home</title>
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* Modern CSS Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+    }
+    
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+        background-color: #2c3e50;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 1rem 0;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+    
+    nav a:hover {
+        color: #3498db;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Hero Section - Reduced size */
+    .hero {
+        background: linear-gradient(135deg, #e6f2ff 0%, #cce7ff 100%);
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+    
+    /* Site Title - Smaller */
+    .site-title {
+        margin-bottom: 1rem;
+    }
+    
+    .site-title h1 {
+        font-size: 2.2rem;
+        color: #333;
+        margin-bottom: 0.25rem;
+        font-weight: normal;
+    }
+    
+    .site-title h2 {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: normal;
+    }
+    
+    /* Woven Torah Link Box - Smaller */
+    .woven-torah-link {
+        background-color: white;
+        border: 1px solid #5090f0;
+        padding: 0.8rem 1.2rem;
+        margin: 1rem auto;
+        border-radius: 6px;
+        max-width: 600px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .woven-torah-link h3 {
+        color: #5090f0;
+        font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .woven-torah-link p {
+        color: #666;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Buttons - Smaller */
+    .hero-buttons {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .hero-buttons a {
+        background-color: white;
+        color: #333;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border: 1px solid #ddd;
+    }
+    
+    .hero-buttons a:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        background-color: #f8f9fa;
+    }
+    
+    /* Main Content Area */
+    .main-content {
+        background-color: white;
+        padding: 3rem 0;
+        min-height: 400px;
+    }
+    
+    /* Main Content - Full Width */
+    #content {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 3rem 0 2rem;
+        margin-top: 4rem;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-section h4 {
+        margin-bottom: 1rem;
+        color: #ecf0f1;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+    }
+    
+    .footer-section li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a {
+        color: #bdc3c7;
+        text-decoration: none;
+    }
+    
+    .footer-section a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .footer-section p {
+        color: #bdc3c7;
+        line-height: 1.6;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #34495e;
+        color: #95a5a6;
+    }
+    
+    /* ===== TORAH UNIT STYLES (Compatible with Old DWT) ===== */
+    /* Base styles - maintain compatibility */
+    .unit-header {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 1.5rem 0 1rem;
+        page-break-before: always;
+        page-break-after: avoid;
+    }
+    
+    .cell-label {
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0;
+        page-break-after: avoid;
+    }
+    
+    .torah {
+        text-align: justify;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    /* Semantic highlighting */
+    .cell-subdivision {
+        font-weight: bold;
+    }
+    
+    .verse-number {
+        font-weight: bold;
+    }
+    
+    /* Color highlighting classes - original MS Word names preserved */
+    .horizontal1 {
+        color: #3399FF;
+        font-weight: normal;
+    }
+    
+    .vertical1 {
+        color: #C09200;
+        font-weight: normal;
+    }
+    
+    .internalparallel {
+        color: lime;
+        font-weight: normal;
+    }
+    
+    /* New semantic class names */
+    .horizontal-parallel {
+        color: #3399FF;
+        font-weight: normal;
+    }
+    
+    .vertical-parallel {
+        color: #C09200;
+        font-weight: normal;
+    }
+    
+    .internal-parallel {
+        color: lime;
+        font-weight: normal;
+    }
+    
+    /* Additional highlighting classes */
+    .closure {
+        color: #CC0066;
+        font-weight: normal;
+    }
+    
+    .ciasm1 {
+        color: #7030A0;
+        font-weight: normal;
+    }
+    
+    .ciasm2 {
+        color: #FB81EC;
+        font-weight: normal;
+    }
+    
+    .horizontal2 {
+        color: teal;
+        font-weight: normal;
+    }
+    
+    .horizontal3 {
+        color: maroon;
+        font-weight: normal;
+    }
+    
+    .hebrew-paragraph {
+        font-weight: bold;
+    }
+    
+    /* Layout */
+    .scripture-table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 900px;
+    }
+    
+    .scripture-table td {
+        padding: 0.5rem;
+        vertical-align: top;
+    }
+    
+    /* Page breaks */
+    .page-break {
+        page-break-before: always;
+        clear: both;
+    }
+    
+    /* ===== TORAH WEAVE SPECIFIC ADDITIONS ===== */
+    
+    /* Torah Weave Container */
+    .torah-weave-container {
+        font-family: Arial, 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    /* Book-specific heading colors */
+    .genesis-section h1, .genesis-section h2, .genesis-section h3 {
+        color: #7ab0f7 !important;
+    }
+    
+    .exodus-section h1, .exodus-section h2, .exodus-section h3 {
+        color: #f0b070 !important;
+    }
+    
+    .leviticus-section h1, .leviticus-section h2, .leviticus-section h3 {
+        color: #80d0a0 !important;
+    }
+    
+    .numbers-section h1, .numbers-section h2, .numbers-section h3 {
+        color: #f0b070 !important;
+    }
+    
+    .deuteronomy-section h1, .deuteronomy-section h2, .deuteronomy-section h3 {
+        color: #7ab0f7 !important;
+    }
+    
+    /* Full Torah Map Styles */
+    .map-container {
+        width: 100%;
+        max-width: 1170px;
+        height: 900px;
+        position: relative;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 1200px) {
+        .map-container {
+            width: 100%;
+            height: auto;
+            overflow-x: auto;
+        }
+        
+        .map-inner {
+            width: 1170px;
+            height: 900px;
+            position: relative;
+        }
+    }
+    
+    /* Book containers in full map */
+    .book {
+        position: absolute;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+    
+    .book-title {
+        position: absolute;
+        padding: 5px 0;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        z-index: 2;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Book positioning and colors */
+    .genesis {
+        left: 0px;
+        top: 351px;
+        width: 351px;
+        height: 216px;
+        border: 3px solid #7ab0f7;
+        background-color: rgba(122, 176, 247, 0.1);
+    }
+    
+    .genesis-title {
+        left: 0px;
+        top: 351px;
+        width: 351px;
+        background-color: #7ab0f7;
+    }
+    
+    .exodus {
+        left: 486px;
+        top: 27px;
+        width: 297px;
+        height: 297px;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+    }
+    
+    .exodus-title {
+        left: 486px;
+        top: 0px;
+        width: 297px;
+        background-color: #f0b070;
+    }
+    
+    .leviticus {
+        left: 378px;
+        top: 351px;
+        width: 459px;
+        height: 216px;
+        border: 3px solid #80d0a0;
+        background-color: rgba(128, 208, 160, 0.1);
+    }
+    
+    .leviticus-title {
+        left: 378px;
+        top: 351px;
+        width: 459px;
+        background-color: #80d0a0;
+    }
+    
+    .numbers {
+        left: 486px;
+        top: 621px;
+        width: 297px;
+        height: 297px;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+    }
+    
+    .numbers-title {
+        left: 486px;
+        top: 594px;
+        width: 297px;
+        background-color: #f0b070;
+    }
+    
+    .deuteronomy {
+        left: 864px;
+        top: 351px;
+        width: 270px;
+        height: 216px;
+        border: 3px solid #7ab0f7;
+        background-color: rgba(122, 176, 247, 0.1);
+    }
+    
+    .deuteronomy-title {
+        left: 864px;
+        top: 351px;
+        width: 270px;
+        background-color: #7ab0f7;
+    }
+    
+    /* Unit styles in full map */
+    .unit {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 12px;
+        z-index: 3;
+        transition: transform 0.2s;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .unit:hover {
+        transform: scale(1.2);
+        z-index: 10;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    
+    .unit.special {
+        border: 2px solid #CC0066;
+        width: 23px;
+        height: 23px;
+    }
+    
+    /* Unit background colors */
+    .color-d4f2ff { background-color: #d4f2ff; }
+    .color-e6ffee { background-color: #e6ffee; }
+    .color-d4d4ff { background-color: #d4d4ff; }
+    .color-ffe6e6 { background-color: #ffe6e6; }
+    .color-ffccaa { background-color: #ffccaa; }
+    .color-c8e6d2 { background-color: #c8e6d2; }
+    .color-f0f0f0 { background-color: #f0f0f0; }
+    
+    /* Exodus Quadrant Styles */
+    .exodus-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        height: 0;
+        padding-bottom: 100%;
+        margin: 30px auto;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .quadrant {
+        position: absolute;
+        width: 45%;
+        height: 42%;
+        z-index: 1;
+        border: 1px dashed rgba(240, 176, 112, 0.2);
+    }
+    
+    .quadrant-1 { top: 8%; left: 2%; }
+    .quadrant-2 { top: 8%; right: 2%; }
+    .quadrant-3 { bottom: 14%; left: 2%; }
+    .quadrant-4 { bottom: 14%; right: 2%; }
+    
+    /* Leviticus Concentric Rings */
+    .ring {
+        border: 2px solid #80d0a0;
+        border-radius: 50%;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .ring-outer { background-color: rgba(128, 208, 160, 0.1); }
+    .ring-middle { background-color: rgba(128, 208, 160, 0.2); }
+    .ring-inner { background-color: rgba(128, 208, 160, 0.3); }
+    .ring-center { 
+        background-color: #ffe6e6;
+        border-color: #CC0066;
+        font-weight: bold;
+    }
+    
+    /* ===== COMMENTARY-SPECIFIC STYLES ===== */
+    
+    /* Breadcrumb Navigation */
+    .breadcrumb {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 0.9em;
+    }
+    
+    .breadcrumb a {
+        color: #3498db;
+        text-decoration: none;
+    }
+    
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Unit Metadata */
+    .unit-metadata {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+        font-size: 0.95em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .unit-metadata span {
+        background-color: rgba(255,255,255,0.1);
+        padding: 5px 15px;
+        border-radius: 4px;
+    }
+    
+    /* Unit Navigation */
+    .unit-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0;
+        padding: 20px;
+        background-color: #ecf0f1;
+        border-radius: 6px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .unit-navigation a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .unit-navigation a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Book Map Container */
+    .book-map-container {
+        background-color: #f8f9fa;
+        border: 2px solid #dee2e6;
+        padding: 20px;
+        text-align: center;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+    
+    .deuteronomy-mini-map {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Opening Hook */
+    .opening-hook {
+        font-size: 1.2em;
+        font-style: italic;
+        color: #555;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-left: 4px solid #3498db;
+        margin-bottom: 30px;
+        line-height: 1.8;
+    }
+    
+    /* Torah Text Section */
+    .torah-text-section {
+        background-color: white;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .torah-text-section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    /* Color Legend */
+    .color-legend {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 6px;
+    }
+    
+    .color-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .color-swatch {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+    }
+    
+    /* Commentary Section */
+    .commentary-section {
+        background-color: white;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .commentary-section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .commentary-section h3 {
+        color: #3498db;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .commentary-section h4 {
+        color: #555;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    /* Structural Matrix Section */
+    .matrix-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .matrix-header h2 {
+        font-size: 28px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    .matrix-header p {
+        color: #666;
+        font-style: italic;
+    }
+    
+    /* Commentary Matrix Table */
+    .commentary-matrix {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+    
+    .commentary-matrix th,
+    .commentary-matrix td {
+        border: 2px solid #ddd;
+        padding: 20px;
+        vertical-align: top;
+    }
+    
+    /* Matrix headers */
+    .weft-rule {
+        background-color: #80d0a0;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        width: 180px;
+        font-size: 15px;
+    }
+    
+    .weft-rule .rule {
+        display: block;
+        font-weight: normal;
+        font-size: 13px;
+        margin-top: 8px;
+        font-style: italic;
+        line-height: 1.3;
+    }
+    
+    .column-header {
+        background-color: #7ab0f7;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .column-subtext {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    /* Matrix intersection cells */
+    .intersection {
+        background-color: #ffffff;
+        position: relative;
+    }
+    
+    .intersection-header {
+        color: #2c3e50;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+    
+    .intersection-content {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .intersection-note {
+        font-style: italic;
+        color: #666;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    
+    /* Variation boxes in matrix */
+    .variation-box {
+        background-color: #fef3c7;
+        border: 1px solid #f59e0b;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 13px;
+    }
+    
+    /* Framework cells */
+    .framework-row {
+        background-color: #f8f9fa;
+    }
+    
+    .framework-cell {
+        background-color: #f8f9fa;
+    }
+    
+    /* Matrix Table (simplified version) */
+    .matrix-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .matrix-table th,
+    .matrix-table td {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: left;
+    }
+    
+    .matrix-table th {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .matrix-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    
+    /* Theological Points */
+    .theological-point {
+        background-color: #e8f4fd;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 6px;
+        border-left: 4px solid #3498db;
+    }
+    
+    .theological-point h4 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    /* Conclusion Section */
+    .conclusion-section {
+        background-color: #f0f8f0;
+        border: 2px solid #80d0a0;
+        padding: 30px;
+        border-radius: 8px;
+        margin-top: 40px;
+    }
+    
+    .conclusion-section h2 {
+        color: #5da77a;
+        margin-bottom: 20px;
+    }
+    
+    /* Enhanced Mobile Responsive Design */
+    @media (max-width: 1024px) {
+        /* Tablet adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        /* MOBILE HEADER FIX - Remove sticky positioning */
+        header {
+            position: relative; /* Changed from sticky to relative */
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+        
+        nav {
+            position: relative;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background-color: #2c3e50;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Hero adjustments */
+        .hero {
+            padding: 1rem 0;
+        }
+        
+        .site-title h1 {
+            font-size: 1.8rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1rem;
+        }
+        
+        .woven-torah-link {
+            padding: 0.7rem 1rem;
+            margin: 0.8rem auto;
+        }
+        
+        .woven-torah-link h3 {
+            font-size: 1.1rem;
+        }
+        
+        .woven-torah-link p {
+            font-size: 0.85rem;
+        }
+        
+        /* Hero buttons stack on mobile */
+        .hero-buttons {
+            gap: 0.6rem;
+            margin-top: 0.8rem;
+        }
+        
+        .hero-buttons a {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+        
+        /* Unit metadata stacks on mobile */
+        .unit-metadata {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Unit navigation stacks */
+        .unit-navigation {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        /* Matrix tables scroll horizontally on mobile */
+        .commentary-matrix {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        /* Reduce padding on mobile */
+        .commentary-section,
+        .torah-text-section {
+            padding: 20px;
+        }
+        
+        /* Stack color legend vertically */
+        .color-legend {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        /* Content adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            gap: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        /* Small mobile adjustments */
+        .container {
+            padding: 0 15px;
+        }
+        
+        .site-title h1 {
+            font-size: 2rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1.1rem;
+        }
+        
+        .woven-torah-link {
+            padding: 1.25rem;
+            margin: 1.5rem auto;
+        }
+        
+        .woven-torah-link h3 {
+            font-size: 1.25rem;
+        }
+        
+        .opening-hook {
+            font-size: 1.1em;
+            padding: 15px;
+        }
+        
+        #content {
+            padding: 1rem;
+        }
+        
+        /* Stack footer sections */
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    /* Hebrew Text Support */
+    [lang=he], .hebrew {
+        font-family: 'David Libre', 'Arial', serif;
+        direction: rtl;
+        text-align: right;
+    }
+    
+    /* Print styles */
+    @media print {
+        header, footer, .menu-toggle {
+            display: none;
+        }
+        
+        .main-content {
+            padding: 0;
+        }
+        
+        .unit-navigation {
+            display: none;
+        }
+        
+        .book-map-container {
+            page-break-inside: avoid;
+        }
+        
+        .commentary-matrix {
+            page-break-inside: avoid;
+        }
+    }/* =======================================
+   Additional Matrix Table Styling for Genesis
+   ======================================= */
+
+/* Fix for matrix table units */
+.matrix-table .unit {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    text-align: left;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.matrix-table .unit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.matrix-table .unit-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.matrix-table .unit-reference {
+    font-style: italic;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: center;
+    font-size: 12px;
+}
+
+.matrix-table .unit-description {
+    font-size: 13px;
+    line-height: 1.3;
+    text-decoration: none !important;
+}
+
+/* Remove underlines from unit links */
+.matrix-table .unit,
+.matrix-table .unit:hover,
+.matrix-table .unit:focus,
+.matrix-table .unit:active,
+.matrix-table .unit * {
+    text-decoration: none !important;
+}
+
+/* Matrix table column header styles */
+.matrix-table .col-cosmic,
+.matrix-table .col-transition,
+.matrix-table .col-covenants,
+.matrix-table .col-family,
+.matrix-table .col-political {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+.matrix-table .col-cosmic { background-color: #7ab0f7; }
+.matrix-table .col-transition { background-color: #CC0066; }
+.matrix-table .col-covenants { background-color: #80d0a0; }
+.matrix-table .col-family { background-color: #9999FF; }
+.matrix-table .col-political { background-color: #7ab0f7; }
+
+/* Column letter and theme label styling */
+.matrix-table .column-letter {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.matrix-table .theme-label {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+/* Row label styling */
+.matrix-table .row-label {
+    background-color: #7ab0f7;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.matrix-table .row-number {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.matrix-table .row-desc {
+    font-size: 12px;
+}
+
+/* Fix empty cells */
+.matrix-table .empty-cell {
+    background-color: rgba(122, 176, 247, 0.1);
+    border: 1px solid rgba(122, 176, 247, 0.2);
+}
+    </style>
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="container">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                    <li><a href="/Mishnah-New/Hebrew/Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">Mishnah</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/hebrew%20index.html">עברית</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section - Shows on homepage and other general pages -->
+    <!-- #BeginEditable "writehere" -->
+    <!-- #EndEditable -->
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="container">
+            <div id="content">
+                <!-- #BeginEditable "page-scripts" -->
+              <!-- Page Header -->
+<div class="unit-title-section">
+    <h1>Deuteronomy Unit 3: The Decalogue</h1>
+    <p class="unit-info">
+        &nbsp;</p>
+	<p class="unit-info">
+        <strong>Structure:</strong> 4×2 with Chiastic Framework | 
+        <strong>Verses:</strong> Deuteronomy 5:1-6:3 | 
+        <strong>Theme:</strong> The Second Decalogue in Context
+    </p>
+</div>
+<!-- Series Note -->
+<div class="series-note">
+    <p>&nbsp;</p>
+	<p><strong>A New Speech Begins:</strong> With the words "Hear, O Israel" (שמע ישראל), Moses begins a new speech that will extend through multiple units. This unit opens the second major section of Deuteronomy and forms part of a larger pattern: Units 1-6 are organized in three pairs, with this unit vertically aligned with Units 1 and 5 in the book's structure. While Unit 2 concluded Moses' first speech by placing YHWH at the center of the law, Unit 3 now presents the Decalogue itself—but with significant variations from the Exodus version that reflect the mediated nature of this second giving.</p>
+</div>
+
+<!-- Quick Navigation -->
+<nav class="commentary-nav">
+    <a href="#introduction">Introduction</a>
+    <a href="#matrix">Structural Matrix</a>
+    <a href="#chiastic-framework">The Chiastic Framework</a>
+    <a href="#column-pattern">The Direct/Indirect Pattern</a>
+    <a href="#decalogue-analysis">Analyzing the Variations</a>
+    <a href="#five-pair-transformation">The Five-Pair Transformation</a>
+    <a href="#interweaving">The Art of Interweaving</a>
+    <a href="#conclusion">Conclusion</a>
+</nav>
+
+<!-- Introduction -->
+<section id="introduction" class="commentary-section">
+    <h2>Understanding the Second Decalogue</h2>
+    
+    <p>With the iconic call "Hear, O Israel" (שמע ישראל), Moses begins a new speech that marks a major transition in Deuteronomy. This is not merely a continuation of his previous discourse but the opening of a new section that will extend through multiple units. The placement of this unit is significant within Deuteronomy's larger architecture—it aligns vertically with Units 1 and 5, suggesting a structural relationship that spans the book.</p>
+
+    <h3>The Structural Context</h3>
+    <p>Deuteronomy's first six units are organized in three pairs:</p>
+    <ul>
+        <li><strong>Units 1-2:</strong> Moses' first speech (historical revision → legal framework)</li>
+        <li><strong>Units 3-4:</strong> The "Hear, Israel" speech begins (Decalogue → consequences)</li>
+        <li><strong>Units 5-6:</strong> Continuation of covenant teaching</li>
+    </ul>
+    
+    <p>Unit 3's vertical alignment with Units 1 and 5 creates an additional organizing principle—a column that may represent key transitional moments in Moses' rhetoric.</p>
+
+    <h3>The Key Discovery</h3>
+    <p>Within this larger framework, Unit 3 presents one of the most sophisticated examples of biblical weaving. The Decalogue (Ten Commandments) is embedded within a carefully constructed chiastic framework that explains why this version differs from the one in Exodus:</p>
+    <ul>
+        <li><strong>Column a (Direct):</strong> All commandments identical to Exodus</li>
+        <li><strong>Column b (Indirect):</strong> All commandments contain variations</li>
+    </ul>
+
+    <p>This pattern is revealed and reinforced by the framework Moses constructs around the Decalogue, creating an outstanding example of the art of the Biblical weaver.</p>
+    
+    <p>What makes this unit particularly remarkable is that Moses (or the master weaver "M") has created an entirely new five-pair structure from the same Ten Words. By strategically modifying five of the commandments while leaving five unchanged, M demonstrates that the divine paradigm of woven text can be transformed while maintaining its essential organizing principles. This transformation from the Exodus Decalogue's five consecutive pairs to Deuteronomy's five non-consecutive pairs provides incontrovertible evidence that the original Decalogue was meant to be read as a woven structure.</p>
+    
+    <p>The variations in the Decalogue continue Moses' revisionist approach established in Unit 1. There, Moses systematically revised wilderness narratives—taking credit for Jethro's judicial innovation, shifting blame for the spies from YHWH to the people, and creating new theological frameworks for the conquest. Here in Unit 3, Moses applies the same revisionist technique to divine law itself, transforming the cosmic Decalogue into a document suited to his immediate rhetorical purpose: preparing the second generation for successful conquest of the land.</p>
+</section>
+
+<!-- Structural Matrix -->
+<section id="matrix" class="structural-matrix-section">
+    <div class="matrix-header">
+        <h2>Torah Map: Structural Matrix</h2>
+        <p>The Chiastic Framework Revealing the Decalogue's Structure</p>
+    </div>
+    
+    <div class="matrix-overview">
+        <h3>Unit Architecture</h3>
+        <p><strong>Chiastic Structure:</strong> Rows 1 and 4 form a chiastic frame around the Decalogue (Rows 2-3). The framework must be read as the context that explains the Decalogue's arrangement and variations. Critical connections link Row 1 to Row 3 and Row 4 to Row 2, creating an interwoven structure.</p>
+    </div>
+    
+    <table class="commentary-matrix">
+        <thead>
+            <tr>
+                <th class="corner-cell">Row</th>
+                <th class="warp-rule">
+                    Column a: Direct<br/>
+                    <span class="rule">Direct connection to deity<br/>
+                    Identical to Exodus version<br/>
+                    Immediate relationship</span>
+                </th>
+                <th class="warp-rule">
+                    Column b: Indirect<br/>
+                    <span class="rule">Indirect connection to deity<br/>
+                    All variations from Exodus<br/>
+                    Mediated relationship</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="framework-row">
+                <td class="weft-rule">
+                    1: Receiving the Laws<br/>
+                    <span class="rule">How Israel receives<br/>divine instruction</span>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">1a: Direct Speech</div>
+                    <div class="intersection-content">
+                        Moses summons all Israel: "Hear, O Israel, the statutes and judgments which I speak in your ears this day."
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">1b: Indirect Speech</div>
+                    <div class="intersection-content">
+                        "I stood between YHWH and you at that time, to show you the word of YHWH: for ye were afraid by reason of the fire, and went not up into the mount."
+                    </div>
+                </td>
+            </tr>
+            <tr class="decalogue-row">
+                <td class="weft-rule">
+                    2A: Material Cause<br/>
+                    <span class="rule">Deity Himself</span>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">2a-A: I am YHWH</div>
+                    <div class="intersection-content">
+                        "I am YHWH thy God, which brought thee out of the land of Egypt, from the house of bondage. Thou shalt have no other gods before me..." (Identical to Exodus)
+                    </div>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">2b-A: Sabbath Transformed</div>
+                    <div class="intersection-content">
+                        <span class="difference-highlight">"Keep the sabbath day"</span> (not "Remember")<br/>
+                        <span class="difference-highlight">"as YHWH thy God commanded thee"</span> (addition)<br/>
+                        <span class="difference-highlight">"Remember that thou wast a servant in the land of Egypt"</span> (not creation)
+                    </div>
+                </td>
+            </tr>
+            <tr class="decalogue-row">
+                <td class="weft-rule">
+                    2B: Final Cause<br/>
+                    <span class="rule">Rewards/Punishment</span>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">2a-B: Name in Vain</div>
+                    <div class="intersection-content">
+                        "Thou shalt not take the name of YHWH thy God in vain; for YHWH will not hold him guiltless that taketh his name in vain" (Identical to Exodus)
+                    </div>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">2b-B: Honor Parents Extended</div>
+                    <div class="intersection-content">
+                        "Honor thy father and thy mother, as YHWH thy God commanded thee; <span class="difference-highlight">that thy days may be prolonged, and that it may go well with thee, in the land which YHWH thy God giveth thee"</span> (additions)
+                    </div>
+                </td>
+            </tr>
+            <tr class="decalogue-row">
+                <td class="weft-rule">
+                    3A: The Individual<br/>
+                    <span class="rule">Direct vs Indirect harm</span>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">3a-A: Murder</div>
+                    <div class="intersection-content">
+                        "Thou shalt not murder" (Identical to Exodus)
+                    </div>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">3b-A: False Witness</div>
+                    <div class="intersection-content">
+                        <span class="difference-highlight">"Neither shalt thou bear vain witness against thy neighbor"</span> (שוא "vain" not שקר "false")
+                    </div>
+                </td>
+            </tr>
+            <tr class="decalogue-row">
+                <td class="weft-rule">
+                    3B: His Wife<br/>
+                    <span class="rule">Act vs Desire</span>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">3a-B: Adultery</div>
+                    <div class="intersection-content">
+                        "Neither shalt thou commit adultery" (Identical to Exodus)
+                    </div>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">3b-B: Coveting Wife</div>
+                    <div class="intersection-content">
+                        <span class="difference-highlight">"Neither shalt thou covet thy neighbor's wife"</span> (separated from property and listed first)
+                    </div>
+                </td>
+            </tr>
+            <tr class="decalogue-row">
+                <td class="weft-rule">
+                    3C: His Property<br/>
+                    <span class="rule">Taking vs Desiring</span>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">3a-C: Stealing</div>
+                    <div class="intersection-content">
+                        "Neither shalt thou steal" (Identical to Exodus)
+                    </div>
+                </td>
+                <td class="intersection decalogue-cell">
+                    <div class="intersection-header">3b-C: Desiring Property</div>
+                    <div class="intersection-content">
+                        <span class="difference-highlight">"Neither shalt thou desire"</span> (תתאוה not תחמד) thy neighbor's house, his field, or his manservant, or his maidservant, his ox, or his ass, or any thing that is thy neighbor's
+                    </div>
+                </td>
+            </tr>
+            <tr class="framework-row">
+                <td class="weft-rule">
+                    4A: Deity's Law<br/>
+                    <span class="rule">Reception of law</span>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">4a-A: Direct Divine Speech</div>
+                    <div class="intersection-content">
+                        "These words YHWH spoke unto all your assembly in the mount out of the midst of the fire"
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">4b-A: Mediated Teaching</div>
+                    <div class="intersection-content">
+                        "Now these are the commandments, the statutes, and the judgments, which YHWH your God commanded to teach you"
+                    </div>
+                </td>
+            </tr>
+            <tr class="framework-row">
+                <td class="weft-rule">
+                    4B: Fear of Deity<br/>
+                    <span class="rule">Motivation for obedience</span>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">4a-B: Direct Fear</div>
+                    <div class="intersection-content">
+                        "And it came to pass, when ye heard the voice out of the midst of the darkness... ye said: 'We have heard his voice out of the midst of the fire'"
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">4b-B: Fear Through Law</div>
+                    <div class="intersection-content">
+                        "That thou mightest fear YHWH thy God, to keep all his statutes and his commandments"
+                    </div>
+                </td>
+            </tr>
+            <tr class="framework-row">
+                <td class="weft-rule">
+                    4C: Divine Promise<br/>
+                    <span class="rule">Covenant blessing</span>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">4a-C: Divine Wish</div>
+                    <div class="intersection-content">
+                        "Oh that there were such a heart in them, that they would fear me, and keep all my commandments always"
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">4b-C: Promise Through Obedience</div>
+                    <div class="intersection-content">
+                        "Hear therefore, O Israel, and observe to do it; that it may be well with thee, and that ye may increase mightily"
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Chiastic Framework Analysis -->
+<section id="chiastic-framework" class="commentary-section">
+    <h2>The Chiastic Framework</h2>
+    
+    <p>The framework rows (1 and 4) create a chiastic structure that illuminates the Decalogue rows (2-3):</p>
+
+    <h3>The Chiastic Connections</h3>
+    <ul>
+        <li><strong>Row 1 → Row 3:</strong> The mode of receiving (direct/indirect speech) connects to the mode of human action (direct/indirect harm)</li>
+        <li><strong>Row 4 → Row 2:</strong> The response to revelation (direct encounter/mediated encounter) connects to the divine basis of law (immediate/mediated relationship)</li>
+    </ul>
+</section>
+
+<!-- Column Pattern Analysis -->
+<section id="column-pattern" class="commentary-section">
+    <h2>The Direct/Indirect Pattern</h2>
+    
+    <p>The column consistency reveals the theological principle behind the variations:</p>
+
+    <h3>Column a: Direct Connection</h3>
+    <ul>
+        <li>All commandments exactly as in Exodus</li>
+        <li>Represents unmediated divine-human relationship</li>
+        <li>Focus on immediate actions and consequences</li>
+        <li>The "pure" law as originally given</li>
+    </ul>
+
+    <h3>Column b: Indirect Connection</h3>
+    <ul>
+        <li>All commandments contain variations</li>
+        <li>Represents mediated relationship (through Moses)</li>
+        <li>Additions emphasize Moses' role: "as YHWH commanded thee"</li>
+        <li>The law as interpreted and applied</li>
+    </ul>
+</section>
+
+<!-- Decalogue Variations Analysis -->
+<section id="decalogue-analysis" class="commentary-section">
+    <h2>Analyzing the Variations</h2>
+    
+    <p>Every variation in Column b follows the indirect/mediated pattern:</p>
+
+    <h3>Sabbath Command</h3>
+    <ul>
+        <li><strong>Exodus:</strong> "Remember" (זכור) - immediate mental act</li>
+        <li><strong>Deuteronomy:</strong> "Keep" (שמור) - ongoing observance</li>
+        <li><strong>Addition:</strong> "as YHWH thy God commanded thee" - emphasizes mediation</li>
+        <li><strong>New rationale:</strong> Links to slavery in Egypt, not just creation</li>
+    </ul>
+    
+    <p>This shift in the Sabbath rationale continues Moses' pattern of revisionist history from Unit 1. Just as Moses there reframed the spies narrative to shift blame from YHWH to the people, and claimed credit for Jethro's judicial system, here he transforms the cosmic creation rationale into a historical liberation narrative. The Sabbath is no longer primarily about imitating divine rest after creation but about remembering human slavery and divine redemption—a distinctly Mosaic reinterpretation that serves his rhetorical purpose of preparing the people for conquest.</p>
+
+    <h3>Honor Parents</h3>
+    <ul>
+        <li><strong>Addition:</strong> "that it may be well with thee" - practical benefit</li>
+        <li><strong>Addition:</strong> "which YHWH thy God giveth thee" - territorial context</li>
+    </ul>
+
+    <h3>False Witness</h3>
+    <ul>
+        <li><strong>Exodus:</strong> "false" (שקר) witness</li>
+        <li><strong>Deuteronomy:</strong> "vain" (שוא) witness - broader prohibition</li>
+    </ul>
+
+    <h3>Coveting</h3>
+    <ul>
+        <li><strong>Structure:</strong> Split into two separate commandments</li>
+        <li><strong>Order:</strong> Wife listed separately and first</li>
+        <li><strong>Verb change:</strong> "desire" (תתאוה) for property vs. "covet" (תחמד)</li>
+    </ul>
+</section>
+
+<!-- Five-Pair Transformation Section -->
+<section id="five-pair-transformation" class="commentary-section">
+    <h2>The Five-Pair Transformation: From Consecutive to Non-Consecutive Pairs</h2>
+    
+    <p>The variations between the Exodus and Deuteronomy versions of the Decalogue are not random but follow a sophisticated pattern that creates an entirely new five-pair structure. By changing exactly five Words (3, 4, 8-10) while keeping five unchanged (1, 2, 5-7), M creates a new arrangement where:</p>
+    
+    <ul>
+        <li><strong>Tablet 1 (Unchanged/Primary):</strong> Contains Words 1, 2, 5, 6, 7</li>
+        <li><strong>Tablet 2 (Changed/Derivative):</strong> Contains Words 3, 4, 8, 9, 10</li>
+    </ul>
+    
+    <div class="transformation-diagram">
+        <div class="diagram-title">The Five-Pair Transformation: How Consecutive Becomes Non-Consecutive</div>
+        
+        <table class="transformation-table">
+            <thead>
+                <tr>
+                    <th class="pair-label">Pair</th>
+                    <th class="exodus-header">Exodus: Consecutive Pairs</th>
+                    <th class="deut-header">Deuteronomy: Non-Consecutive Pairs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="pair-label">A<br/><span class="pair-theme">YHWH in History</span></td>
+                    <td class="exodus-pair">
+                        (1) I am YHWH who brought thee out of Egypt<br/>
+                        ↔<br/>
+                        (2) Thou shalt not take the name of YHWH in vain
+                    </td>
+                    <td class="deut-pair">
+                        (1) I am YHWH who brought thee out of Egypt <span class="unchanged">[unchanged]</span><br/>
+                        ↔<br/>
+                        (3) Keep the Sabbath... remember thou wast servant in Egypt <span class="changed">[changed]</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="pair-label">B<br/><span class="pair-theme">YHWH and Individuals</span></td>
+                    <td class="exodus-pair">
+                        (3) Remember the Sabbath day to keep it holy<br/>
+                        ↔<br/>
+                        (4) Honor thy father and thy mother
+                    </td>
+                    <td class="deut-pair">
+                        (2) Thou shalt not take the name of YHWH in vain <span class="unchanged">[unchanged]</span><br/>
+                        ↔<br/>
+                        (4) Honor thy father and mother, as YHWH commanded <span class="changed">[changed]</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="pair-label">C<br/><span class="pair-theme">Your Fellow</span></td>
+                    <td class="exodus-pair">
+                        (5) Thou shalt not murder<br/>
+                        ↔<br/>
+                        (6) Thou shalt not commit adultery
+                    </td>
+                    <td class="deut-pair">
+                        (5) Thou shalt not murder <span class="unchanged">[unchanged]</span><br/>
+                        ↔<br/>
+                        (8) Neither shalt thou bear vain witness <span class="changed">[changed]</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="pair-label">D<br/><span class="pair-theme">His Wife</span></td>
+                    <td class="exodus-pair">
+                        (7) Thou shalt not steal<br/>
+                        ↔<br/>
+                        (8) Thou shalt not bear false witness
+                    </td>
+                    <td class="deut-pair">
+                        (6) Neither shalt thou commit adultery <span class="unchanged">[unchanged]</span><br/>
+                        ↔<br/>
+                        (9) Neither shalt thou covet thy neighbor's wife <span class="changed">[changed]</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="pair-label">E<br/><span class="pair-theme">His Possessions</span></td>
+                    <td class="exodus-pair">
+                        (9) Thou shalt not covet thy neighbor's house<br/>
+                        ↔<br/>
+                        (10) Thou shalt not covet thy neighbor's wife...
+                    </td>
+                    <td class="deut-pair">
+                        (7) Neither shalt thou steal <span class="unchanged">[unchanged]</span><br/>
+                        ↔<br/>
+                        (10) Neither shalt thou desire thy neighbor's house... <span class="changed">[changed]</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <p>This produces five new pairs that maintain the same thematic relationships as the original but in a transformed arrangement:</p>
+    
+    <table class="pair-comparison">
+        <thead>
+            <tr>
+                <th>Pair Theme</th>
+                <th>Tablet 1: Primary/Unchanged</th>
+                <th>Tablet 2: Derivative/Changed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="theme-cell">A: YHWH in History</td>
+                <td>(1) I am YHWH thy God, who brought thee out of Egypt...</td>
+                <td>(3) Observe the Sabbath... remember thou wast a servant in Egypt</td>
+            </tr>
+            <tr>
+                <td class="theme-cell">B: YHWH and Individuals</td>
+                <td>(2) Thou shalt not take the name of YHWH in vain</td>
+                <td>(4) Honor thy father and mother, as YHWH commanded thee</td>
+            </tr>
+            <tr>
+                <td class="theme-cell">C: Your Fellow</td>
+                <td>(5) Thou shalt not murder</td>
+                <td>(8) Neither shalt thou bear vain witness against thy neighbor</td>
+            </tr>
+            <tr>
+                <td class="theme-cell">D: His Wife</td>
+                <td>(6) Thou shalt not commit adultery</td>
+                <td>(9) Neither shalt thou covet thy neighbor's wife</td>
+            </tr>
+            <tr>
+                <td class="theme-cell">E: His Possessions</td>
+                <td>(7) Thou shalt not steal</td>
+                <td>(10) Neither shalt thou desire thy neighbor's house, field...</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>The genius of this transformation is that the derivative commandments in Tablet 2 all relate to their primary counterparts in Tablet 1. For example, "do not covet your fellow man's wife" (9) derives from and prevents "adultery" (6). This relationship of primary-to-derivative perfectly mirrors the relationship between the Exodus Decalogue (primary divine revelation) and the Deuteronomy decalogue (Moses' derivative recitation).</p>
+    
+    <h3>The Hierarchical Progression</h3>
+    <p>Both arrangements maintain the same hierarchical flow:</p>
+    <ul>
+        <li><strong>Pair A:</strong> YHWH in history - the foundation of all that follows</li>
+        <li><strong>Pair B:</strong> YHWH and persons - divine-human relationships</li>
+        <li><strong>Pair C:</strong> Persons - human relationships at the basic level</li>
+        <li><strong>Pair D:</strong> Their wives - family relationships</li>
+        <li><strong>Pair E:</strong> Their property - material possessions</li>
+    </ul>
+    
+    <p>This transformation demonstrates that M was not merely copying the Decalogue but creatively reinterpreting it according to the same divine paradigm. The woven structure remains intact even as the specific arrangement changes.</p>
+</section>
+
+<!-- The Art of Interweaving -->
+<section id="interweaving" class="commentary-section">
+    <h2>The Art of Biblical Weaving</h2>
+    
+    <p>This unit demonstrates sophisticated literary techniques:</p>
+
+    <h3>Structural Brilliance</h3>
+    <ul>
+        <li>The framework doesn't just surround the Decalogue—it interprets it</li>
+        <li>Column consistency reveals the organizing principle</li>
+        <li>Chiastic structure reinforces the direct/indirect theme</li>
+        <li>Interwoven connections create multiple layers of meaning</li>
+        <li>The five-pair transformation proves the original was meant to be read as pairs</li>
+    </ul>
+
+    <h3>Theological Implications</h3>
+    <p>The structure suggests that:</p>
+    <ul>
+        <li>The Exodus Decalogue represents the ideal, direct divine-human encounter</li>
+        <li>The Deuteronomy version acknowledges the reality of mediated relationship</li>
+        <li>Both versions are necessary—the pure and the applied</li>
+        <li>Moses' mediation doesn't diminish but contextualizes divine law</li>
+        <li>The transformation itself becomes a teaching about how divine law adapts to human circumstances</li>
+    </ul>
+    
+    <p>This pattern of revision serves Moses' larger rhetorical strategy across Deuteronomy. As the Unit 1 commentary observes, Moses systematically omitted Sinai and the Tabernacle from his historical review, grounding his authority instead in his role as interpreter of Israel's experiences. Now in Unit 3, when he finally addresses the Decalogue, he doesn't simply repeat it—he transforms it, demonstrating his authority to reinterpret even divine law for the new generation's circumstances. The indirect column (b) with all its variations represents Moses doing what he has been doing throughout Deuteronomy: taking divine material and making it speak to the immediate needs of conquest and settlement.</p>
+    
+    <h3>Literary Mastery</h3>
+    <p>M's achievement here is remarkable:</p>
+    <ul>
+        <li>Creates an entirely new five-pair structure while using the same Ten Words</li>
+        <li>Maintains all the organizing principles of the original</li>
+        <li>Makes the changes meaningful—each variation serves the primary/derivative theme</li>
+        <li>Provides "incontrovertible testimony" that the Exodus Decalogue was woven</li>
+    </ul>
+</section>
+
+<!-- Conclusion -->
+<section id="conclusion" class="commentary-section">
+    <div class="conclusion-box">
+        <h3>Conclusion: Understanding Through Structure</h3>
+        
+        <p>Deuteronomy Unit 3 marks a pivotal moment in the book's structure. The "Hear, O Israel" that opens this unit signals not just a new speech but a new mode of address—moving from historical retrospective to immediate covenant renewal. The structural patterns—both the internal chiastic framework and the larger alignment with Units 1 and 5—work together to emphasize this moment of divine-human encounter, even as the variations in Column b acknowledge the necessary mediation of Moses.</p>
+
+        <p>This unit stands as "an outstanding example of the art of the Biblical weaver," demonstrating how structure itself can serve as commentary, revealing theological truths through literary form. The beginning of the "Hear, Israel" speech with the Decalogue establishes the pattern that will continue through the paired units that follow.</p>
+        
+        <p>Most significantly, this unit provides M's own incontrovertible testimony that the Exodus Decalogue was created to be read as five consecutive pairs. Without first understanding the paired structure in Exodus, we could never recognize the sophisticated transformation in Deuteronomy. The fact that M could create an entirely new five-pair structure using the same Words—maintaining both the hierarchical themes (YHWH → persons → wives → property) and the primary/derivative relationship—demonstrates mastery of the woven text paradigm that goes beyond mere imitation to creative transformation.</p>
+        
+        <p>The transformation reveals that woven text is not a rigid format but a living paradigm capable of adaptation while maintaining its essential principles. Just as the tablets were given twice—first directly, then through mediation—so too the literary structure demonstrates both continuity and transformation, showing how divine patterns can be reinterpreted for new circumstances while maintaining their fundamental truth.</p>
+        
+        <p>Moses' treatment of the Decalogue epitomizes his role throughout Deuteronomy as both faithful transmitter and creative interpreter of divine law. The same Moses who in Unit 1 boldly revised historical narratives to serve his rhetorical purposes now demonstrates that even the most sacred text—the divine Words themselves—can be transformed when filtered through human mediation. Yet this is not corruption but completion: the Deuteronomy Decalogue shows how divine law lives and breathes through human interpretation, adapting to new circumstances while maintaining its essential structure and truth.</p>
+    </div>
+</section>
+
+<!-- Links Section -->
+<div class="links-section">
+    <a href="deuteronomy-unit-2.html">← Previous: Unit 2</a>
+    <a href="https://chaver.com/woven/deuteronomy-unit-3/" target="_blank">View Original Torah Unit</a>
+    <a href="../index.html">Torah Commentary Project Home</a>
+</div>                
+                <!-- #EndEditable -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Torah Resources</h4>
+                    <ul>
+                        <li><a href="/woven/">Woven Torah Units</a></li>
+                        <li><a href="/torah-commentary-project/">Torah Commentary Project</a></li>
+                        <li><a href="/articles/">Torah Articles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Mishnah Resources</h4>
+                    <ul>
+                        <li><a href="/mishnah/">Mishnah Chapters</a></li>
+                        <li><a href="/mishnah/structure/">Mishnah Structure</a></li>
+                        <li><a href="/mishnah/about/">About the Mishnah</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About This Site</h4>
+                    <p>This site offers a new approach to the study of the Torah and the Mishnah. It is based on an original discovery which has been published in peer-reviewed journals and is consistent with traditional Jewish understandings.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chaver.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torah Commentary Project - Organizational Plan</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+        .toc {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+            padding: 0;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .toc a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .toc a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        .status-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .completed {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        .needs-work {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.9em;
+        }
+        code {
+            background: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+        }
+        .workflow-phase {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .checklist {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .checklist li {
+            margin: 8px 0;
+        }
+        .priority-high {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .priority-medium {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        .priority-low {
+            color: #27ae60;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .note {
+            background: #fffacd;
+            border-left: 4px solid #f39c12;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Torah Commentary Project: Master Organizational Plan</h1>
+        
+        <p><strong>Last Updated:</strong> October 2025<br>
+        <strong>Purpose:</strong> Comprehensive organizational framework ensuring uniformity and consistency across all project components</p>
+
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#overview">1. Project Structure Overview</a></li>
+                <li><a href="#status">2. Current Status</a></li>
+                <li><a href="#architecture">3. Site Architecture</a></li>
+                <li><a href="#dwt">4. Expression Web / DWT Strategy</a></li>
+                <li><a href="#css">5. CSS Organization</a></li>
+                <li><a href="#workflow">6. Workflow for Completing a Book</a></li>
+                <li><a href="#naming">7. Naming Conventions</a></li>
+                <li><a href="#database">8. Database Integration</a></li>
+                <li><a href="#priorities">9. Priority Action Items</a></li>
+                <li><a href="#checklist">10. Quality Checklist</a></li>
+            </ul>
+        </div>
+
+        <h2 id="overview">1. Project Structure Overview</h2>
+        
+        <p>The Torah Commentary Project consists of three major tiers:</p>
+
+        <h3>TIER 1: Torah-Wide Overview</h3>
+        <ul>
+            <li>General introduction to the five books and their relationships</li>
+            <li>The weave/chariot architecture explanation</li>
+            <li>How the books fit together (horizontal and vertical threads)</li>
+            <li>Reading strategies for multiple contexts</li>
+        </ul>
+
+        <h3>TIER 2: Book-Level Analysis (repeated for each of 5 books)</h3>
+        <ul>
+            <li><strong>Part A:</strong> Identifying Literary Units</li>
+            <li><strong>Part B:</strong> Discovering the Book's Structure/Map</li>
+            <li><strong>Part C:</strong> Book Commentary (based on the map)</li>
+            <li><strong>Part D:</strong> Individual Unit Commentaries (19, 19, 22, 13, 13 units)</li>
+        </ul>
+
+        <h3>TIER 3: Administrative/Support Materials</h3>
+        <ul>
+            <li>Database tracking (Excel files)</li>
+            <li>Unit commentary taxonomy/template</li>
+            <li>Available materials inventory</li>
+            <li>CSS/DWT standards for Expression Web</li>
+            <li>Workflow documentation</li>
+        </ul>
+
+        <h2 id="status">2. Current Status</h2>
+
+        <div class="status-box completed">
+            <h3>✓ Completed</h3>
+            <ul>
+                <li>Genesis Parts A, B, C (nearly complete)</li>
+                <li>Unit taxonomy template</li>
+                <li>Database structure (Excel)</li>
+                <li>Deuteronomy extensive analysis (Units 1-4, 8, overall structure)</li>
+                <li>Torah overview at maps with commentary</li>
+            </ul>
+        </div>
+
+        <div class="status-box needs-work">
+            <h3>⚠ Needs Organization</h3>
+            <ul>
+                <li>Pre-Genesis work on overall Torah structure</li>
+                <li>Workflow documentation</li>
+                <li>CSS/DWT standardization</li>
+                <li>Consistent naming conventions</li>
+                <li>Navigation structure across all tiers</li>
+                <li>Genesis Part D (19 unit commentaries)</li>
+            </ul>
+        </div>
+
+        <h2 id="architecture">3. Site Architecture</h2>
+
+        <p>Recommended directory structure for the entire project:</p>
+
+<pre>
+torah-commentary-project/
+├── index.html (Landing page)
+├── Torah-Overview/
+│   ├── five-books-introduction.html
+│   ├── weave-architecture.html
+│   ├── horizontal-vertical-threads.html
+│   └── reading-strategies.html
+├── Genesis/
+│   ├── genesis-index.html
+│   ├── Part-A-Units.html (Units of Genesis)
+│   ├── Part-B-Map.html (Discovering the Map)
+│   ├── Part-C-Commentary.html (Genesis Commentary)
+│   └── Units/
+│       ├── genesis-unit-01.html
+│       ├── genesis-unit-02.html
+│       └── ... (through 19)
+├── Exodus/
+│   ├── exodus-index.html
+│   ├── Part-A-Units.html
+│   ├── Part-B-Map.html
+│   ├── Part-C-Commentary.html
+│   └── Units/
+│       └── ... (19 units)
+├── Leviticus/
+│   ├── leviticus-index.html
+│   ├── Part-A-Units.html
+│   ├── Part-B-Map.html
+│   ├── Part-C-Commentary.html
+│   └── Units/
+│       └── ... (22 units)
+├── Numbers/
+│   ├── numbers-index.html
+│   ├── Part-A-Units.html
+│   ├── Part-B-Map.html
+│   ├── Part-C-Commentary.html
+│   └── Units/
+│       └── ... (13 units)
+├── Deuteronomy/
+│   ├── deuteronomy-index.html
+│   ├── Part-A-Units.html
+│   ├── Part-B-Map.html
+│   ├── Part-C-Commentary.html
+│   └── Units/
+│       └── ... (13 units)
+├── Admin/
+│   ├── project-organizational-plan.html (THIS FILE)
+│   ├── workflow-guide.html
+│   ├── style-guide.html
+│   ├── database-documentation.html
+│   └── available-materials.html
+└── Assets/
+    ├── CSS/
+    │   └── main.css (master stylesheet)
+    ├── Images/
+    └── Templates/
+        ├── book-index.dwt
+        ├── parts-ABC.dwt
+        └── unit-commentary.dwt
+</pre>
+
+        <h2 id="dwt">4. Expression Web / DWT Strategy</h2>
+
+        <p>Create <strong>4 Master Dynamic Web Templates</strong> to ensure consistency:</p>
+
+        <h3>1. site-master.dwt</h3>
+        <ul>
+            <li>Overall site structure</li>
+            <li>Header with site navigation</li>
+            <li>Breadcrumb trail system</li>
+            <li>Footer with copyright/contact</li>
+            <li>Links to CSS</li>
+        </ul>
+
+        <h3>2. book-master.dwt</h3>
+        <ul>
+            <li>Inherits from site-master.dwt</li>
+            <li>Book-specific navigation (Parts A, B, C, Units)</li>
+            <li>Book map icon display</li>
+            <li>Links to adjacent books</li>
+            <li>Book-specific color scheme variables</li>
+        </ul>
+
+        <h3>3. unit-commentary.dwt</h3>
+        <ul>
+            <li>Inherits from book-master.dwt</li>
+            <li>Unit header with metadata (title, structure, reference, theme, position)</li>
+            <li>Previous/Next unit navigation</li>
+            <li>Color-coded text display area</li>
+            <li>Standard section structure per taxonomy template</li>
+            <li>Matrix display containers</li>
+        </ul>
+
+        <h3>4. parts-ABC.dwt</h3>
+        <ul>
+            <li>Inherits from book-master.dwt</li>
+            <li>For Parts A, B, C pages</li>
+            <li>Consistent scholarly format</li>
+            <li>Navigation between parts</li>
+        </ul>
+
+        <h2 id="css">5. CSS Organization</h2>
+
+        <p><strong>Single master CSS file</strong> (<code>Assets/CSS/main.css</code>) with logical sections:</p>
+
+<pre><code>/* ==== LAYOUT ==== */
+/* Site structure, containers, grids */
+
+/* ==== TYPOGRAPHY ==== */
+/* Headers, body text, Hebrew text, citations */
+
+/* ==== NAVIGATION ==== */
+/* Breadcrumbs, menus, links */
+
+/* ==== COLORS ==== */
+/* Book colors, unit highlighting, patterns */
+/* Genesis: #d4f2ff, #e6ffee, #d4d4ff, #ffe6e6 */
+/* Exodus: [colors] */
+/* etc. */
+
+/* ==== MATRICES & TABLES ==== */
+/* Unit structure displays, comparison tables */
+
+/* ==== VISUAL RHETORIC ==== */
+/* Color-coded patterns (blue, gold, purple, pink, lime) */
+.pattern-blue-horizontal { }
+.pattern-gold-vertical { }
+.pattern-purple-chiasm { }
+.pattern-pink-closure { }
+.pattern-lime-internal { }
+
+/* ==== SPECIAL ELEMENTS ==== */
+/* Book maps, icons, callouts */
+
+/* ==== RESPONSIVE ==== */
+/* Mobile/tablet adaptations */
+</code></pre>
+
+        <h2 id="workflow">6. Workflow for Completing a Book</h2>
+
+        <div class="workflow-phase">
+            <h3>Phase 1: Unit Identification</h3>
+            <ul>
+                <li>Create <code>Part-A-Units.html</code></li>
+                <li>Follow Genesis model: boundary evidence, unit descriptions</li>
+                <li>Document Type A (external markers) and Type B (internal structure) evidence</li>
+                <li>Update database with unit boundaries and references</li>
+            </ul>
+        </div>
+
+        <div class="workflow-phase">
+            <h3>Phase 2: Structure Discovery</h3>
+            <ul>
+                <li>Create <code>Part-B-Map.html</code></li>
+                <li>Document discovery process like Genesis "Discovering the Map"</li>
+                <li>Identify matrix structure, triads, patterns</li>
+                <li>Analyze divine name distribution</li>
+                <li>Map cross-unit relationships</li>
+                <li>Update database with structural relationships</li>
+            </ul>
+        </div>
+
+        <div class="workflow-phase">
+            <h3>Phase 3: Book Commentary</h3>
+            <ul>
+                <li>Create <code>Part-C-Commentary.html</code></li>
+                <li>Flow directly from Part B structure</li>
+                <li>Explore theological implications of architecture</li>
+                <li>Document cross-unit patterns and meanings</li>
+                <li>Keep scholarly, architectural focus</li>
+                <li>Connect to Torah-wide themes</li>
+            </ul>
+        </div>
+
+        <div class="workflow-phase">
+            <h3>Phase 4: Individual Unit Commentaries</h3>
+            <ul>
+                <li>Use <code>unit-commentary.dwt</code> template</li>
+                <li>Follow taxonomy template structure</li>
+                <li>Each unit 2,000-8,000 words (depending on complexity)</li>
+                <li>Include book map with unit highlighted</li>
+                <li>Color-coded unit text from database</li>
+                <li>Matrix display with pattern analysis</li>
+                <li>Theological synthesis and contemporary relevance</li>
+            </ul>
+        </div>
+
+        <h2 id="naming">7. Naming Conventions</h2>
+
+        <h3>File Names</h3>
+        <ul>
+            <li>All lowercase with hyphens</li>
+            <li>Book names spelled out: <code>genesis-unit-01.html</code> NOT <code>gen-u1.html</code></li>
+            <li>Two-digit unit numbers: <code>01</code> not <code>1</code></li>
+            <li>Parts: <code>part-a-units.html</code>, <code>part-b-map.html</code>, <code>part-c-commentary.html</code></li>
+        </ul>
+
+        <h3>URL Structure</h3>
+        <ul>
+            <li>Consistent pattern: <code>/torah-commentary-project/Genesis/Units/genesis-unit-01.html</code></li>
+            <li>Alternative simpler: <code>/Genesis/genesis-unit-01/</code></li>
+        </ul>
+
+        <h3>CSS Classes and IDs</h3>
+        <ul>
+            <li>Semantic naming: <code>.unit-header</code>, <code>.matrix-display</code>, <code>.pattern-blue-horizontal</code></li>
+            <li>Book prefixes where needed: <code>.genesis-row-1</code>, <code>.exodus-column-a</code></li>
+            <li>Pattern indicators: <code>.blue-horizontal</code>, <code>.gold-vertical</code>, <code>.purple-chiasm</code></li>
+        </ul>
+
+        <h2 id="database">8. Database Integration</h2>
+
+        <p>Your Excel database is the <strong>single source of truth</strong>. Use it to:</p>
+
+        <h3>Primary Functions</h3>
+        <ol>
+            <li><strong>Generate HTML unit pages</strong> - Export data to populate templates</li>
+            <li><strong>Track completion status</strong> - Add columns for A/B/C/D completion per unit</li>
+            <li><strong>Maintain consistency</strong> - Single source for:
+                <ul>
+                    <li>Unit boundaries and references</li>
+                    <li>Color schemes and patterns</li>
+                    <li>Structural positions (row/column)</li>
+                    <li>Cross-references between units</li>
+                    <li>Key Hebrew terms</li>
+                    <li>Divine name patterns</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Consider Adding Sheets</h3>
+        <ul>
+            <li><strong>Book Status:</strong> Tracks A/B/C/D completion for each book</li>
+            <li><strong>Cross-References:</strong> Maps unit relationships across books</li>
+            <li><strong>Color Patterns:</strong> Documents all color-coding systems</li>
+            <li><strong>Progress Log:</strong> Date-stamped completion tracking</li>
+        </ul>
+
+        <h2 id="priorities">9. Priority Action Items</h2>
+
+        <h3 class="priority-high">⚠ Immediate (Week 1)</h3>
+        <ol>
+            <li>Create master CSS file consolidating all styles</li>
+            <li>Build 4 DWT templates in Expression Web</li>
+            <li>Document current workflow in Admin section</li>
+            <li>Reorganize Genesis to match new structure</li>
+        </ol>
+
+        <h3 class="priority-medium">⚡ Short-term (Month 1)</h3>
+        <ol>
+            <li>Complete Genesis Part D (19 unit commentaries)</li>
+            <li>Standardize all Genesis pages to new templates</li>
+            <li>Create Torah Overview section</li>
+            <li>Build navigation between all levels</li>
+            <li>Update database with completion tracking</li>
+        </ol>
+
+        <h3 class="priority-low">📋 Medium-term (Quarter 1)</h3>
+        <ol>
+            <li>Apply Genesis model to Exodus (Parts A-D)</li>
+            <li>Apply to Leviticus (Parts A-D)</li>
+            <li>Continue with Numbers and Deuteronomy</li>
+            <li>Build comprehensive cross-reference system</li>
+            <li>Create visual book maps/diagrams</li>
+        </ol>
+
+        <h2 id="checklist">10. Quality Checklist for Each Book</h2>
+
+        <div class="checklist">
+            <p><strong>Before considering a book "complete," verify:</strong></p>
+            
+            <h3>Content Completion</h3>
+            <ul>
+                <li>☐ Part A: Units identified with boundary evidence</li>
+                <li>☐ Part B: Structural map discovered and documented</li>
+                <li>☐ Part C: Book commentary flowing from structure</li>
+                <li>☐ Part D: All unit commentaries following taxonomy</li>
+            </ul>
+
+            <h3>Technical Standards</h3>
+            <ul>
+                <li>☐ Database updated for all units</li>
+                <li>☐ All pages use correct DWT</li>
+                <li>☐ Navigation links functional</li>
+                <li>☐ Book map graphics created</li>
+                <li>☐ Color-coding consistent with database</li>
+            </ul>
+
+            <h3>Content Quality</h3>
+            <ul>
+                <li>☐ Cross-references to other books added</li>
+                <li>☐ Hebrew terms properly transliterated</li>
+                <li>☐ Divine name patterns documented</li>
+                <li>☐ Theological insights clearly articulated</li>
+                <li>☐ Reviewed for conformity to style guide</li>
+            </ul>
+
+            <h3>Integration</h3>
+            <ul>
+                <li>☐ Links from Torah Overview functioning</li>
+                <li>☐ Cross-book connections documented</li>
+                <li>☐ Part of larger Torah weave narrative</li>
+                <li>☐ Breadcrumb navigation working</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong> This organizational plan is a living document. Update it as the project evolves and new insights emerge about structure and workflow.
+        </div>
+
+        <hr style="margin: 40px 0;">
+
+        <h2>Related Documents</h2>
+        <ul>
+            <li><a href="Unit%20Commentary%20Template.html">Unit Commentary Taxonomy Template</a></li>
+            <li><a href="material%20available%20in%20chats%201.html">Available Materials Inventory</a></li>
+            <li><a href="../Commentaries/maps%20with%20commentary.html">Torah Overview with Maps</a></li>
+            <li><a href="../Commentaries/Genesis/Units%20of%20Genesis.html">Genesis Part A (Units)</a></li>
+            <li><a href="../Commentaries/Genesis/The%20Map%20of%20Genesis.html">Genesis Part B (Map)</a></li>
+            <li><a href="../Commentaries/Genesis/Architecture%20and%20Meaning%20in%20Genesis.html">Genesis Part C (Commentary)</a></li>
+        </ul>
+
+        <hr style="margin: 40px 0;">
+        
+        <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
+            <strong>Torah Commentary Project</strong><br>
+            Organizational Plan | Last Updated: October 2025
+        </p>
+    </div>
+</body>
+</html>

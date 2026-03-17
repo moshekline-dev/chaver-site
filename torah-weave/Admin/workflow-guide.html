@@ -1,0 +1,869 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torah Commentary Project - Workflow Guide</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 4px solid #27ae60;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+        .toc {
+            background: #e8f8f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+            border: 2px solid #27ae60;
+        }
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+            padding: 0;
+            color: #27ae60;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .toc a {
+            color: #16a085;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .toc a:hover {
+            color: #27ae60;
+            text-decoration: underline;
+        }
+        .phase-box {
+            background: #f8f9fa;
+            border: 2px solid #27ae60;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        .phase-box h3 {
+            color: #27ae60;
+            margin-top: 0;
+        }
+        .step {
+            background: white;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .step h4 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        .checklist {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .checklist li {
+            margin: 8px 0;
+        }
+        .example {
+            background: #fffbea;
+            border: 1px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+        .example h4 {
+            color: #f39c12;
+            margin-top: 0;
+        }
+        .tip {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+        .tip::before {
+            content: "💡 TIP: ";
+            font-weight: bold;
+            color: #2196f3;
+        }
+        .warning {
+            background: #ffebee;
+            border-left: 4px solid #e74c3c;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+        .warning::before {
+            content: "⚠️ WARNING: ";
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.9em;
+        }
+        code {
+            background: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+        }
+        .file-path {
+            background: #e8f8f5;
+            padding: 8px 12px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #27ae60;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #27ae60;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .template-structure {
+            background: #f0f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            padding: 15px 0;
+            border-top: 2px solid #ddd;
+        }
+        .nav-buttons a {
+            background: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-buttons a:hover {
+            background: #229954;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Torah Commentary Project: Step-by-Step Workflow Guide</h1>
+        
+        <p><strong>Purpose:</strong> Detailed instructions for creating consistent, high-quality content across all project components</p>
+        <p><strong>Last Updated:</strong> October 2025</p>
+
+        <div class="toc">
+            <h2>Quick Navigation</h2>
+            <ul>
+                <li><a href="#overview">Getting Started</a></li>
+                <li><a href="#phase1">Phase 1: Unit Identification (Part A)</a></li>
+                <li><a href="#phase2">Phase 2: Structure Discovery (Part B)</a></li>
+                <li><a href="#phase3">Phase 3: Book Commentary (Part C)</a></li>
+                <li><a href="#phase4">Phase 4: Unit Commentaries (Part D)</a></li>
+                <li><a href="#dwt-setup">Setting Up DWT Templates</a></li>
+                <li><a href="#database">Working with the Database</a></li>
+                <li><a href="#troubleshooting">Troubleshooting Common Issues</a></li>
+            </ul>
+        </div>
+
+        <h2 id="overview">Getting Started: Before You Begin a New Book</h2>
+
+        <div class="checklist">
+            <h3>Pre-Flight Checklist</h3>
+            <ul>
+                <li>☐ Review <a href="project-organizational-plan.html">Organizational Plan</a></li>
+                <li>☐ Study Genesis as model (Parts A, B, C)</li>
+                <li>☐ Ensure DWT templates are set up in Expression Web</li>
+                <li>☐ Verify master CSS is linked and working</li>
+                <li>☐ Open Excel database and create new sheet/section for book</li>
+                <li>☐ Create book directory structure:
+                    <ul>
+                        <li><code>/[BookName]/</code></li>
+                        <li><code>/[BookName]/Units/</code></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tip">
+            Always work on one phase at a time. Complete Phase 1 entirely before moving to Phase 2. Each phase builds on the previous one.
+        </div>
+
+        <h2 id="phase1">Phase 1: Unit Identification (Part A)</h2>
+
+        <div class="phase-box">
+            <h3>Goal: Identify and validate all literary units in the book</h3>
+            <p><strong>Deliverable:</strong> <code>Part-A-Units.html</code></p>
+            <p><strong>Time Estimate:</strong> 2-4 weeks of research</p>
+        </div>
+
+        <div class="step">
+            <h4>Step 1.1: Create the Part A File</h4>
+            <ol>
+                <li>Open Expression Web</li>
+                <li>Create new page from <code>parts-ABC.dwt</code> template</li>
+                <li>Save as: <code>/[BookName]/Part-A-Units.html</code></li>
+                <li>Set page title: "Units of [BookName]"</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h4>Step 1.2: Write the Introduction</h4>
+            <p>Follow the Genesis model. Include:</p>
+            <ul>
+                <li><strong>Why units matter:</strong> Not arbitrary divisions but observable structures</li>
+                <li><strong>Reading implications:</strong> How unit boundaries affect interpretation</li>
+                <li><strong>Methodology:</strong> Type A (external markers) vs Type B (internal structure)</li>
+                <li><strong>Overview:</strong> Total number of units, general characteristics</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h4>Genesis Opening as Template</h4>
+            <p><em>"Genesis has traditionally been read either as a continuous narrative or divided according to modern chapter divisions—a medieval Christian innovation bearing no relationship to the text's original structure. Neither approach does justice to the sophisticated literary architecture the text itself provides..."</em></p>
+        </div>
+
+        <div class="step">
+            <h4>Step 1.3: Explain Boundary Markers</h4>
+            <p>Document the TWO validation systems:</p>
+            
+            <h5>Type A: External Markers</h5>
+            <ul>
+                <li>Toledot formulas ("these are the generations of...")</li>
+                <li>Death formulas with life summaries</li>
+                <li>Transitional phrases ("after these things")</li>
+                <li>Geographic/genealogical envelopes</li>
+                <li>Speech boundaries (for Deuteronomy)</li>
+            </ul>
+
+            <h5>Type B: Internal Structural Perfection</h5>
+            <ul>
+                <li>Three-part structures</li>
+                <li>Precise numerical patterns</li>
+                <li>Verbal envelopes/inclusios</li>
+                <li>Thematic progression</li>
+                <li>Chiastic arrangements</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 1.4: Describe Each Unit</h4>
+            <p>For each unit, write a detailed description including:</p>
+            
+            <div class="checklist">
+                <ul>
+                    <li>☐ <strong>Opening boundary:</strong> What marks the beginning (formula, phrase, shift)</li>
+                    <li>☐ <strong>Content summary:</strong> What happens in this unit</li>
+                    <li>☐ <strong>Closing boundary:</strong> What marks the end</li>
+                    <li>☐ <strong>Evidence strength:</strong> Very strong / Strong / Moderate-to-strong</li>
+                    <li>☐ <strong>Type of evidence:</strong> Type A, Type B, or both</li>
+                    <li>☐ <strong>Key features:</strong> Divine names, verbal patterns, structural elements</li>
+                    <li>☐ <strong>Relationships:</strong> How it connects to surrounding units</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="example">
+            <h4>Genesis Unit 1 as Template</h4>
+            <p><em>"The opening unit of Genesis establishes the cosmos in seven days, beginning with 'In the beginning Elohim created the heavens and the earth' and concluding with the seventh day rest. This unit validates through both external and internal markers (Type A + B). The inclusio of 'the heavens and the earth' at beginning (1:1) and end (2:1), combined with the completion formula 'Thus the heavens and the earth were finished' (2:1), creates a perfect envelope structure..."</em></p>
+        </div>
+
+        <div class="step">
+            <h4>Step 1.5: Update the Database</h4>
+            <p>For each identified unit, enter into Excel database:</p>
+            <ul>
+                <li>Unit ID (e.g., "Exo-I", "Lev-I")</li>
+                <li>Book name</li>
+                <li>Unit number</li>
+                <li>Biblical reference (chapter:verse range)</li>
+                <li>Brief description</li>
+                <li>Format (will determine in Phase 2)</li>
+            </ul>
+        </div>
+
+        <div class="tip">
+            Save your work frequently. Unit identification requires careful reading and re-reading. Don't rush this foundational phase.
+        </div>
+
+        <h2 id="phase2">Phase 2: Structure Discovery (Part B)</h2>
+
+        <div class="phase-box">
+            <h3>Goal: Discover and document the book's architectural design</h3>
+            <p><strong>Deliverable:</strong> <code>Part-B-Map.html</code></p>
+            <p><strong>Time Estimate:</strong> 3-6 weeks of analysis</p>
+        </div>
+
+        <div class="step">
+            <h4>Step 2.1: Create the Part B File</h4>
+            <ol>
+                <li>Create new page from <code>parts-ABC.dwt</code></li>
+                <li>Save as: <code>/[BookName]/Part-B-Map.html</code></li>
+                <li>Set title: "The Architecture of [BookName]: From Unit Boundaries to Literary Map"</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h4>Step 2.2: Document the Discovery Process</h4>
+            <p><strong>Critical:</strong> Write this as a <em>narrative of discovery</em>, not just results. Follow Genesis model:</p>
+            
+            <ol>
+                <li><strong>Initial Grouping:</strong> What patterns emerged first?</li>
+                <li><strong>Testing Hypotheses:</strong> What worked? What didn't?</li>
+                <li><strong>Breakthrough Moments:</strong> When did the structure become clear?</li>
+                <li><strong>Validation:</strong> What confirms the pattern is intentional?</li>
+            </ol>
+        </div>
+
+        <div class="example">
+            <h4>Genesis Discovery Narrative Style</h4>
+            <p><em>"Once the nineteen units were identified and their boundaries established, the first question was whether these units showed any patterns of grouping or relationship. The most obvious division emerged immediately: Units 1-4 deal with universal, primeval history..."</em></p>
+            <p><em>"However, closer examination revealed that Unit 4 (Babel) functions differently from Units 1-3..."</em></p>
+        </div>
+
+        <div class="step">
+            <h4>Step 2.3: Identify Major Structural Elements</h4>
+            
+            <h5>Look for:</h5>
+            <ul>
+                <li><strong>Triadic organization:</strong> Do units group in threes?</li>
+                <li><strong>Matrix arrangements:</strong> Rows and columns creating 2D structure?</li>
+                <li><strong>Alternating patterns:</strong> Themes that alternate between units?</li>
+                <li><strong>Concentric rings:</strong> Center-focused organization?</li>
+                <li><strong>Chiastic structures:</strong> A-B-B'-A' patterns?</li>
+                <li><strong>Independent units:</strong> Units that stand outside regular patterns?</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 2.4: Analyze Divine Name Distribution</h4>
+            <p>Map where YHWH and Elohim appear:</p>
+            <ul>
+                <li>Which units use primarily YHWH?</li>
+                <li>Which use primarily Elohim?</li>
+                <li>Which use both (interface positions)?</li>
+                <li>Does distribution follow structural patterns?</li>
+            </ul>
+        </div>
+
+        <div class="tip">
+            Genesis established the pattern: Row 1 = YHWH (above/transcendent), Row 3 = Elohim (below/immanent), Row 2 = both (interface). Check if your book follows similar patterns.
+        </div>
+
+        <div class="step">
+            <h4>Step 2.5: Create Visual Representations</h4>
+            <p>Develop diagrams showing:</p>
+            <ul>
+                <li>Unit groupings (triads, sets)</li>
+                <li>Matrix layout (if applicable)</li>
+                <li>Concentric structure (if applicable)</li>
+                <li>Cross-references between units</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 2.6: Update Database with Structure</h4>
+            <p>Add to Excel for each unit:</p>
+            <ul>
+                <li>Format (e.g., "2×3", "4×2", "13331")</li>
+                <li>Thread (Horizontal or Vertical)</li>
+                <li>Column position (A, B, C, etc.)</li>
+                <li>Row position (1, 2, 3, etc.)</li>
+                <li>Color (assigned by position)</li>
+                <li>Related units</li>
+                <li>Parallel units</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            Don't force patterns. If the structure isn't clear, keep analyzing. Valid patterns will have multiple converging lines of evidence, not just one or two coincidences.
+        </div>
+
+        <h2 id="phase3">Phase 3: Book Commentary (Part C)</h2>
+
+        <div class="phase-box">
+            <h3>Goal: Explore theological and interpretive implications of the architecture</h3>
+            <p><strong>Deliverable:</strong> <code>Part-C-Commentary.html</code></p>
+            <p><strong>Time Estimate:</strong> 4-8 weeks of writing</p>
+        </div>
+
+        <div class="step">
+            <h4>Step 3.1: Create Part C File</h4>
+            <ol>
+                <li>Create from <code>parts-ABC.dwt</code></li>
+                <li>Save as: <code>/[BookName]/Part-C-Commentary.html</code></li>
+                <li>Title: "[BookName]: Architecture and Meaning"</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h4>Step 3.2: Write Opening Statement</h4>
+            <p>Begin by:</p>
+            <ul>
+                <li>Referencing Part B (the discovery document)</li>
+                <li>Stating your central argument about the architecture</li>
+                <li>Previewing what this structure reveals</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h4>Genesis Opening as Model</h4>
+            <p><em>"This commentary builds on the architectural analysis in 'Discovering the Map of the Book,' which revealed Genesis's sophisticated structure: nineteen units organized into six triads with interwoven covenant and family tracks. That discovery process showed how the structure works. What follows shows what the structure reveals..."</em></p>
+        </div>
+
+        <div class="step">
+            <h4>Step 3.3: Develop Major Themes</h4>
+            <p>Organize commentary around 3-5 major themes revealed by structure:</p>
+            
+            <h5>Possible Themes:</h5>
+            <ul>
+                <li>Concentric organization and meaning</li>
+                <li>Divine name theology</li>
+                <li>Systematic correspondences between units</li>
+                <li>Alternating tracks or threads</li>
+                <li>Progressive development across the book</li>
+                <li>Book's relationship to Torah-wide themes</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 3.4: Analyze Corresponding Units</h4>
+            <p>For units in matching positions (same row, same column, parallel structure):</p>
+            <ul>
+                <li>Identify shared themes or motifs</li>
+                <li>Note verbal parallels</li>
+                <li>Explain theological significance of correspondence</li>
+                <li>Show how patterns validate the structure</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 3.5: Write Section Conclusions</h4>
+            <p>Each major section should conclude with:</p>
+            <ul>
+                <li>Summary of key insights</li>
+                <li>How this theme contributes to book's overall argument</li>
+                <li>Implications for reading and interpretation</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 3.6: Write Book-Level Synthesis</h4>
+            <p>Conclude with:</p>
+            <ul>
+                <li>What the architecture as a whole communicates</li>
+                <li>How structure embodies theology (not just illustrates)</li>
+                <li>The book's contribution to Torah's overall message</li>
+                <li>Reading strategies enabled by understanding structure</li>
+            </ul>
+        </div>
+
+        <div class="tip">
+            Keep the focus on observable patterns. Your claims should be testable against the text. The structure itself is the evidence.
+        </div>
+
+        <h2 id="phase4">Phase 4: Unit Commentaries (Part D)</h2>
+
+        <div class="phase-box">
+            <h3>Goal: Create comprehensive commentary for each individual unit</h3>
+            <p><strong>Deliverable:</strong> All unit HTML files in <code>/Units/</code> directory</p>
+            <p><strong>Time Estimate:</strong> 3-6 months (depending on number of units)</p>
+        </div>
+
+        <div class="step">
+            <h4>Step 4.1: Set Up Unit File</h4>
+            <ol>
+                <li>Create new page from <code>unit-commentary.dwt</code></li>
+                <li>Save as: <code>/[BookName]/Units/[bookname]-unit-01.html</code></li>
+                <li>Use two-digit numbering (01, 02, etc.)</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h4>Step 4.2: Complete Unit Header</h4>
+            <p>Fill in all metadata fields:</p>
+            
+            <div class="template-structure">
+<pre>
+<strong>Unit Title:</strong> [Book] Unit [#]: [Descriptive Name]
+<strong>Structure:</strong> [Format] (e.g., 2×3 Regular, 4×2 Irregular)
+<strong>Biblical Reference:</strong> [Book Chapter:Verse-Chapter:Verse]
+<strong>Theme:</strong> [Primary thematic focus]
+<strong>Position:</strong> Row [#], Column [Letter] in book matrix
+</pre>
+            </div>
+        </div>
+
+        <div class="step">
+            <h4>Step 4.3: Add Book Map Visual</h4>
+            <ul>
+                <li>Create SVG showing all units in book</li>
+                <li>Highlight current unit in contrasting color</li>
+                <li>Position at top of page for immediate context</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 4.4: Display Full Unit Text</h4>
+            <ul>
+                <li>Include complete biblical text</li>
+                <li>Color-code according to patterns from database</li>
+                <li>Present in appropriate table structure (regular/irregular)</li>
+                <li>Add color legend explaining pattern identification</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 4.5: Follow Taxonomy Structure</h4>
+            <p>Use the <a href="Unit%20Commentary%20Template.html">Unit Commentary Taxonomy</a> as your guide:</p>
+            
+            <h5>Required Sections:</h5>
+            <ol>
+                <li><strong>Opening Hook:</strong> Compelling entry point</li>
+                <li><strong>Unit Context:</strong> Position in book architecture</li>
+                <li><strong>Structural Analysis:</strong> Dimensional overview, threads, matrix</li>
+                <li><strong>Detailed Commentary:</strong> Cell-by-cell, patterns, themes</li>
+                <li><strong>Theological Implications:</strong> Divine-human dynamics, deeper meanings</li>
+                <li><strong>Synthesis:</strong> Unit's contribution, relevance, summary</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h4>Step 4.6: Analyze Warp and Weft Threads</h4>
+            
+            <h5>Weft Threads (Columns):</h5>
+            <ul>
+                <li>Identify and label each column</li>
+                <li>State thematic principle for each</li>
+                <li>Show progression or relationship between columns</li>
+            </ul>
+
+            <h5>Warp Threads (Rows):</h5>
+            <ul>
+                <li>Identify and label each row</li>
+                <li>State sequential or hierarchical principle</li>
+                <li>Show movement or development across rows</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 4.7: Document Color-Coded Patterns</h4>
+            <p>For each pattern color used:</p>
+            <table>
+                <tr>
+                    <th>Pattern Type</th>
+                    <th>Color</th>
+                    <th>What It Shows</th>
+                </tr>
+                <tr>
+                    <td>Horizontal Parallels</td>
+                    <td>Blue</td>
+                    <td>Connections across rows</td>
+                </tr>
+                <tr>
+                    <td>Vertical Threads</td>
+                    <td>Gold</td>
+                    <td>Column-wise progressions</td>
+                </tr>
+                <tr>
+                    <td>Chiastic Structures</td>
+                    <td>Purple</td>
+                    <td>A-B-B'-A' patterns</td>
+                </tr>
+                <tr>
+                    <td>Closure/Frame</td>
+                    <td>Pink</td>
+                    <td>Inclusios and envelopes</td>
+                </tr>
+                <tr>
+                    <td>Internal Parallels</td>
+                    <td>Lime</td>
+                    <td>Within-unit correspondences</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="step">
+            <h4>Step 4.8: Write Questions for Study</h4>
+            <p>End each unit with 5-7 thought-provoking questions:</p>
+            <ul>
+                <li>Questions that emerge from structural analysis</li>
+                <li>Theological implications to explore</li>
+                <li>Contemporary application possibilities</li>
+                <li>Connections to other biblical texts</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Step 4.9: Add Navigation</h4>
+            <ul>
+                <li>Link to previous unit (if not first)</li>
+                <li>Link to next unit (if not last)</li>
+                <li>Link back to book overview/Parts A-B-C</li>
+                <li>Breadcrumb trail functional</li>
+            </ul>
+        </div>
+
+        <div class="tip">
+            Word count targets: Simple units (2,000 words), Standard units (3,000-5,000 words), Complex central units (up to 8,000 words). Let the unit's complexity determine length, not arbitrary targets.
+        </div>
+
+        <h2 id="dwt-setup">Setting Up DWT Templates in Expression Web</h2>
+
+        <div class="step">
+            <h4>Creating Your First DWT</h4>
+            <ol>
+                <li>Open Expression Web</li>
+                <li>File → New → Page</li>
+                <li>Select "HTML" as page type</li>
+                <li>Design your master layout with common elements:
+                    <ul>
+                        <li>Header with site title/logo</li>
+                        <li>Navigation menu</li>
+                        <li>Breadcrumb area</li>
+                        <li>Main content area</li>
+                        <li>Footer</li>
+                    </ul>
+                </li>
+                <li>Select areas that should be editable</li>
+                <li>Format → Dynamic Web Template → Manage Editable Regions</li>
+                <li>Create editable region named "main-content"</li>
+                <li>File → Save As → Choose "Dynamic Web Template (*.dwt)"</li>
+                <li>Save to <code>/Assets/Templates/</code> directory</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h4>Attaching Pages to DWT</h4>
+            <ol>
+                <li>Open existing page or create new page</li>
+                <li>Format → Dynamic Web Template → Attach Dynamic Web Template</li>
+                <li>Browse to your .dwt file</li>
+                <li>Expression Web will prompt to match content to editable regions</li>
+                <li>Confirm attachments</li>
+                <li>Save page</li>
+            </ol>
+        </div>
+
+        <div class="warning">
+            Once a page is attached to a DWT, you can only edit content within the editable regions. To change the template structure, you must edit the .dwt file itself, then Expression Web will update all attached pages.
+        </div>
+
+        <div class="step">
+            <h4>Template Hierarchy</h4>
+            <p>Create templates in this order:</p>
+            <ol>
+                <li><code>site-master.dwt</code> - Most general, used as base</li>
+                <li><code>book-master.dwt</code> - Inherits from site-master, adds book navigation</li>
+                <li><code>parts-ABC.dwt</code> - Inherits from book-master</li>
+                <li><code>unit-commentary.dwt</code> - Inherits from book-master</li>
+            </ol>
+        </div>
+
+        <h2 id="database">Working with the Database</h2>
+
+        <div class="step">
+            <h4>Daily Database Workflow</h4>
+            <ol>
+                <li><strong>Morning:</strong> Open Excel database, review current book sheet</li>
+                <li><strong>During Work:</strong> Update fields as you make discoveries</li>
+                <li><strong>End of Day:</strong> Add completion notes, save backup</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h4>Key Fields to Maintain</h4>
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>When to Update</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td>Phase 1</td>
+                    <td>Unique identifier</td>
+                </tr>
+                <tr>
+                    <td>Reference</td>
+                    <td>Phase 1</td>
+                    <td>Biblical boundaries</td>
+                </tr>
+                <tr>
+                    <td>Format</td>
+                    <td>Phase 2</td>
+                    <td>Structural dimensions</td>
+                </tr>
+                <tr>
+                    <td>Row/Column</td>
+                    <td>Phase 2</td>
+                    <td>Matrix position</td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td>Phase 2</td>
+                    <td>Visual display</td>
+                </tr>
+                <tr>
+                    <td>Divine_Name_Pattern</td>
+                    <td>Phase 2-3</td>
+                    <td>Theological analysis</td>
+                </tr>
+                <tr>
+                    <td>Verbal_Patterns_*</td>
+                    <td>Phase 4</td>
+                    <td>Color-coded display</td>
+                </tr>
+                <tr>
+                    <td>URL_Pattern</td>
+                    <td>Phase 4</td>
+                    <td>Web publishing</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tip">
+            Use Excel's data validation features to create dropdown lists for recurring fields (Book names, Row numbers, Column letters) to ensure consistency.
+        </div>
+
+        <h2 id="troubleshooting">Troubleshooting Common Issues</h2>
+
+        <div class="step">
+            <h4>Problem: Can't Identify Clear Unit Boundaries</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Look for multiple converging markers, not just one</li>
+                <li>Check if apparent boundary is actually internal subdivision</li>
+                <li>Consider if unit is larger than expected</li>
+                <li>Review Type B evidence (internal structure) if Type A markers absent</li>
+                <li>Consult Genesis model for similar situations</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Problem: Structure Doesn't Seem to Have Clear Pattern</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Not all books follow identical patterns (Exodus differs from Genesis)</li>
+                <li>Consider whether book has different organizing principle</li>
+                <li>Look for speech boundaries (especially Deuteronomy)</li>
+                <li>Check if independent units are breaking apparent patterns</li>
+                <li>May need to read by columns rather than rows, or vice versa</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Problem: DWT Changes Not Appearing on Pages</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Save the .dwt file (Expression Web should auto-update)</li>
+                <li>If prompted, click "Yes" to update all attached pages</li>
+                <li>Close and reopen Expression Web</li>
+                <li>Check that page is correctly attached to template</li>
+                <li>Verify editable region names match</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Problem: Colors Not Displaying Correctly</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Verify CSS file is linked in page header</li>
+                <li>Check that class names match exactly (case-sensitive)</li>
+                <li>Clear browser cache</li>
+                <li>Validate HTML (tools → Accessibility Reports)</li>
+                <li>Inspect element in browser to see which styles are applying</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h4>Problem: Overwhelmed by Scope of Project</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Focus on one phase at a time</li>
+                <li>Complete one book fully before starting next</li>
+                <li>Set weekly goals (e.g., "Complete 2 unit commentaries this week")</li>
+                <li>Celebrate milestones (each phase completion, each book completion)</li>
+                <li>Remember: Genesis is your complete model to reference</li>
+            </ul>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="project-organizational-plan.html">← Organizational Plan</a>
+            <a href="style-guide.html">Style Guide →</a>
+        </div>
+
+        <hr style="margin: 40px 0;">
+        
+        <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
+            <strong>Torah Commentary Project</strong><br>
+            Workflow Guide | Last Updated: October 2025
+        </p>
+    </div>
+</body>
+</html>
+</body>
+
+</html>

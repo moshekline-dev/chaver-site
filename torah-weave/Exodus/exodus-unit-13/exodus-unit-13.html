@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 13 (Exodus 29:1-30:10) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 13
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-12/exodus-unit-12.html" rel="prev">← Unit 12</a>
+            <a href="/torah-weave/Exodus/exodus-unit-14/exodus-unit-14.html" rel="next">Unit 14 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 13</h1>
+                <div class="unit-meta" itemprop="about">Exodus 29:1-30:10</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-left">1A</th><th class="col-right">1B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>29:1</b></span> And this is the
+  thing that thou shalt do <span class="closure"><b>unto them to hallow them</b></span>,
+  to minister unto Me in the priest's office: take one young bullock and two
+  rams without blemish, <span class="VerseNumber"><b>29:2</b></span> and
+  unleavened bread, and cakes unleavened mingled with oil, and wafers
+  unleavened spread with oil; of fine wheaten flour shalt thou make them. <span class="VerseNumber"><b>29:3</b></span> And thou shalt put them into one basket,
+  <span class="horizontal1"><b>and bring them</b></span> in the basket, with the
+  bullock and the two rams.</p></td><td><p class="torah"><span class="VerseNumber"><b>29:4</b></span> <span class="vertical1"><b>And Aaron and his sons</b></span> <span class="horizontal1"><b>thou
+  shalt bring</b></span> unto the door of the tent of meeting, and shalt wash
+  them with water. <span class="VerseNumber"><b>29:5</b></span> And thou shalt
+  take the garments, and put upon Aaron the tunic, and the robe of the ephod,
+  and the ephod, and the breastplate, and gird him with the skilfully woven
+  band of the ephod. <span class="VerseNumber"><b>29:6</b></span> And thou shalt
+  set the mitre upon his head, and put the holy crown upon the mitre. <span class="VerseNumber"><b>29:7</b></span> Then shalt thou take the anointing oil,
+  and pour it upon his head, and anoint him. <span class="VerseNumber"><b>29:8</b></span>
+  And thou shalt bring his sons, and put tunics upon them. <span class="VerseNumber"><b>29:9</b></span> And thou shalt gird them with girdles,
+  Aaron and his sons, and bind head-tires on them; and they shall have the
+  priesthood by a perpetual statute; <span class="vertical1"><b>and thou shalt
+  consecrate Aaron and his sons</b></span>.</p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-right">2B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>29:10</b></span> And thou shalt bring the bullock before
+  the tent of meeting; <span class="horizontal1"><b>and Aaron and his sons shall
+  lay their hands upon the head of the bullock</b></span>. <span class="VerseNumber"><b>29:11</b></span> And thou shalt kill the bullock before
+  the LORD, at the door of the tent of meeting. <span class="VerseNumber"><b>29:12</b></span>
+<span class="horizontal1"><b>And thou shalt take of the blood of the bullock,
+  and put it</b></span> upon the horns of the altar with thy finger; and thou
+  shalt pour out all the remaining blood at the base of the altar. <span class="VerseNumber"><b>29:13</b></span> And thou shalt take all the fat that
+  covereth the inwards, and the lobe above the liver, and the two kidneys, and
+  the fat that is upon them, and make them smoke upon the altar. <span class="VerseNumber"><b>29:14</b></span> But the flesh of the bullock, and its
+  skin, and its dung, shalt thou burn with fire without the camp;<span class="vertical1"><b> it is a sin-offering</b></span>. </p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>29:19</b></span> And thou shalt take the other ram; and <span class="horizontal1"><b>Aaron and his sons shall lay their hands upon the head
+  of the ram</b></span>. <span class="VerseNumber"><b>29:20</b></span> Then shalt
+  thou kill the ram, <span class="horizontal1"><b>and take of its blood, and put
+  it upon</b></span> the tip of the right ear of Aaron, and upon the tip of the
+  right ear of his sons, and upon the thumb of their right hand, and upon the
+  great toe of their right foot, and dash the blood against the altar round
+  about. <span class="VerseNumber"><b>29:21</b></span> And thou shalt take of the
+  blood that is upon the altar, and of the anointing oil, and sprinkle it upon <span class="vertical1"><b>Aaron</b></span>, and upon his garments, and upon his
+  sons, and upon the garments <span class="vertical1"><b>of</b></span> <span class="vertical1"><b>his sons</b></span> with him; and he and his garments
+  shall be hallowed, and his sons and his sons' garments with him.</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>29:15</b></span> Thou shalt also take the one ram; and Aaron
+  and his sons shall lay their hands upon the head of the ram. <span class="VerseNumber"><b>29:16</b></span> And thou shalt slay the ram, and thou
+  shalt take its blood, and dash it round about against the altar. <span class="VerseNumber"><b>29:17</b></span> And thou shalt cut the ram into its
+  pieces, and wash its inwards, and its legs, and put them with its pieces, and
+  with its head. <span class="VerseNumber"><b>29:18</b></span> And thou shalt
+  make the whole ram smoke upon the altar; <span class="vertical1"><b>it is a
+  burnt-offering</b></span> unto the LORD; <span class="horizontal1"><b>it is a
+  sweet savour, an offering made by fire unto the LORD</b></span>.</p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>29:22</b></span> Also thou shalt take of the ram the
+  fat, and the fat tail, and the fat that covereth the inwards, and the lobe of
+  the liver, and the two kidneys, and the fat that is upon them, and the right
+  thigh; for it is a ram of <span class="vertical1"><b>consecration</b></span>; <span class="VerseNumber"><b>29:23</b></span> and one loaf of bread, and one cake of
+  oiled bread, and one wafer, out of the basket of unleavened bread that is
+  before the LORD. <span class="VerseNumber"><b>29:24</b></span> And thou shalt
+  put the whole upon the hands of <span class="vertical1"><b>Aaron</b></span>,
+  and upon the hands <span class="vertical1"><b>of his sons</b></span>; and shalt
+  wave them for a wave-offering before the LORD. <span class="VerseNumber"><b>29:25</b></span>
+  And thou shalt take them from their hands, <span class="horizontal1"><b>and
+  make them smoke on the altar upon the burnt-offering, for a sweet savour
+  before the LORD; it is an offering made by fire unto the LORD</b></span>. </p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">3A</th><th class="col-right">3B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>29:26</b></span> And thou shalt take
+  the breast of Aaron's ram of consecration, and wave it for a wave-offering
+  before the LORD; and it shall be thy portion. <span class="VerseNumber"><b>29:27</b></span>
+  And thou shalt sanctify the breast of the wave-offering, and the thigh of the
+  heave-offering, which is waved, and which is heaved up, of the ram of
+  consecration, even of that which is Aaron's, and of that which is his sons'. <span class="VerseNumber"><b>29:28</b></span> And it shall be for Aaron and his sons
+  as a due for ever from the children of Israel; <span class="vertical1"><b>for
+  it is a heave-offering</b></span>; and it shall be a heave-offering from the
+  children of Israel of their sacrifices of peace-offerings, even their
+  heave-offering unto the LORD.</p></td><td><p class="torah"><span class="VerseNumber"><b>29:29</b></span> And the holy
+  garments of <span class="vertical1"><b>Aaron</b></span> shall be for <span class="vertical1"><b>his sons</b></span> after him, to be anointed in them, and
+  <span class="vertical1"><b>to be consecrated</b></span> in them. <span class="VerseNumber"><b>29:30</b></span> Seven days shall the son that is priest
+  in his stead put them on, even he who cometh into the tent of meeting to
+  minister in the holy place.</p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">4A</th><th class="col-right">4B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>29:31</b></span> And thou shalt
+  take the ram of consecration, and seethe its flesh in a <span class="horizontal1"><b>holy place</b></span>. <span class="VerseNumber"><b>29:32</b></span>
+  And Aaron and his sons shall eat the flesh of the ram, and the bread that is
+  in the basket, at the door of the tent of meeting. <span class="VerseNumber"><b>29:33</b></span>
+  And they shall eat those things wherewith atonement was made<span class="closure"><b>, to consecrate and to sanctify them</b></span>; but a
+  stranger shall not eat thereof, because they are <span class="horizontal1"><b>holy</b></span>.
+  <span class="VerseNumber"><b>29:34</b></span> And if aught of the flesh of the
+  consecration, or of the bread, remain unto the morning, then thou shalt burn
+  the remainder with fire; it shall not be eaten, because <span class="vertical1"><b>it is holy</b></span>.</p></td><td><p class="torah"><span class="VerseNumber"><b>29:35</b></span> And thus shalt
+  thou do unto <span class="vertical1"><b>Aaron, and to his sons</b></span>,
+  according to all that I have commanded thee; seven days shalt thou consecrate
+  them. <span class="VerseNumber"><b>29:36</b></span> And every day shalt thou
+  offer the bullock of sin-offering, beside the other offerings of atonement;
+  and thou shalt do the purification upon the altar when thou makest atonement
+  for it; and thou shalt anoint it, to sanctify it. <span class="VerseNumber"><b>29:37</b></span>
+  Seven days thou shalt make atonement for the altar, and <span class="horizontal1"><b>sanctify it</b></span>; thus shall the altar be most <span class="horizontal1"><b>holy</b></span>; whatsoever toucheth the altar shall be <span class="horizontal1"><b>holy</b></span>. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 13 (Exodus 29:1-30:10)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-13/exodus-unit-13.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-12/exodus-unit-12.html" rel="prev">← Unit 12</a>
+            <a href="/torah-weave/Exodus/exodus-unit-14/exodus-unit-14.html" rel="next">Unit 14 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

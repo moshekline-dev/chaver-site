@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+        /* Landscape phones - hamburger menu */
+@media (max-height: 500px) and (orientation: landscape) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav li {
+        width: 100%;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+    }
+    
+    main.content-wrapper {
+        padding: 15px 10px;
+    }
+}
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">עברית</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<h1>An Introduction to The Structured Mishnah</h1>
+
+<h2>An Address to the Talmud Faculty of The Jewish Theological Seminary of America March 21, 2005</h2>
+
+<p>I want to thank Professor Roth for the opportunity of speaking today. My subject is a new edition of the Mishnah which I have edited, The Structured Mishnah, or in Hebrew, המשנה כדרכה. I will begin with a disclaimer. This edition is not based on critical analysis of manuscripts. It uses the Kaufman text as found in Albeck's edition. It does not utilize parallels from the Tosefta or any other literature. It does not take a stand on any historical or developmental issues relevant to the Mishnah. In short, it does not speak to most of the issues that generally concern the scholarly community. Nevertheless, I have come here to speak with you because I am convinced that The Structured Mishnah should become a standard edition, accessible to all students and scholars. The reason why it should become an accepted standard is that it presents the text of the Mishnah as it was composed.</p>
+
+<p>The Structured Mishnah reflects a new approach to reading the Mishnah. It presents each chapter of the Mishnah as a tightly woven composition, rather than an agglomeration of laws. This presentation is based on the discovery of the rules according to which the chapters of Mishnah were constructed. Identifying the rules made it possible to recreate the literary formats of the chapters, and consequently, to read the chapters as coherent compositions. The format in which the Mishnah text is presented in The Structured Mishnah enables the reader to grasp each chapter as a conceptual unit. The whole chapter appears printed on a single page, formatted in a manner that emphasizes both its division into components, and the relationships between its components. During this talk I will introduce four chapters as examples. First I will demonstrate the principle of hierarchical division in chapters through Taanit ch. 1. I will then introduce the concept of two-dimensional planning with the examples of Shabbat chs. 6 and 16. Finally, I will address the problem of interpreting a two-dimensional text through the example of Hagiga ch. 1. I will begin with a short summary of the development of The Structured Mishnah.</p>
+
+<p>The Structured Mishnah is based on a simple observation which led to a significant discovery when systematically applied to all the chapters of the Mishnah. The initial observation was that there often appears to be hierarchical organization within the chapter. Small units of text, similar in size to mishnayot, are regularly grouped according to key words. These key words often comprise an opening or closing phrase. The existence of such groups of linguistically related segments would seem to indicate that the chapters were divided on more than one level. If so, it might be possible to identify the structures of chapters, and consequently, the rules according to which the chapters were constructed. Ultimately, it might be possible interpret a chapter as a unit by analyzing its formal structure. A form of this hypothesis was first tested, to the best of my knowledge, by the Maharal of Prague in Derech Chaim, his ground-breaking commentary on masechet avot. The Maharal's successful experiment was limited to part of a single chapter, the "pairs" section of the first chapter of avot. The clarity of his findings was an inspiration to try similar experiments analyzing the Mishnah. Preliminary findings, also in avot, were presented to Professor David Weiss-Halivni in the early 1980's. He indicated that while the findings were interesting, they would be significant only if they applied to the whole of the Mishnah. This challenge inspired the research that resulted in The Structured Mishnah. A progress report, in the form of an analysis of Eruvin 10, was published in Alei Sefer, 14, 1987.</p>
+
+<p>According to Halivni's challenge, each and every chapter of the Mishnah had to be analyzed in order to determine whether its internal divisions could be identified. It would then be necessary to systematize the findings. Certain facts became apparent after analyzing only a few select chapters. All of the chapters contained at least two levels of internal division. A method was then devised to layout the chapter in a manner that would indicate these two levels of division according to a convenient visual key. The chapters were laid out as tables with the major divisions occupying the rows of the tables and the minor divisions segments of the rows.</p>
+
+<h2>Characteristics of Chapters</h2>
+
+<h3>Example 1: Taanit 1, Division into Rows</h3>
+<div align="center">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="100%" colspan="4" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">1</span><br />
+(א) מאימתי מזכירין גבורות גשמים<br />
+רבי אליעזר אומר מיום טוב הראשון שלהחג<br />
+רבי יהושע אומר מיום טוב האחרון שלהחג<br />
+אמר לו רבי יהושע הואיל <span class="closure">ואין הגשמים אלא סימן קללה</span> בחג למה הוא מזכיר<br />
+אמר לו רבי אליעזר אף אני לא אמרתי לשאול אלא להזכיר משיב הרוח ומוריד הגשם בעונתו<br />
+אמר לו אם כן לעולם יהא מזכיר
+</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">2א</span><br />
+(ב) אין <span class="horizontal1">שואלין את הגשמים</span><br />
+אלא סמוך לגשמים<br />
+רבי יהודה אומר<br />
+העובר לפני התבה<br />
+ביום טוב האחרון שלהחג<br />
+האחרון מזכיר<br />
+הראשון אינו מזכיר<br />
+ביום טוב הראשון שלפסח<br />
+הראשון מזכיר<br />
+האחרון אינו מזכיר
+</p>
+</td>
+<td width="33%" colspan="2" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">2ב</span><br />
+עד אימתי <span class="horizontal1">שואלין את הגשמים</span><br />
+רבי יהודה אומר<br />
+עד שיעבר הפסח<br />
+רבי מאיר אומר<br />
+עד שיצא ניסן<br />
+שנאמר<br />
+ויורד לכם גשם מורה ומלקוש בראשון
+</p>
+</td>
+<td width="33%" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">2ג</span><br />
+(ג) בשלשה במרחשון <span class="horizontal1">שואלין את הגשמים</span><br />
+רבן גמליאל אומר<br />
+בשבעה בו<br />
+חמשה עשר יום אחר החג<br />
+כדי שיגיע אחרון שבישראל<br />
+לנהר פרת
+</p>
+</td>
+</tr>
+<tr>
+<td width="50%" colspan="2" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">3א</span><br />
+(ד) <span class="horizontal1">הגיע שבעה עשר במרחשון ולא ירדו גשמים</span><br />
+התחילו היחידים מתענין שלש תעניות<br />
+<span class="horizontal1">אוכלין ושותין משחשכה<br />
+ומתרין במלאכה וברחיצה ובסיכה<br />
+ובנעילת הסנדל ובתשמיש המטה</span>
+</p>
+</td>
+<td width="50%" colspan="2" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">3ב</span><br />
+(ה) <span class="horizontal1">הגיע ראש חדש כסלו ולא ירדו גשמים</span><br />
+בית דין גוזרין שלש תעניות על הצבור<br />
+<span class="horizontal1">אוכלין ושותין משחשכה<br />
+ומתרין במלאכה וברחיצה ובסיכה<br />
+ובנעילת הסנדל ובתשמיש המטה</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">4א</span><br />
+(ו) <span class="horizontal1">עברו אלו ולא נענו</span><br />
+בית דין גוזרין<br />
+שלש תעניות אחרות על הצבור<br />
+אוכלין ושותין מבעוד יום<br />
+ואסורין במלאכה וברחיצה ובסיכה<br />
+ובנעילת הסנדל ובתשמיש המטה<br />
+ונועלין את המרחצאות
+</p>
+</td>
+<td width="33%" colspan="2" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">4ב</span><br />
+<span class="horizontal1">עברו אלו ולא נענו</span><br />
+בית דין גוזרין עליהם<br />
+עוד שבע שהן שלש עשרה תעניות על הצבור<br />
+הרי אלו יתרות על הראשונות<br />
+שבאלו מתריעין ונועלין את החנויות<br />
+בשני מטין עם חשכה<br />
+ובחמישי מתרין מפני כבוד השבת
+</p>
+</td>
+<td width="33%" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">4ג</span><br />
+(ז) <span class="horizontal1">עברו אלו ולא נענו</span><br />
+ממעטין במשא ומתן<br />
+בבנין ובנטיעה<br />
+בארוסין ובנשואין<br />
+ובשאילת שלום בין אדם לחברו<br />
+כבני אדם הנזופין למקום<br />
+היחידים חוזרים ומתענים<br />
+עד שיצא ניסן
+</p>
+</td>
+</tr>
+<tr>
+<td width="100%" colspan="4" valign="top">
+<p align="center" dir="RTL" style="text-align:center;direction:rtl;unicode-bidi:embed">
+<span class="subunit">5</span><br />
+יצא ניסן וירדו <span class="closure">גשמים סימן קללה</span><br />
+שנאמר<br />
+הלוא קציר חטים היום וגומר
+</p>
+</td>
+</tr>
+</table>
+</div>
+
+<p class="lefttorightparagraph">The tabular layout made it possible to see the two levels of division immediately. For convenience, I will refer to the major divisions as "rows", and the minor divisions as "segments". As the investigation progressed, certain characteristics of the chapters came into focus. For example, no chapter was found to contain more than five rows, major divisions. Similarly, no row contained more than three segments. This second characteristic, the limited number of subdivisions within a row, led to the early identification of a third and crucial characteristic. All of the chapters appeared to be structurally symmetrical. The first row always had the same number of segments as the last row. If the chapter contained four rows, then the second and third rows had the same number of segments, as well as the first and fourth. If the chapter had five rows, then the second and fourth were identical, as well as the first and fifth.</p>
+
+<p class="lefttorightparagraph">We will now look at some sample chapters. There is a <a href="#ColorCode">color code</a> which explains the colors used to mark parallels within the chapters. The first example we will look at, Taanit 1, is a five-row chapter that contains all three types of rows; two containing one segment, two containing three segments, and one containing two segments. The rows are numbered 1-5. Segments are marked by Hebrew letters, א-ג. The Hebrew letters in parentheses indicate the division into mishnayot that appears in the Albeck edition of the Mishnah. The segments are read from right to left across the row, and then down to the right side of the next row.</p>
+
+<p class="lefttorightparagraph">The first chapter of Taanit demonstrates some of the basic literary techniques employed by the author of the Mishnah. I have divided the text into ten segments and organized them in five rows. In rows 2-4, all the segments within each row have the same opening: in row 2 "שואלין את הגשמים"; in row 3 "הגיע ... ולא ירדו גשמים"; in row 4 "עברו אלו ולא נענו". The text has been highlighted with two highlights. <span class="horizontal1">This highlight</span> indicates a parallel between all segments of a row. In rows 1 and 5 <span class="closure">this highlight</span> is employed to mark a Closure, "גשמים סימן קללה", a phrase that appears in the opening and closing pericopes of the chapter. I will introduce other highlights that mark other literary techniques in the following examples. They are summarized in the <a href="#ColorCode">color code</a>. Taanit 1 is an excellent example of how the structure of a chapter can be deciphered by a linguistic key. Once the parts of the chapter have been identified, the structural symmetry becomes apparent. In this case, the structural symmetry is reinforced by the conceptual symmetry between "שואלין" in 2 and "נענו" in 4, the two three-part rows.</p>
+
+<p class="lefttorightparagraph">The chapter is symmetrical because rows 1 and 5 have the same number of segments, as well as 2 and 4. It should be noted that although rows 1 and 5 have only one segment, nevertheless, it is clear that 1 can not be part of row 2, nor can 5 be part of row 4. The clarity of the opening formulae in rows 2 and 4 taken together with the Closure phrase in 1 and 5 require that that 1 and 5 be seen as single segment rows. This point can be important when considering just how the chapters were created, and for what purpose, because it emphasizes that the rows are planning units. In this example, the clear designation of the rows by linguistic patterns emphasizes that they constitute five blocks of text.</p>
+
+<p class="lefttorightparagraph">Taanit 1 is almost entirely chronological, encompassing the rainy season in Israel from beginning to end. The temporal order of events should be a sufficient principle for organizing the laws contained in the chapter. If the Mishnah were merely a legal compendium, no other internal structure would be necessary. And yet, for some reason, the author has utilized highly precise and extremely sophisticated linguistic formatting in addition to the chronological ordering. So there are two, evidently independent, principles of organization in the chapter, the chronological order linked to the content of the laws, and the linguistic patterning that leads to seeing the chapter as a five-part symmetrical construct. The layer of structure evidenced by the linguistic formatting and symmetry indicates that in addition to any function the Mishnah may serve as a receptacle for legal traditions, it is also a literary construct ---and a work of art. Even though the chapter could have been arranged simply according to chorological order, a larger and more complex framework was added. Additional examples will demonstrate just how important the literary format of the chapters was to the author.</p>
+
+<p class="lefttorightparagraph">The formal structure of the chapter indicates that it was planned as an integral unit. The Closure created with "גשמים סימן קללה", together with the fact that 1 and 5 have only one segment, demonstrates that the beginning and end were conceived together. The complementary opening phrases in 2, שואלין, and 4, נענו, reinforce the symmetry created by having the same number of segments in these two rows. More than anything, the combination of chronological order with a superimposed formal linguistic structure testifies that the chapter has been planned as a whole unit. Nothing can be added or subtracted, and it is all "tightly woven". It is like a tapestry woven on the loom in which all of the threads have been pulled as tight as possible to form a single indivisible fabric. The next example, Shabbat 6, like Taanit 1, has two principles of organization, one linguistic/formal and one substantive. We will see that it has been woven as two independent, and yet inseparable documents, thus reflecting the character of its ostensible principle of organization, gender distinctions vis-à-vis the laws of the Sabbath.</p>
+
+<h3>Example 2: Shabbat 6, Division into Columns</h3>
+<table dir="rtl" border="0">
+<tr>
+<td width="47%" valign="top" class="center">
+<span class="subunit">1א</span><br />
+(א) במה <span class="vertical1">אשה</span> יוצאה ובמה אינה יוצאה<br />
+<span class="horizontal1">לא תצא אשה</span> לא בחוטי צמר<br />
+ולא בחוטי פשתן ולא ברצועות שבראשה<br />
+לא תטבל בהן עד שתרפם<br />
+ולא בטוטפת<br />
+לא בסנבוטין בזמן שאינן תפורין<br />
+לא בכבול לרשות הרבים<br />
+לא בעיר שלזהב ולא בקטלא ולא בנזמים<br />
+ולא <span class="closure">בטבעת</span> שאין עליה חותם<br />
+ולא במחט שאינה נקובה<br />
+<span class="horizontal1">ואם יצאת אינה חיבת חטאת</span>
+</td>
+<td width="52%" valign="top" class="center">
+<span class="subunit">1ב</span><br />
+(ב) <span class="horizontal1">לא יצא</span> <span class="vertical1">האיש</span> בסנדל <span class="closure">המסמר</span><br />
+ולא ביחיד בזמן שאין ברגלו מכה<br />
+לא בתפלין<br />
+לא בקמיע בזמן שאינו מן הממחה<br />
+לא בשריון<br />
+לא בקסדא<br />
+לא במגפים<br />
+<span class="horizontal1">ואם יצא אינו חיב חטאת</span>
+</td>
+</tr>
+<tr>
+<td width="47%" valign="top" class="center">
+<span class="subunit">2א</span><br />
+(ג) <span class="horizontal1">לא תצא</span> <span class="vertical1">אשה</span><br />
+במחט הנקובה<br />
+לא בטבעת שיש עליה חותם<br />
+ולא בכליאר ולא בכובלת<br />
+לא בצלוחית שלפליטון<br />
+<span class="horizontal1">ואם יצתה חיבת חטאת</span><br />
+דברי רבי מאיר<br />
+וחכמים פוטרין בכובלת<br />
+ובצלוחית שלפליטון
+</td>
+<td width="52%" valign="top" class="center">
+<span class="subunit">2ב</span><br />
+(ד) <span class="horizontal1">לא יצא</span> <span class="vertical1">האיש</span><br />
+לא בסיף ולא בקשת<br />
+לא בתריס ולא באלה ולא ברמח<br />
+<span class="horizontal1">ואם יצא חיב חטאת</span><br />
+רבי אליעזר אומר תכשיטין הן לו<br />
+וחכמים אומרים אינן אלא לגנאי<br />
+שנאמר וכתתו חרבותם לאתים<br />
+וחניתותיהם למזמרות<br />
+לא ישא גוי אל גוי חרב<br />
+ולא ילמדו עוד מלחמה
+</td>
+</tr>
+<tr>
+<td width="47%" valign="top" class="center">
+<span class="subunit">3א</span><br />
+<span class="subunit">A</span><br />
+<span class="horizontal1">בירית טהורה ויוצאין בה בשבת</span><br />
+<span class="horizontal1">כבלים טמאין ואין יוצאין בהם בשבת</span><br />
+(ה) יוצאה אשה בחוטי שער<br />
+בין משלה בין משלחברתה<br />
+בין משלבהמה<br />
+ובטוטפת ובסנבוטין בזמן שהן תפורין<br />
+בכבול ובפאה נכרית לחצר<br />
+במוך שבאזנה ובמוך שבסנדלה<br />
+ובמוך שהתקינה לנדתה<br />
+בפלפל ובגרגיר מלח ובכל דבר שתתן לתוך פיה<br />
+ובלבד שלא תתן לכתחילה בשבת ואם נפל לא תחזיר<br />
+שן תותבת ושן שלזהב<br />
+רבי מתיר וחכמים אוסרים<br />
+(ו) יוצאה בסלע שעל הצינית
+</td>
+<td width="52%" valign="top" class="center">
+<span class="subunit">3ב</span><br />
+<span class="subunit">A</span><br />
+(ח) הקטע יוצא בקב שלו<br />
+דברי רבי מאיר<br />
+ורבי יוסי אוסר<br />
+ואם יש לו בית קבול כתותים טמא<br />
+<span class="horizontal1">סמוכות שלו טמאין מדרס</span><br />
+<span class="horizontal1">ויצאין בהן בשבת</span><br />
+ונכנסין בהן בעזרה<br />
+<span class="horizontal1">כסא וסמוכות שלו טמאין מדרס</span><br />
+<span class="horizontal1">ואין יוצאין בהם בשבת</span><br />
+ואין נכנסין בהן בעזרה<br />
+אנקטמין טהורין<br />
+ואין יוצאין בהן
+</td>
+</tr>
+<tr>
+<td width="47%" valign="top" class="center">
+<span class="subunit">B</span><br />
+א. <span class="vertical1">הבנות</span> הקטנות <span class="horizontal1">יוצאות</span> בחוטין ואפלו בקיסמין שבאזניהן<br />
+ב. ערביות יוצאות רעולות ומדיות פרופות<br />
+<span class="horizontal1">וכל אדם אלא שדברו חכמים בהווה</span>
+</td>
+<td width="52%" valign="top" class="center">
+<span class="subunit">B</span><br />
+א. (ט) <span class="vertical1">הבנים</span> <span class="horizontal1">יוצאין</span> בקשרים<br />
+ב. ובני מלכים בזוגין<br />
+<span class="horizontal1">וכל אדם אלא דברו חכמים בהווה</span>
+</td>
+</tr>
+<tr>
+<td width="47%" valign="top" class="center">
+<span class="subunit">C</span><br />
+(ז) פורפת<br />
+a. על האבן<br />
+b. ועל האגוז<br />
+c. ועל <span class="closure">המטבע</span><br />
+ובלבד שלא תפרף לכתחילה בשבת
+</td>
+<td width="52%" valign="top" class="center">
+<span class="subunit">C</span><br />
+יוצאין<br />
+a. בביצת החרגול<br />
+b. ובשן שלשועל<br />
+c. <span class="closure">ובמסמר</span> הצלוב<br />
+משום רפואה דברי רבי מאיר<br />
+וחכמים אומרים אף בחל אסור משום דרכי אמורי
+</td>
+</tr>
+</table>
+
+<p>In the previous example we saw a chapter composed of different sized rows. In this example we will look at a chapter in which all of the rows are the same size, two segments. I will refer to chapters containing rows of a uniform length as "regular", and those containing rows of different lengths, like Taanit 1, as "irregular". Both types of chapters are symmetrical. There are roughly twice as many regular chapters in the Mishnah as irregular. While Taanit 1 demonstrated the minimum of two levels of internal division found in all chapters, Shabbat 6 has four levels of division within it. The third level, marked with the uppercase A-C, contains parallel subdivisions of segments 3א and 3ב. Sub-segment C is further divided into the parallel divisions marked with lowercase a-c.</p>
+
+<p>The format that I have chosen for laying out the chapters has proven especially fortuitous in deciphering certain aspects of regular chapters. Very often, when these chapters are arranged as tables, clear relationships can be seen in the columns as well as in the rows. Shabbat 6 is a paradigm of a chapter in which there is "sense" in the columns. I have introduced <span class="vertical1">this highlight</span> to indicate a vertical parallel. In Shabbat 6, the vertical parallel demonstrates that the chapter was planned as two parallel texts distinguished by gender. The right-hand column refers exclusively to women and the left hand column to men. The arrangement of the chapter in columns changes its focus from laws concerning the Sabbath to a composition on gender.</p>
+
+<p>The general theme of Shabbat 6 is transferring gender-linked accoutrements between domains. However, the legal categories of permitted, forbidden, requiring a sin offering or not, play only a minor role in the organization of the chapter. The author has created six structural parallels connecting women and men, the three rows and the three parallel sections, A-C, of the segments of row 3. The meta-legal character of the composition is clearest in row 3.</p>
+
+<div align="center">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="31%" valign="top" class="center">א<br />Women</td>
+<td width="31%" valign="top" class="center">ב<br />Men</td>
+<td valign="top" class="style10"></td>
+<td width="6%" valign="top"></td>
+</tr>
+<tr>
+<td width="31%" valign="top" class="style4">בירית <span class="horizontal1">טהורה</span> ויוצאין בה בשבת</td>
+<td width="31%" valign="top" class="style4">סמוכות שלו<br /><span class="horizontal1">טמאין מדרס</span><br />ויצאין בהן בשבת ונכנסין בהן בעזרה</td>
+<td valign="top" class="style11"><h4>3A<br />Ritual Purity</h4></td>
+<td width="6%" valign="top"></td>
+</tr>
+<tr>
+<td width="31%" valign="top" class="style5">כבלים <span class="horizontal1">טמאין ואין יוצאין בהם בשבת</span></td>
+<td width="31%" valign="top" class="style5">כסא וסמוכות שלו <span class="horizontal1">טמאין מדרס<br />ואין יוצאין בהם בשבת</span></td>
+<td class="style11"></td>
+<td width="6%"></td>
+</tr>
+<tr>
+<td width="31%" valign="top" class="style8">א. הבנות הקטנות יוצאות בחוטין ואפלו בקיסמין שבאזניהן</td>
+<td width="31%" valign="top" class="style8">א. (ט) הבנים יוצאין בקשרים</td>
+<td class="style9" valign="top"><h4>3B<br />Children and other Exotics</h4></td>
+<td width="6%" rowspan="2" valign="top"></td>
+</tr>
+<tr>
+<td width="31%" valign="top" class="style5">ב. ערביות יוצאות רעולות<br />ומדיות פרופות וכל אדם אלא שדברו חכמים בהווה</td>
+<td width="31%" valign="top" class="style5">ב. ובני מלכים בזוגין וכל אדם אלא דברו חכמים בהווה</td>
+<td class="style11" valign="top"><h4>וכל אדם אלא שדברו חכמים בהווה</h4></td>
+</tr>
+<tr>
+<td width="31%" valign="top" class="upperborder">(ז) a. פורפת על האבן<br />b. ועל האגוז<br />c. ועל המטבע<br />ובלבד שלא תפרף לכתחילה בשבת</td>
+<td width="31%" valign="top" class="upperborder">a. בביצת החרגול<br />b. ובשן שלשועל<br />c. ובמסמר הצלוב<br />משום רפואה דברי רבי מאיר<br />וחכמים אומרים אף בחל אסור משום דרכי אמורי</td>
+<td valign="top" class="style11"><h4>3C<br />Three small articles</h4></td>
+<td width="6%" valign="top"></td>
+</tr>
+</table>
+</div>
+
+<p>The parallels within row 3 have been created using different techniques. Parallel 3A is based on matters of ritual purity:</p>
+
+<div align="center">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="31%" valign="top" class="style5">בירית טהורה ויוצאין בה בשבת<br />כבלים טמאין ואין יוצאין בהם בשבת</td>
+<td width="31%" valign="top" class="style5"><div class="style5">סמוכות שלו טמאין מדרס<br />ויצאין בהן בשבת<br />ונכנסין בהן בעזרה כסא וסמוכות שלו טמאין מדרס ואין יוצאין בהם בשבת</div></td>
+</tr>
+</table>
+</div>
+
+<p>The second parallel, 3B, is complex, containing both formal and linguistic elements. Both segments begin by mentioning children, followed by what I have termed "exotics": Arabian and Medianite Jewish women in column א and Jewish princes in column ב. The parallel concludes by stating in both segments "וכל אדם אלא שדברו חכמים בהווה". The parallel in 3C is based on both structure and content. Each segment lists three small objects. Finally, both columns display an element of closure based on the third item in the third section of the third row: in c3א, מטבע and 1א טבעת, in c3ב and 1ב מסמר. It should be noted that the items chosen to create closure טבעת, on the female side, and מסמר, on the male side are themselves symbols for female and male.</p>
+
+<p>The extraordinarily complex parallel created in row 3, like the linguistic formatting we found in Taanit 1, far exceeds the needs of a legal compilation. Shabbat 6 may be more of a dissertation on gender than on the laws of the Sabbath. In any case, we have seen that the chapter has been very carefully constructed and that the tabular arrangement reflects its inner structure. Lest you say that the division by gender indicates that this is a unique and non-representative chapter, I have included another example from masechet Shabbat, chapter 16, which is virtually identical to 6 in structure. However, the distinction between the columns in 16 is between preventing damage in column א and הנאה in column ב.</p>
+
+<h3>Example 3. Shabbat 16: Parallel Columns, Damage and <i>הנאה</i></h3>
+<div align="right">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%" class="center">
+<tr>
+<td width="50%" valign="top" class="center">
+<h5 align="center" class="style5"><span class="subunit">Preventing damage</span></h5>
+<span class="subunit">1א</span><br />
+<span class="subunit">A</span><br />
+(א) כל כתבי הקדש <span class="horizontal1">מצילין</span> אותן מפני <span class="vertical1">הדלקה</span><br />
+בין שקורין בהן ובין שאין קורין בהן<br />
+ואף על פי שכתובים בכל לשון טעונים גניזה<br />
+ומפני מה אין קורין בהם<br />
+מפני בטול בית המדרש
+</td>
+<td width="50%" valign="top" class="center">
+<h5 align="center" class="style5"><span class="subunit">הנאה</span></h5>
+<span class="subunit">1ב</span><br />
+<span class="subunit">A</span><br />
+(ב) <span class="horizontal1">מצילין</span> מזון שלש סעודות<br />
+הראוי לאדם לאדם הראוי לבהמה לבהמה<br />
+כיצד<br />
+נפלה דלקה בלילי שבת מצילין מזון שלש סעודות<br />
+בשחרית מצילין מזון שתי סעודות<br />
+במנחה מזון סעודה אחת<br />
+רבי יוסי אומר לעולם מצילין מזון שלש סעודות
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" class="center">
+<span class="subunit">B</span><br />
+<span class="horizontal1">מצילין תיק</span> הספר עם הספר<br />
+ותיק התפלין עם התפלין<br />
+<span class="horizontal1">ואף על פי שיש בתוכן</span> מעות
+</td>
+<td width="50%" valign="top" class="center">
+<span class="subunit">B</span><br />
+(ג) <span class="horizontal1">מצילין סל</span> מלא ככרות<br />
+<span class="horizontal1">ואף על פי שיש בו</span> מאה סעודות<br />
+ועגול שלדבלה וחבית שליין<br />
+ואומר לאחרים בואו והצילו לכם<br />
+ואם היו פקחין עושין עמו חשבון אחר השבת
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" class="center">
+<span class="subunit">C</span><br />
+<span class="horizontal1">ולהיכן מצילין אותן</span><br />
+למבוי שאינו מפלש<br />
+<span class="horizontal1">בן בתירא אומר אף</span> למפלש
+</td>
+<td width="50%" valign="top" class="center">
+<span class="subunit">C</span><br />
+<span class="horizontal1">להיכן מצילין אותן</span><br />
+לחצר המערבת<br />
+<span class="horizontal1">בן בתירא אומר אף</span> לשאינה מערבת<br />
+(ד) ולשם מוציא כל כלי תשמישו<br />
+ולובש כל מה שיכול ללבוש<br />
+ועוטף כל מה שיכול לעטוף<br />
+רבי יוסי אומר שמונה עשר כלים<br />
+וחוזר ולובש ומוציא<br />
+ואומר לאחרים <span class="vertical1">בואו</span> והצילו עמי
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" class="center">
+<span class="subunit">2א</span><br />
+(ה) רבי שמעון בן ננס אומר<br />
+פורסין עור שלגדי<br />
+<span class="vertical1">על גבי</span> שדה תיבה ומגדל <span class="vertical1">שאחז</span> בהן את האור<br />
+מפני שהוא מחרך<br />
+ועושין מחצה בכל הכלים בין מלאים בין ריקנים<br />
+<span class="vertical1">בשביל</span> שלא תעבר <span class="vertical1">הדלקה</span><br />
+רבי יוסי אוסר בכלי חרש חדשים מלאין מים<br />
+לפי שאין יכולין לקבל את האור<br />
+והן מתבקעין <span class="horizontal1">ומכבין</span> את הדלקה
+</td>
+<td width="50%" valign="top" class="center">
+<span class="subunit">2ב</span><br />
+(ו) <span class="vertical1">נכרי</span> <span class="vertical1">שבא</span> <span class="horizontal1">לכבות</span><br />
+אין אומרים לו כבה ואל תכבה<br />
+מפני שאין שביתתו עליהן<br />
+אבל קטן שבא <span class="horizontal1">לכבות</span><br />
+אין שומעין לו מפני ששביתתו עליהן
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" class="center">
+<span class="subunit">3א</span><br />
+<span class="subunit">A</span><br />
+(ז) כופין קערה <span class="vertical1">על גבי</span> <span class="horizontal1">הנר</span><br />
+<span class="vertical1">בשביל</span> שלא <span class="vertical1">תאחז</span> בקורה<br />
+<span class="subunit">B</span><br />
+ועל צואה שלקטן<br />
+<span class="subunit">C</span><br />
+ועל עקרב שלא תשך<br />
+אמר רבי יהודה<br />
+<span class="horizontal1">מעשה בא לפני רבן יוחנן בן זכאי בערב</span><br />
+ואמר חוששני לו מחטאת
+</td>
+<td width="50%" valign="top" class="center">
+<span class="subunit">3ב</span><br />
+<span class="subunit">A</span><br />
+(ח) <span class="vertical1">נכרי</span> שהדליק את <span class="horizontal1">הנר</span> משתמש לאורו ישראל<br />
+ואם בשביל ישראל אסור<br />
+<span class="subunit">B</span><br />
+מלא מים להשקות בהמתו משקה אחריו ישראל<br />
+ואם בשביל ישראל אסור<br />
+<span class="subunit">C</span><br />
+עשה גוי כבש לירד בו יורד אחריו ישראל<br />
+ואם בשביל ישראל אסור<br />
+<span class="horizontal1">מעשה ברבן גמליאל וזקנים שהיו באין בספינה</span><br />
+ועשה גוי כבש לירד בו<br />
+וירדו בו רבן גמליאל והזקנים
+</td>
+</tr>
+</table>
+</div>
+
+<p class="lefttorightparagraph">Like shabbat 6, 16 also contains three rows of two segments each. Within row 1 and row 3 the segments are further divided into three elements, A-C. In both rows, 1 and 3, the parallel division of the segments is accompanied by linguistic parallels that demonstrate that the two columns were constructed in parallel, like the columns of Shabbat 6.</p>
+
+<p>The parallels within row 1 refer to:</p>
+<ol>
+<li>what is saved in A- מצילין;</li>
+<li>the contents of a vessel in B, highlighted by ואף על פי שיש בו;</li>
+<li>and ולהיכן מצילין אותן in C,</li>
+<li>with the addition in both C elements of בן בתירא אומר אף.</li>
+</ol>
+
+<p>The parallel between the three part 3א and the three part 3ב is formed by the parallel use of נר in the first element, A, and the parallel between מעשה בא לפני רבן יוחנן בן זכאי בערב and מעשה ברבן גמליאל וזקנים שהיו באין בספינה in the C elements of 3. The vertical linkage between rows 1 and 3 is accomplished by linguistic hooks: בואו at the end of 1ב and נכרי from the beginning of 3ב combine in נכרי שבא in 2ב. 2א combines הדלקה from 1א with על גבי, בשביל, and תאחז from the beginning of 3א. Each of the columns has a separate subject, avoiding damage in א and הנאה, benefiting, in ב. So Shabbat 16, like Shabbat 6, was conceived and constructed as the two parallel texts that appear in the columns of המשנה כדרכה.</p>
+
+<h2>Example 4: Hagiga 1, Woven Text</h2>
+<div align="right">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1א</span><br />
+(א) הכל <span class="vertical1">חיבין</span> בראיה<br />
+חוץ מחרש שוטה וקטן<br />
+וטמטום ואנדרוגינוס<br />
+ונשים ועבדים שאינם משחררים<br />
+החגר והסומא והחולה והזקן<br />
+ומי שאינו יכול לעלות ברגליו<br />
+איזהו קטן<br />
+כל שאינו יכול לרכוב<br />
+על כתפיו שלאביו<br />
+ולעלות מירושלם להר הבית<br />
+<span class="horizontal1">דברי בית שמאי</span><br />
+<span class="horizontal1">ובית הלל אומרים</span><br />
+כל שאינו יכול לאחוז בידו שלאביו<br />
+ולעלות מירושלם להר הבית<br />
+שנאמר שלש רגלים
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ב</span><br />
+(ב) <span class="horizontal1">בית שמאי אומרים</span><br />
+הראיה <span class="vertical1">שתי כסף וחגיגה מעה כסף</span><br />
+<span class="horizontal1">ובית הלל אומרים</span><br />
+הראיה מעה כסף וחגיגה שתי כסף
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ג</span><br />
+(ג) עולות במועד באות מן החלין<br />
+והשלמים מן המעשר<br />
+<span class="vertical1">יום טוב הראשון</span> שלפסח<br />
+<span class="horizontal1">בית שמאי אומרים</span> מן החלין<br />
+<span class="horizontal1">ובית הלל אומרים</span> מן המעשר
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2א</span><br />
+(ד) <span class="horizontal1">ישראל</span> יוצאין ידי <span class="vertical1">חובתן</span><br />
+<span class="vertical1">בנדרים</span> <span class="horizontal2">ובנדבות ובמעשר בהמה</span><br />
+<span class="horizontal1">והכהנים</span> <span class="horizontal2">בחטאות ובאשמות</span><br />
+ובבכור ובחזה ובשוק<br />
+אבל לא בעופות ולא במנחות
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2ב</span><br />
+(ה) <span class="horizontal1">מי ש</span>יש לו אוכלים <span class="vertical1">מרבים</span><br />
+ונכסים <span class="vertical1">מעטים</span><br />
+מביא <span class="horizontal2">שלמים</span> מרבים <span class="horizontal2">ועולות</span> מעטות<br />
+נכסים מרבים ואוכלין מעטין<br />
+מביא עולות מרבות ושלמים מעטין<br />
+זה וזה מעט<br />
+<span class="horizontal3">על זה נאמר</span> <span class="vertical1">מעה כסף ושתי כסף</span><br />
+זה וזה מרבים<br />
+על זה נאמר איש כמתנת ידו<br />
+כברכת ה' אלהיך אשר נתן לך
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2ג</span><br />
+(ו) <span class="horizontal1">מי ש</span>לא חג<br />
+<span class="vertical1">ביום טוב הראשון</span> שלהחג<br />
+חוגג את כל הרגל<br />
+ויום טוב האחרון שלהחג<br />
+עבר הרגל ולא חג<br />
+אינו חיב באחריותו<br />
+<span class="horizontal3">על זה נאמר</span><br />
+מעות לא יוכל לתקן<br />
+וחסרון לא יוכל להמנות<br />
+(ז) רבי שמעון בן מנסיא אומר<br />
+איזהו מעות שאינו יכול לתקון<br />
+זה הבא על <span class="vertical1">הערוה</span> והוליד ממנה ממזר<br />
+אם תאמר בגונב ובגוזל<br />
+יכול הוא להחזירו ויתקן<br />
+רבי שמעון בן יוחי אומר<br />
+אין קורין מעות<br />
+אלא למי שהיה מתקן בתחלה ונתעות<br />
+ואיזה<br />
+זה תלמיד חכם הפורש מן <span class="vertical1">התורה</span>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">3א</span><br />
+(ח) התר <span class="vertical1">נדרים</span> פורחין באויר<br />
+<span class="horizontal1">ואין להם על מה שיסמכו</span>
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">3ב</span><br />
+הלכות שבת חגיגות ומעילות<br />
+<span class="horizontal1">הרי הם כהררים התלוין בשערה</span><br />
+שהן מקרא <span class="vertical1">מעט</span> והלכות <span class="vertical1">מרבות</span>
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">3ג</span><br />
+הדינין והעבודות<br />
+הטהרות והטמאות<br />
+<span class="vertical1">והעריות</span><br />
+<span class="horizontal1">יש להן על מה שיסמכו</span><br />
+הן הן גופי <span class="vertical1">תורה</span>
+</td>
+</tr>
+</table>
+</div>
+
+<h3>Vertical Key</h3>
+<div align="center">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1א</span><br />
+(א) הכל <span class="vertical1">חיבין</span> בראיה
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ב</span><br />
+הראיה <span class="vertical1">שתי כסף וחגיגה מעה כסף</span>
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ג</span><br />
+<span class="vertical1">יום טוב הראשון</span> שלפסח
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2א</span><br />
+(ד) ישראל יוצאין ידי <span class="vertical1">חובתן</span><br />
+<span class="vertical1">בנדרים</span>
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2ב</span><br />
+(ה) מי שיש לו אוכלים <span class="vertical1">מרבים</span><br />
+ונכסים <span class="vertical1">מעטים</span>...<br /><br />
+על זה נאמר <span class="vertical1">מעה כסף ושתי כסף</span>
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2ג</span><br />
+<span class="vertical1">ביום טוב הראשון</span> שלהחג...<br /><br />
+זה הבא על <span class="vertical1">הערוה</span> והוליד ממנה ממזר...<br />
+זה תלמיד חכם הפורש מן <span class="vertical1">התורה</span>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">3א</span><br />
+(ח) התר <span class="vertical1">נדרים</span> פורחין באויר
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">3ב</span><br />
+שהן מקרא <span class="vertical1">מעט</span> והלכות <span class="vertical1">מרבות</span>
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">3ג</span><br />
+<span class="vertical1">והעריות</span>...<br /><br />
+הן הן גופי <span class="vertical1">תורה</span>
+</td>
+</tr>
+</table>
+</div>
+
+<p>In the previous two examples, I have established that the columns are to be seen as central elements in the composition of the chapters. Let me remind you that we began with the division into rows, that is, major subject divisions, as the obvious and first division. Now, having seen that both the rows and the columns must be considered planning elements, we are faced with the unlikely and yet inevitable conclusion that some chapters were planned as two dimensional constructs, having both vertical and horizontal "sense". The two examples from masechet shabbat are in fact tables. They have meaning embedded in both the columns and the rows, and the meaning of any given segment of text is, at least in part, defined by its place in the table. Consequently, any interpretation that claims to be a close reading of the chapter <b><i><u>as it was composed</u></i></b>, must take into account the tabular format. This conclusion is far reaching. Essentially, it demands the creation of a new type of commentary, one that attempts to describe the chapter as a coherent literary entity, rather than a collection of laws. I will use the example of Hagigah 1 to draw the guidelines for this type of commentary. Basically, these are the same guidelines to be used for <i>studying</i> the chapter as a unit. The study begins, as in the previous examples, with observation of linguistic patterns. However, rather than just noting these patterns, I will show how they can be used as a jumping off point for a broad interpretation of the whole chapter as a table.</p>
+
+<p>The three rows of Hagigah 1, the major divisions of the chapter, are defined by three different principles. Row 1 contains three disputes between beit Shamai and beit Hillel concerning matters related to the pilgrimage holidays. The second row presents three aspects of the personal obligation to bring sacrifices on the holiday, as indicated by the opening words of each segment of the row, ישראל in 2א and מי ש in both 2ב and 2ג. Row 3 is concerned with the biblical foundations of various laws. When the three rows are arranged in the format of the Structured Mishnah, a vertical key appears in the columns. For your convenience, I have attached this key to the text of the chapter. This linguistic key shows that the middle segment of each column, segment 2, combines significant terms from segments 1 and 3 of its column. This would seem to indicate that the columns as well as the rows were planning units, and that the chapter was constructed as a table, or weave, having both vertical and horizontal "threads".</p>
+
+<p>The first step of interpreting this weave is to define the planning lines of the chapter, the warp and the weft, which are the rows and columns of המשנה כדרכה. After the planning lines have been identified, the interpretation should explain how each segment of the chapter is affected by the two lines that intersect in it.</p>
+
+<div align="right">
+<table dir="rtl" border="1" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="20%" valign="top"></td>
+<td width="26%" valign="top"><h5><span class="subunit">א</span><br /><span class="subunit">Intrinsic/Self</span><br /><span class="subunit">lacking any external dependency</span></h5></td>
+<td width="26%" valign="top"><h5><span class="subunit">ב</span><br /><span class="subunit">Bridging the Extrinsic and Intrinsic<br />Quantified</span></h5></td>
+<td width="26%" valign="top"><h5><span class="subunit">ג</span><br /><span class="subunit">Extrinsic/Other</span><br /><span class="subunit">dependent on external or extraneous source</span></h5></td>
+</tr>
+<tr>
+<td width="20%" valign="top"><h5><span class="subunit">1</span><br /><span class="subunit">Three disputes between the schools of Hillel and Shamai concerning personal observance of festivals</span></h5></td>
+<td width="26%" valign="top" class="center">
+<span class="subunit">1א</span><br />
+(א) הכל חיבין בראיה<br />
+חוץ מחרש שוטה וקטן<br />
+וטמטום ואנדרוגינוס<br />
+ונשים ועבדים שאינם משחררים<br />
+החגר והסומא והחולה והזקן<br />
+ומי שאינו יכול לעלות ברגליו<br />
+איזהו קטן<br />
+כל שאינו יכול לרכוב<br />
+על כתפיו שלאביו<br />
+ולעלות מירושלם להר הבית<br />
+<span class="horizontal1">דברי בית שמאי</span><br />
+<span class="horizontal1">ובית הלל אומרים</span><br />
+כל שאינו יכול לאחוז <span class="vertical1">בידו</span> שלאביו<br />
+ולעלות מירושלם להר הבית<br />
+שנאמר שלש רגלים
+</td>
+<td width="26%" valign="top" class="center">
+<span class="subunit">1ב</span><br />
+(ב) <span class="horizontal1">בית שמאי אומרים</span><br />
+הראיה <span class="vertical1">שתי כסף וחגיגה מעה כסף</span><br />
+<span class="horizontal1">ובית הלל אומרים</span><br />
+הראיה מעה כסף וחגיגה שתי כסף
+</td>
+<td width="26%" valign="top" class="center">
+<span class="subunit">1ג</span><br />
+(ג) עולות במועד באות מן החלין<br />
+והשלמים מן המעשר<br />
+<span class="vertical1">יום טוב הראשון</span> שלפסח<br />
+<span class="horizontal1">בית שמאי אומרים</span> מן החלין<br />
+<span class="horizontal1">ובית הלל אומרים</span> מן המעשר
+</td>
+</tr>
+<tr>
+<td width="20%" valign="top"><h5><span class="subunit">2<br />Personal observance of festivals and proof texts</span><br /><span class="subunit">The integration of lines 1 and 3</span></h5></td>
+<td width="26%" valign="top" class="center">
+<span class="subunit">2א</span><br />
+(ד) <span class="horizontal1">ישראל</span> יוצאין <span class="vertical1">ידי</span> חובתן<br />
+<span class="vertical1">בנדרים</span> <span class="horizontal2">ובנדבות ובמעשר בהמה</span><br />
+<span class="horizontal1">והכהנים</span> <span class="horizontal2">בחטאות ובאשמות</span><br />
+ובבכור ובחזה ובשוק<br />
+אבל לא בעופות ולא במנחות
+</td>
+<td width="26%" valign="top" class="center">
+<span class="subunit">2ב</span><br />
+(ה) <span class="horizontal1">מי ש</span>יש לו אוכלים <span class="vertical1">מרבים</span><br />
+ונכסים <span class="vertical1">מעטים</span><br />
+מביא <span class="horizontal2">שלמים</span> מרבים <span class="horizontal2">ועולות</span> מעטות<br />
+נכסים מרבים ואוכלין מעטין<br />
+מביא עולות מרבות ושלמים מעטין<br />
+זה וזה מעט<br />
+<span class="horizontal3">על זה נאמר</span> <span class="vertical1">מעה כסף ושתי כסף</span><br />
+זה וזה מרבים<br />
+<span class="horizontal3">על זה נאמר</span> איש כמתנת ידו<br />
+כברכת ה' אלהיך אשר נתן לך
+</td>
+<td width="26%" valign="top" class="center">
+<span class="subunit">2ג</span><br />
+(ו) <span class="horizontal1">מי ש</span>לא חג<br />
+<span class="vertical1">ביום טוב הראשון</span> שלהחג<br />
+חוגג את כל הרגל<br />
+ויום טוב האחרון שלהחג<br />
+עבר הרגל ולא חג<br />
+אינו חיב באחריותו<br />
+<span class="horizontal3">על זה נאמר</span><br />
+מעות לא יוכל לתקן<br />
+וחסרון לא יוכל להמנות<br />
+(ז) רבי שמעון בן מנסיא אומר<br />
+איזהו מעות שאינו יכול לתקון<br />
+זה הבא על <span class="vertical1">הערוה</span> והוליד ממנה ממזר<br />
+אם תאמר בגונב ובגוזל<br />
+יכול הוא להחזירו ויתקן<br />
+רבי שמעון בן יוחי אומר<br />
+אין קורין מעות<br />
+אלא למי שהיה מתקן בתחלה ונתעות<br />
+ואיזה<br />
+זה תלמיד חכם הפורש מן <span class="vertical1">התורה</span>
+</td>
+</tr>
+<tr>
+<td width="20%" valign="top"><h5><span class="subunit">3</span><br /><span class="subunit">Proof texts</span></h5></td>
+<td width="26%" valign="top" class="center">
+<span class="subunit">3א</span><br />
+(ח) התר <span class="vertical1">נדרים</span> פורחין באויר<br />
+<span class="horizontal1">ואין להם על מה שיסמכו</span>
+</td>
+<td width="26%" valign="top" class="center">
+<span class="subunit">3ב</span><br />
+הלכות שבת חגיגות ומעילות<br />
+<span class="horizontal1">הרי הם כהררים התלוין בשערה</span><br />
+שהן מקרא <span class="vertical1">מעט</span> והלכות <span class="vertical1">מרבות</span>
+</td>
+<td width="26%" valign="top" class="center">
+<span class="subunit">3ג</span><br />
+הדינין והעבודות<br />
+הטהרות והטמאות <span class="vertical1">והעריות</span><br />
+<span class="horizontal1">יש להן על מה שיסמכו</span><br />
+הן הן גופי <span class="vertical1">תורה</span>
+</td>
+</tr>
+</table>
+</div>
+
+<p>I have summarized my definitions of the six planning lines of Hagiga 1 on the second page of the Hagiga example, labeled "Warp and Weft Interpretation". The definitions appear as a super-text around the actual text of the chapter. Obviously, the definitions are flexible and apt to change as the interpretation develops. (BTW, the development of a set of definitions for the weave has proven to be an exciting and worthwhile classroom activity as it demands that the students master the details of the chapter in order to integrate them.) The process of defining the weave begins with the more obvious weft threads, the rows of our table. The definitions I have suggested for rows 1 "Three disputes between the schools of Hillel and Shamai concerning personal observance of festivals" and 3 "Proof texts" are self-explanatory. Row 2 "The integration of lines 1 and 3" needs some clarification.</p>
+
+<p>The vertical key has already suggested that row 2 is a complex row, compounded of aspects of rows 1 and 3, because each segment of row 2 combines terms from the parallel segments of 1 and 3. This linguistic skeleton needs some fleshing out. Comparing 1 and 2, we can see that the parallels are more than linguistic. The parallel sections of 1 and 2 have parallel subjects. 1א and 2א relate the obligations of the festival to personal status: young or old, Israelite or priest. 1ב and 2ב discuss the monetary value of the offerings. 1ג and 2ג refer to offerings that are sacrificed on the intermediate days of the festivals.</p>
+
+<p>Each segment of 2 has a double link to its parallel segment in 3. The first link is made through the legal categories mentioned in 3. The second link is made through the degree of intertextuality used in the segments, ranging from none in א to much in ג.</p>
+
+<ul>
+<li>Segment 3א refers to נדרים which appears in 2א and states that it is not connected to any biblical source; no verses or persons are quoted in 2א, it is stam mishnah.</li>
+<li>Segment 3ב mentions חגיגות, the subject of 2ב; 3ב speaks of laws that are linked to sources and 2ב quotes both the Torah and the Mishnah with the unusual form על זה נאמר.</li>
+<li>Segment 3ג mentions עריות which appear in 2ג; 3ג speaks of substantive laws (גופי תורה) that are derived from the sources. The parallel segment, 2ג, contains Mishnah, a proof text and a Talmudic debate.</li>
+</ul>
+
+<p>We can conclude that row 2 has been carefully constructed to be a conceptual middle between 1 and 3, and that there is a basis for my definition of the row as "the integration of lines 1 and 3". Before turning to the warp, we should take a moment to marvel at the artistic majesty of the Mishnah as demonstrated through the elegant complexity of row 2. It is quite clear now that this chapter (as all chapters of Mishnah) was crafted and constructed according to a plan and is not simply a collection of thematically related laws. We can no longer view the Mishnah as a somewhat eclectic collection of previously existing material. It is a magnificent literary construct, fabricated by a master craftsman.</p>
+
+<p>For the sake of brevity I will just outline the analysis of the columns. Each column has an integrating theme. As hinted by the dyad אין and יש in 3א and 3ג, the outside columns should be taken as opposites based on dependency (סמיכות) on outside factors. If we define the integrating theme of א as "intrinsic" (לא סומך) then the corresponding theme of ג should be "extrinsic" (סומך), or perhaps "dependent". I chose "intrinsic" for א because both 1א and 2א are laws of personal status and the subject of 3א is something which is self sufficient, devoid of external linkage. All the segments of column ג, on the other hand detail laws that are dependent on other laws or texts. Column ב will then be in some way a medium between the two opposed concepts. The common theme of "quantification" found in all three segments of ב is a good candidate for middle between "intrinsic" and "extrinsic". Numbers are directly associated with what is being numbered and thus intrinsic, while still not being the thing itself but rather an abstraction. The test of whether or not the two sets of definitions that I have suggested are useful is whether new meaning can be derived from observing their interaction in specific segments. I will give an example of how this form of interpretation works by interpreting the formats of the three disputes between ב"ה and ב"ש in row 1.</p>
+
+<p>Each of the disputes has a different format. The first, 1א, is based on a specific detail of the law presented in the beginning of the Mishnah, איזה קטן. The third dispute, 1ג, however, is not at all connected to the substance of the opening part of the Mishnah. It is apparently appended because of a linguistic link, מן החולין, מן המעשר. The dispute itself is extraneous to the subject of the Mishnah, which is concerned with the source of sacrifices on the intermediate days of the festival. Formally, then, the disputes in 1א and 1ג are antithetical; the one based on a detail within the opening law, and the other not connected to the content of the opening law. We could say that the connection between the first dispute and the body of the Mishnah is intrinsic to the Mishnah while the dispute in 1ג is extrinsic to the Mishnah. The middle dispute, 1ב is inseparable from the articulation of the law itself. The dispute is neither inherent in the Mishnah nor extraneous to it. The dispute and the Mishnah are inseparable, merging the aspects of intrinsic and extrinsic. This reading explains the formats of the disputes as an essential component of the chapter because each one has been formatted in accordance with the rule of its column. This is the direction to be followed when studying the chapter according to its tabular structure or creating a new commentary based on an understanding of the chapter as a coherent literary unit, as it is displayed in המשנה כדרכה.</p>
+
+<p>To summarize some of the key features of Hagigah 1: Its middle row is a conceptual middle between rows 1 and 3. Its central column, ב is a conceptual middle between א and ג. This indicates that all of the 6 triads of the structure, the rows and the columns, are read in such a manner that the middle segment is understood as a conceptual middle as well as a structural middle. A lemma of this observation is that the chapter is visually oriented, having two poles, and that it contains visual logic, rather than oral logic. The distinction I make between oral and visual logic is based on the placement of the synthetic element in the middle of a set in visual logic: thesis, synthesis, and antithesis. Oral logic places the synthesis at the end, because the antithetical pair must be heard before the synthesis can be grasped. This has pedagogical implications for the study of the Mishnah. The order of study in a three part line should not be the order of appearance, thesis, synthesis, antithesis- but rather thesis, antithesis, synthesis, and in the terms of המשנה כדרכה: א, ג, ב.</p>
+
+<p>Now let me summarize what I have attempted to communicate in this talk. I began by speaking about the hierarchical division that I found in chapters of Mishnah, as opposed to the linear flow of the mishnayot in our books. I noted with the example of Taanit 1 that there are clear signs within the Mishnah that chapters should be divided on at least two levels. I suggested using a visual layout that would highlight the chapters' internal divisions. A two-tiered system based on laying out the major divisions as rows and the minor divisions as segments of the rows was presented. This layout demonstrated that the chapter was conceived as a perfectly symmetrical composition. Next I demonstrated through the example of Shabbat 6 that the columns created by successive rows could have sense within them, dividing according to female and male in the example. I then added another example, Shabbat 16, which reinforced the point that there was meaning to be found in the columns. I concluded that the chapters must be two dimensional documents if they have meaning in both the rows and the columns. With the last example, hagiga 1, I demonstrated how to approach a two dimensional document as a subject of study.</p>
+
+<h2><a name="ColorCode">Color Code</a></h2>
+<p>Colored type is used to indicate structural elements in the text. There are three different classes of colored elements.</p>
+
+<h3 align="center">KEY</h3>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="33%" valign="top" class="style5"><h3 class="style5">I<br />Horizontal Links</h3></td>
+<td width="33%" valign="top" class="style5"><h3 class="style5">II<br />Vertical Links</h3></td>
+<td width="33%" valign="top" class="style5"><h3 class="style5">III<br />Closure</h3></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><p class="style5"><a href="#Example1SimpleParallel"><span class="horizontal1">Simple Parallel</span></a></p></td>
+<td width="33%" valign="top"><p class="style5"><a href="#Example3IntPar"><span class="internalparallel">Internal Parallel</span></a></p></td>
+<td width="33%" valign="top"><p class="style5"><a href="#Example5chiastic"><span class="ciasm1">Chiastic</span> <span class="ciasm2">Closure</span></a></p></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><p class="style5"><a href="#Example2"><span class="horizontal2">Synthetic</span> <span class="horizontal3">Middle</span></a></p></td>
+<td width="33%" valign="top"><p class="style5"><a href="#Example4parbetweenrows"><span class="vertical1">Parallel between Rows</span></a></p></td>
+<td width="33%" valign="top"><p class="style5"><a href="#Example6closure"><span class="closure">Simple Closure</span></a></p></td>
+</tr>
+</table>
+
+<h3><a name="Example1SimpleParallel">Example 1</a> <span class="horizontal1">Simple Parallel</span></h3>
+<div align="center">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1א</span><br />
+(א) <span class="horizontal1">תפלת</span> השחר עד חצות<br />
+<span class="horizontal1">רבי יהודה אומר</span> עד ארבע שעות
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ב</span><br />
+<span class="horizontal1">תפלת</span> המנחה עד הערב<br />
+<span class="horizontal1">רבי יהודה אומר</span> עד פלג המנחה
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ג</span><br />
+<span class="horizontal1">תפלת</span> הערב אין לה קבע<br />
+ושלמוספין כל היום<br />
+<span class="horizontal1">רבי יהודה אומר</span> עד שבע שעות
+</td>
+</tr>
+</table>
+</div>
+<p class="style5">ברכות ג</p>
+<p>In example 1 above, the <span class="horizontal1">colored text</span> is used to demonstrate an element common to all three segments of row 1. The <span class="horizontal1">color</span> indicates a common linguistic element or concept that appears in all segments of the row.</p>
+
+<h3><a name="Example2">Example 2</a> <span class="horizontal2">Synthetic</span> <span class="horizontal3">Middle</span></h3>
+<p>In the following example, color is used to indicate the conceptual construction of a three-part line. The middle segment combines aspects of the two extreme segments.</p>
+<div align="center">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2א</span><br />
+<span class="horizontal2">בפרקים</span><br />
+שואל מפני הכבוד ומשיב<br />
+ובאמצע<br />
+שואל מפני היראה ומשיב<br />
+דברי רבי מאיר<br />
+רבי יהודה אומר<br />
+באמצע שואל מפני היראה<br />
+ומשיב מפני הכבוד<br />
+בפרקים שואל מפני הכבוד<br />
+ומשיב שלום לכל אדם
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2ב</span><br />
+(ב) אלו הן בין <span class="horizontal2">הפרקים</span><br />
+בין ברכה ראשונה לשניה<br />
+בין שניה לשמע<br />
+ובין שמע <span class="horizontal3">לוהיה אם שמע</span><br />
+בין והיה אם שמע לויאמר<br />
+בין <span class="horizontal3">ויאמר</span> לאמת ויציב<br />
+רבי יהודה אומר<br />
+בין ויאמר לאמת ויציב לא יפסיק
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2ג</span><br />
+אמר רבי יהושע בן קרחה<br />
+למה קדמה שמע <span class="horizontal3">לוהיה אם שמע</span><br />
+אלא כדי שיקבל עליו<br />
+על מלכות שמים תחלה<br />
+ואחר כך יקבל עליו על מצות<br />
+והיה אם שמע <span class="horizontal3">לויאמר</span><br />
+שוהיה אם שמע נוהג<br />
+ביום ובלילה<br />
+ויאמר אינו נוהג אלא ביום
+</td>
+</tr>
+</table>
+</div>
+<p class="style5">ברכות ב</p>
+<p>The <span class="horizontal2">first color</span> marks a linguistic element common to the first two segments of the row. The <span class="horizontal3">second color</span> marks elements common to the second and third segments. The combination indicates that the central segment contains aspects of both the <span class="horizontal2">adjacent</span> <span class="horizontal3">segments.</span></p>
+
+<h3><a name="Example3IntPar">Example 3</a> <span class="internalparallel">Internal Parallel</span></h3>
+<div align="right">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="50%" valign="top" class="center">
+<span class="subunit">2א</span><br />
+<span class="subunit">A</span> (ה) הגוזל את חברו שוה פרוטה ונשבע לו<br />
+<span class="internalparallel">יוליכנו אחריו</span> אפלו למדי<br />
+לא יתן לא לבנו ולא לשלוחו<br />
+אבל נותן לשליח בית דין<br />
+ואם מת יחזיר ליורשיו<br />
+<span class="subunit">B</span> (ו) נתן לו את הקרן ולא נתן לו את החמש<br />
+מחל לו על הקרן ולא מחל לו על החמש<br />
+מחל לו על זה ועל זה<br />
+חוץ מפחות משוה פרוטה בקרן<br />
+אינו צריך <span class="internalparallel">לילך אחריו</span><br />
+<span class="subunit">C</span> נתן לו את החמש ולא נתן לו את הקרן<br />
+מחל לו על החמש ולא מחל לו על הקרן<br />
+מחל לו על זה ועל זה חוץ משוה פרוטה בקרן<br />
+צריך <span class="internalparallel">לילך אחריו</span>
+</td>
+<td width="50%" valign="top" class="center">
+<span class="subunit">2ב</span><br />
+<span class="subunit">A</span> (ז) נתן לו את הקרן ונשבע לו על החמש<br />
+הרי זה משלם חמש על חמש<br />
+עד שיתמעט הקרן פחות משוה פרוטה<br />
+וכן בפקדון<br />
+שנאמר בפקדון או בתשומת יד או בגזל<br />
+או עשק את עמיתו או במצא אבדה<br />
+וכחש בה ונשבע על שקר<br />
+הרי זה <span class="internalparallel">משלם קרן וחמש ואשם</span><br />
+<span class="subunit">B</span> היכן פקדוני אמר לו אבד משביעך אני ואמר אמן<br />
+והעדים מעידים אותו שאכלו משלם את הקרן<br />
+הודה מעצמו <span class="internalparallel">משלם קרן וחמש ואשם</span><br />
+<span class="subunit">C</span> (ח) היכן פקדוני אמר לו נגנב<br />
+משביעך אני ואמר אמן<br />
+והעדין מעידים אותו שגנבו משלם תשלומי כפל<br />
+הודה מעצמו <span class="internalparallel">משלם קרן וחמש ואשם</span>
+</td>
+</tr>
+</table>
+</div>
+<p class="style5">בבא קמא ט</p>
+<p><span class="internalparallel">Colored type</span> is used in example 3 to indicate internal parallels. In each of the two sections a single phrase appears in each of three subsections. While each section contains a different repeating phrase, the sections are structurally identical, being divided into three subsections containing a repeated phrase.</p>
+
+<h3><a name="Example4parbetweenrows">Example 4</a> <span class="vertical1">Parallel between Rows</span></h3>
+<div align="center">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1א</span><br />
+(א) מי שמתו מטל לפניו<br />
+<span class="vertical1">פטור מקריאת שמע</span><br />
+<span class="vertical1">מן התפלה</span><br />
+<span class="vertical1">ומן התפלין</span>
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ב</span><br />
+נושאי המטה וחלופיהן<br />
+וחלופי חלופיהן<br />
+את <span class="vertical1">שלפני</span> המטה<br />
+ואת <span class="vertical1">שלאחר</span> המטה<br />
+את שלמטה צרך בהן פטורין<br />
+ואת שאין למטה צרך בהן חיבין<br />
+אלו ואלו פטורין מן <span class="vertical1">התפלה</span>
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ג</span><br />
+(ב) קברו את המת וחזרו<br />
+<span class="vertical1">אם יכולין</span> להתחיל ולגמור<br />
+<span class="vertical1">עד</span> <span class="vertical1">שלא</span> יגיעו לשורה<br />
+יתחילו<br />
+<span class="vertical1">ואם לאו</span> לא יתחילו<br />
+העומדים בשורה פנימים פטורים<br />
+והחצונים חיבין
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2א</span><br />
+(ג) נשים ועבדים וקטנים<br />
+<span class="vertical1">פטורין מקריאת שמע ומן התפלין</span><br />
+<span class="vertical1">וחיבין בתפלה</span><br />
+ובמזוזה<br />
+ובברכת המזון
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2ב</span><br />
+בעל קרי מהרהר בלבו<br />
+ואינו מברך<br />
+לא <span class="vertical1">לפניה</span> ולא <span class="vertical1">לאחריה</span><br />
+ועל המזון מברך לאחריו<br />
+ואינו מברך לפניו<br />
+רבי יהודה אומר<br />
+מברך לפניהם ולאחריהם<br />
+(ה) היה עומד <span class="vertical1">בתפלה</span><br />
+ונזכר שהוא בעל קרי<br />
+לא יפסיק אלא יקצר
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">2ג</span><br />
+ירד לטבול<br />
+<span class="vertical1">אם יכול</span> לעלות ולהתכסות ולקרות<br />
+<span class="vertical1">עד שלא</span> תנץ החמה<br />
+יעלה ויתכסה ויקרא<br />
+<span class="vertical1">ואם לאו</span><br />
+יתכסה במים ויקרא<br />
+אבל לא יתכסה<br />
+לא במים הרעים ולא במי המשרה<br />
+עד שיטיל לתוכן מים<br />
+וכמה ירחיק מהם ומן הצואה<br />
+ארבע אמות<br />
+זב שראה קרי<br />
+ונדה שפלטה שכבת זרע<br />
+והמשמשת שראתה נדה<br />
+צריכין טבילה<br />
+ורבי יהודה פוטר
+</td>
+</tr>
+</table>
+</div>
+<p class="style5">ברכות ג</p>
+<p>In example 4 the <span class="vertical1">colored type</span> indicates linguistic parallels between parallel segments in different rows. The first segment of line 1 contains text that appears in the first section of line two also. Similarly, the second and third segments of line one contain expressions that appear again in the parallel segments of the second line.</p>
+
+<h3><a name="Example5chiastic">Example 5</a> <span class="ciasm1">Chiastic</span> <span class="ciasm2">Closure</span></h3>
+<div align="right">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1א</span><br />
+(א) החובל בחברו<br />
+חיב עליו משום חמשה דברים<br />
+בנזק בצער ברפוי בשבת ובבשת<br />
+בנזק כיצד<br />
+<span class="ciasm1">סמא את עינו<br />
+קטע את ידו שבר את רגלו</span><br />
+רואין אותו<br />
+כאלו הוא עבד נמכר בשוק<br />
+ושמין כמה היה יפה<br />
+וכמה הוא יפה<br />
+צער כואו בשפוד או במסמר<br />
+ואפלו על צפרנו<br />
+מקום שאינו עושה חבורה<br />
+אומדין כמה אדם כיוצא בזה<br />
+רוצה לטול להיות מצטער כך
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ב</span><br />
+רפוי הכהו חיב לרפאותו<br />
+עלו בו צמחים<br />
+אם מחמת המכה חיב<br />
+שלא מחמת המכה פטור<br />
+חיתה ונסתרה חיתה ונסתרה<br />
+חיב לרפאותו<br />
+חיתה כל צרכה<br />
+אינו חיב לרפאותו<br />
+שבת<br />
+רואין אותו<br />
+כאלו הוא שומר קשואין<br />
+שכבר נתן לו דמי ידו ודמי רגלו
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">1ג</span><br />
+בשת <span class="ciasm2">הכל לפי המביש והמתביש</span><br />
+המביש את הערם<br />
+המביש את הסומא<br />
+המביש את הישן חיב<br />
+וישן שביש פטור<br />
+נפל מן הגג והזיק וביש<br />
+חיב על הנזק ופטור על הבשת<br />
+שנאמר<br />
+ושלחה ידה והחזיקה במבשיו<br />
+אינו חיב על בשת<br />
+עד שיהא מתכון<br />
+(ב) זה חמר באדם מבשור<br />
+שהאדם משלם<br />
+נזק צער רפוי שבת ובשת<br />
+ומשלם דמי ולדות<br />
+ושור אינו משלם אלא נזק<br />
+ופטור מדמי ולדות
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" class="center">
+<span class="subunit">3א</span><br />
+(ו) התוקע לחברו נותן לו סלע<br />
+רבי יהודה אומר<br />
+משום רבי יוסי הגלילי מנה<br />
+סטרו נותן לו מאתים זוז<br />
+לאחר ידו נותן לו ארבע מאות זוז<br />
+צרם באזנו תלש בשערו<br />
+רקק והגיע בו רקו<br />
+העביר טליתו ממנו<br />
+פרע ראש האשה בשוק<br />
+נותן ארבע מאות זוז<br />
+זה הכלל <span class="ciasm2">הכל לפי כבודו</span> ...
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">3ב</span><br />
+(ז) אף על פי שהוא נותן לו<br />
+אינו נמחל לו עד שיבקש ממנו<br />
+שנאמר ועתה השב את אשת<br />
+ומנין שלא יהא המוחל אכזרי<br />
+שנאמר<br />
+ויתפלל אברהם אל האלהים<br />
+וירפא אלהים את אבימלך
+</td>
+<td width="33%" valign="top" class="center">
+<span class="subunit">3ג</span><br />
+האומר <span class="ciasm1">סמא את עיני<br />
+קטע את ידי שבר את רגלי</span> חיב<br />
+על מנת לפטור חיב<br />
+קרע את כסותי שבר את כדי חיב<br />
+על מנת לפטור פטור<br />
+עשה כן לאיש פלוני<br />
+על מנת לפטור חיב<br />
+בין בגופו בין בממונו
+</td>
+</tr>
+</table>
+</div>
+<p class="style5">בבא קמא ח</p>
+<p>In example 5 <span class="ciasm1">chiasm color one</span> and <span class="ciasm2">chiasm color two</span> are used together to indicate a chiasm. A phrase that appears in the <span class="ciasm1">upper right hand</span> corner of the chapter returns in the <span class="ciasm1">lower left hand</span> corner. Similarly, a phrase that first appears in the <span class="ciasm2">upper left hand</span> corner of the chapter reoccurs in the <span class="ciasm2">lower right hand</span> corner.</p>
+
+<h3><a name="Example6closure">Example 6</a> <span class="closure">Simple Closure</span></h3>
+<div align="right">
+<table dir="rtl" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="100%" valign="top" class="center">
+<span class="subunit">1</span><br />
+(א) מאימתי מזכירין גבורות גשמים<br />
+רבי אליעזר אומר מיום טוב הראשון שלהחג<br />
+רבי יהושע אומר מיום טוב האחרון שלהחג<br />
+אמר לו רבי יהושע<br />
+הואיל ואין <span class="closure">הגשמים</span> אלא <span class="closure">סימן קללה</span> בחג למה הוא מזכיר<br />
+אמר לו רבי אליעזר<br />
+אף אני לא אמרתי לשאול אלא להזכיר<br />
+משיב הרוח ומוריד הגשם בעונתו<br />
+אמר לו אם כן לעולם יהא מזכיר
+</td>
+</tr>
+<tr>
+<td width="100%" valign="top" class="center">
+<span class="subunit">5</span><br />
+יצא ניסן וירדו <span class="closure">גשמים סימן קללה</span><br />
+שנאמר<br />
+הלוא קציר חטים היום וגומר
+</td>
+</tr>
+</table>
+</div>
+<p class="style5">תענית א</p>
+<p>In the example above <span class="closure">colored type</span> is used to indicate closure. A phrase that appears in the opening unit of the chapter reappears again at its close. This form of closure is found only in chapters in which the first and last rows of the chapter contain a single unit.</p>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">התורה כדרכה</a></li>
+                        <li>T<a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+
+<!-- #EndTemplate -->

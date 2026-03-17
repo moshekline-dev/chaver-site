@@ -1,0 +1,398 @@
+.elementor-2971 .elementor-element.elementor-element-cbdbb12{--display:flex;}.elementor-2971 .elementor-element.elementor-element-ebbf5e9{--display:flex;}.elementor-2971 .elementor-element.elementor-element-799212e{--display:flex;}/* Start custom CSS *//* =======================================
+   Torah Book Maps - Standardized CSS
+   ======================================= */
+
+/* Base styles for all book maps */
+.torah-map-container {
+  font-family: "Garamond", serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Page header styling */
+.torah-map-title {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+/* Book-specific title colors */
+.genesis-map .torah-map-title {
+  color: #7ab0f7;
+}
+
+.leviticus-map .torah-map-title {
+  color: #80d0a0;
+}
+
+.deuteronomy-map .torah-map-title {
+  color: #7ab0f7;
+}
+
+/* Introduction text */
+.torah-map-intro {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Matrix table wrapper for horizontal scrolling */
+.matrix-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+  margin: 20px 0;
+}
+
+/* Mobile notice for scrollable tables */
+.mobile-notice {
+  display: none;
+  background-color: #f0f7ff;
+  border: 1px solid #5090f0;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Matrix table styling */
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0 40px 0;
+  min-width: 1000px; /* Prevent excessive compression */
+}
+
+/* Book-specific table borders */
+.genesis-map .matrix-table,
+.deuteronomy-map .matrix-table {
+  border: 3px solid #7ab0f7;
+  background-color: rgba(122, 176, 247, 0.1);
+}
+
+.leviticus-map .matrix-table {
+  border: 3px solid #80d0a0;
+  background-color: rgba(128, 208, 160, 0.1);
+}
+
+/* Table headers */
+.matrix-table th {
+  padding: 12px 10px;
+  font-weight: bold;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  height: auto;
+  min-width: 130px;
+}
+
+/* Book-specific header colors */
+.genesis-map .matrix-table th,
+.deuteronomy-map .matrix-table th {
+  background-color: #7ab0f7;
+}
+
+.leviticus-map .matrix-table th {
+  background-color: #80d0a0;
+}
+
+/* Column labels */
+.column-letter {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Theme labels in headers */
+.theme-label {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+/* Table cells */
+.matrix-table td {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  vertical-align: top;
+  height: 180px;
+  background-color: white;
+}
+
+/* Book-specific cell borders */
+.genesis-map .matrix-table td,
+.deuteronomy-map .matrix-table td {
+  border-color: rgba(122, 176, 247, 0.3);
+}
+
+.leviticus-map .matrix-table td {
+  border-color: rgba(128, 208, 160, 0.3);
+}
+
+/* Row labels */
+.row-label {
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  border: none;
+  width: 60px;
+  min-width: 60px;
+}
+
+/* Book-specific row label colors */
+.genesis-map .row-label,
+.deuteronomy-map .row-label {
+  background-color: #7ab0f7;
+}
+
+.leviticus-map .row-label {
+  background-color: #80d0a0;
+}
+
+/* Row number */
+.row-number {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Row description */
+.row-desc {
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 5px;
+  line-height: 1.2;
+}
+
+/* Empty cells */
+.empty-cell {
+  background-color: rgba(0,0,0,0.02);
+}
+
+/* Book-specific empty cell backgrounds */
+.genesis-map .empty-cell,
+.deuteronomy-map .empty-cell {
+  background-color: rgba(122, 176, 247, 0.1);
+}
+
+.leviticus-map .empty-cell {
+  background-color: rgba(128, 208, 160, 0.1);
+}
+
+/* Unit styling */
+.unit {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  height: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  text-align: left;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.unit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.unit-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.unit-reference {
+  font-style: italic;
+  margin-bottom: 8px;
+  color: #555;
+  text-align: center;
+  font-size: 14px;
+}
+
+.unit-description {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Unit color coding - standardized */
+.unit.color-d4f2ff,
+.unit.blue-unit { 
+  background-color: #d4f2ff; 
+  border: 1px solid #3399FF;
+}
+
+.unit.color-e6ffee,
+.unit.green-unit { 
+  background-color: #e6ffee; 
+  border: 1px solid teal;
+}
+
+.unit.color-d4d4ff,
+.unit.purple-unit { 
+  background-color: #d4d4ff; 
+  border: 1px solid #7030A0;
+}
+
+.unit.color-ffe6e6,
+.unit.special-unit { 
+  background-color: #ffe6e6; 
+  border: 2px solid #CC0066;
+}
+
+.unit.color-f0f0f0 { 
+  background-color: #f0f0f0; 
+  border: 1px solid #8D6E63;
+}
+
+/* Description section styling */
+.torah-book-description {
+  margin: 30px 0;
+  line-height: 1.6;
+}
+
+.torah-book-description h2.main-heading {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Book-specific heading colors */
+.genesis-map .torah-book-description h2,
+.genesis-map .torah-book-description h3,
+.deuteronomy-map .torah-book-description h2,
+.deuteronomy-map .torah-book-description h3 {
+  color: #7ab0f7;
+}
+
+.leviticus-map .torah-book-description h2,
+.leviticus-map .torah-book-description h3 {
+  color: #80d0a0;
+}
+
+.torah-book-description h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.torah-book-description p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.torah-book-description ul,
+.torah-book-description ol {
+  margin-bottom: 25px;
+  margin-left: 25px;
+}
+
+.torah-book-description li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Back to top link */
+.back-to-top {
+  display: block;
+  text-align: right;
+  font-size: 0.85em;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-decoration: none;
+}
+
+/* Book-specific link colors */
+.genesis-map .back-to-top,
+.deuteronomy-map .back-to-top {
+  color: #7ab0f7;
+}
+
+.leviticus-map .back-to-top {
+  color: #80d0a0;
+}
+
+.back-to-top:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .mobile-notice {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .torah-map-title {
+    font-size: 24px;
+  }
+  
+  .torah-book-description h2.main-heading {
+    font-size: 24px;
+  }
+  
+  .torah-book-description h3 {
+    font-size: 20px;
+  }
+  
+  .torah-book-description p,
+  .torah-book-description li {
+    font-size: 15px;
+  }
+  
+  .unit-title {
+    font-size: 16px;
+  }
+  
+  .unit-reference {
+    font-size: 12px;
+  }
+  
+  .unit-description {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .torah-map-title {
+    font-size: 20px;
+  }
+  
+  .torah-book-description h2.main-heading {
+    font-size: 20px;
+  }
+  
+  .torah-book-description h3 {
+    font-size: 18px;
+  }
+  
+  .row-label {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .unit-description {
+    font-size: 10px;
+  }
+}/* End custom CSS */

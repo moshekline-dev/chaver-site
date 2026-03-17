@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../../../../Dynamic%20Web%20Templates/English.dwt" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+	<title>The Ways of Holiness Chapter One</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">עברית</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+			<div id="navigation0"><ul><li><a href="../../../../index.html">Home</a></li><li><a href="../../Torah%20Portal.htm">Torah</a></li><li><a href="../../../../Mishnah-New/Hebrew/Text/Shishah%20Sidrei%20Mishnah.htm">Mishnah</a></li><li><a href="../../../../General/Contact.htm">Contact</a></li><li><a href="../../../../hebrew%20index.html">עברית</a></li></ul></div><div id="header0"><h1><a href="#" class="sitetitle">chaver.com</a></h1><h2><span class="sitesubtitle">A new approach to torah and mishnah</span></h2></div><div id="wrapper0"><div id="content0"><h1 class="style2" ><a href="The%20Ways%20of%20Holiness%20Links.htm">The ways of Holiness</a></h1><h2 >&nbsp;</h2><h2 class="style2" >Chapter One</h2><h2 class="style2" >Focal Symmetry</h2><p >&nbsp;</p><p >&nbsp;</p><h3><span style="font-size:12.0pt;">An Inaccessible Center Point</span></h3><p class="MsoBodyTextFirstIndent">The Torah utilizes “focal point symmetry”<a name="_ednref1"></a><a href="#_edn1" title=""><span class="MsoEndnoteReference"><b><span style="color:#000066">[1]</span></b></span></a> in prescribing the arrangement of the Israelite encampment during the forty years of wandering in the desert. The arrangement can be pictured schematically as three concentric circles. The innermost circle is that of the Tabernacle, the dwelling place of the Divine presence.&nbsp; The next circle, moving outward, represents the holy camp of the Levites. The outermost circle represents the unconsecrated camp of the other tribes. Within the innermost circle are three further concentric divisions. The Tabernacle contains a courtyard, an outer chamber, and an inner sanctum, the Holy of Holies, which can only be entered by the High Priest once a year, on the Day of Atonement. Within the Holy of Holies is the Ark of the Covenant, which is sealed to all. This arrangement, too, demonstrates focal-point symmetry. The holiest point, beyond human access, is at the center. The farther any point is from the center, the more accessible it is. A similar symmetry exists in the structure of the Torah itself.</p><h3><span style="font-size:12.0pt;">Schematic Structure of the Torah</span></h3><p class="MsoBodyTextFirstIndent">The five books of the Torah can be read as three structural units: (1) Genesis; (2) Exodus, Leviticus, and Numbers; and (3) Deuteronomy. The book of Genesis reads like an introduction to the story of Moses, which is found in the following three books. In a similar manner, the fifth book, Deuteronomy, stands outside the narrative and can be read as a summary of it from Moses’ perspective. At first glance, the three remaining books comprise the “core” of the Torah, the story of the forty years during which Moses led the Israelites through the desert from Egypt to the border of Canaan. Upon closer inspection, however, we see that there is almost no historical narrative in Leviticus. The latter is, in fact, closely connected to the books that precede and follow it, Exodus and Numbers, but by a theme, that of the Tabernacle, rather than by any narrative. </p><p class="MsoBodyTextFirstIndent">Exodus is clearly divided in half. Only the first half presents an historical narrative. The second half is an enormously detailed description of the construction of the Tabernacle. Leviticus continues the discussion of the Tabernacle, describing the rituals to be performed in it. Numbers, like Exodus, has two principal sections, the second of which picks up the historical narrative that was interrupted in the middle of Exodus. The first section of Numbers deals with the ceremonies connected with the dedication of the Tabernacle.&nbsp; There is thus a virtually continuous flow of Tabernacle-related material from the middle of Exodus, through Leviticus, to the middle of Numbers. As in the encampment described in the Torah, the text of the Torah also has the Tabernacle at its center. The following illustration demonstrates the literary symmetry that creates this focus.</p><p class="MsoCaption" style="page-break-after:avoid">Table 1 A Schematic Overview of the Torah</p><div align="center"><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;"><tbody><tr><td valign="top" style="border:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt"><p ><b>Book</b></p><p ><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></b></p></td><td valign="top" style="border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; border-left: none; padding: 0in 5.4pt;"><p ><b>Part</b></p></td><td valign="top" style="border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; border-left: none; padding: 0in 5.4pt;"><p class="MsoToc1" style="line-height:12.0pt;page-break-after:avoid"><b>Schematic Content of Book</b></p></td></tr><tr style="height:19.85pt"><td valign="top" style="border-left: 1.0pt solid black; border-right: 1.0pt solid black; border-bottom: 1.0pt solid black; border-top: none; padding: 0in 5.4pt; height:19.85pt"><p >Genesis</p></td><td valign="top" style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p class="MsoNormal" align="center" style="text-align:center;line-height:12.0pt;
+  page-break-after:avoid"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p></td><td valign="top" style="border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p >Prologue</p></td></tr><tr style="height:19.85pt"><td rowspan="2" style="border-left: 1.0pt solid black; border-right: 1.0pt solid black; border-bottom: 1.0pt solid black; border-top: none; padding: 0in 5.4pt; height:19.85pt"><p >Exodus</p></td><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p class="MsoNormal" align="center" style="text-align:center;line-height:12.0pt;
+  page-break-after:avoid">a</p></td><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p style="margin-left:.5in">Leaving Egypt</p></td></tr><tr style="height:19.85pt"><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p class="MsoNormal" align="center" style="text-align:center;line-height:12.0pt;
+  page-break-after:avoid">b</p></td><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p style="margin-left:1in">Building the <b>Tabernacle</b></p></td></tr><tr style="height:19.85pt"><td style="border-left: 1.0pt solid black; border-right: 1.0pt solid black; border-bottom: 1.0pt solid black; border-top: none; padding: 0in 5.4pt; height:19.85pt"><p >Leviticus</p></td><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p class="MsoNormal" align="center" style="text-align:center;line-height:12.0pt;
+  page-break-after:avoid"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p></td><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p style="margin-left:1.5in">The <b>Tabernacle </b>Service</p></td></tr><tr style="height:19.85pt"><td rowspan="2" style="border-left: 1.0pt solid black; border-right: 1.0pt solid black; border-bottom: 1.0pt solid black; border-top: none; padding: 0in 5.4pt; height:19.85pt"><p >Numbers</p></td><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p class="MsoNormal" align="center" style="text-align:center;line-height:12.0pt;
+  page-break-after:avoid">a</p></td><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p  style="margin-left:1.0in;line-height:12.0pt;page-break-after:
+  avoid">Dedicating the <b>Tabernacle</b></p></td></tr><tr style="height:19.85pt"><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p class="MsoNormal" align="center" style="text-align:center;line-height:12.0pt;
+  page-break-after:avoid">b</p></td><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p  style="margin-left:.5in;">Preparing to enter Canaan</p></td></tr><tr style="height:19.85pt&gt; &lt;td valign="top" style="border-left: 1.0pt solid black; border-right: 1.0pt solid black; border-bottom: 1.0pt solid black; border-top: none; padding: 0in 5.4pt; height:19.85pt"><p >Deuteronomy</p></td><td valign="top" style="padding:0in 5.4pt 0in 5.4pt;height:19.85pt; border-left-color: inherit; border-right-style: solid; border-right-color: black; border-top-color: inherit; border-bottom-style: solid; border-bottom-color: black;" class="style3"><p >Deuteronomy</p></td><td valign="top" style="border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt"><p >&nbsp;</p><td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:19.85pt">Epilogue</td></tbody></table></div><p class="MsoBodyTextFirstIndent">&nbsp;</p><p class="MsoBodyTextFirstIndent">Three levels of literary symmetry define the Tabernacle service as the focus of the Torah. The framework of the prologue and epilogue creates the first level. Immediately within this framework, following the prologue, in the first section of Exodus, and preceding the epilogue, in the second section of Numbers, is the historical narrative of the forty years in the desert. Within the framework of the historical narrative, in turn, is the core of the Torah, the discussion of the Tabernacle. The Tabernacle service itself, which is the principal subject of Leviticus, lies between the description of the building of the tabernacle in Exodus and its dedication in Numbers. In physical terms, the service (Leviticus) takes place in the center, within the precincts of the Tabernacle (Exodus b and Numbers a) which is located in the desert (Exodus a, and Numbers b).</p><p class="MsoBodyTextFirstIndent">This literary topography is similar to the concentric circles of the encampment in the desert. It is even possible to see a direct parallel between the three camps and the concentric rings of the text. The Tabernacle service in Leviticus parallels the central camp of the Divine Presence, the <span class="SpellE">S<i>hekhinah</i></span>. The next ring of text, going out from the center, describes the mechanics of the Tabernacle and parallels the camp of the Levites, who are assigned to the maintenance of the Tabernacle. The third ring of text, the historical narrative of the Israelites in the desert, parallels the Israelite encampment. </p><h3><span style="font-size:12.0pt;">The Source is in the Center</span></h3><p class="MsoBodyTextFirstIndent">The structure of the book of Leviticus reflects both the divisions within the central holy camp and the focal symmetry of the Torah. Like the format of the Torah as seen in the schematic overview, Leviticus also contains a seven-part symmetrical structure. It, too, can be seen as having a central text and three concentric “rings” around it. The rings of Leviticus are parallel to the concentric enclosures of the Tabernacle: the courtyard, the Holy Chamber, and Holy of Holies. The text at the center of Leviticus, chapter 19, is the equivalent of the Ark of the Covenant within the Holy of Holies.</p><p class="MsoBodyTextFirstIndent">Identifying the symmetry of Leviticus allows us, finally, to pinpoint the conceptual focus of the Torah as a whole. The significance of the center point appears in <span class="GramE">Rabbinic</span> discussion of the Tabernacle’s successor, the Temple in Jerusalem. The language of the Rabbis is especially enlightening regarding our notion of virtual concentric circles. They say that the Land of Israel is the center of the world and that Jerusalem lies at the center of the Land. At the center of Jerusalem stands the Temple. In the center of the Temple is the Holy of Holies. At the very center of the Holy of Holies stands the Ark of the Covenant, and beneath it is the “foundation-stone” of the earth. The visible world emanated from this stone.<a name="_ednref2"></a><a href="#_edn2" title=""><span class="MsoEndnoteReference"><b><span style="color:#000066">[2]</span></b></span></a> (In modern terms, it could be thought of as the locus of the “Big Bang.”)&nbsp; A similar point exists at the center of the Torah, the focal point of Leviticus, in the middle of chapter 19, the very point where the <span class="SpellE"><span class="GramE"><i>midrash</i></span></span>, the Rabbinic commentary, mentions the “foundation-stone”. We will see that the theme of the focal text is generation. This completes the analogy between the text of the Torah and the structure of the encampment. Both are constructed as vessels for the holy life-force that emanates from the focal point. </p><p class="MsoBodyTextFirstIndent">Reading the Torah from this perspective provides a basis for understanding its inner logic. As a hermeneutical tool, “focal symmetry” sheds new light on several textual difficulties, for example, the problem of Leviticus 18 and 20. Lev 18 lists prohibited relationships, and Lev 20 lists the punishments for them. Why are the chapters separated? Why does chapter 19 come between them? If, as we shall see, chapter 19 is the central text of the Torah, the fact that chapters 18 and 20 relate to each other can then be explained by focal symmetry. They are placed symmetrically around the central text. This is similar to the way the historical narrative of the Torah appears in the first part of Exodus and the second part of Numbers, symmetrically enclosing the Tabernacle material. Even more important than solving any specific textual problem, focal symmetry provides a highly integrated reading of the Torah.</p><p class="MsoBodyTextFirstIndent"><a href="The%20Ways%20of%20Holiness%20Chapter%20Two.htm">Chapter Two</a></p><p class="MsoBodyTextFirstIndent">&nbsp;</p><p><a name="_edn1"></a><a href="#_ednref1" title=""><span class="MsoEndnoteReference"><b><span style="color:#000066">[1]</span></b></span></a> The format is also called “inverted parallelism” and “extended chiasm.” I prefer the term “focal symmetry” because it is more descriptive.</p><p><a name="_edn2"></a><a href="#_ednref2" title=""><span class="MsoEndnoteReference"><b><span style="color:#000066">[2]</span></b></span></a> The Rabbi’s present this description in the commentary on what we will see is the central section of the Torah. It appears in the Rabbinic commentary known as <i>Midrash Tanchumah</i> on <i>Vayikra</i> (Leviticus), division<i>Kodashim</i>, section 10.</p></div><div id="sidebar0"><div class="block" id="featured articles0"><h2>Featured articles</h2><ul><li><a href="../../../../Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">An Introduction to The Structured Mishnah</a></li><li><a href="../The%20Decalogue.html">The Decalogue<span class="style1"></span></a></li><li><a href="../../../../Mishnah-New/English/Articles/TheArt-H.htm">The Art of Writing the Oral Tradition</a><span class="style1"><a href="../../../../Mishnah-New/English/Articles/TheArt-H.htm"></a></span><a href="../../../../Mishnah-New/English/Articles/TheArt-H.htm"></a></li><li><a href="../The%20Literary%20Structure%20of%20Leviticus.htm">The Literary Structure of Leviticus</a></li></ul></div><div class="block" id="full texts0"><h2>Full Texts</h2><ul><li><a href="../../../../Mishnah-New/Hebrew/Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">The Structured Mishnah</a><span class="style1"></span></li><li><a href="#">Leviticus<span class="style1"></span></a></li></ul></div><div class="block" id="useful pages0"><h2>Useful Pages</h2><ul><li><a href="../../../../General/Color%20Codes/English%20Color%20Code.htm">Color Code</a></li></ul></div><div class="block" id="about_me0"><h2>Moshe Kline</h2><p>I am a graduate of St. John&#39;s College in Annapolis Md. and Yeshiva University. I studied under Jacob Klein at St. John&#39;s as was influenced by Leo Strauss. Later I studied with Rabbi Leon Ashkenazi (&quot;Manitou&quot;) and received an oral tradition from him. In recent years I have been mentored by Jacob Milgrom and&nbsp; Mary Douglas.&nbsp; </p></div></div></div><div id="footer0"><p class="style2">Design by <a href="http://www.nikhedonia.com/">Sadhana Ganapathiraju</a></p></div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">התורה כדרכה</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="http://www.facebook.com/woventorah/">Facebook Discussion</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

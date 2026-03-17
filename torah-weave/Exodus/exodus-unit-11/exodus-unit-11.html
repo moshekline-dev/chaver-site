@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 11 (Exodus 25:1-27:21) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 11
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10.html" rel="prev">← Unit 10</a>
+            <a href="/torah-weave/Exodus/exodus-unit-12/exodus-unit-12.html" rel="next">Unit 12 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 11</h1>
+                <div class="unit-meta" itemprop="about">Exodus 25:1-27:21</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-full">1</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.0pt">25:1</span></b></span><span style="font-size:8.0pt"> And the LORD spoke unto Moses, saying: <span class="VerseNumber"><b>25:2</b></span> <span class="closure"><b>'Speak unto the
+  children of Israel, that they take for Me an offering</b></span>; of every
+  man whose heart maketh him willing ye shall take My offering. <span class="VerseNumber"><b>25:3</b></span> And this is the offering which ye shall
+  take of them: gold, and silver, and brass; <span class="VerseNumber"><b>25:4</b></span>
+  and blue, and purple, and scarlet, and fine linen, and goats' hair; <span class="VerseNumber"><b>25:5</b></span> and rams' skins dyed red, and sealskins,
+  and acacia-wood; <span class="VerseNumber"><b>25:6</b></span> oil for the
+  light, spices for the anointing oil, and for the sweet incense; <span class="VerseNumber"><b>25:7</b></span> onyx stones, and stones to be set, for
+  the ephod, and for the breastplate. <span class="VerseNumber"><b>25:8</b></span>
+  And let them make Me a sanctuary, that I may dwell among them. <span class="VerseNumber"><b>25:9</b></span> According to all that I show thee, the
+  pattern of the tabernacle, and the pattern of all the furniture thereof, even
+  so shall ye make it.</span><span class="HebrewParagraph"><span style="font-size:8.0pt;font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-right">2B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.0pt">A</span></b></span><span style="font-size:8.0pt"> <span class="VerseNumber"><b>25:10</b></span> And they
+  shall make an <span class="vertical1"><b>ark</b></span> of acacia-wood: two
+  cubits and a half shall be the length thereof, and a cubit and a half the
+  breadth thereof, and a cubit and a half the height thereof. <span class="VerseNumber"><b>25:11</b></span> And thou shalt overlay it with pure
+  gold, within and without shalt thou overlay it, and shalt make upon it a
+  crown of gold round about. <span class="VerseNumber"><b>25:12</b></span> And
+  thou shalt cast four rings of gold for it, and put them in the four feet
+  thereof; and two rings shall be on the one side of it, and two rings on the
+  other side of it. <span class="VerseNumber"><b>25:13</b></span> And thou shalt
+  make staves of acacia-wood, and overlay them with gold. <span class="VerseNumber"><b>25:14</b></span> And thou shalt put the staves into the
+  rings on the sides of the ark, wherewith to bear the ark. <span class="VerseNumber"><b>25:15</b></span> The staves shall be in the rings of the
+  ark; they shall not be taken from it. <span class="VerseNumber"><b>25:16</b></span>
+  And thou shalt put into the ark the testimony which I shall give thee. <span class="VerseNumber"><b>25:17</b></span> And thou shalt make an <span class="vertical1"><b>ark-cover</b></span> of pure gold: two cubits and a half
+  shall be the length thereof, and a cubit and a half the breadth thereof. <span class="VerseNumber"><b>25:18</b></span> And thou shalt make two <span class="vertical1"><b>cherubim</b></span> of gold; of beaten work shalt thou
+  make them, at the two ends of the ark-cover. <span class="VerseNumber"><b>25:19</b></span>
+  And make one cherub at the one end, and one cherub at the other end; of one
+  piece with the ark-cover shall ye make the cherubim of the two ends thereof. <span class="VerseNumber"><b>25:20</b></span> And the cherubim shall spread out their
+  wings on high, screening the ark-cover with their wings, with their faces one
+  to another; toward the ark-cover shall the faces of the cherubim be. <span class="VerseNumber"><b>25:21</b></span> And thou shalt put the ark-cover above
+  upon the ark; and in the ark thou shalt put the testimony that I shall give
+  thee. <span class="VerseNumber"><b>25:22</b></span> And there I will meet with
+  thee, and I will speak with thee from above the ark-cover, from between the
+  two cherubim which are upon the ark of the testimony, of all things which I
+  will give thee in commandment unto the children of Israel. </span><span class="HebrewParagraph"><span style="font-size:8.0pt;font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.0pt">A</span></b></span><span style="font-size:8.0pt"> <span class="VerseNumber"><b>26:1</b></span> Moreover
+  thou shalt make the tabernacle with ten curtains: of fine twined linen, and
+  blue, and purple, and scarlet, with cherubim the work of the skilful workman
+  shalt thou make them. <span class="VerseNumber"><b>26:2</b></span> The length
+  of each curtain shall be eight and twenty cubits, and the breadth of each
+  curtain four cubits; all the curtains shall have one measure. <span class="VerseNumber"><b>26:3</b></span> Five curtains shall be coupled together
+  one to another; and the other five curtains shall be coupled one to another. <span class="VerseNumber"><b>26:4</b></span> And thou shalt make loops of blue upon
+  the edge of the one curtain that is outmost in the first set; and likewise
+  shalt thou make in the edge of the curtain that is outmost in the second set.
+  <span class="VerseNumber"><b>26:5</b></span> Fifty loops shalt thou make in the
+  one curtain, and fifty loops shalt thou make in the edge of the curtain that
+  is in the second set; the loops shall be opposite one to another. <span class="VerseNumber"><b>26:6</b></span> And thou shalt make fifty clasps of
+  gold, and couple the curtains one to another with the clasps, that the
+  tabernacle may be one whole.</span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.0pt">B</span></b></span><span style="font-size:8.0pt"> <span class="VerseNumber"><b>25:23</b></span> And thou
+  shalt make a<span class="vertical1"><b> table</b></span> of acacia-wood: two
+  cubits shall be the length thereof, and a cubit the breadth thereof, and a
+  cubit and a half the height thereof. <span class="VerseNumber"><b>25:24</b></span>
+  And thou shalt overlay it with pure gold, and make thereto a crown of gold
+  round about. <span class="VerseNumber"><b>25:25</b></span> And thou shalt make
+  unto it a border of a handbreadth round about, and thou shalt make a golden
+  crown to the border thereof round about. <span class="VerseNumber"><b>25:26</b></span>
+  And thou shalt make for it four rings of gold, and put the rings in the four
+  corners that are on the four feet thereof. <span class="VerseNumber"><b>25:27</b></span>
+  Close by the border shall the rings be, for places for the staves to bear the
+  table. <span class="VerseNumber"><b>25:28</b></span> And thou shalt make the
+  staves of acacia-wood, and overlay them with gold, that the table may be
+  borne with them. <span class="VerseNumber"><b>25:29</b></span> And thou shalt
+  make the dishes thereof, and the pans thereof, and the jars thereof, and the
+  bowls thereof, wherewith to pour out; of pure gold shalt thou make them. <span class="VerseNumber"><b>25:30</b></span> And thou shalt set upon the table
+  showbread before Me alway. </span><span class="HebrewParagraph"><span style="font-size:8.0pt;font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.0pt">B</span></b></span><span style="font-size:8.0pt"> <span class="VerseNumber"><b>26:7</b></span> And thou
+  shalt make curtains of goats' hair for a <span class="vertical1"><b>tent</b></span>
+  over the tabernacle; eleven curtains shalt thou make them. <span class="VerseNumber"><b>26:8</b></span> The length of each curtain shall be
+  thirty cubits, and the breadth of each curtain four cubits; the eleven
+  curtains shall have one measure. <span class="VerseNumber"><b>26:9</b></span>
+  And thou shalt couple five curtains by themselves, and six curtains by
+  themselves, and shalt double over the sixth curtain in the forefront of the
+  tent. <span class="VerseNumber"><b>26:10</b></span> And thou shalt make fifty
+  loops on the edge of the one curtain that is outmost in the first set, and
+  fifty loops upon the edge of the curtain which is outmost in the second set. <span class="VerseNumber"><b>26:11</b></span> And thou shalt make fifty clasps of
+  brass, and put the clasps into the loops, and couple the tent together, that
+  it may be one. <span class="VerseNumber"><b>26:12</b></span> And as for the
+  overhanging part that remaineth of the curtains of the tent, the half curtain
+  that remaineth over shall hang over the back of the tabernacle. <span class="VerseNumber"><b>26:13</b></span> And the cubit on the one side, and the
+  cubit on the other side, of that which remaineth over in the length of the
+  curtains of the tent, shall hang over the sides of the tabernacle on this
+  side and on that side, to cover it. <span class="VerseNumber"><b>26:14</b></span>
+  And thou shalt make a covering for the tent of rams' skins dyed red and a
+  covering of sealskins above. </span><span class="HebrewParagraph"><span style="font-size:8.0pt;font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.0pt">C</span></b></span><span style="font-size:8.0pt"> <span class="VerseNumber"><b>25:31</b></span> And thou
+  shalt make a <span class="vertical1"><b>candlestick</b></span> of pure gold: of
+  beaten work shall the candlestick be made, even its base, and its shaft; its
+  cups, its knops, and its flowers, shall be of one piece with it. <span class="VerseNumber"><b>25:32</b></span> And there shall be six branches going
+  out of the sides thereof: three branches of the candlestick out of the one
+  side thereof, and three branches of the candle-stick out of the other side
+  thereof; <span class="VerseNumber"><b>25:33</b></span> three cups made like
+  almond-blossoms in one branch, a knop and a flower; and three cups made like
+  almond-blossoms in the other branch, a knop and a flower; so for the six
+  branches going out of the candlestick. <span class="VerseNumber"><b>25:34</b></span>
+  And in the candlestick four cups made like almond-blossoms, the knops
+  thereof, and the flowers thereof. <span class="VerseNumber"><b>25:35</b></span>
+  And a knop under two branches of one piece with it, and a knop under two
+  branches of one piece with it, and a knop under two branches of one piece
+  with it, for the six branches going out of the candlestick. <span class="VerseNumber"><b>25:36</b></span> Their knops and their branches shall be
+  of one piece with it; the whole of it one beaten work of pure gold. <span class="VerseNumber"><b>25:37</b></span> And thou shalt make the lamps thereof,
+  seven; and they shall light the lamps thereof, to give light over against it.
+  <span class="VerseNumber"><b>25:38</b></span> And the tongs thereof, and the
+  snuffdishes thereof, shall be of pure gold. <span class="VerseNumber"><b>25:39</b></span>
+  Of a talent of pure gold shall it be made, with all these vessels. <span class="VerseNumber"><b>25:40</b></span> <span class="horizontal1"><b>And see that
+  thou make them after their pattern, which is being shown thee in the mount</b></span>.
+  </span><span class="HebrewParagraph"><span style="font-size:8.0pt;font-weight:
+  normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.0pt">C</span></b></span><span style="font-size:8.0pt"> <span class="VerseNumber"><b>26:15</b></span> And thou
+  shalt make the boards for the tabernacle of acacia-wood, standing up. <span class="VerseNumber"><b>26:16</b></span> Ten cubits shall be the length of a
+  board, and a cubit and a half the breadth of each board. <span class="VerseNumber"><b>26:17</b></span> Two tenons shall there be in each
+  board, joined one to another; thus shalt thou make for all the boards of the
+  tabernacle. <span class="VerseNumber"><b>26:18</b></span> And thou shalt make
+  the boards for the tabernacle, twenty boards for the south side southward: <span class="VerseNumber"><b>26:19</b></span> And thou shalt make forty sockets of
+  silver under the twenty boards: two sockets under one board for its two
+  tenons, and two sockets under another board for its two tenons; <span class="VerseNumber"><b>26:20</b></span> and for the second side of the
+  tabernacle, on the north side, twenty boards. <span class="VerseNumber"><b>26:21</b></span>
+  And their forty sockets of silver: two sockets under one board, and two
+  sockets under another board. <span class="VerseNumber"><b>26:22</b></span> And
+  for the hinder part of the tabernacle westward thou shalt make six boards. <span class="VerseNumber"><b>26:23</b></span> And two boards shalt thou make for the
+  corners of the tabernacle in the hinder part. <span class="VerseNumber"><b>26:24</b></span>
+  And they shall be double beneath, and in like manner they shall be complete
+  unto the top thereof unto the first ring; thus shall it be for them both;
+  they shall be for the two corners. <span class="VerseNumber"><b>26:25</b></span>
+  Thus there shall be eight boards, and their sockets of silver, sixteen
+  sockets: two sockets under one board, and two sockets under another board. <span class="VerseNumber"><b>26:26</b></span> And thou shalt make bars of
+  acacia-wood: five for the boards of the one side of the tabernacle, <span class="VerseNumber"><b>26:27</b></span> and five bars for the boards of the
+  other side of the tabernacle, and five bars for the boards of the side of the
+  tabernacle, for the hinder part westward; <span class="VerseNumber"><b>26:28</b></span>
+  and the middle bar in the midst of the boards, which shall pass through from
+  end to end. <span class="VerseNumber"><b>26:29</b></span> And thou shalt
+  overlay the boards with gold, and make their rings of gold for holders for
+  the bars; and thou shalt overlay the bars with gold. <span class="VerseNumber"><b>26:30</b></span>
+<span class="horizontal1"><b>And thou shalt rear up the tabernacle according to
+  the fashion thereof which hath been shown thee in the mount</b></span>. </span><span class="HebrewParagraph"><span style="font-size:8.0pt;font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">3A</th><th class="col-right">3B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>26:31</b></span> And thou shalt
+  make a veil of blue, and purple, and scarlet, and fine twined linen; with <span class="vertical1"><b>cherubim</b></span> the work of the skilful workman shall
+  it be made. <span class="VerseNumber"><b>26:32</b></span> And thou shalt hang it
+  upon four pillars of acacia overlaid with gold, their hooks being of gold,
+  upon four sockets of silver. <span class="VerseNumber"><b>26:33</b></span> And
+  thou shalt hang up the veil under the clasps, and shalt bring in thither
+  within the veil <span class="vertical1"><b>the ark of the testimony</b></span>;
+  and the veil shall divide unto you between the holy place and the most holy. <span class="VerseNumber"><b>26:34</b></span> And thou shalt put the ark-cover upon
+  the ark of the testimony in the most holy place. <span class="VerseNumber"><b>26:35</b></span>
+  And thou shalt set the <span class="vertical1"><b>table</b></span> without the
+  veil, and the <span class="vertical1"><b>candlestick</b></span> over against
+  the table on the side of the tabernacle toward the south; and thou shalt put
+  the table on the north side.</p></td><td><p class="torah"><span class="VerseNumber"><b>26:36</b></span> And thou shalt
+  make a screen for the door of the <span class="vertical1"><b>Tent</b></span>,
+  of blue, and purple, and scarlet, and fine twined linen, the work of the
+  weaver in colours. <span class="VerseNumber"><b>26:37</b></span> And thou shalt
+  make for the screen five pillars of acacia, and overlay them with gold; their
+  hooks shall be of gold; and thou shalt cast five sockets of brass for them. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">4A</th><th class="col-right">4B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>27:1</b></span> And thou shalt make
+  the altar of acacia-wood, five cubits long, and five cubits broad; the altar
+  shall be four-square; and the height thereof shall be three cubits. <span class="VerseNumber"><b>27:2</b></span> And thou shalt make the horns of it upon
+  the four corners thereof; the horns thereof shall be of one piece with it;
+  and thou shalt overlay it with brass. <span class="VerseNumber"><b>27:3</b></span>
+  And thou shalt make its pots to take away its ashes, and its shovels, and its
+  basins, and its flesh-hooks, and its fire-pans; all the vessels thereof thou
+  shalt make of brass. <span class="VerseNumber"><b>27:4</b></span> And thou
+  shalt make for it a grating of network of brass; and upon the net shalt thou
+  make four brazen rings in the four corners thereof. <span class="VerseNumber"><b>27:5</b></span>
+  And thou shalt put it under the ledge round the altar beneath, that the net
+  may reach halfway up the altar. <span class="VerseNumber"><b>27:6</b></span>
+  And thou shalt make staves for the altar, staves of acacia-wood, and overlay
+  them with brass. <span class="VerseNumber"><b>27:7</b></span> And the staves
+  thereof shall be put into the rings, and the staves shall be upon the two
+  sides of the altar, in bearing it. <span class="VerseNumber"><b>27:8</b></span>
+  Hollow with planks shalt thou make it; as it hath been shown thee in the
+  mount, so shall they make it. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b>27:9</b></span> And thou shalt make
+  the court of the tabernacle: for the south side southward there shall be
+  hangings for the court of fine twined linen a hundred cubits long for one
+  side. <span class="VerseNumber"><b>27:10</b></span> And the pillars thereof
+  shall be twenty, and their sockets twenty, of brass; the hooks of the pillars
+  and their fillets shall be of silver. <span class="VerseNumber"><b>27:11</b></span>
+  And likewise for the north side in length there shall be hangings a hundred
+  cubits long, and the pillars thereof twenty, and their sockets twenty, of
+  brass; the hooks of the pillars and their fillets of silver. <span class="VerseNumber"><b>27:12</b></span> And for the breadth of the court on the
+  west side shall be hangings of fifty cubits: their pillars ten, and their
+  sockets ten. <span class="VerseNumber"><b>27:13</b></span> And the breadth of
+  the court on the east side eastward shall be fifty cubits. <span class="VerseNumber"><b>27:14</b></span> The hangings for the one side [of the
+  gate] shall be fifteen cubits: their pillars three, and their sockets three. <span class="VerseNumber"><b>27:15</b></span> And for the other side shall be
+  hangings of fifteen cubits: their pillars three, and their sockets three. <span class="VerseNumber"><b>27:16</b></span> And for the gate of the court shall be
+  a screen of twenty cubits, of blue, and purple, and scarlet, and fine twined
+  linen, the work of the weaver in colours: their pillars four, and their
+  sockets four. <span class="VerseNumber"><b>27:17</b></span> All the pillars of
+  the court round about shall be filleted with silver; their hooks of silver,
+  and their sockets of brass. <span class="VerseNumber"><b>27:18</b></span> The
+  length of the court shall be a hundred cubits, and the breadth fifty every
+  where, and the height five cubits, of fine twined linen, and their sockets of
+  brass. <span class="VerseNumber"><b>27:19</b></span> All the instruments of the
+  tabernacle in all the service thereof, and all the pins thereof, and all the
+  pins of the court, shall be of brass. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-full">5</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>27:20</b></span> <span class="closure"><b>And thou shalt command the children of Israel, that they
+  bring unto thee</b></span> pure olive oil beaten for the light, to cause a
+  lamp to burn continually. <span class="VerseNumber"><b>27:21</b></span> In the
+  tent of meeting, without the veil which is before the testimony, Aaron and
+  his sons shall set it in order, to burn from evening to morning before the
+  LORD; it shall be a statute for ever throughout their generations on the
+  behalf of the children of Israel. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 11 (Exodus 25:1-27:21)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-11/exodus-unit-11.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10.html" rel="prev">← Unit 10</a>
+            <a href="/torah-weave/Exodus/exodus-unit-12/exodus-unit-12.html" rel="next">Unit 12 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

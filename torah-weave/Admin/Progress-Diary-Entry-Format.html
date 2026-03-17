@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Diary Entry Format - Torah Commentary Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        
+        .purpose-box {
+            background-color: #e8f4f8;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .template-box {
+            background-color: #fff9e6;
+            border: 2px solid #f39c12;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .code-box {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .preview-box {
+            background-color: #f9f9f9;
+            border: 2px solid #7f8c8d;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .note-box {
+            background-color: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .instructions {
+            background-color: #eef7ee;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+        
+        /* Preview styling to match actual diary */
+        .entry {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .entry-date {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 3px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .entry h3 {
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+        
+        .entry h4 {
+            color: #34495e;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .entry ul {
+            margin: 8px 0;
+        }
+        
+        .entry li {
+            margin: 5px 0;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            color: #7f8c8d;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Progress Diary Entry Format</h1>
+        
+        <div class="purpose-box">
+            <h3>Purpose</h3>
+            <p>This document provides the exact HTML structure for adding session summaries to the Progress Diary. Claude will generate entries in this format at the end of each session, ready for you to copy/paste into the diary page.</p>
+        </div>
+
+        <h2>The HTML Template</h2>
+        
+        <div class="template-box">
+            <h3>Standard Entry Structure:</h3>
+            <div class="code-box">&lt;div class="entry"&gt;
+    &lt;div class="entry-date"&gt;[Month Day, Year] - [Brief Title]&lt;/div&gt;
+    &lt;h3&gt;[Session Focus/Achievement]&lt;/h3&gt;
+    &lt;p&gt;[Brief narrative summary of what was accomplished]&lt;/p&gt;
+    
+    &lt;h4&gt;Work Completed:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;[Specific accomplishment 1]&lt;/li&gt;
+        &lt;li&gt;[Specific accomplishment 2]&lt;/li&gt;
+        &lt;li&gt;[Specific accomplishment 3]&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Files Created/Modified:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;code&gt;[filename.html]&lt;/code&gt; - [what was done]&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;[filename2.html]&lt;/code&gt; - [what was done]&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Database Updates:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;[Book] Unit [#]: [status change or field updates]&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Next Session Priorities:&lt;/h4&gt;
+    &lt;ol&gt;
+        &lt;li&gt;[Top priority task]&lt;/li&gt;
+        &lt;li&gt;[Second priority task]&lt;/li&gt;
+        &lt;li&gt;[Third priority task]&lt;/li&gt;
+    &lt;/ol&gt;
+    
+    &lt;h4&gt;Chat Reference:&lt;/h4&gt;
+    &lt;p&gt;&lt;a href="[chat-url]" target="_blank"&gt;View this session's chat&lt;/a&gt;&lt;/p&gt;
+    
+    &lt;h4&gt;Technical Notes:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;[Any important observations or decisions made]&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</div>
+        </div>
+
+        <h2>Complete Example</h2>
+
+        <div class="preview-box">
+            <h3>How It Looks When Rendered:</h3>
+            
+            <div class="entry">
+                <div class="entry-date">October 17, 2025 - Genesis Unit 7 Commentary Completed</div>
+                <h3>Completed Unit 7 Commentary and Updated Database</h3>
+                <p>Finished writing the complete commentary for Genesis Unit 7 (The Covenant Ceremonies). The unit contains two major covenant ceremonies - the covenant of the pieces (Genesis 15) and the covenant of circumcision (Genesis 17). This unit occupies the center position of Triad B (covenant track) and demonstrates the division mechanism through cutting rituals. Database has been updated with all structural and thematic fields.</p>
+                
+                <h4>Work Completed:</h4>
+                <ul>
+                    <li>Drafted complete Unit 7 commentary following template taxonomy</li>
+                    <li>Analyzed internal structure: 3×2 format with covenant emphasis</li>
+                    <li>Identified key intersection: Center position showing YHWH/Elohim complementary roles</li>
+                    <li>Updated database with all 38 fields for Unit 7</li>
+                    <li>Saved file with correct naming convention</li>
+                </ul>
+                
+                <h4>Files Created/Modified:</h4>
+                <ul>
+                    <li><code>genesis-unit-07.html</code> - Created complete unit commentary</li>
+                    <li><code>torah_database_FINAL_SESSION.xlsx</code> - Updated Row 7 (Genesis Unit 7)</li>
+                </ul>
+                
+                <h4>Database Updates:</h4>
+                <ul>
+                    <li>Genesis Unit 7: analysis_status changed from "partial" to "complete"</li>
+                    <li>Added all structural fields: rows=3, columns=2, warp poles defined</li>
+                    <li>Added thematic fields: primary_theme, movement_type, divine_names_pattern</li>
+                    <li>Set confidence_level=high, supernatural_content=TRUE</li>
+                </ul>
+                
+                <h4>Next Session Priorities:</h4>
+                <ol>
+                    <li>Begin Genesis Unit 8 commentary (Lot disposal narrative)</li>
+                    <li>Review Unit 7 for any needed revisions after reviewing Unit 8</li>
+                    <li>Update Genesis index page with link to Unit 7</li>
+                </ol>
+                
+                <h4>Chat Reference:</h4>
+                <p><a href="https://claude.ai/chat/abc123xyz" target="_blank">View this session's chat</a></p>
+                
+                <h4>Technical Notes:</h4>
+                <ul>
+                    <li>Confirmed that "covenant of the pieces" uses dividing/cutting as mechanism - this supports the separation theme in Part C</li>
+                    <li>Note that Unit 7 is the center of the first 3×3 matrix (Triads B,C,D) - needs emphasis in Part C discussion</li>
+                    <li>Divine name distribution follows expected pattern: YHWH in ch. 15, Elohim in ch. 17</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>The Raw HTML for Above Example</h2>
+
+        <div class="template-box">
+            <h3>Copy This Structure:</h3>
+            <div class="code-box">&lt;div class="entry"&gt;
+    &lt;div class="entry-date"&gt;October 17, 2025 - Genesis Unit 7 Commentary Completed&lt;/div&gt;
+    &lt;h3&gt;Completed Unit 7 Commentary and Updated Database&lt;/h3&gt;
+    &lt;p&gt;Finished writing the complete commentary for Genesis Unit 7 (The Covenant Ceremonies). The unit contains two major covenant ceremonies - the covenant of the pieces (Genesis 15) and the covenant of circumcision (Genesis 17). This unit occupies the center position of Triad B (covenant track) and demonstrates the division mechanism through cutting rituals. Database has been updated with all structural and thematic fields.&lt;/p&gt;
+    
+    &lt;h4&gt;Work Completed:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Drafted complete Unit 7 commentary following template taxonomy&lt;/li&gt;
+        &lt;li&gt;Analyzed internal structure: 3×2 format with covenant emphasis&lt;/li&gt;
+        &lt;li&gt;Identified key intersection: Center position showing YHWH/Elohim complementary roles&lt;/li&gt;
+        &lt;li&gt;Updated database with all 38 fields for Unit 7&lt;/li&gt;
+        &lt;li&gt;Saved file with correct naming convention&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Files Created/Modified:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;code&gt;genesis-unit-07.html&lt;/code&gt; - Created complete unit commentary&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;torah_database_FINAL_SESSION.xlsx&lt;/code&gt; - Updated Row 7 (Genesis Unit 7)&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Database Updates:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Genesis Unit 7: analysis_status changed from "partial" to "complete"&lt;/li&gt;
+        &lt;li&gt;Added all structural fields: rows=3, columns=2, warp poles defined&lt;/li&gt;
+        &lt;li&gt;Added thematic fields: primary_theme, movement_type, divine_names_pattern&lt;/li&gt;
+        &lt;li&gt;Set confidence_level=high, supernatural_content=TRUE&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Next Session Priorities:&lt;/h4&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Begin Genesis Unit 8 commentary (Lot disposal narrative)&lt;/li&gt;
+        &lt;li&gt;Review Unit 7 for any needed revisions after reviewing Unit 8&lt;/li&gt;
+        &lt;li&gt;Update Genesis index page with link to Unit 7&lt;/li&gt;
+    &lt;/ol&gt;
+    
+    &lt;h4&gt;Chat Reference:&lt;/h4&gt;
+    &lt;p&gt;&lt;a href="https://claude.ai/chat/abc123xyz" target="_blank"&gt;View this session's chat&lt;/a&gt;&lt;/p&gt;
+    
+    &lt;h4&gt;Technical Notes:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Confirmed that "covenant of the pieces" uses dividing/cutting as mechanism - this supports the separation theme in Part C&lt;/li&gt;
+        &lt;li&gt;Note that Unit 7 is the center of the first 3×3 matrix (Triads B,C,D) - needs emphasis in Part C discussion&lt;/li&gt;
+        &lt;li&gt;Divine name distribution follows expected pattern: YHWH in ch. 15, Elohim in ch. 17&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</div>
+        </div>
+
+        <h2>Required Sections</h2>
+
+        <div class="instructions">
+            <h3>Every Entry Must Include:</h3>
+            <ol>
+                <li><strong>Date and Title</strong> (in entry-date div)</li>
+                <li><strong>Session Focus</strong> (h3 heading)</li>
+                <li><strong>Brief Narrative</strong> (opening paragraph)</li>
+                <li><strong>Work Completed</strong> (bulleted list)</li>
+                <li><strong>Next Session Priorities</strong> (numbered list)</li>
+            </ol>
+        </div>
+
+        <div class="note-box">
+            <h3>Optional Sections (Include If Relevant):</h3>
+            <ul>
+                <li><strong>Files Created/Modified</strong> - When files were saved/changed</li>
+                <li><strong>Database Updates</strong> - When database was updated</li>
+                <li><strong>Chat Reference</strong> - Link to the chat (always good to include)</li>
+                <li><strong>Technical Notes</strong> - Important decisions, observations, or insights</li>
+                <li><strong>Outstanding Issues</strong> - Problems to resolve in future sessions</li>
+            </ul>
+        </div>
+
+        <h2>How to Add Entry to Progress Diary</h2>
+
+        <div class="instructions">
+            <h3>Step-by-Step:</h3>
+            <ol>
+                <li><strong>Open</strong> <code>Progress-Diary.html</code> in Expression Web or text editor</li>
+                <li><strong>Find</strong> the location right after the opening <code>&lt;body&gt;</code> tag and any header content</li>
+                <li><strong>Paste</strong> the new entry HTML at the <strong>top</strong> (most recent first)</li>
+                <li><strong>Save</strong> the file</li>
+                <li><strong>Upload</strong> to server via FTP</li>
+            </ol>
+        </div>
+
+        <div class="note-box">
+            <h4>Where Exactly to Paste:</h4>
+            <p>Look for existing entries in the Progress Diary. Paste your new entry <strong>above</strong> the most recent existing entry, so the diary shows newest-first order.</p>
+        </div>
+
+        <h2>Variations for Different Session Types</h2>
+
+        <h3>Short Session Entry</h3>
+        <div class="code-box">&lt;div class="entry"&gt;
+    &lt;div class="entry-date"&gt;October 17, 2025 - Quick Database Update&lt;/div&gt;
+    &lt;h3&gt;Updated Database for Units 5-7&lt;/h3&gt;
+    &lt;p&gt;Quick session to update database fields for three completed Genesis units.&lt;/p&gt;
+    
+    &lt;h4&gt;Database Updates:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Genesis Units 5, 6, 7: Updated all thematic fields&lt;/li&gt;
+        &lt;li&gt;Set analysis_status to "complete" for all three&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Next Session Priorities:&lt;/h4&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Begin Genesis Unit 8 commentary&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;</div>
+
+        <h3>Problem-Solving Session Entry</h3>
+        <div class="code-box">&lt;div class="entry"&gt;
+    &lt;div class="entry-date"&gt;October 17, 2025 - CSS Styling Issues Resolved&lt;/div&gt;
+    &lt;h3&gt;Fixed Pattern Color Highlighting in Unit Commentaries&lt;/h3&gt;
+    &lt;p&gt;Identified and resolved issues with horizontal1, vertical1, and closure classes not displaying correctly in unit commentary tables.&lt;/p&gt;
+    
+    &lt;h4&gt;Work Completed:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Updated main.css with corrected color classes&lt;/li&gt;
+        &lt;li&gt;Tested across Genesis Units 1-5&lt;/li&gt;
+        &lt;li&gt;Verified pattern highlighting now works correctly&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Files Modified:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;code&gt;Assets/CSS/main.css&lt;/code&gt; - Fixed .horizontal1, .vertical1, .closure classes&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Technical Notes:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Issue was specificity conflict with MsoNormalTable styles&lt;/li&gt;
+        &lt;li&gt;Solution: Increased specificity for pattern classes&lt;/li&gt;
+        &lt;li&gt;All existing unit files now display correctly without modification&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Next Session Priorities:&lt;/h4&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Resume regular unit commentary work&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;</div>
+
+        <h3>Multi-Session Project Entry</h3>
+        <div class="code-box">&lt;div class="entry"&gt;
+    &lt;div class="entry-date"&gt;October 17, 2025 - Genesis Part C Rework Completed&lt;/div&gt;
+    &lt;h3&gt;Completed Rework of Genesis Commentary to Flow from Part B&lt;/h3&gt;
+    &lt;p&gt;Major revision of Genesis Part C (Commentary) to ensure it flows naturally from the structural discoveries in Part B. The commentary now maintains discovery narrative while presenting theological insights that emerge from the architecture rather than imposing them.&lt;/p&gt;
+    
+    &lt;h4&gt;Work Completed:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Restructured opening to reference Part B discoveries&lt;/li&gt;
+        &lt;li&gt;Revised three-ring concentric pattern section&lt;/li&gt;
+        &lt;li&gt;Reworked YHWH/Elohim distribution section with evidence from structure&lt;/li&gt;
+        &lt;li&gt;Added systematic correspondences section with proper cross-references&lt;/li&gt;
+        &lt;li&gt;Verified all unit links work correctly&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Files Modified:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;code&gt;Genesis Commentary.html&lt;/code&gt; - Complete rewrite of Part C&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Technical Notes:&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Maintained scholarly tone throughout&lt;/li&gt;
+        &lt;li&gt;Ensured theological claims supported by structural evidence&lt;/li&gt;
+        &lt;li&gt;Part C now properly flows from Part B without redundancy&lt;/li&gt;
+        &lt;li&gt;Ready for final review and upload&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h4&gt;Next Session Priorities:&lt;/h4&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Final review of Genesis Parts A, B, C together&lt;/li&gt;
+        &lt;li&gt;Begin Leviticus Part A (unit identification)&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;</div>
+
+        <h2>Best Practices</h2>
+
+        <div class="instructions">
+            <h3>Writing Good Diary Entries:</h3>
+            <ul>
+                <li><strong>Be Specific:</strong> "Completed Genesis Unit 7" not just "did some work"</li>
+                <li><strong>Include Context:</strong> Why this unit matters in the larger structure</li>
+                <li><strong>Note Decisions:</strong> Any choices made that affect future work</li>
+                <li><strong>Track Issues:</strong> Problems discovered that need resolution</li>
+                <li><strong>Link Everything:</strong> Include chat URL so you can review later</li>
+                <li><strong>Plan Ahead:</strong> Clear next steps so future sessions start smoothly</li>
+            </ul>
+        </div>
+
+        <div class="note-box">
+            <h4>Remember:</h4>
+            <p>The Progress Diary is your continuity system. When starting a new chat weeks later, you (and Claude) will read these entries to understand what was done and what's next. Make entries clear, complete, and useful for your future self.</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Last Updated:</strong> October 2025</p>
+            <p><strong>Version:</strong> 1.0</p>
+            <p><strong>Part of:</strong> Torah Commentary Project Interactive Workflow System</p>
+        </div>
+    </div>
+</body>
+</html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

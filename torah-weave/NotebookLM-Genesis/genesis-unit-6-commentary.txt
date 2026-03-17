@@ -1,0 +1,649 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+        /* Landscape phones - hamburger menu */
+@media (max-height: 500px) and (orientation: landscape) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav li {
+        width: 100%;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+    }
+    
+    main.content-wrapper {
+        padding: 15px 10px;
+    }
+}
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">עברית</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/torah-weave/">Torah Weave</a> &gt; 
+    <a href="/torah-weave/Genesis/genesis-map/genesis-map.html">Genesis</a> &gt; 
+    Unit 6 Commentary
+</nav>
+
+<!-- Header -->
+<header class="unit-header-section">
+    <h1>Genesis Unit 6: Lot and Abraham Separate</h1>
+    <div class="unit-meta">Genesis 13:5–14:24</div>
+</header>
+
+<!-- Small position map -->
+<aside class="unit-position-map">
+    <svg viewBox="0 0 280 100" width="280" height="100" style="display: block; margin: 1em auto;">
+        <!-- Column headers -->
+        <text x="50" y="15" font-size="9" text-anchor="middle" fill="#666">A</text>
+        <text x="80" y="15" font-size="9" text-anchor="middle" fill="#666">B</text>
+        <text x="110" y="15" font-size="9" text-anchor="middle" fill="#666">C</text>
+        <text x="140" y="15" font-size="9" text-anchor="middle" fill="#666">D</text>
+        <text x="170" y="15" font-size="9" text-anchor="middle" fill="#666">E</text>
+        <text x="200" y="15" font-size="9" text-anchor="middle" fill="#666">F</text>
+        <text x="230" y="15" font-size="9" text-anchor="middle" fill="#666">G</text>
+        
+        <!-- Row headers -->
+        <text x="20" y="40" font-size="9" text-anchor="middle" fill="#666">1</text>
+        <text x="20" y="60" font-size="9" text-anchor="middle" fill="#666">2</text>
+        <text x="20" y="80" font-size="9" text-anchor="middle" fill="#666">3</text>
+        
+        <!-- Row 1: Unit 6 highlighted -->
+        <rect x="35" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="25" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="25" width="25" height="18" fill="#fff4e6" stroke="#333" stroke-width="2"/>
+        <rect x="155" y="25" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="185" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 2 -->
+        <rect x="35" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="45" width="25" height="18" fill="#ffe6e6" stroke="#ccc"/>
+        <rect x="95" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="45" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="155" y="45" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="185" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 3 -->
+        <rect x="35" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="65" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="65" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="155" y="65" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="185" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Unit numbers (Row 1) - Unit 6 bold -->
+        <text x="47" y="37" font-size="8" text-anchor="middle">1</text>
+        <text x="107" y="37" font-size="8" text-anchor="middle">5</text>
+        <text x="137" y="37" font-size="8" text-anchor="middle" font-weight="bold">6</text>
+        <text x="167" y="37" font-size="8" text-anchor="middle">11</text>
+        <text x="197" y="37" font-size="8" text-anchor="middle">12</text>
+        <text x="227" y="37" font-size="8" text-anchor="middle">17</text>
+        
+        <!-- Unit numbers (Row 2) -->
+        <text x="47" y="57" font-size="8" text-anchor="middle">2</text>
+        <text x="77" y="57" font-size="8" text-anchor="middle">4</text>
+        <text x="107" y="57" font-size="8" text-anchor="middle">7</text>
+        <text x="137" y="57" font-size="8" text-anchor="middle">8</text>
+        <text x="167" y="57" font-size="8" text-anchor="middle">13</text>
+        <text x="197" y="57" font-size="8" text-anchor="middle">14</text>
+        <text x="227" y="57" font-size="8" text-anchor="middle">18</text>
+        
+        <!-- Unit numbers (Row 3) -->
+        <text x="47" y="77" font-size="8" text-anchor="middle">3</text>
+        <text x="107" y="77" font-size="8" text-anchor="middle">9</text>
+        <text x="137" y="77" font-size="8" text-anchor="middle">10</text>
+        <text x="167" y="77" font-size="8" text-anchor="middle">15</text>
+        <text x="197" y="77" font-size="8" text-anchor="middle">16</text>
+        <text x="227" y="77" font-size="8" text-anchor="middle">19</text>
+    </svg>
+</aside>
+
+<!-- MAIN COMMENTARY BEGINS -->
+<article>
+
+<section class="commentary-section">
+    <h2>Two Acts of Looking</h2>
+    
+    <p>Two men lift up their eyes and look. The action is identical; the outcomes could not be more different. Lot looks and sees well-watered plains like Eden—and chooses Sodom. YHWH tells Abraham to look and sees the entire land in four directions—and promises it to his descendants forever. The same verb, the same gesture, but one looks with human calculation while the other looks at divine direction.</p>
+    
+    <p>This parallel act of looking lies at the heart of Unit 6, but it's only visible when we read the unit in its two-dimensional structure. Linearly, the chapter seems to contain two unrelated narratives—a family separation (chapter 13) and a war story (chapter 14). Why would the author join a peaceful parting with an international military campaign? What does Melchizedek have to do with herdsmen quarreling over pasture?</p>
+    
+    <p>The woven structure reveals the connection. Unit 6 operates as a 2×2 matrix where Row 1 establishes the separation and its consequences, while Row 2 tests what that separation means when crisis strikes. Column A traces Lot's trajectory from prosperity through capture, while Column B traces Abraham's trajectory from divine promise through rescue and blessing. The horizontal parallels between the columns create meaning neither story carries alone: Lot's looking toward Sodom leads to captivity there; Abraham's looking at YHWH's direction leads to becoming a blessing even to Sodom's king.</p>
+    
+    <p>Understanding this parallel—how the same action produces opposite results—requires seeing where the unit sits in Genesis's larger architecture. Position shapes content.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Position in Genesis Architecture</h2>
+    
+    <p>Unit 6 occupies a distinctive position in Genesis's three-ring structure. It sits in Row 1 of the patriarchal matrix (the YHWH row) and Column D (the inner family track of the Abraham cycle). This places it in the inner ring of Genesis—the ring devoted to brother relationships and family dynamics.</p>
+    
+    <p>But here's what makes Unit 6 unusual: while it belongs to the family track thematically, it deals with the Lot thread rather than the main Abraham line. Lot is Abraham's nephew, the only family member who accompanied him from Ur and Haran. Their separation in this unit sets up the Lot thread—which continues through <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a> (Sodom's destruction). When we read Units 6 and <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">8</a> together, we follow Lot's trajectory from choosing Sodom to fleeing its destruction, with Abraham intervening to rescue him in Unit 6 and interceding for him in <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>.</p>
+    
+    <p>The unit also connects to its immediate neighbors. <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a> ended with Abraham's arrival in Canaan, his altar-building at Shechem and Beth-el, his descent to Egypt, and his return to Beth-el. Unit 6 picks up exactly there: "unto the place of the altar, which he had made there at the first" (13:4). The narrative flow is seamless. But by the end of Unit 6, Abraham will have built another altar—at Hebron, by the terebinths of Mamre. This geographic marker will matter: the terebinths of Mamre appear twice in this unit (13:18 and 14:13), establishing Abraham's home base for the covenant ceremonies that follow in <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>.</p>
+    
+    <p>This positional context illuminates why the unit contains what it does. But to see how the two chapters relate to each other, we need to examine the internal structure.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Structural Outline: The 2×2 Matrix</h2>
+    
+    <p>Unit 6 organizes itself into a compact 2×2 structure—two rows, each with two columns. The rows represent stages: Row 1 handles the separation itself, Row 2 handles the crisis that tests the separation. The columns represent the two principals: Column A follows Lot's trajectory, Column B follows Abraham's trajectory (though Abraham acts to rescue Lot in Row 2).</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th class="row-header"></th>
+                <th><strong>Column A</strong><br>Lot's Trajectory</th>
+                <th><strong>Column B</strong><br>Abraham's Trajectory</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header"><strong>Row 1a</strong><br><small>Looking and<br>Choosing</small></td>
+                <td><strong>1Aa:</strong> Strife between herdsmen; Lot lifts eyes, sees Jordan plain, chooses Sodom direction</td>
+                <td><strong>1Ba:</strong> YHWH tells Abraham to lift eyes and look in all directions; promises land to seed forever</td>
+            </tr>
+            <tr>
+                <td class="row-header"><strong>Row 1b</strong><br><small>Dwelling</small></td>
+                <td><strong>1Ab:</strong> Lot dwells in cities of the Plain, moves tent toward Sodom</td>
+                <td><strong>1Bb:</strong> Abraham moves tent, dwells at terebinths of Mamre in Hebron, builds altar</td>
+            </tr>
+            <tr>
+                <td class="row-header"><strong>Row 2a</strong><br><small>War and<br>Rescue</small></td>
+                <td><strong>2Aa:</strong> Four kings make war against five; kings of Sodom and Gomorrah flee; invaders take all goods of Sodom</td>
+                <td><strong>2Ba:</strong> Abraham hears at terebinths of Mamre; pursues, defeats kings, brings back all</td>
+            </tr>
+            <tr>
+                <td class="row-header"><strong>Row 2b</strong><br><small>Goods</small></td>
+                <td><strong>2Ab:</strong> They take Lot and his goods</td>
+                <td><strong>2Bb:</strong> Melchizedek blesses Abraham; king of Sodom offers goods; Abraham refuses all but what his men ate</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>The (a) rows handle the main action—looking/promising, war/rescue. The (b) rows handle consequences—where each man settles, what happens to possessions. This creates both horizontal parallels (1Aa↔1Ba, 2Ab↔2Bb) and vertical continuity (1Ab→2Ab traces Lot's goods from dwelling to capture; 1Bb→2Ba shows Abraham acting from Mamre).</p>
+    
+    <p>The matrix reveals the unit's logic: separation in Row 1 creates the conditions that Row 2 tests. But structure alone is scaffolding. To see whether the text actually weaves these cells together, we need to examine the marked patterns.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Patterns and Parallels</h2>
+    
+    <h3>The Looking Parallel (Horizontal)</h3>
+    
+    <p>The central horizontal parallel in this unit connects 1Aa with 1Ba through the act of looking:</p>
+    
+    <blockquote>
+        <p>1Aa (13:10): "And Lot <strong>lifted up his eyes, and beheld</strong> all the plain of the Jordan..."</p>
+        <p>1Ba (13:14): "And YHWH said unto Abram... '<strong>Lift up now thine eyes, and look</strong> from the place where thou art...'"</p>
+    </blockquote>
+    
+    <p>The Hebrew verbal parallel is exact: <em>נשא עיניו וירא</em> (Lot) / <em>שא נא עיניך וראה</em> (Abraham). Same verbs, same sequence. But the circumstances create the contrast. Lot looks on his own initiative, sees agricultural potential, and makes a self-interested choice. Abraham looks at YHWH's command, in four directions rather than one, and receives a promise he didn't seek. Lot's looking leads him toward Sodom; Abraham's looking establishes his claim to what Lot chose to leave.</p>
+    
+    <h3>The Dwelling Parallel (Horizontal)</h3>
+    
+    <p>The subdivision (b) sections of Row 1 create another horizontal parallel through dwelling and tent-moving:</p>
+    
+    <blockquote>
+        <p>1Ab (13:12): "<strong>Abram dwelt</strong> in the land of Canaan, and Lot dwelt in the cities of the Plain, <strong>and moved his tent</strong> as far as Sodom."</p>
+        <p>1Bb (13:18): "<strong>And Abram moved his tent</strong>, and came <strong>and dwelt</strong> by the terebinths of Mamre..."</p>
+    </blockquote>
+    
+    <p>The same verbs appear—"dwelt" (<em>ישב</em>) and "moved his tent" (<em>ויאהל</em>)—but in reverse order. Lot moves toward Sodom; Abraham moves to Mamre. These destinations will matter enormously: Sodom will be destroyed, while Mamre becomes the site of covenant confirmation. The parallel shows both men settling, but their choices create divergent futures.</p>
+    
+    <h3>The Goods Parallel (Horizontal)</h3>
+    
+    <p>Row 2 creates its own horizontal parallel through the motif of goods:</p>
+    
+    <blockquote>
+        <p>2Ab (14:11): "<strong>And they took all the goods</strong> of Sodom and Gomorrah, and <strong>all their victuals</strong>, and went their way."</p>
+        <p>2Bb (14:21, 24): "...and <strong>take the goods to thyself</strong>..." / "save <strong>only that which the young men have eaten</strong>..."</p>
+    </blockquote>
+    
+    <p>The invaders take all goods and victuals; the king of Sodom offers goods to Abraham; Abraham refuses everything except what was eaten. The parallel vocabulary (goods, victuals/eaten) connects the taking and the refusing. What the kings seized by force, Abraham refuses to accept even as gift. His relationship to Sodom's wealth will not be defined by either conquest or obligation.</p>
+    
+    <h3>Vertical Threads</h3>
+    
+    <p>Two vertical threads run through the unit, connecting Row 1 to Row 2:</p>
+    
+    <p><strong>The Zoar Thread:</strong> Zoar appears in both 1Aa (13:10) and 2Aa (14:2). In Row 1, it marks the extent of the well-watered plain Lot sees. In Row 2, "the king of Bela—the same is Zoar" appears among the five defeated kings. The geographic marker connects Lot's visual assessment with the political reality—the region he chose for its appearance will become a war zone.</p>
+    
+    <p><strong>The Terebinths of Mamre Thread:</strong> Mamre appears in both 1Bb (13:18) and 2Ba (14:13). In Row 1, Abraham moves there after the separation and builds an altar. In Row 2, he hears news of Lot's capture there. The location established through peaceful worship becomes the base for military action. Abraham's dwelling choice in Row 1 positions him to act in Row 2.</p>
+    
+    <p><strong>The Strife-to-War Thread:</strong> A subtler vertical connection links the strife (<em>ריב</em>) between herdsmen in 1Aa (13:7) with the war (<em>מלחמה</em>) between kings in 2Aa (14:2). The unit moves from petty conflict to international warfare, from herds to empires. Yet Abraham's response to both is the same: resolve the conflict, restore what was lost, refuse to gain from others' misfortune.</p>
+    
+    <p>These marked patterns demonstrate that the unit's two rows are not merely juxtaposed but woven together through verbal connections. The structure is embedded in the text itself. But the unit also marks a distinctive moment in the divine name pattern.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Divine Name Distribution</h2>
+    
+    <p>Unit 6 sits in Row 1 of the patriarchal matrix—the YHWH row—and the divine name pattern confirms this placement. YHWH appears actively in both columns of Row 1:</p>
+    
+    <p>In 1Aa (13:10), the narrator notes that YHWH destroyed Sodom and Gomorrah—a proleptic reference to future destruction that colors Lot's choice with dramatic irony. In 1Ba (13:14–17), YHWH speaks directly to Abraham with the promise of land and descendants. This is the YHWH of promise and covenant, the personal deity who addresses individuals by name.</p>
+    
+    <p>Row 2 introduces something unexpected: a new divine designation through Melchizedek. The king of Salem appears as "priest of El Elyon" (God Most High) and blesses Abraham "of El Elyon, Maker of heaven and earth." Abraham then swears to the king of Sodom "unto YHWH, El Elyon, Maker of heaven and earth" (14:22).</p>
+    
+    <p>This is the only place in Genesis where El Elyon appears, and Abraham's response is worth noting: he equates YHWH with this Canaanite deity's title. The encounter with Melchizedek doesn't replace YHWH—Abraham explicitly identifies YHWH as El Elyon. But it does expand the divine frame. The deity who made personal promises to Abraham in Column B is now acknowledged as "Maker of heaven and earth" by a Canaanite priest-king.</p>
+    
+    <p>Elohim does not appear actively in this unit. The divine action comes through YHWH (in promise and in Abraham's oath), while El Elyon enters through Melchizedek's blessing. The unit maintains its Row 1 identity while introducing a new dimension of divine acknowledgment from outside the covenant line.</p>
+    
+    <p>The divine names confirm the unit's Row 1 placement. But Unit 6's position creates another kind of relationship—a structural parallel with <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a> in the Isaac-Jacob cycle.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Structural Parallel: Unit 6 and Unit 11</h2>
+    
+    <p>One feature of Genesis's architecture is how corresponding positions in the two patriarchal cycles contain parallel content. Unit 6 and <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a> both occupy Row 1 of their respective cycles—the YHWH row—and both deal with family separation and tension that will shape what follows.</p>
+    
+    <p>In Unit 6, strife erupts between the herdsmen of Abraham and Lot: "And there was a strife between the herdmen of Abram's cattle and the herdmen of Lot's cattle" (13:7). This leads to separation—Lot chooses the plain of Jordan while Abraham receives YHWH's promise of the land. In <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a>, struggle erupts even earlier—within Rebekah's womb: "And the children struggled together within her" (25:22). YHWH's oracle declares: "Two nations are in thy womb, and two peoples shall be separated from thy bowels; and the elder shall serve the younger" (25:23).</p>
+    
+    <p>The parallels run deeper than surface similarity:</p>
+    
+    <p><strong>Strife Leading to Separation:</strong> Both units feature conflict that results in permanent separation. Lot's separation from Abraham prefigures Jacob's separation from Esau. In both cases, what seems like a practical solution to immediate conflict creates the conditions for future national divisions—Israel and Moab/Ammon through Lot; Israel and Edom through Esau.</p>
+    
+    <p><strong>Looking and Choosing:</strong> In Unit 6, Lot "lifted up his eyes, and beheld" (13:10) and chose based on what he saw—the well-watered plain. In <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a>, Esau comes in from the field, sees the red pottage, and demands it: "Let me swallow, I pray thee, some of this red, red pottage" (25:30). Both make choices based on immediate visual/physical desire that have permanent consequences. Lot's choice leads him toward Sodom's destruction; Esau's choice costs him his birthright.</p>
+    
+    <p><strong>The "Elder" Question:</strong> The clearest verbal parallel involves the reversal of primacy. In <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a>, YHWH explicitly declares "the elder shall serve the younger" (25:23). While Unit 6 doesn't use this exact phrase, the same dynamic operates: Lot, as Abraham's older relative (at least by implication—he's of the previous generation through Haran), separates and ultimately produces nations (Moab and Ammon) that will indeed serve Israel. Abraham, who graciously defers choice to Lot ("if thou wilt take the left hand, then I will go to the right"), receives the promise that Lot's choice forfeited.</p>
+    
+    <p><strong>Both in the YHWH Row:</strong> The divine name distribution confirms the structural parallel. Both units feature YHWH as the active divine name—speaking promises to Abraham in Unit 6 (13:14–17), declaring the oracle to Rebekah in <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a> (25:23). These are units where YHWH personally intervenes in family matters, establishing the lines through which blessing will flow.</p>
+    
+    <p>Reading Units 6 and <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">11</a> together—as the structure invites us to do—reveals that Genesis presents family separation as a recurring pattern in covenant history. The tensions are not aberrations but necessary divisions through which the covenant line emerges. Just as Abraham and Lot must separate for the promise to proceed, so Jacob and Esau must divide for Israel to emerge. The architecture teaches us to see these as variations on a single theme: covenant identity requires differentiation, sometimes painful, from those closest to us.</p>
+    
+    <p>The structural parallel illuminates Unit 6's place in the larger design. But the unit also connects to its immediate neighbors in specific ways.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Connections to Adjacent Units</h2>
+    
+    <p>Unit 6 connects to its neighbors in the Genesis matrix through several threads:</p>
+    
+    <p><strong>Connection to <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a>:</strong> The journey that began in <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a> reaches a turning point here. <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a> traced Abraham's call, migration, and first experiences in Canaan (including the Egypt episode). Unit 6 resolves the family composition question: Lot separates, leaving Abraham's household to continue the covenant line alone. The altar at Beth-el (<a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a>) gives way to the altar at Mamre (Unit 6), establishing Abraham's new home base.</p>
+    
+    <p><strong>Connection to <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>:</strong> The promise of land and descendants in 1Ba (13:14–17) sets up the covenant formalization in <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>. There YHWH will formalize the promise through covenant ritual (chapter 15) and establish circumcision as covenant sign (chapter 17). The terebinths of Mamre, established as Abraham's dwelling in Unit 6, will witness these covenant moments.</p>
+    
+    <p><strong>Connection to <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>:</strong> The Sodom theme introduced here reaches its conclusion in <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>. Lot's movement "toward Sodom" in 1Ab becomes "dwelling in Sodom" by <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a> (19:1). The destruction mentioned proleptically in 1Aa (13:10) will occur in <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>. Abraham's role as intercessor, hinted at in his rescue here, becomes explicit in his bargaining for Sodom in <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>.</p>
+    
+    <p><strong>The Lot Connection:</strong> When we read Units 6 and <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">8</a> together, we follow Lot's narrative arc: separation and capture (Unit 6), then Sodom's destruction and Lot's rescue (<a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>). The seeds planted in Unit 6's separation bear bitter fruit when Sodom falls.</p>
+    
+    <p>We have examined Unit 6 from multiple angles: its central puzzle, its matrix structure, its woven patterns, its position in the larger architecture. We can now gather these threads and answer the question we began with.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Conclusion</h2>
+    
+    <p>We began with a puzzle: why does this unit join a peaceful family separation with an international war? The woven structure provides the answer.</p>
+    
+    <p>Reading Unit 6 as a woven text rather than a linear sequence changes how we understand both narratives it contains. The separation story (chapter 13) and the war story (chapter 14) are not independent episodes awkwardly joined—they're two rows of a single matrix exploring what happens when family separates and when that separation faces crisis.</p>
+    
+    <p>The horizontal parallels teach us to compare. When Lot looks and Abraham looks, when Lot moves and Abraham moves, when goods are taken and goods are refused—the parallel structure invites us to read one against the other. And the comparison always favors Abraham: looking at divine direction rather than personal calculation, moving to worship rather than toward wickedness, refusing wealth that might create obligation.</p>
+    
+    <p>The vertical threads teach us to follow consequences. Zoar looks good from a distance but will be caught in regional warfare. Mamre seems an ordinary relocation but becomes the launching point for rescue. The strife between herdsmen seems minor compared to war between kings, yet Abraham resolves both the same way—by generosity rather than grasping.</p>
+    
+    <p>What emerges from this reading is the covenant trajectory. YHWH's promise of land and descendants (1Ba) seems to have nothing to do with the war of kings (Row 2). But when Abraham rescues Lot and refuses Sodom's goods, he demonstrates the character that will carry the covenant forward. The promise doesn't make him passive; it makes him willing to act without need for reward. And Melchizedek's blessing—from outside the covenant line—suggests that others will recognize in Abraham what YHWH already knows.</p>
+    
+    <p>The unit's position in Genesis's inner ring is fitting. This is family business—a nephew's separation, a relative's rescue. But family business in Genesis always has cosmic implications. The brother relationships that fill the inner ring (Cain and Abel, Isaac and Ishmael, Jacob and Esau, Joseph and his brothers) determine the covenant's future. Here, Lot's departure from Abraham's household sets the trajectory for two peoples: Israel through Abraham, and Moab and Ammon through Lot's descendants. The separation that seems so reasonable in Row 1—herdsmen quarreling, land insufficient—will shape the map of the ancient Near East.</p>
+</section>
+
+</article>
+
+<!-- Link to unit text -->
+<aside class="unit-link-box">
+    <p><strong>Read the structured text:</strong> <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Genesis Unit 6 with color-coded patterns</a></p>
+</aside>
+
+<!-- Navigation -->
+<nav class="unit-navigation">
+    <div class="nav-arrows">
+        <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">← Unit 5: Call of Abraham</a>
+        <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7: Covenant Ceremonies →</a>
+    </div>
+    <div>
+        <a href="/torah-weave/Genesis/genesis-map/genesis-map.html">Genesis Map</a>
+    </div>
+</nav>
+
+<!-- Citation -->
+<aside class="citation-box">
+    <strong>To cite:</strong> Torah Weave Project. "Genesis Unit 6: Lot and Abraham Separate - Commentary." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Genesis/genesis-unit-6/genesis-unit-6-commentary.html
+</aside>
+
+<!-- Series Navigation -->
+<nav class="series-navigation">
+    <h3>Genesis Commentary Series</h3>
+    <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Overview</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: Units</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: Map</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: Three Rows</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture</a>
+</nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">התורה כדרכה</a></li>
+                        <li>T<a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+
+<!-- #EndTemplate -->
+
+

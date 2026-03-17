@@ -1,0 +1,772 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>Part D: Architecture and Meaning in Leviticus | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+<meta name="description" content="What the concentric ring structure of Leviticus means: an experiential reading in which the reader replicates the High Priest's journey from court to inner sanctum and back, and the context of Leviticus within the Torah.">
+<meta name="keywords" content="Leviticus structure, experiential reading, imitatio dei, Tabernacle, High Priest, concentric rings, Torah Weave, Exodus Numbers, camp structure">
+<meta name="author" content="Moshe Kline">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Part D: Architecture and Meaning in Leviticus",
+  "description": "What the concentric ring structure of Leviticus means: an experiential reading of the book as the High Priest's journey.",
+  "author": { "@type": "Person", "name": "Moshe Kline", "url": "https://chaver.com" },
+  "datePublished": "2026-03-08",
+  "dateModified": "2026-03-08",
+  "publisher": { "@type": "Organization", "name": "Torah Weave", "url": "https://chaver.com" }
+}
+</script>
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/torah-weave/index.html">Torah Weave</a> &raquo;
+    <a href="/torah-weave/Leviticus/leviticus-analysis/overview.html">Leviticus</a> &raquo;
+    <span>Part D: Architecture &amp; Meaning</span>
+</nav>
+
+<article itemscope itemtype="https://schema.org/ScholarlyArticle">
+
+<header class="unit-header-section">
+    <h1 itemprop="headline">Part D: Architecture and Meaning in Leviticus</h1>
+    <div class="unit-meta">
+        <span itemprop="description">The Experiential Reading</span>
+    </div>
+</header>
+
+<main itemprop="articleBody">
+
+<section id="introduction">
+<h2>From Structure to Meaning</h2>
+
+<p>Parts B and C established the architecture of Leviticus: three concentric rings of unit-triads around a focal unit, each ring identified by a marker (place, time, person), each governed by the creation paradigm&rsquo;s three-tiered hierarchy. The structure is intricate, multiply confirmed, and precisely parallel to the structure of Genesis. But what does it mean? Why did the author construct Leviticus this way?</p>
+
+<p>Mary Douglas maintained that the structure of Leviticus reflects the structure of the desert Tabernacle. She saw the book divided into three consecutive parts analogous to the court, the sanctum, and the inner sanctum. We agree that the structure of Leviticus is related to the Tabernacle, but not as Douglas proposed. The relationship is not figurative&mdash;it is experiential.</p>
+</section>
+
+<section id="tabernacle">
+<h2>The Tabernacle Connection</h2>
+
+<p>Part B showed that the first unit of each ring maps to a part of the Tabernacle. <a href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1.html">Unit 1</a> prescribes offerings at the altar in the court. <a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4.html">Unit 4</a> narrates Aaron and Moses entering the sanctum for the first time. <a href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10.html">Unit 10</a> details the High Priest&rsquo;s entrance into the inner sanctum on the Day of Purgation. Court, sanctum, inner sanctum.</p>
+
+<p>Part C showed that rings M and I are more closely connected to each other than either is to ring O&mdash;bound together by the shared death-and-birth theme. The parts of the Tabernacle with which they correspond&mdash;the sanctum and the inner sanctum&mdash;are chambers within one tent. The court, corresponding to ring O, stands outside the tent. The structural proximity of the rings matches the physical proximity of the Tabernacle spaces.</p>
+
+<p>So it is not merely that the rings can be mapped onto the Tabernacle. The relationships between the rings&mdash;which are closer to which, which stands apart&mdash;replicate the spatial relationships of the Tabernacle itself.</p>
+</section>
+
+<section id="experiential">
+<h2>An Experiential Reading</h2>
+
+<p>The opening command of <a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13.html">Unit 13</a> calls for <em>imitatio dei</em>: &ldquo;Ye shall be holy, for holy am I YHWH your deity&rdquo; (19:2). It is not addressed to the High Priest or to the priests in general, but to &ldquo;all the congregation of the children of Israel.&rdquo; This provides a key to the structure. The book is not figurative, as Douglas proposed, but experiential. The reader is invited to share the experience of the High Priest.</p>
+
+<p>The two halves of the book, before Unit 13 and after it, represent two paths. The inner path&mdash;from Unit 1 through Unit 12&mdash;is a process of individualization. The reader leaves the community in the court and turns inward, following the path that leads to standing alone before the deity in the inner sanctum, and ultimately to the experience of <em>imitatio dei</em> at the center. The result of this experience is that the reader turns around and returns to the community, following the outer path&mdash;from Unit 14 through Unit 22&mdash;a process of socialization. This is why the focus changes from &ldquo;one&rdquo; to &ldquo;many&rdquo; after Unit 13. The essence of the <em>imitatio</em> experience is to turn the individual toward the community left behind in the court.</p>
+
+<p>If this is correct, then one of the author&rsquo;s purposes in composing the book can be understood as creating an experience for the reader that bears a resemblance to the experience of the High Priest on the Day of Purgation. While the Tabernacle experience of entering the inner sanctum was limited to one person on one day in the year, Leviticus offers a similar experience to all, at any time.</p>
+
+<p>The outer ring makes the one-to-many movement concrete in its content. The entire first triad (Units 1&ndash;3) contains only private, situational offerings&mdash;no communal sacrifices, no calendrical obligations, no public cult. Every offering arises from the will of a single person: the individual who chooses to approach the altar (Unit 1), the individual who has inadvertently transgressed and must bring a sin or guilt offering (Unit 2), and the priest who administers what individual offerers bring (Unit 3). The entire last triad (Units 20&ndash;22) presupposes life in the land of Canaan&mdash;jubilee and sabbatical year (Unit 20), national blessings and curses (Unit 21), consecration of property (Unit 22). All private at one end of the outer ring; all national at the other. The one-and-many dyad operates not only between paired units but between entire triads.</p>
+
+<p>The architecture within the first triad reinforces the point. Unit 1 (deity-oriented, Row 1) is saturated with <span class="hebrew">&#1512;&#1497;&#1495; &#1504;&#1497;&#1495;&#1495;</span> (<em>re&rsquo;ah niho&rsquo;ah</em>, &ldquo;sweet savour&rdquo;)&mdash;the immaterial, spiritual dimension of the offering that ascends to the deity. Unit 3 (people-oriented, Row 3) specifies the material prebends the priesthood receives&mdash;flesh, grain, breast, thigh, &ldquo;a due for ever.&rdquo; The heavenly pole of the triad belongs to the individual&rsquo;s desire; the earthly pole belongs to the institution&rsquo;s material administration. In Unit 2 (the middle), the <span class="hebrew">&#1512;&#1497;&#1495; &#1504;&#1497;&#1495;&#1495;</span> formula appears exactly once&mdash;not in the anointed priest&rsquo;s bull, whose blood ritual reaches the inner sanctum, but in the common person&rsquo;s goat (4:31). The text reserves the spiritual marker for the person farthest from the institution and withholds it from the person at its center. Holiness in Leviticus originates with the person who chooses to approach, not with the cult that processes what is brought. The book&rsquo;s opening word&mdash;<span class="hebrew">&#1493;&#1497;&#1511;&#1512;&#1488;</span> (<em>vayikra</em>, &ldquo;and He called&rdquo;)&mdash;is a calling, not a command. The individual&rsquo;s response to that calling is the engine of the entire system.</p>
+</section>
+
+<section id="screen-revisited">
+<h2>The Screen Revisited</h2>
+
+<p>The experiential reading is supported by the reintroduction of Unit-triad C. In order to enter the inner sanctum, the High Priest must move aside the screen (&#1508;&#1512;&#1493;&#1499;&#1514;) that conceals it (cf. Leviticus 16:2, 12). Unit-triad C&mdash;the impurity units&mdash;functions as this screen. Not only do these units disguise the symmetry of Leviticus, they demand that the reader recognize the literary device and set them aside in order to see the concentric ring structure. The activation of the reader&mdash;the requirement to interact with the text rather than simply receive it&mdash;is itself correlative with entry into the inner sanctum. The reader, like the High Priest, must act to gain access.</p>
+
+<p>According to this reading, the function of the structure of Leviticus is to transform the reader by turning him or her from personal concerns to communal concerns&mdash;from the personal guilt of Unit 2 to the national guilt of Unit 21.</p>
+</section>
+
+<section id="unit-13-revisited">
+<h2>Unit 13 at the Center</h2>
+
+<p>If ring I corresponds to the inner sanctum, then Unit 13&mdash;enclosed by that ring&mdash;corresponds to the Ark of the Covenant. YHWH revealed himself to Moses from between the cherubim on the Ark (Exodus 25:22), and Unit 13 contains sixteen first-person revelations in the form &ldquo;I am YHWH.&rdquo; The Ark held the tablets of the law, and Unit 13 contains both direct and oblique references to the Decalogue.</p>
+
+<p>The unit&rsquo;s own internal structure, as analyzed in detail in <a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">&ldquo;The Editor was Nodding&rdquo;</a>, contains a structural decalogue in two columns&mdash;perhaps representing the two tablets of the Decalogue. The two columns can be understood as one &ldquo;personal&rdquo; and the other &ldquo;communal.&rdquo; This fits precisely with the reading of the book as a whole: the units before Unit 13 (chapters 1&ndash;18) are oriented to individuals, and the units after it (chapters 20&ndash;27) are oriented toward the community. Unit 13 is the meeting point, containing both themes in two columns analogous to the two tablets of the covenant between the &ldquo;one&rdquo; and the &ldquo;many.&rdquo;</p>
+</section>
+
+<section id="torah-context">
+<h2>Leviticus in the Torah</h2>
+
+<p>The architecture of Leviticus does not exist in isolation. It sits at the intersection of two threads that run through the entire Torah.</p>
+
+<h3>The Horizontal Thread: Genesis &mdash; Leviticus &mdash; Deuteronomy</h3>
+
+<p>Genesis, Leviticus, and Deuteronomy are linked by a shared structural framework: all three books organize their units into triads governed by the creation paradigm. Each triad contains a deity-oriented unit, a people-oriented unit, and a unit between them. Three &ldquo;warp threads&rdquo; stretch horizontally across these books, providing structural continuity from creation to Moses&rsquo;s farewell.</p>
+
+<p>But the orientation of the triads is not constant. In Genesis and in the first half of Leviticus, the first unit of each triad is oriented &ldquo;above&rdquo;&mdash;toward the deity&mdash;and the third unit &ldquo;below&rdquo;&mdash;toward people and earthly concerns. After Leviticus Unit 13, this orientation reverses. In Deuteronomy, the first unit of each triad is oriented &ldquo;below&rdquo; and the third unit &ldquo;above&rdquo;&mdash;the opposite of Genesis.</p>
+
+<table class="matrix-table">
+    <caption><strong>Triad Orientations Across the Horizontal Thread</strong></caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Genesis</th>
+            <th>Leviticus (before Unit 13)</th>
+            <th>Leviticus (after Unit 13)</th>
+            <th>Deuteronomy</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">Row 1</td>
+            <td>Above (deity)</td>
+            <td>Above (deity)</td>
+            <td>Below (people)</td>
+            <td>Below (people)</td>
+        </tr>
+        <tr>
+            <td class="row-header">Row 2</td>
+            <td>Middle</td>
+            <td>Middle</td>
+            <td>Middle</td>
+            <td>Middle</td>
+        </tr>
+        <tr>
+            <td class="row-header">Row 3</td>
+            <td>Below (people)</td>
+            <td>Below (people)</td>
+            <td>Above (deity)</td>
+            <td>Above (deity)</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Leviticus serves as the pivoting mechanism between the two orientations. Its first half has triads oriented like Genesis; its second half has triads oriented like Deuteronomy. Unit 13 is the hinge. This is consistent with the experiential reading: the inward journey (individualization) follows the Genesis pattern, the outward journey (socialization) follows the Deuteronomy pattern, and the <em>imitatio dei</em> at the center is where the reversal occurs.</p>
+
+<p>This horizontal thread spans from creation to Israel&rsquo;s distant future after dispersion&mdash;thousands of years of history and prophecy, with fewer supernatural elements than the vertical thread. It establishes the natural foundations of created order.</p>
+
+<p>And the thematic movement along this thread mirrors the structural reversal. Genesis is about individuals&mdash;patriarchs building altars, making covenants, founding families. Deuteronomy is about the nation&mdash;laws for a settled society, a constitution for communal life, blessings and curses addressed to all Israel. Leviticus bridges the two. It begins with individual offerings (Units 1&ndash;3)&mdash;not unlike what the patriarchs did at their altars in Genesis. It ends with a look forward to the future in the land (Units 20&ndash;22)&mdash;the sabbatical year, the jubilee, blessings and curses&mdash;the same territory Deuteronomy will develop in detail. The book that begins like Genesis ends like Deuteronomy. The reader who enters Leviticus as an individual offering at the altar leaves it as a member of a nation preparing for its land.</p>
+
+<p>The independent units&mdash;those that stand outside the triadic pattern&mdash;trace the same trajectory. Each of the horizontal-thread books has one independent unit. Genesis&rsquo;s independent unit (Unit 4, the Tower of Babel) stands at the beginning of the patriarchal narrative, marking the transition from universal to particular history. Leviticus&rsquo;s independent unit (Unit 13, the Holiness chapter) stands at the center of the Torah, where the reversal occurs. Deuteronomy&rsquo;s independent unit (Unit 13, the Blessings of Moses and his death) stands at the very end. Beginning, center, end: the independent units of the horizontal thread mark the arc from the origin of nations through the pivot of transformation to the conclusion of the story. In the vertical thread, by contrast, the independent units of Exodus and Numbers serve as centers within their respective books, marking progressive stages in the descent of the divine presence&mdash;Sinai, Tabernacle, camp.</p>
+
+<div class="book-map-container">
+<svg viewBox="0 0 1170 900" width="700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Torah Weave Map showing all 86 units across five books">
+  <!-- Genesis - Left -->
+  <rect x="0" y="351" width="351" height="216" rx="4" fill="rgba(122,176,247,0.1)" stroke="#7ab0f7" stroke-width="3"/>
+  <rect x="0" y="351" width="351" height="28" fill="#7ab0f7"/>
+  <text x="175" y="370" text-anchor="middle" fill="white" font-size="14" font-weight="bold">GENESIS</text>
+  <!-- Genesis units -->
+  <rect x="27" y="405" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="39" y="422" text-anchor="middle" font-size="9">1</text>
+  <rect x="27" y="459" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="39" y="476" text-anchor="middle" font-size="9">2</text>
+  <rect x="27" y="513" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="39" y="530" text-anchor="middle" font-size="9">3</text>
+  <rect x="81" y="459" width="25" height="25" rx="5" fill="#FFE6E6" stroke="#CC0066" stroke-width="2"/><text x="93" y="476" text-anchor="middle" font-size="9" font-weight="bold">4</text>
+  <rect x="135" y="405" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="147" y="422" text-anchor="middle" font-size="9">5</text>
+  <rect x="162" y="405" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="174" y="422" text-anchor="middle" font-size="9">6</text>
+  <rect x="135" y="459" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="147" y="476" text-anchor="middle" font-size="9">7</text>
+  <rect x="162" y="459" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="174" y="476" text-anchor="middle" font-size="9">8</text>
+  <rect x="135" y="513" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="147" y="530" text-anchor="middle" font-size="9">9</text>
+  <rect x="162" y="513" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="174" y="530" text-anchor="middle" font-size="9">10</text>
+  <rect x="216" y="405" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="228" y="422" text-anchor="middle" font-size="9">11</text>
+  <rect x="243" y="405" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="255" y="422" text-anchor="middle" font-size="9">12</text>
+  <rect x="216" y="459" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="228" y="476" text-anchor="middle" font-size="9">13</text>
+  <rect x="243" y="459" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="255" y="476" text-anchor="middle" font-size="9">14</text>
+  <rect x="216" y="513" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="228" y="530" text-anchor="middle" font-size="9">15</text>
+  <rect x="243" y="513" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="255" y="530" text-anchor="middle" font-size="9">16</text>
+  <rect x="297" y="405" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="309" y="422" text-anchor="middle" font-size="9">17</text>
+  <rect x="297" y="459" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="309" y="476" text-anchor="middle" font-size="9">18</text>
+  <rect x="297" y="513" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="309" y="530" text-anchor="middle" font-size="9">19</text>
+
+  <!-- Exodus - Top -->
+  <rect x="486" y="27" width="297" height="297" rx="4" fill="rgba(240,176,112,0.1)" stroke="#f0b070" stroke-width="3"/>
+  <rect x="486" y="0" width="297" height="28" fill="#f0b070"/>
+  <text x="634" y="19" text-anchor="middle" fill="white" font-size="14" font-weight="bold">EXODUS</text>
+  <!-- Q1 diamond outline -->
+  <polygon points="565,57 603,95 565,133 527,95" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+  <!-- Q1 units: 1=left, 2=top, 3=bottom, 4=right -->
+  <rect x="515" y="83" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="527" y="100" text-anchor="middle" font-size="9">1</text>
+  <rect x="553" y="45" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="565" y="62" text-anchor="middle" font-size="9">2</text>
+  <rect x="553" y="120" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="565" y="137" text-anchor="middle" font-size="9">3</text>
+  <rect x="590" y="83" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="602" y="100" text-anchor="middle" font-size="9">4</text>
+  <!-- Wing 5 -->
+  <rect x="621" y="83" width="25" height="25" rx="5" fill="#FFE6E6" stroke="#CC0066" stroke-width="2"/><text x="633" y="100" text-anchor="middle" font-size="9" font-weight="bold">5</text>
+  <!-- Q2 diamond outline -->
+  <polygon points="700,57 738,95 700,133 662,95" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+  <!-- Q2 units: 6=left, 7=top, 8=bottom, 9=right -->
+  <rect x="650" y="83" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="662" y="100" text-anchor="middle" font-size="9">6</text>
+  <rect x="688" y="45" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="700" y="62" text-anchor="middle" font-size="9">7</text>
+  <rect x="688" y="120" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="700" y="137" text-anchor="middle" font-size="9">8</text>
+  <rect x="725" y="83" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="737" y="100" text-anchor="middle" font-size="9">9</text>
+  <!-- Wing 10 - center of all four diamonds -->
+  <rect x="621" y="158" width="25" height="25" rx="5" fill="#FFE6E6" stroke="#CC0066" stroke-width="2"/><text x="633" y="175" text-anchor="middle" font-size="9" font-weight="bold">10</text>
+  <!-- Q3 diamond outline - bottom left -->
+  <polygon points="565,195 603,233 565,271 527,233" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+  <!-- Q3 units: 11=left, 12=top, 13=bottom, 14=right -->
+  <rect x="515" y="221" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="527" y="238" text-anchor="middle" font-size="9">11</text>
+  <rect x="553" y="183" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="565" y="200" text-anchor="middle" font-size="9">12</text>
+  <rect x="553" y="258" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="565" y="275" text-anchor="middle" font-size="9">13</text>
+  <rect x="590" y="221" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="602" y="238" text-anchor="middle" font-size="9">14</text>
+  <!-- Wing 15 - between Q3 and Q4 -->
+  <rect x="621" y="221" width="25" height="25" rx="5" fill="#FFE6E6" stroke="#CC0066" stroke-width="2"/><text x="633" y="238" text-anchor="middle" font-size="9" font-weight="bold">15</text>
+  <!-- Q4 diamond outline - bottom right -->
+  <polygon points="700,195 738,233 700,271 662,233" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+  <!-- Q4 units: 16=left, 17=top, 18=bottom, 19=right -->
+  <rect x="650" y="221" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="662" y="238" text-anchor="middle" font-size="9">16</text>
+  <rect x="688" y="183" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="700" y="200" text-anchor="middle" font-size="9">17</text>
+  <rect x="688" y="258" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="700" y="275" text-anchor="middle" font-size="9">18</text>
+  <rect x="725" y="221" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="737" y="238" text-anchor="middle" font-size="9">19</text>
+
+  <!-- Leviticus - Center -->
+  <rect x="378" y="351" width="459" height="216" rx="4" fill="rgba(128,208,160,0.1)" stroke="#80d0a0" stroke-width="3"/>
+  <rect x="378" y="351" width="459" height="28" fill="#80d0a0"/>
+  <text x="607" y="370" text-anchor="middle" fill="white" font-size="14" font-weight="bold">LEVITICUS</text>
+  <rect x="405" y="405" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="417" y="422" text-anchor="middle" font-size="9">1</text>
+  <rect x="405" y="459" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="417" y="476" text-anchor="middle" font-size="9">2</text>
+  <rect x="405" y="513" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="417" y="530" text-anchor="middle" font-size="9">3</text>
+  <rect x="459" y="405" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="471" y="422" text-anchor="middle" font-size="9">4</text>
+  <rect x="459" y="459" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="471" y="476" text-anchor="middle" font-size="9">5</text>
+  <rect x="459" y="513" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="471" y="530" text-anchor="middle" font-size="9">6</text>
+  <rect x="513" y="405" width="25" height="25" rx="5" fill="#F0F0F0" stroke="rgba(0,0,0,0.2)"/><text x="525" y="422" text-anchor="middle" font-size="9">7</text>
+  <rect x="513" y="459" width="25" height="25" rx="5" fill="#F0F0F0" stroke="rgba(0,0,0,0.2)"/><text x="525" y="476" text-anchor="middle" font-size="9">8</text>
+  <rect x="513" y="513" width="25" height="25" rx="5" fill="#F0F0F0" stroke="rgba(0,0,0,0.2)"/><text x="525" y="530" text-anchor="middle" font-size="9">9</text>
+  <rect x="567" y="405" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="579" y="422" text-anchor="middle" font-size="9">10</text>
+  <rect x="567" y="459" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="579" y="476" text-anchor="middle" font-size="9">11</text>
+  <rect x="567" y="513" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="579" y="530" text-anchor="middle" font-size="9">12</text>
+  <rect x="621" y="459" width="25" height="25" rx="5" fill="#FFE6E6" stroke="#CC0066" stroke-width="2"/><text x="633" y="476" text-anchor="middle" font-size="9" font-weight="bold">13</text>
+  <rect x="675" y="405" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="687" y="422" text-anchor="middle" font-size="9">14</text>
+  <rect x="675" y="459" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="687" y="476" text-anchor="middle" font-size="9">15</text>
+  <rect x="675" y="513" width="25" height="25" rx="5" fill="#D4D4FF" stroke="rgba(0,0,0,0.2)"/><text x="687" y="530" text-anchor="middle" font-size="9">16</text>
+  <rect x="729" y="405" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="741" y="422" text-anchor="middle" font-size="9">17</text>
+  <rect x="729" y="459" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="741" y="476" text-anchor="middle" font-size="9">18</text>
+  <rect x="729" y="513" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="741" y="530" text-anchor="middle" font-size="9">19</text>
+  <rect x="783" y="405" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="795" y="422" text-anchor="middle" font-size="9">20</text>
+  <rect x="783" y="459" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="795" y="476" text-anchor="middle" font-size="9">21</text>
+  <rect x="783" y="513" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="795" y="530" text-anchor="middle" font-size="9">22</text>
+
+  <!-- Numbers - Bottom -->
+  <rect x="486" y="621" width="297" height="297" rx="4" fill="rgba(240,176,112,0.1)" stroke="#f0b070" stroke-width="3"/>
+  <rect x="486" y="594" width="297" height="28" fill="#f0b070"/>
+  <text x="634" y="613" text-anchor="middle" fill="white" font-size="14" font-weight="bold">NUMBERS</text>
+  <rect x="513" y="702" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="525" y="719" text-anchor="middle" font-size="9">1</text>
+  <rect x="513" y="756" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="525" y="773" text-anchor="middle" font-size="9">2</text>
+  <rect x="513" y="810" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="525" y="827" text-anchor="middle" font-size="9">3</text>
+  <rect x="567" y="648" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="579" y="665" text-anchor="middle" font-size="9">4</text>
+  <rect x="567" y="864" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="579" y="881" text-anchor="middle" font-size="9">5</text>
+  <rect x="621" y="648" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="633" y="665" text-anchor="middle" font-size="9">6</text>
+  <rect x="621" y="756" width="25" height="25" rx="5" fill="#FFE6E6" stroke="#CC0066" stroke-width="2"/><text x="633" y="773" text-anchor="middle" font-size="9" font-weight="bold">7</text>
+  <rect x="621" y="864" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="633" y="881" text-anchor="middle" font-size="9">8</text>
+  <rect x="675" y="648" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="687" y="665" text-anchor="middle" font-size="9">9</text>
+  <rect x="675" y="864" width="25" height="25" rx="5" fill="#C8E6D2" stroke="rgba(0,0,0,0.2)"/><text x="687" y="881" text-anchor="middle" font-size="9">10</text>
+  <rect x="729" y="702" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="741" y="719" text-anchor="middle" font-size="9">11</text>
+  <rect x="729" y="756" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="741" y="773" text-anchor="middle" font-size="9">12</text>
+  <rect x="729" y="810" width="25" height="25" rx="5" fill="#FFCCAA" stroke="rgba(0,0,0,0.2)"/><text x="741" y="827" text-anchor="middle" font-size="9">13</text>
+
+  <!-- Deuteronomy - Right -->
+  <rect x="864" y="351" width="270" height="216" rx="4" fill="rgba(122,176,247,0.1)" stroke="#7ab0f7" stroke-width="3"/>
+  <rect x="864" y="351" width="270" height="28" fill="#7ab0f7"/>
+  <text x="999" y="370" text-anchor="middle" fill="white" font-size="14" font-weight="bold">DEUTERONOMY</text>
+  <rect x="891" y="405" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="903" y="422" text-anchor="middle" font-size="9">1</text>
+  <rect x="918" y="405" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="930" y="422" text-anchor="middle" font-size="9">2</text>
+  <rect x="891" y="459" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="903" y="476" text-anchor="middle" font-size="9">3</text>
+  <rect x="918" y="459" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="930" y="476" text-anchor="middle" font-size="9">4</text>
+  <rect x="891" y="513" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="903" y="530" text-anchor="middle" font-size="9">5</text>
+  <rect x="918" y="513" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="930" y="530" text-anchor="middle" font-size="9">6</text>
+  <rect x="972" y="405" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="984" y="422" text-anchor="middle" font-size="9">7</text>
+  <rect x="972" y="459" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="984" y="476" text-anchor="middle" font-size="9">8</text>
+  <rect x="972" y="513" width="25" height="25" rx="5" fill="#E6FFEE" stroke="rgba(0,0,0,0.2)"/><text x="984" y="530" text-anchor="middle" font-size="9">9</text>
+  <rect x="1026" y="405" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="1038" y="422" text-anchor="middle" font-size="9">10</text>
+  <rect x="1026" y="459" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="1038" y="476" text-anchor="middle" font-size="9">11</text>
+  <rect x="1026" y="513" width="25" height="25" rx="5" fill="#D4F2FF" stroke="rgba(0,0,0,0.2)"/><text x="1038" y="530" text-anchor="middle" font-size="9">12</text>
+  <rect x="1080" y="459" width="25" height="25" rx="5" fill="#FFE6E6" stroke="#CC0066" stroke-width="2"/><text x="1092" y="476" text-anchor="middle" font-size="9" font-weight="bold">13</text>
+</svg>
+</div>
+
+<p>Independent units are marked in bold outline. (For the interactive version, see <a href="https://chaver.com/woven-torah/full-torah-map-2/index.html">the Torah Weave Map</a>.)</p>
+
+<h3>The Vertical Thread: Exodus &mdash; Leviticus &mdash; Numbers</h3>
+
+<p>The vertical thread connects the three central books through content continuity rather than structural parallelism. Exodus, Leviticus, and Numbers form the central narrative of Israel&rsquo;s journey from Egypt through the wilderness&mdash;a concentrated forty-year period, dense with supernatural elements.</p>
+
+<p>These books are linked by the Tabernacle theme that begins in the second half of Exodus, continues through all of Leviticus, and extends into the beginning of Numbers. This Tabernacle connection creates the foundation for five concentric rings.</p>
+
+<p>The historical narrative&mdash;from the redemption in Egypt to the border of Canaan&mdash;begins in Exodus 1 and is suspended at the end of Exodus 24. It resumes at Numbers 10:11. This historical narrative forms the outermost ring. Within it sits the Tabernacle narrative, beginning with Exodus 25 (the instructions for the sanctuary) and ending with Numbers 10:10 (the silver trumpets). Within the Tabernacle narrative sit the three rings of Leviticus, focused on Leviticus 19. Five concentric rings in all.</p>
+
+<table class="matrix-table">
+    <caption><strong>The Five Concentric Rings of Exodus, Leviticus, and Numbers</strong></caption>
+    <thead>
+        <tr>
+            <th>Ring</th>
+            <th>First Half</th>
+            <th>Second Half</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">Historical narrative</td>
+            <td>Exodus 1&ndash;24</td>
+            <td>Numbers 10:11&ndash;end</td>
+        </tr>
+        <tr>
+            <td class="row-header">Tabernacle narrative</td>
+            <td>Exodus 25&ndash;end</td>
+            <td>Numbers 1:1&ndash;10:10</td>
+        </tr>
+        <tr>
+            <td class="row-header">Outer ring (O)</td>
+            <td>A: Leviticus 1&ndash;7</td>
+            <td>H: Leviticus 25&ndash;27</td>
+        </tr>
+        <tr>
+            <td class="row-header">Middle ring (M)</td>
+            <td>B: Leviticus 8&ndash;12</td>
+            <td>G: Leviticus 22:26&ndash;24</td>
+        </tr>
+        <tr>
+            <td class="row-header">Inner ring (I)</td>
+            <td>D: Leviticus 16&ndash;18</td>
+            <td>F: Leviticus 20&ndash;22:25</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>The five rings reflect the structure of the Israelite camp as described in the opening chapters of Numbers: the Israelite camp surrounds the Levitical camp, which surrounds the Tabernacle (Numbers 1:43; 2:2). The historical narrative of Exodus and Numbers&mdash;the story of the people&mdash;parallels the outer Israelite camp. The Tabernacle narrative&mdash;its construction and maintenance&mdash;parallels the Levitical camp, appropriately since the Levites assembled and maintained the Tabernacle (Numbers 4:1&ndash;33). And the three rings of Leviticus represent the court, the sanctum, and the inner sanctum at the center of both the camp and the text.</p>
+
+<p>Leviticus thus occupies a unique position in the Torah. Along the vertical thread, it is the focus of the five concentric rings&mdash;the sacred center of the camp, the Tabernacle within the Tabernacle narrative within the historical narrative. Along the horizontal thread, it is the turning point of nation building&mdash;the book that begins with individuals at an altar and ends with a nation in its land, pivoting at the command to be holy. The vertical thread positions Leviticus in sacred space; the horizontal thread positions it in sacred time. At the intersection of both, Leviticus does what neither thread alone could do: it transforms the reader from one who offers alone into one who belongs to a community.</p>
+</section>
+
+<section id="conclusion">
+<h2>Structure is Theology</h2>
+
+<p>The educational process spread across the three central books crystallizes in the structure of Leviticus, with the shift from laws addressed to individuals to laws addressed to a community. The pivot point is Unit 13 (Leviticus 19). The demand of <em>imitatio dei</em> coalesces the individuals who left Egypt into a political body. This theme is captured in the structure of each book, and in the structure of the three books together.</p>
+
+<p>Jacob Milgrom wrote: &ldquo;By use of repeated words and inner chiasms, and, above all, by the choice of the center or fulcrum around which the introversion is structured, the ideological thrust of each author is revealed. In a word, structure is theology.&rdquo; The analysis presented in Parts A through D of this series confirms his assertion. The structure of Leviticus is not an accident of redaction or a product of accretion. It is a composition&mdash;a deliberate, multiply confirmed, intricately planned literary architecture that creates an experience for the reader. The reader who discovers the structure discovers the theology.</p>
+</section>
+
+</main>
+
+</article>
+
+<aside class="citation-box">
+    <strong>How to cite this article:</strong><br>
+    Kline, Moshe. &ldquo;Part D: Architecture and Meaning in Leviticus.&rdquo; <em>Torah Weave</em>,
+    <a href="https://chaver.com/torah-weave/Leviticus/leviticus-analysis/architecture-and-meaning-in-leviticus.html">https://chaver.com/torah-weave/Leviticus/leviticus-analysis/architecture-and-meaning-in-leviticus.html</a>.
+    Accessed [date].
+</aside>
+
+<div class="series-navigation">
+    <h3>Leviticus Commentary Series</h3>
+    <div class="series-navigation-links">
+        <a href="/torah-weave/Leviticus/leviticus-analysis/overview.html">Overview</a>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/units-of-leviticus.html">Part A: The Units</a>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/the-map-of-leviticus.html">Part B: The Map</a>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/the-three-rows.html">Part C: The Three Rows</a>
+        <span>Part D: Architecture &amp; Meaning</span>
+    </div>
+</div>
+
+<!-- #EndEditable -->
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

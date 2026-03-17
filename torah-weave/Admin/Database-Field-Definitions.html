@@ -1,0 +1,985 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+</head>
+
+<body>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torah Commentary Database - Field Definitions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        
+        .overview-box {
+            background-color: #e8f4f8;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .overview-box ul {
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .category-header {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 12px;
+            margin-top: 30px;
+        }
+        
+        .field-name {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .field-type {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        
+        .update-box {
+            background-color: #fff9e6;
+            border: 2px solid #f39c12;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        
+        .update-box h4 {
+            margin-top: 0;
+            color: #e67e22;
+            font-family: Arial, sans-serif;
+        }
+        
+        .stage-section {
+            background-color: #eef7ee;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .note-box {
+            background-color: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .warning-box {
+            background-color: #fdecea;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+        
+        .best-practice {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        ul {
+            margin: 10px 0;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        .quick-ref-table {
+            background-color: #f0f0f0;
+            border: 2px solid #7f8c8d;
+        }
+        
+        .quick-ref-table th {
+            background-color: #7f8c8d;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            color: #7f8c8d;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Torah Commentary Database - Field Definitions and Update Procedures</h1>
+        
+        <div class="overview-box">
+            <h3>Purpose</h3>
+            <p>This document provides complete specifications for the <code>torah_database_FINAL_SESSION.xlsx</code> file, including field definitions, data formats, and step-by-step update procedures for the Interactive Workflow Protocol.</p>
+        </div>
+
+        <h2>Database Overview</h2>
+        <div class="overview-box">
+            <ul>
+                <li><strong>File:</strong> <code>torah_database_FINAL_SESSION.xlsx</code></li>
+                <li><strong>Total Fields:</strong> 38</li>
+                <li><strong>Books Covered:</strong> Genesis (19 units), Leviticus (22 units), Deuteronomy (13 units)</li>
+                <li><strong>Purpose:</strong> Single source of truth for all unit data and structural relationships</li>
+            </ul>
+        </div>
+
+        <h2>Field Categories and Definitions</h2>
+
+        <div class="category-header">CATEGORY 1: CORE IDENTIFICATION</div>
+        <p><em>Fields that uniquely identify each unit</em></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Field Name</th>
+                    <th>Type</th>
+                    <th>Format</th>
+                    <th>Example</th>
+                    <th>When to Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="field-name">unit_id</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>BOOK-##</td>
+                    <td><code>GEN-05</code></td>
+                    <td>At unit creation</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">book</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>Full name</td>
+                    <td><code>Genesis</code></td>
+                    <td>At unit creation</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">unit_number</span></td>
+                    <td><span class="field-type">Integer</span></td>
+                    <td>1-22</td>
+                    <td><code>5</code></td>
+                    <td>At unit creation</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">verse_range</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>Book C:V-C:V</td>
+                    <td><code>Genesis 11:10-13:4</code></td>
+                    <td>At unit creation</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">opening_formula</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>Free text</td>
+                    <td><code>These are the generations of Shem</code></td>
+                    <td>After Part A complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">structure_type</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>regular/irregular</td>
+                    <td><code>regular</code></td>
+                    <td>After Part A complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">dimensions</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>Grid or standalone</td>
+                    <td><code>3×2</code> or <code>23332</code></td>
+                    <td>After Part A complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">analysis_status</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>complete/partial/placeholder</td>
+                    <td><code>complete</code></td>
+                    <td>Update as work progresses</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="note-box">
+            <strong>Update Trigger:</strong> Create row when starting any unit work. Update as analysis progresses.
+        </div>
+
+        <div class="category-header">CATEGORY 2: INTERNAL STRUCTURE</div>
+        <p><em>Fields describing the unit's internal organization</em></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Field Name</th>
+                    <th>Type</th>
+                    <th>Format</th>
+                    <th>Example</th>
+                    <th>When to Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="field-name">rows</span></td>
+                    <td><span class="field-type">Integer</span></td>
+                    <td>Number</td>
+                    <td><code>3</code></td>
+                    <td>After internal structure analyzed</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">columns</span></td>
+                    <td><span class="field-type">Integer</span></td>
+                    <td>Number</td>
+                    <td><code>2</code></td>
+                    <td>After internal structure analyzed</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">warp_pole_1</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Thematic summary</td>
+                    <td><code>Divine speech/action</code></td>
+                    <td>After warp analysis complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">warp_middle</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Thematic summary</td>
+                    <td><code>Mediation/transition</code></td>
+                    <td>Only if triad structure</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">warp_pole_2</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Thematic summary</td>
+                    <td><code>Human response/consequence</code></td>
+                    <td>After warp analysis complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">weft_thread_1</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Thematic summary</td>
+                    <td><code>Introduction/calling</code></td>
+                    <td>After weft analysis complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">weft_thread_2</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Thematic summary</td>
+                    <td><code>Development/crisis</code></td>
+                    <td>After weft analysis complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">weft_thread_3</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Thematic summary</td>
+                    <td><code>Resolution/closure</code></td>
+                    <td>If row 3 exists</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">weft_thread_4</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Thematic summary</td>
+                    <td></td>
+                    <td>If row 4 exists</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">weft_thread_5</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Thematic summary</td>
+                    <td></td>
+                    <td>If row 5 exists</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">has_subdivisions</span></td>
+                    <td><span class="field-type">Boolean</span></td>
+                    <td>TRUE/FALSE</td>
+                    <td><code>TRUE</code></td>
+                    <td>After internal structure analyzed</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">subdivision_pattern</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>Type</td>
+                    <td><code>A,B,C</code> or <code>parallel_indicators</code></td>
+                    <td>After internal structure analyzed</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="note-box">
+            <strong>Update Trigger:</strong> Complete after Part D (Unit Commentary) internal structure section written.
+            <br><br>
+            <strong>Important Notes:</strong>
+            <ul>
+                <li><code>warp_middle</code> only exists for triadic structures (3-column units)</li>
+                <li><code>weft_thread_3/4/5</code> only fill if those rows exist</li>
+                <li>Dyads have 2 columns, triads have 3 columns</li>
+            </ul>
+        </div>
+
+        <div class="category-header">CATEGORY 3: TORAH-WIDE ORGANIZATION</div>
+        <p><em>Fields showing how unit fits into larger structure</em></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Field Name</th>
+                    <th>Type</th>
+                    <th>Format</th>
+                    <th>Example</th>
+                    <th>When to Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="field-name">unit_triad_membership</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>A-H</td>
+                    <td><code>B</code></td>
+                    <td>After Part B complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">warp_thread_number</span></td>
+                    <td><span class="field-type">Integer</span></td>
+                    <td>1-3</td>
+                    <td><code>2</code></td>
+                    <td>After Part B complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">creation_paradigm_position</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>God/people/mediating</td>
+                    <td><code>God-oriented</code></td>
+                    <td>After Part B complete</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">anomalous_status</span></td>
+                    <td><span class="field-type">Boolean</span></td>
+                    <td>TRUE/FALSE</td>
+                    <td><code>FALSE</code></td>
+                    <td>After Part B complete</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="note-box">
+            <strong>Update Trigger:</strong> Complete when book's Part B (Discovering the Map) is written.
+            <br><br>
+            <strong>Genesis Three-Ring Structure Reference:</strong>
+            <ul>
+                <li><strong>Triads A ↔ F</strong> (Outer Ring): Kingship - Divine (Creation) ↔ Human (Joseph)</li>
+                <li><strong>Triads B ↔ E</strong> (Middle Ring): Covenants - Deity and rulers, altars, sacred places</li>
+                <li><strong>Triads C ↔ D</strong> (Inner Ring): Family - Brothers' children ↔ Brothers</li>
+            </ul>
+        </div>
+
+        <div class="category-header">CATEGORY 4: LEVITICUS SPECIAL FEATURES</div>
+        <p><em>Field unique to Leviticus analysis</em></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Field Name</th>
+                    <th>Type</th>
+                    <th>Format</th>
+                    <th>Example</th>
+                    <th>When to Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="field-name">ring_identifier_type</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>place/time/person/none</td>
+                    <td><code>place</code></td>
+                    <td>Leviticus units only</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="note-box">
+            <strong>Update Trigger:</strong> When analyzing Leviticus units after structure determined.
+            <br><br>
+            <strong>Note:</strong> Other books use different ring identification systems. This field only applies to Leviticus.
+        </div>
+
+        <div class="category-header">CATEGORY 5: THEMATIC CONTENT</div>
+        <p><em>Fields capturing literary and theological content</em></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Field Name</th>
+                    <th>Type</th>
+                    <th>Format</th>
+                    <th>Example</th>
+                    <th>When to Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="field-name">primary_theme</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>One-line summary</td>
+                    <td><code>Abraham's call and testing</code></td>
+                    <td>After Part D written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">movement_type</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>Predefined types</td>
+                    <td><code>separation_to_unity</code></td>
+                    <td>After Part D written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">divine_names_pattern</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Distribution notes</td>
+                    <td><code>YHWH dominant, Elohim in Row 3</code></td>
+                    <td>After Part C/D written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">key_intersection</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Cell reference + meaning</td>
+                    <td><code>2B: Jacob becomes Israel</code></td>
+                    <td>After Part D written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">emergent_meaning</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Structural insights</td>
+                    <td><code>Two-dimensional reading reveals...</code></td>
+                    <td>After Part D written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">literary_techniques</span></td>
+                    <td><span class="field-type">Array</span></td>
+                    <td>Comma-separated</td>
+                    <td><code>chiasm, envelope, triadic</code></td>
+                    <td>After Part D written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">visual_hierarchy</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Spatial description</td>
+                    <td><code>Center position emphasizes covenant</code></td>
+                    <td>After Part D written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">supernatural_content</span></td>
+                    <td><span class="field-type">Boolean</span></td>
+                    <td>TRUE/FALSE</td>
+                    <td><code>TRUE</code></td>
+                    <td>After Part D written</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="note-box">
+            <strong>Update Trigger:</strong> Complete after Part D (Unit Commentary) finished.
+            <br><br>
+            <strong>Movement Types:</strong>
+            <ul>
+                <li><code>unity_to_separation</code> - Things start together, end apart</li>
+                <li><code>separation_to_unity</code> - Things start apart, come together</li>
+                <li><code>intensification</code> - Pattern builds/escalates</li>
+                <li><code>circular</code> - Returns to starting point</li>
+                <li><code>static</code> - No movement, establishes baseline</li>
+            </ul>
+            <br>
+            <strong>Literary Techniques Vocabulary:</strong>
+            <ul>
+                <li><code>chiasm</code> - ABBA or ABCBA pattern</li>
+                <li><code>envelope</code> - Same material at beginning and end</li>
+                <li><code>triadic</code> - Three-part structure</li>
+                <li><code>concentric_rings</code> - Nested layers</li>
+                <li><code>parallel</code> - Similar structures repeated</li>
+                <li><code>inversion</code> - Pattern reversed</li>
+            </ul>
+        </div>
+
+        <div class="category-header">CATEGORY 6: CROSS-UNIT RELATIONSHIPS</div>
+        <p><em>Fields showing connections between units</em></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Field Name</th>
+                    <th>Type</th>
+                    <th>Format</th>
+                    <th>Example</th>
+                    <th>When to Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="field-name">inverted_units</span></td>
+                    <td><span class="field-type">Array</span></td>
+                    <td>Comma-separated IDs</td>
+                    <td><code>GEN-05, GEN-12</code></td>
+                    <td>After Part C written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">structural_family</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>Group name</td>
+                    <td><code>3×2_group</code></td>
+                    <td>After Part A/B written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">triad_pair_partner</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>Triad letter</td>
+                    <td><code>F</code> (if unit in Triad A)</td>
+                    <td>After Part B written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">thematic_chain</span></td>
+                    <td><span class="field-type">Array</span></td>
+                    <td>Comma-separated IDs</td>
+                    <td><code>GEN-07, LEV-16, DEU-09</code></td>
+                    <td>As cross-book patterns identified</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="note-box">
+            <strong>Update Trigger:</strong>
+            <ul>
+                <li><code>inverted_units</code> and <code>structural_family</code>: After book's Part B complete</li>
+                <li><code>triad_pair_partner</code>: After book's Part B complete (Genesis: A↔F, B↔E, C↔D)</li>
+                <li><code>thematic_chain</code>: As cross-book patterns discovered</li>
+            </ul>
+        </div>
+
+        <div class="category-header">CATEGORY 7: ANALYSIS METADATA</div>
+        <p><em>Fields tracking the analysis process</em></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Field Name</th>
+                    <th>Type</th>
+                    <th>Format</th>
+                    <th>Example</th>
+                    <th>When to Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="field-name">confidence_level</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>high/medium/low</td>
+                    <td><code>high</code></td>
+                    <td>After Part D written</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">primary_source</span></td>
+                    <td><span class="field-type">String</span></td>
+                    <td>Scholar/work</td>
+                    <td><code>Kline, Before Chapter and Verse</code></td>
+                    <td>At unit creation</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">color_coding_verified</span></td>
+                    <td><span class="field-type">Boolean</span></td>
+                    <td>TRUE/FALSE</td>
+                    <td><code>TRUE</code></td>
+                    <td>After visual patterns checked</td>
+                </tr>
+                <tr>
+                    <td><span class="field-name">notes</span></td>
+                    <td><span class="field-type">Text</span></td>
+                    <td>Free text</td>
+                    <td><code>Unusual envelope structure...</code></td>
+                    <td>Anytime observations made</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="note-box">
+            <strong>Update Trigger:</strong> Throughout the process. <code>notes</code> field especially important for uncertainties or special cases.
+        </div>
+
+        <h2>Update Procedures by Workflow Stage</h2>
+
+        <div class="stage-section">
+            <h3>Stage 1: Unit Creation (Starting Analysis)</h3>
+            <p><strong>User Action:</strong> Opens database, creates new row</p>
+            <p><strong>Fields to Complete:</strong></p>
+            <ul>
+                <li><code>unit_id</code>: [BOOK-##]</li>
+                <li><code>book</code>: [Full book name]</li>
+                <li><code>unit_number</code>: [Integer]</li>
+                <li><code>verse_range</code>: [Complete range]</li>
+                <li><code>analysis_status</code>: placeholder</li>
+                <li><code>primary_source</code>: Kline, Before Chapter and Verse</li>
+            </ul>
+            
+            <div class="update-box">
+                <h4>Claude Provides:</h4>
+                <pre>NEW UNIT ENTRY - Copy/Paste Format
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Row: [Next available row number]
+
+unit_id: GEN-05
+book: Genesis
+unit_number: 5
+verse_range: Genesis 11:10-13:4
+analysis_status: placeholder
+primary_source: Kline, Before Chapter and Verse
+
+✓ Entry created? Type 'confirmed' to proceed.</pre>
+            </div>
+        </div>
+
+        <div class="stage-section">
+            <h3>Stage 2: Part A Complete (Units Identified)</h3>
+            <p><strong>User Action:</strong> Unit boundaries and structure determined</p>
+            <p><strong>Fields to Update:</strong></p>
+            <ul>
+                <li><code>opening_formula</code>: [Key opening words]</li>
+                <li><code>structure_type</code>: regular OR irregular</li>
+                <li><code>dimensions</code>: [e.g., 3×2 or 23332]</li>
+                <li><code>structural_family</code>: [e.g., 3×2_group]</li>
+                <li><code>analysis_status</code>: partial</li>
+            </ul>
+            
+            <div class="update-box">
+                <h4>Claude Provides:</h4>
+                <pre>PART A COMPLETION - Database Update
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Find Row: [BOOK-##]
+Update These Columns:
+
+opening_formula: These are the generations of Shem
+structure_type: regular
+dimensions: 3×2
+structural_family: 3×2_group
+analysis_status: partial
+
+✓ Updated? Type 'confirmed' to proceed.</pre>
+            </div>
+        </div>
+
+        <div class="stage-section">
+            <h3>Stage 3: Part B Complete (Book Map Discovered)</h3>
+            <p><strong>User Action:</strong> Book structure and triad relationships determined</p>
+            <p><strong>Fields to Update:</strong></p>
+            <ul>
+                <li><code>unit_triad_membership</code>: [A through H]</li>
+                <li><code>warp_thread_number</code>: [1, 2, or 3]</li>
+                <li><code>creation_paradigm_position</code>: [God-oriented/people-oriented/mediating]</li>
+                <li><code>triad_pair_partner</code>: [Partner triad letter]</li>
+                <li><code>anomalous_status</code>: [TRUE/FALSE]</li>
+            </ul>
+            
+            <div class="update-box">
+                <h4>Claude Provides:</h4>
+                <pre>PART B COMPLETION - Database Update
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Find Row: GEN-05
+Update These Columns:
+
+unit_triad_membership: B
+warp_thread_number: 1
+creation_paradigm_position: God-oriented
+triad_pair_partner: E
+anomalous_status: FALSE
+
+✓ Updated? Type 'confirmed' to proceed.</pre>
+            </div>
+        </div>
+
+        <div class="stage-section">
+            <h3>Stage 4: Part D Complete (Unit Commentary Written)</h3>
+            <p><strong>User Action:</strong> Individual unit commentary finished</p>
+            <p><strong>Fields to Update:</strong> All remaining structural and thematic fields</p>
+            
+            <div class="update-box">
+                <h4>Claude Provides:</h4>
+                <pre>UNIT COMMENTARY COMPLETION - Database Update
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Find Row: GEN-05
+Update These Columns:
+
+rows: 3
+columns: 2
+warp_pole_1: Divine call and promise
+warp_pole_2: Human response and testing
+weft_thread_1: Journey and calling (11:10-12:9)
+weft_thread_2: Crisis in Egypt (12:10-20)
+weft_thread_3: Return and resolution (13:1-4)
+has_subdivisions: FALSE
+subdivision_pattern: none
+primary_theme: Abraham's call and initial testing
+movement_type: circular
+divine_names_pattern: YHWH dominant; explicit divine appearances
+key_intersection: 1A: "YHWH said to Abram, Go from your country"
+emergent_meaning: Geographic envelope creates circular journey
+literary_techniques: envelope, geographic markers, altar building
+visual_hierarchy: Center (Row 2) contains crisis; outer rows frame
+supernatural_content: TRUE
+confidence_level: high
+color_coding_verified: TRUE
+analysis_status: complete
+notes: Sister-wife motif creates pattern across corners
+
+✓ Updated? Type 'confirmed' to proceed.</pre>
+            </div>
+        </div>
+
+        <h2>Data Entry Best Practices</h2>
+
+        <div class="best-practice">
+            <h3>Consistency Standards</h3>
+            
+            <h4>1. Divine Names:</h4>
+            <ul>
+                <li>Always capitalize: YHWH, Elohim</li>
+                <li>Use compound form: YHWH Elohim (not "Yahweh-Elohim")</li>
+            </ul>
+
+            <h4>2. Verse References:</h4>
+            <ul>
+                <li>Full format: <code>Genesis 11:10-13:4</code></li>
+                <li>No abbreviations in verse_range field</li>
+            </ul>
+
+            <h4>3. Boolean Fields:</h4>
+            <ul>
+                <li>Use Excel TRUE/FALSE (not yes/no or 1/0)</li>
+            </ul>
+
+            <h4>4. Array Fields:</h4>
+            <ul>
+                <li>Comma-separated with single space: <code>GEN-05, GEN-12, GEN-16</code></li>
+                <li>No brackets or quotes</li>
+            </ul>
+
+            <h4>5. Empty Fields:</h4>
+            <ul>
+                <li>Leave blank (not "N/A" or "none")</li>
+                <li>Exception: <code>subdivision_pattern</code> should be "none" if no subdivisions</li>
+            </ul>
+
+            <h4>6. Thematic Descriptions:</h4>
+            <ul>
+                <li>Be specific but concise (aim for 5-15 words)</li>
+                <li>Focus on observable structural features, not interpretations</li>
+            </ul>
+        </div>
+
+        <h2>Quick Reference: Required Fields by Stage</h2>
+
+        <table class="quick-ref-table">
+            <thead>
+                <tr>
+                    <th>Stage</th>
+                    <th>Minimum Required Fields</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Unit Created</strong></td>
+                    <td>unit_id, book, unit_number, verse_range, analysis_status</td>
+                </tr>
+                <tr>
+                    <td><strong>Part A Done</strong></td>
+                    <td>+ opening_formula, structure_type, dimensions, structural_family</td>
+                </tr>
+                <tr>
+                    <td><strong>Part B Done</strong></td>
+                    <td>+ unit_triad_membership, warp_thread_number, creation_paradigm_position, triad_pair_partner</td>
+                </tr>
+                <tr>
+                    <td><strong>Part D Done</strong></td>
+                    <td>+ ALL structure fields, ALL thematic fields, confidence_level</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Common Issues and Solutions</h2>
+
+        <div class="warning-box">
+            <h4>Issue: Not sure about warp vs. weft themes</h4>
+            <p><strong>Solution:</strong></p>
+            <ul>
+                <li><strong>Warp (columns/poles):</strong> Read DOWN each column - what's the thematic unity?</li>
+                <li><strong>Weft (rows/threads):</strong> Read ACROSS each row - what's the thematic progression?</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <h4>Issue: Unit has irregular structure</h4>
+            <p><strong>Solution:</strong></p>
+            <ul>
+                <li>Set <code>structure_type: irregular</code></li>
+                <li>Set <code>dimensions</code> to actual pattern (e.g., <code>23332</code>)</li>
+                <li>Note irregularity in <code>notes</code> field</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <h4>Issue: Multiple movement types seem to apply</h4>
+            <p><strong>Solution:</strong></p>
+            <ul>
+                <li>Choose the DOMINANT pattern</li>
+                <li>Note secondary patterns in <code>notes</code> field</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <h4>Issue: Uncertain about triad membership</h4>
+            <p><strong>Solution:</strong></p>
+            <ul>
+                <li>Set <code>confidence_level: medium</code> or <code>low</code></li>
+                <li>Document uncertainty in <code>notes</code> field</li>
+                <li>Mark for review after more units analyzed</li>
+            </ul>
+        </div>
+
+        <h2>Database Maintenance</h2>
+
+        <div class="note-box">
+            <h4>Monthly Tasks:</h4>
+            <ul>
+                <li>Backup database file with date stamp</li>
+                <li>Review <code>analysis_status</code> field for stalled units</li>
+                <li>Check for missing cross-references as new units completed</li>
+            </ul>
+
+            <h4>After Each Book Completed:</h4>
+            <ul>
+                <li>Verify all units have <code>analysis_status: complete</code></li>
+                <li>Check that all triad relationships documented</li>
+                <li>Update <code>thematic_chain</code> fields as patterns across books emerge</li>
+            </ul>
+        </div>
+
+        <h2>File Management</h2>
+
+        <div class="note-box">
+            <p><strong>Location:</strong> <code>/Admin/torah_database_FINAL_SESSION.xlsx</code></p>
+            
+            <h4>Backup Protocol:</h4>
+            <ul>
+                <li>Save dated backup before major updates: <code>torah_database_YYYY-MM-DD.xlsx</code></li>
+                <li>Keep last 5 backups minimum</li>
+            </ul>
+
+            <h4>Version Control:</h4>
+            <ul>
+                <li><code>torah_database_COMPLETE.xlsx</code> = Reference version (read-only)</li>
+                <li><code>torah_database_FINAL_SESSION.xlsx</code> = Working version (edit this one)</li>
+            </ul>
+        </div>
+
+        <h2>Integration with Interactive Workflow Protocol</h2>
+
+        <div class="overview-box">
+            <p>This database document works with the <strong>Interactive Workflow Protocol</strong> document:</p>
+            <ol>
+                <li><strong>Protocol triggers database update</strong> at completion checkpoints</li>
+                <li><strong>Claude formats data</strong> according to these field definitions</li>
+                <li><strong>User copies/pastes</strong> into Excel</li>
+                <li><strong>Progress tracked</strong> through <code>analysis_status</code> field</li>
+            </ol>
+            <p><strong>Result:</strong> Consistent, complete data entry with minimal manual formatting</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Last Updated:</strong> October 2025</p>
+            <p><strong>Version:</strong> 1.0</p>
+            <p><strong>Maintained by:</strong> Torah Commentary Project Team</p>
+        </div>
+    </div>
+</body>
+</html>

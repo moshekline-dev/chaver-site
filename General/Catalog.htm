@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+
+<title>Site Catalog - Complete Torah & Mishnah Resources | Chaver.com</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<h1>Site Catalog: Complete Torah &amp; Mishnah Resources</h1>
+
+<p>This catalog provides access to all resources on chaver.com—four decades of research into the Torah's two-dimensional literary architecture. Everything here, from full texts to peer-reviewed publications, demonstrates how the Torah and Mishnah function as woven compositions with both horizontal and vertical dimensions of meaning.</p>
+
+<h2>Getting Started with Woven Texts</h2>
+
+<p>New to the concept of woven texts? These resources introduce the fundamental discovery that the Torah consists of 86 literary units organized as two-dimensional matrices:</p>
+
+<ul>
+    <li><a href="/">Interactive Demonstration</a> — Watch Genesis 1:1-2:3 transform from linear to woven format. This visual demonstration shows how the creation account reveals sophisticated structure when laid out in tabular form.</li>
+    <li><a href="/General/Woven%20Text.htm">What Are Woven Texts?</a> — Comprehensive introduction to two-dimensional biblical composition, including the Decalogue as the archetypal example.</li>
+    <li><a href="/Torah-New/English/Text/Torah-pdf.html">Download "Before Chapter and Verse" (Free PDF)</a> — The complete book presenting all 86 Torah units in woven format, with JPS 1917 English translation. 275 pages.</li>
+    <li><a href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/" target="_blank">Purchase Print Edition on Amazon</a> — Physical copy of "Before Chapter and Verse: Reading the Woven Torah" (ISBN: 9655982718).</li>
+</ul>
+
+<h2>Torah Resources</h2>
+
+<p>The Torah consists of 86 discrete literary units—76 regular units and 10 irregular units marking major transitions. These resources present the complete text and scholarly analysis:</p>
+
+<h3>Full Torah Texts</h3>
+
+<ul>
+    <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a> — Main navigation hub for all Torah materials, organized by book (Genesis through Deuteronomy).</li>
+    <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">The Structured Torah (PDF)</a> — Complete English text of all five books in woven format, using the JPS 1917 translation.</li>
+    <li><a href="/Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">התורה כדרכה (Hebrew)</a> — The five books in Hebrew, structured according to the 86 units.</li>
+    <li><a href="https://woven-torah.com" target="_blank">Woven Torah Project</a> — Interactive visual maps showing the structure of all 86 units across all five books.</li>
+</ul>
+
+<h3>Torah Articles and Analysis</h3>
+
+<ul>
+    <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a> — Analysis of the Ten Commandments as the archetypal woven text, demonstrating how two tablets create two columns with five paired rows.</li>
+    <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor Was Nodding: A Reading of Leviticus 19"</a> — Peer-reviewed article (Journal of Hebrew Scriptures, 2008) demonstrating Leviticus 19's sophisticated structure in memory of anthropologist Mary Douglas.</li>
+    <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">"Structure is Theology"</a> — Chapter from the Jacob Milgrom Festschrift (SBL Press, 2015) exploring how literary structure creates theological meaning.</li>
+    <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">"The Esoteric Woven Torah"</a> — How woven text analysis provides an alternative to source-critical approaches like the Documentary Hypothesis.</li>
+    <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">"The Compositional Hypothesis"</a> — Theoretical framework for understanding the Torah's literary architecture.</li>
+</ul>
+
+<h2>Mishnah Resources</h2>
+
+<p>The Mishnah, compiled around 200 CE, was constructed using the same woven text principles as the Torah—evidence of an unbroken literary tradition spanning over a thousand years:</p>
+
+<h3>Full Mishnah Texts</h3>
+
+<ul>
+    <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah Portal</a> — Main navigation hub for all Mishnah materials, organized by order and tractate.</li>
+    <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah (Hebrew PDF)</a> — Complete Hebrew text in woven format.</li>
+</ul>
+
+<h3>Mishnah Articles and Analysis</h3>
+
+<ul>
+    <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a> — Overview of the Mishnah's two-dimensional literary architecture.</li>
+    <li><a href="/Mishnah-New/English/Articles/TheArt-H.htm">"The Art of Writing the Oral Tradition"</a> — Analysis of Pirkei Avot (Ethics of the Fathers) as a woven text, revealing structure beneath apparent randomness.</li>
+    <li><a href="http://chaver.com/Articles/TheWholeStructure.htm">"The Literary Structure of the Mishnah"</a> — The original 1987 publication (Aley Sefer 14, Bar Ilan University) that first documented the woven text phenomenon in rabbinic literature.</li>
+</ul>
+
+<h2>Peer-Reviewed Academic Publications</h2>
+
+<p>This research has been published in leading biblical studies journals and academic presses:</p>
+
+<ul>
+    <li><strong>Journal of Biblical Literature 144/2 (2025)</strong> — "The Covenant Code" by Moshe Kline and Paul J. Hocking. Analysis of Exodus legal material demonstrating two-dimensional literary structure. Published in the flagship journal of the Society of Biblical Literature.</li>
+    <li><strong>Society of Biblical Literature Press (2015)</strong> — <a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">"Structure is Theology"</a> in <em>Current Issues in Priestly and Related Literature: The Legacy of Jacob Milgrom and Beyond</em> (ISBN: 9781628371215). Scholarly Festschrift honoring Jacob Milgrom's pioneering work.</li>
+    <li><strong>Journal of Hebrew Scriptures (2008)</strong> — <a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor Was Nodding: A Reading of Leviticus 19 in Memory of Mary Douglas"</a>. Groundbreaking structural analysis connecting Leviticus 19 to the Decalogue.</li>
+    <li><strong>Aley Sefer 14, Bar Ilan University (1987)</strong> — <a href="http://chaver.com/Articles/TheWholeStructure.htm">"The Literary Structure of the Mishnah"</a>. First academic publication documenting woven text composition in rabbinic literature.</li>
+</ul>
+
+<h2>Videos</h2>
+
+<ul>
+    <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Introduction to Woven Texts — Part 1</a> — Video presentation explaining the fundamental concept.</li>
+    <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Introduction to Woven Texts — Part 2</a> — Continuation with additional examples and analysis.</li>
+</ul>
+
+<h2>Study Aids</h2>
+
+<ul>
+    <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a> — Explanation of the visual markup system used throughout the site to highlight structural patterns, parallel passages, and divine name distributions.</li>
+</ul>
+
+<h2>Community and Contact</h2>
+
+<ul>
+    <li><a href="http://www.facebook.com/woventorah/">Facebook Discussion Group</a> — Join the community discussing woven texts and biblical literary structure.</li>
+    <li><a href="/General/Contact.htm">Contact Moshe Kline</a> — Questions, feedback, and scholarly inquiries.</li>
+</ul>
+
+<h2>Hebrew Content / תוכן בעברית</h2>
+
+<ul>
+    <li><a href="/hebrew%20index.html">עמוד הבית בעברית</a> — Hebrew homepage with navigation to all Hebrew resources.</li>
+    <li><a href="/Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">התורה כדרכה</a> — The five books of the Torah in Hebrew, structured by the 86 units.</li>
+    <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">המשנה המובנית (PDF)</a> — Complete Structured Mishnah in Hebrew.</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What resources are available on Chaver.com?</h3>
+<p>Chaver.com offers the complete Torah in woven format (86 literary units), the structured Mishnah, peer-reviewed academic publications, scholarly articles, free PDF downloads including "Before Chapter and Verse," video introductions, and study aids. Resources are available in both English and Hebrew.</p>
+
+<h3>Where can I download "Before Chapter and Verse" for free?</h3>
+<p>The complete PDF of "Before Chapter and Verse: Reading the Woven Torah" is available for <a href="/Torah-New/English/Text/Torah-pdf.html">free download here</a>. The book presents all 86 Torah units in woven format with the complete JPS 1917 English translation.</p>
+
+<h3>What peer-reviewed publications has Moshe Kline authored?</h3>
+<p>Moshe Kline's peer-reviewed publications include: "The Covenant Code" in Journal of Biblical Literature (2025, co-authored with Paul J. Hocking), "Structure is Theology" in the Jacob Milgrom Festschrift published by SBL Press (2015), "The Editor Was Nodding: A Reading of Leviticus 19" in Journal of Hebrew Scriptures (2008), and "The Literary Structure of the Mishnah" in Aley Sefer (1987).</p>
+
+<h3>Is there Hebrew content available?</h3>
+<p>Yes. Chaver.com includes Hebrew versions of the Torah (התורה כדרכה) and the complete Structured Mishnah in Hebrew PDF format. A <a href="/hebrew%20index.html">Hebrew homepage</a> provides navigation to all Hebrew resources.</p>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

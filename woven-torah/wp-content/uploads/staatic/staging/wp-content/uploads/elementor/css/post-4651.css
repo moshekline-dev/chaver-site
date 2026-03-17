@@ -1,0 +1,261 @@
+.elementor-4651 .elementor-element.elementor-element-6759d8c8{--display:flex;}.elementor-4651 .elementor-element.elementor-element-6ff32528{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-4651 .elementor-element.elementor-element-2a487a05{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--justify-content:space-evenly;--gap:0px 0px;--row-gap:0px;--column-gap:0px;--margin-top:120px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;}.elementor-4651 .elementor-element.elementor-element-2d81071{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-4651 .elementor-element.elementor-element-7ea737b6{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-4651 .elementor-element.elementor-element-39590b52{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-4651 .elementor-element.elementor-element-5ac026c1.elementor-element{--align-self:center;}.elementor-4651 .elementor-element.elementor-element-1316b254{--display:flex;}.elementor-4651 .elementor-element.elementor-element-3f540f4f{--display:flex;}@media(min-width:768px){.elementor-4651 .elementor-element.elementor-element-2d81071{--width:25%;}.elementor-4651 .elementor-element.elementor-element-7ea737b6{--width:25%;}.elementor-4651 .elementor-element.elementor-element-39590b52{--width:25%;}}/* Start custom CSS *//* Hebrew base styling */
+.hebrew-text {
+  font-family: "David Libre", "Frank Ruhl Libre", serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* Pattern highlighting classes */
+.horizontal1 {
+  color: #3399FF;
+  font-weight: normal;
+}
+
+.vertical1 {
+  color: #C09200;
+  font-weight: normal;
+}
+
+.closure {
+  color: #CC0066;
+  font-weight: normal;
+}
+
+/* Additional pattern classes */
+.horizontal2 {
+  color: teal;
+  font-weight: normal;
+}
+
+.horizontal3 {
+  color: maroon;
+  font-weight: normal;
+}
+
+.ciasm1 {
+  color: #7030A0;
+  font-weight: normal;
+}
+
+.ciasm2 {
+  color: #FB81EC;
+  font-weight: normal;
+}
+
+.internalparallel {
+  color: lime;
+  font-weight: normal;
+}
+
+/* Torah table RTL styling */
+.torah-table-rtl {
+  direction: rtl;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.torah-table-rtl th {
+  background-color: #f5f5f5;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+.torah-table-rtl td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  text-align: right;
+}
+
+/* Verse number styling */
+.verse-num {
+  font-size: 0.8em;
+  vertical-align: super;
+  color: #888;
+  margin-right: 2px;
+  font-weight: normal;
+}
+
+/* Verse number toggle functionality */
+.verse-numbers-hidden .verse-num {
+  display: none;
+}
+
+/* Section label for RTL */
+.section-label-rtl {
+  font-weight: bold;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+/* Color legend styling */
+.color-legend {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.color-legend h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.color-legend ul {
+  padding-right: 20px;
+  margin: 0;
+}
+
+.color-legend li {
+  margin-bottom: 5px;
+}
+
+/* Print styles */
+@media print {
+  .elementor-container:not(.torah-content) {
+    display: none !important;
+  }
+  
+  .color-legend {
+    display: block !important;
+    margin-top: 20px;
+  }
+}/* Target only the main unit title without affecting other elements */
+.WordSection1 h2[dir="RTL"] {
+    font-size: 28px !important;
+    font-weight: 500 !important;
+    margin-bottom: 20px !important;
+    color: #333 !important;
+    text-align: center !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #ddd !important;
+    font-family: "David Libre", "Frank Ruhl Libre", serif !important;
+}
+
+/* Remove our previous general rules that affected all text */
+/* DO NOT apply font changes to all elements with RTL */
+
+/* Fix only the specific bold elements */
+.WordSection1 h3[dir="RTL"] b:not(.horizontal1):not(.vertical1):not(.closure):not(.a) {
+    font-weight: normal !important;
+}
+
+/* Preserve correct styling for highlighted elements */
+.horizontal1, .vertical1, .closure, .a {
+    /* Keep existing styles from your CSS */
+    /* This ensures they're not overridden */
+}
+
+/* Reset table cell font sizes to be consistent */
+.WordSection1 table td {
+    font-size: 16px !important; /* Adjust to match your preferred font size */
+}
+
+/* Normalize headings inside table cells */
+.WordSection1 table h3 {
+    font-size: 16px !important; /* Match the surrounding text */
+    margin: 0 !important;
+}
+/* Remove bold formatting from all highlighted elements */
+.horizontal1, 
+.horizontal1 *,
+span.horizontal1, 
+span.horizontal1 * {
+    font-weight: normal !important;
+}
+
+.vertical1, 
+.vertical1 *,
+span.vertical1, 
+span.vertical1 * {
+    font-weight: normal !important;
+}
+
+.closure, 
+.closure *,
+span.closure, 
+span.closure * {
+    font-weight: normal !important;
+}
+
+.a, 
+.a *,
+span.a, 
+span.a * {
+    font-weight: normal !important;
+}
+
+/* Also target any bold elements that contain highlighted elements */
+b .horizontal1, b .vertical1, b .closure, b .a,
+strong .horizontal1, strong .vertical1, strong .closure, strong .a {
+    font-weight: normal !important;
+}
+
+/* And target any highlighted elements that are themselves bold */
+.horizontal1 b, .vertical1 b, .closure b, .a b,
+.horizontal1 strong, .vertical1 strong, .closure strong, .a strong {
+    font-weight: normal !important;
+}
+/* Make English text smaller to match Hebrew proportions */
+[dir="RTL"] span[dir="LTR"],
+[dir="RTL"] *[dir="LTR"],
+.WordSection1 span[dir="LTR"],
+.WordSection1 *[dir="LTR"] {
+    font-size: 0.85em !important; /* Adjust this value as needed */
+    vertical-align: baseline !important;
+}
+
+/* Target English letter headings */
+h3 span[dir="LTR"], 
+h3 *[dir="LTR"],
+h4 span[dir="LTR"], 
+h4 *[dir="LTR"] {
+    font-size: 0.85em !important;
+}
+
+/* Target specifically the English section markers (A, B, C, etc.) */
+.Heading4Char span[dir="LTR"],
+.Heading5Char span[dir="LTR"] {
+    font-size: 0.85em !important;
+    vertical-align: baseline !important;
+}
+/* Target ONLY the segment headers while preserving other text alignment */
+h3[dir="RTL"]:empty,
+h3[dir="RTL"]:only-child {
+    text-align: center !important;
+}
+
+/* Target headers with very short content (likely the segment markers) */
+h3[dir="RTL"] {
+    text-align: right !important; /* Default alignment for h3 elements */
+}
+
+/* Special rule just for segment headers with very short content */
+td h3[dir="RTL"]:not(:has(*)) {
+    text-align: center !important;
+}
+
+/* Target specifically those headers with only the segment marker text */
+h3[dir="RTL"]:not(:has(span)):not(:has(b)):not(:has(strong)) {
+    text-align: center !important;
+}<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Find all table cells in the first column of each row
+    document.querySelectorAll('table tr td:first-child h3').forEach(function(element) {
+        // These are likely the segment headers
+        if (element.textContent.trim().length <= 3) {
+            element.style.textAlign = 'center';
+        }
+    });
+    
+    // Do the same for cells in the right column
+    document.querySelectorAll('table tr td:last-child h3').forEach(function(element) {
+        // These are likely the segment headers
+        if (element.textContent.trim().length <= 3) {
+            element.style.textAlign = 'center';
+        }/* End custom CSS */

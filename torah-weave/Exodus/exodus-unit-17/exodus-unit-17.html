@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 17 (Exodus 36:8-38:20) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 17
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-16/exodus-unit-16.html" rel="prev">← Unit 16</a>
+            <a href="/torah-weave/Exodus/exodus-unit-18/exodus-unit-18.html" rel="next">Unit 18 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 17</h1>
+                <div class="unit-meta" itemprop="about">Exodus 36:8-38:20</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-left">1A</th><th class="col-right">1B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>36:8</b></span> And every
+  wise-hearted man among them that wrought the work made the tabernacle with
+  ten curtains: of fine twined linen, and blue, and purple, and scarlet, with
+  cherubim the work of the skilful workman made he them. <span class="VerseNumber"><b>36:9</b></span> The length of each curtain was eight and
+  twenty cubits, and the breadth of each curtain four cubits; all the curtains
+  had one measure. <span class="VerseNumber"><b>36:10</b></span> And he coupled
+  five curtains one to another; and the other five curtains he coupled one to
+  another. <span class="VerseNumber"><b>36:11</b></span> And he made loops of
+  blue upon the edge of the one curtain that was outmost in the first set;
+  likewise he made in the edge of the curtain that was outmost in the second
+  set. <span class="VerseNumber"><b>36:12</b></span> Fifty loops made he in the
+  one curtain, and fifty loops made he in the edge of the curtain that was in
+  the second set; the loops were opposite one to another. <span class="VerseNumber"><b>36:13</b></span> And he made fifty clasps of gold, and
+  coupled the curtains one to another with the clasps; so the tabernacle was
+  one. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;
+  font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>37:1</b></span> And
+  Bezalel made the ark of acacia-wood: two cubits and a half was the length of
+  it, and a cubit and a half the breadth of it, and a cubit and a half the
+  height of it. <span class="VerseNumber"><b>37:2</b></span> And he overlaid it
+  with pure gold within and without, and made a crown of gold to it round
+  about. <span class="VerseNumber"><b>37:3</b></span> And he cast for it four
+  rings of gold, in the four feet thereof: even two rings on the one side of
+  it, and two rings on the other side of it. <span class="VerseNumber"><b>37:4</b></span>
+  And he made staves of acacia-wood, and overlaid them with gold. <span class="VerseNumber"><b>37:5</b></span> And he put the staves into the rings on
+  the sides of the ark, to bear the ark.</span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>36:14</b></span> And he
+  made curtains of goats' hair for a tent over the tabernacle; eleven curtains
+  he made them. <span class="VerseNumber"><b>36:15</b></span> The length of each
+  curtain was thirty cubits, and four cubits the breadth of each curtain; the
+  eleven curtains had one measure. <span class="VerseNumber"><b>36:16</b></span>
+  And he coupled five curtains by themselves, and six curtains by themselves. <span class="VerseNumber"><b>36:17</b></span> And he made fifty loops on the edge of
+  the curtain that was outmost in the first set, and fifty loops made he upon
+  the edge of the curtain which was outmost in the second set. <span class="VerseNumber"><b>36:18</b></span> And he made fifty clasps of brass to
+  couple the tent together, that it might be one. <span class="VerseNumber"><b>36:19</b></span>
+  And he made a covering for the tent of rams' skins dyed red, and a covering
+  of sealskins above. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>37:6</b></span> And he
+  made an ark-cover of pure gold: two cubits and a half was the length thereof,
+  and a cubit and a half the breadth thereof. <span class="VerseNumber"><b>37:7</b></span>
+  And he made two cherubim of gold: of beaten work made he them, at the two
+  ends of the ark-cover: <span class="VerseNumber"><b>37:8</b></span> one cherub
+  at the one end, and one cherub at the other end; of one piece with the
+  ark-cover made he the cherubim at the two ends thereof. <span class="VerseNumber"><b>37:9</b></span> And the cherubim spread out their wings
+  on high, screening the ark-cover with their wings, with their faces one to
+  another; toward the ark-cover were the faces of the cherubim. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">C</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>36:20</b></span> And he
+  made the boards for the tabernacle of acacia-wood, standing up. <span class="VerseNumber"><b>36:21</b></span> Ten cubits was the length of a board,
+  and a cubit and a half the breadth of each board. <span class="VerseNumber"><b>36:22</b></span>
+  Each board had two tenons, joined one to another. Thus did he make for all
+  the boards of the tabernacle. <span class="VerseNumber"><b>36:23</b></span> And
+  he made the boards for the tabernacle; twenty boards for the south side
+  southward. <span class="VerseNumber"><b>36:24</b></span> And he made forty
+  sockets of silver under the twenty boards: two sockets under one board for
+  its two tenons, and two sockets under another board for its two tenons. <span class="VerseNumber"><b>36:25</b></span> And for the second side of the
+  tabernacle, on the north side, he made twenty boards, <span class="VerseNumber"><b>36:26</b></span> and their forty sockets of silver: two
+  sockets under one board, and two sockets under another board. <span class="VerseNumber"><b>36:27</b></span> And for the hinder part of the
+  tabernacle westward he made six boards. <span class="VerseNumber"><b>36:28</b></span>
+  And two boards made he for the corners of the tabernacle in the hinder part; <span class="VerseNumber"><b>36:29</b></span> that they might be double beneath, and
+  in like manner they should be complete unto the top thereof unto the first
+  ring. Thus he did to both of them in the two corners. <span class="VerseNumber"><b>36:30</b></span> And there were eight boards, and their
+  sockets of silver, sixteen sockets: under every board two sockets. <span class="VerseNumber"><b>36:31</b></span> And he made bars of acacia-wood: five
+  for the boards of the one side of the tabernacle, <span class="VerseNumber"><b>36:32</b></span>
+  and five bars for the boards of the other side of the tabernacle, and five
+  bars for the boards of the tabernacle for the hinder part westward. <span class="VerseNumber"><b>36:33</b></span> And he made the middle bar to pass through
+  in the midst of the boards from the one end to the other. <span class="VerseNumber"><b>36:34</b></span> And he overlaid the boards with gold,
+  and made their rings of gold for holders for the bars, and overlaid the bars
+  with gold.</span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">C</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>37:10</b></span> And he
+  made the table of acacia-wood: two cubits was the length thereof, and a cubit
+  the breadth thereof, and a cubit and a half the height thereof. <span class="VerseNumber"><b>37:11</b></span> And he overlaid it with pure gold, and
+  made thereto a crown of gold round about. <span class="VerseNumber"><b>37:12</b></span>
+  And he made unto it a border of a hand-breadth round about, and made a golden
+  crown to the border thereof round about. <span class="VerseNumber"><b>37:13</b></span>
+  And he cast for it four rings of gold, and put the rings in the four corners
+  that were on the four feet thereof. <span class="VerseNumber"><b>37:14</b></span>
+  Close by the border were the rings, the holders for the staves to bear the
+  table. <span class="VerseNumber"><b>37:15</b></span> And he made the staves of
+  acacia-wood, and overlaid them with gold, to bear the table. <span class="VerseNumber"><b>37:16</b></span> And he made the vessels which were upon
+  the table, the dishes thereof, and the pans thereof, and the bowls thereof,
+  and the jars thereof, wherewith to pour out, of pure gold. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">D</span></b></span><span class="VerseNumber"><b><span style="font-size:8.5pt">36:35</span></b></span><span style="font-size:8.5pt"> And he made the veil of blue, and purple, and
+  scarlet, and fine twined linen; with the cherubim the work of the skilful
+  workman made he it. <span class="VerseNumber"><b>36:36</b></span> And he made
+  thereunto four pillars of acacia, and overlaid them with gold, their hooks
+  being of gold; and he cast for them four sockets of silver. <span class="VerseNumber"><b>36:37</b></span> And he made a screen for the door of
+  the Tent, of blue, and purple, and scarlet, and fine twined linen, the work
+  of the weaver in colours; <span class="VerseNumber"><b>36:38</b></span> and the
+  five pillars of it with their hooks; and he overlaid their capitals and their
+  fillets with gold; and their five sockets were of brass. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">D</span></b></span><span class="VerseNumber"><b><span style="font-size:8.5pt">37:17</span></b></span><span style="font-size:8.5pt"> And he made the candlestick of pure gold: of beaten
+  work made he the candlestick, even its base, and its shaft; its cups, its
+  knops, and its flowers, were of one piece with it. <span class="VerseNumber"><b>37:18</b></span>
+  And there were six branches going out of the sides thereof: three branches of
+  the candlestick out of the one side thereof, and three branches of the
+  candlestick out of the other side thereof; <span class="VerseNumber"><b>37:19</b></span>
+  three cups made like almond-blossoms in one branch, a knop and a flower; and
+  three cups made like almond-blossoms in the other branch, a knop and a
+  flower. So for the six branches going out of the candlestick. <span class="VerseNumber"><b>37:20</b></span> And in the candlestick were four cups
+  made like almond-blossoms, the knops thereof, and the flowers thereof; <span class="VerseNumber"><b>37:21</b></span> and a knop under two branches of one
+  piece with it, and a knop under two branches of one piece with it, and a knop
+  under two branches of one piece with it, for the six branches going out of
+  it. <span class="VerseNumber"><b>37:22</b></span> Their knops and their
+  branches were of one piece with it; the whole of it was one beaten work of
+  pure gold. <span class="VerseNumber"><b>37:23</b></span> And he made the lamps
+  thereof, seven, and the tongs thereof, and the snuffdishes thereof, of pure
+  gold. <span class="VerseNumber"><b>37:24</b></span> Of a talent of pure gold
+  made he it, and all the vessels thereof. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-right">2B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>37:25</b></span> <span class="horizontal1"><b>And he made the altar</b></span> of incense of
+  acacia-wood: a cubit was the length thereof, and a cubit the breadth thereof,
+  four-square; and two cubits was the height thereof; the horns thereof were of
+  one piece with it. <span class="VerseNumber"><b>37:26</b></span> And he
+  overlaid it with pure gold, the top thereof, and the sides thereof round
+  about, and the horns of it; and he made unto it a crown of gold round about. <span class="VerseNumber"><b>37:27</b></span> And he made for it two golden rings
+  under the crown thereof, upon the two ribs thereof, upon the two sides of it,
+  for holders for staves wherewith to bear it. <span class="VerseNumber"><b>37:28</b></span>
+  And he made the staves of acacia-wood, and overlaid them with gold. <span class="VerseNumber"><b>37:29</b></span> And he made the holy anointing oil, and
+  the pure incense of sweet spices, after the art of the perfumer.<span class="HebrewParagraph"><span style="font-weight:normal"> {S}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b>38:1</b></span> <span class="horizontal1"><b>And he made the altar</b></span> of burnt-offering of acacia-wood:
+  five cubits was the length thereof, and five cubits the breadth thereof,
+  four-square, and three cubits the height thereof. <span class="VerseNumber"><b>38:2</b></span>
+  And he made the horns thereof upon the four corners of it; the horns thereof
+  were of one piece with it; and he overlaid it with brass. <span class="VerseNumber"><b>38:3</b></span> And he made all the vessels of the
+  altar, the pots, and the shovels, and the basins, the flesh-hooks, and the
+  fire-pans; all the vessels thereof made he of brass. <span class="VerseNumber"><b>38:4</b></span>
+  And he made for the altar a grating of network of brass, under the ledge
+  round it beneath, reaching halfway up. <span class="VerseNumber"><b>38:5</b></span>
+  And he cast four rings for the four ends of the grating of brass, to be
+  holders for the staves. <span class="VerseNumber"><b>38:6</b></span> And he
+  made the staves of acacia-wood, and overlaid them with brass. <span class="VerseNumber"><b>38:7</b></span> And he put the staves into the rings on
+  the sides of the altar, wherewith to bear it; he made it hollow with planks. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">3A</th><th class="col-right">3B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>38:8</b></span> And he made the
+  laver of brass, and the base thereof of brass, of the mirrors of the serving
+  women that did service at the door of the tent of meeting. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b>38:9</b></span> And he made the
+  court; for the south side southward the hangings of the court were of fine
+  twined linen, a hundred cubits. <span class="VerseNumber"><b>38:10</b></span>
+  Their pillars were twenty, and their sockets twenty, of brass; the hooks of
+  the pillars and their fillets were of silver. <span class="VerseNumber"><b>38:11</b></span>
+  And for the north side a hundred cubits, their pillars twenty, and their
+  sockets twenty, of brass; the hooks of the pillars and their fillets of
+  silver. <span class="VerseNumber"><b>38:12</b></span> And for the west side
+  were hangings of fifty cubits, their pillars ten, and their sockets ten; the
+  hooks of the pillars and their fillets of silver. <span class="VerseNumber"><b>38:13</b></span>
+  And for the east side eastward fifty cubits. <span class="VerseNumber"><b>38:14</b></span>
+  The hangings for the one side [of the gate] were fifteen cubits; their
+  pillars three, and their sockets three. <span class="VerseNumber"><b>38:15</b></span>
+  And so for the other side; on this hand and that hand by the gate of the
+  court were hangings of fifteen cubits; their pillars three, and their sockets
+  three. <span class="VerseNumber"><b>38:16</b></span> All the hangings of the
+  court round about were of fine twined linen. <span class="VerseNumber"><b>38:17</b></span>
+  And the sockets for the pillars were of brass; the hooks of the pillars and
+  their fillets of silver; and the overlaying of their capitals of silver; and
+  all the pillars of the court were filleted with silver. <span class="VerseNumber"><b>38:18</b></span> And the screen for the gate of the
+  court was the work of the weaver in colours, of blue, and purple, and
+  scarlet, and fine twined linen; and twenty cubits was the length, and the
+  height in the breadth was five cubits, answerable to the hangings of the court.
+  <span class="VerseNumber"><b>38:19</b></span> And their pillars were four, and
+  their sockets four, of brass; their hooks of silver, and the overlaying of
+  their capitals and their fillets of silver. <span class="VerseNumber"><b>38:20</b></span>
+  And all the pins of the tabernacle, and of the court round about, were of
+  brass. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 17 (Exodus 36:8-38:20)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-17/exodus-unit-17.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-16/exodus-unit-16.html" rel="prev">← Unit 16</a>
+            <a href="/torah-weave/Exodus/exodus-unit-18/exodus-unit-18.html" rel="next">Unit 18 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,274 @@
+﻿/* Chaver.com Modern CSS - Expression Web Compatible */
+
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f5f5f5;
+}
+
+/* Navigation */
+#navigation {
+    background-color: #2c3e50;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation li {
+    display: inline;
+    margin: 0 15px;
+}
+
+#navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+#navigation a:hover {
+    background-color: #34495e;
+    border-radius: 3px;
+}
+
+/* Header */
+#header {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+/* Decalogue Table */
+.decalogue {
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #333;
+    background-color: white;
+}
+
+.decalogue td {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #333;
+    min-width: 100px;
+}
+
+.decalogue .row1 { background-color: #FEF0CD; }
+.decalogue .row2 { background-color: #FEE29C; }
+.decalogue .row3 { background-color: #FED36B; }
+.decalogue .row4 { background-color: #C48B01; color: white; }
+.decalogue .row5 { background-color: #835D00; color: white; }
+
+/* Site Title */
+.sitetitle {
+    font-size: 48px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.sitesubtitle {
+    font-size: 24px;
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+/* Woven Torah Link */
+.woven-torah-link {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #e8f0fe;
+    border-left: 4px solid #5090f0;
+    max-width: 600px;
+    text-align: center;
+}
+
+.woven-torah-link a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5090f0;
+    text-decoration: none;
+}
+
+.woven-torah-link a:hover {
+    text-decoration: underline;
+}
+
+.woven-torah-link span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Quick Links */
+.quick-links {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.quick-links a {
+    color: #5090f0;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Wrapper */
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+/* Content Area */
+#content {
+    float: left;
+    width: 65%;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+#content h1 {
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#content h2 {
+    color: #34495e;
+    font-size: 24px;
+    margin: 20px 0 15px 0;
+}
+
+#content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Sidebar */
+#sidebar {
+    float: right;
+    width: 30%;
+    padding: 20px;
+}
+
+/* Sidebar Blocks */
+.block {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.block h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5090f0;
+}
+
+.block ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.block li {
+    margin-bottom: 8px;
+    padding-left: 10px;
+}
+
+.block a {
+    color: #5090f0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.block a:hover {
+    text-decoration: underline;
+}
+
+.block p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Footer */
+#footer {
+    clear: both;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+#footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/* Hebrew Support */
+[lang=HE], .hebrew {
+    font-family: "David Libre", Arial, sans-serif;
+    direction: rtl;
+}
+
+/* Clearfix */
+#wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    #content {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    #sidebar {
+        float: none;
+        width: 100%;
+    }
+    
+    #navigation li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .decalogue td {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}

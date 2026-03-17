@@ -1,0 +1,1045 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/hebrew.dwt" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- #BeginEditable "doctitle" -->
+	<title content="Microsoft FrontPage 4.0">אנשי כפר חנניה</title>
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* Modern CSS Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'David Libre', 'Frank Ruehl CLM', 'Georgia', serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+        direction: rtl;
+    }
+    
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+        background-color: #2c3e50;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 1rem 0;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+    
+    nav a:hover {
+        color: #3498db;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Hero Section with Decalogue Table */
+    .hero {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 3rem 0;
+        text-align: center;
+    }
+    
+    .decalogue-table {
+        display: inline-block;
+        margin: 2rem auto;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    
+    .decalogue-table table {
+        border-collapse: collapse;
+    }
+    
+    .decalogue-table td {
+        padding: 1rem 2rem;
+        text-align: center;
+        font-family: 'David Libre', 'Arial', serif;
+        font-size: 1.1rem;
+        border: 1px solid rgba(0,0,0,0.1);
+        min-width: 120px;
+    }
+    
+    /* Decalogue Colors (matching your original) */
+    .decalogue-table tr:nth-child(1) td { background-color: #FEF0CD; }
+    .decalogue-table tr:nth-child(2) td { background-color: #FEE29C; }
+    .decalogue-table tr:nth-child(3) td { background-color: #FED36B; }
+    .decalogue-table tr:nth-child(4) td { background-color: #C48B01; color: white; }
+    .decalogue-table tr:nth-child(5) td { background-color: #835D00; color: white; }
+    
+    /* Site Title */
+    .site-title {
+        margin-top: 2rem;
+    }
+    
+    .site-title h1 {
+        font-size: 3rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+        font-weight: normal;
+    }
+    
+    .site-title h2 {
+        font-size: 1.5rem;
+        color: #666;
+        font-weight: normal;
+        margin-bottom: 2rem;
+    }
+    
+    /* Woven Torah Link Box */
+    .woven-torah-link {
+        background-color: #e8f0fe;
+        border-right: 4px solid #5090f0;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 4px;
+        max-width: 600px;
+    }
+    
+    .woven-torah-link a {
+        color: #5090f0;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    
+    .woven-torah-link a:hover {
+        text-decoration: underline;
+    }
+    
+    .woven-torah-link p {
+        margin-top: 0.5rem;
+        color: #666;
+    }
+    
+    /* Featured Links */
+    .featured-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+    
+    .featured-links a {
+        background-color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: inline-block;
+    }
+    
+    .featured-links a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    /* Main Content Area */
+    .main-content {
+        background-color: white;
+        padding: 3rem 0;
+        min-height: 400px;
+    }
+    
+    /* Main Content - Full Width */
+    #content {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 3rem 0 2rem;
+        margin-top: 4rem;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-section h4 {
+        margin-bottom: 1rem;
+        color: #ecf0f1;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+    }
+    
+    .footer-section li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a {
+        color: #bdc3c7;
+        text-decoration: none;
+    }
+    
+    .footer-section a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .footer-section p {
+        color: #bdc3c7;
+        line-height: 1.6;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #34495e;
+        color: #95a5a6;
+    }
+    
+    /* Enhanced Mobile Responsive Design */
+    @media (max-width: 1024px) {
+        /* Tablet adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        /* Mobile Menu */
+        .menu-toggle {
+            display: block;
+            position: absolute;
+            left: 20px;
+            top: 0;
+        }
+        
+        nav {
+            position: relative;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background-color: #2c3e50;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Hero adjustments */
+        .hero {
+            padding: 2rem 0;
+        }
+        
+        .site-title h1 {
+            font-size: 2.5rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1.25rem;
+        }
+        
+        /* Decalogue table */
+        .decalogue-table {
+            font-size: 0.9rem;
+        }
+        
+        .decalogue-table td {
+            padding: 0.75rem 1rem;
+            min-width: 100px;
+        }
+        
+        /* Featured links stack on mobile */
+        .featured-links {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 0 1rem;
+        }
+        
+        .featured-links a {
+            text-align: center;
+            padding: 1.25rem 1.5rem;
+        }
+        
+        /* Content adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            gap: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        /* Small mobile adjustments */
+        .container {
+            padding: 0 15px;
+        }
+        
+        .site-title h1 {
+            font-size: 2rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1.1rem;
+        }
+        
+        /* Even smaller text for decalogue on tiny screens */
+        .decalogue-table {
+            font-size: 0.8rem;
+        }
+        
+        .decalogue-table td {
+            padding: 0.5rem 0.75rem;
+            min-width: 80px;
+        }
+        
+        .woven-torah-link {
+            padding: 1.25rem;
+            margin: 1.5rem auto;
+        }
+        
+        .woven-torah-link a {
+            font-size: 1.1rem;
+        }
+        
+        #content {
+            padding: 1rem;
+        }
+        
+        /* Stack footer sections */
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    /* Print styles */
+    @media print {
+        header, footer, .menu-toggle {
+            display: none;
+        }
+        
+        .main-content {
+            padding: 0;
+        }
+        
+        #content {
+            box-shadow: none;
+            max-width: 100%;
+        }
+    }
+    </style>
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="container">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="navMenu">
+                    <li><a href="../../../hebrew%20index.html">דף הבית</a></li>
+                    <li>
+					<a href="../../../Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">תורה</a></li>
+                    <li>
+					<a href="../Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">משנה</a></li>
+                    <li><a href="../../../General/Contact.htm">צור קשר</a></li>
+                    <li><a href="../../../index.html">English</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- Site Title -->
+            <div class="site-title">
+                <h1>chaver.com</h1>
+                <h2>גישה חדשה לתורה ולמשנה</h2>
+            </div>
+            
+            <!-- Woven Torah Link -->
+            <div class="woven-torah-link">
+                <a href="https://chaver.com/woven/language/he/hebrew_pages/language-he/index.html">פרויקט התורה הארוגה</a>
+                <p>חקירת המארג הספרותי של התורה - 86 יחידות במבנה דו-ממדי</p>
+            </div>
+            
+            <!-- Featured Links -->
+            <div class="featured-links" style="max-width: 900px; margin: 2rem auto;">
+                <a href="../Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">פורטל למשנה כדרכה<br><span style="font-size: 0.9em; font-weight: normal;">כל ששה סדרי משנה</span></a>
+                <a href="../../../Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">התורה כדרכה<br><span style="font-size: 0.9em; font-weight: normal;">86 יחידות בחמישה חומשים</span></a>
+                <a href="מבוא%20למשנה%20כדרכה%20כולל%20דוגמאות.pdf">מבוא למשנה כדרכה<br><span style="font-size: 0.9em; font-weight: normal;">הסבר השיטה עם דוגמאות</span></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- #BeginEditable "start" -->
+		
+		<div class=Section1><h1 align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+embed'><b><span lang=HE style='font-size:18.0pt;font-family:"Times New Roman \(Hebrew\)";
+mso-hansi-font-family:"Times New Roman"'>יש מבנה למשנה: אנשי כפר חנניה</span></b></h1><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+embed'><span dir=RTL></span><span lang=HE style='font-size:7.5pt'><span
+dir=RTL></span>...</span><span lang=HE style='font-size:10.0pt;font-family:
+"Times New Roman \(Hebrew\)"'><br>ולמה נגרע בראשית כל חכמה<br>ותהיה פנת יקרת כל מדע ממנו נעלמת<br>המשנה יסוד התורה<br>ואחת והיא גדולה בה נעדרה<br>הקשור והחבור בין חלקיה<br>הדבוק והסדר בפרטיה<br>גם הבית סגור מבוא<br>כי אין למצוא הפתח והמבוא<br>ויהי כאשר ארכו הימים<br>וה&#39; האיר עיני ממרומים<br>וראיתי באיזה מסכתא דרך סלולה<br>העולה למישרים מעלה<br>אז שבה רוחי בי<br>ותעלוז נפשי בקרבי<br>ואומר אור בהיר הוא בשחקים<br>ואך עיני טחו מראות הנתיב במעמקים<br>ועלי לחקור לדרוש ולהגות<br>אולי יראני ה&#39; מתורתו נפלאות<br>ואזכה לבוא אל הקודש פנימה<br>מקום יקר המשנה שמה<br></span><span lang=HE style='font-size:10.0pt'>...</span><span lang=HE><o:p></o:p></span></p><p align=right dir=RTL style='text-align:left;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>מן ההקדמה <i>לדרכי המשנה</i> של הר&#39; זכריה פראנקעל</span><span lang=HE><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+embed'><span lang=HE>&nbsp;<o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>מבוא</span></b><span
+lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><a
+name="_Toc390783798"><b><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>הבעיה: &#39;גדולה בה נעדרה הקשור והחבור בין חלקיה&#39;</span></b></a><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>זכריה פראנקעל, בספרו <i>דרכי המשנה</i>, מצביע על אחת התעלומות המסקרנות בספרות ישראל. המשנה, על אף ניתוחה בתלמודים, ולימודה הרציף בכל הדורות וקהילות, עדיין נמצאת בחזקת ספר סתום וחתום בכל הקשור ל &#39;החבור בין חלקיה הדבוק והסדר בפרטיה&#39;. לא נמצא ההגיון שבשיטת סידור ההלכות. העדר החוקיות לכאורה בסידור הפרטים בתוך הפרקים מובלט על רקע החלוקה הברורה לסדרים, מסכתות ופרקים. ספר <i>המשנה כדרכה</i> מיועד לספק &#39;הפתח והמבוא&#39; לדרכו של רבי יהודה הנשיא בכל הקשור ל- &#39;הדבוק והסדר בפרטיה&#39;.</span><span
+lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>הפטרון: קריאת המשנה כיצירה ספרותית</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>התגלית העיקרית אשר תוצג ב<i>משנה</i> <i>כדרכה</i> היא שיש לפרקי משנה מבנה ספרותי בעל הגדרה ברורה. מן המבנה הזה לומדים שהפרקים נבנו על ידי אומן במלאכת החיבור הספרותי. הוא ניצל את הכלים העומדים לרשותו של כל סופר אומן בבואו להוציא מן הכוח אל הפועל את תוכנתו וליצור יצירתו. המשנה מיוחסת לרבי יהודה הנשיא, אדם דגול בשליטתו בשפה. מסופר שחכמי ישראל היו מקשיבים לדיבורם של עבדיו על מנת ללמוד את רזי לשון הקודש. לכן אין זה צריך להפתיע אותנו שמשנתו מנוסחת לפי אומנות ורגש ספרותי שטיבם לא נופל מסונטות של שייקספיר. הדבר המפתיע הוא ההתנגדות לראות את המשנה כיצירה ספרותית, גם בין החוקרים וגם בקרב לומדיה המסורתיים. מקובל לראות במשנה אוגדן הלכות או לקט דעות התנאים. הקריאה הזאת מתעלמת מכל הבט של חיבור. כדי לראות את התוכנית אשר לפיה המשנה סודרה, ומכאן הקשרים בין חלקיה, צריך לקרוא אותה כיצירת מופת ספרותית- כפי שקוראים את שיחותיו של סוקראטס כיצירתו של אפלטון, כן צריך לקרוא את המשנה כיצירתו של רבי יהודה הנשיא. אדגים את המשמעות של הקריאה הלא מקובלת הזאת על ידי אוסף לכאורה של אמרות מפרקי אבות.</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><a
+name="_Toc390783800"><b><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חלוקת המשנה לגורמים</span></b></a><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>אני מתחיל בפרקי אבות, על אף ההבדלים בין מסכת זאת וכל האחרות וגם בגללם. השוני הראשון הוא שאין במסכת אבות הלכות אלא דברי מוסר בלבד. זה יתרון לחוקר. הוא לא מסתכן בהוראה שלא כהלכה בפרשנותו. ההבדל השני בינה ובין יתר מסכתות המשנה הוא שיש בתוך מסכת אבות מערכת נוסחאות המשמשת פיסוק בתוך הפרקים. בכל חמש מאות עשרים פרקי המשנה ההלכתית, אין הסכמה בדבר הדרך הנכונה לחלק את הפרקים למרכיבים. כל מביא לאור מחלק את הטקסט ל &#39;משניות&#39; לפי דעתו ואין שני ספרים, כולל התלמודים, המסכימים על דרך חלוקת הפרקים לגורמיהם. מי שבא לנתח פרק משנה ניתוח ספרותי מתקשה באחד השלבים הראשוניים והיסודיים ביותר של המחקר, זיהוי חלקי הטקסט. במסכת אבות אפשר לדלג על הקושי הזה. ארבעת הפרקים הראשונים של מסכת אבות מגדירים בברור את חלקיהם. האמרות מובאות לפי נוסחה קבועה, &#39;רבי פלוני אומר&#39;. כאשר מובאות יותר מאמירה אחת בשם תנא אחד, הנוספות מתחילות ב-&#39;הוא היה אומר&#39;. הטקסט עצמו מגדיר את חלקיו לפי שתי הנוסחות האלה. החלוקה שקופה. זה יתרון גדול מאד למי שמחפש את &#39;החבור בין חלקיה&#39;. החלקים כבר מסומנים על דעת העורך, והחוקר יכול להתרכז בחבורים בין החלקים. יתבהר שהמסכת הזאת מהווה היוצאת מן הכלל הבאה ללמד על הכלל: האוסף המובהק ביותר מתגלה כחבור מתוחכם, מעשה סופר אומן מופלג. אציג עכשיו שש משניות רצופות מן הפרק השלישי של מסכת אבות, לפי חלוקתן בספרו של אלבק.</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>הניתוח הספרותי</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>הצגת הטקסט</span></b><span lang=HE><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+embed'><b><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>טבלה 1: מסכת אבות פרק ג&#39;, משניות ב-ז, כחלוקתו של אלבק למשניות</span></b><span
+lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><span dir=LTR><span dir=LTR></span>)</span><span
+  lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ב) רבי חנניה סגן הכהנים אומר הוי מתפלל בשלומה שלמלכות שאלמלא מוראה איש את רעהו חיים בלעו. רבי חנניה בן תרדיון אומר שנים שיושבין ואין ביניהן דברי תורה הרי זה מושב לצים שנאמר ובמושב לצים לא ישב אבל שנים שיושבין ויש ביניהם דברי תורה שכינה ביניהם שנאמר אז נדברו יראי ה&#39; איש אל רעהו ויקשב ה&#39; וישמע ויכתב ספר זכרון לפניו ליראי ה&#39; ולחשבי שמו אין לי אלא שנים מנין שאפלו אחד שיושב ועוסק בתורה שהקדוש ברוך הוא קובע לו שכר שנאמר ישב בדד וידם כי נטל עליו</span><span lang=HE> </span><span
+  dir=LTR style='font-family:Arial;mso-bidi-font-family:Narkisim;color:#000066'><o:p></o:p></span></p></td></tr><tr style='mso-yfti-irow:1'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ג) רבי שמעון אומר שלשה שאכלו על שלחן אחד ולא אמרו עליו דברי תורה כאילו אכלו מזבחי מתים שנאמר כי כל שלחנות מלאו קיא צאה בלי מקום אבל שלשה שאכלו על שלחן אחד ואמרו עליו דברי תורה כאלו אכלו משלחנו שלמקום ברוך הוא שנאמר וידבר אלי זה השלחן אשר לפני ה&#39;</span><span lang=HE> </span><span dir=LTR style='font-family:
+  Arial;mso-bidi-font-family:Narkisim;color:#000066'><o:p></o:p></span></p></td></tr><tr style='mso-yfti-irow:2'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ד) רבי חנניה בן חכינאי אומר הנעור בלילה והמהלך בדרך יחידי ומפנה לבו לבטלה הרי זה מתחיב בנפשו</span><span lang=HE> </span><span dir=LTR style='font-family:
+  Arial;mso-bidi-font-family:Narkisim;color:#000066'><o:p></o:p></span></p></td></tr><tr style='mso-yfti-irow:3'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ה) רבי נחוניא בן הקנה אומר כל המקבל עליו על תורה מעבירין ממנו על מלכות ועל דרך ארץ וכל הפורק ממנו על תורה נותנין עליו על מלכות ועל דרך ארץ</span><span
+  lang=HE> </span><span dir=LTR style='font-family:Arial;mso-bidi-font-family:
+  Narkisim;color:#000066'><o:p></o:p></span></p></td></tr><tr style='mso-yfti-irow:4'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ו) רבי חלפתא איש כפר חנניה אומר עשרה שיושבין ועוסקין בתורה שכינה שרויה ביניהם שנאמר אלהים נצב בעדת אל ומנין אפילו חמשה שנאמר ואגדתו על ארץ יסדה ומנין אפילו שלשה שנאמר בקרב אלהים ישפט ומנין אפילו שנים שנאמר אז נדברו יראי ה&#39; איש אל רעהו ויקשב ה&#39; וישמע וגו&#39; מנין אפילו אחד שנאמר בכל המקום אשר אזכיר את שמי אבוא אליך וברכתיך</span><span lang=HE> </span><span dir=LTR style='font-family:
+  Arial;mso-bidi-font-family:Narkisim;color:#000066'><o:p></o:p></span></p></td></tr><tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ז) רבי אלעזר איש ברתותא אומר תן לו משלו שאתה ושלך שלו וכן בדוד הוא אומר כי ממך הכל ומידך נתנו לך רבי שמעון אומר המהלך בדרך ושונה ומפסיק ממשנתו ואומר מה נאה אילן זה ומה נאה ניר זה מעלה עליו הכתוב כאלו מתחיב בנפשו</span><span lang=HE> </span><span
+  dir=LTR style='font-family:Arial;mso-bidi-font-family:Narkisim;color:#000066'><o:p></o:p></span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>הרצף הזה מדגים, קדם כל, עד כמה החלוקה למשניות שרירותית. אין ספק שהטקסט מתחלק לשמונה אמרות שהן הן המשניות. ואף על פי כן, המביא לאור חבר ביחד במשנה אחת את דבריהם של רבי חנניה סגן הכהנים, ורבי חנניה בן תרדיון במשנה ב&#39;, ורבי חלפתא איש כפר חנניה ורבי שמעון במשנה ז&#39;. בזה הוא סותם את הגולל על האפשרות לקרוא את המשנה לפי החבור בין חלקיה. מי שמקבל את קביעתו שיש הגיון בקיבוץ שמונה האמרות בשש משניות, לעולם לא ימצא את החבור ביניהם. הצעד הראשון בקריאת החיבור הספרותי הוא איתור המרכיבים. בטקסט שלנו הם שמונה האמרות:</span><span lang=HE style='font-family:Arial;
+color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+embed'><b><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>טבלה 2: החלוקה לפי אמרות</span></b><span lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><span dir=LTR><span dir=LTR></span>(</span><span
+  lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ב) רבי חנניה סגן הכהנים אומר הוי מתפלל בשלומה שלמלכות שאלמלא מוראה איש את רעהו חיים בלעו.</span><span
+  lang=HE> </span><span dir=LTR style='color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+  lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>רבי חנניה בן תרדיון אומר שנים שיושבין ואין ביניהן דברי תורה הרי זה מושב לצים שנאמר ובמושב לצים לא ישב אבל שנים שיושבין ויש ביניהם דברי תורה שכינה ביניהם שנאמר אז נדברו יראי ה&#39; איש אל רעהו ויקשב ה&#39; וישמע ויכתב ספר זכרון לפניו ליראי ה&#39; ולחשבי שמו אין לי אלא שנים מנין שאפלו אחד שיושב ועוסק בתורה שהקדוש ברוך הוא קובע לו שכר שנאמר ישב בדד וידם כי נטל עליו</span></p></td></tr><tr style='mso-yfti-irow:1'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ג) רבי שמעון אומר שלשה שאכלו על שלחן אחד ולא אמרו עליו דברי תורה כאילו אכלו מזבחי מתים שנאמר כי כל שלחנות מלאו קיא צאה בלי מקום אבל שלשה שאכלו על שלחן אחד ואמרו עליו דברי תורה כאלו אכלו משלחנו שלמקום ברוך הוא שנאמר וידבר אלי זה השלחן אשר לפני ה&#39;</span><span lang=HE> </span><span dir=LTR style='font-family:
+  Arial;mso-bidi-font-family:Narkisim;color:#000066'><o:p></o:p></span></p></td></tr><tr style='mso-yfti-irow:2'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ד) רבי חנניה בן חכינאי אומר הנעור בלילה והמהלך בדרך יחידי ומפנה לבו לבטלה הרי זה מתחיב בנפשו</span><span lang=HE> </span><span dir=LTR style='font-family:
+  Arial;mso-bidi-font-family:Narkisim;color:#000066'><o:p></o:p></span></p></td></tr><tr style='mso-yfti-irow:3'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ה) רבי נחוניא בן הקנה אומר כל המקבל עליו על תורה מעבירין ממנו על מלכות ועל דרך ארץ וכל הפורק ממנו על תורה נותנין עליו על מלכות ועל דרך ארץ</span><span
+  lang=HE> </span><span dir=LTR style='font-family:Arial;mso-bidi-font-family:
+  Narkisim;color:#000066'><o:p></o:p></span></p></td></tr><tr style='mso-yfti-irow:4'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ו) רבי חלפתא איש כפר חנניה אומר עשרה שיושבין ועוסקין בתורה שכינה שרויה ביניהם שנאמר אלהים נצב בעדת אל ומנין אפילו חמשה שנאמר ואגדתו על ארץ יסדה ומנין אפילו שלשה שנאמר בקרב אלהים ישפט ומנין אפילו שנים שנאמר אז נדברו יראי ה&#39; איש אל רעהו ויקשב ה&#39; וישמע וגו&#39; מנין אפילו אחד שנאמר בכל המקום אשר אזכיר את שמי אבוא אליך וברכתיך</span><span lang=HE> </span><span dir=LTR style='font-family:
+  Arial;mso-bidi-font-family:Narkisim;color:#000066'><o:p></o:p></span></p></td></tr><tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'><td valign=top style='border:inset black 1.0pt;mso-border-alt:inset black .75pt;
+  padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ז) רבי אלעזר איש ברתותא אומר תן לו משלו שאתה ושלך שלו וכן בדוד הוא אומר כי ממך הכל ומידך נתנו לך</span><span lang=HE> </span><span dir=LTR style='color:
+  #000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+  lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>רבי שמעון אומר המהלך בדרך ושונה ומפסיק ממשנתו ואומר מה נאה אילן זה ומה נאה ניר זה מעלה עליו הכתוב כאלו מתחיב בנפשו</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>כאשר מתבוננים בשמונה האמרות, ולא בשש משניות, אפשר ביתר קלות לראות את הסממנים הראשונים של תכנון ספרותי. בקריאה הראשונה חשים שיש נושאים שחוזרים על עצמם. בבדקה קרובה יותר רואים שאמרה 2 ואמרה 6 כוללות אותו פסוק וגם תוכנן דומה מאד. שתיהן אומרות שהשכינה נמצאת אצל העוסקים בתורה. אמרות 4 ו8 נקראות כאילו יצאו מתבנית אחת. בשתיהן המהלך בדרך מתחיב בנפשו. אמרות 1 ו5 מזכירות &#39;מלכות.&#39; מצאנו עד עכשיו שלושה זוגות אמרות לפי הדמיון ביניהן: 1ו5, 2ו6, 4ו8. חסרות רק 3 ו7 כדי שתהיה התאמה מושלמת בין ארבע הראשונות, 4-1, וארבע האחרונות, 8-5, לפי הסדר בו הן כתובות. כדי להעריך את התופעה הזאת של מקבילי הלשון, סדרתי את האמרות בטבלה. בעמודה הימינית נמצאות אמרות 4-1 וב<a name="_Toc390783801">עמודה המקבילה אמרות 8-5</a>. הנה הטבלה המתקבלת.</span><span lang=HE style='font-family:Arial;
+color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>יסוד המבנה: מקבילי לשון</span></b><span lang=HE><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+embed'><b><span lang=HE style='font-size:18.0pt;font-family:"Times New Roman \(Hebrew\)"'>טבלה 3: המבנה</span></b><span lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span lang=HE style='font-size:18.0pt;font-family:"Times New Roman \(Hebrew\)"'>מחזור א</span></b></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span lang=HE style='font-size:18.0pt;font-family:"Times New Roman \(Hebrew\)"'>מחזור ב</span></b></p></td></tr><tr style='mso-yfti-irow:1'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR>1</span></b><span dir=LTR style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR style='font-size:13.5pt'>)</span><span lang=HE
+  style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב) רבי חנניה סגן הכהנים אומר<br>הוי מתפלל בשלומה <b>שלמלכות<br></b>שאלמלא מוראה איש את רעהו חיים בלעו</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:18.0pt'>5</span></b><span dir=LTR
+  style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR style='font-size:13.5pt'>)</span><span lang=HE
+  style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ה) רבי נחוניא בן הקנה אומר<br>כל המקבל עליו על תורה<br>מעבירין ממנו על <b>מלכות</b> ועל דרך ארץ<br>וכל הפורק ממנו על תורה<br>נותנין עליו על מלכות ועל דרך ארץ</span></p></td></tr><tr style='mso-yfti-irow:2'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:18.0pt'>2</span></b><span dir=LTR
+  style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>רבי חנניה בן תרדיון אומר<br>שנים שיושבין ואין ביניהן דברי תורה<br>הרי זה מושב לצים<br>שנאמר ובמושב לצים לא ישב (תהילים א&#39;)<br>אבל שנים שיושבין ויש ביניהם דברי תורה<br><b>שכינה ביניהם<br>שנאמר אז נדברו יראי ה&#39; איש אל רעהו<br>ויקשב ה&#39; וישמע<br>ויכתב ספר זכרון לפניו ליראי ה&#39; ולחשבי שמו(מלאכי ג&#39;)<br></b>אין לי אלא שנים<br>מנין שאפלו אחד שיושב ועוסק בתורה<br>שהקדוש ברוך הוא קובעלו שכר<br>שנאמר ישב בדד וידם כי נטל עליו (איכה ג&#39;)</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:18.0pt'>6</span></b><span dir=LTR
+  style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR style='font-size:13.5pt'>(</span><span lang=HE
+  style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ו) רבי חלפתא איש כפר חנניה אומר<br>עשרה שיושבין ועוסקין בתורה<br><b>שכינה שרויה ביניהם<br></b>שנאמר אלהים נצב בעדת אל (תהילים פ&quot;ב)<br>ומנין אפילו חמשה<br>שנאמר ואגדתו על ארץ יסדה (עמוס ט&#39;)<br>ומנין אפילו שלשה<br>שנאמר בקרב אלהים ישפט (תהילים פ&quot;ב)<br>ומנין אפילו שנים<br><b>שנאמר אז נדברו יראי ה&#39; איש אל רעהו<br>ויקשב ה&#39; וישמע וגו&#39; (מלאכי ג&#39;)<br></b>ומנין אפילו אחד<br>שנאמר בכל המקום אשר אזכיר את שמי<br>אבוא אליך וברכתיך (שמות כ&#39;)</span></p></td></tr><tr style='mso-yfti-irow:3'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:18.0pt'>3</span></b><span dir=LTR
+  style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR style='font-size:13.5pt'>)</span><span lang=HE
+  style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ג) רבי שמעון אומר<br>שלשה שאכלו על שלחן אחד<br>ולא אמרו עליו דברי תורה<br>כאילו אכלו מזבחי מתים<br>שנאמר כי כל שלחנות מלאו קיא צאה<br>בלי מקום (ישעיה כ&quot;ח)<br>אבל שלשה שאכלו על שלחן אחד<br>ואמרו עליו דברי תורה<br>כאלו אכלו משלחנו שלמקום ברוך הוא<br>שנאמר וידבר אלי זה השלחן אשר לפני ה&#39; (יחזקאל מ&quot;א)</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:18.0pt'>7</span></b><span dir=LTR
+  style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR style='font-size:13.5pt'>)</span><span lang=HE
+  style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ז) רבי אלעזר איש ברתותא אומר<br>תן לו משלו שאתה ושלך שלו<br>וכן בדוד הוא אומר<br>כי ממך הכל ומידך נתנו לך (ד&quot;ה א&#39; כ&quot;ט)</span></p></td></tr><tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:18.0pt'>4</span></b><span dir=LTR
+  style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR style='font-size:13.5pt'>)</span><span lang=HE
+  style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ד) רבי חנניה בן חכינאי אומר<br>הנעור בלילה <b>והמהלך בדרך </b>יחידי<br>ומפנה לבו לבטלה<br>הרי זה <b>מתחיב בנפשו</b></span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:18.0pt'>8</span></b><span dir=LTR
+  style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>רבי שמעון אומר<br><b>המהלך בדרך </b>ושונה ומפסיק ממשנתו ואומר<br>מה נאה אילן זה ומה נאה ניר זה<br>מעלה עליו הכתוב כאלו <b>מתחיב בנפשו</b></span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>בטבלה למעלה שמונה האמרות חולקו לפי סדרן לשני מחזורים. בעמודה הימינית, המסומנת מחזור א&#39;, ארבע האמרות הראשונות, 4-1, לפי סדר הופעתן במשנה. בעמודה המקבילה, מחזור ב&#39;, המשך טקסט המשנה, אמרות 8-5. שני המחזורים הוצבו זה ליד זה כשתי עמודות בטבלה. שום דבר לא שונה בסדר הופעת האמרות פרט לחלוקתן לשתי עמודות. החלוקה הזאת מתבססת על סדרה מורכבת של מקבילי לשון אשר הובלטו בטבלה. בשלוש מארבע האמרות בכל מחזור נושא מרכזי מוזכר באמרות מקבילות באותן מלים ממש. האמרה הראשונה בכל מחזור, 1 ו- 5, עוסקת ב&#39;מלכות&#39;. באמרות השניות, 2 ו6-, נוסח ארוך, הכולל ציטוט, חוזר על עצמו: &#39;שיושבין ויש ביניהם דברי תורה שכינה ביניהם שנאמר אז נדברו יראי ה&#39; איש אל רעהו ויקשב ה&#39; וישמע&#39;. באמרות 4 ו8-: &#39;המהלך בדרך...מתחיב בנפשו.&#39; באמרות השלישיות, 3 ו7-, אין ניסוח משותף, אבל יש בהן הקבלה רעיונית ברורה בין &#39;שלחנו שלמקום&#39; ובין &#39;כי ממך הכל&#39;. שתיהן מזכירות קשר בין האדם ובין קונו. לכן אפשר לדבר בוודאות על קובץ של שמונה אמרות העשוי שני מחזורים מקבילים של ארבע אמרות כל אחד. לא נראה סיבה שמלקט דברי חכמים היה מגיע לסדור זה. אם נאמר שהוא ביקש להביא ביחד דברים על נושאים דומים, הוא היה צריך להביא את האמרות כצמדים ולא כחזרות של ארבע ארבע. זו נקודת מפנה בקריאת הטקסט. מכאן ואילך כבר אי אפשר לראות את שמונה האמרות כאוסף פשוט. מערכת המקבילות אומרת דרשני. צריך לבחון את המשמעות של סידור זה. אבל אפילו בשלב המוקדם הזה של החקירה אפשר לאומר שהסימנים ל &#39;הקשור והחבור בין חלקיה&#39; שחיפשנו, נמצאים בקובץ הזה במישור שניתן לגלות דרך ניתוח ספרותי. כל פרוש צריך לקחת בחשבון שיש כאן מבנה מורכב המזדהה כיצירה ספרותית. יש עוד סימוכין לקביעה שלפנינו יצירה.</span><span lang=HE style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>אלמנטים נוספים של תכנון ספרותי</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>למעשה, מערכת המקבילות מספיק משכנעת בפני עצמה כדי לקבוע שיש כאן חבור מכוון, אבל מתלווים אליה עוד שלושה אלמנטים מבניים המצביעים על הקובץ כמעשה סופר. כל אחד מהם פחות משכנע בפני עצמו ממערכת מקבילות הלשון, אבל הם מתווספים עליה ליצור עוד גוונים של סדר בתוך הקובץ. הראשון מהם כאילו &#39;ממספר&#39; את האמרות. האמרה השניה מתחילה בלשון &#39;שניים שיושבים&#39;, והשלישית בלשון &#39;שלושה שאכלו&#39;. האמרה הראשונה מנוסחת בצווי יחיד &#39;הוי&#39;, ובתוכה עוסקת ב &#39;איש&#39; ורעהו. זאת אומרת כל האמרה הראשונה מדברת אך ורק ביחיד. ובכן, שלוש האמרות הראשונות מסודרות בסדר מספרי לפי נושאיהן, אחד, שניים ושלושה. עוד הבט של סדר מצוי בשמות התנאים. בחמש מתוך שש האמרות הראשונות מופיע השם &#39;חנניה&#39; או צורתו האחרת &#39;נחוניה&#39;. לכן כיניתי את המבנה &#39;אנשי כפר חנניה&#39;.</span><span
+lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt'>1. </span><span lang=HE style='font-size:13.5pt;
+font-family:"Times New Roman \(Hebrew\)"'>חנניה<br></span><span lang=HE style='font-size:13.5pt'>2. </span><span lang=HE
+style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חנניה<br></span><span lang=HE style='font-size:13.5pt'>4. </span><span lang=HE
+style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חנניה<br></span><span lang=HE style='font-size:13.5pt'>5. </span><span lang=HE
+style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>נחוניה<br></span><span lang=HE style='font-size:13.5pt'>6. </span><span lang=HE
+style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>איש כפר חנניה</span><span
+lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>היבט התכנון האחרון שאציג מגשר בין הצד הפורמלי ובין הצד התוכני ומשלב את כל האמרות. הוא מביא לחתך מעניין מאוד. יש בקובץ אמרות הכוללות אסמכתאות וגם אמרות ללא אסמכתאות. הן מחולקות בדיוק לחצי. לארבע אמרות, 1, 4, 5, ו8 אין אסמכתאות, לארבע, 2, 3, 6, ו7 יש. כאשר אמרות הקובץ מסודרות כמו בטבלה למעלה, מתברר יחס מרשים בין שתי הקבוצות. האמרות הפשוטות, דהיינו ללא ציטוטים, מופיעות בהתחלה ובסוף של העמודות. כל האמרות הכוללות ציטוטים נמצאות באמצע המבנה. אסכם את זה בטבלה הבאה.</span><span
+lang=HE><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+embed'><b><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>טבלה 4. פזור הציטוטים במבנה אנשי כפר חנניה</span></b><span lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=1 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:.6pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><b><span dir=LTR><span dir=LTR></span>1</span></b></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>5</span></b></p></td></tr><tr style='mso-yfti-irow:1'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>2</span></b><span dir=LTR
+  style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>א. ובמושב לצים לא ישב<br>ב. אז נדברו יראי ה&#39; איש אל רעהו<br>ג. ישב בדד וידם כי נטל עליו</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>6</span></b><span dir=LTR
+  style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב. ואגדתו על ארץ יסדה<br>ג. בקרב אלהים ישפט<br>ד. אז נדברו יראי ה&#39; איש אל רעהו<br>ה. בכל המקום אשר אזכיר את שמי אבוא אליך וברכתיך</span></p></td></tr><tr style='mso-yfti-irow:2'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>3</span></b><span dir=LTR
+  style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>א. כי כל שלחנות מלאו קיא צאה בלי מקום<br>ב. וידבר אלי זה השלחן אשר לפני ה&#39;</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>7</span></b><span dir=LTR
+  style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>כי ממך הכל ומידך נתנו לך</span></p></td></tr><tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>4</span></b></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>8</span></b></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>רשמתי בטבלה למעלה את כל הפסוקים המובאים במבנה. באמרה השניה שלושה, באמרה השלישית שניים, בשישית חמשה ובשביעית אחת. סך הכל אחד עשרה פסוקים וכולם באמרות המרכזיות. גם זה נראה אלמנט תכנוני בקובץ. אם כן, מצאנו ארבעה היבטים שונים של תכנון. הראשון, מקבילות הלשון, שונה באופן משמעותי מן האחרים, הסדר המספרי, השם חנניה והשמוש הסימטרי באסמכתאות. שלושת האחרונים מופיעים רק אחרי גלוי המבנה הראשי. הם משניים גם בחשיבותם וגם בסדר הופעתם. בזה סיימנו את השלב הראשון של קריאת הטקסט כיצירה ספרותית. זיהינו את המבנה, חלקיו וסדרים משניים המופיעים אגב ברור המבנה הראשי. עכשיו עלינו לבחון את המשמעות של המבנה עשיר הסדרים הזה.</span><span
+lang=HE style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>דרכה של המשנה</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>החבור</span></b><span
+lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>הר&#39; זכריה פראנקעל תהה ש-&#39;נעדרה הקשור והחבור בין חלקיה...גם הבית סגור מבוא.&#39; טענתי שניתן לגלות את החבור ברובד הספרותי של המשנה. בחרתי להדגים את זה על ידי קובץ <i>אנשי כפר חנניה</i>, בין היתר, כי הדוגמה עצמה מהווה</span><span lang=HE
+style='font-size:13.5pt'>tabla rosa</span><span lang=HE style='font-size:13.5pt;
+font-family:Miriam'> </span><span lang=HE style='font-size:13.5pt;font-family:
+"Times New Roman \(Hebrew\)"'>למחקר. אנחנו יכולים להתייחס אליה ללא דעות קדומות כי היא איננה מופיעה כקובץ אצל מפרשי המשנה. כמו כן היא אינה מקיימת את אף אחת מן הסיבות שנוהגים להציג כהסבר לסדור קבצי משנה: אין נוסחה אחת לכל האמרות, כמו ב-&#39;אין בין&#39;; התנאים באים מדורות שונים ואינם קשורים זה לזה; אין הלכה מרכזית הנידונה מהיבטים שונים. השורה התחתונה: אין כל בסיס אפריורי לקרוא את שש המשניות, כפי שהן מופיעות בספרי משניות, כקובץ, לא כל שכן כחיבור. לכן זו דוגמה מושלמת של &#39;נעדרה הקשור והחבור בין חלקיה.&#39; רק אחרי שזיהינו את מקבילי הלשון, יש סיבה לראות את שמונה האמרות כיחידה. אבל, בו בזמן שגילינו את הסדרים שבקובץ, מתעוררות שאלות חדשות.</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>פרקי אבות נקרא כאוסף או לקט דברי החכמים. אפשר להגדיר את דרישת &#39;חבור בין חלקיה&#39; במושגים של המסכת כך: אנחנו מחפשים את ההגיון שמאחורי בחירת האמרות המובאות ביחד. אילו מצאנו חוט אחד המקשר בין כל האמרות, יכולנו להגיד שזה אוסף המבוסס על אותו חוט. במקום חוט אחד פשוט, מצאנו מערכת מאוד מורכבת של קשרים בין חלקים בלתי רציפים. המערכת מעידה שכל האמרות קשורות בצורה של קובץ, אבל לאו דווקא כאוסף. מערכת הקשרים נראית יותר מדי מורכבת בשביל אוסף. מכאן המסקנה שצריך לקרוא את הקובץ כחבור. ההבדל בין קריאת הטקסט כאוסף ובין קריאתו כחבור נמצא בעקר בציפיות שלנו. אנחנו מוכנים להסתפק בפחות &#39;הגיון&#39; מאוסף. הקביעה שלפנינו חבור ולא אוסף מעלה את הצפיות שלנו. עכשיו עלינו לדרוש מן הטקסט דברים שלא היינו דורשים מ-&#39;סתם&#39; אוסף. חבור, לעומת אוסף, אמור לכלול יותר תוכן מסך כל המרכיבים הפרודים גם יחד. אם כן, אנחנו צריכים לשאול מהו הערך המוסף המצוי באגוד האמרות, ובפשטות, מה משמעות החבור? השאלה הזאת חשובה מאד, לא רק במסגרת של קובץ <i>אנשי כפר חנניה</i>, אלא גם בהגדרת ציפיותינו מן המשנה בכלל ומן <i>המשנה כדרכה</i> בפרט.</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>כמו שניתחתי את המרקם הספרותי של &#39;אנשי כפר חנניה&#39; עד כאן, כן ניתחתי את כל פרקי המשנה. כתוצאה, פרקי המשנה מוצגים <i>במשנה כדרכה</i> בטבלאות כמו הטבלה של <i>אנשי כפר חנניה</i> למעלה. הסידור בטבלאות משקף את המבנה הספרותי של הפרקים. שאלת משמעות החבור שהעליתי בקשר ל<i>אנשי כפר חנניה,</i> נשאלת באותה המידה לגבי כל פרקי <i>המשנה כדרכה</i>. בהמשך המאמר אציג דרך להגיע אל המשמעות הטמונה בחבור <i>אנשי כפר חנניה</i>. כוחה של הדרך הזאת יפה לכל פרקי <i>המשנה כדרכה</i>. אני טוען שהצגת מבנה המשנה בטבלה אינה סוף הדרך של איתור הסמוי בתוך &#39;הבית סגור מבוא&#39;, אלא תחילתה. כל העבודה שהשקעתי בעריכת <i>המשנה כדרכה</i> אינה אלא הכנה לקריאת החבור. עכשיו מתחילה המלאכה האמיתית. אינני רואה בהצגת המבנה הספרותי יותר מתיקון איזושהי עיוות היסטורי. הדפסת אמרות <i>כפר חנניה,</i> וכן כל פרקי המשנה, כרצף משניות סתם מסלפת את המבנה הספרותי. הצגת המבנה כטבלה מתקנת את העיוות הזו. ראיית המבנה מסודר כטבלה מאפשרת לימוד משמעות המשנה כדרכה, דרך גאונית ופשוטה גם יחד.</span><span
+lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>תכנון רב ממדי</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>כדי לקדם את החקירה לשלב של ברור משמעות החבור, צריך לבחון את המשתמע מן המבנה הספרותי המצטייר כטבלה. מה עומד אחרי הסידור בטבלה? מה הן תכונות הטבלה? כדי שיהיה יותר קל לדון בשאלה הזאת, אני מציג את המבנה שוב, בשנוי סימון האמרות. על אף שאתייחס בדיון לדוגמה הספציפית של <i>אנשי כפר חנניה</i> וכן הזוגות של הפרק הראשון של אבות, כל שאמור על תכונות כלליות של הטבלה חל על כל הטבלאות של פרקי <i>המשנה כדרכה.</i></span><span
+lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:4.8pt 4.8pt 4.8pt 4.8pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0'><td width="19%" valign=top style='width:19.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><span dir=LTR><span dir=LTR></span>&nbsp; </span><span
+  dir=LTR style='font-family:Arial;mso-bidi-font-family:Narkisim'><o:p></o:p></span></p></td><td width="40%" valign=top style='width:40.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>א</span></b></p></td><td width="41%" valign=top style='width:41.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span lang=HE style='font-size:18.0pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b></p></td></tr><tr style='mso-yfti-irow:1'><td width="19%" valign=top style='width:19.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>1</span></b></p></td><td width="40%" valign=top style='width:40.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>1</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ב) רבי חנניה סגן הכהנים אומר<br>הוי מתפלל בשלומה <b>שלמלכות<br></b>שאלמלא מוראה איש את רעהו חיים בלעו</span></p></td><td width="41%" valign=top style='width:41.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>1</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ה) רבי נחוניא בן הקנה אומר<br>כל המקבל עליו על תורה<br>מעבירין ממנו על <b>מלכות</b> ועל דרך ארץ<br>וכל הפורק ממנו על תורה<br>נותנין עליו על מלכות ועל דרך ארץ</span></p></td></tr><tr style='mso-yfti-irow:2'><td width="19%" valign=top style='width:19.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>2</span></b></p></td><td width="40%" valign=top style='width:40.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>2</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>רבי חנניה בן תרדיון אומר<br>שנים שיושבין ואין ביניהן דברי תורה<br>הרי זה מושב לצים<br>שנאמר ובמושב לצים לא ישב (תהילים א&#39;)<br>אבל שנים שיושבין ויש ביניהם דברי תורה<br><b>שכינה ביניהם<br>שנאמר אז נדברו יראי ה&#39; איש אל רעהו<br>ויקשב ה&#39; וישמע<br>ויכתב ספר זכרון לפניו ליראי ה&#39; ולחשבי שמו(מלאכי ג&#39;)<br></b>אין לי אלא שנים<br>מנין שאפלו אחד שיושב ועוסק בתורה<br>שהקדוש ברוך הוא קובע לו שכר<br>שנאמר ישב בדד וידם כי נטל עליו (איכה ג&#39;)</span></p></td><td width="41%" valign=top style='width:41.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>2</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=RTL></span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'><span
+  dir=RTL></span>(ו) רבי חלפתא איש כפר חנניה אומר<br>עשרה שיושבין ועוסקין בתורה<br><b>שכינה שרויה ביניהם<br></b>שנאמר אלהים נצב בעדת אל (תהילים פ&quot;ב)<br>ומנין אפילו חמשה<br>שנאמר ואגדתו על ארץ יסדה (עמוס ט&#39;)<br>ומנין אפילו שלשה<br>שנאמר בקרב אלהים ישפט (תהילים פ&quot;ב)<br>ומנין אפילו שנים<br><b>שנאמר אז נדברו יראי ה&#39; איש אל רעהו<br>ויקשב ה&#39; וישמע וגו&#39; (מלאכי ג&#39;)<br></b>ומנין אפילו אחד<br>שנאמר בכל המקום אשר אזכיר את שמי<br>אבוא אליך וברכתיך (שמות כ&#39;)</span></p></td></tr><tr style='mso-yfti-irow:3'><td width="19%" valign=top style='width:19.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>3</span></b></p></td><td width="40%" valign=top style='width:40.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>3</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ג) רבי שמעון אומר<br>שלשה שאכלו על שלחן אחד<br>ולא אמרו עליו דברי תורה<br>כאילו אכלו מזבחי מתים<br>שנאמר כי כל שלחנות מלאו קיא צאה<br>בלי מקום (ישעיה כ&quot;ח)<br>אבל שלשה שאכלו על שלחן אחד<br>ואמרו עליו דברי תורה<br>כאלו אכלו משלחנו שלמקום ברוך הוא<br>שנאמר וידבר אלי זה השלחן אשר לפני ה&#39; (יחזקאל מ&quot;א)</span></p></td><td width="41%" valign=top style='width:41.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>3</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>)</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ז) רבי אלעזר איש ברתותא אומר<br>תן לו משלו שאתה ושלך שלו<br>וכן בדוד הוא אומר<br>כי ממך הכל ומידך נתנו לך (ד&quot;ה א&#39; כ&quot;ט)</span></p></td></tr><tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'><td width="19%" valign=top style='width:19.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>4</span></b></p></td><td width="40%" valign=top style='width:40.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>4</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=RTL></span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'><span
+  dir=RTL></span>(ד) רבי חנניה בן חכינאי אומר<br>הנעור בלילה <b>והמהלך בדרך </b>יחידי<br>ומפנה לבו לבטלה<br>הרי זה <b>מתחיב בנפשו</b></span></p></td><td width="41%" valign=top style='width:41.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>4</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>רבי שמעון אומר<br><b>המהלך בדרך </b>ושונה ומפסיק ממשנתו ואומר<br>מה נאה אילן זה ומה נאה ניר זה<br>מעלה עליו הכתוב כאלו <b>מתחיב בנפשו</b></span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>בטבלה למעלה שמונה האמרות מופיעות לפי אותו סדר שהצגתי מקודם. ארבע האמרות הראשונות מופיעות לפי הסדר שבספרי משניות בעמודה א, והן סומנו מ1א עד 4א. ארבע האמרות הבאות סודרו בעמודה ב וסומנו מ1ב עד 4ב. סימנתי את האמרות בהבלטה ובהתאם לתכונות טבלה המורכבת מארבע שורות ושתי עמודות, את השורות בספרות מ1 עד 4 ואת העמודות באותיות א ו-ב. כל אמרה סומנה על ידי שילוב מספר השורה ואות העמודה. כך סומנו כל פרקי <i>המשנה כדרכה</i>. שיטת הסימון משקפת את מהות הטבלה, והטבלה עצמה משקפת את המבנה של הטקסט. כל אמרה כלולה בשורה מסוימת ועמודה מסוימת. כבר ראינו שיש דמיון תוכני בין כל צמד אמרות שבכל שורה. דבר זה מסומן על ידי השמוש בספרה לציין את שתי האמרות המקבלות. לכל שורה יש רעיון מרכזי משלה המסומלת על ידי הספרה. כמו כן, כפי שנראה להלן, יש דמיון רעיוני בתוך כל עמודה והוא מסומל על ידי האות. יוצא מזה שהסימן 2ב אומר &#39;הצטלבות קו רעיוני אופקי 2 וקו רעיוני אנכי ב.&#39; האמרה המסומנת 2ב כוללת תכונות רעיוניות השייכות לשורה 2 ועמודה ב. יוצא מן הניתוח שהמבנה עצמו מהווה &#39;מרחב רעיוני&#39;. לכל אמרה משקל סגולי שנקבע לפי מיקומה במרחב (טבלה). יש לזה השלכות על דרך ברור משמעות החבור. המרחב הרעיוני של <i>אנשי כפר חנניה</i> מורכב מששה יסודות שאינם מופיעים במפורש באמרות, המכנים המשותפים של כל שורה (4) וכל עמודה (2). סידור האמרות לפי הטבלה מאפשר לנו לדלות את הרעיונות המשותפים מתוך המבנה. בשלב הבא של ניתוח <i>אנשי כפר חנניה</i> אגדיר את המכנה המשותף של כל אחד מארבעת הצמדים וכן של שתי העמודות. הגדרת ששת היסודות תגלה באליל את שלד המבנה.</span><span
+lang=HE style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ההגיון הדו ממדי של הטבלה דומה מאד לאריג. העמודות דומות לחוטי שתי והשורות לחוטי הערב. על מנת להבהיר את הנקודה הזאת אזכיר קצת פרטים של מעשה אורג כי הם אינם מוכרים כל כך בחיי היום יום שלנו, כמו שהיו בזמן המשנה. האריג עשוי משני סוגים של חוטים. חוטי השתי הם יותר דקים ותפקידם לשמש בסיס לחוטי הערב העבים יותר המושחלים בין חוטי השתי. הנול בנוי כך שבשלב הראשון של האריגה קושרים את חוטי השתי במקומם. רק אחרי שהם קשורים אפשר להתחיל את אריגת חוטי הערב על גבי חוטי השתי. ההגיון המתבטא בעמודות שונה ממה שמופיע בשורות בצורה המחקה את השוני שבין חוטי שתי וחוטי ערב. יש שני הבדלים בין חוטי השתי ובין חוטי הערב ושני הבדלים דומים בין העמודות והשורות שבטבלאות <i>המשנה כדרכה</i>. ההבדל הראשון הוא שהמכנים המשותפים שבעמודות, כמו חוטי השתי, יותר דקים מן המכנים משותפים לשורות, הדומות לחוטי הערב. בטבלת <i>אנשי כפר חנניה</i> לכל צמד אמרות בשורה דמיון תוכני או לשוני חד. אין דמיון כל כך ברור בין ארבע האמרות שבכל עמודה. ההבדל השני בין השתי לערב הוא שהשתי קשור במקום וחוטי הערב מושחלים על גבי השתי. כן הוא במבנה המשנה. העמודות &#39;קבועות&#39; לעומת השורות. אבהיר זאת עכשיו דרך הדוגמה של חמשת הזוגות של הפרק הראשון של מסכת אבות כפי שניתחתי אותם במאמר הקודם. היבט של אהבה הופיע בעמודה הימינית והיבט של יראה בעמודה השמאלית בכל חמשת הזוגות. לעומת הבחינה הקבועה של העמודות הדומה לשתי, בשורות, הדומות לחוטי הערב, מצאנו חמשה נושאים. השתלשלות חמשת הנושאים מזוג לזוג, בדומה לחוטי הערב, קבעו צורת גוף האריג, שהוא עקר משמעות החבור. הכלל הדינמי המתבטא בנושאים המשתנים מזוג לזוג מדמה לחוטי הערב המושחלים על גבי השתי הקבוע. מתאים מאד לקרוא למכנים המשותפים &#39;חוטים&#39; בגלל הגמשות החוטים. צריך להגדיר את המכנה המשותף בצורה גמישה על מנת לאפשר גלוי הקשרים המחברים את כל החוטים באריג אחד. אם כן, נתחיל באיתור חוטי ערב, המכנים המשותפים של השורות. אחר כך נגדיר את המשותף לשתי העמודות, חוטי השתי. בסוף נעשה מעשה אורג ונראה את מכלול הקשרים.</span><span
+lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>קריאה ערב ושתי</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חוטי הערב</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חוט צמד1 : חברות, ריסון חופש הפרט</span></b><span lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><b><span dir=LTR><span dir=LTR></span>1</span></b><b><span
+  lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=RTL></span><span lang=HE style='font-size:10.0pt;font-family:
+  "Times New Roman \(Hebrew\)"'><span dir=RTL></span>(ב) רבי חנניה סגן הכהנים אומר<br>הוי מתפלל בשלומה שלמלכות<br>שאלמלא מוראה איש את רעהו חיים בלעו</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR>1</span></b><b><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=RTL></span><span lang=HE style='font-size:10.0pt;font-family:
+  "Times New Roman \(Hebrew\)"'><span dir=RTL></span>(ה) רבי נחוניא בן הקנה אומר<br>כל המקבל עליו על תורה<br>מעבירין ממנו על מלכות ועל דרך ארץ<br>וכל הפורק ממנו על תורה<br>נותנין עליו על מלכות ועל דרך ארץ</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>רבי חנניה סגן הכהנים טוען שהאדם רע מטבעו ורק הפחד מעונש מונע ממנו לבלוע את רעהו. המלכות נחוצה לאפשר חיים בצוותא. לעומתו, רבי נחוניא בן הקנה מדבר על אדם המקבל על עצמו מרצונו הוא לפעול באופן מוסרי, ולא בגלל היראה מכוח חיצון. אדם המצמצם את חופש פעולתו כי הוא מקבל עליו עול התורה מתעלה מעול מלכות. אין זה אומר שהוא חופשי לפעול כרצונו, רק שהוא קבל על עצמו מרצונו לרסן את מעשיו לפי תכתיבי התורה. שני התנאים מדברים על אדם החי עם הזולת בחברה, ולכן, צריך להגביל את מעשיו. ההגבלה מתבטאת במוראה ועול. אין זה ניתוח ממצה. יש להפיק הרבה מהשוואת האמרות. העמדתן זו לידי זו פותחת לפני כל מורה אפשרויות לדיון עשיר. בשלב זה של ניתוחנו יש להתרכז בהגדרת החוט של השורה, כלומר המשותף לצמד. מלכות מוזכרת בשתי האמרות בתפקידה המרסן, המקביל לקבלת עול תורה. ובשתי האמרות מתח בין הפרט ובין הדרישות של חיים בצבור. אם כן, אפשר לציין את חוט התכנון של צמד 1: &#39;חברות&#39; או &#39;ריסון הפרט&#39;.</span><span
+lang=HE style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חוט צמד 2: השרת השכינה</span></b><span lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><b><span dir=LTR><span dir=LTR></span>2</span></b><b><span
+  lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>רבי חנניה בן תרדיון אומר<br>שנים שיושבין ואין ביניהן דברי תורה<br>הרי זה מושב לצים<br>שנאמר ובמושב לצים לא ישב<br>אבל שנים שיושבין ויש ביניהם דברי תורה<br>שכינה ביניהם<br>שנאמר אז נדברו יראי ה&#39; איש אל רעהו<br>ויקשב ה&#39; וישמע<br>ויכתב ספר זכרון לפניו ליראי ה&#39; ולחשבי שמו<br>אין לי אלא שנים<br>מנין שאפלו אחד שיושב ועוסק בתורה<br>שהקדוש ברוך הוא קובע לו שכר<br>שנאמר ישב בדד וידם כי נטל עליו</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>2</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=RTL></span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'><span
+  dir=RTL></span>(ו) רבי חלפתא איש כפר חנניה אומר<br>עשרה שיושבין ועוסקין בתורה<br>שכינה שרויה ביניהם<br>שנאמר אלהים נצב בעדת אל<br>ומנין אפילו חמשה שנאמר ואגדתו על ארץ יסדה<br>ומנין אפילו שלשה שנאמר בקרב אלהים ישפט<br>ומנין אפילו שנים<br>שנאמר אז נדברו יראי ה&#39; איש אל רעהו<br>ויקשב ה&#39; וישמע וגו&#39;<br>ומנין אפילו אחד<br>שנאמר בכל המקום אשר אזכיר את שמי<br>אבוא אליך וברכתיך</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>האמרות של רבי חנניה בן תרדיון ורבי חלפתא איש כפר חנניה דומות כל כך עד שקשה לכאורה להבין למה רבי היה צריך להכניס את שתיהן לספרו. כדי ללמד את המוסר, כל אחת לבדה הייתה מספיקה. שני התנאים מביאים אותו פסוק &#39;אז נדברו יראי ה&#39;&#39; כדי להוכיח שהשכינה נמצאת אצל למדי תורה. הדמיון בולט כל כך, שצריך לבחון היטיב את ההבדלים ביניהן. אמרה 2א נפתחה באזכור מושב לצים. יש השוואה בין חברת לצים ובין למדי תורה. אין באמרה המקבילה השוואה כזאת. רבי חלפתא איש כפר חנניה מדבר רק על החיובי. הוא גם מרחיב את החבורה משני לומדים באמרה 2א עד עשרה ב- 2ב. יכול להיות שזה מתאים לדגש על החיובי, כי יש יותר לומדים. בשתי האמרות שואלים &#39;מנין שאפלו אחד&#39;, אבל מביאים שני פסוקי אסמכתא שונים:</span><span lang=HE style='font-family:Arial;
+color:#000066'><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=0 cellspacing=0 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:0cm;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'><td width="50%" valign=top style='width:50.0%;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><span dir=LTR style='font-size:10.0pt'><span
+  dir=LTR></span>2</span><span lang=HE style='font-size:10.0pt;font-family:
+  "Times New Roman \(Hebrew\)"'>א</span><span dir=LTR style='font-family:Arial;
+  color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>מנין שאפלו אחד שיושב ועוסק בתורה<br>שהקדוש ברוך הוא קובע לו שכר<br>שנאמר ישב בדד וידם כי נטל עליו</span></p></td><td width="50%" valign=top style='width:50.0%;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>2</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ב</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ומנין אפילו אחד<br>שנאמר בכל המקום אשר אזכיר את שמי<br>אבוא אליך וברכתיך</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>השוני בין האסמכתאות הולם את ההבדל בדגש שכבר ראינו בשתי האמרות. הלומד ב2-א משתכר על הנטל, &#39;לפום צרא אגרא&#39;. לעומתו אין סימן ב- 2ב שהלומד סובל או שמגיע לו פיצוי. שם יש רק ברכה. השוני מופיע גם בשאלות. רבי חנניה בן תרדיון שואל על השכר &#39;מנין...קובע לו שכר&#39;, ורבי חלפתא איש כפר חנניה שואל על שרית השכינה &#39;מנין אפילו אחד (שכינה שרויה)&#39;. מתחילה להסתמן מגמה בהבדל בין עמודה א&#39; ועמודה ב&#39;. בשני הצמדים שבדקנו, האמרה בעמודה א&#39; מנוסחת במונחים של טוב לעומת רע: ריסון פרא האדם על ידי המלכות, ותיקון חברת לצים על ידי תלמוד תורה. אין בעמודה ב&#39; המקבילה התייחסות לנושא הזה. תוך כדי ברור חוטי הערב, אנחנו מתחילים להבחין גם בחוטי השתי הדקים, המכנים המשותפים לעמודות. הם יתבהרו עוד אצל הצמד השלישי. לסיכום, כלל הצמד השני על אף ההבדלים הרבים שמצאנו, שרית השכינה.</span><span lang=HE style='font-family:
+Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חוט צמד 3: עבודת ה&#39;</span></b><span lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><b><span dir=LTR><span dir=LTR></span>3</span></b><b><span
+  lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=RTL></span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'><span
+  dir=RTL></span>(ג) רבי שמעון אומר<br>שלשה שאכלו על שלחן אחד<br>ולא אמרו עליו דברי תורה<br>כאילו אכלו מזבחי מתים<br>שנאמר כי כל שלחנות מלאו קיא צאה בלי מקום<br>אבל שלשה שאכלו על שלחן אחד<br>ואמרו עליו דברי תורה<br>כאלו אכלו משלחנו שלמקום ברוך הוא<br>שנאמר וידבר אלי זה השלחן אשר לפניה</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>3</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=RTL></span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'><span
+  dir=RTL></span>(ז) רבי אלעזר איש ברתותא אומר<br>תן לו משלו שאתה ושלך שלו<br>וכן בדוד הוא אומר<br>כי ממך הכל ומידך נתנו לך</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>אחרי שכבר התחלנו לראות שעמודה א&#39; בונה על אבחנה בין טוב ורע שאיננה בעמודה ב&#39;, מוכיח הצמד השלישי את המגמה. שוב האמרה בעמודה א&#39; מביאה את הטוב לאור הרע. שולחן של &#39;זבחי מתים&#39; נעשה &#39;שלחנו של המקום ברוך הוא&#39;. בעמודה ב, באמרה 3ב, אין כל רמז לרע. מבחינת הדמיון בין שתי האמרות יש הבדל משמעותי בין הצמד הזה ובין צמדים 1, 2, ו4. אין ביניהן כל הקבלה לשונית או תוכנית המחייבת את השוואתן. לולא ננעלו האמרות של רבי שמעון ורבי אלעזר איש ברתותא כה חזק בתוך המבנה, לא היינו מוצאים סיבה להעמיד אותן זו מול זו. אבל משנערכת הטבלה הקורא אינו יכול אלא לחפש את הדמיון כאן כמו שמופיעה בצמדים האחרים. ואכן, הוא נמצא בתוכן הפסוקים: &#39;זה השלחן אשר לפני ה&#39;&#39;, ו &#39;מידך נתנו לך.&#39; בשתיהן אפיון של עבודת ה&#39;, ובכן אפשר להגדיר את חוט הצמד: עבודת ה&#39;. אפילו הרע בעמודה א מוזכר כדומה לקורבנות &#39;זבחי מתים&#39;.</span><span lang=HE
+style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חוט צמד 4: המהלך בדרך מתחיב בנפשו</span></b><span lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><b><span dir=LTR><span dir=LTR></span>4</span></b><b><span
+  lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=RTL></span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'><span
+  dir=RTL></span>(ד) רבי חנניה בן חכינאי אומר<br>הנעור בלילה והמהלך בדרך יחידי<br>ומפנה לבו לבטלה<br>הרי זה מתחיב בנפשו</span></p></td><td width="50%" style='width:50.0%;border:inset black 1.0pt;mso-border-alt:
+  inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>4</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>רבי שמעון אומר<br>המהלך בדרך ושונה ומפסיק ממשנתו ואומר<br>מה נאה אילן זה ומה נאה ניר זה<br>מעלה עליו הכתוב כאלו מתחיב בנפשו</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>רבי חנניה בן חכינאי ורבי שמעון מדברים על מי שמהלך לבד. ב4א זה מפורש, &#39;יחידי&#39;. ב4ב לומדים את זה מלשון &#39;משנתו&#39;, הוא שונה לבד. שתי האמרות, בניגוד לכל מה שבא לפני זה, עוסקות באדם בודד בפני עצמו. צירוף הסיומת המשותפת &#39;מתחיב בנפשו&#39; משלים את התמונה של אדם אחראי על מעשיו הוא. ההיבט של רעות שמצאנו עד כה בעמודה א&#39; מופיע גם כאן באבחנה בין 4א, &#39;מתחיב בנפשו&#39; ובין 4ב, &#39;כאילו מתחיב בנפשו&#39;. ארחיב את הנקודה הזאת בהמשך. לעת עתה אסכם את חוטי הערב:</span><span lang=HE style='font-family:
+Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+embed'><b><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>טבלה 5. סיכם חוטי הערב</span></b><span lang=HE><o:p></o:p></span></p><div align=center dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:4.8pt 4.8pt 4.8pt 4.8pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0'><td width="18%" valign=top style='width:18.74%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>הצמד</span></b></p></td><td width="40%" valign=top style='width:40.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>הדמיון בניסוח</span></b></p></td><td width="39%" valign=top style='width:39.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>חוט הצמד</span></b></p></td></tr><tr style='mso-yfti-irow:1'><td width="18%" valign=top style='width:18.74%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR style='font-size:13.5pt'>1</span></p></td><td width="40%" valign=top style='width:40.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>מלכות</span></p></td><td width="39%" valign=top style='width:39.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חברות, ריסון הפרט</span></p></td></tr><tr style='mso-yfti-irow:2'><td width="18%" valign=top style='width:18.74%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><strong><span dir=LTR>2</span></strong></p></td><td width="40%" valign=top style='width:40.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>שכינה ביניהם</span></p></td><td width="39%" valign=top style='width:39.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>השרת השכינה</span></p></td></tr><tr style='mso-yfti-irow:3'><td width="18%" valign=top style='width:18.74%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><strong><span dir=LTR>3</span></strong></p></td><td width="40%" valign=top style='width:40.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>השלחן אשר לפני ה&#39;-תנו לו</span></p></td><td width="39%" valign=top style='width:39.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>עבודת ה&#39;</span></p></td></tr><tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'><td width="18%" valign=top style='width:18.74%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><strong><span dir=LTR>4</span></strong></p></td><td width="40%" valign=top style='width:40.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>המהלך בדרך מתחיב בנפשו</span></p></td><td width="39%" valign=top style='width:39.42%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:4.8pt 4.8pt 4.8pt 4.8pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>אחריות המהלך לבד</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-family:Arial;color:#000066'><o:p>&nbsp;</o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>חוטי השתי</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>בבדיקת הצמדים מצאנו הבדל קבוע בין א&#39; ובין ב&#39;. בכל האמרות א&#39; מצאנו פן של רעות או פורענות החסר מאמרות ב&#39;:</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>היבטי רעות בעמודה א&#39;:</span><span lang=HE><br></span><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>איש את רעהו חיים בלעו<br>מושב לצים</span><span lang=HE><br></span><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>זבחי מתים</span><span lang=HE><br></span><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>מתחיב בנפשו.</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>המוסר באמרות עמודה א&#39; בא למנוע או למתן את הרעות. לכן אפשר להגדיר את חוט עמודה א&#39;: &#39;מניעת רעות.&#39; אין לעמודה ב&#39; חוט ברור כל כך כמו בעמודה א&#39;. אבל הוא מתבהר בהשוואת שתי העמודות על רקע הכלל הבולט של עמודה א&#39;. הפעולות ב-א&#39; מווסתות במסגרת של שכר ועונש. האמרות מנוסחות בדרך שמדגישה את התוצאות של עשיית המעשה הלא רצוי: &#39;לא אמרו עליו דברי תורה</span><span lang=HE style='font-size:13.5pt;font-family:Symbol;
+mso-bidi-font-family:Symbol'>¬</span><span lang=HE style='font-size:13.5pt'> </span><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>כאילו אכלו מזבחי מתים.&#39; המניעים לפעולות המוזכרות באמרות בעמודה ב&#39; אינם במסגרת של שכר ועונש: &#39;תן לו משלו שאתה ושלך שלו.&#39; נראה לי שהאבחנה תואמת את הקטיגוריות של &#39;לשמע&#39; ו&#39;לא לשמע.&#39; בעמודה א&#39; פועלים מתוך מניעים &#39;לא לשמע&#39;, קבלת שכר ומניעת עונש. בעמודה ב&#39; הכל נעשה לשמע, היינו, ללא מניעי שכר ועונש. אפשר לבחון את חוטי השתי על ידי הצבתם בחזרה בטבלה ובדיקת האריג המתקבל:</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE>&nbsp;<o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+embed'><b><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>טבלה 6. אריגת חוטי השתי והערב</span></b><span lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0'><td width="31%" valign=top style='width:31.68%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><span dir=LTR><span dir=LTR></span>&nbsp; </span><span
+  dir=LTR style='font-family:Arial;mso-bidi-font-family:Narkisim;color:#000066'><o:p></o:p></span></p></td><td width="67%" colspan=2 valign=top style='width:67.56%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>חוטי השתי</span></b></p></td></tr><tr style='mso-yfti-irow:1'><td width="31%" valign=top style='width:31.68%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>חוטי הערב</span></b><span dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>המכנים המשותפים לצמדים</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><strong><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>חוט עמודה א&#39;</span></strong><span dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>לא לשמע<br>שכר ועונש</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><strong><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>חוט עמודה ב</span></strong><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>&#39;</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>לשמע<br>הרחבת הטוב שב-כלל א&#39;</span></p></td></tr><tr style='mso-yfti-irow:2'><td width="31%" valign=top style='width:31.68%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>1</span><span dir=LTR style='font-family:Arial;
+  color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>חברות, ריסון הפרט</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>1</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>א</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>רק יראת כוח הזולת מרסנת את האדם מהפעלת כוחו</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>1</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ב</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>מי שמציית לקול מצפונו, &#39;מקבל עליו&#39;, מרסן את עצמו מרצונו</span></p></td></tr><tr style='mso-yfti-irow:3'><td width="31%" valign=top style='width:31.68%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>2</span><span dir=LTR style='font-family:Arial;
+  color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>תלמוד תורה, השרת השכינה</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>2</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>א</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>הלומד מקבל שכר<br>ונמנע מלהיות בחברה לצים</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>2</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ב</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>בירכת ה&#39;</span><span dir=LTR style='font-family:"Times New Roman \(Hebrew\)"'><br></span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>יותר לומדים<br>השרת שכינה ללא הבט שלילי</span></p></td></tr><tr style='mso-yfti-irow:4'><td width="31%" valign=top style='width:31.68%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>3</span><span dir=LTR style='font-family:Arial;
+  color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>עבודת ה&#39;</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>3</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>א</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>דברי תורה הופכים זבחי מתים לזבחי ה&#39;</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>3</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ב</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>נותנים לה&#39; כי הכל שלו</span></p></td></tr><tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'><td width="31%" valign=top style='width:31.68%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>4</span><span dir=LTR style='font-family:Arial;
+  color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>אחריות המהלך לבד</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>4</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>א</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>הולך בדרך יחידי<br>מתחיב בנפשו</span></p></td><td width="33%" valign=top style='width:33.66%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR>4</span><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ב</span><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>הולך ושונה ונהנה<br>כאילו מתחיב בנפשו</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>הצטלבות כללי העמודות וכללי שלושת הצמדים הראשונים ברורה. הרעות בעמודה א&#39; קבעו את המימד של שכר ועונש שביסוד הגדרת חוט העמודה. שלוש האמרות הראשונות בעמודה ב&#39; בונות על הטוב המוזכר במקבילים בעמודה א&#39;. אין באמרה 4א היבט של טוב לעומת רע, כפי שיש בשלוש האמרות הקודמות בעמודה א&#39;. בכל זאת, ברור שיש ב4ב משהו חיובי יותר מ4א. הביטוי הקשה &#39;מתחיב בנפשו&#39; שב4א מתרכך ב4ב &#39;כאילו מתחיב בנפשו&#39;. כמו כן, ההולך בדרך ב4ב ושונה משנה, עדיף על המפנה את לבו לבטלה ב4א.</span><span lang=HE
+style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>בזה אנחנו מסיימים את השלב של קריאה שתי וערב. טבלת ההצטלבויות למעלה מסכמת את איסוף הנתונים המשתמעים מן החבור הערוך בטבלה. הגדרנו באופן ראשוני ששה חוטים שמהווים השלד שכל הבניין בנוי עליו, אף על פי שאינם מופיעים כלל בטקסט. יחד אם זאת, ברור שאנחנו עדיין מסתכלים על חלקי המבנה בלבד. בכללי העמודות מצאנו את השתי; וחוטי הערב, הצמדים, ארוגים עליהם. אבל אלו עדיין חוטים. על מנת לראות את האריג הגמור, צריך למתוח את הקשרים ולהבחין באחידות המבנה, ליצור מיזוג. בינתיים, אפשר לאומר שהתחלנו ללמוד איך לקרוא טקסט לא ליניארי. ראינו שיש לקחת בחשבון את שני הממדים של המרחב הרעיוני. עכשיו נפנה לממד נוסף.</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>הממד השלישי: סימטרייה</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>בשלב הראשון של בדיקת המבנה ציינתי שיש היבט של סימטרייה המבוסס על השימוש בציטוטים: אין בצמדים הקיצוניים 1 ו4, ויש הרבה בצמדים הפנימיים, 2 ו3. עכשיו אפשר להתחיל לדבר על המשמעות של הסימטרייה הזאת. יש הבדל תוכני בין הצמדים החיצונים והפנימיים המקביל לשימוש בציטוטים. אפשר לראות את זה בטבלת ההצטלבויות. צמדים 2 ו3 מזכירים את העל-אנושי, השכינה ועבודת הקב&quot;ה. אולי זו הסיבה לריבוי הפסוקים, מהם לומדים על האלוהי. בצמדים החיצוניים, בהם אין פסוקים, לא מזכירים את האלוהות. ארבע האמרות החיצוניות מסורות לענייני אנוש ללא התערבות אלוהית. אלוהים שייך לרובד הפנימי בלבד. אם כן, אפשר לאבחן באריג ציור הכולל תחום &#39;חיצוני&#39; ללא אלוהים ומרחב פנימי בו מופיע אלהים. כדי למקד את התמונה, צריך רק לעשות את המתבקש מן הסימטרייה ולהשוות את הצמד הראשון והאחרון.</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ציינתי כחוט הצמד הראשון חברות, הכשרת האדם לחיות בחברה. המלכות מאפשרת חיים בצוותא. בצמד הרביעי מצאנו אדם המהלך לבד. יש פן של הפכיות בין הצמד הראשון והאחרון. בהתחלה האדם משתעבד לשלטון, בין שזה מלכות ובין שזה עול תורה, ובסוף הוא הולך לדרכו לבד ומקבל על עצמו אחריות. אלה קצוות המבנה. על פי הצורה יש לצפות לשלב ביניים אשר יהווה מעבר משעבוד לחרות. עכשיו צריך לחזור ולהתבונן בצמדים הפנימיים לאור האבחנה בין החיצונים. גם הבדיקה הזאת היא פועל יוצא מן המבנה.</span><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><b><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>קריאת החיבור העולה על גבי המבנה הספרותי</span></b><span lang=HE><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>אפשר לראות בתמונה הכוללת, כפי שהיא מצטיירת עד כאן, שלושה חלקים: בצמד 1 יצור חברתי נשלט, ב2 ו3 מפגש עם העל אנושי, וב4 אדם יחיד האחראי על עצמו. על פי הציור הזה הצמדים המרכזיים משמשים מעבר משעבוד בצמד הראשון לשחרור או התעצמות בצמד הרביעי. מצטייר תהליך חינוכי. המבחן של התהליך נמצא בהבדל בין 2 ו3. אם הם משתלבים כל אחד לפי המכנה המשותף שלו, מצאנו את המסר הכולל של המבנה. דומני שהשוני בין 2 ו3 נמצא בתחום המודעות. הלומדים ב2 אומנם משפיעים על האל והשכינה אבל אין סימן שהם ערים לזה. רק ב3 הם באים לידי התפקחות כלפי האל: &#39;זה השלחן אשר לפני ה&#39;&#39;, &#39;כי ממך הכל&#39;. השנוי בתודעה משתלב היטיב בתהליך חינוכי. בצמד הראשון פרא אדם הזקוק לריסון על ידי גורם חיצוני. בצמד 2 הוא לומד להתקרב לאלוהות. בצמד 3 הוא עובד את ה&#39; ומגיע לידיעה ההופכת אותו ליחיד אחראי על עצמו בצמד 4. ובכן החבור העולה על גבי המבנה עוסק בתהליך חינוכי אמיתי המביא את הלומד משעבוד לעצמאות. עכשיו אפשר לבחון מחדש את המשמעות חוטי השתי, שתי העמודות. אבדוק את השוני בין העמודות לפי האסמכתאות בצמדים המרכזיים. בחרתי בין הפסוקים השונים המופיעים בצמד השני את המובאים לענות על אותה שאלה &#39;מנין אפילו אחד&#39;. השוני ביניהם מבליט את השוני בין העמודות.</span><span
+lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=1 cellspacing=3 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:1.5pt;border:outset black 1.0pt;
+ mso-border-alt:outset black .75pt;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span dir=LTR></span><b><span dir=LTR><span dir=LTR></span>2</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>מנין שאפלו אחד שיושב ועוסק בתורה<br>שהקדוש ברוך הוא קובע לו שכר<br>שנאמר ישב בדד וידם כי נטל עליו (איכה ג&#39;</span><span lang=HE style='font-family:
+  "Times New Roman \(Hebrew\)";mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>)</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>2</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>ומנין אפילו אחד<br>שנאמר בכל המקום אשר אזכיר את שמי<br>אבוא אליך וברכתיך (שמות כ&#39;)</span></p></td></tr><tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>3</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>א</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>כאלו אכלו משלחנו שלמקום ברוך הוא<br>שנאמר וידבר אלי זה השלחן אשר לפני ה&#39; (יחזקאל מ&quot;א)</span></p></td><td width="50%" valign=top style='width:50.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><b><span dir=LTR style='font-size:13.5pt'>3</span></b><b><span
+  lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>ב</span></b><span
+  dir=LTR style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-family:"Times New Roman \(Hebrew\)"'>וכן בדוד הוא אומר<br>כי ממך הכל ומידך נתנו לך (ד&quot;ה א&#39; כ&quot;ט)</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>הפסוק מאיכה באמרה 2א בא מפרק &#39;אני הגבר&#39; העוסק בייסורים על רקע החורבן. הפסוק המקביל ב2ב בא ממעמד הר סיני בהקשר הקמת מזבח, מיד אחרי עשרת הדברים. מצד אחד ייאוש, סבל והסתרת פנים; ומצד שני חידוש, תקווה והתגלות מעמד הר סיני. האבחנה הזאת תופסת גם בצמד 3. יחזקאל יושב בגלות אחרי החורבן וחוזה את המקדש. הפסוק מובא מן הפרקים המתארים איך הנביא מטייל בנבואה אם איש המחזיק באמת המידה ומודד את כל מרכיבי בית המקדש. בצאתו מן הקודש הוא רואה את המזבח ואומר &#39;זה השלחן&#39;. המקביל ב3ב נמצא בדברי הימים בפרק המתאר את צבירת הכסף וזהב לבניית בית המקדש בסוף ימיו של דוד ומסירת המשימה לשלמה. בהסתכלו על כל מה שהוא והעם תרמו להקדש אומר דוד &#39;כי ממך הכל&#39;. שוב ההבדל בין עמודה א&#39; ועמודה ב&#39; הוא בין חורבן וייסורים ובין חידוש ותקווה. שני הפסוקים המובאים בעמודה א&#39; קשורים לחורבן בית המקדש, ושני הפסוקים בעמודה ב&#39; קשורים לתיקון מזבח חדש. עכשיו צריך להבין את המשמעות של האבחנה הברורה הזאת בתהליך החינוכי.</span><span lang=HE style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>כפי שמשתמע מצמד 4 יש שתי דרכים, דרך הנעור בלילה ודרך המהלך ושונה. אחת, דרך הנעור בלילה החסר תנועה, דרך ייסורים וחורבן. השנייה, דרך המהלך ושונה, דרך חידוש ותקווה. יש ראיה מדברי רשב&quot;י שדרך אחת דרך נזירים מתבודדים ומסתגפים, והשניה דרך תלמידי חכמים המחדשים חידושים. רבי שמעון בר יוחאי מדבר על שתי הדרכים. קריאת שתי אמרותיו על רקע סיפור רבי שמעון במערה מאירת עיניים ממש. רבי שמעון יצא מן המערה פעמיים. ההבדל בין היציאות דומה להבדל בין שתיהדרכים שמצאנו. אחרי שרבי שמעון ובנו יושבים שתים עשרה שנים במערה קבורים עד הראש ולומדים תורה, בא אליהו ומודע להם שמת הקיסר. &#39;יצאו וראו בני אדם כשהם חורשים וזורעים. אמר: מניחין חיי עולם ועוסקין בחיי שעה. כל מקום שנותנים עיניהם מיד נשרף, יצאה בת קול ואמרה להם: להחריב עולמי יצאתם, חזרו למערתכם.&#39; אחרי שהם ננזפו והוחזרו לעוד שתים עשרה חודשים ישיבה במערה, יצא רבי שמעון ודרש &#39;ויחן את פני העיר&#39; ובקש לתקן תיקונים. חזיון יחזקאל שרבי שמעון מביא ב3א הולם את גישתו ביציאה הראשונה: עולם אידיאלי, נמדד בקנה המידה, עומד על חורבות העולם הזה. דברו של רבי שמעון ב4ב הולם את דעתו ביציאה השניה כאשר הוא בקש לעסוק בתיקון עולם. כדי להבהיר את הנקודה האחרונה אעמיק בפרוש 4ב.</span><span
+lang=HE><o:p></o:p></span></p><div align=left dir=rtl><table class=MsoNormalTable dir=rtl border=0 cellspacing=0 cellpadding=0
+ width="100%" style='width:100.0%;mso-cellspacing:0cm;mso-padding-alt:5.4pt 5.4pt 5.4pt 5.4pt;
+ mso-table-dir:bidi'><tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'><td valign=top style='padding:5.4pt 5.4pt 5.4pt 5.4pt'><p align=center dir=RTL style='text-align:center;direction:rtl;unicode-bidi:
+  embed'><span lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>המהלך בדרך ושונה<br>ומפסיק ממשנתו ואומר<br>מה נאה אילן זה<br>ומה נאה ניר זה<br>מעלה עליו הכתוב<br>כאלו מתחיב בנפשו</span></p></td></tr></table></div><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>האמרה הזאת נשמעה כשיר קצבי פשוט. הוא מאד דומה למה שנקרא </span><span lang=HE
+style='font-size:13.5pt'>limerick. </span><span lang=HE style='font-size:13.5pt;
+font-family:"Times New Roman \(Hebrew\)"'>לכאורה יש לתמוהה שרשב&quot;י מבזבז את זמנו בחיבור שירה כל כך עממית- אם כבר מחברים שיר, שיהיה בסגנון התורני כשירת הים או כשיר השירים! נהוג לדרוש את האמרה הזאת כאילו היא אומרת שיש שתי רשויות, עולם התורה השכלי ועולם המעש החומרי: מי שמתנתק מהעולם השכלי לעסוק בעולם החומר ראוי כאילו מתחיב בנפשו. זו טעותו של רבי שמעון ביציאה הראשונה וגם טעות של מי שמפרש את האמרה הזאת בצורה הזאת. המדבר משבח את בריאת הבורא &#39;מה נאה אילן זה&#39; וגם את האדם העושה מצוות ה&#39; בעבודת הגן בסילוק קוץ ודרדר &#39;מה נאה ניר זה.&#39; להגיד שבחי עולם הבורא אינו מה שלא מקובל באמרה, אלא ההפסק בין התורה ובין העולם, התפיסה שיש ניגוד בין התורה ובין הבריאה. יש להגיד &#39;מה נאה&#39; תוך כדי השינון, אחרת הוא כאילו אומר שיש שתי רשויות. בכך רבי שמעון הצליח לשלב בסגנון משנתו סגנון תורני של משנה וסגנון עממי של שירה קצבית, ובתוכן מודעות ליופי הבריאה האלוהית באילן ויופי מלאכת הבריאות החורשים את הניר. זאת הדוגמה של אי-הפסקה. אין ניתוק בין התורה ובין העולם. לפי זה אפשר להבין את חיבורו של רבי.</span><span lang=HE
+style='font-family:Arial;color:#000066'><o:p></o:p></span></p><p dir=RTL style='text-align:right;direction:rtl;unicode-bidi:embed'><span
+lang=HE style='font-size:13.5pt;font-family:"Times New Roman \(Hebrew\)"'>יש שתי דרכים להתגדל בתורה, אחת לכאורה תועלתנית, עמודה א&#39;, והשנייה שלכאורה לשם שמיים, עמודה ב&#39;. סופה של הדרך התועלתנית, המבוססת על פחדים, בהסתגרות והתבודדות במערות. לעומתה, הדרך שבעמודה ב שנראית בהתחלה לשם שמיים, מתבררת בסוף כזו שתוכל להביא לתיקון עולם. השוני שמצאנו באסמכתאות ב2 ו3, בין אווירת החורבן וסיגופים מחד, ואווירת חידוש ותקווה מאידך, תרמו רבות להבנת התמונה כראוי. הציור הגדול המשתקף מהסימטרייה היא של &#39;היכל הקודש&#39;. הצמדים הקיצונים בחזקת חול, אין בהם פסוקים. במוקד התמונה, איש יחיד יושב בדד ומתבודד אם הקב&quot;ה ככהן גדול הנכנס לפני ולפנים: &#39; ישב בדד וידם כי נטל עליו&#39;, &#39; אבוא אליך וברכתיך.&#39; כאן בפנים קיים מעין קודש קדשים, מוקד התורה. נכנסים לקודש דרך בית המדרש. שם האדם לומד להיות תלמיד חכם המסוגל ללמוד מעצמו להוריד את השכינה. היציאה מן הקודש איננה עוברת שוב דרך בית המדרש אלא דרך בית המקדש: &#39;זה השלחן אשר לפני ה&#39;. הצמדת האכילה להתקרבות לקודש מזכירה את חווייתם של אצילי ישראל בשמות כ&quot;ד &#39;ויחזו את האלוהים ויאכלו.&#39; יתכן שהמבנה הספרותי המורכב בא לרמוז על חוויה מיסטית. הצמד האחרון, אם כן, מצביע על הסכנות הכרוכות בהליכה בדרך של &#39;הנעור בלילה והמהלך בדרך יחידי ומפנה לבו לבטלה.&#39; כאן הצגתי דיון חלקי במשמעות החבור <i>אנשי כפר חנניה</i>. לא הבאתי את פרושי להוכיח את נכונותו, אלא להורות את הדרך לגשת אל הטמון במבנה הזה.</span><span
+lang=HE><o:p></o:p></span></p><p class=MsoNormal><span dir=LTR></span><span dir=LTR></span>&nbsp; <span
+lang=HE dir=RTL><o:p></o:p></span></p></div>
+		
+                <!-- #EndEditable -->
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>מאמרים מומלצים</h4>
+                    <ul>
+                        <li>
+						<a href="../../../Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li>
+						<a href="../../../Torah-New/Hebrew/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="מבוא%20למשנה%20כדרכה%20כולל%20דוגמאות.pdf">מבוא חדש למשנה כדרכה</a></li>
+                        <li><a href="MAVO.htm">מבוא למשנה כדרכה</a></li>
+                        <li><a href="TheWholeStructure.pdf">כל חלקי הבית אחוזים זה בזה</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>טקסטים מלאים</h4>
+                    <ul>
+                        <li>
+						<a href="../../../Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">פורטל התורה</a></li>
+                        <li>
+						<a href="../Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">פורטל המשנה</a></li>
+                        <li><a href="../Text/The%20Structured%20Mishnah.pdf">המשנה כדרכה</a></li>
+                        <li>
+						<a href="../../../Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">חמשה חומשי התורה כדרכה</a></li>
+                        <li>
+						<a href="../../../Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">התורה כדרכה ב-PDF</a></li>
+                        <li>
+						<a href="../../../Torah-New/Hebrew/Text/The%20Structured%20Torah.docx">התורה כדרכה ב-DOCX</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul>
+                        <li>
+						<a href="../../../General/Color%20Codes/English%20Color%20Code.htm">מדריך קוד הצבעים</a></li>
+                        <li>
+						<a href="../../../Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">ההשערה החיבורית</a></li>
+                        <li><a href="http://www.facebook.com/woventorah/">דיון בפייסבוק</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">מצגת וידאו חלק 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">מצגת וידאו חלק 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>אודות משה קליין</h4>
+                    <p>בוגר St. John's College ו-Yeshiva University. למדתי אצל הרב יהודה ליאון אשכנזי, המכונה "מניטו," וקבלתי ממנו תורה שבעל פה. חונכתי בגישות מדעיות על ידי פרו' יעקב מילגרום ומרי דאגלס.</p>
+                    <p><a href="../../../General/Contact.htm">צור קשר</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 משה קליין. פרויקט הטקסטים הארוגים.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+    function toggleMenu() {
+        var menu = document.getElementById('navMenu');
+        menu.classList.toggle('show');
+    }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        var menu = document.getElementById('navMenu');
+        var menuToggle = document.querySelector('.menu-toggle');
+        var nav = document.querySelector('nav');
+        
+        if (!nav.contains(event.target) && menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        }
+    });
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KNYXKY3VV1');
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

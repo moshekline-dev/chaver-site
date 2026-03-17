@@ -1,0 +1,114 @@
+.elementor-4769 .elementor-element.elementor-element-7c1de9c1{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--padding-top:120px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-4769 .elementor-element.elementor-element-3ab20cd6{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--gap:0px 0px;--row-gap:0px;--column-gap:0px;}.elementor-4769 .elementor-element.elementor-element-2d11602c{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-4769 .elementor-element.elementor-element-47a1e99d.elementor-element{--align-self:center;}.elementor-4769 .elementor-element.elementor-element-5b48391{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-4769 .elementor-element.elementor-element-6991e4e9.elementor-element{--align-self:center;}.elementor-4769 .elementor-element.elementor-element-24eb5f25{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-4769 .elementor-element.elementor-element-2750fcd7 .elementor-button-content-wrapper{flex-direction:row-reverse;}.elementor-4769 .elementor-element.elementor-element-6661c8ce{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-4769 .elementor-element.elementor-element-6589556{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}@media(min-width:768px){.elementor-4769 .elementor-element.elementor-element-2d11602c{--width:50%;}.elementor-4769 .elementor-element.elementor-element-5b48391{--width:50%;}.elementor-4769 .elementor-element.elementor-element-24eb5f25{--width:50%;}}/* Start custom CSS for container, class: .elementor-element-6589556 *//* =======================================
+   Hebrew Units Mobile Display Fix
+   Equal column widths and proper mobile display
+   ======================================= */
+
+/* Force equal column widths for Hebrew units */
+.hebrew-torah-unit-wrapper .torah-table {
+  table-layout: fixed !important; /* Forces equal column distribution */
+  width: 100% !important;
+}
+
+/* Ensure all columns get equal width */
+.hebrew-torah-unit-wrapper .torah-table td {
+  width: auto !important; /* Let fixed table-layout handle distribution */
+}
+
+/* Override any inline width styles on cells */
+.hebrew-torah-unit-wrapper .torah-table td[style*="width"] {
+  width: auto !important;
+}
+
+/* For 2-column layouts */
+.hebrew-torah-unit-wrapper .torah-table tr:has(td:nth-child(2):last-child) td {
+  width: 50% !important;
+}
+
+/* For 3-column layouts */
+.hebrew-torah-unit-wrapper .torah-table tr:has(td:nth-child(3):last-child) td {
+  width: 33.33% !important;
+}
+
+/* For 4-column layouts */
+.hebrew-torah-unit-wrapper .torah-table tr:has(td:nth-child(4):last-child) td {
+  width: 25% !important;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  /* Remove min-width constraints */
+  .hebrew-torah-unit-wrapper .torah-table {
+    min-width: unset !important;
+  }
+  
+  /* Remove horizontal scrolling */
+  .hebrew-torah-unit-wrapper .torah-table-container {
+    overflow-x: visible !important;
+    -webkit-overflow-scrolling: unset !important;
+  }
+  
+  /* Remove scroll indicator */
+  .hebrew-torah-unit-wrapper .torah-table-container::after {
+    display: none !important;
+  }
+  
+  /* Ensure text wraps properly */
+  .hebrew-torah-unit-wrapper .torah-table td,
+  .hebrew-torah-unit-wrapper .torah-table th {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* Adjust padding for mobile */
+  .hebrew-torah-unit-wrapper .torah-column {
+    padding: 10px 8px !important;
+  }
+  
+  /* Increase base font size for tablets */
+  .hebrew-torah-unit-wrapper {
+    font-size: 16px;
+  }
+  
+  .hebrew-torah-unit-wrapper .torah-text {
+    font-size: 16px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .hebrew-torah-unit-wrapper .torah-column {
+    padding: 8px 5px !important;
+  }
+  
+  /* Increase font size for better readability */
+  .hebrew-torah-unit-wrapper {
+    font-size: 16px;
+  }
+  
+  .hebrew-torah-unit-wrapper .torah-text {
+    font-size: 16px;
+  }
+}
+
+/* Handle colspan cells properly */
+.hebrew-torah-unit-wrapper .torah-table td[colspan="2"] {
+  width: auto !important; /* Let colspan handle the width */
+}
+
+.hebrew-torah-unit-wrapper .torah-table td[colspan="3"] {
+  width: auto !important; /* Let colspan handle the width */
+}
+
+/* Fallback for browsers that don't support :has() */
+@supports not .elementor-4769 .elementor-element.elementor-element-6589556(:has(*)) {
+  /* Default equal distribution for 3 columns (most common) */
+  .hebrew-torah-unit-wrapper .torah-table td {
+    width: 33.33% !important;
+  }
+  
+  /* Respect colspan */
+  .hebrew-torah-unit-wrapper .torah-table td[colspan] {
+    width: auto !important;
+  }
+}/* End custom CSS */

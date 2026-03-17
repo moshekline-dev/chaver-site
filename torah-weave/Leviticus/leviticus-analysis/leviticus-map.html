@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>Part B: The Map of Leviticus - From Units to Architecture | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+<meta name="description" content="Structural analysis showing how Leviticus's twenty-two units organize into three concentric rings around Leviticus 19, mirroring the architecture of the Tabernacle.">
+<meta name="keywords" content="Leviticus structure, concentric rings, Torah Weave, Tabernacle, Unit-triads, chiasm, Mary Douglas, biblical literary analysis, woven Torah">
+<meta name="author" content="Moshe Kline">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Part B: The Map of Leviticus — From Units to Architecture",
+  "description": "How Leviticus's twenty-two units organize into three concentric rings around Leviticus 19, mirroring the architecture of the Tabernacle.",
+  "author": { "@type": "Person", "name": "Moshe Kline", "url": "https://chaver.com" },
+  "datePublished": "2026-03-06",
+  "dateModified": "2026-03-06",
+  "publisher": { "@type": "Organization", "name": "Torah Weave", "url": "https://chaver.com" }
+}
+</script>
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/torah-weave/index.html">Torah Weave</a> &raquo;
+    <a href="/torah-weave/Leviticus/leviticus-analysis/overview.html">Leviticus</a> &raquo;
+    <span>Part B: The Map</span>
+</nav>
+
+<article itemscope itemtype="https://schema.org/ScholarlyArticle">
+
+<header class="unit-header-section">
+    <h1 itemprop="headline">Part B: The Map of Leviticus</h1>
+    <div class="unit-meta">
+        <span itemprop="description">From Units to Architecture</span>
+    </div>
+</header>
+
+<main itemprop="articleBody">
+
+<section id="introduction">
+<h2>From Building Blocks to Blueprint</h2>
+
+<p>We now have twenty-two units&mdash;identified by their boundaries, confirmed by their subjects, with one (Unit 1) opened up to show the two-dimensional table inside. Twenty-two building blocks, laid out in sequence from Leviticus 1 through 27.</p>
+
+<p>But are they just a sequence? Do these twenty-two units simply follow one another, or do they organize into something larger? If we step back from the individual units and ask what connects them&mdash;which ones share features, which ones mirror each other, which ones seem to belong together&mdash;does a pattern emerge?</p>
+
+<p>It does. And tracing how it emerges, step by step, is what this section is about.</p>
+</section>
+
+<section id="stage-one">
+<h2>Stage One: Two Triads That Identify Themselves</h2>
+
+<p>The most natural first step is to ask whether consecutive units relate to each other. Some groupings are immediately visible.</p>
+
+<p>The first three units form a complete treatment of the sacrificial system. <a href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1.html">Unit 1</a> (Leviticus 1&ndash;3) prescribes the three types of voluntary private offerings&mdash;burnt, cereal, and well-being. <a href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2.html">Unit 2</a> (Leviticus 4&ndash;5) prescribes offerings required when someone has transgressed inadvertently&mdash;the sin and guilt offerings. <a href="/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3.html">Unit 3</a> (Leviticus 6&ndash;7) prescribes what the priest does with all of these offerings&mdash;the administrative procedures, priestly portions, and handling instructions. Together: what the willing donor brings, what the inadvertent transgressor must bring, and what the priest does with it all. Unit 3 closes with a summary that names the offerings from both earlier units: &ldquo;This is the law of the burnt-offering, of the cereal-offering, and of the sin-offering, and of the guilt-offering, and of the consecration-offering, and of the sacrifice of well-being&rdquo; (7:37). These three belong together. We will call them Unit-triad A.</p>
+
+<p>The last three units also cohere. <a href="/torah-weave/Leviticus/leviticus-unit-20/leviticus-unit-20.html">Unit 20</a> (Leviticus 25) prescribes the sabbatical year, the jubilee, and the laws of redemption for land, houses, and persons&mdash;all looking forward to life in the land of Canaan: &ldquo;When ye come into the land which I give you, then shall the land keep a sabbath&rdquo; (25:2). <a href="/torah-weave/Leviticus/leviticus-unit-21/leviticus-unit-21.html">Unit 21</a> (Leviticus 26) presents the blessings for obedience and curses for disobedience&mdash;consequences that will unfold in the promised land: &ldquo;If ye walk in My statutes... I will give your rains in their season, and the land shall yield her produce&rdquo; (26:3&ndash;4). <a href="/torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22.html">Unit 22</a> (Leviticus 27) treats the valuation and redemption of consecrated persons, animals, houses, and fields&mdash;all forms of property that presuppose settlement. All three units look forward to after the entry into Canaan. And all three deal with redemption&mdash;in different forms. Unit 20 prescribes the redemption of land, houses, and persons sold under duress. Unit 21 offers redemption from national catastrophe through confession and return to the covenant: &ldquo;if then their uncircumcised heart be humbled, and they then accept of the punishment of their iniquity&rdquo; (26:41). Unit 22 prescribes the redemption of consecrated property&mdash;persons, animals, houses, and fields vowed to YHWH. We will call them Unit-triad H.</p>
+
+<p>So the first and last groups of three identify themselves by content. But do they relate to each other?</p>
+
+<p>They do&mdash;and not just as bookends. When we set the two triads side by side, a chiastic relationship emerges. Unit 1 and Unit 22 both treat voluntary consecrations; both contain &ldquo;for YHWH&rdquo; over thirty times; the first and last units of the book mirror each other. Unit 2 and Unit 21 both treat the consequences of transgression&mdash;Unit 2 prescribes offerings for individual inadvertent error, Unit 21 presents blessings and curses for national obedience or disobedience. Unit 3 and Unit 20 both concern what belongs to YHWH and what he shares with people. In Unit 3, YHWH declares: &ldquo;I have given it as their portion of My offerings made by fire&rdquo; (6:10)&mdash;the priests share YHWH&rsquo;s own food. In Unit 20, YHWH declares: &ldquo;the land is Mine; for ye are strangers and settlers with Me&rdquo; (25:23) and &ldquo;they are My servants whom I brought forth out of the land of Egypt&rdquo; (25:55). What YHWH shares with individual priests in Unit 3, he shares with the entire nation in Unit 20.</p>
+
+<table class="matrix-table">
+    <caption><strong>The Chiasm of Triads A and H</strong></caption>
+    <thead>
+        <tr>
+            <th>Triad A</th>
+            <th>Connection</th>
+            <th>Triad H</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">Unit 1<br><span class="cell-label">Voluntary offerings &mdash; individual at the altar</span></td>
+            <td>&ldquo;for YHWH&rdquo; &times; 30+</td>
+            <td class="row-header">Unit 22<br><span class="cell-label">Consecrations &mdash; all types of vows</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">Unit 2<br><span class="cell-label">Individual inadvertent error</span></td>
+            <td>consequences of transgression</td>
+            <td class="row-header">Unit 21<br><span class="cell-label">National obedience and disobedience</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">Unit 3<br><span class="cell-label">&ldquo;their portion of My offerings&rdquo; (6:10)</span></td>
+            <td>what belongs to YHWH, shared with people</td>
+            <td class="row-header">Unit 20<br><span class="cell-label">&ldquo;the land is Mine&rdquo; (25:23)</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>In every pair, the first-half unit addresses individuals or describes singular events, while the second-half unit addresses the community or describes ongoing national life. Unit 1 deals with an individual&rsquo;s freewill offering at the altar; Unit 22 is concerned with all types of offerings that can be monetized. Unit 2 speaks to individuals about personal guilt; Unit 21 addresses the whole nation about national guilt. Unit 3 shares YHWH&rsquo;s food with individual priests; Unit 20 declares YHWH&rsquo;s ownership of land and people of the entire nation.</p>
+
+<p>There is one more thing to notice about these six units. Five of them mention a specific place where YHWH spoke to Moses&mdash;the Tent of Meeting or Mount Sinai&mdash;in their opening or closing formulas. Unit 1 opens: &ldquo;YHWH called unto Moses, and spoke unto him out of the Tent of Meeting&rdquo; (1:1). Unit 3 closes with: &ldquo;which YHWH commanded Moses on Mount Sinai&rdquo; (7:38). Unit 20 opens: &ldquo;YHWH spoke unto Moses on Mount Sinai&rdquo; (25:1). Unit 21 closes with: &ldquo;which YHWH made between him and the children of Israel on Mount Sinai&rdquo; (26:46). Unit 22 closes: &ldquo;which YHWH commanded Moses... on Mount Sinai&rdquo; (27:34). These references sit in the prologues and epilogues&mdash;outside the body of the laws themselves, framing them. The one unit lacking this marker is Unit 2.</p>
+
+<p>We now have two triads that are chiastic, share a one-and-many pattern, and are identified by a common marker&mdash;place of revelation&mdash;in five of six units. These two triads form a ring around the rest of the book. We will call it the Outer Ring.</p>
+
+<p class="next-question">What about the sixteen units between them?</p>
+</section>
+
+<section id="stage-two">
+<h2>Stage Two: Cross-Connections Across the Center</h2>
+
+<p>A and H form a chiastic pair at the outer edges of the book. Does the pattern continue inward? The next units in from each end are Unit 4 and Unit 19. And they share something no other units do.</p>
+
+<p><strong>Two narratives, two deaths.</strong> <a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4.html">Unit 4</a> is the first unit after Triad A; <a href="/torah-weave/Leviticus/leviticus-unit-19/leviticus-unit-19.html">Unit 19</a> is the last unit before Triad H. They sit at the inner edges of the two triads we have already identified, further defining those blocks. And they share something no other units do: they are the only two narrative units in the book. Unit 4 (Leviticus 8&ndash;10) tells the story of the inauguration of the cult, culminating in fire coming forth from YHWH and the deaths of Nadab and Abihu. Unit 19 (Leviticus 24) tells the story of the blasphemer, culminating in his execution at YHWH&rsquo;s command. Both narratives end in death by divine initiative. These two units are linked.</p>
+
+<p><strong>Two births, two sets of eight days.</strong> <a href="/torah-weave/Leviticus/leviticus-unit-6/leviticus-unit-6.html">Unit 6</a> (Leviticus 12) treats human childbirth&mdash;eight verses prescribing that a woman shall be unclean &ldquo;seven days&rdquo; after bearing a male, &ldquo;and on the eighth day the flesh of his foreskin shall be circumcised&rdquo; (12:2&ndash;3). <a href="/torah-weave/Leviticus/leviticus-unit-17/leviticus-unit-17.html">Unit 17</a> (Leviticus 22:26&ndash;33) treats animal birth&mdash;eight verses prescribing that a newborn animal &ldquo;shall be seven days under the dam; but from the eighth day and onward it may be accepted for an offering&rdquo; (22:27). Both units are eight verses long. Both contain &ldquo;seven days... eighth day.&rdquo; One treats human birth, the other animal birth. These two units are linked.</p>
+
+<p>Unit 4 pairs with Unit 19. Unit 6 pairs with Unit 17. And the two connections are not independent&mdash;they are two sides of one theme. Unit 4 and Unit 19 connect through death; Unit 6 and Unit 17 connect through birth. Death and birth&mdash;the two boundaries of life&mdash;define this pairing. Between 4 and 6 sits Unit 5; between 17 and 19 sits Unit 18. The connections at each end define two triads: 4, 5, 6 on one side of the center, and 17, 18, 19 on the other&mdash;with 5 and 18 paired by position between their connected neighbors.</p>
+
+<table class="matrix-table">
+    <caption><strong>Cross-connections: Triads B and G</strong></caption>
+    <thead>
+        <tr>
+            <th>Triad B</th>
+            <th>Connection</th>
+            <th>Triad G</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">Unit 4<br><span class="cell-label">Inauguration &mdash; death of Nadab and Abihu</span></td>
+            <td>two narratives, two deaths</td>
+            <td class="row-header">Unit 19<br><span class="cell-label">Blasphemy &mdash; death of the blasphemer</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">Unit 5<br><span class="cell-label">Diet Laws</span></td>
+            <td></td>
+            <td class="row-header">Unit 18<br><span class="cell-label">Holiday Calendar</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">Unit 6<br><span class="cell-label">Childbirth &mdash; seven days, eighth day</span></td>
+            <td>two births, two sets of eight days</td>
+            <td class="row-header">Unit 17<br><span class="cell-label">Animal Birth &mdash; seven days, eighth day</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>The &ldquo;seven days... eighth day&rdquo; phrase deserves a closer look. It appears not only in Units 6 and 17 but across the entire pairing. Unit 4 narrates the seven-day consecration followed by the eighth-day inauguration. Unit 18 prescribes the festivals, several of which follow the same &ldquo;seven days... on the eighth day&rdquo; pattern (23:36). Five of the six units in B and G share this temporal marker. The one unit that lacks it is Unit 5&mdash;the middle unit of Triad B. In the outer ring, five of six units shared a place marker, and the one lacking it was Unit 2&mdash;also the middle unit of the first triad. The same pattern of exception in the same position.</p>
+
+<p>And as in the outer ring, the individual-and-community pattern holds. Unit 4 describes a one-time event; Unit 19 prescribes daily and weekly rituals. Unit 6 addresses individuals&mdash;a woman who bears a child; Unit 17 addresses the whole community&mdash;&ldquo;ye shall not kill it and its young both in one day&rdquo; (22:28). The first-half triad treats the singular; the second-half triad treats the ongoing and communal.</p>
+
+<p>Together with A (Units 1&ndash;3) and H (Units 20&ndash;22), that accounts for twelve of the twenty-two units. Ten remain: Units 7, 8, 9, 10, 11, 12, 13, 14, 15, and 16. Do the same kinds of connections appear among them?</p>
+
+<p><strong>&ldquo;After the death.&rdquo;</strong> <a href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10.html">Unit 10</a> opens: &ldquo;YHWH spoke unto Moses after the death of the two sons of Aaron, when they drew near before YHWH, and died&rdquo; (16:1). The two sons of Aaron died in Unit 4 (10:1&ndash;2). The text of Unit 10 explicitly points back to Unit 4&mdash;placing Unit 10 at the start of its own group, not at the end of the impurity units that precede it.</p>
+
+<p><strong>Prohibitions and penalties.</strong> <a href="/torah-weave/Leviticus/leviticus-unit-12/leviticus-unit-12.html">Unit 12</a> (Leviticus 18) lists the sexual relations that are forbidden: &ldquo;None of you shall approach any that is near of kin to him, to uncover their nakedness&rdquo; (18:6). <a href="/torah-weave/Leviticus/leviticus-unit-14/leviticus-unit-14.html">Unit 14</a> (Leviticus 20) prescribes the penalties for violating exactly those prohibitions: &ldquo;And the man that committeth adultery... the adulterer and the adulteress shall surely be put to death&rdquo; (20:10). The same offenses appear in the same order. These two units are linked.</p>
+
+<p><strong>Two warnings to priests.</strong> <a href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10.html">Unit 10</a> warns Aaron not to enter the inner sanctum improperly&mdash;&ldquo;that he come not at all times into the holy place... that he die not&rdquo; (16:2). <a href="/torah-weave/Leviticus/leviticus-unit-16/leviticus-unit-16.html">Unit 16</a> warns all priests not to approach sanctified things while unclean&mdash;&ldquo;Whosoever he be of all your seed... that approacheth unto the holy things... having his uncleanness upon him, that soul shall be cut off&rdquo; (22:3). Both units warn priests about approaching what is holy. These two units are linked.</p>
+
+<p>So the connections lock another pair of triads&mdash;this time from both ends, just as with B and G. Unit 10 connects to Unit 16 (warnings to priests), and Unit 12 connects to Unit 14 (prohibitions and penalties). And again, the two connections are two sides of one theme: death (10&#8596;16) and the generation of life (12&#8596;14). The same death-and-birth pattern that defined B&#8596;G reappears in D&#8596;F. Between 10 and 12 sits Unit 11; between 14 and 16 sits Unit 15. Two triads: 10, 11, 12 on one side of the center, and 14, 15, 16 on the other.</p>
+
+<table class="matrix-table">
+    <caption><strong>Cross-connections: Triads D and F</strong></caption>
+    <thead>
+        <tr>
+            <th>Triad D</th>
+            <th>Connection</th>
+            <th>Triad F</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">Unit 10<br><span class="cell-label">Day of Purgation &mdash; &ldquo;lest he die&rdquo;</span></td>
+            <td>warnings to priests</td>
+            <td class="row-header">Unit 16<br><span class="cell-label">Sanctified Objects &mdash; &ldquo;shall be cut off&rdquo;</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">Unit 11<br><span class="cell-label">Slaughter and Blood</span></td>
+            <td></td>
+            <td class="row-header">Unit 15<br><span class="cell-label">Instructions for Priests</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">Unit 12<br><span class="cell-label">Illicit Sexual Practices &mdash; prohibitions</span></td>
+            <td>prohibitions / penalties</td>
+            <td class="row-header">Unit 14<br><span class="cell-label">Penalties for Sexual Offenses</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>As with the outer and middle rings, this pairing has a shared marker. Five of the six units in D and F contain abundant familial terminology&mdash;references to father, mother, sister, brother, wife, son, daughter, and other relatives. Unit 12 alone contains over thirty such terms: father, mother, father&rsquo;s wife, sister, granddaughter, half-sister, aunt, uncle&rsquo;s wife, daughter-in-law, brother&rsquo;s wife. Unit 10 refers to Aaron, his household, and his sons. Unit 14 lists penalties involving father, mother, daughter-in-law, sister, uncle&rsquo;s wife, brother&rsquo;s wife. Unit 15 specifies which kin a priest may mourn&mdash;mother, father, son, daughter, brother, virgin sister&mdash;and whom the high priest may marry. Unit 16 specifies whose households may eat consecrated food, including a priest&rsquo;s daughter who marries outside and returns as a widow. The one unit lacking dense familial terminology is Unit 11&mdash;the middle unit of the first triad. The same position as the exceptions in the outer and middle rings.</p>
+
+<p>And again, the individual-and-community pattern holds. Unit 10 is addressed to a single priest, Aaron; Unit 16 is addressed to all priests. Unit 12 lists prohibited sexual practices from the perspective of individuals; Unit 14 prescribes penalties to be enforced by the community.</p>
+
+<p>And notice where this marker sits. The outer ring&rsquo;s marker (place) appeared in prologues and epilogues&mdash;outside the body of the laws. The middle ring&rsquo;s marker (time) was a repeating phrase within the laws. The inner ring&rsquo;s marker (person) is woven into the very fabric of the legislation&mdash;the familial terms are inseparable from the content itself. Outside, between, inside: the type of marker reflects the position of the ring.</p>
+
+<p>That leaves four units unaccounted for. Units 7, 8, and 9&mdash;the impurity laws&mdash;connect to nothing across the center. They form a group of their own. And Unit 13 (Leviticus 19) stands alone between D and F, belonging to no triad. We will return to both.</p>
+</section>
+
+<section id="stage-three">
+<h2>Stage Three: A Formal Confirmation</h2>
+
+<p>We now have seven triads (A through H, with C for the impurity units, and E for Unit 13 standing alone). Setting them out with their units:</p>
+
+<table class="matrix-table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+            <th>F</th>
+            <th>G</th>
+            <th>H</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">Row 1</td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1.html">Unit 1</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4.html">Unit 4</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-7/leviticus-unit-7.html">Unit 7</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10.html">Unit 10</a></td>
+            <td></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-14/leviticus-unit-14.html">Unit 14</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-17/leviticus-unit-17.html">Unit 17</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-20/leviticus-unit-20.html">Unit 20</a></td>
+        </tr>
+        <tr>
+            <td class="row-header">Row 2</td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2.html">Unit 2</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-5/leviticus-unit-5.html">Unit 5</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-8/leviticus-unit-8.html">Unit 8</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-11/leviticus-unit-11.html">Unit 11</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13.html">Unit 13</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-15/leviticus-unit-15.html">Unit 15</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-18/leviticus-unit-18.html">Unit 18</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-21/leviticus-unit-21.html">Unit 21</a></td>
+        </tr>
+        <tr>
+            <td class="row-header">Row 3</td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3.html">Unit 3</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-6/leviticus-unit-6.html">Unit 6</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-9/leviticus-unit-9.html">Unit 9</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-12/leviticus-unit-12.html">Unit 12</a></td>
+            <td></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-16/leviticus-unit-16.html">Unit 16</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-19/leviticus-unit-19.html">Unit 19</a></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22.html">Unit 22</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>The units in the second half (F, G, H) appear in their sequential order. The chiastic pairings we identified — 1&#8596;22, 2&#8596;21, 3&#8596;20, and so on — mean that Row 1 of each first-half triad pairs with Row 3 of the corresponding second-half triad, and vice versa. The table shows where the units sit; the chiasm connects them across the center.</p>
+
+<p>Is there anything more than content and cross-connection holding these triads together? There is. Part A noted that of the twenty-two units, eleven consist entirely of triadic pericope-rows, nine consist entirely of dyadic pericope-rows, and only two combine both formats. When we map this formal feature onto the table, the format distributes by ring. The middle ring (B and G) consists entirely of dyadic units. The inner ring (D and F) consists entirely of triadic units. The outer ring pairs A (triadic) with H (mixed), and Unit-triad C (mixed) stands outside the ring structure. The cross-connections discovered the triads; the format pattern independently confirms them.</p>
+</section>
+
+<section id="three-rings">
+<h2>The Three Rings</h2>
+
+<p>We can now step back and see what has emerged. Three pairs of triads form three concentric rings around Unit 13: the outer ring (A&#8596;H) identified by place, the middle ring (B&#8596;G) identified by time, and the inner ring (D&#8596;F) identified by person. Each ring has an exception in the same position&mdash;the middle unit of its first triad: Unit 2, Unit 5, Unit 11. Unit-triad C stands outside the rings. The concentric arrangement is not an artifact of our analysis. It is confirmed by three independent patterns in the text itself.</p>
+
+<p>A further confirmation comes from the first unit of each ring. <a href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1.html">Unit 1</a> (the first unit of the outer ring) prescribes freewill offerings at the altar&mdash;which stands in the court, outside the Tent. <a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4.html">Unit 4</a> (the first unit of the middle ring) narrates the inauguration of the cult&mdash;Aaron and Moses enter the sanctum for the first time. <a href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10.html">Unit 10</a> (the first unit of the inner ring) details the High Priest&rsquo;s annual entrance into the inner sanctum on the Day of Purgation. Court, sanctum, inner sanctum: the first unit of each ring maps to the corresponding part of the Tabernacle.</p>
+
+<p>And the three anomalous units&mdash;the ones lacking each ring&rsquo;s marker&mdash;share a subject: all three deal with animals. Unit 2 presents animals as the means of expiation for inadvertent transgression. Unit 5 treats animals as food and as sources of impurity. Unit 11 focuses on blood as the life-force of animals&mdash;&ldquo;the life of the flesh is in the blood&rdquo; (17:11).</p>
+</section>
+
+<section id="screen">
+<h2>The Screen: Unit-Triad C</h2>
+
+<p>We noted that Units 7, 8, and 9 connect to nothing across the center. Their position between D (the innermost first-half triad) and the outer triads explains why. In the Tabernacle, the screen (&#1508;&#1512;&#1493;&#1499;&#1514;) conceals the Holy of Holies from view. The High Priest must move it aside to enter (cf. Leviticus 16:2, 12). The impurity units function as a literary screen: they sit at the boundary where the outer structure gives way to the inner, and they must be recognized and set aside for the concentric ring structure to become visible. Their content&mdash;scale disease, contaminated fabrics, bodily emissions&mdash;concerns what must be removed before entering sacred space.</p>
+</section>
+
+<section id="center">
+<h2>Unit 13: The Center</h2>
+
+<p>At the center of all three rings sits <a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13.html">Unit 13</a> (Leviticus 19). As Part A noted, it is the only unit addressed to &ldquo;all the congregation of the children of Israel.&rdquo; It contains sixteen first-person declarations of &ldquo;I am YHWH&rdquo;&mdash;more than any other unit. It contains both direct and oblique references to the Decalogue: &ldquo;Ye shall fear every man his mother and his father, and ye shall keep my sabbaths&rdquo; (19:3); &ldquo;Ye shall not steal; neither shall ye deal falsely, nor lie one to another&rdquo; (19:11); &ldquo;thou shalt love thy neighbor as thyself&rdquo; (19:18).</p>
+
+<p>If the inner ring corresponds to the inner sanctum, then Unit 13&mdash;enclosed by that ring&mdash;corresponds to the Ark of the Covenant, which held the tablets of the law and above which YHWH revealed himself to Moses between the cherubim (Exodus 25:22). The sixteen &ldquo;I am YHWH&rdquo; declarations parallel those revelations. The Decalogue references parallel the tablets within the Ark.</p>
+</section>
+
+<section id="complete-map">
+<h2>The Complete Map</h2>
+
+<p>Three rows. Eight columns. Twenty-two units. Every unit has coordinates&mdash;its column (triad), its row, its ring, its paired unit across the chiasm. The map is complete.</p>
+
+<p>And it is almost identical to the map of Genesis. Genesis also contains six unit-triads arranged in concentric pairs, with family material at the center and covenantal material at the outer edges. The same architectural plan governs both books&mdash;suggesting that a single compositional intelligence is at work across the Torah as a whole.</p>
+</section>
+
+<section id="what-comes-next">
+<h2>What Comes Next</h2>
+
+<p>So this is the map: three concentric rings identified by place, time, and person, with Unit 13 at the center and the impurity units functioning as a screen. But why is the map arranged this way? What principle governs the relationship between paired units&mdash;why does Unit 1 pair with Unit 22, Unit 4 with Unit 19, Unit 10 with Unit 16? And what determines which unit sits in which row?</p>
+
+<p>Part C will show that each ring recapitulates the pattern of the six days of creation, and that reading Leviticus means taking the same journey the High Priest takes on the Day of Purgation&mdash;from the outer court inward to the Holy of Holies, and back out again, transformed.</p>
+</section>
+
+</main>
+
+</article>
+
+<aside class="citation-box">
+    <strong>How to cite this article:</strong><br>
+    Kline, Moshe. &ldquo;Part B: The Map of Leviticus &mdash; From Units to Architecture.&rdquo; <em>Torah Weave</em>,
+    <a href="https://chaver.com/torah-weave/Leviticus/leviticus-analysis/the-map-of-leviticus.html">https://chaver.com/torah-weave/Leviticus/leviticus-analysis/the-map-of-leviticus.html</a>.
+    Accessed [date].
+</aside>
+
+<div class="series-navigation">
+    <h3>Leviticus Commentary Series</h3>
+    <div class="series-navigation-links">
+        <a href="/torah-weave/Leviticus/leviticus-analysis/overview.html">Overview</a>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/units-of-leviticus.html">Part A: The Units</a>
+        <span>Part B: The Map</span>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/the-three-rows.html">Part C: The Three Rows</a>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/architecture-and-meaning-in-leviticus.html">Part D: Architecture &amp; Meaning</a>
+    </div>
+</div>
+
+<!-- #EndEditable -->
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

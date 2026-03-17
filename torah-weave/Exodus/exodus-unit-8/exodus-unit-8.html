@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 8 (Exodus 21:1-22:16) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 8
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-7/exodus-unit-7.html" rel="prev">← Unit 7</a>
+            <a href="/torah-weave/Exodus/exodus-unit-9/exodus-unit-9.html" rel="next">Unit 9 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 8</h1>
+                <div class="unit-meta" itemprop="about">Exodus 21:1-22:16</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-left">1A</th><th class="col-right">1B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">21:1</span></b></span><span style="font-size:8.5pt"> Now these are the ordinances which thou shalt set
+  before them. <span class="VerseNumber"><b>21:2</b></span> <span class="horizontal1"><b>If thou buy a Hebrew servant</b></span>, six years he
+  shall serve; and in the seventh <span class="horizontal1"><b>he shall go out
+  free for nothing</b></span>. <span class="VerseNumber"><b>21:3</b></span> If he
+  come in by himself, he shall go out by himself; if he be married, then his
+  wife shall go out with him. <span class="VerseNumber"><b>21:4</b></span> If his
+  master give him a wife, and she bear him sons or daughters; the wife and her
+  children shall be her master's, and he shall go out by himself. <span class="VerseNumber"><b>21:5</b></span> But if the servant shall plainly say: I
+  love my master, my wife, and my children; I will not go out free; <span class="VerseNumber"><b>21:6</b></span> then his master shall bring him unto
+  God, and shall bring him to the door, or unto the door-post; and his master
+  shall bore his ear through with an awl; and he shall serve him for ever. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">21:7</span></b></span><span style="font-size:8.5pt"> <span class="horizontal1"><b>And if a man </b></span><span class="vertical1"><b>sell</b></span><span class="horizontal1"><b> his daughter to
+  be a maid-servant</b></span>, she shall not go out as the men-servants do. <span class="VerseNumber"><b>21:8</b></span> If she please not her master, who hath
+  espoused her to himself, then shall he let her be redeemed; to sell her unto
+  a foreign people he shall have no power, seeing he hath dealt deceitfully
+  with her. <span class="VerseNumber"><b>21:9</b></span> And if he espouse her
+  unto his son, he shall deal with her after the manner of daughters. <span class="VerseNumber"><b>21:10</b></span> If he take him another wife, her food,
+  her raiment, and her conjugal rights, shall he not diminish. <span class="VerseNumber"><b>21:11</b></span> And if he do not these three unto her, <span class="horizontal1"><b>then shall she go out for nothing, without money</b></span>.
+  </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:
+  normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-right">2B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:12</b></span> He that <span class="vertical1"><b>smiteth</b></span> a man, so that he dieth, shall surely
+  be put to death. <span class="VerseNumber"><b>21:13</b></span> And if a man lie
+  not in wait, but God cause it to come to hand; then I will appoint thee a
+  place whither he may flee. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:14</b></span> And if a
+  man come presumptuously upon his neighbour, to slay him with guile; thou
+  shalt take him from Mine altar, that he may die. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span><span style="font-size:8.5pt"> </span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:16</b></span> And he
+  that stealeth a man, and <span class="vertical1"><b>selleth </b></span>him, or
+  if he be found in his hand, he shall surely be put to death. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:15</b></span> And he
+  that <span class="vertical1"><b>smiteth</b></span> <span class="horizontal1"><b>his
+  father, or his mother</b></span>, shall be surely put to death. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:17</b></span> And he
+  that curseth <span class="horizontal1"><b>his father or his mother</b></span>,
+  shall surely be put to death. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">3A</th><th class="col-right">3B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:18</b></span> <span class="horizontal1"><b>And if men contend</b></span>, and one <span class="vertical1"><b>smite </b></span>the other with a stone, or with his fist,
+  and he die not, but keep his bed; <span class="VerseNumber"><b>21:19</b></span>
+  if he rise again, and walk abroad upon his staff, then shall he that smote
+  him be quit; only he shall pay for the loss of his time, and shall cause him
+  to be thoroughly healed. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span><span style="font-size:8.5pt"> </span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:22</b></span> <span class="horizontal1"><b>And if men strive together</b></span>, and hurt a woman
+  with child, so that her fruit depart, and yet no harm follow, he shall be
+  surely fined, according as the woman's husband shall lay upon him; and he
+  shall pay as the judges determine. <span class="VerseNumber"><b>21:23</b></span>
+  But if any harm follow, then thou shalt give life for life, <span class="VerseNumber"><b>21:24</b></span> eye for eye, tooth for tooth, hand for
+  hand, foot for foot, <span class="VerseNumber"><b>21:25</b></span> burning for
+  burning, wound for wound, stripe for stripe. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:20</b></span> And if a
+  man <span class="vertical1"><b>smite</b></span> <span class="horizontal1"><b>his
+  bondman, or his bondwoman</b></span>, with a rod, and he die under his hand,
+  he shall surely be punished. <span class="VerseNumber"><b>21:21</b></span>
+  Notwithstanding if he continue a day or two, he shall not be punished; for he
+  is his money. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;
+  font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt">  <span class="VerseNumber"><b>21:26</b></span>
+  And if a man smite the eye <span class="horizontal1"><b>of his bondman, or the
+  eye of his bondwoman</b></span>, and destroy it, he shall let him go free for
+  his eye's sake. <span class="VerseNumber"><b>21:27</b></span> And if he smite
+  out his bondman's tooth, or his bondwoman's tooth, he shall let him go free
+  for his tooth's sake. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">4A</th><th class="col-right">4B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:28</b></span> And <span class="horizontal1"><b>if an ox gore</b></span> a man or a woman, that they
+  die, the ox shall be surely stoned, and its flesh shall not be eaten; but the
+  owner of the ox shall be quit. <span class="VerseNumber"><b>21:29</b></span> <span class="horizontal1"><b>But if the ox was wont to gore in time past, and warning
+  hath been given to its owner, and he hath not kept it in</b></span>, but it
+  hath killed a man or a woman; the ox shall be stoned, and its owner also
+  shall be put to death. <span class="VerseNumber"><b>21:30</b></span> If there
+  be laid on him a ransom, then he shall give for the redemption of his life
+  whatsoever is laid upon him. <span class="VerseNumber"><b>21:31</b></span> Whether
+  it have gored a son, or have gored a daughter, according to this judgment
+  shall it be done unto him. <span class="VerseNumber"><b>21:32</b></span> If the
+  ox gore a bondman or a bondwoman, he shall give unto their master thirty
+  shekels of silver, and the ox shall be stoned. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span><span style="font-size:8.5pt"> </span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">A</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:35</b></span> <span class="horizontal1"><b>And if one man's ox hurt</b></span> another's, so that it
+  dieth; then they shall sell the live ox, and divide the price of it; and the
+  dead also they shall divide. <span class="VerseNumber"><b>21:36</b></span> <span class="horizontal1"><b>Or if it be known that the ox was wont to gore in time
+  past, and its owner hath not kept it in</b></span>; he shall surely pay ox
+  for ox, and the dead beast shall be his own. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt"> <span class="VerseNumber"><b>21:33</b></span> And if a
+  man shall open a pit, or if a man shall dig a pit and not cover it, and an ox
+  or an ass fall therein, <span class="VerseNumber"><b>21:34</b></span> the owner
+  of the pit shall make it good; he shall give money unto the owner of them,
+  and the dead beast shall be his. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b><span style="font-size:8.5pt">B</span></b></span><span style="font-size:8.5pt">  <span class="VerseNumber"><b>21:37</b></span> If
+  a man steal an ox, or a sheep, and kill it, or sell it, he shall pay five
+  oxen for an ox, and four sheep for a sheep. <span class="VerseNumber"><b>22:1</b></span>
+  If a thief be found breaking in, and be smitten so that he dieth, there shall
+  be no bloodguiltiness for him. <span class="VerseNumber"><b>22:2</b></span> If
+  the sun be risen upon him, there shall be bloodguiltiness for him--he shall
+  make restitution; if he have nothing, then he shall be sold for his theft. <span class="VerseNumber"><b>22:3</b></span> If the theft be found in his hand alive,
+  whether it be ox, or ass, or sheep, he shall pay double. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">5A</th><th class="col-right">5B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">22:4</span></b></span><span style="font-size:8.5pt"> If a man cause a field or vineyard to be eaten, and
+  shall let his beast loose, and <span class="horizontal1"><b>it feed in another
+  man's field</b></span>; of the best of his own field, and of the best of his own
+  vineyard, shall he make restitution. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">22:5</span></b></span><span style="font-size:8.5pt"> If fire break out, and catch in thorns, <span class="horizontal1"><b>so that the shocks of corn, or the standing corn, or the
+  field</b></span> <span class="horizontal1"><b>are consumed</b></span>; he that
+  kindled the fire shall surely make restitution. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">6A</th><th class="col-right">6B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">22:6</span></b></span><span style="font-size:8.5pt"> <span class="horizontal1"><b>If a man deliver unto his
+  neighbour</b></span> money or stuff to keep, and it be stolen out of the
+  man's house; if the thief be found, he shall pay double. <span class="VerseNumber"><b>22:7</b></span> If the thief be not found, then the
+  master of the house shall come near unto God, to see whether he have not put
+  his hand unto his neighbour's goods. <span class="VerseNumber"><b>22:8</b></span>
+  For every matter of trespass, whether it be for ox, for ass, for sheep, for
+  raiment, or for any manner of lost thing, whereof one saith: 'This is it,'
+  the cause of both parties shall come before God; he whom God shall condemn
+  shall pay double unto his neighbour. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">22:9</span></b></span><span style="font-size:8.5pt"> <span class="horizontal1"><b>If a man deliver unto his
+  neighbour</b></span> an ass, or an ox, or a sheep, or any beast, to keep, and
+  it die, or be hurt, or driven away, no man seeing it; <span class="VerseNumber"><b>22:10</b></span> the oath of the LORD shall be between
+  them both, to see whether he have not put his hand unto his neighbour's
+  goods; and the owner thereof shall accept it, and he shall not make
+  restitution. <span class="VerseNumber"><b>22:11</b></span> But if it be stolen
+  from him, he shall make restitution unto the owner thereof. <span class="VerseNumber"><b>22:12</b></span> If it be torn in pieces, let him bring
+  it for witness; he shall not make good that which was torn. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">7A</th><th class="col-right">7B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">22:13</span></b></span><span style="font-size:8.5pt"> And if a man borrow aught of his neighbour, and it
+  be hurt, or die, the owner thereof not being with it, he shall surely make
+  restitution. <span class="VerseNumber"><b>22:14</b></span> If the owner thereof
+  be with it, he shall not make it good; if it be a hireling, he loseth his
+  hire. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;
+  font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b><span style="font-size:8.5pt">22:15</span></b></span><span style="font-size:8.5pt"> And if a man entice a virgin that is not betrothed,
+  and lie with her, he shall surely pay a dowry for her to be his wife. <span class="VerseNumber"><b>22:16</b></span> If her father utterly refuse to give
+  her unto him, he shall pay money according to the dowry of virgins. </span><span class="HebrewParagraph"><span style="font-size:8.5pt;font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 8 (Exodus 21:1-22:16)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-8/exodus-unit-8.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-7/exodus-unit-7.html" rel="prev">← Unit 7</a>
+            <a href="/torah-weave/Exodus/exodus-unit-9/exodus-unit-9.html" rel="next">Unit 9 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

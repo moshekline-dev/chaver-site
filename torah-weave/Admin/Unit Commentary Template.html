@@ -1,0 +1,664 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../../Dynamic%20Web%20Templates/English.dwt" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>Untitled 1</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">עברית</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <h1>Torah Unit Commentary Taxonomy Template</h1>
+	<h2>I. UNIT HEADER ELEMENTS</h2>
+	<h3>A. Visual Elements (Required)</h3>
+	<ol>
+		<li>
+		<p><strong>Iconic Book Map</strong></p>
+		<ul>
+			<li>SVG mini-map showing all units in the book</li>
+			<li>Current unit highlighted in contrasting color</li>
+			<li>Positioned at top of page for immediate context</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Full Unit Text</strong></p>
+		<ul>
+			<li>Complete text from woven site with verse references</li>
+			<li>Color-coded according to literary patterns</li>
+			<li>Presented in appropriate table structure (regular/irregular)</li>
+			<li>Color legend for pattern identification</li>
+		</ul>
+		</li>
+	</ol>
+	<h3>B. Metadata (Required)</h3>
+	<ol>
+		<li><strong>Unit Title</strong>: [Book] Unit [#]: [Descriptive Name]</li>
+		<li><strong>Structure</strong>: [Dimensions] (e.g., 4×2 Regular, 13331 
+		Irregular)</li>
+		<li><strong>Biblical Reference</strong>: [Book 
+		Chapter:Verse-Chapter:Verse]</li>
+		<li><strong>Theme</strong>: [Primary thematic focus]</li>
+		<li><strong>Position</strong>: Row [#] Column [Letter] in book matrix</li>
+	</ol>
+	<h3>C. Navigation (Required)</h3>
+	<ol>
+		<li>Previous Unit link (if applicable)</li>
+		<li>Next Unit link (if applicable)</li>
+		<li>Return to Book Overview link</li>
+		<li>Breadcrumb trail: Torah Map &gt; [Book] Map &gt; Unit [#]</li>
+	</ol>
+	<h2>II. INTRODUCTORY FRAMEWORK</h2>
+	<h3>A. Opening Hook (Required)</h3>
+	<ul>
+		<li>Compelling quote or observation that captures the unit's essence</li>
+		<li>Connection to contemporary relevance or timeless question</li>
+		<li>Sets tone for deeper exploration</li>
+	</ul>
+	<h3>B. Unit Context (Required)</h3>
+	<ol>
+		<li>
+		<p><strong>Position in Book Architecture</strong></p>
+		<ul>
+			<li>Location in the book's matrix (row/column significance)</li>
+			<li>Relationship to surrounding units (pairs, triads, sequences)</li>
+			<li>Role in larger book structure</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Relationship to Adjacent Units</strong></p>
+		<ul>
+			<li>If part of a diptych/triptych, explain the connection</li>
+			<li>Continuity or contrast with previous/next units</li>
+			<li>Shared vocabulary or thematic links</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Speech/Narrative Context</strong> (where applicable)</p>
+		<ul>
+			<li>Which speech or narrative section contains this unit</li>
+			<li>Speaker identification and audience</li>
+			<li>Historical/literary setting</li>
+		</ul>
+		</li>
+	</ol>
+	<h2>III. STRUCTURAL ANALYSIS</h2>
+	<h3>A. Dimensional Overview (Required)</h3>
+	<ol>
+		<li>
+		<p><strong>Structure Type</strong></p>
+		<ul>
+			<li>Regular (all rows same width) vs. Irregular (symmetrical 
+			variation)</li>
+			<li>Notation explanation (e.g., 4×2 = 4 rows, 2 columns each)</li>
+			<li>Special features (framework structure, independent unit, etc.)</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Organizational Principle</strong></p>
+		<ul>
+			<li>Primary organizing logic (temporal, spatial, thematic, etc.)</li>
+			<li>How the structure serves the content</li>
+			<li>Comparison to similar structures in Torah</li>
+		</ul>
+		</li>
+	</ol>
+	<h3>B. Thread Analysis (Required)</h3>
+	<ol>
+		<li>
+		<p><strong>Warp Threads (Columns)</strong></p>
+		<ul>
+			<li>Identification and labeling of each column</li>
+			<li>Thematic or categorical principle for each</li>
+			<li>Progression or relationship between columns</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Weft Threads (Rows)</strong></p>
+		<ul>
+			<li>Identification and labeling of each row</li>
+			<li>Sequential or hierarchical principle</li>
+			<li>Movement or development across rows</li>
+		</ul>
+		</li>
+	</ol>
+	<h3>C. Matrix Presentation (Required)</h3>
+	<ul>
+		<li>Visual matrix/table showing the unit's structure</li>
+		<li>Clear labeling of all intersections</li>
+		<li>Brief content summary in each cell</li>
+		<li>Pattern identification (parallels, chiasms, etc.)</li>
+	</ul>
+	<h2>IV. DETAILED COMMENTARY</h2>
+	<h3>A. Cell-by-Cell Analysis (Flexible depth based on unit)</h3>
+	<ol>
+		<li>
+		<p><strong>Intersection Readings</strong></p>
+		<ul>
+			<li>What each intersection reveals</li>
+			<li>Key vocabulary and phrases</li>
+			<li>Divine name usage (YHWH/Elohim patterns)</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Pattern Recognition</strong></p>
+		<ul>
+			<li>Horizontal parallels and their significance</li>
+			<li>Vertical connections and progressions</li>
+			<li>Diagonal or chiastic relationships</li>
+			<li>Closure/frame elements</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Subdivision Analysis</strong> (where applicable)</p>
+		<ul>
+			<li>Function of subdivisions (A, B, C within cells)</li>
+			<li>Whether they create sub-rows or serve as parallel indicators</li>
+			<li>Micro-patterns within larger structure</li>
+		</ul>
+		</li>
+	</ol>
+	<h3>B. Thematic Development (Required)</h3>
+	<ol>
+		<li>
+		<p><strong>Major Themes</strong></p>
+		<ul>
+			<li>Primary theological/philosophical concepts</li>
+			<li>How structure reinforces meaning</li>
+			<li>Evolution of themes through the unit</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Literary Techniques</strong></p>
+		<ul>
+			<li>Repetition, wordplay, inclusio</li>
+			<li>Narrative devices and rhetorical strategies</li>
+			<li>Use of formulaic language</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Intertextual Connections</strong></p>
+		<ul>
+			<li>Links to other Torah units</li>
+			<li>Connections to broader biblical literature</li>
+			<li>Echoes and allusions</li>
+		</ul>
+		</li>
+	</ol>
+	<h2>V. THEOLOGICAL IMPLICATIONS</h2>
+	<h3>A. Divine-Human Dynamics (Required)</h3>
+	<ol>
+		<li>
+		<p><strong>Divine Name Analysis</strong></p>
+		<ul>
+			<li>Distribution of YHWH vs. Elohim</li>
+			<li>Correlation with content and structure</li>
+			<li>Theological significance of usage patterns</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Covenant Relationships</strong></p>
+		<ul>
+			<li>How unit portrays divine-human interaction</li>
+			<li>Individual vs. communal dimensions</li>
+			<li>Conditional vs. unconditional elements</li>
+		</ul>
+		</li>
+	</ol>
+	<h3>B. Deeper Meanings (Required)</h3>
+	<ol>
+		<li>
+		<p><strong>Woven Reading Insights</strong></p>
+		<ul>
+			<li>Meanings visible only in 2D structure</li>
+			<li>Emergent themes from pattern recognition</li>
+			<li>Hidden unity revealed through weaving</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Transformative Elements</strong></p>
+		<ul>
+			<li>How the unit transforms understanding</li>
+			<li>Shifts in perspective or theology</li>
+			<li>Revolutionary vs. evolutionary ideas</li>
+		</ul>
+		</li>
+	</ol>
+	<h2>VI. SYNTHESIS AND CONCLUSIONS</h2>
+	<h3>A. Unit Contribution (Required)</h3>
+	<ol>
+		<li>
+		<p><strong>To Book Structure</strong></p>
+		<ul>
+			<li>How this unit advances the book's argument</li>
+			<li>Essential vs. supplementary role</li>
+			<li>Structural necessity</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>To Torah Theology</strong></p>
+		<ul>
+			<li>Unique theological contribution</li>
+			<li>Place in Torah's overall message</li>
+			<li>Universal vs. particular elements</li>
+		</ul>
+		</li>
+	</ol>
+	<h3>B. Contemporary Relevance (Optional but encouraged)</h3>
+	<ol>
+		<li>
+		<p><strong>Timeless Principles</strong></p>
+		<ul>
+			<li>Extracting eternal truths from historical context</li>
+			<li>Application to modern situations</li>
+			<li>Pedagogical value</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Questions for Reflection</strong></p>
+		<ul>
+			<li>Open-ended questions for further study</li>
+			<li>Personal application prompts</li>
+			<li>Community discussion topics</li>
+		</ul>
+		</li>
+	</ol>
+	<h3>C. Summary Statement (Required)</h3>
+	<ul>
+		<li>Concise encapsulation of unit's significance</li>
+		<li>Connection back to opening hook</li>
+		<li>Forward link to next unit (if applicable)</li>
+	</ul>
+	<h2>VII. SUPPLEMENTARY ELEMENTS</h2>
+	<h3>A. Technical Notes (As needed)</h3>
+	<ol>
+		<li>
+		<p><strong>Textual Variants</strong></p>
+		<ul>
+			<li>Significant manuscript differences</li>
+			<li>Translation challenges</li>
+			<li>Scholarly debates</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Historical Context</strong></p>
+		<ul>
+			<li>Archaeological insights</li>
+			<li>Ancient Near Eastern parallels</li>
+			<li>Historical-critical observations</li>
+		</ul>
+		</li>
+	</ol>
+	<h3>B. Study Aids (Optional)</h3>
+	<ol>
+		<li>
+		<p><strong>Key Terms Glossary</strong></p>
+		<ul>
+			<li>Hebrew terms with transliteration</li>
+			<li>Technical vocabulary explained</li>
+			<li>Conceptual definitions</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Further Reading</strong></p>
+		<ul>
+			<li>Scholarly sources</li>
+			<li>Related commentaries</li>
+			<li>Cross-references to other project materials</li>
+		</ul>
+		</li>
+	</ol>
+	<h2>VIII. FORMATTING STANDARDS</h2>
+	<h3>A. Length Guidelines</h3>
+	<ul>
+		<li><strong>Minimum</strong>: 2,000 words (simple units)</li>
+		<li><strong>Standard</strong>: 3,000-5,000 words (typical units)</li>
+		<li><strong>Maximum</strong>: 8,000 words (complex central units)</li>
+	</ul>
+	<h3>B. Visual Elements</h3>
+	<ul>
+		<li><strong>Required</strong>: Book map, unit text, structural matrix</li>
+		<li><strong>Recommended</strong>: Comparison tables, pattern diagrams</li>
+		<li><strong>Optional</strong>: Additional charts, word studies</li>
+	</ul>
+	<h3>C. Citation Style</h3>
+	<ul>
+		<li>Biblical verses: [Book Chapter:Verse]</li>
+		<li>Cross-references to other units: "See [Book] Unit [#]"</li>
+		<li>Scholarly sources: Footnotes or endnotes</li>
+	</ul>
+	<h2>IX. QUALITY CHECKLIST</h2>
+	<p>Before finalizing any unit commentary, verify:</p>
+	<ul>
+		<li>[ ] Iconic book map with unit highlighted</li>
+		<li>[ ] Full unit text with color coding</li>
+		<li>[ ] Clear structural analysis with matrix</li>
+		<li>[ ] Thread identification (warp and weft)</li>
+		<li>[ ] Pattern recognition and explanation</li>
+		<li>[ ] Divine name analysis</li>
+		<li>[ ] Theological implications explored</li>
+		<li>[ ] Connection to book architecture explained</li>
+		<li>[ ] Summary captures unit's contribution</li>
+		<li>[ ] Navigation elements functional</li>
+		<li>[ ] Accessible language (avoiding unnecessary jargon)</li>
+		<li>[ ] Consistent formatting throughout</li>
+	</ul>
+	<h2>X. ADAPTATION NOTES</h2>
+	<p>This taxonomy should be adapted based on:</p>
+	<ol>
+		<li>
+		<p><strong>Unit Complexity</strong></p>
+		<ul>
+			<li>Simple units may not need every subsection</li>
+			<li>Complex units may require additional analysis</li>
+			<li>Independent units need special treatment</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Book Characteristics</strong></p>
+		<ul>
+			<li>Genesis: Creation themes, universal to particular</li>
+			<li>Exodus: Liberation and law themes</li>
+			<li>Leviticus: Holiness and ritual themes</li>
+			<li>Numbers: Wilderness and organization themes</li>
+			<li>Deuteronomy: Covenant renewal and future vision</li>
+		</ul>
+		</li>
+		<li>
+		<p><strong>Structural Type</strong></p>
+		<ul>
+			<li>Regular units: Focus on systematic patterns</li>
+			<li>Irregular units: Explain symmetrical variation</li>
+			<li>Independent units: Emphasize unique role</li>
+		</ul>
+		</li>
+	</ol>
+	<p>This taxonomy provides a comprehensive framework while allowing 
+	flexibility for each unit's unique characteristics.</p>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">התורה כדרכה</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="http://www.facebook.com/woventorah/">Facebook Discussion</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

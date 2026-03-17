@@ -1,0 +1,630 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schlesische Str. 21 - Co-Living Investitionsrechner</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+            min-height: 100vh; 
+            padding: 20px; 
+            color: #333; 
+        }
+        .container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+        }
+        .header { 
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); 
+            color: white; 
+            padding: 40px; 
+            text-align: center; 
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; font-weight: 300; }
+        .header p { font-size: 1.2em; opacity: 0.9; }
+        
+        .main-content { 
+            display: grid; 
+            grid-template-columns: 450px 1fr; 
+            min-height: 600px; 
+        }
+        .controls-panel { 
+            background: #f8f9fa; 
+            padding: 30px; 
+            border-right: 1px solid #e0e0e0; 
+            overflow-y: auto; 
+            max-height: 90vh;
+        }
+        .results-panel { 
+            padding: 30px; 
+            overflow-y: auto; 
+            max-height: 90vh;
+        }
+        
+        .control-group { margin-bottom: 25px; }
+        .control-group h3 { 
+            color: #2c3e50; 
+            margin-bottom: 15px; 
+            font-size: 1.2em; 
+            border-bottom: 2px solid #3498db; 
+            padding-bottom: 5px; 
+        }
+        
+        .toggle-container {
+            background: #e8f4f8;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .toggle-container label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        .toggle-container input[type=checkbox] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        .slider-container, .fixed-value-container { margin-bottom: 20px; }
+        .slider-container label, .fixed-value-container label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 500; 
+            color: #333; 
+        }
+        .slider-container input[type=range] { 
+            width: 100%; 
+            cursor: pointer; 
+            height: 8px;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+        .slider-container input[type=range]::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #3498db;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slider-value, .fixed-value { 
+            font-size: 1em; 
+            color: #3498db; 
+            text-align: right; 
+            font-weight: bold; 
+            margin-top: 5px;
+        }
+        .fixed-value-container { 
+            background: #f0f0f0; 
+            padding: 15px; 
+            border-radius: 8px; 
+        }
+        
+        .metrics-grid { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px; 
+            margin-bottom: 30px; 
+        }
+        .metric-card { 
+            background: #ffffff; 
+            color: #333; 
+            padding: 25px; 
+            border-radius: 12px; 
+            text-align: center; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08); 
+            border: 2px solid #e0e0e0;
+            transition: transform 0.2s;
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+        .metric-value { 
+            font-size: 2em; 
+            font-weight: bold; 
+            margin-bottom: 8px; 
+            color: #3498db; 
+        }
+        .metric-label { 
+            font-size: 0.95em; 
+            opacity: 0.8;
+            font-weight: 500;
+        }
+        .highlight { 
+            background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%) !important;
+            color: white !important;
+        }
+        .highlight .metric-value,
+        .highlight .metric-label {
+            color: white !important;
+        }
+        .profit { color: #27ae60; }
+        .loss { color: #e74c3c; }
+
+        .pro-forma-table { 
+            background: white; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+            margin-bottom: 20px;
+        }
+        .pro-forma-table h3 { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 20px; 
+            margin: 0; 
+            font-size: 1.3em; 
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+        }
+        th, td { 
+            padding: 15px; 
+            text-align: right; 
+            border-bottom: 1px solid #e0e0e0; 
+            font-size: 1em; 
+        }
+        td:first-child, th:first-child { 
+            text-align: left; 
+            font-weight: 600; 
+        }
+        .section-header { 
+            background-color: #34495e !important; 
+            color: white !important;
+            font-weight: bold !important;
+        }
+        .subsection-header {
+            background-color: #95a5a6 !important;
+            color: white !important;
+            font-size: 0.9em !important;
+        }
+        .total-row { 
+            background-color: #ecf0f1; 
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .profit-row { 
+            background-color: #d4edda; 
+            font-weight: bold; 
+            font-size: 1.15em;
+        }
+        .loss-row { 
+            background-color: #f8d7da; 
+            font-weight: bold; 
+        }
+        .highlight-row {
+            background-color: #fff3cd !important;
+            font-weight: bold;
+        }
+        .year-row:hover {
+            background-color: #f8f9fa;
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .info-box strong {
+            color: #2c3e50;
+        }
+
+        @media (max-width: 1200px) { 
+            .main-content { grid-template-columns: 1fr; }
+            .controls-panel { border-right: none; border-bottom: 1px solid #e0e0e0; }
+            .metrics-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Co-Living Investitionsrechner</h1>
+            <p>Schlesische Straße 21, Kreuzberg · 3 Gebäude · 36 Bewohner</p>
+        </div>
+
+        <div class="main-content">
+            <div class="controls-panel">
+                <div class="control-group">
+                    <h3>⚡ Jahr 4 Refinanzierungsstrategie</h3>
+                    <div class="toggle-container">
+                        <label>
+                            <input type="checkbox" id="includeRefi" checked>
+                            Jahr 4 Cash-Out Refinanzierung einbeziehen (544 T€)
+                        </label>
+                    </div>
+                    <div class="info-box" id="refiInfo">
+                        <strong>Aktiviert:</strong> 544.494 € steuerfrei in Jahr 4 entnehmen bei Erhalt des Eigentums. Reduziert Cashflow Jahre 5-10, bietet aber sofortige Liquidität.
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>📊 Zentrale Finanzannahmen</h3>
+                    <div class="fixed-value-container">
+                        <label>Gesamtprojektkosten</label>
+                        <div class="fixed-value">5.026.476 €</div>
+                    </div>
+                    <div class="fixed-value-container">
+                        <label>Benötigtes Eigenkapital (19,2%)</label>
+                        <div class="fixed-value">963.326 €</div>
+                    </div>
+                    <div class="fixed-value-container">
+                        <label>Bankfinanzierung (70% LTV)</label>
+                        <div class="fixed-value">4.063.150 €</div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>🏠 Betriebsannahmen</h3>
+                    <div class="slider-container">
+                        <label>Monatliche Miete pro m² (€)</label>
+                        <input type="range" id="rentPerSqm" min="55" max="75" step="1" value="65">
+                        <div class="slider-value" id="rentPerSqmValue">65 € / m²</div>
+                    </div>
+                    <div class="slider-container">
+                        <label>Auslastungsquote (%)</label>
+                        <input type="range" id="occupancy" min="85" max="100" step="1" value="95">
+                        <div class="slider-value" id="occupancyValue">95%</div>
+                    </div>
+                    <div class="slider-container">
+                        <label>Jährliches NOI-Wachstum (%)</label>
+                        <input type="range" id="noiGrowth" min="0" max="5" step="0.5" value="3">
+                        <div class="slider-value" id="noiGrowthValue">3,0%</div>
+                    </div>
+                    <div class="slider-container">
+                        <label>Jährliche Wertsteigerung (%)</label>
+                        <input type="range" id="appreciation" min="0" max="4" step="0.5" value="2">
+                        <div class="slider-value" id="appreciationValue">2,0%</div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>💰 Ausstiegsstrategie (Jahr 10)</h3>
+                    <div class="slider-container">
+                        <label>Verkaufskosten (%)</label>
+                        <input type="range" id="sellingCosts" min="5" max="10" step="0.5" value="7">
+                        <div class="slider-value" id="sellingCostsValue">7,0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-panel">
+                <div class="metrics-grid">
+                    <div class="metric-card highlight">
+                        <div class="metric-value" id="irrValue">20,1%</div>
+                        <div class="metric-label">10-Jahres-IRR</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="totalReturnValue">3.889.293 €</div>
+                        <div class="metric-label">Gesamte Rückflüsse</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="year1CashFlowValue">74.265 €</div>
+                        <div class="metric-label">Jahr 1 Cashflow</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="year10ExitValue">2.681.964 €</div>
+                        <div class="metric-label">Jahr 10 Exit (steuerfrei)</div>
+                    </div>
+                </div>
+
+                <div class="pro-forma-table">
+                    <h3>📈 10-Jahres Cashflow-Prognose</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Jahr</th>
+                                <th>NOI</th>
+                                <th>Schuldendienst</th>
+                                <th>Cashflow n. St.</th>
+                                <th>Besondere Ereignisse</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cashFlowBody">
+                            <!-- Dynamic content -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pro-forma-table">
+                    <h3>💼 Vollständige Investitionszusammenfassung</h3>
+                    <table>
+                        <tbody id="summaryBody">
+                            <!-- Dynamic content -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const FIXED = {
+            totalArea: 618.75, // m² Nettowohnfläche
+            initialPropertyValue: 5804500,
+            depreciableBase: 3826476,
+            originalLoan: 4063150,
+            originalDebtService: 218856,
+            interestRate: 0.042,
+            loanYears: 30,
+            taxRate: 0.47,
+            equityInvestment: 963326
+        };
+
+        const controls = {
+            includeRefi: document.getElementById('includeRefi'),
+            rentPerSqm: document.getElementById('rentPerSqm'),
+            occupancy: document.getElementById('occupancy'),
+            noiGrowth: document.getElementById('noiGrowth'),
+            appreciation: document.getElementById('appreciation'),
+            sellingCosts: document.getElementById('sellingCosts')
+        };
+
+        const displays = {
+            rentPerSqmValue: document.getElementById('rentPerSqmValue'),
+            occupancyValue: document.getElementById('occupancyValue'),
+            noiGrowthValue: document.getElementById('noiGrowthValue'),
+            appreciationValue: document.getElementById('appreciationValue'),
+            sellingCostsValue: document.getElementById('sellingCostsValue'),
+            irrValue: document.getElementById('irrValue'),
+            totalReturnValue: document.getElementById('totalReturnValue'),
+            year1CashFlowValue: document.getElementById('year1CashFlowValue'),
+            year10ExitValue: document.getElementById('year10ExitValue'),
+            cashFlowBody: document.getElementById('cashFlowBody'),
+            summaryBody: document.getElementById('summaryBody'),
+            refiInfo: document.getElementById('refiInfo')
+        };
+
+        function formatCurrency(value) {
+            return `${Math.round(value).toLocaleString('de-DE')} €`;
+        }
+
+        function formatPercent(value) {
+            return `${value.toFixed(1).replace('.', ',')}%`;
+        }
+
+        function calculateLoanBalance(principal, annualPayment, interestRate, yearsPaid) {
+            const monthlyRate = interestRate / 12;
+            const monthlyPayment = annualPayment / 12;
+            const monthsPaid = yearsPaid * 12;
+            
+            const balance = principal * Math.pow(1 + monthlyRate, monthsPaid) - 
+                          monthlyPayment * ((Math.pow(1 + monthlyRate, monthsPaid) - 1) / monthlyRate);
+            
+            return balance;
+        }
+
+        function calculateNewDebtService(loanAmount, interestRate, years) {
+            const monthlyRate = interestRate / 12;
+            const months = years * 12;
+            const monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, months)) / 
+                                 (Math.pow(1 + monthlyRate, months) - 1);
+            return monthlyPayment * 12;
+        }
+
+        function calculateNPV(rate, cashFlows) {
+            return cashFlows.reduce((sum, cf, i) => sum + cf / Math.pow(1 + rate, i), 0);
+        }
+
+        function calculateIRR(cashFlows) {
+            let rate = 0.1;
+            for (let i = 0; i < 100; i++) {
+                const npv = calculateNPV(rate, cashFlows);
+                if (Math.abs(npv) < 0.01) return rate;
+                const dNpv = cashFlows.reduce((sum, cf, i) => sum - i * cf / Math.pow(1 + rate, i + 1), 0);
+                rate = rate - npv / dNpv;
+            }
+            return rate;
+        }
+
+        function updateCalculations() {
+            const includeRefi = controls.includeRefi.checked;
+            const rentPerSqm = parseFloat(controls.rentPerSqm.value);
+            const occupancy = parseFloat(controls.occupancy.value) / 100;
+            const noiGrowth = parseFloat(controls.noiGrowth.value) / 100;
+            const appreciation = parseFloat(controls.appreciation.value) / 100;
+            const sellingCostsPct = parseFloat(controls.sellingCosts.value) / 100;
+
+            // Update displays
+            displays.rentPerSqmValue.textContent = `${rentPerSqm} € / m²`;
+            displays.occupancyValue.textContent = formatPercent(occupancy * 100);
+            displays.noiGrowthValue.textContent = formatPercent(noiGrowth * 100);
+            displays.appreciationValue.textContent = formatPercent(appreciation * 100);
+            displays.sellingCostsValue.textContent = formatPercent(sellingCostsPct * 100);
+
+            // Update refi info box
+            if (includeRefi) {
+                displays.refiInfo.innerHTML = '<strong>Aktiviert:</strong> 544.494 € steuerfrei in Jahr 4 entnehmen bei Erhalt des Eigentums. Reduziert Cashflow Jahre 5-10, bietet aber sofortige Liquidität.';
+                displays.refiInfo.style.borderColor = '#27ae60';
+                displays.refiInfo.style.background = '#d4edda';
+            } else {
+                displays.refiInfo.innerHTML = '<strong>Deaktiviert:</strong> Keine Refinanzierung. Höherer operativer Cashflow Jahre 5-10, aber keine Barauszahlung in Jahr 4.';
+                displays.refiInfo.style.borderColor = '#95a5a6';
+                displays.refiInfo.style.background = '#ecf0f1';
+            }
+
+            // Calculate base NOI
+            const monthlyRentPerUnit = rentPerSqm * (FIXED.totalArea / 36); // Durchschnitt pro Einheit
+            const monthlyRevenue = monthlyRentPerUnit * 36 * occupancy;
+            const annualRevenue = monthlyRevenue * 12;
+            const baseNOI = annualRevenue * 0.61; // Betriebskostenquote
+
+            // Year-by-year calculations
+            const cashFlows = [-FIXED.equityInvestment];
+            let cashFlowHTML = '';
+            let cumulativeOperatingCF = 0;
+            let year4RefiAmount = 0;
+
+            for (let year = 1; year <= 10; year++) {
+                const noi = baseNOI * Math.pow(1 + noiGrowth, year);
+                let debtService, afterTaxCF, specialEvent = '-';
+
+                if (!includeRefi || year <= 4) {
+                    debtService = FIXED.originalDebtService;
+                    const preTaxCF = noi - debtService;
+                    const interest = FIXED.originalLoan * FIXED.interestRate * (1 - (year - 1) * 0.015);
+                    const depreciation = FIXED.depreciableBase * Math.pow(0.95, year) * 0.05;
+                    const taxableIncome = noi - interest - depreciation;
+                    const taxEffect = taxableIncome * FIXED.taxRate;
+                    afterTaxCF = preTaxCF - taxEffect;
+                } else {
+                    // Jahre 5-10 mit Refinanzierung
+                    const newLoan = 4398084;
+                    debtService = 258089;
+                    const preTaxCF = noi - debtService;
+                    const interest = newLoan * FIXED.interestRate * (1 - (year - 5) * 0.015);
+                    const depreciation = FIXED.depreciableBase * Math.pow(0.95, year) * 0.05;
+                    const taxableIncome = noi - interest - depreciation;
+                    const taxEffect = taxableIncome * FIXED.taxRate;
+                    afterTaxCF = preTaxCF - taxEffect;
+                }
+
+                // Jahr 4 Refinanzierung
+                if (includeRefi && year === 4) {
+                    const year4Balance = calculateLoanBalance(FIXED.originalLoan, FIXED.originalDebtService, FIXED.interestRate, 4);
+                    const year4Value = FIXED.initialPropertyValue * Math.pow(1 + appreciation, 4);
+                    const newLoan = year4Value * 0.70;
+                    year4RefiAmount = newLoan - year4Balance;
+                    afterTaxCF += year4RefiAmount;
+                    specialEvent = `<strong>+${Math.round(year4RefiAmount/1000)} T€ Refi</strong>`;
+                }
+
+                cumulativeOperatingCF += (includeRefi && year === 4) ? afterTaxCF - year4RefiAmount : afterTaxCF;
+                cashFlows.push(afterTaxCF);
+
+                const rowClass = (includeRefi && year === 4) ? 'highlight-row' : 'year-row';
+                cashFlowHTML += `
+                    <tr class="${rowClass}">
+                        <td><strong>Jahr ${year}</strong></td>
+                        <td>${formatCurrency(noi)}</td>
+                        <td>-${formatCurrency(debtService)}</td>
+                        <td><strong>${formatCurrency(afterTaxCF)}</strong></td>
+                        <td>${specialEvent}</td>
+                    </tr>
+                `;
+            }
+
+            // Jahr 10 Exit
+            const year10Value = FIXED.initialPropertyValue * Math.pow(1 + appreciation, 10);
+            const year10Loan = includeRefi ? 
+                calculateLoanBalance(4398084, 258089, FIXED.interestRate, 6) :
+                calculateLoanBalance(FIXED.originalLoan, FIXED.originalDebtService, FIXED.interestRate, 10);
+            const sellingCosts = year10Value * sellingCostsPct;
+            const year10NetProceeds = year10Value - year10Loan - sellingCosts;
+            
+            cashFlows[10] += year10NetProceeds;
+
+            // IRR und Summen berechnen
+            const irr = calculateIRR(cashFlows) * 100;
+            const totalReturn = cumulativeOperatingCF + (includeRefi ? year4RefiAmount : 0) + year10NetProceeds;
+
+            // Update summary displays
+            displays.irrValue.textContent = formatPercent(irr);
+            displays.totalReturnValue.textContent = formatCurrency(totalReturn);
+            displays.year1CashFlowValue.textContent = formatCurrency(cashFlows[1]);
+            displays.year10ExitValue.textContent = formatCurrency(year10NetProceeds);
+
+            // Cash flow table
+            cashFlowHTML += `
+                <tr class="total-row">
+                    <td colspan="3"><strong>Gesamter operativer Cashflow</strong></td>
+                    <td><strong>${formatCurrency(cumulativeOperatingCF)}</strong></td>
+                    <td>10 Jahre</td>
+                </tr>
+            `;
+            if (includeRefi) {
+                cashFlowHTML += `
+                    <tr class="highlight-row">
+                        <td colspan="3"><strong>Jahr 4 Refinanzierung</strong></td>
+                        <td><strong>+${formatCurrency(year4RefiAmount)}</strong></td>
+                        <td>Steuerfreie Barauszahlung</td>
+                    </tr>
+                `;
+            }
+            cashFlowHTML += `
+                <tr class="profit-row">
+                    <td colspan="3"><strong>Jahr 10 Verkaufserlös</strong></td>
+                    <td><strong>+${formatCurrency(year10NetProceeds)}</strong></td>
+                    <td>Steuerfreier Verkauf</td>
+                </tr>
+            `;
+
+            displays.cashFlowBody.innerHTML = cashFlowHTML;
+
+            // Summary table
+            displays.summaryBody.innerHTML = `
+                <tr class="section-header">
+                    <td colspan="2">ANFANGSINVESTITION</td>
+                </tr>
+                <tr>
+                    <td>Benötigtes Eigenkapital</td>
+                    <td>-${formatCurrency(FIXED.equityInvestment)}</td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="2">RÜCKFLÜSSE</td>
+                </tr>
+                <tr>
+                    <td>Operativer Cashflow (10 Jahre)</td>
+                    <td>${formatCurrency(cumulativeOperatingCF)}</td>
+                </tr>
+                ${includeRefi ? `
+                <tr class="highlight-row">
+                    <td>Jahr 4 Refinanzierung Barauszahlung</td>
+                    <td><strong>+${formatCurrency(year4RefiAmount)}</strong></td>
+                </tr>
+                ` : ''}
+                <tr>
+                    <td>Jahr 10 Verkaufserlös (steuerfrei)</td>
+                    <td>${formatCurrency(year10NetProceeds)}</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>Gesamte Rückflüsse</strong></td>
+                    <td><strong>${formatCurrency(totalReturn)}</strong></td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="2">LEISTUNGSKENNZAHLEN</td>
+                </tr>
+                <tr>
+                    <td>10-Jahres-IRR</td>
+                    <td><strong>${formatPercent(irr)}</strong></td>
+                </tr>
+                <tr>
+                    <td>Gesamt-ROI</td>
+                    <td><strong>${formatPercent((totalReturn / FIXED.equityInvestment - 1) * 100)}</strong></td>
+                </tr>
+                <tr class="profit-row">
+                    <td><strong>Nettogewinn</strong></td>
+                    <td><strong>${formatCurrency(totalReturn - FIXED.equityInvestment)}</strong></td>
+                </tr>
+            `;
+        }
+
+        // Event listeners
+        Object.values(controls).forEach(control => {
+            control.addEventListener('input', updateCalculations);
+            control.addEventListener('change', updateCalculations);
+        });
+
+        // Initial calculation
+        document.addEventListener('DOMContentLoaded', updateCalculations);
+    </script>
+</body>
+</html>

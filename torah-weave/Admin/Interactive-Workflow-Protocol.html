@@ -1,0 +1,616 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Workflow Protocol v2.4</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c5282;
+            border-bottom: 3px solid #2c5282;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 40px;
+            border-left: 4px solid #4299e1;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #4a5568;
+            margin-top: 30px;
+        }
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #fc8181;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .critical-box {
+            background-color: #fef5e7;
+            border: 2px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .info-box {
+            background-color: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .success-box {
+            background-color: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #f7fafc;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "Courier New", monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4a5568;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        .checklist {
+            background-color: #f7fafc;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .version-info {
+            background-color: #e6fffa;
+            border: 1px solid #81e6d9;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="version-info">
+    <strong>Version 2.4</strong> | Last Updated: October 22, 2025 | 
+    <strong>Change:</strong> Fixed token tracking protocol to account for counting lag
+</div>
+
+<h1>Interactive Workflow Protocol</h1>
+
+<p>This document establishes the interactive workflow between user and Claude for maintaining consistency, tracking progress, and ensuring all steps are completed for each piece of work.</p>
+
+<div class="critical-box">
+    🚨 CRITICAL TOKEN TRACKING FIX (v2.4)
+    <br><br>
+    Previous versions had a fatal flaw: Token counts are reported BEFORE the current response is generated, not after. This caused sessions to end unexpectedly when large document generation pushed usage from 60% to 85% in a single response.
+    <br><br>
+    <strong>See "Token Tracking Protocol" section below for the corrected approach.</strong>
+</div>
+
+<h2>1. Session Start Protocol</h2>
+
+<div class="info-box">
+    <strong>User says:</strong> "Follow the Interactive Workflow Protocol"
+    <br><br>
+    <strong>Claude responds:</strong> "I'm reviewing the project structure. One moment..."
+</div>
+
+<h3>Required Documents (Fetch in this order using web_fetch):</h3>
+
+<ol>
+    <li><code>https://chaver.com/torah-weave/Admin/index.html</code>
+        <br>→ To understand project structure</li>
+    <li><code>https://chaver.com/torah-weave/Admin/Interactive-Workflow-Protocol.html</code>
+        <br>→ To load this protocol</li>
+    <li><code>https://chaver.com/torah-weave/Admin/Session-Start-Template.html</code>
+        <br>→ To understand session start format</li>
+    <li><code>https://chaver.com/torah-weave/Admin/ProgressDiary.html</code>
+        <br>→ To see what was accomplished last session</li>
+</ol>
+
+<div class="warning-box">
+    <strong>⚠️ CRITICAL:</strong> For session start ONLY, use <code>web_fetch</code>, NOT <code>project_knowledge_search</code>.
+    <br><br>
+    The online documents are the SOURCE OF TRUTH for current project state. Project knowledge contains templates and examples, NOT current session data.
+</div>
+
+<h3>After Fetching:</h3>
+
+<p>Claude responds with:</p>
+
+<div class="success-box">
+<pre>Following the Interactive Workflow Protocol.
+
+I've reviewed:
+✅ Admin Hub
+✅ Interactive Workflow Protocol  
+✅ Session Start Template
+✅ Progress Diary
+
+Last session: [summarize from Progress Diary]
+
+I commit to searching documentation before taking action.
+
+What are we working on today?</pre>
+</div>
+
+<h2>2. Token Tracking Protocol (CORRECTED v2.4)</h2>
+
+<div class="critical-box">
+    🔴 THE PROBLEM WITH v2.3 AND EARLIER:
+    <br><br>
+    Claude sees token counts AFTER each tool call, showing cumulative usage up to that point. However, when Claude generates large content (like a 300-line HTML document), those tokens aren't counted until AFTER the response completes.
+    <br><br>
+    <strong>Result:</strong> A response showing "115,000 tokens (61%)" might actually push the total to 165,000 tokens (87%) after generation completes, causing unexpected session termination.
+</div>
+
+<h3>How Token Counting Actually Works:</h3>
+
+<table>
+    <tr>
+        <th>What Claude Sees</th>
+        <th>What It Means</th>
+        <th>The Problem</th>
+    </tr>
+    <tr>
+        <td><code>Token usage: 31,620/190,000</code></td>
+        <td>Cumulative tokens used SO FAR in conversation</td>
+        <td>Does NOT include tokens about to be generated</td>
+    </tr>
+    <tr>
+        <td>Reported at END of response</td>
+        <td>Shows usage BEFORE current response</td>
+        <td>Large outputs aren't counted until too late</td>
+    </tr>
+    <tr>
+        <td>Large document = 20-30K tokens</td>
+        <td>Can jump from 60% to 85% in one response</td>
+        <td>No warning before hitting danger zone</td>
+    </tr>
+</table>
+
+<h3>The Solution: Conservative Pre-Generation Estimation</h3>
+
+<div class="info-box">
+    <strong>New Rule:</strong> Claude must estimate token cost BEFORE generating large content and be conservative with thresholds.
+</div>
+
+<h3>Mandatory Token Status Format</h3>
+
+<p>At the end of EVERY response, Claude must include:</p>
+
+<pre>───────────────────────────────────────
+📊 Token Status: [CURRENT] / 190,000 ([%]% used) [STATUS]
+[ESTIMATE]: Next response may use ~[X]K tokens
+───────────────────────────────────────</pre>
+
+<h3>Status Thresholds (CONSERVATIVE)</h3>
+
+<table>
+    <tr>
+        <th>Token Range</th>
+        <th>Percentage</th>
+        <th>Status</th>
+        <th>Action Required</th>
+    </tr>
+    <tr>
+        <td>0 - 95,000</td>
+        <td>0 - 50%</td>
+        <td>✅ SAFE</td>
+        <td>Work normally</td>
+    </tr>
+    <tr>
+        <td>95,001 - 114,000</td>
+        <td>51 - 60%</td>
+        <td>⚠️ CAUTION</td>
+        <td>Limit large outputs. Warn before generating 300+ line documents.</td>
+    </tr>
+    <tr>
+        <td>114,001 - 133,000</td>
+        <td>61 - 70%</td>
+        <td>🟡 WARNING</td>
+        <td><strong>No large document generation.</strong> Break work into smaller pieces. Suggest wrapping up soon.</td>
+    </tr>
+    <tr>
+        <td>133,001 - 152,000</td>
+        <td>71 - 80%</td>
+        <td>🟠 DANGER</td>
+        <td><strong>Stop all content creation.</strong> Complete current task only. Create diary entry. Prepare to end session.</td>
+    </tr>
+    <tr>
+        <td>152,001+</td>
+        <td>80%+</td>
+        <td>🚨 CRITICAL</td>
+        <td><strong>IMMEDIATE:</strong> Stop work. Create diary entry NOW. End session.</td>
+    </tr>
+</table>
+
+<h3>Special Rules for Large Document Generation</h3>
+
+<div class="warning-box">
+    <strong>Before generating any document over 200 lines:</strong>
+    <ol>
+        <li>Check current token count</li>
+        <li>Estimate document will use 15-30K tokens</li>
+        <li>Calculate projected total: current + 30K</li>
+        <li>If projected total exceeds 114K (60%), <strong>STOP and warn user first</strong></li>
+    </ol>
+</div>
+
+<h3>Example Token Warning (Before Large Output):</h3>
+
+<pre>⚠️ TOKEN WARNING
+
+Current usage: 98,000 / 190,000 (51.6%)
+Estimated next response: ~25,000 tokens (full document rewrite)
+Projected total: ~123,000 (65%)
+
+This will move us into WARNING zone.
+
+Options:
+A. Proceed with full document (risk session ending)
+B. Generate in sections (safer, takes longer)
+C. Defer to next session
+
+Which would you prefer?</pre>
+
+<h2>3. Unit Commentary Workflow</h2>
+
+<p>When user requests a unit commentary, Claude automatically provides this checklist:</p>
+
+<div class="checklist">
+<pre>✅ UNIT COMMENTARY COMPLETION CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Unit: [Book] Unit [Number]
+Date Completed: [Date]
+
+Required Sections - Verify All Present:
+□ Unit Overview (scope, verses, position in structure)
+□ Boundary Evidence (opening/closing markers)
+□ Internal Structure (with Hebrew labels if applicable)
+□ Structure Type Classification (e.g., 3×2 format)
+□ Literary Features (repetitions, envelopes, patterns)
+□ Theological Content
+□ Connections to Other Units
+□ Position in Book Architecture
+
+Next Steps:
+
+1. SAVE FILE
+   □ Filename: [book]-unit-[##].html (e.g., genesis-unit-05.html)
+   □ Location: /Commentaries/[Book]/Units/
+   □ Verify CSS link: &lt;link rel="stylesheet" href="/Assets/CSS/main.css"&gt;
+
+2. UPDATE DATABASE
+   □ Open torah_database_FINAL_SESSION.xlsx
+   □ Ready for me to provide the update information
+
+3. UPDATE INDEX
+   □ Add link to /Commentaries/[Book]/index.html
+   □ Update progress tracker
+
+4. SESSION SUMMARY
+   □ Add entry to Progress Diary
+
+Shall we proceed with Step 2: Database Update?</pre>
+</div>
+
+<h2>4. Database Update Format</h2>
+
+<p>User says: "Database is open" or "Ready for database update"</p>
+
+<p>Claude provides formatted data:</p>
+
+<div class="checklist">
+<pre>DATABASE UPDATE - Copy/Paste Format
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Find Row: [Book] Unit [##]
+
+Update These Columns:
+
+Column: Part_D_Status
+Value: Complete
+
+Column: Part_D_Date_Completed
+Value: [YYYY-MM-DD]
+
+Column: Part_D_Structure_Type
+Value: [e.g., "3×2 regular" or "23332 irregular"]
+
+Column: Part_D_File_Location
+Value: /Commentaries/[Book]/Units/[book]-unit-[##].html
+
+Column: Part_D_Key_Features
+Value: [Brief list, e.g., "Envelope structure, three-fold pattern, 
+       divine name alternation"]
+
+Column: Part_D_Theological_Themes
+Value: [Brief list, e.g., "Covenant testing, family conflict, 
+       reconciliation"]
+
+Column: Part_D_Notes
+Value: [Any special observations]
+
+✓ Database updated? Type 'confirmed' to proceed.</pre>
+</div>
+
+<h2>5. Book Commentary Workflow</h2>
+
+<p>Claude provides:</p>
+
+<div class="checklist">
+<pre>📘 BOOK COMMENTARY COMPLETION CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Book: [Genesis/Exodus/Leviticus/Numbers/Deuteronomy]
+Part: [A: Units / B: Structure / C: Commentary]
+
+Part A - Identifying Units:
+□ All units described with boundary evidence
+□ Type A and Type B markers explained
+□ Each unit has internal structure overview
+□ Evidence strength assessed (strong/very strong/absolute)
+
+Part B - Discovering the Map:
+□ Discovery process narrative maintained
+□ Matrix structure explained
+□ Triadic patterns identified
+□ Concentric rings described
+□ Divine name distribution mapped
+□ Systematic correspondences demonstrated
+
+Part C - Commentary:
+□ Flows naturally from Part B discoveries
+□ Three-ring concentric pattern explained
+□ Theological insights emerge from structure
+□ Unit-by-unit parallels demonstrated
+□ Links to individual unit commentaries included
+□ No premature theological claims
+
+Next Steps:
+
+1. SAVE FILES
+   Part A: /Commentaries/[Book]/Units of [Book].html
+   Part B: /Commentaries/[Book]/Discovering the Map.html
+   Part C: /Commentaries/[Book]/[Book] Commentary.html
+
+2. UPDATE MASTER INDEX
+   □ /Commentaries/index.html
+
+3. UPDATE DATABASE - Book Level Summary
+
+Ready to proceed with database update?</pre>
+</div>
+
+<h2>6. Session Summary for Progress Diary</h2>
+
+<p>Claude automatically generates:</p>
+
+<div class="checklist">
+<pre>📝 SESSION SUMMARY FOR PROGRESS DIARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Date: [Date]
+Session Duration: [Estimated]
+Chat URL: [This chat's URL]
+
+Work Completed:
+• [Specific accomplishment 1]
+• [Specific accomplishment 2]
+• [Specific accomplishment 3]
+
+Files Modified/Created:
+• [filename1] - [what was done]
+• [filename2] - [what was done]
+
+Database Updates:
+• [Book] Unit [#] - Status changed to [X]
+• [Specific columns updated]
+
+Outstanding Issues:
+• [Issue 1 - needs resolution]
+• [Issue 2 - decision needed]
+
+Next Session Priorities:
+1. [Top priority task]
+2. [Second priority task]
+3. [Third priority task]
+
+Technical Notes:
+• [Any CSS/formatting issues discovered]
+• [Any structural insights gained]
+
+Copy this to: /Admin/Progress-Diary.html
+Add as new &lt;div class="entry"&gt; at the top of the page.
+
+Would you like me to format this as HTML for direct paste?</pre>
+</div>
+
+<h2>7. File Naming Conventions</h2>
+
+<table>
+    <tr>
+        <th>Content Type</th>
+        <th>Format</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>Book Part A</td>
+        <td>Units of [Book].html</td>
+        <td>Units of Genesis.html</td>
+    </tr>
+    <tr>
+        <td>Book Part B</td>
+        <td>Discovering the Map of [Book].html</td>
+        <td>Discovering the Map of Genesis.html</td>
+    </tr>
+    <tr>
+        <td>Book Part C</td>
+        <td>[Book] Commentary.html</td>
+        <td>Genesis Commentary.html</td>
+    </tr>
+    <tr>
+        <td>Unit Commentary</td>
+        <td>[book]-unit-[##].html</td>
+        <td>genesis-unit-05.html</td>
+    </tr>
+    <tr>
+        <td>Master CSS</td>
+        <td>main.css</td>
+        <td>Always in /Assets/CSS/</td>
+    </tr>
+    <tr>
+        <td>Database</td>
+        <td>torah_database_FINAL_SESSION.xlsx</td>
+        <td>Updated in place</td>
+    </tr>
+</table>
+
+<h2>8. Decision Documentation</h2>
+
+<p>When ambiguity arises, Claude asks:</p>
+
+<div class="warning-box">
+<pre>⚠️ DECISION NEEDED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Issue: [Clear description of the ambiguity]
+
+Options:
+A. [First approach with pros/cons]
+B. [Second approach with pros/cons]
+C. [Defer decision and document for later]
+
+Your previous work suggests: [If pattern exists]
+
+Which approach should we take? This will be documented for 
+consistency across remaining work.</pre>
+</div>
+
+<h2>9. Required Context</h2>
+
+<p>To maintain continuity, Claude should have access to:</p>
+
+<ul>
+    <li><strong>Progress Diary:</strong> What was done last session</li>
+    <li><strong>Database:</strong> Current status of all units</li>
+    <li><strong>Relevant CSS:</strong> For formatting consistency</li>
+    <li><strong>Completed Examples:</strong> For maintaining style</li>
+</ul>
+
+<p>Each session, user should upload or provide link to:</p>
+<ul>
+    <li>Database (if updates needed)</li>
+    <li>Any files being revised</li>
+    <li>Relevant completed examples</li>
+</ul>
+
+<h2>10. Quality Verification</h2>
+
+<p>Claude verifies:</p>
+
+<div class="checklist">
+<pre>🔍 QUALITY CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Content Quality:
+□ Scholarly tone consistent throughout
+□ Hebrew terms properly formatted
+□ Verse references accurate
+□ Internal cross-references working
+□ No theological claims without structural evidence
+
+Technical Quality:
+□ Valid HTML structure
+□ CSS classes match main.css
+□ Links use correct relative paths
+□ File saved in correct location with correct name
+□ Mobile-responsive (if testing available)
+
+Consistency:
+□ Terminology matches established standards
+□ Structure description format consistent
+□ Divine name analysis follows established pattern
+□ No contradictions with previous work
+
+Ready for Database Update? [Yes/No]</pre>
+</div>
+
+<h2>11. Recovery from Interruption</h2>
+
+<p>Claude asks:</p>
+
+<div class="info-box">
+<pre>If session ends unexpectedly:
+
+User starts new chat with: 
+"Continue from [Chat URL] - we were working on [X]"
+
+Claude:
+1. Reviews Progress Diary
+2. Identifies last confirmed completion
+3. Suggests: "I can see we completed [X]. The next step was [Y]. 
+   Shall we continue from there?"
+
+Goal: Always recover gracefully, never lose work</pre>
+</div>
+
+<h2>12. Protocol Evolution</h2>
+
+<p>This protocol should evolve. When you discover better workflows:</p>
+
+<ol>
+    <li>Document the improvement</li>
+    <li>Update this protocol</li>
+    <li>Increment version number</li>
+    <li>Note changes in version info at top</li>
+</ol>
+
+<p><em>This is a living document.</em></p>
+
+<hr>
+
+<div class="version-info">
+    <strong>Version History:</strong>
+    <ul>
+        <li><strong>v2.4</strong> (Oct 22, 2025) - Fixed token tracking protocol with conservative thresholds and pre-generation estimation</li>
+        <li><strong>v2.3</strong> (Oct 20, 2025) - Added token tracking requirements</li>
+        <li><strong>v2.0</strong> (Oct 19, 2025) - Established interactive workflow system</li>
+    </ul>
+</div>
+
+</body>
+</html>

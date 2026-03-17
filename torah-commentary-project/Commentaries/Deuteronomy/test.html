@@ -1,0 +1,1788 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/English.dwt" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- #BeginEditable "doctitle" -->
+<title>Untitled 1</title>
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* Modern CSS Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+    }
+    
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+        background-color: #2c3e50;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 1rem 0;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+    
+    nav a:hover {
+        color: #3498db;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Hero Section - Reduced size */
+    .hero {
+        background: linear-gradient(135deg, #e6f2ff 0%, #cce7ff 100%);
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+    
+    /* Site Title - Smaller */
+    .site-title {
+        margin-bottom: 1rem;
+    }
+    
+    .site-title h1 {
+        font-size: 2.2rem;
+        color: #333;
+        margin-bottom: 0.25rem;
+        font-weight: normal;
+    }
+    
+    .site-title h2 {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: normal;
+    }
+    
+    /* Woven Torah Link Box - Smaller */
+    .woven-torah-link {
+        background-color: white;
+        border: 1px solid #5090f0;
+        padding: 0.8rem 1.2rem;
+        margin: 1rem auto;
+        border-radius: 6px;
+        max-width: 600px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .woven-torah-link h3 {
+        color: #5090f0;
+        font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .woven-torah-link p {
+        color: #666;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Buttons - Smaller */
+    .hero-buttons {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .hero-buttons a {
+        background-color: white;
+        color: #333;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border: 1px solid #ddd;
+    }
+    
+    .hero-buttons a:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        background-color: #f8f9fa;
+    }
+    
+    /* Main Content Area */
+    .main-content {
+        background-color: white;
+        padding: 3rem 0;
+        min-height: 400px;
+    }
+    
+    /* Main Content - Full Width */
+    #content {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 3rem 0 2rem;
+        margin-top: 4rem;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-section h4 {
+        margin-bottom: 1rem;
+        color: #ecf0f1;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+    }
+    
+    .footer-section li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a {
+        color: #bdc3c7;
+        text-decoration: none;
+    }
+    
+    .footer-section a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .footer-section p {
+        color: #bdc3c7;
+        line-height: 1.6;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #34495e;
+        color: #95a5a6;
+    }
+    
+    /* ===== TORAH UNIT STYLES (Compatible with Old DWT) ===== */
+    /* Base styles - maintain compatibility */
+    .unit-header {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 1.5rem 0 1rem;
+        page-break-before: always;
+        page-break-after: avoid;
+    }
+    
+    .cell-label {
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0;
+        page-break-after: avoid;
+    }
+    
+    .torah {
+        text-align: justify;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    /* Semantic highlighting */
+    .cell-subdivision {
+        font-weight: bold;
+    }
+    
+    .verse-number {
+        font-weight: bold;
+    }
+    
+    /* Color highlighting classes - original MS Word names preserved */
+    .horizontal1 {
+        color: #3399FF;
+        font-weight: normal;
+    }
+    
+    .vertical1 {
+        color: #C09200;
+        font-weight: normal;
+    }
+    
+    .internalparallel {
+        color: lime;
+        font-weight: normal;
+    }
+    
+    /* New semantic class names */
+    .horizontal-parallel {
+        color: #3399FF;
+        font-weight: normal;
+    }
+    
+    .vertical-parallel {
+        color: #C09200;
+        font-weight: normal;
+    }
+    
+    .internal-parallel {
+        color: lime;
+        font-weight: normal;
+    }
+    
+    /* Additional highlighting classes */
+    .closure {
+        color: #CC0066;
+        font-weight: normal;
+    }
+    
+    .ciasm1 {
+        color: #7030A0;
+        font-weight: normal;
+    }
+    
+    .ciasm2 {
+        color: #FB81EC;
+        font-weight: normal;
+    }
+    
+    .horizontal2 {
+        color: teal;
+        font-weight: normal;
+    }
+    
+    .horizontal3 {
+        color: maroon;
+        font-weight: normal;
+    }
+    
+    .hebrew-paragraph {
+        font-weight: bold;
+    }
+    
+    /* Layout */
+    .scripture-table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 900px;
+    }
+    
+    .scripture-table td {
+        padding: 0.5rem;
+        vertical-align: top;
+    }
+    
+    /* Page breaks */
+    .page-break {
+        page-break-before: always;
+        clear: both;
+    }
+    
+    /* ===== TORAH WEAVE SPECIFIC ADDITIONS ===== */
+    
+    /* Torah Weave Container */
+    .torah-weave-container {
+        font-family: Arial, 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    /* Book-specific heading colors */
+    .genesis-section h1, .genesis-section h2, .genesis-section h3 {
+        color: #7ab0f7 !important;
+    }
+    
+    .exodus-section h1, .exodus-section h2, .exodus-section h3 {
+        color: #f0b070 !important;
+    }
+    
+    .leviticus-section h1, .leviticus-section h2, .leviticus-section h3 {
+        color: #80d0a0 !important;
+    }
+    
+    .numbers-section h1, .numbers-section h2, .numbers-section h3 {
+        color: #f0b070 !important;
+    }
+    
+    .deuteronomy-section h1, .deuteronomy-section h2, .deuteronomy-section h3 {
+        color: #7ab0f7 !important;
+    }
+    
+    /* Full Torah Map Styles */
+    .map-container {
+        width: 100%;
+        max-width: 1170px;
+        height: 900px;
+        position: relative;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 1200px) {
+        .map-container {
+            width: 100%;
+            height: auto;
+            overflow-x: auto;
+        }
+        
+        .map-inner {
+            width: 1170px;
+            height: 900px;
+            position: relative;
+        }
+    }
+    
+    /* Book containers in full map */
+    .book {
+        position: absolute;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+    
+    .book-title {
+        position: absolute;
+        padding: 5px 0;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        z-index: 2;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Book positioning and colors */
+    .genesis {
+        left: 0px;
+        top: 351px;
+        width: 351px;
+        height: 216px;
+        border: 3px solid #7ab0f7;
+        background-color: rgba(122, 176, 247, 0.1);
+    }
+    
+    .genesis-title {
+        left: 0px;
+        top: 351px;
+        width: 351px;
+        background-color: #7ab0f7;
+    }
+    
+    .exodus {
+        left: 486px;
+        top: 27px;
+        width: 297px;
+        height: 297px;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+    }
+    
+    .exodus-title {
+        left: 486px;
+        top: 0px;
+        width: 297px;
+        background-color: #f0b070;
+    }
+    
+    .leviticus {
+        left: 378px;
+        top: 351px;
+        width: 459px;
+        height: 216px;
+        border: 3px solid #80d0a0;
+        background-color: rgba(128, 208, 160, 0.1);
+    }
+    
+    .leviticus-title {
+        left: 378px;
+        top: 351px;
+        width: 459px;
+        background-color: #80d0a0;
+    }
+    
+    .numbers {
+        left: 486px;
+        top: 621px;
+        width: 297px;
+        height: 297px;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+    }
+    
+    .numbers-title {
+        left: 486px;
+        top: 594px;
+        width: 297px;
+        background-color: #f0b070;
+    }
+    
+    .deuteronomy {
+        left: 864px;
+        top: 351px;
+        width: 270px;
+        height: 216px;
+        border: 3px solid #7ab0f7;
+        background-color: rgba(122, 176, 247, 0.1);
+    }
+    
+    .deuteronomy-title {
+        left: 864px;
+        top: 351px;
+        width: 270px;
+        background-color: #7ab0f7;
+    }
+    
+    /* Unit styles in full map */
+    .unit {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 12px;
+        z-index: 3;
+        transition: transform 0.2s;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .unit:hover {
+        transform: scale(1.2);
+        z-index: 10;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    
+    .unit.special {
+        border: 2px solid #CC0066;
+        width: 23px;
+        height: 23px;
+    }
+    
+    /* Unit background colors */
+    .color-d4f2ff { background-color: #d4f2ff; }
+    .color-e6ffee { background-color: #e6ffee; }
+    .color-d4d4ff { background-color: #d4d4ff; }
+    .color-ffe6e6 { background-color: #ffe6e6; }
+    .color-ffccaa { background-color: #ffccaa; }
+    .color-c8e6d2 { background-color: #c8e6d2; }
+    .color-f0f0f0 { background-color: #f0f0f0; }
+    
+    /* Exodus Quadrant Styles */
+    .exodus-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        height: 0;
+        padding-bottom: 100%;
+        margin: 30px auto;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .quadrant {
+        position: absolute;
+        width: 45%;
+        height: 42%;
+        z-index: 1;
+        border: 1px dashed rgba(240, 176, 112, 0.2);
+    }
+    
+    .quadrant-1 { top: 8%; left: 2%; }
+    .quadrant-2 { top: 8%; right: 2%; }
+    .quadrant-3 { bottom: 14%; left: 2%; }
+    .quadrant-4 { bottom: 14%; right: 2%; }
+    
+    /* Leviticus Concentric Rings */
+    .ring {
+        border: 2px solid #80d0a0;
+        border-radius: 50%;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .ring-outer { background-color: rgba(128, 208, 160, 0.1); }
+    .ring-middle { background-color: rgba(128, 208, 160, 0.2); }
+    .ring-inner { background-color: rgba(128, 208, 160, 0.3); }
+    .ring-center { 
+        background-color: #ffe6e6;
+        border-color: #CC0066;
+        font-weight: bold;
+    }
+    
+    /* ===== COMMENTARY-SPECIFIC STYLES ===== */
+    
+    /* Breadcrumb Navigation */
+    .breadcrumb {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 0.9em;
+    }
+    
+    .breadcrumb a {
+        color: #3498db;
+        text-decoration: none;
+    }
+    
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Unit Metadata */
+    .unit-metadata {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+        font-size: 0.95em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .unit-metadata span {
+        background-color: rgba(255,255,255,0.1);
+        padding: 5px 15px;
+        border-radius: 4px;
+    }
+    
+    /* Unit Navigation */
+    .unit-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0;
+        padding: 20px;
+        background-color: #ecf0f1;
+        border-radius: 6px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .unit-navigation a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .unit-navigation a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Book Map Container */
+    .book-map-container {
+        background-color: #f8f9fa;
+        border: 2px solid #dee2e6;
+        padding: 20px;
+        text-align: center;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+    
+    .deuteronomy-mini-map {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Opening Hook */
+    .opening-hook {
+        font-size: 1.2em;
+        font-style: italic;
+        color: #555;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-left: 4px solid #3498db;
+        margin-bottom: 30px;
+        line-height: 1.8;
+    }
+    
+    /* Torah Text Section */
+    .torah-text-section {
+        background-color: white;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .torah-text-section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    /* Color Legend */
+    .color-legend {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 6px;
+    }
+    
+    .color-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .color-swatch {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+    }
+    
+    /* Commentary Section */
+    .commentary-section {
+        background-color: white;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .commentary-section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .commentary-section h3 {
+        color: #3498db;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .commentary-section h4 {
+        color: #555;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    /* Structural Matrix Section */
+    .matrix-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .matrix-header h2 {
+        font-size: 28px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    .matrix-header p {
+        color: #666;
+        font-style: italic;
+    }
+    
+    /* Commentary Matrix Table */
+    .commentary-matrix {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+    
+    .commentary-matrix th,
+    .commentary-matrix td {
+        border: 2px solid #ddd;
+        padding: 20px;
+        vertical-align: top;
+    }
+    
+    /* Matrix headers */
+    .weft-rule {
+        background-color: #80d0a0;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        width: 180px;
+        font-size: 15px;
+    }
+    
+    .weft-rule .rule {
+        display: block;
+        font-weight: normal;
+        font-size: 13px;
+        margin-top: 8px;
+        font-style: italic;
+        line-height: 1.3;
+    }
+    
+    .column-header {
+        background-color: #7ab0f7;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .column-subtext {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    /* Matrix intersection cells */
+    .intersection {
+        background-color: #ffffff;
+        position: relative;
+    }
+    
+    .intersection-header {
+        color: #2c3e50;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+    
+    .intersection-content {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .intersection-note {
+        font-style: italic;
+        color: #666;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    
+    /* Variation boxes in matrix */
+    .variation-box {
+        background-color: #fef3c7;
+        border: 1px solid #f59e0b;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 13px;
+    }
+    
+    /* Framework cells */
+    .framework-row {
+        background-color: #f8f9fa;
+    }
+    
+    .framework-cell {
+        background-color: #f8f9fa;
+    }
+    
+    /* Matrix Table (simplified version) */
+    .matrix-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .matrix-table th,
+    .matrix-table td {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: left;
+    }
+    
+    .matrix-table th {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .matrix-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    
+    /* Theological Points */
+    .theological-point {
+        background-color: #e8f4fd;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 6px;
+        border-left: 4px solid #3498db;
+    }
+    
+    .theological-point h4 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    /* Conclusion Section */
+    .conclusion-section {
+        background-color: #f0f8f0;
+        border: 2px solid #80d0a0;
+        padding: 30px;
+        border-radius: 8px;
+        margin-top: 40px;
+    }
+    
+    .conclusion-section h2 {
+        color: #5da77a;
+        margin-bottom: 20px;
+    }
+    
+    /* Enhanced Mobile Responsive Design */
+    @media (max-width: 1024px) {
+        /* Tablet adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        /* MOBILE HEADER FIX - Remove sticky positioning */
+        header {
+            position: relative; /* Changed from sticky to relative */
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+        
+        nav {
+            position: relative;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background-color: #2c3e50;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Hero adjustments */
+        .hero {
+            padding: 1rem 0;
+        }
+        
+        .site-title h1 {
+            font-size: 1.8rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1rem;
+        }
+        
+        .woven-torah-link {
+            padding: 0.7rem 1rem;
+            margin: 0.8rem auto;
+        }
+        
+        .woven-torah-link h3 {
+            font-size: 1.1rem;
+        }
+        
+        .woven-torah-link p {
+            font-size: 0.85rem;
+        }
+        
+        /* Hero buttons stack on mobile */
+        .hero-buttons {
+            gap: 0.6rem;
+            margin-top: 0.8rem;
+        }
+        
+        .hero-buttons a {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+        
+        /* Unit metadata stacks on mobile */
+        .unit-metadata {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Unit navigation stacks */
+        .unit-navigation {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        /* Matrix tables scroll horizontally on mobile */
+        .commentary-matrix {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        /* Reduce padding on mobile */
+        .commentary-section,
+        .torah-text-section {
+            padding: 20px;
+        }
+        
+        /* Stack color legend vertically */
+        .color-legend {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        /* Content adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            gap: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        /* Small mobile adjustments */
+        .container {
+            padding: 0 15px;
+        }
+        
+        .site-title h1 {
+            font-size: 2rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1.1rem;
+        }
+        
+        .woven-torah-link {
+            padding: 1.25rem;
+            margin: 1.5rem auto;
+        }
+        
+        .woven-torah-link h3 {
+            font-size: 1.25rem;
+        }
+        
+        .opening-hook {
+            font-size: 1.1em;
+            padding: 15px;
+        }
+        
+        #content {
+            padding: 1rem;
+        }
+        
+        /* Stack footer sections */
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    /* Hebrew Text Support */
+    [lang=he], .hebrew {
+        font-family: 'David Libre', 'Arial', serif;
+        direction: rtl;
+        text-align: right;
+    }
+    
+    /* Print styles */
+    @media print {
+        header, footer, .menu-toggle {
+            display: none;
+        }
+        
+        .main-content {
+            padding: 0;
+        }
+        
+        .unit-navigation {
+            display: none;
+        }
+        
+        .book-map-container {
+            page-break-inside: avoid;
+        }
+        
+        .commentary-matrix {
+            page-break-inside: avoid;
+        }
+    }/* =======================================
+   Additional Matrix Table Styling for Genesis
+   ======================================= */
+
+/* Fix for matrix table units */
+.matrix-table .unit {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    text-align: left;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.matrix-table .unit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.matrix-table .unit-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.matrix-table .unit-reference {
+    font-style: italic;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: center;
+    font-size: 12px;
+}
+
+.matrix-table .unit-description {
+    font-size: 13px;
+    line-height: 1.3;
+    text-decoration: none !important;
+}
+
+/* Remove underlines from unit links */
+.matrix-table .unit,
+.matrix-table .unit:hover,
+.matrix-table .unit:focus,
+.matrix-table .unit:active,
+.matrix-table .unit * {
+    text-decoration: none !important;
+}
+
+/* Matrix table column header styles */
+.matrix-table .col-cosmic,
+.matrix-table .col-transition,
+.matrix-table .col-covenants,
+.matrix-table .col-family,
+.matrix-table .col-political {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+.matrix-table .col-cosmic { background-color: #7ab0f7; }
+.matrix-table .col-transition { background-color: #CC0066; }
+.matrix-table .col-covenants { background-color: #80d0a0; }
+.matrix-table .col-family { background-color: #9999FF; }
+.matrix-table .col-political { background-color: #7ab0f7; }
+
+/* Column letter and theme label styling */
+.matrix-table .column-letter {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.matrix-table .theme-label {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+/* Row label styling */
+.matrix-table .row-label {
+    background-color: #7ab0f7;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.matrix-table .row-number {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.matrix-table .row-desc {
+    font-size: 12px;
+}
+
+/* Fix empty cells */
+.matrix-table .empty-cell {
+    background-color: rgba(122, 176, 247, 0.1);
+    border: 1px solid rgba(122, 176, 247, 0.2);
+}
+    </style>
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="container">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                    <li><a href="/Mishnah-New/Hebrew/Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">Mishnah</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/hebrew%20index.html">עברית</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section - Shows on homepage and other general pages -->
+    <!-- #BeginEditable "writehere" -->
+              <!-- Page Title HTML Comment for DWT -->
+<!-- Deuteronomy Unit 1: A Political History of the Forty Years in the Desert -->
+
+<!-- Breadcrumb Navigation -->
+<div class="breadcrumb">
+    <a href="/torah-commentary-project/">Torah Commentary Project</a> &gt; 
+    <a href="/torah-commentary-project/deuteronomy/">Deuteronomy</a> &gt; 
+    Unit 1
+</div>
+
+<!-- Unit Header -->
+<div class="unit-header">
+    <h1>Deuteronomy Unit 1: A Political History of the Forty Years in the Desert</h1>
+    <div class="unit-metadata">
+        <span><strong>Structure:</strong> 13331 Irregular</span>
+        <span><strong>Verses:</strong> Deuteronomy 1:1-3:29</span>
+        <span><strong>Theme:</strong> Moses' Revisionist History</span>
+        <span><strong>Position:</strong> Row 1, Column A</span>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="unit-navigation">
+    <span>Return to <a href="/torah-commentary-project/deuteronomy/">Deuteronomy Overview</a></span>
+    <span><a href="/torah-commentary-project/deuteronomy/unit-2.html">Next: Unit 2 →</a></span>
+</div>
+
+<!-- Book Map SVG -->
+<div class="book-map-container">
+    <svg width="250" height="100" viewBox="0 0 250 100" class="deuteronomy-mini-map">
+        <rect width="250" height="100" fill="#f0f4f8" stroke="#ddd" stroke-width="1"/>
+        <text x="125" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Deuteronomy Units Map</text>
+        
+        <!-- Row 1 -->
+        <!-- Unit 1 - HIGHLIGHTED -->
+        <rect x="5" y="30" width="40" height="20" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+        <text x="25" y="43" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">1</text>
+        
+        <rect x="55" y="30" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="75" y="43" text-anchor="middle" font-size="9" fill="#666">2</text>
+        
+        <rect x="105" y="30" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="125" y="43" text-anchor="middle" font-size="9" fill="#666">7</text>
+        
+        <rect x="155" y="30" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="175" y="43" text-anchor="middle" font-size="9" fill="#666">10</text>
+        
+        <rect x="205" y="30" width="40" height="20" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+        
+        <!-- Row 2 -->
+        <rect x="5" y="50" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="25" y="63" text-anchor="middle" font-size="9" fill="#666">3</text>
+        
+        <rect x="55" y="50" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="75" y="63" text-anchor="middle" font-size="9" fill="#666">4</text>
+        
+        <rect x="105" y="50" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="125" y="63" text-anchor="middle" font-size="9" fill="#666">8</text>
+        
+        <rect x="155" y="50" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="175" y="63" text-anchor="middle" font-size="9" fill="#666">11</text>
+        
+        <rect x="205" y="50" width="40" height="20" fill="#ffeb99" stroke="#999" stroke-width="0.5"/>
+        <text x="225" y="63" text-anchor="middle" font-size="9" fill="#666">13</text>
+        
+        <!-- Row 3 -->
+        <rect x="5" y="70" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="25" y="83" text-anchor="middle" font-size="9" fill="#666">5</text>
+        
+        <rect x="55" y="70" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="75" y="83" text-anchor="middle" font-size="9" fill="#666">6</text>
+        
+        <rect x="105" y="70" width="40" height="20" fill="#e6ffee" stroke="#999" stroke-width="0.5"/>
+        <text x="125" y="83" text-anchor="middle" font-size="9" fill="#666">9</text>
+        
+        <rect x="155" y="70" width="40" height="20" fill="#d4f2ff" stroke="#999" stroke-width="0.5"/>
+        <text x="175" y="83" text-anchor="middle" font-size="9" fill="#666">12</text>
+        
+        <rect x="205" y="70" width="40" height="20" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+    </svg>
+</div>
+
+<!-- Opening Hook -->
+<div class="opening-hook">
+    "These are the words which Moses spoke unto all Israel beyond the Jordan..." With this deceptively simple opening, Deuteronomy begins not merely as a repetition of law but as Moses' bold reinterpretation of Israel's history—a revisionist narrative that transforms failure into pedagogy, chaos into order, and prepares a new generation to succeed where their parents failed.
+</div>
+
+<!-- Torah Text Section -->
+<div class="torah-text-section">
+    <h2>Torah Text: Deuteronomy 1:1-3:29</h2>
+    
+    <!-- Color Legend -->
+    <div class="color-legend">
+        <div class="color-legend-item">
+            <div class="color-swatch" style="background-color: #3399FF;"></div>
+            <span>Horizontal Parallel</span>
+        </div>
+        <div class="color-legend-item">
+            <div class="color-swatch" style="background-color: #C09200;"></div>
+            <span>Vertical Parallel</span>
+        </div>
+        <div class="color-legend-item">
+            <div class="color-swatch" style="background-color: #CC0066;"></div>
+            <span>Closure</span>
+        </div>
+    </div>
+    
+    <!-- Row 1 -->
+    <table class="scripture-table">
+        <tr>
+            <td>
+                <p class="cell-label">1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">1:1</span> These are the words which Moses spoke unto all Israel <span class="closure">beyond the Jordan</span>; in the wilderness, in the Arabah, over against Suph, between Paran and Tophel, and Laban, and Hazeroth, and Di-zahab. <span class="verse-number">1:2</span> It is eleven days journey from Horeb unto Kadesh-barnea by the way of mount Seir. <span class="verse-number">1:3</span> And it came to pass in the fortieth year, in the eleventh month, on the first day of the month, that Moses spoke unto the children of Israel, according unto all that the LORD had given him in commandment unto them; <span class="verse-number">1:4</span> after he had smitten Sihon the king of the Amorites, who dwelt in Heshbon, and Og the king of Bashan, who dwelt in Ashtaroth, at Edrei; <span class="verse-number">1:5</span> beyond the Jordan, in the land of Moab, took Moses upon him to expound this law, saying: <span class="verse-number">1:6</span> The LORD our God spoke unto us in Horeb, saying: 'Ye have dwelt <span class="closure">long enough</span> in this mountain; <span class="verse-number">1:7</span> turn you, and take your journey, and go to the hill-country of the Amorites and unto all the places nigh thereunto, in the Arabah, in the hill-country, and in the Lowland, and in the South, and by the sea-shore; the land of the Canaanites, and Lebanon, as far as the great river, the river Euphrates. <span class="verse-number">1:8</span> <span class="closure">Behold</span>, I have set the land before you: go in and possess the land which the LORD swore unto your fathers, to Abraham, to Isaac, and to Jacob, to give unto them and to their seed after them.'
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Row 2 -->
+    <table class="scripture-table">
+        <tr>
+            <td>
+                <p class="cell-label">2a</p>
+            </td>
+            <td>
+                <p class="cell-label">2b</p>
+            </td>
+            <td>
+                <p class="cell-label">2c</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">1:9</span> And I spoke unto you at that time, saying: 'I am not able to bear you myself alone; <span class="verse-number">1:10</span> the LORD your God hath multiplied you, and, behold, ye are this day as the stars of heaven for multitude.-- <span class="verse-number">1:11</span> The LORD, the God of your fathers, make you a thousand times so many more as ye are, and bless you, as He hath promised you!-- <span class="verse-number">1:12</span> How can I myself alone bear your cumbrance, and your burden, and your strife? <span class="verse-number">1:13</span> Get you, from each one of your tribes, wise men, and understanding, and full of knowledge, and I will make them heads over you.' <span class="verse-number">1:14</span> <span class="horizontal1">And ye answered me, and said</span>: 'The thing which thou hast spoken is good for us to do.' <span class="verse-number">1:15</span> So I took the heads of your tribes, wise men, and full of knowledge, and made them heads over you, captains of thousands, and captains of hundreds, and captains of fifties, and captains of tens, and officers, tribe by tribe. <span class="verse-number">1:16</span> And I charged your judges at that time, saying: 'Hear the causes between your brethren, and judge righteously between a man and his brother, and the stranger that is with him. <span class="verse-number">1:17</span> Ye shall not respect persons in judgment; ye shall hear the small and the great alike; ye shall not be afraid of the face of any man; for the judgment is God's; and the cause that is too hard for you ye shall bring unto me, and I will hear it.' <span class="verse-number">1:18</span> And I commanded you at that time all the things which ye should do.
+                </p>
+            </td>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">1:19</span> And we journeyed from Horeb, and went through all that great and dreadful wilderness which ye saw, by the way to the hill-country of the Amorites, as the LORD our God commanded us; and we came to Kadesh-barnea. <span class="verse-number">1:20</span> And I said unto you: 'Ye are come unto the hill-country of the Amorites, which the LORD our God giveth unto us. <span class="verse-number">1:21</span> Behold, the LORD thy God hath set the land before thee; go up, take possession, as the LORD, the God of thy fathers, hath spoken unto thee; fear not, neither be dismayed.' <span class="verse-number">1:22</span> <span class="horizontal1">And ye came near unto me every one of you, and said</span>: 'Let us send men before us, that they may search the land for us, and bring us back word of the way by which we must go up, and the cities unto which we shall come.' <span class="verse-number">1:23</span> And the thing pleased me well; and I took twelve men of you, one man for every tribe; <span class="verse-number">1:24</span> and they turned and went up into the mountains, and came unto the valley of Eshcol, and spied it out. <span class="verse-number">1:25</span> And they took of the fruit of the land in their hands, and brought it down unto us, and brought us back word, and said: 'Good is the land which the LORD our God giveth unto us.' <span class="verse-number">1:26</span> Yet ye would not go up, but rebelled against the commandment of the LORD your God; <span class="verse-number">1:27</span> and ye murmured in your tents, and said: 'Because the LORD hated us, He hath brought us forth out of the land of Egypt, to deliver us into the hand of the Amorites, to destroy us. <span class="verse-number">1:28</span> Whither are we going up? our brethren have made our heart to melt, saying: The people is greater and taller than we; the cities are great and fortified up to heaven; and moreover we have seen <span class="vertical1">the sons of the Anakim</span> there.' <span class="verse-number">1:29</span> Then I said unto you: 'Dread not, neither be afraid of them. <span class="verse-number">1:30</span> The LORD your God who goeth before you, He shall fight for you, according to all that He did for you in Egypt before your eyes; <span class="verse-number">1:31</span> and in the wilderness, where thou hast seen how that the LORD thy God bore thee, as a man doth bear his son, in all the way that ye went, until ye came unto this place. <span class="verse-number">1:32</span> Yet in this thing ye do not believe the LORD your God, <span class="verse-number">1:33</span> Who went before you in the way, to seek you out a place to pitch your tents in: in fire by night, to show you by what way ye should go, and in the cloud by day.'
+                </p>
+            </td>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">1:34</span> And the LORD heard the voice of your words, and was wroth, and swore, saying: <span class="verse-number">1:35</span> '<span class="vertical1">Surely there shall not one of these men, even this evil generation,</span> see the good land, which I swore to give unto your fathers, <span class="verse-number">1:36</span> save Caleb the son of Jephunneh, he shall see it; and to him will I give the land that he hath trodden upon, and to his children; because he hath wholly followed the LORD.' <span class="verse-number">1:37</span> Also the LORD was angry with me for your sakes, saying: Thou also shalt not go in thither; <span class="verse-number">1:38</span> Joshua the son of Nun, who standeth before thee, he shall go in thither; encourage thou him, for he shall cause Israel to inherit it. <span class="verse-number">1:39</span> Moreover your little ones, that ye said should be a prey, and your children, that this day have no knowledge of good or evil, they shall go in thither, and unto them will I give it, and <span class="vertical1">they shall possess it</span>. <span class="verse-number">1:40</span> But as for you, turn you, and take your journey into the wilderness by the way to the Red Sea.' <span class="verse-number">1:41</span> <span class="horizontal1">Then ye answered and said unto me</span>: 'We have sinned against the LORD, we will go up and fight, according to all that the LORD our God commanded us.' And ye girded on every man his weapons of war, and deemed it a light thing to go up into the hill-country. <span class="verse-number">1:42</span> And the LORD said unto me: 'Say unto them: Go not up, neither fight; for I am not among you; lest ye be smitten before your enemies.' <span class="verse-number">1:43</span> So I spoke unto you, and ye hearkened not; but ye rebelled against the commandment of the LORD, and were presumptuous, and went up into the hill-country. <span class="verse-number">1:44</span> And the Amorites, that dwell in that hill-country, came out against you, and chased you, as bees do, and beat you down in Seir, even unto Hormah. <span class="verse-number">1:45</span> And ye returned and wept before the LORD; but the LORD hearkened not to your voice, nor gave ear unto you. <span class="verse-number">1:46</span> So ye abode in Kadesh many days, according unto the days that ye abode there. <span class="verse-number">2:1</span> Then we turned, and took our journey into the wilderness by the way to the Red Sea, as the LORD spoke unto me; and we compassed mount Seir many days. <span class="hebrew-paragraph">{S}</span>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <div class="page-break"></div>
+
+    <!-- Row 3 -->
+    <table class="scripture-table">
+        <tr>
+            <td>
+                <p class="cell-label">3a</p>
+            </td>
+            <td>
+                <p class="cell-label">3b</p>
+            </td>
+            <td>
+                <p class="cell-label">3c</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">2:2</span> And the LORD spoke unto me, saying: <span class="verse-number">2:3</span> 'Ye have compassed this mountain long enough; turn you northward. <span class="verse-number">2:4</span> And command thou the people, saying: Ye are to pass through the border of your brethren the children of Esau, that dwell in Seir; and they will be afraid of you; take ye good heed unto yourselves therefore; <span class="verse-number">2:5</span> <span class="horizontal1">contend not with them; for I will not give you of their land, no, not so much as for the sole of the foot to tread on; because I have given mount Seir unto Esau for a possession</span>. <span class="verse-number">2:6</span> <span class="vertical1">Ye shall purchase food of them for money, that ye may eat; and ye shall also buy water of them for money, that ye may drink</span>. <span class="verse-number">2:7</span> For the LORD thy God hath blessed thee in all the work of thy hand; He hath known thy walking through this great wilderness; these forty years the LORD thy God hath been with thee; thou hast lacked nothing.' <span class="verse-number">2:8</span> So we passed by from our brethren the children of Esau, that dwell in Seir, from the way of the Arabah, from Elath and from Ezion-geber. <span class="hebrew-paragraph">{S}</span>
+                </p>
+            </td>
+            <td>
+                <p class="torah">
+                    And we turned and passed by the way of the wilderness of Moab. <span class="verse-number">2:9</span> And the LORD said unto me: '<span class="horizontal1">Be not at enmity with Moab, neither contend with them in battle; for I will not give thee of his land for a possession; because I have given Ar unto the children of Lot for a possession</span>.-- <span class="verse-number">2:10</span> The Emim dwelt therein aforetime, <span class="vertical1">a people great, and many, and tall, as the Anakim</span>; <span class="verse-number">2:11</span> these also are accounted Rephaim, as the Anakim; <span class="vertical1">but the Moabites call them</span> Emim. <span class="verse-number">2:12</span> And in Seir dwelt the Horites aforetime, but the children of Esau succeeded them; and they destroyed them from before them, and dwelt in their stead; as Israel did unto the land of his possession, which the LORD gave unto them.-- <span class="verse-number">2:13</span> Now rise up, and get you over the brook Zered.' And we went over the brook Zered. <span class="verse-number">2:14</span> And the days in which we came from Kadesh-barnea, until we were come over the brook Zered, were thirty and eight years; until all the generation, even the men of war, were consumed from the midst of the camp, as the LORD swore unto them. <span class="verse-number">2:15</span> Moreover the hand of the LORD was against them, to discomfit them from the midst of the camp, until they were consumed.
+                </p>
+            </td>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">2:16</span> <span class="vertical1">So it came to pass, when all the men of war were consumed and dead from among the people</span>, <span class="hebrew-paragraph">{S}</span> <span class="verse-number">2:17</span> that the LORD spoke unto me saying: <span class="verse-number">2:18</span> 'Thou art this day to pass over the border of Moab, even Ar; <span class="verse-number">2:19</span> and when thou comest nigh over against the children of Ammon, <span class="horizontal1">harass them not, nor contend with them; for I will not give thee of the land of the children of Ammon for a possession; because I have given it unto the children of Lot for a possession</span>.-- <span class="verse-number">2:20</span> <span class="vertical1">That also is accounted a land of Rephaim</span>: Rephaim dwelt therein aforetime; but the Ammonites call them Zamzummim, <span class="verse-number">2:21</span> a people great, and many, and tall, as the Anakim; but the LORD destroyed them before them; and they <span class="vertical1">succeeded them</span>, and dwelt in their stead; <span class="verse-number">2:22</span> as He did for the children of Esau, that dwell in Seir, when He destroyed the Horites from before them; and they succeeded them, and dwelt in their stead even unto this day; <span class="verse-number">2:23</span> and the Avvim, that dwelt in villages as far as Gaza, the Caphtorim, that came forth out of Caphtor, destroyed them, and dwelt in their stead.--
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <div class="page-break"></div>
+
+    <!-- Row 4 -->
+    <table class="scripture-table">
+        <tr>
+            <td>
+                <p class="cell-label">4a</p>
+            </td>
+            <td>
+                <p class="cell-label">4b</p>
+            </td>
+            <td>
+                <p class="cell-label">4c</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">2:24</span> Rise ye up, take your journey, and pass over the valley of Arnon; behold, <span class="horizontal1">I have given into thy hand</span> Sihon the Amorite, king of Heshbon, and his land; begin to possess it, and contend with him in battle. <span class="verse-number">2:25</span> This day will I begin to put the dread of thee and the fear of thee upon the peoples that are under the whole heaven, who, when they hear the report of thee, shall tremble, and be in anguish because of thee.' <span class="verse-number">2:26</span> And I sent messengers out of the wilderness of Kedemoth unto Sihon king of Heshbon with words of peace, saying: <span class="verse-number">2:27</span> 'Let me pass through thy land; I will go along by the highway, I will neither turn unto the right hand nor to the left. <span class="verse-number">2:28</span> <span class="vertical1">Thou shalt sell me food for money, that I may eat; and give me water for money, that I may drink</span>; only let me pass through on my feet; <span class="verse-number">2:29</span> as the children of Esau that dwell in Seir, and the Moabites that dwell in Ar, did unto me; until I shall pass over the Jordan into the land which the LORD our God giveth us.' <span class="verse-number">2:30</span> But Sihon king of Heshbon would not let us pass by him; for the LORD thy God hardened his spirit, and made his heart obstinate<span class="horizontal1">, that He might deliver him into thy hand</span>, as appeareth this day. <span class="hebrew-paragraph">{S}</span> <span class="verse-number">2:31</span> And the LORD said unto me: '<span class="horizontal1">Behold, I have begun to deliver</span> up Sihon and his land before thee; begin to possess his land.' <span class="verse-number">2:32</span> Then Sihon came out against us, he and all his people, unto battle at Jahaz. <span class="verse-number">2:33</span> And the LORD our God delivered him up before us; and we smote him, and his sons, and all his people. <span class="verse-number">2:34</span> And we took all his cities at that time, and utterly destroyed every city, the men, and the women, and the little ones; we left none remaining; <span class="verse-number">2:35</span> only the cattle we took for a prey unto ourselves, with the spoil of the cities which we had taken. <span class="verse-number">2:36</span> From Aroer, which is on the edge of the valley of Arnon, and from the city that is in the valley, even unto Gilead, there was not a city too high for us: the LORD our God delivered up all before us. <span class="verse-number">2:37</span> Only to the land of the children of Ammon thou camest not near; all the side of the river Jabbok, and the cities of the hill-country, and wheresoever the LORD our God forbade us.
+                </p>
+            </td>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">3:1</span> Then we turned, and went up the way to Bashan; and Og the king of Bashan came out against us, he and all his people, unto battle at Edrei. <span class="verse-number">3:2</span> And the LORD said unto me: 'Fear him not; <span class="horizontal1">for I have delivered him, and all his people, and his land, into thy hand</span>; and thou shalt do unto him as thou didst unto Sihon king of the Amorites, who dwelt at Heshbon.' <span class="verse-number">3:3</span> So the LORD our God <span class="horizontal1">delivered into our hand</span> Og also, the king of Bashan, and all his people; and we smote him until none was left to him remaining. <span class="verse-number">3:4</span> And we took all his cities at that time; there was not a city which we took not from them; threescore cities, all the region of Argob, the kingdom of Og in Bashan. <span class="verse-number">3:5</span> All these were fortified cities, with high walls, gates, and bars; beside the unwalled towns a great many. <span class="verse-number">3:6</span> And we utterly destroyed them, as we did unto Sihon king of Heshbon, utterly destroying every city, the men, and the women, and the little ones. <span class="verse-number">3:7</span> But all the cattle, and the spoil of the cities, we took for a prey unto ourselves. <span class="verse-number">3:8</span> And we took the land at that time out of the hand of the two kings of the Amorites that were beyond the Jordan, from the valley of Arnon unto mount Hermon-- <span class="verse-number">3:9</span> which Hermon the Sidonians <span class="vertical1">call</span> Sirion, and the Amorites <span class="vertical1">call it</span> Senir-- <span class="verse-number">3:10</span> all the cities of the plain, and all Gilead, and all Bashan, unto Salcah and Edrei, cities of the kingdom of Og in Bashan.-- <span class="verse-number">3:11</span> For only Og king of Bashan remained of the remnant of the Rephaim; behold, his bedstead was a bedstead of iron; is it not in Rabbah of the children of Ammon? nine cubits was the length thereof, and four cubits the breadth of it, after the cubit of a man.--
+                </p>
+            </td>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">3:12</span> And this land <span class="vertical1">we took in possession</span> at that time; from Aroer, which is by the valley of Arnon, and half the hill-country of Gilead, and the cities thereof, <span class="horizontal1">gave I</span> unto the Reubenites and to the Gadites; <span class="verse-number">3:13</span> and the rest of Gilead, and all Bashan, the kingdom of Og, <span class="horizontal1">gave I</span> unto the half-tribe of Manasseh; all the region of Argob--all that Bashan <span class="vertical1">is called the land of Rephaim</span>. <span class="verse-number">3:14</span> Jair the son of Manasseh took all the region of Argob, unto the border of the Geshurites and the Maacathites, and called them, even Bashan, after his own name, Havvoth-jair, unto this day.-- <span class="verse-number">3:15</span> And I gave Gilead unto Machir. <span class="verse-number">3:16</span> And unto the Reubenites and unto the Gadites I gave from Gilead even unto the valley of Arnon, the middle of the valley for a border; even unto the river Jabbok, which is the border of the children of Ammon; <span class="verse-number">3:17</span> the Arabah also, the Jordan being the border thereof, from Chinnereth even unto the sea of the Arabah, the Salt Sea, under the slopes of Pisgah eastward. <span class="verse-number">3:18</span> And I commanded you at that time, saying: 'The LORD your God <span class="horizontal1">hath given you</span> this land to possess it; ye shall pass over armed before your brethren the children of Israel, all the men of valour. <span class="verse-number">3:19</span> But your wives, and your little ones, and your cattle--I know that ye have much cattle--shall abide in your cities which I have given you; <span class="verse-number">3:20</span> until the LORD give rest unto your brethren, as unto you, and they also possess the land which the LORD your God giveth them beyond the Jordan; then shall ye return every man unto his possession, which I have given you. <span class="verse-number">3:21</span> And I commanded Joshua at that time, saying: 'Thine eyes have seen all that the LORD your God hath done unto these two kings; so shall the LORD do unto all the kingdoms whither thou goest over. <span class="verse-number">3:22</span> Ye shall not fear them; for the LORD your God, He it is that fighteth for you.' <span class="hebrew-paragraph">{S}</span>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <div class="page-break"></div>
+
+    <!-- Row 5 -->
+    <table class="scripture-table">
+        <tr>
+            <td>
+                <p class="cell-label">5</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="torah">
+                    <span class="verse-number">3:23</span> And I besought the LORD at that time, saying: <span class="verse-number">3:24</span> 'O Lord GOD, Thou hast begun to show Thy servant Thy greatness, and Thy strong hand; for what god is there in heaven or on earth, that can do according to Thy works, and according to Thy mighty acts? <span class="verse-number">3:25</span> Let me go over, I pray Thee, and see the good land that is beyond the Jordan, that goodly hill-country, and Lebanon.' <span class="verse-number">3:26</span> But the LORD was wroth with me for your sakes, and hearkened not unto me; and the LORD said unto me: '<span class="closure">Let it suffice</span> thee; speak no more unto Me of this matter. <span class="verse-number">3:27</span> Get thee up into the top of Pisgah, and lift up thine eyes westward, and northward, and southward, and eastward, <span class="closure">and behold</span> with thine eyes; <span class="closure">for thou shalt not go over this Jordan</span>. <span class="verse-number">3:28</span> But charge Joshua, and encourage him, and strengthen him; for he shall go over before this people, and he shall cause them to inherit the land which thou shalt see.' <span class="verse-number">3:29</span> So we abode in the valley over against Beth-peor. <span class="hebrew-paragraph">{P}</span>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- Unit Context Section -->
+<div class="commentary-section">
+    <h2>Unit Context</h2>
+    
+    <h3>Position in Book Architecture</h3>
+    <p>Unit 1 occupies Row 1, Column A in Deuteronomy's 4×3 matrix structure (plus independent Unit 13). This position marks it as a foundational unit dealing with the past—specifically, Israel's wilderness history before state establishment. As the opening unit of Deuteronomy, it sets the stage for Moses' entire rhetorical project: transforming past failure into future success through revisionist history and pedagogical reframing.</p>
+    
+    <h3>Relationship to Adjacent Units</h3>
+    <p>Unit 1 forms the first half of a rhetorical diptych with Unit 2. While Unit 1 employs an irregular 13331 structure that permits narrative flexibility for historical revision, Unit 2 shifts to a regular 5×2 structure signaling the move from chaotic history to ordered law. Together, these units comprise Moses' first speech, establishing his authority as interpreter of Israel's past (Unit 1) before placing YHWH at the center of the legal framework (Unit 2).</p>
+    
+    <h3>Speech Context</h3>
+    <p>This unit contains the opening of Moses' first speech, delivered "beyond the Jordan, in the land of Moab" (1:5). The speech is addressed to "all Israel"—the second generation who will enter the land. Moses speaks as one who has received Torah at Horeb (1:6) but who will die outside the promised land (3:26), lending both authority and poignancy to his words.</p>
+</div>
+
+<!-- Structural Analysis Section -->
+<div class="commentary-section">
+    <h2>Structural Analysis</h2>
+    
+    <h3>Dimensional Overview</h3>
+    <p>The 13331 structure is irregular, with rows containing different numbers of columns while maintaining symmetry around the center. This framework structure places single-column rows (1 and 5) as bookends around three central rows of three columns each (rows 2-4). The irregularity serves Moses' rhetorical purpose perfectly, allowing maximum flexibility in retelling Israel's wilderness history.</p>
+    
+    <h3>Thread Analysis</h3>
+    <h4>Warp Threads (Columns)</h4>
+    <ul>
+        <li><strong>Column a:</strong> Peaceful initiatives and negotiations</li>
+        <li><strong>Column b:</strong> Divine interventions and consequences</li>
+        <li><strong>Column c:</strong> Transitions and territorial arrangements</li>
+    </ul>
+    
+    <h4>Weft Threads (Rows)</h4>
+    <ul>
+        <li><strong>Row 1:</strong> Opening frame - Moses' authority established</li>
+        <li><strong>Row 2:</strong> Israel's pattern of failure (administration → spies → judgment)</li>
+        <li><strong>Row 3:</strong> Peaceful passages with kin nations</li>
+        <li><strong>Row 4:</strong> Divinely mandated conquests</li>
+        <li><strong>Row 5:</strong> Closing frame - Moses' personal exclusion</li>
+    </ul>
+    
+    <h3>Structural Matrix: The 13331 Framework</h3>
+    
+    <div class="matrix-header">
+        <p>The 13331 framework structure revealing Moses' rhetorical strategy</p>
+    </div>
+    
+    <table class="commentary-matrix">
+        <thead>
+            <tr>
+                <th class="weft-rule">Row Structure</th>
+                <th class="column-header" colspan="3">
+                    Moses' Political History
+                    <span class="column-subtext">Column a: Peaceful Initiatives | Column b: Divine Consequences | Column c: Transitions</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="framework-row">
+                <td class="weft-rule">
+                    Row 1: Opening Frame<br/>
+                    <span class="rule">Establishing Authority<br/>
+                    Post-Horev Context</span>
+                </td>
+                <td colspan="3" class="framework-cell">
+                    <div class="intersection-header">1:1-1:8 Moses' Interpretive Authority</div>
+                    <div class="intersection-content">
+                        "These are the words which Moses spoke to all Israel beyond the Jordan." Places speech after Torah reception at Horev but before Sinai narrative. Moses positions himself as authoritative interpreter of the 40-year journey.
+                    </div>
+                    <div class="intersection-note">
+                        Striking omission: No mention of golden calf, tablets, or Tabernacle
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="weft-rule">
+                    Row 2: Israel's Failure<br/>
+                    <span class="rule">Administrative Success<br/>
+                    to Spiritual Failure</span>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">2a: Judicial Innovation</div>
+                    <div class="intersection-content">
+                        "How can I bear alone your care and burden?" (1:9-1:18). Moses claims credit for establishing judicial hierarchy.
+                    </div>
+                    <div class="variation-box">
+                        <strong>Revision:</strong> Exodus 18 credits Jethro with the idea. Here Moses takes full ownership.
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">2b: The Spies' Fear</div>
+                    <div class="intersection-content">
+                        "You came near to me, all of you, and said: 'Send men before us'" (1:19-1:33). People initiate reconnaissance.
+                    </div>
+                    <div class="variation-box">
+                        <strong>Revision:</strong> Numbers 13 has YHWH commanding the spies. Here it's the people's fearful request.
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">2c: Generational Judgment</div>
+                    <div class="intersection-content">
+                        "YHWH heard your words and was wroth" (1:34-2:1). Entire generation condemned. Moses included "for your sakes."
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="weft-rule">
+                    Row 3: Peaceful Passages<br/>
+                    <span class="rule">Kinship Nations<br/>
+                    Giant Removal Theology</span>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">3a: Edom (Esau's descendants)</div>
+                    <div class="intersection-content">
+                        "Contend not with them" (2:2-8). Purchase food and water. YHWH gave Mount Seir to Esau.
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">3b: Moab (Lot's descendants)</div>
+                    <div class="intersection-content">
+                        "Be not at enmity with Moab" (2:9-15). The Emim (giants) were destroyed to make room for Moab.
+                    </div>
+                    <div class="intersection-note">
+                        Key: YHWH removes giants for favored peoples
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">3c: Ammon (Lot's descendants)</div>
+                    <div class="intersection-content">
+                        "Harass them not" (2:16-23). The Zamzummim (giants) destroyed for Ammon. Pattern established.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="weft-rule">
+                    Row 4: Divine Conquests<br/>
+                    <span class="rule">Mandated Victories<br/>
+                    "I have given"</span>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">4a: Sihon of Heshbon</div>
+                    <div class="intersection-content">
+                        "I have given into thy hand" (2:24-37). Peace offered, rejected. Total destruction follows.
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">4b: Og of Bashan</div>
+                    <div class="intersection-content">
+                        "Fear him not; for I have delivered him" (3:1-11). Last of the Rephaim giants. Iron bedstead testimony.
+                    </div>
+                </td>
+                <td class="intersection">
+                    <div class="intersection-header">4c: Land Distribution</div>
+                    <div class="intersection-content">
+                        "Gave I" repeated (3:12-22). Moses distributes conquered lands east of Jordan. Joshua charged.
+                    </div>
+                </td>
+            </tr>
+            <tr class="framework-row">
+                <td class="weft-rule">
+                    Row 5: Closing Frame<br/>
+                    <span class="rule">Moses' Exclusion<br/>
+                    Authority's Limit</span>
+                </td>
+                <td colspan="3" class="framework-cell">
+                    <div class="intersection-header">3:23-29 Moses' Personal Plea and Rejection</div>
+                    <div class="intersection-content">
+                        "Let me go over, I pray Thee" - denied. "The LORD was wroth with me for your sakes." Moses will see but not enter. Joshua will lead the people in.
+                    </div>
+                    <div class="intersection-note">
+                        The lawgiver himself is subject to the law - validates his message
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Literary Patterns Section -->
+<div class="commentary-section">
+    <h2>Literary Patterns and Theological Themes</h2>
+    
+    <h3>Moses' Systematic Revisions</h3>
+    <p>Throughout Unit 1, Moses systematically revises familiar narratives from Exodus and Numbers:</p>
+    
+    <div class="theological-point">
+        <h4>1. The Administrative System (2a)</h4>
+        <p>In Exodus 18, Jethro proposes the judicial hierarchy. Here, Moses claims full credit: "I spoke unto you...How can I myself alone bear your cumbrance?" (1:9,12). This revision establishes Moses as the source of practical wisdom, not merely the recipient of good advice.</p>
+    </div>
+    
+    <div class="theological-point">
+        <h4>2. The Spies Initiative (2b)</h4>
+        <p>Numbers 13 presents YHWH commanding the reconnaissance mission. Moses revises: "And ye came near unto me every one of you, and said: 'Let us send men before us'" (1:22). The people's fear, not divine command, initiated the disaster.</p>
+    </div>
+    
+    <div class="theological-point">
+        <h4>3. The Giant Removal Theology (Row 3)</h4>
+        <p>Moses creates an entirely new theological framework absent from Numbers: YHWH systematically removed giants (Emim, Horites, Zamzummim) to make room for Esau's and Lot's descendants. This establishes a pattern—YHWH removes giants for those He favors—that should have given Israel confidence.</p>
+    </div>
+    
+    <h3>The Striking Omissions</h3>
+    <p>Perhaps most revealing is what Moses omits entirely:</p>
+    <ul>
+        <li>The Sinai revelation and law-giving</li>
+        <li>The golden calf incident</li>
+        <li>The Tabernacle construction</li>
+        <li>The entire sacrificial system</li>
+    </ul>
+    <p>Moses grounds his authority not in past revelation but in his role as interpreter of Israel's failures and successes. Only in Unit 2 does he circle back to Sinai, emphasizing his mediating role.</p>
+    
+    <h3>The Framework Pattern</h3>
+    <p>The framework rows (1 and 5) create a poignant envelope:</p>
+    <ul>
+        <li><strong>Row 1:</strong> Moses has authority to interpret Torah</li>
+        <li><strong>Row 5:</strong> Moses himself is excluded from the land</li>
+    </ul>
+    <p>This pattern—establishing authority only to model its limits—continues throughout Deuteronomy. The lawgiver is subject to the law; the mediator requires mediation.</p>
+</div>
+
+<!-- Preparation for Unit 2 Section -->
+<div class="commentary-section">
+    <h2>Preparing for Unit 2: From History to Law</h2>
+    
+    <p>Unit 1's irregular structure permits Moses to reshape history for pedagogical purposes. The three central rows reveal a clear pattern:</p>
+    <ul>
+        <li><strong>Row 2:</strong> Human failure despite divine provision</li>
+        <li><strong>Row 3:</strong> Peaceful relations with kin require divine command</li>
+        <li><strong>Row 4:</strong> Victory comes only through divine intervention</li>
+    </ul>
+    
+    <p>This historical pattern prepares for Unit 2's legal theology. The God who brought death in the wilderness (Unit 1, Column b) will offer life through law (Unit 2, Row 1). The kinship obligations discovered through trial and error (Unit 1, Row 3) will become eternal principles (Unit 2, Row 4).</p>
+    
+    <p>Most remarkably, Moses uses the irregular structure to take what Numbers encrypted at its center—the death of the entire wilderness generation—and makes it the explicit heart of his retelling. The structural flexibility of the 13331 pattern allows Moses to transform hidden patterns into explicit theology: the old generation had to die completely before the new could emerge.</p>
+</div>
+
+<!-- Conclusion Section -->
+<div class="conclusion-section">
+    <h2>Conclusion: The Art of Mosaic Revision</h2>
+    
+    <p>Deuteronomy Unit 1 demonstrates Moses as master rhetorician, using structural flexibility to transform Israel's chaotic past into ordered pedagogy. The 13331 framework permits him to claim successes, redistribute blame, and create new theological frameworks—all in service of preparing the new generation to succeed where their parents failed.</p>
+    
+    <p>Yet even as Moses establishes his interpretive authority, he models its limits. His own exclusion from the land (Row 5) validates rather than undermines his message—he speaks not for personal gain but for Israel's future. This prepares perfectly for Unit 2, where Moses will transform this revised history into systematic law, moving from irregular narrative flexibility to regular legal stability.</p>
+    
+    <p>The unit stands as a masterpiece of revisionist history—not in the sense of falsehood, but in the deeper sense of reframing past events to reveal their true meaning. Through Moses' retelling, failure becomes pedagogy, chaos becomes pattern, and death becomes the necessary prelude to new life in the land.</p>
+</div>
+
+<!-- Final Navigation -->
+<div class="unit-navigation">
+    <span>Return to <a href="/torah-commentary-project/deuteronomy/">Deuteronomy Overview</a></span>
+    <span><a href="/torah-commentary-project/deuteronomy/unit-2.html">Continue to Unit 2: The Realization of Divine Law →</a></span>
+</div> 
+    <!-- #EndEditable -->
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="container">
+            <div id="content">
+                <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+                <!-- #EndEditable -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Torah Resources</h4>
+                    <ul>
+                        <li><a href="/woven/">Woven Torah Units</a></li>
+                        <li><a href="/torah-commentary-project/">Torah Commentary Project</a></li>
+                        <li><a href="/articles/">Torah Articles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Mishnah Resources</h4>
+                    <ul>
+                        <li><a href="/mishnah/">Mishnah Chapters</a></li>
+                        <li><a href="/mishnah/structure/">Mishnah Structure</a></li>
+                        <li><a href="/mishnah/about/">About the Mishnah</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About This Site</h4>
+                    <p>This site offers a new approach to the study of the Torah and the Mishnah. It is based on an original discovery which has been published in peer-reviewed journals and is consistent with traditional Jewish understandings.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chaver.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+<!-- #EndTemplate -->
+</html>

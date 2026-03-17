@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>The Call of Abraham (Genesis 11:10–13:4): Literary Structure and Commentary | Chaver.com</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+<meta name="description" content="Structural commentary on Genesis Unit 5: Abraham's call, the double toledot, the Egypt sojourn, and the Beth-el envelope. Analysis of the 2×2 matrix, YHWH's resumed speech, and the geographic template for Israelite history.">
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/torah-weave/">Torah Weave</a> &gt; 
+    <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis</a> &gt; 
+    Unit 5 Commentary
+</nav>
+
+<!-- Header -->
+<header class="unit-header-section">
+    <h1>Genesis Unit 5: The Call of Abraham</h1>
+    <div class="unit-meta">Genesis 11:10–13:4</div>
+</header>
+
+<!-- Small position map -->
+<aside class="unit-position-map">
+    <svg viewBox="0 0 280 100" width="280" height="100" style="display: block; margin: 1em auto;">
+        <!-- Column headers -->
+        <text x="50" y="15" font-size="9" text-anchor="middle" fill="#666">A</text>
+        <text x="80" y="15" font-size="9" text-anchor="middle" fill="#666">B</text>
+        <text x="110" y="15" font-size="9" text-anchor="middle" fill="#666">C</text>
+        <text x="140" y="15" font-size="9" text-anchor="middle" fill="#666">D</text>
+        <text x="170" y="15" font-size="9" text-anchor="middle" fill="#666">E</text>
+        <text x="200" y="15" font-size="9" text-anchor="middle" fill="#666">F</text>
+        <text x="230" y="15" font-size="9" text-anchor="middle" fill="#666">G</text>
+        
+        <!-- Row headers -->
+        <text x="20" y="40" font-size="9" text-anchor="middle" fill="#666">1</text>
+        <text x="20" y="60" font-size="9" text-anchor="middle" fill="#666">2</text>
+        <text x="20" y="80" font-size="9" text-anchor="middle" fill="#666">3</text>
+        
+        <!-- Row 1: Unit 5 highlighted -->
+        <rect x="35" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="25" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="25" width="25" height="18" fill="#e6ffee" stroke="#333" stroke-width="2"/>
+        <rect x="125" y="25" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="155" y="25" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="185" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 2 -->
+        <rect x="35" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="45" width="25" height="18" fill="#ffe6e6" stroke="#ccc"/>
+        <rect x="95" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="45" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="155" y="45" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="185" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 3 -->
+        <rect x="35" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="65" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="65" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="155" y="65" width="25" height="18" fill="#fff4e6" stroke="#ccc"/>
+        <rect x="185" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Unit numbers (Row 1) - Unit 5 bold -->
+        <text x="47" y="37" font-size="8" text-anchor="middle">1</text>
+        <text x="107" y="37" font-size="8" text-anchor="middle" font-weight="bold">5</text>
+        <text x="137" y="37" font-size="8" text-anchor="middle">6</text>
+        <text x="167" y="37" font-size="8" text-anchor="middle">11</text>
+        <text x="197" y="37" font-size="8" text-anchor="middle">12</text>
+        <text x="227" y="37" font-size="8" text-anchor="middle">17</text>
+        
+        <!-- Unit numbers (Row 2) -->
+        <text x="47" y="57" font-size="8" text-anchor="middle">2</text>
+        <text x="77" y="57" font-size="8" text-anchor="middle">4</text>
+        <text x="107" y="57" font-size="8" text-anchor="middle">7</text>
+        <text x="137" y="57" font-size="8" text-anchor="middle">8</text>
+        <text x="167" y="57" font-size="8" text-anchor="middle">13</text>
+        <text x="197" y="57" font-size="8" text-anchor="middle">14</text>
+        <text x="227" y="57" font-size="8" text-anchor="middle">18</text>
+        
+        <!-- Unit numbers (Row 3) -->
+        <text x="47" y="77" font-size="8" text-anchor="middle">3</text>
+        <text x="107" y="77" font-size="8" text-anchor="middle">9</text>
+        <text x="137" y="77" font-size="8" text-anchor="middle">10</text>
+        <text x="167" y="77" font-size="8" text-anchor="middle">15</text>
+        <text x="197" y="77" font-size="8" text-anchor="middle">16</text>
+        <text x="227" y="77" font-size="8" text-anchor="middle">19</text>
+    </svg>
+</aside>
+
+<!-- MAIN COMMENTARY BEGINS -->
+<article>
+
+<section class="commentary-section">
+    <h2>After the Silence, a Voice</h2>
+    
+    <p>Unit 5 begins not with Abraham, but with Shem. Ten generations of fathers begetting sons, each with precise ages recorded, before we meet the man who will carry the blessing. Then a second genealogy narrows to one family: Terah and his three sons. Only after this double genealogical prologue does the narrative proper begin. What work are these genealogies doing that the text devotes an entire row to them?</p>
+    
+    <p>Something happens in 12:1 that we might miss reading too quickly. "Now YHWH said unto Abram" represents YHWH's first direct speech to an individual since instructing Noah about the pure animals (7:1–4). After that moment, YHWH withdraws. The flood covenant is made by Elohim (9:1–17)—Elohim speaks, Elohim blesses, Elohim establishes the covenant. At Babel, YHWH descends to observe and act (11:5–8), but speaks no personal word to any human. A silence settles over the divine-human relationship.</p>
+    
+    <p>Unit 5 breaks that silence. YHWH re-engages, speaking directly to one person, calling him out from his country and kindred. And what does YHWH promise? "I will make thy name great" (12:2). The same word—<em>shem</em>—that Babel's builders tried to seize for themselves. At Babel, humanity said "let us make us a <em>shem</em>" through their own vertical architecture. They were scattered. Now YHWH offers to bestow what cannot be taken: "I will make thy <em>shem</em> great."</p>
+    
+    <p>The genealogy between these two moments traces the line of "Name" itself: "These are the generations of <em>Shem</em>" (11:10). From Babel's failed name-making, through Shem's genealogy, to YHWH's promise of great name—the keyword threads the transition from universal failure to particular election. What <a href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4.html">Unit 4</a> closed, Unit 5 answers. What humanity cannot achieve from below, YHWH bestows from above.</p>
+    
+    <p>This is the puzzle Unit 5 presents: why the elaborate genealogical prologue before the call, and how does the call relate to what came before? To answer these questions, we need to see the unit's boundaries and internal organization.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit Overview and Boundaries</h2>
+    
+    <p>Genesis 11:10–13:4 forms the fifth unit of Genesis, marked by clear boundary indicators. The unit opens with "These are the generations of Shem" (11:10)—one of ten <em>toledot</em> formulas in Genesis. It closes with Abram's return to Beth-el where "Abram called there on the name of YHWH" (13:4). The next unit begins at 13:5 with Lot's separation, marked by the geographic shift: "And Lot also, who went with Abram, had flocks."</p>
+    
+    <p>The internal structure exhibits a coherent 2×2 matrix with subdivisions in Row 2. Row 1 presents two parallel <em>toledot</em> formulas disposing of genealogical lines before the narrative proper. Row 2 presents the call and journey, with the Beth-el material forming an envelope around the Egypt sojourn. YHWH appears as the exclusive divine subject throughout—speaking, appearing, acting—establishing the Row 1 pattern that will characterize Units 5, 6, 11, and 12 across the twelve-unit patriarchal core.</p>
+    
+    <p>With the boundaries and basic structure established, we can address the question of the double genealogy. Why does the text shift registers here, and what work does Row 1 accomplish?</p>
+</section>
+
+<section class="commentary-section">
+    <h2>From Primordial to Historical</h2>
+    
+    <p><a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Units 1</a>–<a href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4.html">4</a> operate in primordial mode: creation of the cosmos, the Garden, flood covering the earth, nations scattered at Babel. The scope is universal, the time mythic, the geography cosmic. With Unit 5, the text enters a different register—quasi-historical narrative set in recognizable geography. We encounter Ur of the Chaldees, Haran, Canaan, Egypt, Shechem, Beth-el. Named individuals with genealogical records move through datable generations. Abram is seventy-five years old when he departs Haran (12:4). Sarai is barren (11:30). Lot is the son of Haran who died in Ur (11:28).</p>
+    
+    <p>The double <em>toledot</em> of Row 1 performs the register transition formally. The Shem genealogy (11:10–26) bridges from Noah—the last figure of the primordial narrative—through ten generations to Terah. Each generation receives precise numbers: age at fathering, years lived afterward, total lifespan. This chronological precision marks the shift from primordial to historical time. The Terah genealogy (11:27–32) then narrows to one family with specific circumstances: a death, a barren wife, an incomplete journey. We have moved from cosmic events affecting all humanity to family dynamics affecting named individuals.</p>
+    
+    <p>YHWH's speech to Abram in 12:1 confirms the register shift. In primordial narrative, divine speech creates ("Let there be light") or judges ("I will destroy"). Here, YHWH speaks to one person about his particular future: "Get thee out of thy country... unto the land that I will show thee." The address is personal, the command specific, the promise individual before it becomes universal ("in thee shall all families of the earth be blessed").</p>
+    
+    <p>The register shift explains the genealogical prologue—it bridges from primordial to historical mode. But this formal function doesn't exhaust the structure's meaning. To see how the unit's parts relate to each other, we need to examine its architecture more closely.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Unit's Architecture</h2>
+    
+    <p>Unit 5 exhibits a 2×2 structure with subdivisions in Row 2:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Column A<br><small>Divine Promise</small></th>
+                <th>Column B<br><small>Human Reality</small></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header">Row 1<br><small>Genealogical<br>Disposal</small></td>
+                <td><strong>1A:</strong> Toledot of Shem (11:10–26)<br><em>Ten generations, men only, chronological precision</em></td>
+                <td><strong>1B:</strong> Toledot of Terah (11:27–32)<br><em>Women introduced, barrenness, incomplete journey</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 2a<br><small>Call and<br>Altar</small></td>
+                <td><strong>2Aa:</strong> YHWH's Call &amp; Shechem (12:1–7)<br><em>Sevenfold promise, first altar</em></td>
+                <td><strong>2Ba:</strong> Egypt Sojourn (12:10–13:2)<br><em>Famine, sister-wife crisis, plagues</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 2b<br><small>Beth-el<br>Envelope</small></td>
+                <td><strong>2Ab:</strong> Beth-el Departure (12:8–9)<br><em>Altar, calling on YHWH, journey south</em></td>
+                <td><strong>2Bb:</strong> Beth-el Return (13:3–4)<br><em>Return to altar, calling on YHWH</em></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>The two columns create a tension that will drive the entire patriarchal narrative. Column A presents the ideal: divine word descending from above, male lineage extending forward, vertical relationship with YHWH. Column B presents reality: women appear, barrenness threatens the promise of descendants, famine empties the land, foreign kings endanger the matriarch. The weaving of Unit 5 shows the first test of whether divine word can survive human obstacle—and it does, through YHWH's intervention.</p>
+    
+    <p>The architecture reveals the columnar logic. But structure alone is scaffolding. To see how the text weaves these cells together, we need to trace the content of each column and the threads that run through it.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Columnar Threads</h2>
+    
+    <h3>Column A: Divine Promise</h3>
+    
+    <p>Column A contains the divine word and male figures receiving it—no women, no relational complexity.</p>
+    
+    <p>Cell 1A: The Shem genealogy (11:10–26) traces fathers begetting sons across ten generations. No women are named. No relationships are described. Just men producing men: Shem begot Arpachshad, Arpachshad begot Shelah, and so on to Terah. Pure patrilineal descent establishing the line through which promise will flow.</p>
+    
+    <p>Cell 2Aa: YHWH's promise to Abram (12:2–3) contains seven elements, marking a new creation:</p>
+    <ol>
+        <li>"I will make of thee a great nation"</li>
+        <li>"I will bless thee"</li>
+        <li>"I will make thy name great"</li>
+        <li>"Be thou a blessing"</li>
+        <li>"I will bless them that bless thee"</li>
+        <li>"Him that curseth thee will I curse"</li>
+        <li>"In thee shall all families of the earth be blessed"</li>
+    </ol>
+    <p>This sevenfold structure parallels the seven days of Creation in <a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Unit 1</a>—a new beginning, a new world inaugurated through divine speech. Abram alone receives this word; Sarai doesn't appear here. YHWH appears at Shechem, Abram builds an altar. Column A tracks the vertical relationship: YHWH to Abram.</p>
+    
+    <p>Cell 2Ab: Abram builds another altar at Beth-el, calls on YHWH's name, journeys south. Again, no other person appears in the action. Column A presents the ideal: divine word, obedient response, sacred site established.</p>
+    
+    <h3>Column B: Human Reality</h3>
+    
+    <p>Column B introduces women, relationships, and obstacles that threaten the Column A promises.</p>
+    
+    <p>Cell 1B: The Terah genealogy (11:27–32) immediately complicates the promise. "I will make of thee a great nation" requires seed—but "Sarai was barren; she had no child" (11:30). Abram will complete the journey to Canaan—but Terah's journey stops incomplete at Haran (11:31–32). Lot appears here too (11:27, 31), attached to Abram as "his brother's son." He travels with Abram to Canaan, to Egypt, back to Beth-el—a silent passenger whose presence creates a burden that <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6</a> must resolve through separation.</p>
+    
+    <p>Cell 2Ba: The Egypt crisis multiplies the obstacles. "Unto thy seed will I give this land"—but "the Canaanite was then in the land" (12:6), and famine drives Abram out entirely (12:10). Great nation through Sarai—but Sarai is taken into Pharaoh's house (12:15). YHWH intervenes through plagues (12:17), and Abram departs enriched (13:2). The promise survives the reality—but only through divine action.</p>
+    
+    <p>Cell 2Bb: What Terah left incomplete (1B), Abram completes. The return to Beth-el—"unto the place where his tent had been at the beginning" (13:3)—demonstrates that Column B obstacles don't cancel Column A promises. They test them.</p>
+    
+    <p>The columnar threads show how promise and obstacle weave through the unit. But Unit 5 also establishes something that will pattern all subsequent narrative: a geographic template that Israelite experience will follow.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Geographic Template</h2>
+    
+    <p>Unit 5 establishes a geographic pattern that will repeat throughout Israelite history: movement from the east, to Canaan, to Egypt, and back to Canaan. Abram begins in Ur of the Chaldees (east), journeys to Canaan, descends to Egypt during famine, and returns to Canaan—specifically to Beth-el, "unto the place where his tent had been at the beginning" (13:3). This is not merely Abram's personal itinerary. It establishes the template that Jacob's journey will fulfill on a grander scale.</p>
+    
+    <p>The parallel with Jacob deserves attention. Abram at Beth-el (altar, calling on YHWH's name) travels south to Egypt during famine, then returns to Beth-el. Jacob at Beth-el (the ladder dream, <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">Unit 14</a>) travels east to Laban, returns to Beth-el (<a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a>) where Elohim confirms his name change and restates the promises, then finally descends to Egypt because of famine (<a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Units 17</a>–<a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">19</a>). What Abram's brief Egypt sojourn previews, Jacob's family completes—the descent that will require the exodus to reverse.</p>
+    
+    <p>Beth-el thus brackets the entire patriarchal section. Abram establishes it in Unit 5 (12:8). Jacob's ladder vision occurs there in <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">Unit 14</a> (28:10–22). Jacob returns there in <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a> (35:1–15) to close the twelve-unit core. The site marks not just geographic location but structural boundaries—the stable reference point from which journeys depart and to which they return.</p>
+    
+    <p>The geographic template establishes one dimension of structure. But the unit also contains explicit verbal markers that create additional patterns. We turn now to the marked parallels.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Patterns and Parallels</h2>
+    
+    <h3>Horizontal Parallels</h3>
+    
+    <p>The unit contains two sets of marked horizontal parallels:</p>
+    
+    <p><strong>Row 1: Double Toledot</strong> — "These are the generations of Shem" (11:10) parallels "Now these are the generations of Terah" (11:27). The marking invites us to read these together: universal lineage (1A) funneling into particular family (1B). The double <em>toledot</em> performs genealogical disposal while establishing the transition from primordial to historical narrative.</p>
+    
+    <p><strong>Row 2b: Beth-el Envelope</strong> — The parallel between 2Ab and 2Bb creates the unit's strongest structural feature:</p>
+    
+    <ul>
+        <li>2Ab: "unto the mountain on the east of <em>Beth-el</em>... <em>Beth-el</em> on the west, and <em>Ai</em> on the east; and he builded there <em>an altar unto YHWH</em>, and <em>called upon the name of YHWH</em>. And Abram journeyed, going on still <em>toward the South</em>."</li>
+        <li>2Bb: "And he went on his journeys <em>from the South</em> even to <em>Beth-el</em>... between <em>Beth-el</em> and <em>Ai</em>; unto the place of <em>the altar</em>... and Abram <em>called there on the name of YHWH</em>."</li>
+    </ul>
+    
+    <p>Every significant element repeats: Beth-el, Ai, altar, calling on YHWH's name, directional movement. The Egypt material sits inside this envelope but receives no structural marking—the crisis is framed, contained, positioned as interruption within the return pattern.</p>
+    
+    <h3>Thematic Vertical Thread</h3>
+    
+    <p>While Unit 5 contains no marked vertical threads, a thematic thread runs through Column B: <em>emptiness</em>. Row 1B introduces barrenness—Sarai's empty womb threatening the promise of descendants. Row 2Ba introduces famine—empty land driving Abram from Canaan. Both are "emptiness" motifs threatening the covenant from different angles: no seed, no sustenance. The thematic connection suggests Column B's obstacles share a common character even when not verbally linked.</p>
+    
+    <p>The marked patterns show how the text weaves itself together. But Unit 5 doesn't exist in isolation—it opens a larger structure and corresponds to other units in Genesis's architecture.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit Context in Genesis</h2>
+    
+    <h3>Opening the Twelve-Unit Core</h3>
+    
+    <p>Unit 5 functions as the opening boundary of the twelve-unit patriarchal core that runs through <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a>. It occupies Row 1 (the YHWH row), Column C (the covenant track), and a corner position in the matrix. The four corners (Units 5, <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">9</a>, <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a>, <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a>) share a distinctive feature: all contain sister-wife or sexual boundary material. In Unit 5, Abram presents Sarai as his sister to Pharaoh (12:10–20). Corners mark where covenant identity faces boundary crises.</p>
+    
+    <p>Unit 5 also initiates Triad 2—the Abraham covenant track that runs through Units 5, <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">7</a>, and <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">9</a>. These three units, read together by skipping the intervening family units, form a complete covenant arc: initiation (Unit 5), formalization through two ceremonies (<a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>), and testing (<a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Unit 9</a>).</p>
+    
+    <h3>Structural Parallel with Unit 11</h3>
+    
+    <p>Unit 5 and <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a> share the same internal structure: a 2×2 matrix where Row 1 contains genealogical disposal material that appears disconnected from the main narrative in Row 2.</p>
+    
+    <p>In Unit 5:</p>
+    <ul>
+        <li><strong>1A:</strong> Shem genealogy — ten generations of men begetting men</li>
+        <li><strong>1B:</strong> Terah genealogy — introduces women (Sarai, Milcah), relationships, barrenness</li>
+        <li><strong>Row 2:</strong> The call, journey, Egypt crisis, return</li>
+    </ul>
+    
+    <p>In <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a>:</p>
+    <ul>
+        <li><strong>1A:</strong> Ishmael genealogy — twelve sons listed, death at 137</li>
+        <li><strong>1B:</strong> Just one verse: "These are the generations of Isaac, Abraham's son: Abraham begot Isaac" (25:19)</li>
+        <li><strong>Row 2:</strong> Isaac marries Rebekah, twins born, birthright sold</li>
+    </ul>
+    
+    <p>Cell 1B in <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a> is remarkably terse—and seemingly redundant. Isaac was born back in <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Unit 9</a>; he's already forty years old when he marries Rebekah (25:20). Why restate "Abraham begot Isaac" here? The placement mirrors Unit 5's structure: Row 1 disposes of the non-chosen line (Ishmael in <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a>, the broader Shem descendants in Unit 5) while establishing the chosen line's <em>toledot</em> formula, even when that formula adds no new information.</p>
+    
+    <p>Both units occupy Row 1 of the Genesis matrix. Both open their respective cycles (Unit 5 opens Abraham's covenant track, <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a> opens Isaac-Jacob's). The shared pattern suggests cycle-opening units use their own Row 1 for genealogical disposal—clearing the stage before the main action begins in Row 2.</p>
+    
+    <h3>Structural Correspondence with Unit 12</h3>
+    
+    <p>The explicit cross-reference in <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a>—"besides the first famine that was in the days of Abraham" (26:1)—creates a textual link teaching vertical reading across the matrix. Unit 5 in Abraham's cycle corresponds to <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a> in Isaac-Jacob's cycle. Both occupy Row 1, both open their cycle's covenant track, both feature famine and sister-wife crisis. The cross-reference demonstrates how the matrix works—corresponding positions share content patterns:</p>
+    
+    <ul>
+        <li>Famine as catalyst for movement</li>
+        <li>Sister-wife crisis with a foreign king</li>
+        <li>Divine intervention protecting the matriarch</li>
+        <li>Departure enriched</li>
+        <li>Row 1 position (YHWH row)</li>
+        <li>Covenant track placement</li>
+        <li>Corner position in the matrix</li>
+    </ul>
+    
+    <p>The parallel demonstrates that covenant identity faces similar boundary crises across generations. What Abraham experiences, Isaac will experience. The matrix positions correspond, and the content corresponds.</p>
+    
+    <h3>The Beth-el Bracket</h3>
+    
+    <p>What Unit 5 opens—Abram at Beth-el, altar, calling on YHWH—<a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a> closes with Jacob at Beth-el, where Elohim confirms the name change to Israel and restates the Abrahamic promises (35:1–15). The intervening units work out what happens between these Beth-el moments: covenant formation, family crises, brother reconciliation, all framed by the site where heaven touches earth.</p>
+    
+    <p>We have examined Unit 5 from multiple angles: its puzzle and opening, its structure and patterns, its position in Genesis. We can now gather these threads and assess what the unit accomplishes.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Conclusion</h2>
+    
+    <p>We began with a question: why does Unit 5 open with twenty-three verses of genealogy before YHWH speaks to Abram? The answer lies in what the unit accomplishes structurally.</p>
+    
+    <p>Unit 5 does considerable work. It opens the twelve-unit patriarchal core. It resumes YHWH's direct dialogue with humanity after the long silence following Noah. It answers Babel's failed attempt to "make a name" with YHWH's promise to "make thy name great." It shifts from primordial to historical register. It establishes the geographic template—east to Canaan to Egypt to Canaan—that will pattern Israelite experience for generations. It introduces the sister-wife boundary crisis that marks corner positions throughout the matrix. It creates the Beth-el bracket that won't close until <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a>.</p>
+    
+    <p>The columnar structure establishes a dynamic that will drive the entire patriarchal narrative. Column A presents divine promise: male lineage, sevenfold blessing, YHWH's word descending from above. Column B presents human reality: Sarai's barrenness, Lot's silent presence awaiting separation, famine and foreign kings threatening the promise. The weaving of Unit 5 shows the first test of whether divine word can survive human obstacle—and it does, through YHWH's intervention.</p>
+    
+    <p>What emerges from reading Unit 5 structurally is its foundational character. This isn't simply "where Abraham's story begins." It's where YHWH re-engages, where the geographic pattern is set, where the twelve-unit core opens, where the covenant track initiates, where the tension between promise and reality first appears. The content—call, promises, journey, crisis, return—serves an architectural function that becomes visible only when we see Unit 5's position in the larger matrix.</p>
+</section>
+
+</article>
+
+<!-- Link to unit text -->
+<aside class="unit-link-box">
+    <p><strong>Read the structured text:</strong> <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Genesis Unit 5 with color-coded patterns</a></p>
+</aside>
+
+<!-- Navigation -->
+<nav class="unit-navigation">
+    <div class="nav-arrows">
+        <a href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4.html">← Unit 4: Tower of Babel</a>
+        <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6: Lot Separates →</a>
+    </div>
+    <div>
+        <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis Map</a>
+    </div>
+</nav>
+
+<!-- Citation -->
+<aside class="citation-box">
+    <strong>To cite:</strong> Torah Weave Project. "Genesis Unit 5: The Call of Abraham - Commentary." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Genesis/genesis-unit-5/genesis-unit-5-commentary.html
+</aside>
+
+<!-- Series Navigation -->
+<nav class="series-navigation">
+    <h3>Genesis Commentary Series</h3>
+    <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Overview</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: Units</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: Map</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: Three Rows</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture</a>
+</nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

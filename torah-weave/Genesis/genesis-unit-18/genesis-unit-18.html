@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Genesis Unit 18: Joseph's Administration (Genesis 41:46-47:27) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis</a> → Unit 18
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html" rel="prev">← Unit 17</a>
+            <a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html" rel="next">Unit 19 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Genesis Unit 18: Joseph's Administration</h1>
+                <div class="unit-meta">Genesis 41:46-47:27</div>
+            </header>
+
+            <aside class="commentary-link">
+                For detailed analysis of this unit's structure, see 
+                <a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18-commentary.html">Genesis Unit 18 Commentary</a>
+            </aside>
+
+            <section class="unit-content" itemprop="articleBody">
+<table class="scripture-table"><thead>
+                        <tr>
+                            <th class="cell-label col-left">1A</th>
+                            <th class="cell-label col-middle">1B</th>
+                            <th class="cell-label col-right">1C</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr><td><p class="torah"><span class="VerseNumber"><b>41:46</b></span> And Joseph was
+  thirty years old when he stood before Pharaoh king of Egypt.--<span class="vertical1"><b>And Joseph went out from the presence of Pharaoh, and went
+  throughout all the land of Egypt</b></span>. <span class="VerseNumber"><b>41:47</b></span>
+  And in the seven years of plenty the earth brought forth in heaps. <span class="VerseNumber"><b>41:48</b></span> <span class="vertical1"><b>And he
+  gathered up all the food of the seven years</b></span> which were in the land
+  of Egypt, and laid up the food in the cities; the food of the field, which
+  was round about every city, laid he up in the same. <span class="VerseNumber"><b>41:49</b></span>
+  And Joseph laid up corn as the sand of the sea, very much, until they left
+  off numbering; for it was without number.</p></td><td><p class="torah"><span class="VerseNumber"><b>41:50</b></span> And unto Joseph
+  were born two sons before the year of famine came, whom Asenath the daughter
+  of Poti-phera <span class="closure"><b>priest of On</b></span> bore unto him. <span class="VerseNumber"><b>41:51</b></span> And Joseph called the name of the
+  first-born Manasseh: 'for <span class="vertical1"><b>God hath made me forget
+  all my toil</b></span>, and all my father's house.' <span class="VerseNumber"><b>41:52</b></span>
+  And the name of the second called he Ephraim: <span class="vertical1"><b>'for
+  God hath made me fruitful in the land of my affliction</b></span>.'</p></td><td><p class="torah"><span class="VerseNumber"><b>41:53</b></span> And the seven
+  years of plenty, that was in the land of Egypt, came to an end. <span class="VerseNumber"><b>41:54</b></span> And the seven years of famine began to
+  come, according as Joseph had said; <span class="vertical1"><b>and there was
+  famine in all lands; but in all the land of Egypt there was bread</b></span>.
+  <span class="VerseNumber"><b>41:55</b></span> <span class="vertical1"><b>And when
+  all the land of Egypt was famished, the people cried to Pharaoh for bread</b></span>;
+  and Pharaoh said unto all the Egyptians: 'Go unto Joseph; what he saith to
+  you, do.' <span class="VerseNumber"><b>41:56</b></span> And the famine was over
+  all the face of the earth; and Joseph opened all the storehouses, and sold
+  unto the Egyptians; and the famine was sore in the land of Egypt.</p></td></tr><thead>
+                        <tr>
+                            <th class="cell-label col-left">2A</th>
+                            <th class="cell-label col-middle">2B</th>
+                            <th class="cell-label col-right">2C</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr><td><p class="torah"><span class="VerseNumber"><b>41:57</b></span> <span class="vertical1"><b>And all countries came into Egypt to Joseph to buy corn</b></span>;
+  because the famine was sore in all the earth. <span class="VerseNumber"><b>42:1</b></span>
+  Now Jacob saw that there was corn in Egypt, and Jacob said unto his sons:
+  'Why do ye look one upon another?' <span class="VerseNumber"><b>42:2</b></span>
+  And he said: 'Behold, I have heard that there is corn in Egypt. Get you down
+  thither, and buy for us from thence; that we may live, and not die.' <span class="VerseNumber"><b>42:3</b></span> And Joseph's ten brethren went down to
+  buy corn from Egypt. <span class="VerseNumber"><b>42:4</b></span> <span class="vertical1"><b>But Benjamin, Joseph's brother, Jacob sent not with his
+  brethren; for he said: 'Lest peradventure harm befall him</b></span>.' <span class="VerseNumber"><b>42:5</b></span> And the sons of Israel came to buy among
+  those that came; for the famine was in the land of Canaan. <span class="VerseNumber"><b>42:6</b></span> <span class="vertical1"><b>And Joseph was
+  the governor over the land; he it was that sold to all the people of the land</b></span>.
+  And Joseph's brethren came, and bowed down to him with their faces to the
+  earth. <span class="VerseNumber"><b>42:7</b></span> <span class="vertical1"><b>And
+  Joseph saw his brethren, and he knew them, but made himself strange unto
+  them, and spoke roughly with them</b></span>; and he said unto them: 'Whence
+  come ye?' And they said: 'From the land of Canaan to buy food.' <span class="VerseNumber"><b>42:8</b></span> And Joseph knew his brethren, but they
+  knew him not. <span class="VerseNumber"><b>42:9</b></span> And Joseph
+  remembered the dreams which he dreamed of them, and said unto them: <span class="vertical1"><b>'Ye are spies; to see the nakedness of the land ye are
+  come</b></span>.' <span class="VerseNumber"><b>42:10</b></span> And they said
+  unto him: 'Nay, my lord, but to buy food are thy servants come. <span class="VerseNumber"><b>42:11</b></span> <span class="vertical1"><b>We are all one
+  man's sons</b></span>; we are upright men, thy servants are no spies.' <span class="VerseNumber"><b>42:12</b></span> And he said unto them: 'Nay, but to see
+  the nakedness of the land ye are come.' <span class="VerseNumber"><b>42:13</b></span>
+  And they said: <span class="vertical1"><b>'We thy servants are twelve brethren,
+  the sons of one man in the land of Canaan; and, behold, the youngest is this
+  day with our father, and one is not</b></span>.' <span class="VerseNumber"><b>42:14</b></span>
+  And Joseph said unto them: 'That is it that I spoke unto you, saying: Ye are
+  spies. <span class="VerseNumber"><b>42:15</b></span> Hereby ye shall be proved,
+  as Pharaoh liveth, ye shall not go forth hence, except your youngest brother
+  come hither. <span class="VerseNumber"><b>42:16</b></span> <span class="vertical1"><b>Send one of you, and let him fetch your brother, and ye
+  shall be bound, that your words may be proved, whether there be truth in you;
+  or else, as Pharaoh liveth, surely ye are spies</b></span>.' <span class="VerseNumber"><b>42:17</b></span> And he put them all together into ward
+  three days.</p></td><td><p class="torah"><span class="VerseNumber"><b>42:18</b></span> And Joseph said unto
+  them the third day. 'This do, and live; <span class="vertical1"><b>for I fear
+  God</b></span>: <span class="VerseNumber"><b>42:19</b></span> if ye be upright
+  men, let one of your brethren be bound in your prison-house; but go ye, carry
+  corn for the famine of your houses; <span class="VerseNumber"><b>42:20</b></span>
+  and bring your youngest brother unto me; so shall your words be verified, and
+  ye shall not die.' And they did so. <span class="VerseNumber"><b>42:21</b></span>
+  And they said one to another: 'We are verily guilty concerning our brother,
+  in that we saw the distress of his soul, when he besought us, and we would
+  not hear; therefore is this distress come upon us.' <span class="VerseNumber"><b>42:22</b></span>
+  And Reuben answered them, saying: 'Spoke I not unto you, saying: Do not sin
+  against the child; and ye would not hear? therefore also, behold, his blood
+  is required.' <span class="VerseNumber"><b>42:23</b></span> And they knew not
+  that Joseph understood them; for the interpreter was between them. <span class="VerseNumber"><b>42:24</b></span> <span class="vertical1"><b>And he turned
+  himself about from them, and wept</b></span>; and he returned to them, and
+  spoke to them, and took Simeon from among them, and bound him before their
+  eyes.</p></td><td><p class="torah"><span class="VerseNumber"><b>42:25</b></span> <span class="vertical1"><b>Then Joseph commanded to fill their vessels with corn, and
+  to restore every man's money into his sack, and to give them provision for
+  the way; and thus was it done unto them</b></span>. <span class="VerseNumber"><b>42:26</b></span>
+  And they laded their asses with their corn, and departed thence. <span class="VerseNumber"><b>42:27</b></span> And as one of them opened his sack to
+  give his ass provender in the lodging-place, he espied his money; and,
+  behold, it was in the mouth of his sack. <span class="VerseNumber"><b>42:28</b></span>
+  And he said unto his brethren: 'My money is restored; and, lo, it is even in
+  my sack.' And their heart failed them, and they turned trembling one to
+  another, saying: 'What is this that God hath done unto us?'</p></td></tr></tbody>
+                </table>
+
+                <div class="page-break"></div>
+
+                <table class="scripture-table"><thead>
+                        <tr>
+                            <th class="cell-label col-left">3A</th>
+                            <th class="cell-label col-middle">3B</th>
+                            <th class="cell-label col-right">3C</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>42:29</b></span> And they
+  came unto Jacob their father unto the land of Canaan, and told him all that
+  had befallen them, saying: <span class="VerseNumber"><b>42:30</b></span> <span class="vertical1"><b>'The man, the lord of the land, spoke roughly with us, and
+  took us for spies of the country</b></span>. <span class="VerseNumber"><b>42:31</b></span>
+  <span class="vertical1"><b>And we said unto him: We are upright men; we are no
+  spies</b></span>. <span class="VerseNumber"><b>42:32</b></span> <span class="vertical1"><b>We are twelve brethren, sons of our father; one is not,
+  and the youngest is this day with our father in the land of Canaan</b></span>.
+  <span class="VerseNumber"><b>42:33</b></span> <span class="vertical1"><b>And the
+  man, the lord of the land, said unto us: Hereby shall I know that ye are
+  upright men: leave one of your brethren with me, and take corn for the famine
+  of your houses, and go your way</b></span>. <span class="VerseNumber"><b>42:34</b></span>
+  <span class="vertical1"><b>And bring your youngest brother unto me; then shall
+  I know that ye are no spies, but that ye are upright men; so will I deliver
+  you your brother, and ye shall traffic in the land</b></span>.' <span class="VerseNumber"><b>42:35</b></span> And it came to pass as they emptied
+  their sacks, that, behold, every man's bundle of money was in his sack; and
+  when they and their father saw their bundles of money, they were afraid. <span class="VerseNumber"><b>42:36</b></span> And Jacob their father said unto them:
+  'Me have ye bereaved of my children: Joseph is not, and Simeon is not, and ye
+  will take Benjamin away; upon me are all these things come.' <span class="VerseNumber"><b>42:37</b></span> And Reuben spoke unto his father,
+  saying: 'Thou shalt slay my two sons, if I bring him not to thee; deliver him
+  into my hand, and I will bring him back to thee.' <span class="VerseNumber"><b>42:38</b></span>
+  And he said: 'My son shall not go down with you; for his brother is dead, and
+  he only is left; if harm befall him by the way in which ye go, <span class="vertical1"><b>then will ye bring down my gray hairs with sorrow to the
+  grave</b></span>. </span></p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>43:16</b></span> And when
+  Joseph saw Benjamin with them, he said to the steward of his house: 'Bring
+  the men into the house, and kill the beasts, and prepare the meat; for the
+  men shall dine with me at noon.' <span class="VerseNumber"><b>43:17</b></span>
+  And the man did as Joseph bade; and the man brought the men into Joseph's
+  house. <span class="VerseNumber"><b>43:18</b></span> And the men were afraid,
+  because they were brought into Joseph's house; and they said: 'Because of the
+  money that was returned in our sacks at the first time are we brought in;
+  that he may seek occasion against us, and fall upon us, and take us for
+  bondmen, and our asses.' <span class="VerseNumber"><b>43:19</b></span> And they
+  came near to the steward of Joseph's house, and they spoke unto him at the
+  door of the house, <span class="VerseNumber"><b>43:20</b></span> and said: 'Oh
+  my lord, we came indeed down at the first time to buy food. <span class="VerseNumber"><b>43:21</b></span> And it came to pass, when we came to
+  the lodging-place, that we opened our sacks, and, behold, every man's money
+  was in the mouth of his sack, our money in full weight; and we have brought
+  it back in our hand. <span class="VerseNumber"><b>43:22</b></span> And other
+  money have we brought down in our hand to buy food. We know not who put our
+  money in our sacks.' <span class="VerseNumber"><b>43:23</b></span> And he said:
+  'Peace be to you, <span class="vertical1"><b>fear not; your God, and the God of
+  your father, hath given you</b></span> treasure in your sacks; I had your
+  money.' And he brought Simeon out unto them. <span class="VerseNumber"><b>43:24</b></span>
+  And the man brought the men into Joseph's house, and gave them water, and
+  they washed their feet; and he gave their asses provender. <span class="VerseNumber"><b>43:25</b></span> And they made ready the present against
+  Joseph's coming at noon; for they heard that they should eat bread there. </span></p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>44:1</b></span> <span class="vertical1"><b>And he commanded the steward of his house, saying: 'Fill the
+  men's sacks with food, as much as they can carry, and put every man's money
+  in his sack's mouth</b></span>. <span class="VerseNumber"><b>44:2</b></span> <span class="vertical1"><b>And put my goblet, the silver goblet, in the sack's mouth
+  of the youngest, and his corn money.' And he did according to the word that
+  Joseph had spoken</b></span>. <span class="VerseNumber"><b>44:3</b></span> As
+  soon as the morning was light, the men were sent away, they and their asses. <span class="VerseNumber"><b>44:4</b></span> And when they were gone out of the city,
+  and were not yet far off, Joseph said unto his steward: 'Up, follow after the
+  men; and when thou dost overtake them, say unto them: Wherefore have ye
+  rewarded evil for good? <span class="VerseNumber"><b>44:5</b></span> Is not
+  this it in which my lord drinketh, and whereby he indeed divineth? ye have
+  done evil in so doing.' <span class="VerseNumber"><b>44:6</b></span> And he
+  overtook them, and he spoke unto them these words. <span class="VerseNumber"><b>44:7</b></span>
+  And they said unto him: 'Wherefore speaketh my lord such words as these? Far
+  be it from thy servants that they should do such a thing. <span class="VerseNumber"><b>44:8</b></span> Behold, the money, which we found in our
+  sacks' mouths, we brought back unto thee out of the land of Canaan; how then
+  should we steal out of thy lord's house silver or gold? <span class="VerseNumber"><b>44:9</b></span> With whomsoever of thy servants it be
+  found, let him die, and we also will be my lord's bondmen.' <span class="VerseNumber"><b>44:10</b></span> And he said: 'Now also let it be
+  according unto your words: he with whom it is found shall be my bondman; and
+  ye shall be blameless.' <span class="VerseNumber"><b>44:11</b></span> Then they
+  hastened, and took down every man his sack to the ground, and opened every
+  man his sack. <span class="VerseNumber"><b>44:12</b></span> And he searched,
+  beginning at the eldest, and leaving off at the youngest; and the goblet was
+  found in Benjamin's sack. <span class="VerseNumber"><b>44:13</b></span> And
+  they rent their clothes, and laded every man his ass, and returned to the
+  city. </span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>43:1</b></span> And the
+  famine was sore in the land. <span class="VerseNumber"><b>43:2</b></span> And
+  it came to pass, when they had eaten up the corn which they had brought out
+  of Egypt, that their father said unto them: 'Go again, buy us a little food.'
+  <span class="VerseNumber"><b>43:3</b></span> <span class="vertical1"><b>And Judah
+  spoke unto him, saying: 'The man did earnestly forewarn us, saying: Ye shall
+  not see my face, except your brother be with you</b></span>. <span class="VerseNumber"><b>43:4</b></span> If thou wilt send our brother with us,
+  we will go down and buy thee food; <span class="VerseNumber"><b>43:5</b></span>
+  but if thou wilt not send him, we will not go down, for the man said unto us:
+  Ye shall not see my face, except your brother be with you.' <span class="VerseNumber"><b>43:6</b></span> And Israel said: 'Wherefore dealt ye so
+  ill with me, as to tell the man whether ye had yet a brother?' <span class="VerseNumber"><b>43:7</b></span> <span class="vertical1"><b>And they said:
+  'The man asked straitly concerning ourselves, and concerning our kindred,
+  saying: Is your father yet alive? have ye another brother? and we told him
+  according to the tenor of these words; could we in any wise know that he
+  would say: Bring your brother down</b></span>?' <span class="VerseNumber"><b>43:8</b></span>
+  And Judah said unto Israel his father: 'Send the lad with me, and we will
+  arise and go, that we may live, and not die, both we, and thou, and also our
+  little ones. <span class="VerseNumber"><b>43:9</b></span> I will be surety for
+  him; of my hand shalt thou require him; if I bring him not unto thee, and set
+  him before thee, then let me bear the blame for ever. <span class="VerseNumber"><b>43:10</b></span> For except we had lingered, surely we
+  had now returned a second time.' <span class="VerseNumber"><b>43:11</b></span>
+  And their father Israel said unto them: 'If it be so now, do this: take of
+  the choice fruits of the land in your vessels, and carry down the man a
+  present, a little balm, and a little honey, spicery and ladanum, nuts, and
+  almonds; <span class="VerseNumber"><b>43:12</b></span> and take double money in
+  your hand; and the money that was returned in the mouth of your sacks carry
+  back in your hand; peradventure it was an oversight; <span class="VerseNumber"><b>43:13</b></span>
+  take also your brother, and arise, go again unto the man; <span class="VerseNumber"><b>43:14</b></span> <span class="vertical1"><b>and God
+  Almighty give you mercy before the man, that he may release unto you your
+  other brother and Benjamin. And as for me, if I be bereaved of my children, I
+  am bereaved</b></span>.' <span class="VerseNumber"><b>43:15</b></span> And the
+  men took that present, and they took double money in their hand, and
+  Benjamin; and rose up, and went down to Egypt, and stood before Joseph.</span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>43:26</b></span> And when
+  Joseph came home, they brought him the present which was in their hand into
+  the house, and bowed down to him to the earth. <span class="VerseNumber"><b>43:27</b></span>
+  And he asked them of their welfare, and said: 'Is your father well, the old
+  man of whom ye spoke? Is he yet alive?' <span class="VerseNumber"><b>43:28</b></span>
+  And they said: 'Thy servant our father is well, he is yet alive.' And they
+  bowed the head, and made obeisance. <span class="VerseNumber"><b>43:29</b></span>
+  And he lifted up his eyes, and saw Benjamin his brother, his mother's son,
+  and said: 'Is this your youngest brother of whom ye spoke unto me?' And he
+  said: <span class="vertical1"><b>'God be gracious unto thee, my son</b></span>.'
+  <span class="VerseNumber"><b>43:30</b></span> <span class="vertical1"><b>And
+  Joseph made haste; for his heart yearned toward his brother; and he sought
+  where to weep; and he entered into his chamber, and wept there</b></span>. <span class="VerseNumber"><b>43:31</b></span> And he washed his face, and came out;
+  and he refrained himself, and said: 'Set on bread.' <span class="VerseNumber"><b>43:32</b></span>
+  And they set on for him by himself, and for them by themselves, and for the
+  Egyptians, that did eat with him, by themselves; because the Egyptians might
+  not eat bread with the Hebrews; for that is an abomination unto the Egyptians.
+  <span class="VerseNumber"><b>43:33</b></span> And they sat before him, the
+  firstborn according to his birthright, and the youngest according to his
+  youth; and the men marvelled one with another. <span class="VerseNumber"><b>43:34</b></span>
+  And portions were taken unto them from before him; but Benjamin's portion was
+  five times so much as any of theirs. And they drank, and were merry with him.</span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>44:14</b></span> And
+  Judah and his brethren came to Joseph's house, and he was yet there; and they
+  fell before him on the ground. <span class="VerseNumber"><b>44:15</b></span>
+  And Joseph said unto them: 'What deed is this that ye have done? know ye not
+  that such a man as I will indeed divine?' <span class="VerseNumber"><b>44:16</b></span>
+  And Judah said: 'What shall we say unto my lord? what shall we speak? or how
+  shall we clear ourselves? God hath found out the iniquity of thy servants;
+  behold, we are my lord's bondmen, both we, and he also in whose hand the cup
+  is found.' <span class="VerseNumber"><b>44:17</b></span> And he said: 'Far be
+  it from me that I should do so; the man in whose hand the goblet is found, he
+  shall be my bondman; but as for you, get you up in peace unto your father.' </span><span class="HebrewParagraph"><span>{S}</span></span></p></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody>
+                </table>
+
+                <div class="page-break"></div>
+
+                <table class="scripture-table"><thead>
+                        <tr>
+                            <th class="cell-label col-left">4A</th>
+                            <th class="cell-label col-middle">4B</th>
+                            <th class="cell-label col-right">4C</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr><td><p class="torah"><span class="VerseNumber"><b>44:18</b></span> Then Judah came
+  near unto him, and said: 'Oh my lord, let thy servant, I pray thee, speak a
+  word in my lord's ears, and let not thine anger burn against thy servant; <span class="vertical1"><b>for thou art even as Pharaoh</b></span>. <span class="VerseNumber"><b>44:19</b></span> <span class="vertical1"><b>My lord asked
+  his servants, saying: Have ye a father, or a brother</b></span>? <span class="VerseNumber"><b>44:20</b></span> <span class="vertical1"><b>And we said
+  unto my lord: We have a father, an old man, and a child of his old age, a
+  little one; and his brother is dead, and he alone is left of his mother, and
+  his father loveth him</b></span>. <span class="VerseNumber"><b>44:21</b></span>
+  <span class="vertical1"><b>And thou saidst unto thy servants: Bring him down
+  unto me, that I may set mine eyes upon him</b></span>. <span class="VerseNumber"><b>44:22</b></span> <span class="vertical1"><b>And we said
+  unto my lord: The lad cannot leave his father; for if he should leave his
+  father, his father would die</b></span>. <span class="VerseNumber"><b>44:23</b></span>
+  <span class="vertical1"><b>And thou saidst unto thy servants: Except your
+  youngest brother come down with you, ye shall see my face no more</b></span>.
+  <span class="VerseNumber"><b>44:24</b></span> <span class="vertical1"><b>And it
+  came to pass when we came up unto thy servant my father, we told him the
+  words of my lord</b></span>. <span class="VerseNumber"><b>44:25</b></span> <span class="vertical1"><b>And our father said: Go again, buy us a little food</b></span>.
+  <span class="VerseNumber"><b>44:26</b></span> <span class="vertical1"><b>And we
+  said: We cannot go down; if our youngest brother be with us, then will we go
+  down; for we may not see the man's face, except our youngest brother be with
+  us</b></span>. <span class="VerseNumber"><b>44:27</b></span> <span class="vertical1"><b>And thy servant my father said unto us: Ye know that my
+  wife bore me two sons</b></span>; <span class="VerseNumber"><b>44:28</b></span>
+  <span class="vertical1"><b>and the one went out from me, and I said: Surely he
+  is torn in pieces; and I have not seen him since</b></span>; <span class="VerseNumber"><b>44:29</b></span> <span class="vertical1"><b>and if ye take
+  this one also from me, and harm befall him, ye will bring down my gray hairs
+  with sorrow to the grave</b></span>. <span class="VerseNumber"><b>44:30</b></span>
+  Now therefore when I come to thy servant my father, and the lad is not with
+  us; seeing that his soul is bound up with the lad's soul; <span class="VerseNumber"><b>44:31</b></span> <span class="vertical1"><b>it will come
+  to pass, when he seeth that the lad is not with us, that he will die; and thy
+  servants will bring down the gray hairs of thy servant our father with sorrow
+  to the grave</b></span>. <span class="VerseNumber"><b>44:32</b></span> For thy
+  servant became surety for the lad unto my father, saying: If I bring him not
+  unto thee, then shall I bear the blame to my father for ever. <span class="VerseNumber"><b>44:33</b></span> Now therefore, let thy servant, I pray
+  thee, abide instead of the lad a bondman to my lord; and let the lad go up
+  with his brethren. <span class="VerseNumber"><b>44:34</b></span> For how shall
+  I go up to my father, if the lad be not with me? lest I look upon the evil
+  that shall come on my father.'</p></td><td><p class="torah"><span class="VerseNumber"><b>45:1</b></span> Then Joseph could
+  not refrain himself before all them that stood by him; and he cried: 'Cause
+  every man to go out from me.' And there stood no man with him, while Joseph
+  made himself known unto his brethren. <span class="VerseNumber"><b>45:2</b></span>
+  And he wept aloud; and the Egyptians heard, and the house of Pharaoh heard. <span class="VerseNumber"><b>45:3</b></span> And Joseph said unto his brethren: 'I am
+  Joseph; doth my father yet live?' And his brethren could not answer him; for
+  they were affrighted at his presence. <span class="VerseNumber"><b>45:4</b></span>
+  And Joseph said unto his brethren: 'Come near to me, I pray you.' And they
+  came near. And he said: 'I am Joseph your brother, <span class="vertical1"><b>whom
+  ye sold</b></span> into Egypt. <span class="VerseNumber"><b>45:5</b></span> And
+  now be not grieved, nor angry with yourselves, that ye sold me hither; <span class="vertical1"><b>for God did send me before you to preserve life</b></span>.
+  <span class="VerseNumber"><b>45:6</b></span> For these two years hath the
+  famine been in the land; and there are yet five years, in which there shall
+  be neither plowing nor harvest. <span class="VerseNumber"><b>45:7</b></span> <span class="vertical1"><b>And God sent me before you to give you a remnant on the
+  earth, and to save you alive for a great deliverance</b></span>. <span class="VerseNumber"><b>45:8</b></span> <span class="vertical1"><b>So now it was
+  not you that sent me hither, but God; and He hath made me a father to
+  Pharaoh, and lord of all his house, and ruler over all the land of Egypt</b></span>.
+  <span class="VerseNumber"><b>45:9</b></span> Hasten ye, and go up to my father,
+  and say unto him: Thus saith thy son Joseph: <span class="vertical1"><b>God
+  hath made me lord of all Egypt</b></span>; come down unto me, tarry not. <span class="VerseNumber"><b>45:10</b></span> And thou shalt dwell in the land of
+  Goshen, and thou shalt be near unto me, thou, and thy children, and thy
+  children's children, and thy flocks, and thy herds, and all that thou hast; <span class="VerseNumber"><b>45:11</b></span> and there will I sustain thee; for
+  there are yet five years of famine; lest thou come to poverty, thou, and thy
+  household, and all that thou hast. <span class="VerseNumber"><b>45:12</b></span>
+  And, behold, your eyes see, and the eyes of my brother Benjamin, that it is
+  my mouth that speaketh unto you. <span class="VerseNumber"><b>45:13</b></span>
+  And ye shall tell my father of all my glory in Egypt, and of all that ye have
+  seen; and ye shall hasten and bring down my father hither.' <span class="VerseNumber"><b>45:14</b></span> <span class="vertical1"><b>And he fell
+  upon his brother Benjamin's neck, and wept; and Benjamin wept upon his neck</b></span>.
+  <span class="VerseNumber"><b>45:15</b></span> <span class="vertical1"><b>And he
+  kissed all his brethren, and wept upon them</b></span>; and after that his
+  brethren talked with him.</p></td><td><p class="torah"><span class="VerseNumber"><b>45:16</b></span> And the report
+  thereof was heard in Pharaoh's house, saying: 'Joseph's brethren are come';
+  and it pleased Pharaoh well, and his servants. <span class="VerseNumber"><b>45:17</b></span>
+  And Pharaoh said unto Joseph: 'Say unto thy brethren: This do ye: lade your
+  beasts, and go, get you unto the land of Canaan; <span class="VerseNumber"><b>45:18</b></span>
+  and take your father and your households, and come unto me; and I will give
+  you the good of the land of Egypt, and ye shall eat the fat of the land. <span class="VerseNumber"><b>45:19</b></span> Now thou art commanded, this do ye:
+  take you wagons out of the land of Egypt for your little ones, and for your
+  wives, and bring your father, and come. <span class="VerseNumber"><b>45:20</b></span>
+  Also regard not your stuff; for the good things of all the land of Egypt are
+  yours.' <span class="VerseNumber"><b>45:21</b></span> And the sons of Israel
+  did so; and Joseph gave them wagons, according to the commandment of Pharaoh,
+  and gave them provision for the way. <span class="VerseNumber"><b>45:22</b></span>
+  To all of them he gave each man changes of raiment; but to Benjamin he gave
+  three hundred shekels of silver, and five changes of raiment. <span class="VerseNumber"><b>45:23</b></span> And to his father he sent in like
+  manner ten asses laden with the good things of Egypt, and ten she-asses laden
+  with corn and bread and victual for his father by the way. <span class="VerseNumber"><b>45:24</b></span> So he sent his brethren away, and they
+  departed; and he said unto them: 'See that ye fall not out by the way.' <span class="VerseNumber"><b>45:25</b></span> And they went up out of Egypt, and came
+  into the land of Canaan unto Jacob their father. <span class="VerseNumber"><b>45:26</b></span>
+  And they told him, saying: 'Joseph is yet alive, and he is ruler over all the
+  land of Egypt.' And his heart fainted, for he believed them not. <span class="VerseNumber"><b>45:27</b></span> And they told him all the words of
+  Joseph, which he had said unto them; and when he saw the wagons which Joseph
+  had sent to carry him, the spirit of Jacob their father revived. <span class="VerseNumber"><b>45:28</b></span> And Israel said: 'It is enough; Joseph
+  my son is yet alive; I will go and see him before I die.'</p></td></tr></tbody>
+                </table>
+
+                <div class="page-break"></div>
+
+                <table class="scripture-table"><thead>
+                        <tr>
+                            <th class="cell-label col-left">5A</th>
+                            <th class="cell-label col-middle">5B</th>
+                            <th class="cell-label col-right">5C</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>46:1</b></span> And Israel took his journey with all
+  that he had, and came to Beer-sheba, and offered sacrifices unto the God of
+  his father Isaac. <span class="VerseNumber"><b>46:2</b></span> And God spoke unto
+  Israel in the visions of the night, and said: 'Jacob, Jacob.' And he said:
+  'Here am I.' <span class="VerseNumber"><b>46:3</b></span> And He said: 'I am
+  God, the God of thy father; fear not to go down into Egypt; for I will there
+  make of thee a great nation. <span class="VerseNumber"><b>46:4</b></span> I
+  will go down with thee into Egypt; and I will also surely bring thee up
+  again; and Joseph shall put his hand upon thine eyes.' <span class="VerseNumber"><b>46:5</b></span> And Jacob rose up from Beer-sheba; and
+  the sons of Israel carried Jacob their father, and their little ones, and
+  their wives, in the wagons which Pharaoh had sent to carry him. <span class="VerseNumber"><b>46:6</b></span> And they took their cattle, and their
+  goods, which they had gotten in the land of Canaan, and came into Egypt,
+  Jacob, and all his seed with him; <span class="VerseNumber"><b>46:7</b></span>
+  his sons, and his sons' sons with him, his daughters, and his sons'
+  daughters, and all his seed brought he with him into Egypt. <span class="HebrewParagraph"><span>{S}</span></span> </p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>46:28</b></span> And he sent Judah before him unto
+  Joseph, to show the way before him unto Goshen; and they came into the land
+  of Goshen. <span class="VerseNumber"><b>46:29</b></span> And Joseph made ready
+  his chariot, and went up to meet Israel his father, to Goshen; and he
+  presented himself unto him, <span class="vertical1"><b>and fell on his neck,
+  and wept on his neck</b></span> a good while. <span class="VerseNumber"><b>46:30</b></span>
+  And Israel said unto Joseph: 'Now let me die, since I have seen thy face,
+  that thou art yet alive.' </p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>47:1</b></span> Then Joseph went in and told Pharaoh,
+  and said: 'My father and my brethren, and their flocks, and their herds, and
+  all that they have, are come out of the land of Canaan; and, behold, they are
+  in the land of Goshen.' <span class="VerseNumber"><b>47:2</b></span> And from
+  among his brethren he took five men, and presented them unto Pharaoh. <span class="VerseNumber"><b>47:3</b></span> And Pharaoh said unto his brethren:
+  'What is your occupation?' And they said unto Pharaoh: 'Thy servants are
+  shepherds, both we, and our fathers.' <span class="VerseNumber"><b>47:4</b></span>
+  And they said unto Pharaoh: 'To sojourn in the land are we come; for there is
+  no pasture for thy servants' flocks; for the famine is sore in the land of
+  Canaan. Now therefore, we pray thee, let thy servants dwell in the land of
+  Goshen.' <span class="VerseNumber"><b>47:5</b></span> And Pharaoh spoke unto
+  Joseph, saying: 'Thy father and thy brethren are come unto thee; <span class="VerseNumber"><b>47:6</b></span> the land of Egypt is before thee; in the
+  best of the land make thy father and thy brethren to dwell; in the land of
+  Goshen let them dwell. And if thou knowest any able men among them, then make
+  them rulers over my cattle.' </p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>46:8</b></span> <span class="vertical1"><b>And these are
+  the names of the children of Israel, who came into Egypt</b></span>, Jacob
+  and his sons: Reuben, Jacob's first-born. <span class="VerseNumber"><b>46:9</b></span>
+  And the sons of Reuben: Hanoch, and Pallu, and Hezron, and Carmi. <span class="VerseNumber"><b>46:10</b></span> And the sons of Simeon: Jemuel, and
+  Jamin, and Ohad, and Jachin, and Zohar, and Shaul the son of a Canaanitish
+  woman. <span class="VerseNumber"><b>46:11</b></span> And the sons of Levi:
+  Gershon, Kohath, and Merari. <span class="VerseNumber"><b>46:12</b></span> And
+  the sons of Judah: Er, and Onan, and Shelah, and Perez, and Zerah; but Er and
+  Onan died in the land of Canaan. And the sons of Perez were Hezron and Hamul.
+  <span class="VerseNumber"><b>46:13</b></span> And the sons of Issachar: Tola,
+  and Puvah, and Iob, and Shimron. <span class="VerseNumber"><b>46:14</b></span>
+  And the sons of Zebulun: Sered, and Elon, and Jahleel. <span class="VerseNumber"><b>46:15</b></span> These are the sons of Leah, whom she
+  bore unto Jacob in Paddan-aram, with his daughter Dinah; all the souls of his
+  sons and his daughters were thirty and three. <span class="VerseNumber"><b>46:16</b></span>
+  And the sons of Gad: Ziphion, and Haggi, Shuni, and Ezbon, Eri, and Arodi,
+  and Areli. <span class="VerseNumber"><b>46:17</b></span> And the sons of Asher:
+  Imnah, and Ishvah, and Ishvi, and Beriah, and Serah their sister; and the
+  sons of Beriah: Heber, and Malchiel. <span class="VerseNumber"><b>46:18</b></span>
+  These are the sons of Zilpah, whom Laban gave to Leah his daughter, and these
+  she bore unto Jacob, even sixteen souls. <span class="VerseNumber"><b>46:19</b></span>
+  The sons of Rachel Jacob's wife: Joseph and Benjamin. <span class="VerseNumber"><b>46:20</b></span> And unto Joseph in the land of Egypt
+  were born Manasseh and Ephraim, whom Asenath the daughter of Poti-phera
+  priest of On bore unto him. <span class="VerseNumber"><b>46:21</b></span> And
+  the sons of Benjamin: Bela, and Becher, and Ashbel, Gera, and Naaman, Ehi,
+  and Rosh, Muppim, and Huppim, and Ard. <span class="VerseNumber"><b>46:22</b></span>
+  These are the sons of Rachel, who were born to Jacob; all the souls were
+  fourteen. <span class="VerseNumber"><b>46:23</b></span> And the sons of Dan:
+  Hushim. <span class="VerseNumber"><b>46:24</b></span> And the sons of Naphtali:
+  Jahzeel, and Guni, and Jezer, and Shillem. <span class="VerseNumber"><b>46:25</b></span>
+  These are the sons of Bilhah, whom Laban gave unto Rachel his daughter, and
+  these she bore unto Jacob; all the souls were seven. <span class="VerseNumber"><b>46:26</b></span>
+  All the souls belonging to Jacob that came into Egypt, that came out of his
+  loins, besides Jacob's sons' wives, all the souls were threescore and six. <span class="VerseNumber"><b>46:27</b></span> And the sons of Joseph, who were born
+  to him in Egypt, were two souls; all the souls of the house of Jacob, that
+  came into Egypt, were threescore and ten. <span class="HebrewParagraph"><span>{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>46:31</b></span> And Joseph said unto his brethren, and
+  unto his father's house: 'I will go up, and tell Pharaoh, and will say unto
+  him: My brethren, and my father's house, who were in the land of Canaan, are
+  come unto me; <span class="VerseNumber"><b>46:32</b></span> and the men are
+  shepherds, for they have been keepers of cattle; and they have brought their
+  flocks, and their herds, and all that they have. <span class="VerseNumber"><b>46:33</b></span>
+  And it shall come to pass, when Pharaoh shall call you, and shall say: What
+  is your occupation? <span class="VerseNumber"><b>46:34</b></span> that ye shall
+  say: Thy servants have been keepers of cattle from our youth even until now,
+  both we, and our fathers; that ye may dwell in the land of Goshen; for every
+  shepherd is an abomination unto the Egyptians.'</p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>47:7</b></span> And Joseph brought in Jacob his father,
+  and set him before Pharaoh. And Jacob blessed Pharaoh. <span class="VerseNumber"><b>47:8</b></span> And Pharaoh said unto Jacob: 'How many
+  are the days of the years of thy life?' <span class="VerseNumber"><b>47:9</b></span>
+  And Jacob said unto Pharaoh: 'The days of the years of my sojournings are a
+  hundred and thirty years; few and evil have been the days of the years of my
+  life, and they have not attained unto the days of the years of the life of my
+  fathers in the days of their sojournings.' <span class="VerseNumber"><b>47:10</b></span>
+  And Jacob blessed Pharaoh, and went out from the presence of Pharaoh. <span class="VerseNumber"><b>47:11</b></span> And Joseph placed his father and his
+  brethren, and gave them a possession in the land of Egypt, in the best of the
+  land, in the land of Rameses, as Pharaoh had commanded. <span class="VerseNumber"><b>47:12</b></span> And Joseph sustained his father, and
+  his brethren, and all his father's household, with bread, according to the
+  want of their little ones.</p></td></tr></tbody>
+                </table>
+
+                <div class="page-break"></div>
+
+                <table class="scripture-table"><thead>
+                        <tr>
+                            <th class="cell-label col-left">6A</th>
+                            <th class="cell-label col-middle">6B</th>
+                            <th class="cell-label col-right">6C</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr><td><p class="torah"><span class="VerseNumber"><b>47:13</b></span> <span class="vertical1"><b>And there was no bread in all the land; for the famine was
+  very sore, so that the land of Egypt and the land of Canaan languished by
+  reason of the famine</b></span>. <span class="VerseNumber"><b>47:14</b></span>
+  And Joseph gathered up all the money that was found in the land of Egypt, and
+  in the land of Canaan, for the corn which they bought; and Joseph brought the
+  money into Pharaoh's house. <span class="VerseNumber"><b>47:15</b></span> <span class="horizontal2">And when the money was all spent</span> in the land of
+  Egypt, and in the land of Canaan, all the Egyptians came unto Joseph, and
+  said: 'Give us bread; for why should we die in thy presence? for our money
+  faileth.' <span class="VerseNumber"><b>47:16</b></span> And Joseph said: <span class="horizontal2">'Give your cattle</span>, and I will give you [bread] for
+  your cattle, if money fail.' <span class="VerseNumber"><b>47:17</b></span> And
+  they brought their cattle unto Joseph. And Joseph gave them bread in exchange
+  for the horses, and for the flocks, and for the herds, and for the asses; and
+  he fed them with bread in exchange for all their cattle for that year.</p></td><td><p class="torah"><span class="VerseNumber"><b>47:18</b></span> And when that year
+  was ended, they came unto him the second year, and said unto him: 'We will
+  not hide from my lord, how <span class="horizontal2">that our money is all
+  spent; and the herds of cattle are my lord's</span>; there is nought left in
+  the sight of my lord, but our bodies, and our lands. <span class="VerseNumber"><b>47:19</b></span>
+  Wherefore should we die before thine eyes, both we and our land? <span class="vertical1"><b>buy us</b></span> and our land for bread, and we and our
+  land will be bondmen unto Pharaoh; and give us seed, that we may live, and
+  not die, and that the land be not desolate.' <span class="VerseNumber"><b>47:20</b></span>
+  <span class="horizontal3">So Joseph bought all the land of Egypt for </span>Pharaoh;
+  for the Egyptians sold every man his field, because the famine was sore upon
+  them; and the land became Pharaoh's. <span class="VerseNumber"><b>47:21</b></span>
+  And as for the people, he removed them city by city, from one end of the
+  border of Egypt even to the other end thereof. <span class="VerseNumber"><b>47:22</b></span>
+  <span class="horizontal3">Only the land of </span><span class="closure"><b>the
+  priests</b></span><span class="horizontal3"> bought he not</span>, for the
+  priests had a portion from Pharaoh, and did eat their portion which Pharaoh
+  gave them; wherefore they sold not their land.</p></td><td><p class="torah"><span class="VerseNumber"><b>47:23</b></span> Then Joseph said
+  unto the people: <span class="horizontal3">'Behold, I have bought you this day
+  and your land</span> for Pharaoh. Lo, here is seed for you, and ye shall sow
+  the land. <span class="VerseNumber"><b>47:24</b></span> And it shall come to
+  pass at the ingatherings, that ye shall give a fifth unto Pharaoh, and four
+  parts shall be your own, for seed of the field, and for your food, and for
+  them of your households, and for food for your little ones.' <span class="VerseNumber"><b>47:25</b></span> And they said: 'Thou hast saved our
+  lives. Let us find favour in the sight of my lord, and we will be Pharaoh's
+  bondmen.' <span class="VerseNumber"><b>47:26</b></span> And Joseph made it a
+  statute concerning the land of Egypt unto this day, that Pharaoh should have
+  the fifth; <span class="horizontal3">only the land of the priests alone became
+  not Pharaoh's</span>.</p></td></tr></table>            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Genesis Unit 18: Joseph's Administration (Genesis 41:46-47:27)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html" rel="prev">← Unit 17: Joseph Sold and Elevated</a>
+            <a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html" rel="next">Unit 19: The Blessings and Deaths →</a>
+        </div>
+        <div>
+            <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">→ Genesis Overview</a>
+        </div>
+    </nav>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

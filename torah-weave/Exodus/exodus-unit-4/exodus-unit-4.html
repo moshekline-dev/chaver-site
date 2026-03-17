@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 4 (Exodus 12:1-13:16) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 4
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-3/exodus-unit-3.html" rel="prev">← Unit 3</a>
+            <a href="/torah-weave/Exodus/exodus-unit-5/exodus-unit-5.html" rel="next">Unit 5 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 4</h1>
+                <div class="unit-meta" itemprop="about">Exodus 12:1-13:16</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-left">1A</th><th class="col-right">1B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>12:1</b></span> And the LORD spoke unto Moses and Aaron
+  in the land of Egypt, saying: <span class="VerseNumber"><b>12:2</b></span> <span class="ciasm1"><b>'This month </b></span>shall be unto you the beginning of
+  months; it shall be the first month of the year to you. <span class="VerseNumber"><b>12:3</b></span> Speak ye unto all the congregation of
+  Israel, saying: In the tenth day of this <span class="horizontal1"><b>month
+  they shall take to them every man a lamb, according to their fathers' houses</b></span>,
+  a lamb for a household; <span class="VerseNumber"><b>12:4</b></span> and if the
+  household be too little for a lamb, then shall he and his neighbour next unto
+  his house take one according to the number of the souls; according to every
+  man's eating ye shall make your count for the lamb. <span class="VerseNumber"><b>12:5</b></span>
+  Your lamb shall be without blemish, a male of the first year; ye shall take
+  it from the sheep, or from the goats; <span class="VerseNumber"><b>12:6</b></span>
+  and ye shall keep it unto the fourteenth day of the same month; and the whole
+  assembly of the congregation of Israel <span class="horizontal1"><b>shall kill
+  it</b></span> at dusk. <span class="VerseNumber"><b>12:7</b></span> <span class="horizontal1"><b>And they shall take of the blood, and put it on the two
+  side-posts and on the lintel, upon the houses</b></span> wherein they shall
+  eat it. <span class="VerseNumber"><b>12:8</b></span> And they shall eat the
+  flesh in that night, roast with fire, and unleavened bread; with bitter herbs
+  they shall eat it. <span class="VerseNumber"><b>12:9</b></span> Eat not of it
+  raw, nor sodden at all with water, but roast with fire; its head with its
+  legs and with the inwards thereof. <span class="VerseNumber"><b>12:10</b></span>
+  And ye shall let nothing of it remain until the morning; but that which
+  remaineth of it until the morning ye shall burn with fire. <span class="VerseNumber"><b>12:11</b></span> And thus shall ye eat it: with your
+  loins girded, your shoes on your feet, and your staff in your hand; and ye
+  shall eat it in haste--it is the LORD'S passover. <span class="VerseNumber"><b>12:</b></span><span class="horizontal1"><b>12 For I will go through the land of Egypt in that
+  night, and will smite all the first-born in the land of Egypt, both man and
+  beast; and against all the gods of Egypt I will execute judgments: I am the
+  LORD</b></span>. <span class="VerseNumber"><b>12:13</b></span> <span class="horizontal1"><b>And the blood shall be to you for a token upon the
+  houses where ye are; and when I see the blood, I will pass over you, and
+  there shall no plague be upon you to destroy you, when I smite the land of
+  Egypt</b></span>. </p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>12:21</b></span> Then Moses called for all the elders of
+  Israel, and said unto them: <span class="horizontal1"><b>'Draw out, and take
+  you lambs according to your families, and kill</b></span> the passover lamb. <span class="VerseNumber"><b>12:22</b></span> <span class="horizontal1"><b>And ye shall
+  take a bunch of hyssop, and dip it in the blood that is in the basin, and
+  strike the lintel and the two side-posts with the blood that is in the basin</b></span>;
+  and none of you shall go out of the door of his house until the morning. <span class="VerseNumber"><b>12:23</b></span> <span class="horizontal1"><b>For the LORD
+  will pass through to smite the Egyptians; and when He seeth the blood upon
+  the lintel, and on the two side-posts, the LORD will pass over the door, and
+  will not suffer the destroyer to come in unto your houses to smite you</b></span>.
+  </p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>12:14</b></span> <span class="ciasm1"><b>And this day
+  shall be unto you for a memorial</b></span>, and ye shall keep it a feast to
+  the LORD; <span class="horizontal1"><b>throughout your generations</b></span>
+  ye shall keep it a feast <span class="horizontal1"><b>by an ordinance for ever</b></span>.
+  <span class="VerseNumber"><b>12:15</b></span> <span class="ciasm1"><b>Seven days
+  shall ye eat unleavened bread</b></span>; howbeit the first day ye shall put
+  away leaven out of your houses; for whosoever eateth leavened bread from the
+  first day until the seventh day, that soul shall be cut off from Israel. <span class="VerseNumber"><b>12:16</b></span> And in the first day there shall be to
+  you a holy convocation, and in the seventh day a holy convocation; no manner
+  of work shall be done in them, save that which every man must eat, that only
+  may be done by you. <span class="VerseNumber"><b>12:17</b></span> And ye shall
+  observe the feast of unleavened bread; <span class="vertical1"><b>for in this
+  selfsame day have I brought your hosts out of the land of Egypt</b></span>;
+  therefore shall ye observe this day throughout your generations by an
+  ordinance for ever. <span class="VerseNumber"><b>12:18</b></span> In the first
+  month, on the fourteenth day of the month at even, ye shall eat unleavened
+  bread, until the one and twentieth day of the month at even. <span class="VerseNumber"><b>12:19</b></span> Seven days shall there be no leaven
+  found in your houses; for whosoever eateth that which is leavened, that soul
+  shall be cut off from the congregation of Israel, whether he be a sojourner,
+  or one that is born in the land. <span class="VerseNumber"><b>12:20</b></span>
+  Ye shall eat nothing leavened; in all your habitations shall ye eat
+  unleavened bread.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>12:24</b></span> And ye shall observe this thing <span class="horizontal1"><b>for an ordinance to thee and to thy sons for ever</b></span>.
+  <span class="VerseNumber"><b>12:25</b></span> <span class="vertical1"><b>And it
+  shall come to pass, when ye be come to the land which the LORD will give you,
+  according as He hath promised</b></span>, that ye shall keep this service. <span class="VerseNumber"><b>12:26</b></span> <span class="vertical1"><b>And it shall
+  come to pass, when your children shall say unto you: What mean ye by this
+  service</b></span>? <span class="VerseNumber"><b>12:27</b></span> that ye shall
+  say: It is the sacrifice of the LORD'S passover, for that He passed over the
+  houses of the children of Israel in Egypt, when He smote the Egyptians, and
+  delivered our houses.' And the people bowed the head and worshipped. <span class="VerseNumber"><b>12:28</b></span> <span class="ciasm2"><b>And the children
+  of Israel went and did so; as the LORD had commanded Moses and Aaron, so did
+  they</b></span>. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-right">2B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>12:29</b></span> And it came to pass at midnight, <span class="horizontal1"><b>that the LORD smote all the firstborn in the land of
+  Egypt</b></span>, from the first-born of Pharaoh that sat on his throne unto
+  the first-born of the captive that was in the dungeon; and all the first-born
+  of cattle. </p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>12:35</b></span> And the children of Israel did
+  according to the word of Moses; and they asked of the Egyptians jewels of
+  silver, and jewels of gold, and raiment. <span class="VerseNumber"><b>12:36</b></span>
+<span class="horizontal1"><b>And the LORD gave the people favour in the sight
+  of the Egyptians</b></span>, so that they let them have what they asked. And
+  they despoiled the Egyptians. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>12:30</b></span> And Pharaoh rose up in the night, he,
+  and all his servants, and all the Egyptians; and there was a great cry in
+  Egypt; for there was not a house where there was not one dead. <span class="VerseNumber"><b>12:31</b></span> And he called for Moses and Aaron by
+  night and said: 'Rise up, get you forth from among my people, both ye and the
+  children of Israel; and go, serve the LORD, as ye have said. <span class="VerseNumber"><b>12:32</b></span> <span class="horizontal1"><b>Take both
+  your flocks and your herd</b></span>s, as ye have said, and be gone; and
+  bless me also.'</p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>12:37</b></span> And the children of Israel journeyed
+  from Rameses to Succoth, about six hundred thousand men on foot, beside
+  children. <span class="VerseNumber"><b>12:38</b></span> And a mixed multitude
+  went up also with them; <span class="horizontal1"><b>and flocks, and herds,
+  even very much cattle</b></span>.</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>12:33</b></span> And the Egyptians were urgent upon the
+  people, to send them out of the land in haste; for they said: 'We are all
+  dead men.' <span class="VerseNumber"><b>12:34</b></span> <span class="horizontal1"><b>And the people took their dough before it was leavened</b></span>,
+  their kneading-troughs being bound up in their clothes upon their shoulders.</p></td><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>12:39</b></span> <span class="horizontal1"><b>And they
+  baked unleavened cakes of the dough which they brought forth out of Egypt,
+  for it was not leavened; because they were thrust out of Egypt, and could not
+  tarry</b></span>, neither had they prepared for themselves any victual.</p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">3A</th><th class="col-right">3B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>12:40</b></span> Now the time that <span class="internalparallel"><b>the children of Israel</b></span> dwelt in Egypt
+  was four hundred and thirty years. <span class="VerseNumber"><b>12:41</b></span>
+  And it came to pass at the end of four hundred and thirty years, <span class="vertical1"><b>even the selfsame day it came to pass, that all the host
+  of the LORD went out from the land of Egypt</b></span>. <span class="VerseNumber"><b>12:42</b></span> It was a night of watching unto the
+  LORD for bringing them out from the land of Egypt; this same night is a night
+  of watching unto the LORD for <span class="internalparallel"><b>all the
+  children of Israel</b></span> throughout their generations. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>13:3</b></span> And Moses said unto the people: <span class="ciasm1"><b>'Remember this day</b></span>, <span class="vertical1"><b>in
+  which ye came out from Egypt, out of the house of bondage</b></span>; <span class="internalparallel"><b>for by strength of hand the LORD brought you out
+  from this place</b></span>; <span class="vertical1"><b>there shall no leavened
+  bread be eaten</b></span> </p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>12:43</b></span> And the LORD said unto Moses and Aaron:
+  'This is the ordinance of the passover: there shall no alien eat thereof; <span class="VerseNumber"><b>12:44</b></span> but every man's servant that is bought
+  for money, when thou hast circumcised him, then shall he eat thereof. <span class="VerseNumber"><b>12:45</b></span> A sojourner and a hired servant shall
+  not eat thereof. <span class="VerseNumber"><b>12:46</b></span> In one house
+  shall it be eaten; thou shalt not carry forth aught of the flesh abroad out
+  of the house; neither shall ye break a bone thereof. <span class="VerseNumber"><b>12:47</b></span>
+  All the congregation of Israel shall keep it. <span class="VerseNumber"><b>12:48</b></span>
+  And when a stranger shall sojourn with thee, and will keep the passover to
+  the LORD, let all his males be circumcised, and then let him come near and
+  keep it; and he shall be as one that is born in the land; but no
+  uncircumcised person shall eat thereof. <span class="VerseNumber"><b>12:49</b></span>
+  One law shall be to him that is homeborn, and unto the stranger that
+  sojourneth among you.' <span class="VerseNumber"><b>12:50</b></span> <span class="ciasm2"><b>Thus did all</b></span> <span class="internalparallel"><b>the
+  children of Israel</b></span>; <span class="ciasm2"><b>as the LORD commanded
+  Moses and Aaron, so did they</b></span>. </p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> . <span class="VerseNumber"><b>13:4</b></span> This day ye go forth <span class="ciasm1"><b>in
+  the month Abib</b></span>. <span class="VerseNumber"><b>13:5</b></span> <span class="vertical1"><b>And it shall be when the LORD shall bring thee into the
+  land</b></span> of the Canaanite, and the Hittite, and the Amorite, and the
+  Hivite, and the Jebusite, <span class="vertical1"><b>which He swore unto thy
+  fathers to give thee</b></span>, a land flowing with milk and honey, that
+  thou shalt keep this service in this month. <span class="VerseNumber"><b>13:</b></span><span class="ciasm1"><b>6 Seven days thou shalt eat unleavened bread, and in the
+  seventh day shall be a feast to the LORD</b></span>. <span class="VerseNumber"><b>13:7</b></span>
+<span class="ciasm1"><b>Unleavened bread shall be eaten throughout the seven
+  days</b></span>; and there shall no leavened bread be seen with thee, neither
+  shall there be leaven seen with thee, in all thy borders.</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span> <span class="VerseNumber"><b>12:51</b></span> <span class="vertical1"><b>And it came to
+  pass the selfsame day that the LORD did bring</b></span> <span class="internalparallel"><b>the children of Israel</b></span> <span class="vertical1"><b>out of the land of Egypt by their hosts</b></span>. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>13:8</b></span> <span class="vertical1"><b>And thou shalt
+  tell thy son in that day, saying</b></span>: It is because of that which the
+  LORD did for me when I came forth out of Egypt. <span class="VerseNumber"><b>13:9</b></span>
+  And it shall be for a sign unto thee upon thy hand, and for a memorial
+  between thine eyes, that the law of the LORD may be in thy mouth; for <span class="internalparallel"><b>with a strong hand hath the LORD brought thee out
+  of Egypt</b></span>. <span class="VerseNumber"><b>13:10</b></span> Thou shalt
+  therefore keep this ordinance in its season from year to year. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>d</b></span><span class="VerseNumber"><b>13:1</b></span> And the LORD spoke unto Moses, saying: <span class="VerseNumber"><b>13:2</b></span> <span class="horizontal1"><b>'Sanctify
+  unto Me all the first-born, whatsoever openeth the womb</b></span> among <span class="internalparallel"><b>the children of Israel</b></span>, <span class="horizontal1"><b>both of man and of beast, it is Mine</b></span>.'</p></td><td><p class="torah"><span class="CellSubdivision"><b>d</b></span><span class="VerseNumber"><b>13:11</b></span> <span class="vertical1"><b>And it shall
+  be when the LORD shall bring thee into the land of the Canaanite, as He swore
+  unto thee and to thy fathers, and shall give it thee</b></span>, <span class="VerseNumber"><b>13:</b></span><span class="horizontal1"><b>12 that thou
+  shalt set apart unto the LORD all that openeth the womb; every firstling that
+  is a male, which thou hast coming of a beast, shall be the LORD'S</b></span>.
+  <span class="VerseNumber"><b>13:13</b></span> And every firstling of an ass
+  thou shalt redeem with a lamb; and if thou wilt not redeem it, then thou
+  shalt break its neck; and all the first-born of man among thy sons shalt thou
+  redeem. <span class="VerseNumber"><b>13:14</b></span> <span class="vertical1"><b>And
+  it shall be when thy son asketh thee in time to come, saying: What is this</b></span>?
+  that thou shalt say unto him: <span class="internalparallel"><b>By strength of
+  hand the LORD brought us out from Egypt</b></span>, from the house of
+  bondage; <span class="VerseNumber"><b>13:15</b></span> and it came to pass,
+  when Pharaoh would hardly let us go that the LORD slew all the firstborn in
+  the land of Egypt, both the first-born of man, and the first-born of beast;
+  therefore I sacrifice to the LORD all that openeth the womb, being males; but
+  all the first-born of my sons I redeem. <span class="VerseNumber"><b>13:16</b></span>
+  And it shall be for a sign upon thy hand, and for frontlets between thine
+  eyes; <span class="internalparallel"><b>for by strength of hand the LORD
+  brought us forth out of Egypt</b></span>.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 4 (Exodus 12:1-13:16)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-4/exodus-unit-4.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-3/exodus-unit-3.html" rel="prev">← Unit 3</a>
+            <a href="/torah-weave/Exodus/exodus-unit-5/exodus-unit-5.html" rel="next">Unit 5 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

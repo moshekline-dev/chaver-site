@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Genesis Unit 11: Isaac and Ishmael - Commentary | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="/torah-weave/">Torah Weave</a> &gt; 
+    <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis</a> &gt; 
+    Unit 11 Commentary
+</nav>
+
+<!-- Header -->
+<header class="unit-header-section">
+    <h1>Genesis Unit 11: Isaac and Ishmael</h1>
+    <div class="unit-meta">Genesis 25:12–34</div>
+</header>
+
+<!-- Small position map -->
+<aside class="unit-position-map">
+    <svg viewBox="0 0 280 100" width="280" height="100" style="display: block; margin: 1em auto;">
+        <!-- Column headers -->
+        <text x="50" y="15" font-size="9" text-anchor="middle" fill="#666">A</text>
+        <text x="80" y="15" font-size="9" text-anchor="middle" fill="#666">B</text>
+        <text x="110" y="15" font-size="9" text-anchor="middle" fill="#666">C</text>
+        <text x="140" y="15" font-size="9" text-anchor="middle" fill="#666">D</text>
+        <text x="170" y="15" font-size="9" text-anchor="middle" fill="#666">E</text>
+        <text x="200" y="15" font-size="9" text-anchor="middle" fill="#666">F</text>
+        <text x="230" y="15" font-size="9" text-anchor="middle" fill="#666">G</text>
+        
+        <!-- Row headers -->
+        <text x="20" y="40" font-size="9" text-anchor="middle" fill="#666">1</text>
+        <text x="20" y="60" font-size="9" text-anchor="middle" fill="#666">2</text>
+        <text x="20" y="80" font-size="9" text-anchor="middle" fill="#666">3</text>
+        
+        <!-- Row 1: Unit 11 highlighted -->
+        <rect x="35" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="25" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="25" width="25" height="18" fill="#d4d4ff" stroke="#333" stroke-width="2"/>
+        <rect x="185" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 2 -->
+        <rect x="35" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="45" width="25" height="18" fill="#ffe6e6" stroke="#ccc"/>
+        <rect x="95" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 3 -->
+        <rect x="35" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="65" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Unit numbers (Row 1) -->
+        <text x="47" y="37" font-size="8" text-anchor="middle">1</text>
+        <text x="107" y="37" font-size="8" text-anchor="middle">5</text>
+        <text x="137" y="37" font-size="8" text-anchor="middle">6</text>
+        <text x="167" y="37" font-size="8" text-anchor="middle" font-weight="bold">11</text>
+        <text x="197" y="37" font-size="8" text-anchor="middle">12</text>
+        <text x="227" y="37" font-size="8" text-anchor="middle">17</text>
+        
+        <!-- Unit numbers (Row 2) -->
+        <text x="47" y="57" font-size="8" text-anchor="middle">2</text>
+        <text x="77" y="57" font-size="8" text-anchor="middle">4</text>
+        <text x="107" y="57" font-size="8" text-anchor="middle">7</text>
+        <text x="137" y="57" font-size="8" text-anchor="middle">8</text>
+        <text x="167" y="57" font-size="8" text-anchor="middle">13</text>
+        <text x="197" y="57" font-size="8" text-anchor="middle">14</text>
+        <text x="227" y="57" font-size="8" text-anchor="middle">18</text>
+        
+        <!-- Unit numbers (Row 3) -->
+        <text x="47" y="77" font-size="8" text-anchor="middle">3</text>
+        <text x="107" y="77" font-size="8" text-anchor="middle">9</text>
+        <text x="137" y="77" font-size="8" text-anchor="middle">10</text>
+        <text x="167" y="77" font-size="8" text-anchor="middle">15</text>
+        <text x="197" y="77" font-size="8" text-anchor="middle">16</text>
+        <text x="227" y="77" font-size="8" text-anchor="middle">19</text>
+    </svg>
+</aside>
+
+<!-- MAIN COMMENTARY BEGINS -->
+<article>
+
+<section class="commentary-section">
+    <h2>The Toledot That Points Backward</h2>
+    
+    <p>"These are the generations of Ishmael" (25:12). The formula promises offspring, and offspring come: twelve sons listed by name, twelve princes according to their nations. "These are the generations of Isaac" (25:19). The formula promises offspring, but what follows is not Isaac's sons. It is Isaac's father: אַבְרָהָם הוֹלִיד אֶת יִצְחָק — "Abraham begot Isaac."</p>
+    
+    <p>The Hebrew reveals the puzzle. The word תּוֹלְדֹת (toledot, "generations") shares its root with הוֹלִיד (holid, "begot"). Isaac's "generations" opens with a statement about who <em>generated</em> him — pointing backward to Abraham, not forward to descendants. Ishmael's toledot lists his sons; Isaac's toledot names his father. Ishmael's line flows forward; Isaac's line is anchored in the past.</p>
+    
+    <p>Why the difference? Consider what stands between Abraham's begetting of Isaac and this moment. The Akedah. Abraham took Isaac up Moriah, and only Abraham came down: "Abraham returned unto his young men" (22:19). Isaac is not mentioned. They went up together; Abraham descends alone. Isaac was offered — and though he lived, the generative link from Abraham forward was severed. "Abraham begot Isaac" is past tense, completed action, before Moriah. After the Akedah, Abraham's role in generating the line is finished. He gave Isaac up. The toledot of Isaac cannot simply list Isaac's sons because the transmission from Abraham was interrupted at the altar. The line must be restarted — and for that, we must look to the mothers.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Mothers and Fathers</h2>
+    
+    <p>Both toledot formulas identify their subjects as "Abraham's son" (בֶּן אַבְרָהָם). Abraham fathered both Ishmael and Isaac. But watch how each describes the begetting:</p>
+    
+    <blockquote>
+        <p>1A (25:12): "Ishmael, Abraham's son, whom <strong>Hagar</strong> the Egyptian, Sarah's handmaid, <strong>bore unto Abraham</strong>"</p>
+        <p>1B (25:19): "<strong>Abraham begot</strong> Isaac"</p>
+    </blockquote>
+    
+    <p>Same father. Different verbs. Ishmael comes through Hagar's <em>bearing</em> — the mother's act is primary. Isaac comes through Abraham's <em>begetting</em> — the father's act is primary. This distinction organizes the entire unit. Column A is about mothers. Column B is about fathers and patrimony:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Column A<br><small>Maternal</small></th>
+                <th>Column B<br><small>Paternal</small></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header">Row 1<br><small>Toledot</small></td>
+                <td><strong>Hagar bore</strong><br>Twelve princes, death, territory (25:12-18)</td>
+                <td><strong>Abraham begot</strong><br>"Abraham begot Isaac" (25:19)</td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 2<br><small>Succession</small></td>
+                <td><strong>Rebekah conceives</strong><br>Barrenness, YHWH's oracle to her, twins born (25:20-26)</td>
+                <td><strong>Birthright</strong><br>Which son inherits? (25:27-34)</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Column A traces the maternal succession: Hagar bore and princes flowed; now Rebekah must conceive for the line to continue. Column B traces the paternal question: Abraham begot Isaac; now which of Isaac's sons will inherit? Watch for where YHWH acts — it will matter.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Sarah's Succession and the Divine Restart</h2>
+    
+    <p>Sarah died at the end of Unit 10. Her line needs to continue. That is what Column A accomplishes across both rows.</p>
+    
+    <p>Row 1A disposes of Hagar — the <em>other</em> mother, the rival line. Twelve princes, a death notice, a territorial boundary, finished. Hagar's line is complete. Row 2A then establishes Rebekah as Sarah's successor. Like Sarah, Rebekah is barren. Like Sarah, she requires YHWH's intervention to conceive. But where YHWH's promise about Isaac came <em>to</em> Abraham (while Sarah laughed and received rebuke), YHWH's oracle about Jacob and Esau comes directly <em>to Rebekah</em>: "YHWH said unto her" (25:23). The mother now receives the divine word about her sons.</p>
+    
+    <p>Hagar is disposed in 1A so Sarah's line through Rebekah can open in 2A. The double toledot is not merely Ishmael versus Isaac. It is Hagar versus Sarah, with Rebekah taking Sarah's place.</p>
+    
+    <p>Column B presents the paternal question, but it opens with a problem. "Abraham begot Isaac" — and then nothing. No sons listed. No forward movement. For the line to restart after the Akedah, YHWH must intervene — and YHWH acts in Column A, the maternal column. Four times YHWH appears in Row 2A: YHWH is entreated, YHWH enables conception, YHWH receives Rebekah's inquiry, YHWH speaks the oracle to her. Column B — the birthright transaction — contains no divine name at all. YHWH restarts the generation through the mother; the paternal inheritance question is resolved through human choice alone.</p>
+    
+    <p>Hagar bore unto Abraham and twelve princes followed without obstacle. Abraham begot Isaac and... the Akedah intervened. Rebekah was barren. Only when YHWH responds to the mother's condition, only when YHWH speaks directly to the woman, does the chosen line restart.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Woven Parallels</h2>
+    
+    <p>The horizontal parallel across Row 1 is marked explicitly:</p>
+    
+    <blockquote>
+        <p>1A (25:12): "<strong>Now these are the generations of Ishmael</strong>, Abraham's son..."</p>
+        <p>1B (25:19): "<strong>And these are the generations of Isaac</strong>, Abraham's son..."</p>
+    </blockquote>
+    
+    <p>Both are Abraham's sons. Both receive the toledot formula. But Ishmael's toledot contains his twelve sons — generations flowing forward. Isaac's toledot contains his father — generation pointing backward. The parallel formula highlights the divergent trajectories.</p>
+    
+    <p>The horizontal parallels in Row 2 trace the elder/younger theme:</p>
+    
+    <blockquote>
+        <p>2A (25:23): "...<strong>the elder shall serve the younger</strong>."</p>
+        <p>2B (25:33): "...<strong>he swore unto him; and he sold his birthright unto Jacob</strong>."</p>
+    </blockquote>
+    
+    <p>YHWH's oracle to Rebekah establishes the pattern (2A, maternal column). The birthright transaction fulfills it (2B, paternal column). What the mother learns from YHWH, the sons enact among themselves. The elder will serve the younger — not because the younger is more worthy, but because the elder despises his inheritance.</p>
+    
+    <p>A vertical thread connects the rows through lifespan:</p>
+    
+    <blockquote>
+        <p>1A (25:17): "<strong>These are the years of the life of Ishmael, a hundred and thirty and seven years</strong>."</p>
+        <p>2A (25:26): "<strong>Isaac was threescore years old when she bore them</strong>."</p>
+    </blockquote>
+    
+    <p>Ishmael's years are complete — 137, his full lifespan. Isaac's years mark a beginning — sixty when the twins arrive. Completion to commencement. Hagar's line finished; Sarah's line restarting.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Cycle Opener: The Geometry of Perception</h2>
+    
+    <p>Unit 11 opens the Jacob cycle (Units 11–16) just as Unit 5 opened the Abraham cycle (Units 5–10). In the woven Torah, these cycle openers establish the operating system for the units that follow. They do this through a systematic column inversion of male and female lines.</p>
+    
+    <p>In the Abraham cycle (Covenant Track), the columns are ordered Male-Female. In the Jacob cycle (Family Track), they invert to Female-Male:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Cycle Opener</th>
+                <th>Track Type</th>
+                <th>Column A</th>
+                <th>Column B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header">Unit 5</td>
+                <td>Covenant (Outward)</td>
+                <td>Male (Abram's Call)</td>
+                <td>Female (Sarai in Egypt)</td>
+            </tr>
+            <tr>
+                <td class="row-header">Unit 11</td>
+                <td>Family (Inward)</td>
+                <td>Female (Rebekah's Oracle)</td>
+                <td>Male (Birthright Sale)</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>This is not a random shuffle. It reflects the spatial architecture of the entire Genesis matrix. Column A sits on the left edge, and Column B sits on the right edge. In the woven logic, the edges face the external world, while the space between the columns represents the interior of the family. The male columns of both cycle openers face <em>outward</em> from the center of the book — Unit 5's Column A toward the left edge, Unit 11's Column B toward the right edge. The female columns face <em>inward</em> toward each other.</p>
+    
+    <h3>Inward and Outward Orientation</h3>
+    
+    <p>This layout encodes the orientation of the characters. Men in these openers are positioned to face outward toward the world (treaties, hunting, altars), while women face inward toward the household (succession, the womb, the tent).</p>
+    
+    <p><strong>Isaac's Outward Face (Column B):</strong> Isaac is positioned at the right edge of the matrix. He loves Esau, the "man of the field" and the "cunning hunter" (25:27-28). Isaac's gaze is fixed on the external, material success of the line.</p>
+    
+    <p><strong>Rebekah's Inward Face (Column A):</strong> Rebekah is positioned in the maternal column, her orientation toward the center — the interior life of the home. She loves Jacob, the "quiet man, dwelling in tents." And she alone receives YHWH's oracle about the succession: "the elder shall serve the younger" (25:23).</p>
+    
+    <p>The divine word regarding the family's future is an inward truth, and therefore it can only be received by the partner facing the center. YHWH speaks to Rebekah because the question — which son inherits? — belongs to her domain. Isaac, oriented outward, cannot see what is happening inside.</p>
+    
+    <p>This spatial arrangement will matter. In Unit 13, Isaac — blind, asking for venison from the field — will attempt to bless the outward-facing son. But the blessing is an inward matter, a question of succession within the tent. Isaac, by his structural position, cannot see what Rebekah sees. The oracle came to her; the correction will come through her.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit 11 and <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6</a>: The Row 1 Family Track</h2>
+    
+    <p>Units 6 and 11 occupy the same structural position in their respective cycles — Row 1 of the family track. <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6-commentary.html">Unit 6</a> separates Abraham from Lot; Unit 11 separates Jacob from Esau (and, in the generation above, Isaac from Ishmael). Both units sit in the YHWH row, where the transcendent deity acts personally in family matters. And both present the same pattern: strife leads to separation, and the one who chooses based on what he sees loses what the one who waits receives.</p>
+    
+    <p><strong>Strife Leading to Separation.</strong> In <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6</a>, conflict erupts between the herdsmen of Abraham and the herdsmen of Lot: "And there was a strife between the herdmen of Abram's cattle and the herdmen of Lot's cattle" (13:7). The land cannot support both households, and they part. In Unit 11, the struggle begins even earlier — inside the womb itself: "And the children struggled together within her" (25:22). The Hebrew verb וַיִּתְרֹצֲצוּ suggests violent collision. Where <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6</a>'s strife is between dependents (herdsmen), Unit 11's is between the principals themselves, and it begins before birth. In both cases, YHWH speaks directly to the person who must navigate the separation — to Abraham about the land (13:14–17), to Rebekah about the sons (25:23). And in both cases, the separation produces permanent national divisions: Israel and Moab/Ammon through Lot, Israel and Edom through Esau.</p>
+    
+    <p><strong>Visual Desire and the Wrong Choice.</strong> In <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6</a>, Lot "lifted up his eyes, and beheld all the plain of the Jordan, that it was well watered every where" (13:10), and chose Sodom's direction based on what looked good. In Unit 11, Esau comes in from the field, sees the red pottage, and demands it: "Let me swallow, I pray thee, some of this red, red pottage; for I am faint" (25:30). Both men choose based on immediate sensory appeal — Lot by sight, Esau by appetite. Both forfeit something they cannot recover: Lot loses proximity to the covenant-bearer and the land; Esau sells his birthright. This is the signature error of the Row 1 family track: choosing the visible present over the covenantal future. The one who grasps at what he can see relinquishes what he cannot.</p>
+    
+    <p><strong>The Elder Diminished.</strong> The structural parallel extends to the elder/younger reversal. Lot, as Abraham's nephew from the older brother Haran's line, represents the senior claim. Abraham graciously offers him first choice: "if thou wilt take the left hand, then I will go to the right" (13:9). Lot takes — and his line ends in Moab and Ammon, nations that will serve Israel. In Unit 11, YHWH's oracle states the principle directly: "the elder shall serve the younger" (25:23). What <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6</a> demonstrates through narrative, Unit 11 declares through oracle. The pattern is identical, but the second iteration makes explicit what the first left implicit.</p>
+    
+    <p>Reading these units as structural correspondents — which the matrix invites us to do — reveals that Genesis presents family separation not as aberration but as recurring mechanism. The covenant line emerges through differentiation from those closest to it, and in the Row 1 family track, the differentiation always follows the same sequence: strife, visual temptation, wrong choice, permanent separation. The architecture teaches through repetition with variation.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Reading the Unit</h2>
+    
+    <p>We began with a toledot that points backward — "Abraham begot Isaac" — where we expected it to point forward. We can now see why.</p>
+    
+    <p>Isaac's toledot cannot simply list sons because the generative chain was broken at Moriah. Abraham went up with Isaac and came down alone. The paternal line was severed. For the line to restart, YHWH must intervene — and YHWH acts not through the father but through the mother. Column A traces this maternal restart: Hagar's line is completed and set aside; Rebekah takes Sarah's place; YHWH speaks the oracle directly to her. Column B traces the paternal question that remains: which son inherits? The answer comes not from divine speech (Column B contains no divine name) but from human action — Esau's contempt for his birthright.</p>
+    
+    <p>The backward-pointing toledot thus marks a disruption that the unit itself repairs. "Abraham begot Isaac" acknowledges the break; the four cells of the matrix accomplish the mending. By the unit's end, both successions are secured — maternal through YHWH's oracle to Rebekah, paternal through the birthright transfer to Jacob. The toledot of Isaac promised generations. What it delivered was the machinery by which those generations become possible after the Akedah's interruption.</p>
+    
+    <p>Isaac himself almost disappears in this machinery. He is named at his origin, named when his sons are born, named loving Esau — but he initiates nothing. He entreats YHWH, but YHWH answers Rebekah. He loves Esau, but the birthright passes to Jacob. Isaac transmits; he does not drive. And this is fitting for a man whose toledot points backward rather than forward. Isaac is the link, not the engine. What Abraham interrupted at the altar, Rebekah restores in the tent. What Esau sold at the pot, Jacob held for the future. The Jacob cycle begins not with Jacob acting but with Jacob positioned — by YHWH's oracle to his mother, by his brother's contempt for inheritance. The cycle can proceed.</p>
+</section>
+
+</article>
+
+<!-- Link to unit text -->
+<aside class="unit-link-box">
+    <p><strong>Read the structured text:</strong> <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Genesis Unit 11 with color-coded patterns</a></p>
+</aside>
+
+<!-- Navigation -->
+<nav class="unit-navigation">
+    <div class="nav-arrows">
+        <a href="/torah-weave/Genesis/genesis-unit-10/commentary.html">← Unit 10: The Death of Sarah</a>
+        <a href="/torah-weave/Genesis/genesis-unit-12/commentary.html">Unit 12: Isaac and Abimelech →</a>
+    </div>
+    <div>
+        <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis Map</a>
+    </div>
+</nav>
+
+<!-- Citation Box -->
+<aside class="citation-box">
+    <strong>To cite:</strong> Torah Weave Project. "Genesis Unit 11: Isaac and Ishmael." <em>Torah Weave</em>, 2026. https://chaver.com/torah-weave/Genesis/genesis-unit-11/commentary.html
+</aside>
+
+<!-- Series Navigation -->
+<nav class="series-navigation">
+    <h3>Genesis Commentary Series</h3>
+    <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Overview</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: Units</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: Map</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: Three Rows</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture</a>
+</nav>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

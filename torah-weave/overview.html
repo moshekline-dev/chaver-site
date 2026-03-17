@@ -1,0 +1,1031 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>The Architecture of the Torah: Overview</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<h1>The Architecture of the Torah</h1>
+<p class="subtitle">An Overview for the torah-weave Commentary</p>
+
+<p>"The Torah is impossible."</p>
+
+<p>That is the judgment of Rabbi Brett Kopin, a colleague who has spent years working through the structural analysis presented in this commentary series. He does not mean the Torah is difficult, or that its composition is unlikely, or that its architecture is hard to believe. He means that the sheer number of simultaneous structural constraints operating in the text—at every level, from the individual cell to the five-book composition—exceeds what any compositional process we can imagine would be able to produce.</p>
+
+<p>This overview will explain what drove him to that conclusion. It presents the architecture of the Torah level by level, from the interior of a single five-verse passage to a map of eighty-six literary units spanning five books—and beyond, to a hidden composition woven through all of them. At each level, new constraints appear, and every new constraint must be satisfied simultaneously with all the ones that came before. By the end, the reader will be in a position to judge whether "impossible" is hyperbole or description.</p>
+
+<h2>A Grain of Sand</h2>
+
+<p>The best way to understand what the Torah's architecture is—and why it matters—is not to describe it from the outside but to experience it from the inside. So let us begin with five verses. Not a summary of findings. Not a map. Just five verses, read slowly, and see what happens.</p>
+
+<p>Here is the first Word of the Decalogue—the first of the ten <span class="hebrew">דברים</span> (<em>dvarim</em>, "Words") spoken at Sinai, as divided by the Masoretic Text of the Torah scroll:</p>
+
+<div class="hebrew-block">
+אָנֹכִי יְהוָה אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים<br>
+לֹא יִהְיֶה לְךָ אֱלֹהִים אֲחֵרִים עַל פָּנָי<br>
+לֹא תַעֲשֶׂה לְךָ פֶסֶל וְכָל תְּמוּנָה אֲשֶׁר בַּשָּׁמַיִם מִמַּעַל וַאֲשֶׁר בָּאָרֶץ מִתָּחַת וַאֲשֶׁר בַּמַּיִם מִתַּחַת לָאָרֶץ<br>
+לֹא תִשְׁתַּחֲוֶה לָהֶם וְלֹא תָעָבְדֵם<br>
+כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ אֵל קַנָּא פֹּקֵד עֲוֹן אָבֹת עַל בָּנִים עַל שִׁלֵּשִׁים וְעַל רִבֵּעִים לְשֹׂנְאָי וְעֹשֶׂה חֶסֶד לַאֲלָפִים לְאֹהֲבַי וּלְשֹׁמְרֵי מִצְוֹתָי
+</div>
+
+<div class="trans-block">
+I am YHWH your deity, who brought you out of the land of Egypt, out of the house of slaves. You shall have no other gods beside Me. You shall make yourself no carved likeness and no image of what is in the heavens above or what is on the earth below or what is in the waters beneath the earth. You shall not bow down to them and you shall not worship them, for I am YHWH your deity, a jealous deity, reckoning the crime of fathers with sons, with the third generation and with the fourth, for My foes, and doing kindness to the thousandth generation for My friends and for those who keep My commandments.
+</div>
+
+<p>Five verses. A few seconds of reading. And yet this small passage turns out to contain a density of structural information that will take us a little while to unpack. But when we are done, you will have the key to reading the entire Torah—not just this passage, but all five books.</p>
+
+<p><em><p><em>(The reasons for preferring this division of the Decalogue—which follows the Masoretic parashiyot of the Torah scroll rather than the Mekhilta—are set out in detail in the <a href="https://chaver.com/Torah-New/English/Articles/The%20Decalogue.html">Decalogue article</a>. There, the structural evidence for reading the ten Words as five pairs across two tablets is developed at length. Here, we focus on what the first Word reveals about the Torah's design method.)</em></p>. There, the structural evidence for reading the ten Words as five pairs across two tablets is developed at length. Here, we focus on what the first Word reveals about the Torah's design method.)</em></p>
+
+<h2>The Envelope</h2>
+
+<p>Notice, first, how the passage announces its own boundaries. It opens with <span class="hebrew">אָנֹכִי יְהוָה אֱלֹהֶיךָ</span> (<em>Anokhi YHWH Eloheikha</em>, "I am YHWH your deity"), and it closes with <span class="hebrew">כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ</span> (<em>ki Anokhi YHWH Eloheikha</em>, "for I am YHWH your deity"). The same phrase frames the entire unit. In between: three prohibitions. The structure is self-defining—it tells you where it begins and ends.</p>
+
+<p>This is not a stylistic flourish. It is an architectural principle. A positive statement frames three negative commands. The same pattern appears throughout the Torah. Here, for example, is a passage from Deuteronomy 22:8–12:</p>
+
+<div class="parallel-box">
+<span class="label-pos">(+)</span> When you build a new house, you shall make a parapet for your roof, that you bring not blood upon your house, if any man fall from there.<br><br>
+<span class="label-neg">(−)</span> You shall not sow your vineyard with two kinds of seed …<br>
+<span class="label-neg">(−)</span> You shall not plow with an ox and an ass together.<br>
+<span class="label-neg">(−)</span> You shall not wear a mingled stuff, wool and linen together.<br><br>
+<span class="label-pos">(+)</span> You shall make yourself twisted cords upon the four corners of your covering, wherewith you cover yourself.
+</div>
+
+<p><em>(This passage belongs to a larger composition spanning Deuteronomy 21:10–25:4—approximately fifty laws that were originally composed as a 10×3 matrix and then linearized by reading down columns rather than across rows. The full analysis appears in <a href="https://chaver.com/torah-weave/Deuteronomy/deuteronomy-unit-8/deuteronomy-unit-8-commentary-overview.html">The Beautiful Weave</a>.)</em></p>
+
+<p>Two positive commands—build a parapet, make twisted cords—frame three prohibitions against mixing. The structure is identical to the first Word of the Decalogue: a positive envelope around a negative core. And the pattern is not limited to envelope structures. The Torah uses a variety of methods to define the boundaries of its literary units—<em>toledot</em> ("generations of") formulas, death notices, geographic markers, thematic refrains. What they share is the principle: the text itself signals where its units begin and end. The first Word of the Decalogue is not just teaching a commandment. It is teaching you how the Torah organizes its text. That is the first dimension of our passage: <em>self-defining boundaries</em> (1).</p>
+
+<h2>Five Parts, Three Dimensions</h2>
+
+<p>Between the two occurrences of <span class="hebrew">אָנֹכִי</span> (<em>Anokhi</em>, "I"), the text divides into five distinct parts (2)—the second dimension. Three things are happening simultaneously within them.</p>
+
+<p>First, <span class="dim-time">time</span>. The framework—parts (a) and (e), the two <em>Anokhi</em> statements—spans from past to future. The opening looks backward: <span class="dim-time">"who brought you out of Egypt"</span>—history. The closing looks forward: <span class="dim-time">"doing kindness to the thousandth generation"</span>—prophecy. Between them, the three prohibitions (b–d) are all in the <span class="dim-time">present</span> tense: what you must do now.</p>
+
+<p>Second, <span class="dim-person">person</span>. The three prohibitions track through the grammatical persons. Part (b): "no other gods beside <span class="dim-person">Me</span>"—first person. Part (c): "you shall not make <span class="dim-person">for yourself</span>"—second person. Part (d): "you shall not bow down to <span class="dim-person">them</span>"—third person.</p>
+
+<p>Third, <span class="dim-space">space</span>. At the very center—part (c), the middle of the middle—the text suddenly opens into physical space: "what is <span class="dim-space">in the heavens above</span>, or what is <span class="dim-space">on the earth below</span>, or what is <span class="dim-space">in the waters beneath the earth</span>."</p>
+
+<table class="structure-table">
+<tr>
+  <td><b>(a)</b></td>
+  <td>I am YHWH your deity, who brought you out of Egypt</td>
+  <td class="label"><span class="dim-time">Past</span></td>
+</tr>
+<tr>
+  <td><b>(b)</b></td>
+  <td>You shall have no other gods beside <em>Me</em></td>
+  <td class="label"><span class="dim-person">1st person</span></td>
+</tr>
+<tr>
+  <td><b>(c)</b></td>
+  <td>You shall not make <em>for yourself</em> any image—<br>in the heavens above / on the earth / in the waters below</td>
+  <td class="label"><span class="dim-person">2nd person</span> / <span class="dim-space">Space</span></td>
+</tr>
+<tr>
+  <td><b>(d)</b></td>
+  <td>You shall not bow down to <em>them</em></td>
+  <td class="label"><span class="dim-person">3rd person</span></td>
+</tr>
+<tr>
+  <td><b>(e)</b></td>
+  <td>For I am YHWH your deity … to the thousandth generation</td>
+  <td class="label"><span class="dim-time">Future</span></td>
+</tr>
+</table>
+
+<p>Three nested dimensions. The ancient <em>Sefer Yetzirah</em>—the oldest surviving work of Jewish metaphysics—names them: <span class="dim-time"><span class="hebrew">שנה</span> (<em>shanah</em>), time</span>; <span class="dim-person"><span class="hebrew">נפש</span> (<em>nefesh</em>), person</span>; <span class="dim-space"><span class="hebrew">עולם</span> (<em>olam</em>), space</span>. And all three converge at a single point: the center of the center of the center.</p>
+
+<div class="centered-block">
+<span class="dim-time">Past</span> — <b><span class="dim-time">Present</span></b> — <span class="dim-time">Future</span><br>
+<span class="dim-person">Me</span> — <b><span class="dim-person">You</span></b> — <span class="dim-person">Them</span><br>
+<span class="dim-space">Above</span> — <b><span class="dim-space">Earth</span></b> — <span class="dim-space">Below</span><br><br>
+<em>You, here, now—the meeting point of God and the individual.</em>
+</div>
+
+<p>That is the third dimension: three axes of reality (3)—<span class="dim-time">time</span>, <span class="dim-person">person</span>, <span class="dim-space">space</span>—nested inside the five-part sequence, converging at a single center point. Not just a commandment against idolatry—a complete model of reality, compressed into a structure small enough to hold in your hands.</p>
+
+<h2>Who Spoke</h2>
+
+<p>Now look at the verse that introduces these words. Exodus 20:1, properly speaking, is not part of the Decalogue—it is the narrator's frame:</p>
+
+<div class="hebrew-block">
+וַיְדַבֵּר אֱלֹהִים אֵת כָּל הַדְּבָרִים הָאֵלֶּה לֵאמֹר
+</div>
+<div class="trans-block">
+And Elohim spoke all these words, saying—
+</div>
+
+<p>And what is the first thing spoken? <span class="hebrew">אָנֹכִי יְהוָה אֱלֹהֶיךָ</span> (<em>Anokhi YHWH Eloheikha</em>)—"I am YHWH your deity."</p>
+
+<p>Notice the narrator's <span class="hebrew">כָּל</span> ("all"). The word is unnecessary—"And Elohim spoke these words" would suffice. Its force is: <em>all</em> of what follows, including the words spoken in YHWH's voice, came through Elohim. The narrator is drawing the reader's attention to the two-name problem before the speech even begins.</p>
+
+<p>Read that again. The narrator tells you that <em>Elohim</em> spoke. The speech itself says "I am <em>YHWH</em>." The characters standing at Sinai—Moses and the people—hear only the speech: YHWH revealing himself. But you, the reader of the written text, are given something the characters do not have: the narrator's identification of who is speaking. And the narrator says Elohim.</p>
+
+<p>Why does this matter? Because it means the Torah is more than a record of what happened at Sinai. A historical account would give you the speech and let you stand where the people stood. This text does something else: it gives its audience information that the characters in the story cannot access. It operates on more than one level.</p>
+
+<p>What are those levels? And what does it mean that the narrator calls the speaker Elohim while the voice identifies itself as YHWH? We will return to this question. It turns out to be one of the keys to the entire architecture of the Torah. For now, simply notice the strangeness: two divine names, two channels of information, right here at the threshold of the Decalogue—the narrator's introduction and the opening of the first Word. Something is being set up that the rest of the Torah will unfold. That is the fourth dimension: <em>the Elohim/YHWH split</em> (4).</p>
+
+<h2>The Grain and the Tapestry</h2>
+
+<p>Why spend so long on five verses? Because something worth pausing for has just happened.</p>
+
+<p>In a passage that occupies a fraction of a stone tablet, we have found four dimensions of meaning: a self-defining envelope structure; a five-part division; three nested dimensions—time, person, space—converging at a single center point; and two divine names operating on two channels of information. All of this, simultaneously, in the same five verses.</p>
+
+<p>That is a feat of information management that deserves attention. The author of this text was not simply recording commandments or telling a story. The author was encoding multiple layers of meaning into a single passage, so that the same words carry different significance depending on which axis you read along—the temporal, the personal, the spatial, the structural. Finite text, carrying far more information than any one reading can extract.</p>
+
+<p>This is the discovery that the torah-weave commentary is built to explore. The author of the Torah was a master of information compression—embedding level upon level of structure into the same words. What we have just seen in five verses, the commentary will show operating at every scale of the Torah. But five dimensions is not the end. The first Word does not stand alone.</p>
+
+<div class="section-break">• • •</div>
+
+<h2>The Prototype</h2>
+
+<p>We have looked inside the first Word and found four dimensions of meaning: envelope, five-part sequence, three nested dimensions, and the Elohim/YHWH split. All of that came from reading the passage on its own terms—its internal structure. But the first Word does not stand alone. It sits inside a table. And the table has more to teach.</p>
+
+<h2>Rings Within the Word</h2>
+
+<p>Look again at the five parts, but now notice how they pair. Parts (a) and (e) are the envelope—both open with <span class="hebrew">אָנֹכִי יְהֹוָה אֱלֹהֶיךָ</span>. Part (a) looks to the past: "who brought you out of Egypt." Part (e) looks to the future: "to the thousandth generation." They frame the passage in time.</p>
+
+<p>Parts (b) and (d) are also paired. Part (b): "no other gods beside <em>Me</em>"—first person. Part (d): "do not bow down to <em>them</em>"—third person. Both are prohibitions against the same thing—idolatry—but the grammatical person shifts from the deity's "Me" outward to "them." They frame the passage in person.</p>
+
+<p>And part (c) stands at the center, alone: the spatial triad of heavens, earth, and waters below.</p>
+
+<table class="structure-table">
+<tr>
+  <td class="label">outer ring</td>
+  <td><b>(a)</b> ↔ <b>(e)</b></td>
+  <td class="label"><span class="dim-time">Time</span>: past ↔ future</td>
+</tr>
+<tr>
+  <td class="label">middle ring</td>
+  <td><b>(b)</b> ↔ <b>(d)</b></td>
+  <td class="label"><span class="dim-person">Person</span>: Me ↔ them</td>
+</tr>
+<tr>
+  <td class="label">center</td>
+  <td><b>(c)</b></td>
+  <td class="label"><span class="dim-space">Space</span>: above / earth / below</td>
+</tr>
+</table>
+
+<p>The five parts are not just sequential. They are concentric—an outer ring, a middle ring, and a center. This is a structure we will encounter again and again as we move through the Torah's architecture. For now, simply register the pattern: the first Word is built as a set of nested rings, and the content of each ring corresponds to one of the three dimensions.</p>
+
+<h2>The Same Structure, a Different Center</h2>
+
+<p>Is this pattern unique to the first Word, or is it a principle? We can check. The Sabbath command—Word 2A in our notation, the first Word of the second pair—also divides into five parts:</p>
+
+<table class="structure-table">
+<tr>
+  <td><b>(a)</b></td>
+  <td>Remember the Sabbath day, to sanctify it</td>
+</tr>
+<tr>
+  <td><b>(b)</b></td>
+  <td>Six days you shall labor and do all your work;<br>the seventh day is a Sabbath to YHWH your deity</td>
+</tr>
+<tr>
+  <td><b>(c)</b></td>
+  <td>You shall not do any work—<br>you, your son, your daughter,<br>your manservant, your maidservant, your animal,<br>the stranger within your gates</td>
+</tr>
+<tr>
+  <td><b>(d)</b></td>
+  <td>For in six days YHWH made the heavens and the earth,<br>the sea and all that is in them, and rested on the seventh day</td>
+</tr>
+<tr>
+  <td><b>(e)</b></td>
+  <td>Therefore YHWH blessed the Sabbath day and sanctified it</td>
+</tr>
+</table>
+
+<p>The concentric pairing is immediate. Parts (a) and (e): you sanctify the Sabbath, YHWH sanctified the Sabbath. Human act mirrors divine act. Parts (b) and (d): six days <em>you</em> work and rest on the seventh; six days <em>YHWH</em> made heaven and earth and rested on the seventh. Human labor mirrors divine labor. And part (c) stands at the center: a list of persons radiating outward from "you" through family, servants, animals, to the stranger at your gates.</p>
+
+<table class="structure-table">
+<tr>
+  <td class="label">outer ring</td>
+  <td><b>(a)</b> ↔ <b>(e)</b></td>
+  <td class="label">sanctification: human ↔ divine</td>
+</tr>
+<tr>
+  <td class="label">middle ring</td>
+  <td><b>(b)</b> ↔ <b>(d)</b></td>
+  <td class="label">labor and rest: human ↔ divine</td>
+</tr>
+<tr>
+  <td class="label">center</td>
+  <td><b>(c)</b></td>
+  <td class="label"><span class="dim-person">Person</span>: you → family → servants → stranger</td>
+</tr>
+</table>
+
+<p>The five-part concentric structure is not an accident of one passage. It recurs. But the <em>content</em> of the center shifts. In Word 1A—the deity's self-revelation—the center is <span class="dim-space">space</span>: the cosmic domain of heavens, earth, and waters. In Word 2A—the command addressed to human beings—the center is <span class="dim-person">person</span>: the social community from self to stranger. Both are framed by <span class="dim-time">time</span>. The three dimensions from <em>Sefer Yetzirah</em> are not confined to the first Word. They are distributed across the table. The deity's Word holds space at its center; the human Word holds persons at its center. The content of each Word is shaped by its position in the structure.</p>
+
+<h2>The Table</h2>
+
+<p>This brings us to the table itself. The Decalogue was not written as a list. It was inscribed on two tablets—and the Torah specifies that the writing ran across both sides: <span class="hebrew">מִזֶּה וּמִזֶּה הֵם כְּתֻבִים</span>, "on one and on the other were they written" (Exodus 32:15). The ten Words alternate from one tablet to the other, forming five pairs across two columns.</p>
+
+<table class="structure-table">
+<tr>
+  <td class="label">Pair</td>
+  <td class="label">Tablet A</td>
+  <td class="label">Tablet B</td>
+  <td class="label">Subject</td>
+</tr>
+<tr>
+  <td><b>1</b></td>
+  <td>I am YHWH your deity …</td>
+  <td>Do not take the Name in vain</td>
+  <td class="label">The Deity</td>
+</tr>
+<tr>
+  <td><b>2</b></td>
+  <td>Remember the Sabbath</td>
+  <td>Honor your father and mother</td>
+  <td class="label">Divine will</td>
+</tr>
+<tr>
+  <td><b>3</b></td>
+  <td>Do not murder</td>
+  <td>Do not commit adultery</td>
+  <td class="label">Physical life</td>
+</tr>
+<tr>
+  <td><b>4</b></td>
+  <td>Do not steal</td>
+  <td>Do not bear false witness</td>
+  <td class="label">Property and law</td>
+</tr>
+<tr>
+  <td><b>5</b></td>
+  <td>Do not covet your fellow's house</td>
+  <td>Do not covet your fellow's wife …</td>
+  <td class="label">Subjective desire</td>
+</tr>
+</table>
+
+<p>Read the rows: each pair addresses a single subject, from the most encompassing—the deity—to the most private—an emotion. The hierarchy descends from the infinite to the interior without interruption. Read the columns: Tablet A concerns the one, the separate, the intrinsic. Tablet B concerns the many, the connected, the extrinsic. In Pair 5, where both Words prohibit the same act—coveting—the distinction is clearest: 5A has a single object ("your fellow's house"), 5B has many ("wife, manservant, maidservant, ox, donkey, and all that is your fellow's").</p>
+
+<p>Now the first Word has acquired a sixth and seventh dimension. It is not only a self-contained passage with five internal layers of meaning. It is also a cell in a table—positioned in Row 1 (the deity) and Column A (the one, the intrinsic). Its content is determined by that intersection. The self-revelation of the deity as a singular "I" is precisely what belongs at the intersection of "the deity" and "the one." The table is a coordinate system, and the content at each point is a function of two variables: row pairing (5) and column hierarchy (6).</p>
+
+<p>But the table reveals something else—an eighth dimension. Look at where the first Word sits and what it says. The deity in Row 1 declares itself <span class="hebrew">אֵל קַנָּא</span> (<em>El Kana</em>), a jealous deity. And what sits at the bottom of the same table? Row 5: the prohibition against coveting—against jealousy. The most infinite subject in the hierarchy (the deity) and the most private (an emotion) turn out to share the same register. The deity who forbids coveting is the one who describes himself as covetous. The top of the table and the bottom of the table meet in the same word. That is vertical resonance (7).</p>
+
+<h2>Two Versions</h2>
+
+<p>There is a ninth dimension. The Decalogue appears twice in the Torah—in Exodus 20 and again in Deuteronomy 5. The two versions are nearly identical, but where they differ, the differences are telling. The Sabbath command, for instance, offers different reasons: Exodus grounds it in creation ("for in six days YHWH made the heavens and the earth"), while Deuteronomy grounds it in the exodus ("remember that you were a slave in the land of Egypt"). The same Word, carrying different content depending on which book it appears in—which is to say, depending on its position in the larger structure of the Torah. That is dual placement (8).</p>
+
+<p>The first Word of the Decalogue is now carrying eight simultaneous dimensions of meaning: four from its internal structure (envelope, five-part sequence, three nested dimensions, Elohim/YHWH split) and four from its position in the larger architecture (row pairing, column hierarchy, vertical resonance between top and bottom, and its dual placement in Exodus and Deuteronomy). Eight dimensions, from a passage that most readers encounter as a single item in a numbered list.</p>
+
+<p>And the Decalogue is only the prototype. The Torah claims it was written by the deity's own hand, on two tablets—the original woven text. Everything that follows in the Torah's eighty-six literary units is built on the same principle: text organized in two dimensions, carrying meaning along every axis simultaneously. We turn now to the building blocks of that architecture.</p>
+
+<p class="note" style="font-style: italic; color: #888;">(For the full analysis of the Decalogue as a 5×2 table, including the correspondence between the five pairs and the literary structure of Tractate Avot, see <a href="https://chaver.com/woven-torah/divine-speech-in-two-dimensions-the-paired-structure-of-the-decalogue-as-literary-paradigm/index.html">"Divine Speech in Two Dimensions"</a> and <a href="https://chaver.com/torah-weave/introduction/decalogue-presentation/decalogue-woven-code.html">the visual presentation of the Decalogue</a>.)</p>
+
+<p class="tally" style="text-align: center; font-style: italic; color: #888; margin: 2em 0;"><b>Structural elements identified so far: 8</b></p>
+
+<h2>A Microcosm of Five Books</h2>
+
+<p>The five-part structure of the first Word is not only a model of the three dimensions of reality. It maps directly onto the five books of the Torah (9).</p>
+
+<p>Part (a), the opening <span class="hebrew">אָנֹכִי</span> (<em>Anokhi</em>), looks to the past: "who brought you out of the land of Egypt." This is the perspective of Genesis—the book of origins. It begins with the creation of the world and ends with a family descending into Egypt. The entire narrative arc is retrospective: where did we come from?</p>
+
+<p>Parts (b), (c), and (d)—the three prohibitions—are all in the present tense. They address what must be done <em>now</em>, in the immediate reality of the covenant. These correspond to the three central books: Exodus, Leviticus, and Numbers. The action of these books takes place within the forty years between the departure from Egypt and the entry into the Land. Exodus tells the story of liberation and Sinai. Leviticus legislates holiness at the center. Numbers narrates the wilderness journey. Together, they are the present tense of the Torah—the "now" of the covenant.</p>
+
+<p>Part (e), the closing <span class="hebrew">אָנֹכִי</span> (<em>Anokhi</em>), looks to the future: "doing kindness to the thousandth generation." This is the perspective of Deuteronomy—Moses' farewell speeches, delivered on the threshold of the Promised Land, looking forward across all the generations to come. Deuteronomy even ends with blessings and prophecies extending into the indefinite future.</p>
+
+<p>But the parallel runs deeper than the temporal arc. Look at the three middle parts more carefully. Parts (b) and (d) are directly related: "no other gods beside Me" and "do not bow down to them" address the same subject—the prohibition against idolatry—from two angles. They form a pair. And part (c) comes between them, interrupting the pair with the spatial triad of heavens, earth, and waters below. This is exactly the relationship among the three middle books: Exodus and Numbers form a narrative pair—the story of liberation and the wilderness journey—and Leviticus sits between them, interrupting the narrative flow with something structurally different. Leviticus is the center of the Torah just as part (c), with its three-dimensional spatial opening, is the center of the first Word.</p>
+
+<p>And the correspondence goes one step further. Part (c) contains three vertical levels: heavens above, earth below, waters beneath the earth. Leviticus, too, is organized in three vertical levels. Its twenty-two units are structured as a journey through the Tabernacle—three stages going in toward the center and three stages coming back out. As Mary Douglas observed, the Tabernacle is Sinai laid on its side: the horizontal movement from courtyard to inner sanctum maps onto the vertical ascent of the mountain. The people stand at the base. The elders ascend partway. Moses alone enters the cloud at the summit. Three spatial levels at the center of the first Word; three spatial levels at the center of the five books. The same architecture, at two scales.</p>
+
+<p>So the five parts of the first Word mirror the five books in two ways: temporally (past, present, future) and structurally (a framing pair, a narrative pair, and a center that interrupts). The smallest literary unit of the Decalogue carries within it the shape of the whole. We turn now to that whole.</p>
+
+<p class="tally" style="text-align: center; font-style: italic; color: #888; margin: 2em 0;"><b>Structural elements identified so far: 9</b></p>
+
+
+<h2>The Full Torah Map</h2>
+
+<p>Below is the complete Torah Weave Map, showing all eighty-six units across five books in their structural positions. The horizontal thread runs left to right (Genesis–Leviticus–Deuteronomy); the vertical thread runs top to bottom (Exodus–Leviticus–Numbers). Leviticus sits at the intersection, belonging to both threads. Units with a distinctive border are independent units—those that stand outside the regular unit-set patterns and serve as primary structural anchors (Genesis 4, Exodus 5/10/15, Leviticus 13, Numbers 7, Deuteronomy 13).</p>
+
+<div class="torah-map-wrapper" style="width: 100%; overflow-x: auto; margin: 2em 0;">
+<div class="torah-map-outer" style="width: 680px; height: 530px; margin: 0 auto; position: relative; overflow: hidden;">
+<div class="torah-map-inner" style="width: 1170px; height: 920px; position: relative; transform: scale(0.575); transform-origin: top left;">
+
+    <!-- Book containers -->
+    <div style="position:absolute; left:0px; top:351px; width:351px; height:216px; border:3px solid #7ab0f7; background:rgba(122,176,247,0.1); box-sizing:border-box;"></div>
+    <div style="position:absolute; left:0px; top:351px; width:351px; padding:5px 0; text-align:center; font-weight:bold; font-size:18px; color:white; background:#7ab0f7; z-index:2;">GENESIS</div>
+
+    <div style="position:absolute; left:486px; top:27px; width:297px; height:297px; border:3px solid #f0b070; background:rgba(240,176,112,0.1); box-sizing:border-box;"></div>
+    <div style="position:absolute; left:486px; top:0px; width:297px; padding:5px 0; text-align:center; font-weight:bold; font-size:18px; color:white; background:#f0b070; z-index:2;">EXODUS</div>
+
+    <div style="position:absolute; left:378px; top:351px; width:459px; height:216px; border:3px solid #80d0a0; background:rgba(128,208,160,0.1); box-sizing:border-box;"></div>
+    <div style="position:absolute; left:378px; top:351px; width:459px; padding:5px 0; text-align:center; font-weight:bold; font-size:18px; color:white; background:#80d0a0; z-index:2;">LEVITICUS</div>
+
+    <div style="position:absolute; left:486px; top:621px; width:297px; height:297px; border:3px solid #f0b070; background:rgba(240,176,112,0.1); box-sizing:border-box;"></div>
+    <div style="position:absolute; left:486px; top:594px; width:297px; padding:5px 0; text-align:center; font-weight:bold; font-size:18px; color:white; background:#f0b070; z-index:2;">NUMBERS</div>
+
+    <div style="position:absolute; left:864px; top:351px; width:270px; height:216px; border:3px solid #7ab0f7; background:rgba(122,176,247,0.1); box-sizing:border-box;"></div>
+    <div style="position:absolute; left:864px; top:351px; width:270px; padding:5px 0; text-align:center; font-weight:bold; font-size:18px; color:white; background:#7ab0f7; z-index:2;">DEUTERONOMY</div>
+
+    <!-- Genesis Units -->
+    <div style="position:absolute; left:27px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U1</div>
+    <div style="position:absolute; left:27px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U2</div>
+    <div style="position:absolute; left:27px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U3</div>
+    <div style="position:absolute; left:81px; top:459px; width:23px; height:23px; border:2px solid #CC0066; background:#ffe6e6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U4</div>
+    <div style="position:absolute; left:135px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U5</div>
+    <div style="position:absolute; left:162px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U6</div>
+    <div style="position:absolute; left:135px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U7</div>
+    <div style="position:absolute; left:162px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U8</div>
+    <div style="position:absolute; left:135px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U9</div>
+    <div style="position:absolute; left:162px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U10</div>
+    <div style="position:absolute; left:216px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U11</div>
+    <div style="position:absolute; left:243px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U12</div>
+    <div style="position:absolute; left:216px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U13</div>
+    <div style="position:absolute; left:243px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U14</div>
+    <div style="position:absolute; left:216px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U15</div>
+    <div style="position:absolute; left:243px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U16</div>
+    <div style="position:absolute; left:297px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U17</div>
+    <div style="position:absolute; left:297px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U18</div>
+    <div style="position:absolute; left:297px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U19</div>
+
+    <!-- Exodus Units — Diamond Quads: 1=left, 2=top, 3=bottom, 4=right -->
+    <!-- Q1 diamond (top-left) -->
+    <div style="position:absolute; left:506px; top:85px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U1</div>
+    <div style="position:absolute; left:539px; top:57px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U2</div>
+    <div style="position:absolute; left:539px; top:113px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U3</div>
+    <div style="position:absolute; left:572px; top:85px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U4</div>
+    <!-- Wing 5 -->
+    <div style="position:absolute; left:610px; top:85px; width:23px; height:23px; border:2px solid #CC0066; background:#ffe6e6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U5</div>
+    <!-- Q2 diamond (top-right) -->
+    <div style="position:absolute; left:648px; top:85px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U6</div>
+    <div style="position:absolute; left:681px; top:57px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U7</div>
+    <div style="position:absolute; left:681px; top:113px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U8</div>
+    <div style="position:absolute; left:714px; top:85px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U9</div>
+    <!-- Wing 10 (center) -->
+    <div style="position:absolute; left:610px; top:157px; width:23px; height:23px; border:2px solid #CC0066; background:#ffe6e6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U10</div>
+    <!-- Q3 diamond (bottom-left) -->
+    <div style="position:absolute; left:506px; top:229px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U11</div>
+    <div style="position:absolute; left:539px; top:201px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U12</div>
+    <div style="position:absolute; left:539px; top:257px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U13</div>
+    <div style="position:absolute; left:572px; top:229px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U14</div>
+    <!-- Wing 15 -->
+    <div style="position:absolute; left:610px; top:229px; width:23px; height:23px; border:2px solid #CC0066; background:#ffe6e6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U15</div>
+    <!-- Q4 diamond (bottom-right) -->
+    <div style="position:absolute; left:648px; top:229px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U16</div>
+    <div style="position:absolute; left:681px; top:201px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U17</div>
+    <div style="position:absolute; left:681px; top:257px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U18</div>
+    <div style="position:absolute; left:714px; top:229px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px; z-index:3;">U19</div>
+
+    <!-- Leviticus Units -->
+    <div style="position:absolute; left:405px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U1</div>
+    <div style="position:absolute; left:405px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U2</div>
+    <div style="position:absolute; left:405px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U3</div>
+    <div style="position:absolute; left:459px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U4</div>
+    <div style="position:absolute; left:459px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U5</div>
+    <div style="position:absolute; left:459px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U6</div>
+    <div style="position:absolute; left:513px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#f0f0f0; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U7</div>
+    <div style="position:absolute; left:513px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#f0f0f0; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U8</div>
+    <div style="position:absolute; left:513px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#f0f0f0; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U9</div>
+    <div style="position:absolute; left:567px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U10</div>
+    <div style="position:absolute; left:567px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U11</div>
+    <div style="position:absolute; left:567px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U12</div>
+    <div style="position:absolute; left:621px; top:459px; width:23px; height:23px; border:2px solid #CC0066; background:#ffe6e6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U13</div>
+    <div style="position:absolute; left:675px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U14</div>
+    <div style="position:absolute; left:675px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U15</div>
+    <div style="position:absolute; left:675px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4d4ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U16</div>
+    <div style="position:absolute; left:729px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U17</div>
+    <div style="position:absolute; left:729px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U18</div>
+    <div style="position:absolute; left:729px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U19</div>
+    <div style="position:absolute; left:783px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U20</div>
+    <div style="position:absolute; left:783px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U21</div>
+    <div style="position:absolute; left:783px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U22</div>
+
+    <!-- Numbers Units -->
+    <div style="position:absolute; left:513px; top:702px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U1</div>
+    <div style="position:absolute; left:513px; top:756px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U2</div>
+    <div style="position:absolute; left:513px; top:810px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U3</div>
+    <div style="position:absolute; left:567px; top:648px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U4</div>
+    <div style="position:absolute; left:567px; top:864px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U5</div>
+    <div style="position:absolute; left:621px; top:648px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U6</div>
+    <div style="position:absolute; left:621px; top:756px; width:23px; height:23px; border:2px solid #CC0066; background:#ffe6e6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U7</div>
+    <div style="position:absolute; left:621px; top:864px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U8</div>
+    <div style="position:absolute; left:675px; top:648px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U9</div>
+    <div style="position:absolute; left:675px; top:864px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#c8e6d2; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U10</div>
+    <div style="position:absolute; left:729px; top:702px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U11</div>
+    <div style="position:absolute; left:729px; top:756px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U12</div>
+    <div style="position:absolute; left:729px; top:810px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#ffccaa; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U13</div>
+
+    <!-- Deuteronomy Units -->
+    <div style="position:absolute; left:891px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U1</div>
+    <div style="position:absolute; left:918px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U2</div>
+    <div style="position:absolute; left:891px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U3</div>
+    <div style="position:absolute; left:918px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U4</div>
+    <div style="position:absolute; left:891px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U5</div>
+    <div style="position:absolute; left:918px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U6</div>
+    <div style="position:absolute; left:972px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U7</div>
+    <div style="position:absolute; left:972px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U8</div>
+    <div style="position:absolute; left:972px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#e6ffee; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U9</div>
+    <div style="position:absolute; left:1026px; top:405px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U10</div>
+    <div style="position:absolute; left:1026px; top:459px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U11</div>
+    <div style="position:absolute; left:1026px; top:513px; width:25px; height:25px; border:1px solid rgba(0,0,0,0.2); background:#d4f2ff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U12</div>
+    <div style="position:absolute; left:1080px; top:459px; width:23px; height:23px; border:2px solid #CC0066; background:#ffe6e6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px; z-index:3;">U13</div>
+
+</div><!-- torah-map-inner -->
+</div><!-- torah-map-outer -->
+</div><!-- torah-map-wrapper -->
+
+<p>The map makes visible what sequential reading cannot. Genesis and Deuteronomy flank Leviticus on the horizontal axis, sharing triadic structure and creation-paradigm organization. Exodus and Numbers flank Leviticus on the vertical axis, sharing quadratic format—like the complete Torah itself—and the narrative of Israel's journey. Leviticus belongs to both threads and binds the entire composition together. The independent units (marked with a distinctive border) lock the two threads together at structurally necessary points.</p>
+
+<h2>Reading the Map</h2>
+
+<p>The map rewards slow looking. Each level of visible order corresponds to a level of literary organization in the text. Begin with the largest features and work inward.</p>
+
+<p><strong>Five books, two threads (10).</strong> The first thing the eye registers is five colored rectangles arranged where a horizontal and a vertical thread intersect. Three books run left to right across the middle—Genesis, Leviticus, Deuteronomy. Two books run top to bottom through the center—Exodus above, Numbers below. Leviticus sits at the intersection, the only book that belongs to both threads. This is not a filing system. It is the composition's fundamental geometry: a warp thread and a weft thread meeting at a single point.</p>
+
+<p><strong>Symmetry across the axes (11).</strong> Notice the relationship between the books at the ends of each thread. Genesis and Deuteronomy, at the left and right ends of the horizontal thread, mirror each other—same shape, same number of rows, same distribution of unit groupings. Exodus and Numbers, at the top and bottom of the vertical thread, mirror each other—same shape, same number of quadrant divisions, same structural logic. The Torah is not a sequence of five books. It is a symmetric composition in which corresponding books illuminate each other across the threads.</p>
+
+<p><strong>Numerical balance (12).</strong> The symmetry extends to the unit counts. Genesis contains 19 units and Deuteronomy 13; together, the two outer books of the horizontal thread hold 32 units. Exodus contains 19 units and Numbers 13; together, the two outer books of the vertical thread also hold exactly 32 units. Leviticus, at the center, contains 22. The composition balances perfectly around its intersection point: 32 on each arm, 22 at the center.</p>
+
+<p><strong>Two book formats (13).</strong> Look at the rectangles themselves. The three horizontal books—Genesis, Leviticus, Deuteronomy—are wide and shallow: three rows of units running across. The two vertical books—Exodus and Numbers—are tall and square, with units arranged in four quadrants rather than three rows. The books on the horizontal thread share one organizational format (triadic); the books on the vertical thread share a different one (quadratic). The shape of the rectangle tells you something about the literary structure of the book it contains.</p>
+
+<p><strong>Eighty-six units (14).</strong> Inside the rectangles sit small colored squares—eighty-six in all. Each square is a literary unit: a self-contained composition of prime pericopes organized as a two-dimensional table. This is the Torah's basic currency. The five books are not divided into chapters (a medieval invention) or even into the weekly reading portions. They are composed of these units, and the units are what the architecture is built from.</p>
+
+<p><strong>Three rows in the horizontal books (15).</strong> In Genesis, Leviticus, and Deuteronomy, the units sit at three distinct vertical positions—three rows. This is not accidental. The three rows carry different thematic registers and different distributions of the divine names YHWH and Elohim. Row 1 (top) is the domain where YHWH acts as primary subject. Row 3 (bottom) is the domain where Elohim acts as primary subject. Row 2 (middle) is where both names operate together. The rows are warp threads stretched across the horizontal books, and they derive from the three cosmic levels of the creation narrative: heavens, intermediate space, earth. Every unit in a horizontal book sits at one of these three positions, and its row assignment shapes its content.</p>
+
+<p><strong>Quadrants in the vertical books (16).</strong> Exodus and Numbers are organized differently. Instead of three rows, each book divides into four quadrants—two upper and two lower in Exodus, two left and two right in Numbers. The quadrants pair concentrically (outer with outer, inner with inner), and the structure mirrors the physical arrangement of the Israelite camp: four groups positioned around a center. This is the quadratic format that the Torah as a whole also exhibits—the map itself is a quadratic composition with Leviticus at its center.</p>
+
+<p><strong>Five vertical levels (17).</strong> Now look at the map as a whole, from top to bottom. The three rows running through the horizontal books sit in the middle band. Above them, Exodus. Below them, Numbers. That makes five vertical levels: Exodus at the top, then Row 1 (YHWH, heavens), Row 2 (both names, intermediate space), Row 3 (Elohim, earth), and Numbers at the bottom. Five levels, concentric, with the body at the center — the same five-part structure we found in the first Word of the Decalogue and in the creation unit. The map does not merely contain the pattern. The map <em>is</em> the pattern, at the largest scale.</p>
+
+<p><strong>Independent units (18).</strong> Several units stand out with a distinctive border. These are the seven independent units — the primary structural anchors of the composition: the Babel narrative (Genesis Unit 4), three pivot units in Exodus (Units 5, 10, 15), the center of Leviticus (Unit 13: "You shall be holy"), the center of Numbers (Unit 7), and the conclusion of Deuteronomy (Unit 13). They are distinct from the ten irregular units that compose the recreation weave (some units belong to both categories — Leviticus Unit 13 is the only unit in the Torah that is both independent and irregular, the absolute center and the sole double-agent bridging both systems). Look at where the independent units sit. In the horizontal thread, they mark beginning, middle, and end: Genesis Unit 4 near the start, Leviticus Unit 13 at the center, Deuteronomy Unit 13 at the close. In the vertical thread, they are all at the center: Exodus Units 5, 10, and 15 divide the book into equal segments, Leviticus Unit 13 again, Numbers Unit 7 at its midpoint. In Exodus, the three independent units are what create the four quadrants — three dividers making four spaces — and each divider marks a specific separation. Unit 5, the dividing of the sea, separates Egypt from the wilderness. Unit 10, which mirrors the structure of Sinai itself, divides the Tabernacle material from the non-Tabernacle narrative. Unit 15, the giving of the first and second tablets, divides the heavenly Tabernacle (the plan shown on the mountain) from the earthly one (its actual construction). These three units share a textual marker found nowhere else in the book: they are the only units in Exodus that mention angels. The composition signs its own seams. The horizontal thread distributes its independent units across a timeline; the vertical thread concentrates them at the core. The two placement patterns are themselves evidence of design: the centered vertical units confirm that Exodus, Leviticus, and Numbers were composed as a single spatial block organized around a core, while the beginning-middle-end distribution on the horizontal thread confirms that Genesis, Leviticus, and Deuteronomy were composed as a continuous span. Between them, the independent units lock the two threads in place — fixing each book's position in the weave. Remove them and the composition falls into disconnected pieces.</p>
+
+<p>That is what the map shows. Nine levels of visible order—the two threads and their intersection, the axial symmetry, the numerical balance, the two book formats, the eighty-six units, the three rows, the four quadrants, the five vertical levels, and the independent units—all operating simultaneously in a single picture. And every one of these levels corresponds to a constraint on the text itself. We can now count those constraints.</p>
+
+<p class="tally" style="text-align: center; font-style: italic; color: #888; margin: 2em 0;"><b>Structural elements identified so far: 18</b></p>
+<h2>Inside the Books</h2>
+
+<p>The map shows five books woven on two threads. Now look inside them. Each book is not a sequence of units but a composition with its own internal architecture — and the architecture differs depending on which thread the book belongs to.</p>
+
+<p><strong>Outer frame triads (19).</strong> In the horizontal books, the first and last unit-sets frame everything between them. Genesis opens with three units (1–3) that move from universal to particular: creation, then the narrowing of the human line, then the Flood and its aftermath. Genesis closes with three units (17–19) that move from particular back to universal: Joseph's rise, the blessings of the sons, and the descent of all the earth to Egypt for grain. The opening triad faces inward, contracting toward the chosen family. The closing triad faces outward, expanding toward all nations. Deuteronomy exhibits the same framing architecture with its own opening and closing triads. The outer frames are not introduction and conclusion. They are the book's own envelope — a structure we already saw operating at the scale of five verses in the first Word.</p>
+
+<p><strong>Concentric rings (20).</strong> Between the outer frames, units organize concentrically — not as a sequence but as nested rings, each with its own thematic register. Leviticus makes this most visible. Its twenty-two units form three concentric rings around a center. The outer ring (Units 1–3 paired with 20–22) is marked by references to the place of revelation — the Tent of Meeting or Mount Sinai appearing at unit boundaries. The middle ring (Units 4–6 paired with 17–19) is marked by time — specifically the pattern "seven days... on the eighth day" appearing throughout the laws. The inner ring (Units 10–12 paired with 14–16) is marked by person — extensive lists of family relationships appearing throughout the laws. Place, time, person: <em>olam</em>, <em>shanah</em>, <em>nefesh</em> — the three dimensions of Sefer Yetzirah, which we already found converging at the center of the first Word. The same three categories organize the rings of the central book. Each ring has its characteristic in five of its six units.</p>
+
+<p><strong>Anomalous units (21).</strong> In each ring of Leviticus, one unit lacks the ring's characteristic. And the anomalous units all occupy the same position: the middle of the first triad in each ring. This regularity means the anomaly is itself structural — it is a designed absence, not an error. The pattern has a precedent at a different scale: Day 2 of creation is the only day that lacks the formula "and it was good." In both cases, the composition marks a specific position by withholding what the others share. The absence is the signal.</p>
+
+<p><strong>The Tabernacle journey (22).</strong> The concentric rings of Leviticus map directly onto the Tabernacle. The outer ring corresponds to the courtyard — the accessible space. The middle ring corresponds to the Holy Place — the zone of ongoing ritual. The inner ring corresponds to the Holy of Holies — the space of intimate presence. Reading Leviticus from outside inward replicates the priest's physical movement through the sacred structure, and the first unit of each ring aligns with the entry point of its corresponding zone: Unit 1 at the courtyard altar, Unit 4 at the threshold of the Holy Place, Unit 10 at the Day of Atonement entrance to the Holy of Holies. The book is a literary Tabernacle.</p>
+
+<p><strong>The triad orientation flip (23).</strong> Within a triad, the three units carry a hierarchical orientation: one faces toward the transcendent, one toward ordinary life, one mediates. In Genesis, the first unit of each triad faces upward (YHWH domain) and the third faces downward (Elohim domain). In Deuteronomy, this orientation reverses: the first unit faces downward and the third upward. Leviticus bridges both orientations. Its first half (before Unit 13) follows the Genesis pattern; its second half follows the Deuteronomy pattern. Unit 13 — "You shall be holy" — is the pivot point where the flip occurs. Leviticus does not simply sit between Genesis and Deuteronomy on the map. It is the mechanism that turns one orientation into the other. And the reversal has a spatial logic in the Hebrew text: read right to left, Exodus sits on the right — the side of <em>hesed</em>, lovingkindness flowing from above to below. Numbers sits on the left — the side of <em>din</em>, judgment ascending from below to above. The flip at Leviticus's center is the crossing point between them.</p>
+
+<p><strong>The camp structure of the vertical thread (24).</strong> The three vertical books — Exodus, Leviticus, Numbers — compose as a single spatial block, and its organization replicates the Israelite camp. At the center: Leviticus, the holy presence, whose three rings map onto the Tabernacle (courtyard, Holy Place, Holy of Holies). Surrounding it: the second half of Exodus and the beginning of Numbers, which deal with the Levitical precinct — construction and maintenance of the Tabernacle. Surrounding that: the first half of Exodus and the second half of Numbers, which carry the historical narrative — the journey of the Israelite camp itself. Five concentric zones, from the holy presence outward through the priestly precinct to the camp of the people. The vertical thread does not merely describe the camp. It <em>is</em> the camp.</p>
+
+<p><strong>Self-depicting books (25).</strong> This identity of form and content extends to individual books. Leviticus is structured as the Tabernacle it legislates — three concentric rings mapping onto courtyard, Holy Place, and Holy of Holies. Numbers is arranged as the camp it describes — four sides around a center, with the flag tribes (the units containing only laws, no narrative) positioned at the centers of the four sides, exactly where the banner tribes stand in the camp layout. Deuteronomy depicts Moses standing among twelve tribes: its thirteenth unit is Moses' own — his blessing and death — while the twelve regular units surround it like the twelve tribes he addresses. The book does not just contain the information. It <em>is</em> what it describes.</p>
+
+<p><strong>Self-referencing centers (26).</strong> In both Leviticus and Numbers, the center unit describes the principle that governs the book's own architecture. Leviticus Unit 13 — "You shall be holy, for I YHWH your deity am holy" — sits at the center of a book structured as the Tabernacle, the place where the divine presence dwells in the human world. The center commands what the structure embodies. Numbers Unit 7 commands tassels (<em>tzitzit</em>) on the sides (<em>kanaf</em>) of garments to remember all the commandments — and the book places law-bearing flag units on its sides, the units that contain all the commandments. The implication is that Israel is the garment: the camp wraps around the divine presence revealed in Unit 7's Tabernacle, and the law-bearing flag units on the sides are what remind the garment of its purpose. The center unit is the key to the architecture it sits inside.</p>
+
+<p class="tally" style="text-align: center; font-style: italic; color: #888; margin: 2em 0;"><b>Structural elements identified so far: 26</b></p>
+
+<h2>Unit-Sets and Triads</h2>
+
+<p>Inside each book, units do not stand alone. They cluster into groups — and the grouping carries information.</p>
+
+<p><strong>Shared format (27).</strong> In the triadic books, units group in threes, and the three units in a group share the same internal table format. In Leviticus, Units 1–3 are all 3×3 grids; Units 4–6 are all 2×2 grids. The format is not visible from linear reading — it emerges only when the two-dimensional structure of each unit is mapped. Units that share a format belong together. This is what the color coding on the map makes visible: same color, same format, same group.</p>
+
+<p><strong>Paired triads (28).</strong> Triads do not stand alone either. They pair with other triads to form the concentric rings described above — one triad on each side of the center. This is what the color coding on the map makes visible: paired triads share the same color, and the symmetric color sequence shows the ring architecture at a glance. This is not a feature of one book. All three horizontal books — Genesis, Leviticus, and Deuteronomy — are composed entirely of paired triads. Every triad in the composition has a partner, with one exception: the impurities triad in Leviticus, which stands outside the paired structure. Across three books and dozens of triads, a single unpaired triad. The exception confirms the rule.</p>
+
+<p><strong>Block centers (29).</strong> The same units that compose as concentric rings can also be read as two blocks of nine — two halves of a book, each with a center unit at its fifth position. In Genesis, the center of the first half (Unit 7) holds the two covenants between Abraham and YHWH and between Abraham and Elohim. The center of the second half (Unit 14) holds the ladder vision — the point where the two divine registers meet between heaven and earth. Two covenants at one center, a bridge between them at the other. In Leviticus, the center of the first half (Unit 5) addresses edible animals — what the individual body may take in. The center of the second half (Unit 18) addresses the national holidays — when the community gathers. Individual and communal, body and calendar, private and public. The block reading and the ring reading coexist, extracting different information from the same arrangement.</p>
+
+<p><strong>Hierarchical orientation (30).</strong> Within each triad, the three positions carry a directional order derived from the creation narrative. One unit faces toward the transcendent (the YHWH register), one faces toward ordinary life (the Elohim register), and one mediates between them. This is not a thematic label applied after the fact. It is built into the divine name distributions: in Genesis, the first unit of each triad uses predominantly YHWH, the third uses predominantly Elohim, and the second uses both. The hierarchy is measurable.</p>
+
+<p><strong>Alternating tracks (31).</strong> Not all triads do the same work. In Genesis, triads alternate between two tracks — one concerned with covenant (the promises and obligations that define the vertical relationship between the deity and the chosen line) and one concerned with family (the horizontal relationships between siblings, spouses, and generations). The alternation means that adjacent triads address different dimensions of the narrative, and the reader moves back and forth between them.</p>
+
+<p><strong>Track inversion (32).</strong> The assignment of odd and even triads to tracks flips between the two cycles of Genesis. In the first cycle (Abraham), the odd-numbered triads carry the covenant material. In the second cycle (Jacob), the even-numbered triads carry it. The inversion is systematic — it is not a disruption of the pattern but part of the pattern, creating a chiastic relationship between the two halves of the book.</p>
+
+<p><strong>Non-linear reading order (33).</strong> Because units are assigned to rows, the triads do not read as consecutive blocks. Units 5, 7, and 9 form a triad — not 5, 6, and 7. The reader must skip, reading by row position rather than by sequence number. The linear numbering masks the actual groupings. This is the principle that operates at every scale of the Torah: consecutive numbering conceals non-linear structure.</p>
+
+<p class="tally" style="text-align: center; font-style: italic; color: #888; margin: 2em 0;"><b>Structural elements identified so far: 33</b></p>
+
+<h2>Inside the Unit</h2>
+
+<p>We have moved from the five-book composition down through book-level architecture to unit-sets and triads. The next level is the unit itself — what does it look like inside?</p>
+
+<p><strong>The two-dimensional table (34).</strong> Each unit is not a linear sequence of passages but a table — a grid of cells organized by rows and columns. Consider the opening of Leviticus. Most readers find these chapters difficult: detailed instructions for sacrifices, one type after another, in language that feels technical and remote. But the difficulty dissolves when you see the structure. The first unit (Leviticus 1:1–3:17) contains nine passages organized as a 3×3 grid:</p>
+
+<table class="structure-table">
+<tr>
+  <td class="label"></td>
+  <td class="label">A (most costly)</td>
+  <td class="label">B</td>
+  <td class="label">C (least costly)</td>
+</tr>
+<tr>
+  <td class="label">Row 1</td>
+  <td>Burnt-offering<br>from the herd</td>
+  <td>Burnt-offering<br>from the flock</td>
+  <td>Burnt-offering<br>from birds</td>
+</tr>
+<tr>
+  <td class="label">Row 2</td>
+  <td>Meal-offering<br>of flour</td>
+  <td>Meal-offering<br>baked</td>
+  <td>Meal-offering<br>of first-fruits</td>
+</tr>
+<tr>
+  <td class="label">Row 3</td>
+  <td>Peace-offering<br>from the herd</td>
+  <td>Peace-offering<br>from sheep</td>
+  <td>Peace-offering<br>from goats</td>
+</tr>
+</table>
+
+<p>Read across any row and you see one offering type in three variants — from the most costly source to the least. Read down any column and you see three different offerings at the same value level. The text carries different information depending on which axis you read along. It is a table, just as the Decalogue is a table.</p>
+
+<p><strong>Unit format (35).</strong> The number of rows and columns is not arbitrary. It is the unit's format — and units that belong to the same triad share the same format. In Leviticus, Units 1–3 are all 3×3; Units 4–6 are all 2×2. The format is itself a structural fact: a constraint on how many cells the unit contains and how they relate. Different formats serve different kinds of material — a 3×3 grid suits three offering types in three grades; a 2×2 grid suits a simpler binary distinction.</p>
+
+<p><strong>Prime pericopes (36).</strong> Each cell in the table is a prime pericope — a self-contained passage of text with its own opening formula and closing marker, functioning as an element in a two-dimensional composition. The prime pericope is to the literary unit what the individual Word is to the Decalogue: a cell whose meaning is shaped by its row and column. In Leviticus Unit 1, the cell at Row 1, Column A must present the burnt-offering from the herd — Row 1 gives it the offering type, Column A gives it the most costly variant. The content at each position is a function of two coordinates.</p>
+
+<p><strong>Row logic (37).</strong> Within a unit, the rows organize material by type — kinds of offering, categories of law, stages of narrative. Each row carries one complete category across all columns. The row is a horizontal thread at the unit level, just as the three rows of the horizontal books are threads at the composition level.</p>
+
+<p><strong>Column logic (38).</strong> The columns organize the same material by a different axis — scale, value, cost, or addressee. In Leviticus Unit 1, Column A holds the most costly variant of each offering, Column C the least. The column carries information that the row does not. The two axes are independent: change the row and you change the category; change the column and you change the grade. The reader who follows the text linearly encounters a list. The reader who sees the table encounters a coordinate system.</p>
+
+<p><strong>Discoverable structure (39).</strong> There is a difference between the Decalogue and the rest of the Torah. The Torah tells you that the tablets were inscribed "on one side and on the other" — a description that hints at two-dimensional reading. For the Torah's own literary units, you do not get that hint. On a scroll, one pericope follows the next in sequence. The two-dimensional structure must be discovered from the text itself: repeated phrases that link one cell to another across columns, vocabulary that threads through an entire row, envelope markers that define where each pericope begins and ends. The text teaches you how to read it — but only if you are listening for the architecture. That is what the <a href="https://chaver.com/torah-weave/">torah-weave</a> commentary is built to show, presenting these texts with their structural markers made visible.</p>
+
+<p class="tally" style="text-align: center; font-style: italic; color: #888; margin: 2em 0;"><b>Structural elements identified so far: 39</b></p>
+
+<h2>The Weave Markers</h2>
+
+<p>The discoverable structure just described raises a practical question: what exactly does the reader look for? The torah-weave commentary identifies five distinct types of literary marker, each making visible a different axis of the two-dimensional composition. Together, they are the evidence that the tables exist.</p>
+
+<p><strong>Horizontal parallels (40).</strong> Repeated words, phrases, or formulas that link cells across the same row — connecting Column A to Column B to Column C. These are the markers that make the row visible as a continuous thread. When the same opening formula appears in three consecutive pericopes, or when a distinctive Hebrew term recurs in each column of a single row and nowhere else, the reader can see that these passages belong together horizontally. The row is not an imposed category. It announces itself through shared vocabulary.</p>
+
+<p><strong>Vertical threads (41).</strong> Repeated words or motifs that link cells down a single column — connecting Row 1 to Row 2 to Row 3. These make the column visible as a continuous axis. When a term appears once in each row of the same column but not in adjacent columns, it is a vertical thread — stitching the rows together at that position. The vertical thread is what distinguishes a table from three unrelated rows: it shows that the columns carry their own information independent of the rows.</p>
+
+<p><strong>Envelope closures (42).</strong> Matching phrases at the opening and closing of a pericope, unit, or larger section — marking boundaries. We already saw the first Word of the Decalogue open and close with "I am YHWH your deity." The same technique operates at every scale: a pericope announces its boundaries, a unit frames itself, a book opens and closes with echoing language. The envelope closure is the self-defining boundary (1) seen from inside the weave.</p>
+
+<p><strong>Chiastic connections (43).</strong> Inverted parallels — where the first element of one passage corresponds to the last element of another, the second to the second-to-last, and so on. Chiasm is the literary structure of reversal: ABBA rather than ABAB. It operates within pericopes, between paired units, and across concentric rings. When two units in a paired triad mirror each other in reversed order, chiastic markers make the pairing visible.</p>
+
+<p><strong>Internal parallels (44).</strong> Connections between cells within the same unit that are neither strictly horizontal nor strictly vertical — diagonal relationships, or links between non-adjacent cells that reveal secondary patterns within the grid. These are the finest threads in the weave, often visible only after the primary horizontal and vertical connections have been mapped.</p>
+
+<p>These five marker types are not interpretive categories. They are observable features of the Hebrew text — specific words recurring in specific positions. The torah-weave commentary color-codes them so the reader can see the architecture the author built. Each marker type makes visible a different structural axis. Together, they turn a linear scroll into a readable table.</p>
+
+<p class="tally" style="text-align: center; font-style: italic; color: #888; margin: 2em 0;"><b>Structural elements identified so far: 44</b></p>
+
+<h2>Cross-Cutting Patterns</h2>
+
+<p>The structures described so far operate within a single level — the map, the book, the triad, the unit, the cell. But the Torah also contains patterns that cut across levels, linking units to other units and books to other books.</p>
+
+<p><strong>Divine name distribution by row (45).</strong> In Genesis, the divine names YHWH and Elohim distribute systematically by row position. Units in Row 1 use predominantly YHWH. Units in Row 3 use predominantly Elohim. Units in Row 2 use both. This is not a tendency or a rough pattern. It is measurable and consistent across both cycles of the book — Abraham and Jacob. The distribution means that the row assignment of a unit predicts which divine name will dominate its content. The names are not interchangeable. They are structurally assigned.</p>
+
+<p><strong>Corresponding units (46).</strong> Units that occupy the same position in parallel cycles correspond to each other — and the correspondence is not just positional but substantive. In Genesis, the unit at a given row and track position in the Abraham cycle shares narrative material, thematic concerns, and verbal echoes with the unit at the same position in the Jacob cycle. The same story is being told twice, from two different angles, and the structure makes the correspondence visible. The reader who knows one cycle can predict features of the other.</p>
+
+<p><strong>Verbal cross-references (47).</strong> Units that correspond structurally also reference each other textually. Distinctive vocabulary, unusual phrases, or explicit narrative callbacks link one unit to its counterpart. These are not accidental echoes. They are the author's way of confirming the structural correspondence — a textual signature that says: these two units know about each other. The cross-references operate between cycles within a book, between paired triads within a ring, and between corresponding positions across books on the same thread.</p>
+
+<p><strong>Creation days as structural blueprint (48).</strong> The six days of creation in Genesis Unit 1 are organized as two triads: Days 1–3 and Days 4–6. The days pair across the triads (Day 1 with Day 4, Day 2 with Day 5, Day 3 with Day 6), and the pairing follows a hierarchy — from the most encompassing (light, luminaries) to the most particular (dry land and vegetation, land animals and humans). This same pattern — two paired triads with a hierarchical orientation — is the organizing principle of triads throughout the Torah. The creation narrative is not just the first story the Torah tells. It is the template on which the Torah's architecture is built.</p>
+
+<p><strong>The recreation weave (49).</strong> The ten irregular units — scattered across all five books, varying in weft-thread length but maintaining internal symmetry — form their own readable composition when extracted and read in sequence. This hidden text traces an arc from creation to Moses' death, threading through every book of the Torah. It is a second narrative embedded within the first — a recreation story running through units whose irregular format sets them apart from the seventy-six regular units surrounding them. The units that break the pattern also tell their own tale.</p>
+
+<p class="tally" style="text-align: center; font-style: italic; color: #888; margin: 2em 0;"><b>Structural elements identified so far: 49</b></p>
+
+<h2>Seven Levels</h2>
+
+<p>We have seen how a prime pericope works: a passage of text functioning as a cell in a table, its content shaped by two coordinates—row and column. And we have seen that the first three units of Leviticus all share the same 3×3 format, while the next three share a 2×2 format. But we have not yet asked the obvious question: what determines the content of any given cell? What constrains the text at each position? The answer is that each level of organization adds new constraints, and by the time you reach the top, the same words are doing simultaneous work at every level. The structure is cumulative. We can count the levels.</p>
+
+<p><strong>Level 1: The prime pericope.</strong> A cell in a table. Its content is constrained by two things: which row it belongs to and which column it occupies. In Leviticus Unit 1, the cell at Row 1, Column A must present the burnt-offering from the herd—Row 1 gives it the offering type, Column A gives it the most costly variant. Two constraints.</p>
+
+<p><strong>Level 2: The unit.</strong> The table itself. Each unit has a format—3×3, 2×2, or something else—and that format is not arbitrary. The number of rows and columns reflects how the unit organizes its material. Leviticus Unit 1 uses a 3×3 grid because it presents three offering types in three value grades. The format is itself a structural fact, a third constraint on the cell's content: it must fit a table of these dimensions.</p>
+
+<p><strong>Level 3: The unit-triad.</strong> Units do not stand alone. They group in threes—unit-triads—and the three units in a triad share the same format. In Leviticus, Units 1–3 are all 3×3 grids; Units 4–6 are all 2×2 grids. But the triad adds something beyond shared format. The three positions within a triad carry a hierarchical orientation derived from the creation narrative: a pattern that moves from the most transcendent to the most immediate, or from the deity's perspective to the human one. The first unit in the triad addresses what is closest to the divine; the third addresses what is closest to ordinary life; the second mediates between them. This hierarchy—a fourth and fifth constraint on the cell's content—operates identically across different triads and different books.</p>
+
+<p><strong>Level 4: The ring.</strong> Triads pair with other triads to form concentric rings. In Leviticus, the first triad (Units 1–3, voluntary offerings) pairs with the seventh triad (Units 19–21, holiness and festivals) to form the outermost ring. The second triad pairs with the sixth to form the next ring inward. Each ring has its own identifying marker: one ring is marked by references to the place of revelation, another by familial terminology, another by conceptual integration. The ring adds a sixth constraint: the cell's content must fit the thematic register of its ring.</p>
+
+<p><strong>Level 5: The book.</strong> The rings compose a book. Leviticus consists of three concentric rings plus a central fulcrum (Unit 13, corresponding to Chapter 19—"You shall be holy") and a screen of impurity laws that the reader must recognize and mentally set aside to perceive the concentric symmetry. The book-level organization turns the reader's experience of the text into a journey: in Leviticus, the movement mirrors the high priest's progression through the Tabernacle, from outer courtyard through inner sanctum to the holiest space and back out again. The book adds a seventh constraint: the cell must serve the overall literary movement of the composition.</p>
+
+<p><strong>Level 6: The thread.</strong> Each book participates in two intersecting threads that span the entire Torah. Leviticus sits at the intersection of a horizontal thread (Genesis–Leviticus–Deuteronomy, the three books that share triadic unit structure and creation-paradigm organization) and a vertical thread (Exodus–Leviticus–Numbers, the three books whose concentric ring structure mirrors the five zones of the Israelite camp). The same unit that functions within Leviticus's internal architecture also participates in cross-book patterns, carrying information that connects it to corresponding positions in Genesis or Deuteronomy. An eighth constraint.</p>
+
+<p><strong>Level 7: The five-book composition.</strong> The full Torah contains eighty-six literary units—seventy-six regular units organized in triadic or quadratic patterns, ten irregular units that compose the recreation weave, and seven independent units that serve as the primary structural anchors. Leviticus Unit 13, the only unit that is both independent and irregular, is the absolute center — the pivot between the horizontal and vertical threads. At this level, additional patterns emerge: the triad orientation flips at the center of Leviticus (Unit 13), the divine names YHWH and Elohim distribute systematically by row across the entire composition, and the independent units occupy positions that integrate the horizontal and vertical threads into a single architecture. The cell's content must accommodate these Torah-wide distributions—a ninth constraint layered on all the others.</p>
+
+<p>Now consider what this means for the text itself. A single prime pericope—say, the burnt-offering from the herd in Leviticus 1:3–9—is simultaneously constrained by its row within the unit, its column, its unit's format, its position in a triad, the triad's hierarchical orientation, its ring's thematic marker, the book's literary journey, its thread's cross-book pattern, and the Torah-wide distributions of names and structures. Change a word in that pericope and you risk breaking the row connection, the column gradient, the format regularity, the triadic hierarchy, the ring marker, the book's progression, the thread's correspondence, and the divine name pattern—all at once.</p>
+
+<p>This is what we mean by density. The text is finite—a fixed number of Hebrew words. But the information it carries is not fixed at one reading. Each level of organization extracts different information from the same words. The linear reader encounters a sequence of instructions about animal sacrifice. The structural reader encounters a nine-dimensional coordinate system in which every word is doing work along multiple axes simultaneously. The words do not change; the reading does.</p>
+
+<div class="section-break">• • •</div>
+
+<p>We began with five verses — a grain of sand. Inside it we found eight dimensions of meaning operating simultaneously: envelope, sequence, three nested levels, two divine names, row pairing, column hierarchy, vertical resonance, and dual placement. That was one cell in one table.</p>
+
+<p>Then we pulled back: the table, the unit, the triad, the ring, the book, the thread, the five-book composition. Forty-nine structural elements, each adding constraints that must be satisfied alongside all the others. The same words doing work along multiple axes at once. The same architecture — body at the center, transcendent above, earthly below — appearing at every scale from five verses to five books.</p>
+
+<p>"The Torah is impossible." That was the judgment we started with. The overview has shown what drives it: not one pattern but forty-nine, not at one level but at seven, not in one book but across all five — simultaneously, without contradiction. Whether "impossible" is hyperbole or description, the reader can now judge. The unit-by-unit commentary that follows makes the evidence visible, one table at a time.</p>
+
+<div class="note">
+<p>The structural analysis underlying this commentary is presented in detail in Moshe Kline, <em>Before Chapter and Verse: Reading the Woven Torah</em> (self-published, 2022); "Structure is Theology," in a volume published by the Society of Biblical Literature; and in articles in the <em>Journal of Biblical Literature</em> and the <em>Journal of Hebrew Scriptures</em>. The present overview introduces the method; the unit-by-unit commentary demonstrates it.</p>
+</div>
+
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,634 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>The Architecture of Leviticus: A Structural Reading | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+<meta name="description" content="Overview of the structural analysis of Leviticus: how twenty-seven chapters become twenty-two units organized in three concentric rings around Leviticus 19, mirroring the Tabernacle. Complete four-part study with book map.">
+<meta name="keywords" content="Leviticus structure, concentric rings, Torah Weave, Tabernacle, imitatio dei, creation paradigm, biblical literary analysis, woven Torah, Jacob Milgrom, Mary Douglas">
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/torah-weave/index.html">Torah Weave</a> &raquo;
+    <span>Leviticus</span>
+</nav>
+
+<article itemscope itemtype="https://schema.org/ScholarlyArticle">
+
+<header class="unit-header-section">
+    <h1 itemprop="headline">The Architecture of Leviticus: A Structural Reading</h1>
+</header>
+
+<main itemprop="articleBody">
+
+<section id="map">
+<h2>The Leviticus Map</h2>
+
+<p>Click on any unit to view its full text with literary structure.</p>
+
+<table class="matrix-table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>A<br><span class="cell-label">Outer O&#8321;</span></th>
+            <th>B<br><span class="cell-label">Middle M&#8321;</span></th>
+            <th>C<br><span class="cell-label">Screen</span></th>
+            <th>D<br><span class="cell-label">Inner I&#8321;</span></th>
+            <th>E<br><span class="cell-label">Focal</span></th>
+            <th>F<br><span class="cell-label">Inner I&#8322;</span></th>
+            <th>G<br><span class="cell-label">Middle M&#8322;</span></th>
+            <th>H<br><span class="cell-label">Outer O&#8322;</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">1</td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1.html">Unit 1</a><br><span class="cell-label">1:1&ndash;3:17<br>Voluntary offerings</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4.html">Unit 4</a><br><span class="cell-label">8:1&ndash;10:20<br>Inauguration</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-7/leviticus-unit-7.html">Unit 7</a><br><span class="cell-label">13:1&ndash;46<br>Scale disease</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10.html">Unit 10</a><br><span class="cell-label">16:1&ndash;34<br>Day of Purgation</span></td>
+            <td></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-14/leviticus-unit-14.html">Unit 14</a><br><span class="cell-label">20:1&ndash;27<br>Penalties</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-17/leviticus-unit-17.html">Unit 17</a><br><span class="cell-label">22:26&ndash;33<br>Animal birth</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-20/leviticus-unit-20.html">Unit 20</a><br><span class="cell-label">25:1&ndash;55<br>Jubilee</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">2</td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2.html">Unit 2</a><br><span class="cell-label">4:1&ndash;5:26<br>Expiation</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-5/leviticus-unit-5.html">Unit 5</a><br><span class="cell-label">11:1&ndash;47<br>Diet laws</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-8/leviticus-unit-8.html">Unit 8</a><br><span class="cell-label">13:47&ndash;14:57<br>Purification</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-11/leviticus-unit-11.html">Unit 11</a><br><span class="cell-label">17:1&ndash;16<br>Slaughter, blood</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13.html">Unit 13</a><br><span class="cell-label">19:1&ndash;37<br>Holiness</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-15/leviticus-unit-15.html">Unit 15</a><br><span class="cell-label">21:1&ndash;24<br>Priestly instructions</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-18/leviticus-unit-18.html">Unit 18</a><br><span class="cell-label">23:1&ndash;44<br>Holiday calendar</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-21/leviticus-unit-21.html">Unit 21</a><br><span class="cell-label">26:1&ndash;46<br>Blessings, curses</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">3</td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3.html">Unit 3</a><br><span class="cell-label">6:1&ndash;7:38<br>Administrative order</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-6/leviticus-unit-6.html">Unit 6</a><br><span class="cell-label">12:1&ndash;8<br>Childbirth</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-9/leviticus-unit-9.html">Unit 9</a><br><span class="cell-label">15:1&ndash;33<br>Discharges</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-12/leviticus-unit-12.html">Unit 12</a><br><span class="cell-label">18:1&ndash;30<br>Sexual prohibitions</span></td>
+            <td></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-16/leviticus-unit-16.html">Unit 16</a><br><span class="cell-label">22:1&ndash;25<br>Sanctified objects</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-19/leviticus-unit-19.html">Unit 19</a><br><span class="cell-label">24:1&ndash;23<br>Oil, bread, blasphemy</span></td>
+            <td><a href="/torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22.html">Unit 22</a><br><span class="cell-label">27:1&ndash;34<br>Consecrations</span></td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+<section id="introduction">
+<h2>Introduction</h2>
+
+<p>Leviticus is twenty-seven chapters of legislation that most readers experience as a linear sequence: offerings, then inauguration, then impurities, then holiness laws, then more laws. Mary Douglas described it as having a &ldquo;powerfully contrived structure,&rdquo; but the nature of that structure has remained elusive. The documentary hypothesis has treated the book as a composite of priestly sources, while even scholars who read it as a unity have struggled to articulate how its parts relate to each other.</p>
+
+<p>This study demonstrates that Leviticus contains twenty-two literary units&mdash;not twenty-seven chapters&mdash;organized in three concentric rings around a focal center (Leviticus 19), mirroring the architecture of the desert Tabernacle. The structure is not figurative, as Douglas proposed, but experiential: the reader is invited to replicate the journey of the High Priest on the Day of Purgation, progressing from the outer court through the sanctum and into the inner sanctum, encountering the command of <em>imitatio dei</em> at the center, and returning outward transformed.</p>
+
+<p>The analysis builds on a project mentored by Jacob Milgrom during the latter years of his life. The goal was to determine the principles of organization employed in the construction of the Torah. The singular discovery was that all five books are made up of well-defined literary units that share certain characteristics: each unit is a two-dimensional, non-linear construct&mdash;a table or weave. This discovery made it possible to identify all eighty-six units of the Torah and to see the formal structure of each of the five books. Since the same formatting technique is used throughout the Torah, both at the level of individual units and at the level of whole books, it was apparently constructed by a single hand or school. The present study applies this framework to Leviticus.</p>
+</section>
+
+<section id="methodology">
+<h2>Methodology and Scope</h2>
+
+<p>This study employs close literary analysis focused on observable textual features: speech formulas, addressees, subject boundaries, summary closings, repeating phrases, structural symmetries, and cross-references between units. The approach is descriptive rather than speculative&mdash;it documents patterns that exist in the text rather than reconstructing hypothetical compositional histories.</p>
+
+<p>The analysis remains primarily synchronic, examining the final form of Leviticus as a literary unity. While acknowledging the value of diachronic approaches, this study demonstrates that sustained attention to how the text organizes its material in its received form yields results that any compositional theory must account for.</p>
+
+<p>The scope extends beyond Leviticus itself. The structure of Leviticus is shown to be almost identical to the structure of Genesis, suggesting a common compositional plan. Leviticus is also shown to sit at the intersection of two threads running through the entire Torah: a horizontal thread (Genesis&ndash;Leviticus&ndash;Deuteronomy) organized by shared triadic structure, and a vertical thread (Exodus&ndash;Leviticus&ndash;Numbers) organized by concentric narrative rings mirroring the Israelite camp.</p>
+</section>
+
+<section id="four-parts">
+<h2>The Four Parts: Summary of the Argument</h2>
+
+<p><em>This overview provides introductions to four separate, detailed documents. Each Part (A, B, C, D) offers a fuller analysis available through the links below.</em></p>
+
+<h3>Part A: The Units of Leviticus</h3>
+
+<p><a href="/torah-weave/Leviticus/leviticus-analysis/units-of-leviticus.html">Part A</a> establishes the foundation by identifying Leviticus&rsquo;s twenty-two literary units through observable boundary evidence. Printed Bibles divide the book into twenty-seven chapters, but the text&rsquo;s own markers reveal a different division. Nearly all discrepancies between unit and chapter divisions fall in the first ten chapters, which reduce to four units, and in chapter 22, which divides into two units at verse 26.</p>
+
+<p>The identification rests on two complementary types of evidence. <strong>Speech formulas</strong> (&ldquo;YHWH spoke unto Moses, saying&rdquo;) open most units, with variations in verb (&#1493;&#1497;&#1511;&#1512;&#1488; &ldquo;called,&rdquo; &#1493;&#1497;&#1488;&#1502;&#1512; &ldquo;said,&rdquo; &#1493;&#1497;&#1491;&#1489;&#1512; &ldquo;spoke&rdquo;), addressee (Moses alone, Moses and Aaron, the priests, all the congregation), and location (the unique &ldquo;on Mount Sinai&rdquo; of Unit 20). <strong>Internal structural perfection</strong> confirms each unit&rsquo;s independence: every unit is organized as a two-dimensional table with rows and columns, creating a coordinate system of meaning.</p>
+
+<p>Unit 1 (Leviticus 1&ndash;3) receives detailed demonstration as a table. Its three rows contain the three types of voluntary offerings (burnt, cereal, well-being), each subdivided into three columns ordered by value from most to least. The rows create a visual hierarchy: the burnt offering entirely for the deity above, the well-being offering primarily for the offerer below, and the cereal offering for the priest mediating in the middle. This three-tiered visualization establishes a paradigm that governs the structure of the entire book.</p>
+
+<p>The section also examines how the speech formula operates at multiple structural levels. In Unit 1, the formula opens only the unit itself. In Unit 2, three speech formulas mark three distinct levels: the unit opening, a row boundary, and a cell boundary. In Unit 3, five speech formulas interleave with the &#1494;&#1488;&#1514; &#1514;&#1493;&#1512;&#1514; (&ldquo;this is the law of&rdquo;) formula to mark pericope-level divisions. The same formula serves different structural functions depending on context. The count itself&mdash;1, 3, 5&mdash;tracks the increasing complexity from individual to institution.</p>
+
+<p>One feature of the first triad deserves attention: every offering in Units 1&ndash;3 is private and situational. There are no communal sacrifices, no calendrical obligations, no daily tamid, no festival cycle. The public cult does not appear until deep in the book (Unit 18, the Holiday Calendar). Leviticus begins not with the institution but with the individual&rsquo;s desire to approach&mdash;<span class="hebrew">&#1488;&#1491;&#1501; &#1499;&#1497; &#1497;&#1511;&#1512;&#1497;&#1489; &#1502;&#1499;&#1501;</span> (&ldquo;when any man of you bringeth an offering,&rdquo; 1:2). The book that will eventually legislate national holiness begins with one person standing at the altar.</p>
+
+<h3>Part B: The Map of Leviticus</h3>
+
+<p><a href="/torah-weave/Leviticus/leviticus-analysis/the-map-of-leviticus.html">Part B</a> reveals the architectural map of Leviticus. The twenty-two units do not just follow linearly&mdash;they organize into seven triads plus a focal unit, forming three concentric rings.</p>
+
+<p>The discovery proceeds in stages. Two triads identify themselves by content: A (Units 1&ndash;3, the sacrificial system, bound by a comprehensive summary at 7:37) and H (Units 20&ndash;22, all looking forward to life in Canaan, all treating redemption in different forms). When set side by side, A and H form a chiasm: Unit 1 pairs with Unit 22 (both contain &ldquo;for YHWH&rdquo; over thirty times), Unit 2 pairs with Unit 21 (individual transgression and national transgression), Unit 3 pairs with Unit 20 (&ldquo;I have given it as their portion of My offerings&rdquo; pairs with &ldquo;the land is Mine&rdquo;). Five of the six units share a place-of-revelation marker (Tent of Meeting or Mount Sinai) in their prologues or epilogues. This is the Outer Ring.</p>
+
+<p>Cross-connections then lock the remaining units into paired triads. Unit 4 and Unit 19&mdash;the only two narrative units in the book, both ending in death by divine initiative&mdash;sit at the inner edges of A and H. Unit 6 and Unit 17 both treat birth (human and animal), both are eight verses long, both contain &ldquo;seven days... eighth day.&rdquo; These connections define triads B (4&ndash;6) and G (17&ndash;19), with the death-and-birth theme binding them. The &ldquo;seven days... eighth day&rdquo; phrase appears in five of the six units&mdash;the Middle Ring&rsquo;s time marker.</p>
+
+<p>Unit 10 opens &ldquo;after the death of the two sons of Aaron&rdquo;&mdash;pointing back to Unit 4. Unit 12 lists sexual prohibitions; Unit 14 prescribes penalties for those same prohibitions. Unit 10 and Unit 16 both warn priests about approaching what is holy. These connections define triads D (10&ndash;12) and F (14&ndash;16), again through death and generation. Five of the six units contain dense familial terminology&mdash;the Inner Ring&rsquo;s person marker.</p>
+
+<p>Units 7&ndash;9 (the impurity laws) connect to nothing across the center. They form Unit-triad C, the screen. Unit 13 stands alone at the focal point.</p>
+
+<p>The format pattern independently confirms the triads: the middle ring (B and G) consists entirely of dyadic units, the inner ring (D and F) entirely of triadic units. Three ring markers, three anomalous units (all in Row 2, all treating animals), and the first unit of each ring mapping to a part of the Tabernacle (court, sanctum, inner sanctum) verify the concentric arrangement from multiple directions.</p>
+
+<h3>Part C: The Three Rows</h3>
+
+<p><a href="/torah-weave/Leviticus/leviticus-analysis/the-three-rows.html">Part C</a> explains what determines which unit sits in which row. The six days of creation provide the governing paradigm. When arranged in a table of two columns and three rows, the creation days reveal a three-tiered reality: the upper level (Days 1 and 4) is transcendent, the lower level (Days 3 and 6) is mundane, and the middle level (Days 2 and 5) separates and connects. The two columns embody a one-and-many dyad: Days 1&ndash;3 produce singular, named, immobile creations; Days 4&ndash;6 produce classes of moving creatures.</p>
+
+<p>In Genesis, the three rows were governed by divine names: YHWH as active subject in Row 1, Elohim in Row 3, both operating in Row 2. In Leviticus, where only YHWH speaks, this transforms into hierarchical orientation: deity-oriented above, people-oriented below, and the interface between them in the middle. Each ring of six units recapitulates this pattern. In the outer ring, Units 1 and 22 are deity-oriented (voluntary offerings for YHWH), Units 3 and 20 are people-oriented (YHWH&rsquo;s gifts to people), and Units 2 and 21 mediate between them (guilt and expiation). In the middle and inner rings, the deity-oriented units all involve death or death warnings; the people-oriented units all involve the generation of life&mdash;birth or sexual practices.</p>
+
+<p>The three anomalous units (2, 5, 11)&mdash;all in Row 2, the Day 2 position&mdash;illuminate the character of their rings. Unit 2 treats animals as means of expiation (extrinsic, matching the outer ring&rsquo;s external marker). Unit 5 treats animals as food and impurity source (interactive, matching the middle ring&rsquo;s boundary marker). Unit 11 treats blood as the animal&rsquo;s life-force (intrinsic, matching the inner ring&rsquo;s substantive marker). Extrinsic, interactive, intrinsic&mdash;outside, between, inside.</p>
+
+<p>The death-and-birth theme in the middle and inner rings binds them together more closely to each other than either is to the outer ring&mdash;just as the sanctum and inner sanctum are chambers within one tent, while the court stands outside.</p>
+
+<p>Each unit in Leviticus is thus determined by at least three organizing principles: (1) the one-and-many dyad, (2) hierarchical orientation, and (3) the ring identifier. No two units share exactly the same combination. And since each unit is itself a table of prime pericopes, any given pericope has at least five contextual dimensions determining its content. The completion of such a complex plan cannot be attributed to a process of redaction or accretion.</p>
+
+<h3>Part D: Architecture and Meaning</h3>
+
+<p><a href="/torah-weave/Leviticus/leviticus-analysis/architecture-and-meaning-in-leviticus.html">Part D</a> interprets what the discovered structure reveals about Leviticus&rsquo;s compositional vision.</p>
+
+<p><strong>The Experiential Reading.</strong> The opening command of Unit 13 calls for <em>imitatio dei</em>: &ldquo;Ye shall be holy, for holy am I YHWH your deity&rdquo; (19:2). It is addressed not to the priests but to &ldquo;all the congregation of the children of Israel.&rdquo; This provides the key. The book is experiential: the reader replicates the High Priest&rsquo;s journey on the Day of Purgation. The first half (Units 1&ndash;12) is a process of individualization&mdash;the reader leaves the community in the court and turns inward toward the inner sanctum. The second half (Units 14&ndash;22) is a process of socialization&mdash;the reader returns outward to the community, transformed. This is why the focus shifts from &ldquo;one&rdquo; to &ldquo;many&rdquo; after Unit 13. The Tabernacle experience of entering the inner sanctum was limited to one person on one day in the year; Leviticus offers a similar experience to all, at any time.</p>
+
+<p><strong>The Individual as Origin.</strong> The outer ring makes the one-to-many movement concrete. The entire first triad (Units 1&ndash;3) contains only private, situational offerings&mdash;no communal sacrifices, no calendrical obligations, no public cult. The entire last triad (Units 20&ndash;22) presupposes life in the land of Canaan&mdash;jubilee, sabbatical year, national blessings and curses, consecration of property. All private at one end; all national at the other. The architecture within the first triad reinforces the point: Unit 1 (deity-oriented, Row 1) is saturated with <span class="hebrew">&#1512;&#1497;&#1495; &#1504;&#1497;&#1495;&#1495;</span> (&ldquo;sweet savour&rdquo;)&mdash;the immaterial, spiritual dimension of the offering that ascends to the deity. Unit 3 (people-oriented, Row 3) specifies the material prebends the priesthood receives&mdash;flesh, grain, breast, thigh, &ldquo;a due for ever.&rdquo; The heavenly pole belongs to the individual; the earthly pole belongs to the institution. Holiness in Leviticus originates with the person who chooses to approach, not with the cult that processes what is brought.</p>
+
+<p><strong>The Screen.</strong> The impurity units (C) function as the literary screen (&#1508;&#1512;&#1493;&#1499;&#1514;) that the High Priest must move aside to enter the inner sanctum. They disguise the symmetry of the book and demand that the reader recognize the device and set them aside&mdash;activating the reader to participate in the text rather than simply receive it.</p>
+
+<p><strong>Unit 13 as Ark.</strong> If the inner ring corresponds to the inner sanctum, then Unit 13&mdash;enclosed by that ring&mdash;corresponds to the Ark of the Covenant. The sixteen &ldquo;I am YHWH&rdquo; declarations parallel YHWH&rsquo;s revelations from between the cherubim. The Decalogue references parallel the tablets within the Ark.</p>
+
+<p><strong>The Horizontal Thread.</strong> Genesis, Leviticus, and Deuteronomy share a triadic structural framework, but the orientation of their triads differs. In Genesis the deity-oriented unit comes first in each triad; in Deuteronomy it comes last. Leviticus pivots between the two: its first half matches Genesis, its second half matches Deuteronomy. Genesis is about individuals building altars and founding families; Deuteronomy is about the nation and its laws. Leviticus begins with individual offerings&mdash;not unlike what the patriarchs did in Genesis&mdash;and ends with national legislation looking forward to the promised land&mdash;the same territory Deuteronomy develops. The book that begins like Genesis ends like Deuteronomy.</p>
+
+<p><strong>The Vertical Thread.</strong> Exodus, Leviticus, and Numbers form five concentric rings mirroring the Israelite camp. The historical narrative (Exodus 1&ndash;24, Numbers 10:11&ndash;end) forms the outermost ring. The Tabernacle narrative (Exodus 25&ndash;end, Numbers 1:1&ndash;10:10) forms the second. The three rings of Leviticus form the third, fourth, and fifth, with Unit 13 at the center. Leviticus is at once the sacred center of the camp and the turning point of nation building.</p>
+</section>
+
+<section id="key-findings">
+<h2>Key Findings</h2>
+
+<p><strong>Twenty-Two Units, Not Twenty-Seven Chapters.</strong> The text&rsquo;s own markers&mdash;speech formulas, addressees, subject shifts, summary closings&mdash;divide Leviticus into twenty-two units. Each unit is a two-dimensional table with rows and columns.</p>
+
+<p><strong>Three Concentric Rings.</strong> The units organize into seven triads plus a focal unit and a screen, forming three concentric rings. The outer ring (A&#8596;H) is identified by place, the middle ring (B&#8596;G) by time, the inner ring (D&#8596;F) by person. Each ring corresponds to a part of the Tabernacle.</p>
+
+<p><strong>Cross-Connections Lock the Structure.</strong> The triads are identified not by assertion but by observable connections across the center: shared narratives, paired prohibitions and penalties, matching birth units, priestly warnings. The format pattern (dyadic, triadic, mixed) independently confirms the triads.</p>
+
+<p><strong>The Creation Paradigm.</strong> Each ring recapitulates the pattern of the six days of creation, with a deity-oriented unit, a people-oriented unit, and a middle unit. The same three-tiered hierarchy operates within Unit 1 and across the entire book.</p>
+
+<p><strong>Three Anomalous Units.</strong> Units 2, 5, and 11 all sit in Row 2, all treat animals, and each illuminates the character of its ring through the type of relationship to the animal: extrinsic (outer), interactive (middle), intrinsic (inner).</p>
+
+<p><strong>Experiential Reading.</strong> The structure invites the reader to replicate the High Priest&rsquo;s journey from outer court to inner sanctum and back, undergoing a transformation from individual to communal orientation pivoting on the <em>imitatio dei</em> of Leviticus 19.</p>
+
+<p><strong>The Individual as Origin.</strong> The entire first triad (Units 1&ndash;3) contains only private, situational offerings. No communal sacrifices, no calendrical cycle, no institutional cult. The entire last triad (Units 20&ndash;22) looks forward to life in the land of Canaan&mdash;jubilee, sabbatical year, national blessings and curses, consecration of property that presupposes settlement. All private at one end of the outer ring; all national at the other. The one-and-many dyad operates not just between paired units but between entire triads. The book opens with the individual&rsquo;s voluntary desire to approach the deity&mdash;a calling (<span class="hebrew">&#1493;&#1497;&#1511;&#1512;&#1488;</span>) and a conditional (&ldquo;when any man of you bringeth an offering&rdquo;). The spiritual marker <span class="hebrew">&#1512;&#1497;&#1495; &#1504;&#1497;&#1495;&#1495;</span> (&ldquo;sweet savour&rdquo;) saturates Unit 1, while the material prebends that sustain the priesthood are specified in Unit 3. The architecture places the individual&rsquo;s desire at the heavenly pole and the institution&rsquo;s material administration at the earthly pole. Holiness in Leviticus originates with the person who chooses to approach, not with the cult that processes what is brought.</p>
+
+<p><strong>Torah-Wide Architecture.</strong> Leviticus sits at the intersection of horizontal and vertical threads. Along the horizontal thread, triad orientations reverse at Unit 13, bridging Genesis (individuals) and Deuteronomy (nation). Along the vertical thread, five concentric rings mirror the Israelite camp. The same compositional technique operates across all five books.</p>
+</section>
+
+<section id="relationship">
+<h2>Relationship to Existing Approaches</h2>
+
+<p>Mary Douglas maintained that the structure of Leviticus reflects the Tabernacle. We agree, but differ on the nature of the relationship: it is not figurative (one section &ldquo;stands for&rdquo; one part of the Tabernacle) but experiential (reading the book replicates the High Priest&rsquo;s movement through the Tabernacle). The concentric ring structure we identify differs from Douglas&rsquo;s consecutive divisions and is confirmed by multiple independent textual patterns she did not identify: the ring markers, the anomalous units, the format distribution, and the Tabernacle correspondence of the first unit of each ring.</p>
+
+<p>The architectural patterns documented here require explanation within any compositional theory. Whether these patterns reflect unitary composition, sophisticated final redaction, or something between, they demonstrate compositional complexity that cannot be attributed to accretion. The five contextual dimensions governing each pericope, the three independent ring markers, and the Torah-wide consistency of the structural technique all point to deliberate design.</p>
+
+<p>As Milgrom wrote: &ldquo;By use of repeated words and inner chiasms, and, above all, by the choice of the center or fulcrum around which the introversion is structured, the ideological thrust of each author is revealed. In a word, structure is theology.&rdquo;</p>
+</section>
+
+<section id="invitation">
+<h2>Invitation to Engagement</h2>
+
+<p>This study presents evidence and argument that merit scholarly engagement. The patterns documented here are observable and falsifiable&mdash;they can be verified, challenged, or refined through continued analysis. We invite critical engagement: testing the unit boundaries against alternative divisions, evaluating whether the cross-connections genuinely lock the triads, assessing whether the ring markers are systematic or coincidental, and considering how structural analysis complements existing approaches to Leviticus.</p>
+
+<p>The four parts that follow present detailed evidence and sustained argument. Whether one ultimately accepts the implications for compositional unity, prefers modified source-critical models, or sees the patterns as evidence of sophisticated final redaction, the architectural features identified here require explanation. This study aims to contribute to the ongoing scholarly conversation about Leviticus by offering a detailed structural analysis of the final form.</p>
+</section>
+
+<div class="series-navigation">
+    <h3>Leviticus Commentary Series</h3>
+    <div class="series-navigation-links">
+        <span>Overview (Current)</span>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/units-of-leviticus.html">Part A: The Units &rarr;</a>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/the-map-of-leviticus.html">Part B: The Map &rarr;</a>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/the-three-rows.html">Part C: The Three Rows &rarr;</a>
+        <a href="/torah-weave/Leviticus/leviticus-analysis/architecture-and-meaning-in-leviticus.html">Part D: Architecture &amp; Meaning &rarr;</a>
+    </div>
+</div>
+
+</main>
+</article>
+
+<aside class="citation-box">
+    <strong>How to cite this article:</strong><br>
+    Kline, Moshe. &ldquo;The Architecture of Leviticus: A Structural Reading.&rdquo; <em>Torah Weave</em>,
+    <a href="https://chaver.com/torah-weave/Leviticus/leviticus-analysis/overview.html">https://chaver.com/torah-weave/Leviticus/leviticus-analysis/overview.html</a>.
+    Accessed [date].
+</aside>
+
+<!-- #EndEditable -->
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>ספר בראשית יחידה 1 (א:א-ב:ג) | התורה הארוגה</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="ניווט עליון">
+        <div class="nav-breadcrumb">
+            <a href="/">בית</a> ← <a href="/torah-weave/">התורה הארוגה</a> ← <a href="/torah-weave/Genesis/hebrew-genesis-map/hebrew-genesis-map.html">בראשית</a> ← יחידה 1
+        </div>
+        <div class="nav-arrows">
+            <span class="nav-disabled">(יחידה ראשונה) →</span>
+            <a href="/torah-weave/Genesis/hebrew-genesis-unit-2/hebrew-genesis-unit-2.html" rel="next">← יחידה 2</a>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <header class="unit-header-section">
+                <h1>ספר בראשית יחידה 1</h1>
+                <div class="unit-meta">א:א-ב:ג</div>
+            </header>
+            
+            <section class="unit-content">
+<table class="scripture-table" dir="rtl"><thead><tr><th class="cell-label col-right">1א</th><th class="cell-label col-left">1ב</th></tr></thead><tbody><tr><td></td><td></td></tr></tbody></table>
+
+                <table class="scripture-table" dir="rtl"><thead><tr><th class="cell-label col-right">2א</th><th class="cell-label col-left">2ב</th></tr></thead><tbody><tr><td><span class="Heading4Char"><span dir="LTR">A</span><span dir="RTL"></span><span lang="HE"><span dir="RTL"></span> </span></span><span lang="HE"> </span><span class="versenumber"><span lang="HE" style="font-size:
+  7.0pt;font-variant:normal !important;text-transform:uppercase">א:ג</span></span><span lang="HE"> ויאמר <span class="a0">אלהים</span> </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">יהי אור</span></span><span lang="HE"> ויהי אור </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:uppercase">א:ד</span></span><span lang="HE"> וירא <span class="a0">אלהים</span> את האור כי טוב </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">ויבדל </span></span><span class="a0"><span lang="HE">אלהים</span></span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt"> בין האור ובין החשך</span></span><span lang="HE"> </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;
+  font-variant:normal !important;text-transform:uppercase">א:ה</span></span><span lang="HE"> <span class="vertical1">ויקרא </span><span class="a0">אלהים</span><span class="vertical1"> ל</span></span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">אור יום ולחשך קרא לילה</span></span><span lang="HE">
+  ויהי ערב ויהי בקר יום אחד {פ}</span></td><td><span class="Heading4Char"><span dir="LTR">A</span><span dir="RTL"></span><span lang="HE"><span dir="RTL"></span> </span></span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:יד</span></span><span lang="HE"> ויאמר <span class="a0">אלהים</span> </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">יהי מארת </span></span><span lang="HE">ברקיע השמים </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">להבדיל בין היום ובין
+  הלילה</span></span><span lang="HE"> והיו לאתת ולמועדים ולימים ושנים </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:טו</span></span><span lang="HE"> והיו למאורת
+  ברקיע השמים להאיר על הארץ ויהי כן </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:
+  uppercase">א:טז</span></span><span lang="HE"> ויעש <span class="a0">אלהים</span>
+  את שני המארת הגדלים את המאור הגדל לממשלת היום ואת המאור הקטן לממשלת הלילה ואת
+  הכוכבים </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;
+  font-variant:normal !important;text-transform:uppercase">א:יז</span></span><span lang="HE"> ויתן אתם <span class="a0">אלהים</span> ברקיע השמים להאיר על הארץ </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:יח</span></span><span lang="HE"> ולמשל ביום
+  ובלילה </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">ולהבדיל
+  בין האור ובין החשך</span></span><span lang="HE"> וירא <span class="a0">אלהים</span>
+  כי טוב </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;
+  font-variant:normal !important;text-transform:uppercase">א:יט</span></span><span lang="HE"> ויהי ערב ויהי בקר יום רביעי {פ}</span></td></tr></tbody></table>
+
+                <table class="scripture-table" dir="rtl"><tbody><tr><td><span class="Heading4Char"><span dir="LTR">B</span><span dir="RTL"></span><span lang="HE"><span dir="RTL"></span> </span></span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:ו</span></span><span lang="HE"> ויאמר <span class="a0">אלהים</span> יהי רקיע </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">בתוך המים</span></span><span lang="HE"> ויהי מבדיל בין
+  מים למים </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;
+  font-variant:normal !important;text-transform:uppercase">א:ז</span></span><span lang="HE"> ויעש <span class="a0">אלהים</span> את הרקיע ויבדל בין המים אשר
+  מתחת לרקיע ובין המים אשר מעל לרקיע ויהי כן </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:
+  uppercase">א:ח</span></span><span lang="HE"> <span class="vertical1">ויקרא </span><span class="a0">אלהים</span><span class="vertical1"> ל</span></span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">רקיע שמים </span></span><span lang="HE">ויהי ערב ויהי בקר יום שני {פ}</span></td><td><span class="Heading4Char"><span dir="LTR">B</span><span dir="RTL"></span><span lang="HE"><span dir="RTL"></span> </span></span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:כ</span></span><span lang="HE"> ויאמר <span class="a0">אלהים</span> </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">ישרצו המים</span></span><span lang="HE"> שרץ נפש חיה
+  ועוף יעופף על הארץ על פני </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">רקיע השמים</span></span><span lang="HE"> </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:כא</span></span><span lang="HE"> ויברא <span class="a0">אלהים</span> את התנינם הגדלים ואת כל נפש החיה הרמשת אשר שרצו המים
+  למינהם ואת כל עוף כנף למינהו וירא <span class="a0">אלהים</span> כי טוב </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:כב</span></span><span lang="HE"> <span class="vertical1">ויברך אתם </span><span class="a0">אלהים</span><span class="vertical1"> </span>לאמר פרו ורבו ומלאו את המים בימים והעוף ירב בארץ </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:כג</span></span><span lang="HE"> ויהי ערב ויהי
+  בקר יום חמישי {פ}</span></td></tr></tbody></table>
+
+                <table class="scripture-table" dir="rtl"><tbody><tr><td><span class="Heading4Char"><span dir="LTR"> i
+  C </span></span><span dir="RTL"></span><span class="Heading5Char"><span lang="HE" style='font-size:12.0pt;font-family:"Times New Roman",serif'><span dir="RTL"></span> </span></span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:uppercase">א:ט</span></span><span lang="HE"> ויאמר <span class="a0">אלהים</span> יקוו המים מתחת השמים אל מקום
+  אחד ותראה היבשה ויהי כן </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:uppercase">א:י</span></span><span lang="HE"> <span class="vertical1">ויקרא </span><span class="a0">אלהים</span><span class="vertical1"> ל</span>יבשה </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">ארץ </span></span><span lang="HE">ולמקוה המים קרא ימים
+  וירא <span class="a0">אלהים</span> כי טוב</span></td><td><span class="Heading4Char"><span dir="LTR">i C </span></span><span dir="RTL"></span><span class="Heading5Char"><span lang="HE" style='font-size:12.0pt;
+  font-family:"Times New Roman",serif'><span dir="RTL"></span> </span></span><span dir="LTR"></span><span class="Heading5Char"><span dir="LTR" lang="HE" style="font-size:12.0pt"><span dir="LTR"></span> </span></span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:כד</span></span><span lang="HE"> ויאמר <span class="a0">אלהים</span> תוצא </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">הארץ </span></span><span lang="HE">נפש חיה למינה בהמה
+  ורמש וחיתו ארץ למינה ויהי כן </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:uppercase">א:כה</span></span><span lang="HE"> ויעש <span class="a0">אלהים</span> את חית הארץ למינה ואת הבהמה
+  למינה ואת כל רמש האדמה למינהו וירא <span class="a0">אלהים</span> כי טוב</span></td></tr></tbody></table>
+
+                <table class="scripture-table" dir="rtl"><tbody><tr><td><span class="Heading5Char"><span dir="LTR" style="font-size:12.0pt">ii</span></span><span dir="RTL"></span><span class="Heading5Char"><span lang="HE" style='font-size:12.0pt;font-family:"Times New Roman",serif'><span dir="RTL"></span> </span></span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:uppercase">א:יא</span></span><span lang="HE"> ויאמר <span class="a0">אלהים</span> תדשא הארץ </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">דשא עשב מזריע זרע עץ
+  פרי עשה פרי למינו אשר זרעו בו </span></span><span lang="HE">על הארץ ויהי כן </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:יב</span></span><span lang="HE"> ותוצא הארץ
+  דשא עשב מזריע זרע למינהו ועץ עשה פרי אשר זרעו בו למינהו וירא <span class="a0">אלהים</span>
+  כי טוב </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;
+  font-variant:normal !important;text-transform:uppercase">א:יג</span></span><span lang="HE"> ויהי ערב ויהי בקר יום שלישי {פ}</span></td><td><span class="Heading5Char"><span dir="LTR" style="font-size:12.0pt">ii</span></span><span dir="RTL"></span><span class="Heading5Char"><span lang="HE" style='font-size:12.0pt;font-family:"Times New Roman",serif'><span dir="RTL"></span> </span></span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:uppercase">א:כו</span></span><span lang="HE"> ויאמר <span class="a0">אלהים</span> נעשה אדם בצלמנו כדמותנו וירדו
+  בדגת הים ובעוף השמים ובבהמה ובכל הארץ ובכל הרמש הרמש על הארץ </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:כז</span></span><span lang="HE"> ויברא <span class="a0">אלהים</span> את האדם בצלמו בצלם <span class="a0">אלהים</span> ברא אתו
+  זכר ונקבה ברא אתם </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:uppercase">א:כח</span></span><span lang="HE"> <span class="vertical1">ויברך אתם </span><span class="a0">אלהים</span>
+  ויאמר להם <span class="a0">אלהים</span> פרו ורבו ומלאו את הארץ וכבשה ורדו בדגת
+  הים ובעוף השמים ובכל חיה הרמשת על הארץ </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:
+  uppercase">א:כט</span></span><span lang="HE"> ויאמר <span class="a0">אלהים</span>
+  הנה נתתי לכם את </span><span class="horizontal1"><span lang="HE" style="font-size:11.0pt">כל עשב זרע זרע אשר על פני כל הארץ ואת כל העץ אשר בו
+  פרי עץ זרע זרע</span></span><span lang="HE"> לכם יהיה לאכלה </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:ל</span></span><span lang="HE"> ולכל חית הארץ
+  ולכל עוף השמים ולכל רומש על הארץ אשר בו נפש חיה את כל ירק עשב לאכלה ויהי כן </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">א:לא</span></span><span lang="HE"> וירא <span class="a0">אלהים</span> את כל אשר עשה והנה טוב מאד ויהי ערב ויהי בקר יום הששי
+  {פ}</span></td></tr></tbody></table>
+
+                <table class="scripture-table" dir="rtl"><thead><tr><th class="cell-label col-right">3א</th><th class="cell-label col-left">3ב</th></tr></thead><tbody><tr><td><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:uppercase">ב:א</span></span><span lang="HE"> </span><span class="horizontal1"><span lang="HE" style="font-size:
+  11.0pt">ויכלו </span></span><span class="closure"><span lang="HE">השמים והארץ </span></span><span lang="HE">וכל צבאם </span></td><td><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;text-transform:uppercase">ב:ב</span></span><span lang="HE"> </span><span class="horizontal1"><span lang="HE" style="font-size:
+  11.0pt">ויכל</span></span><span lang="HE"> <span class="a0">אלהים</span> ביום
+  השביעי מלאכתו אשר עשה וישבת ביום השביעי מכל מלאכתו אשר עשה </span><span class="versenumber"><span lang="HE" style="font-size:7.0pt;font-variant:normal !important;
+  text-transform:uppercase">ב:ג</span></span><span lang="HE"> <span class="vertical1">ויברך </span><span class="a0">אלהים</span><span class="vertical1"> את</span> יום השביעי ויקדש אתו כי <span class="closure">בו שבת
+  מכל מלאכתו </span>אשר ברא <span class="a0">אלהים</span> לעשות {פ}</span></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>לציטוט:</strong> פרויקט התורה הארוגה. "ספר בראשית יחידה 1 (א:א-ב:ג)." <em>התורה הארוגה</em>, 2025. https://chaver.com/torah-weave/Genesis/hebrew-genesis-unit-1/hebrew-genesis-unit-1.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="ניווט תחתון">
+        <div class="nav-arrows">
+            <span class="nav-disabled">(יחידה ראשונה) →</span>
+            <a href="/torah-weave/Genesis/hebrew-genesis-unit-2/hebrew-genesis-unit-2.html" rel="next">← יחידה 2</a>
+        </div>
+        <div><a href="/torah-weave/Genesis/hebrew-genesis-map/hebrew-genesis-map.html">← מפת בראשית</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

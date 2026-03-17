@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Start Template</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #5090f0;
+        }
+        .template-box {
+            background-color: #e8f4f8;
+            border: 2px solid #5090f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .example-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        ul, ol {
+            margin: 10px 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Session Start Template</h1>
+
+<h2>Purpose</h2>
+<p>This document provides the exact template for starting each new chat session with Claude. Following this template ensures Claude activates the Interactive Workflow Protocol correctly and maintains continuity from previous sessions.</p>
+
+<h2>The Basic Template</h2>
+
+<div class="template-box">
+<h3>Copy/Paste This at the Start of Each Chat:</h3>
+
+<pre>Follow the Interactive Workflow Protocol.
+
+Today we're working on: [SPECIFIC TASK]
+
+Files available:
+□ Database: [YES/NO - if yes, note if uploaded to chat]
+□ Progress Diary: [LINK or UPLOADED]
+□ Other: [Any other relevant files]</pre>
+</div>
+
+<h2>What to Fill In</h2>
+
+<h3>[SPECIFIC TASK] - Choose One:</h3>
+<ul>
+    <li>Unit Commentary: "Genesis Unit 5 commentary"</li>
+    <li>Book Part: "Genesis Part C (Commentary) rework"</li>
+    <li>Multiple Units: "Leviticus Units 10-12"</li>
+    <li>Structure Analysis: "Determining Deuteronomy structure"</li>
+    <li>Database Update: "Updating database for completed Genesis units"</li>
+    <li>CSS/Technical: "Fixing styling issues in unit commentaries"</li>
+    <li>Continue Previous: "Continue where we left off last session"</li>
+</ul>
+
+<h3>Database Options:</h3>
+<ul>
+    <li>YES - Uploaded: "Database: YES (uploaded to this chat)"</li>
+    <li>YES - Will Upload: "Database: YES (will upload when needed for updates)"</li>
+    <li>NO: "Database: NO (not needed today)"</li>
+</ul>
+
+<h2>Complete Examples</h2>
+
+<div class="example-box">
+<h3>Example 1: Working on a Specific Unit</h3>
+<pre>Follow the Interactive Workflow Protocol.
+
+Today we're working on: Genesis Unit 7 commentary
+
+Files available:
+□ Database: YES (will upload when ready for updates)
+□ Progress Diary: https://chaver.com/torah-weave/Admin/ProgressDiary.html
+□ Other: Genesis Part A and B already complete</pre>
+</div>
+
+<div class="example-box">
+<h3>Example 2: Reworking Book Commentary</h3>
+<pre>Follow the Interactive Workflow Protocol.
+
+Today we're working on: Genesis Part C (Commentary) - rework to flow from Part B
+
+Files available:
+□ Database: NO (not needed today)
+□ Progress Diary: https://chaver.com/torah-weave/Admin/ProgressDiary.html
+□ Other: Current Part C needs revision based on Part B structure</pre>
+</div>
+
+<div class="example-box">
+<h3>Example 3: Multiple Units in Sequence</h3>
+<pre>Follow the Interactive Workflow Protocol.
+
+Today we're working on: Leviticus Units 5, 6, and 7 commentaries
+
+Files available:
+□ Database: YES (uploaded to this chat)
+□ Progress Diary: https://chaver.com/torah-weave/Admin/ProgressDiary.html
+□ Other: Leviticus Part B (structure) complete, using it as reference</pre>
+</div>
+
+<div class="example-box">
+<h3>Example 4: Continuing from Previous Session</h3>
+<pre>Follow the Interactive Workflow Protocol.
+
+Today we're working on: Continue where we left off last session (Deuteronomy Unit 10)
+
+Files available:
+□ Database: YES (will upload for final update)
+□ Progress Diary: https://chaver.com/torah-weave/Admin/ProgressDiary.html
+□ Other: Unit partially complete, need to finish Literary Features section</pre>
+</div>
+
+<div class="example-box">
+<h3>Example 5: Starting a New Book</h3>
+<pre>Follow the Interactive Workflow Protocol.
+
+Today we're working on: Beginning Exodus - determining unit boundaries (Part A)
+
+Files available:
+□ Database: YES (uploaded - will create new rows for Exodus units)
+□ Progress Diary: https://chaver.com/torah-weave/Admin/ProgressDiary.html
+□ Other: Using Genesis methodology as template</pre>
+</div>
+
+<h2>What Happens After You Send This</h2>
+
+<h3>Claude's Response:</h3>
+<ul>
+    <li>Acknowledges the protocol: "Following the Interactive Workflow Protocol..."</li>
+    <li>Reviews context: Fetches relevant documents (index, progress diary, etc.)</li>
+    <li>Confirms understanding: "I can see we're working on [X]. Ready to proceed?"</li>
+    <li>Suggests approach: Outlines the work plan based on the task</li>
+</ul>
+
+<h2>Optional Additions</h2>
+
+<h3>You Can Add These If Relevant:</h3>
+<ul>
+    <li>Specific Questions: "Question: Should we use the envelope structure found in Unit 5?"</li>
+    <li>Constraints: "Note: Need to finish in about 1 hour"</li>
+    <li>Previous Issues: "Reminder: We decided to use 'YHWH Elohim' (not 'Yahweh-Elohim')"</li>
+    <li>Priority Items: "Priority: Database must be updated before ending session"</li>
+</ul>
+
+<h2>When NOT to Use This Template</h2>
+
+<h3>Skip the Template If:</h3>
+<ul>
+    <li><strong>Quick Question:</strong> Just asking a simple question not related to project work</li>
+    <li><strong>Testing Something:</strong> Experimenting with code or formatting</li>
+    <li><strong>General Discussion:</strong> Discussing methodology without doing actual work</li>
+</ul>
+
+<p>For these cases, just chat normally. Use the template when you're ready to do structured project work that should be tracked and documented.</p>
+
+<h2>Quick Reference Card</h2>
+
+<div class="template-box">
+<h3>Minimal Version (When Claude Already Has Context):</h3>
+<pre>Follow protocol. Working on: [TASK]</pre>
+
+<p><strong>Use this shorter version if:</strong></p>
+<ul>
+    <li>Continuing work from earlier today</li>
+    <li>Claude already knows the project status</li>
+    <li>You're in the middle of a multi-session task</li>
+</ul>
+</div>
+
+<h2>Troubleshooting</h2>
+
+<h3>If Claude Doesn't Follow the Protocol:</h3>
+<ul>
+    <li><strong>Remind:</strong> "Please follow the Interactive Workflow Protocol as documented"</li>
+    <li><strong>Link:</strong> Provide the protocol link:<br>
+    <code>https://chaver.com/torah-weave/Admin/Interactive-Workflow-Protocol.html</code></li>
+    <li><strong>Restart:</strong> Begin a new message with the full template</li>
+</ul>
+
+<h3>If You Forget What You Were Working On:</h3>
+<ul>
+    <li>Check the Progress Diary for last session summary</li>
+    <li>Tell Claude: "Check Progress Diary and tell me what we should work on next"</li>
+</ul>
+
+</body>
+</html>

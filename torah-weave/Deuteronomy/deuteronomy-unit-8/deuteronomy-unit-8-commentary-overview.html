@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <article class="commentary-content" itemscope itemtype="https://schema.org/ScholarlyArticle">
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb">
+        <a href="/torah-weave/">Torah Weave</a> ›
+        <a href="/torah-weave/Deuteronomy/">Deuteronomy</a> ›
+        <a href="/torah-weave/Deuteronomy/deuteronomy-unit-8/">Unit 8</a> ›
+        <strong>Commentary</strong>
+    </nav>
+
+    <!-- Series Navigation (Top) -->
+    <nav class="unit-navigation">
+        <div class="nav-breadcrumb">
+            <strong>Deuteronomy Unit 8 Commentary</strong> — Overview
+        </div>
+        <div class="nav-arrows">
+            <span class="nav-current">Overview</span>
+            <a href="deuteronomy-unit-8-commentary-reconstructing.html">Part I: Reconstructing →</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="commentary-header">
+        <h1 itemprop="headline">The Order of Deuteronomy's Laws</h1>
+        <p class="subtitle" itemprop="alternativeHeadline">Evidence for Unified Torah Authorship</p>
+        <p class="author">A Monograph by <span itemprop="author">Moshe Kline</span></p>
+    </header>
+
+    <!-- ========== SLIDESHOW SECTION ========== -->
+    <section class="slideshow-section">
+        <div class="slideshow-container">
+            <div class="slideshow-intro">
+                <h2>Visual Overview: The Beautiful Weave</h2>
+                <p>Explore the key discoveries of this monograph through an interactive presentation</p>
+            </div>
+            
+            <div class="slideshow-wrapper" id="beautiful-weave-slideshow">
+                <!-- Slides -->
+                <div class="slide active" data-slide="1">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-01.webp" 
+                         alt="Slide 1: Title - The Beautiful Weave: Unlocking the Hidden Architecture of Deuteronomy" 
+                         loading="eager">
+                </div>
+                <div class="slide" data-slide="2">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-02.webp" 
+                         alt="Slide 2: A Puzzle for Sages and Scholars - the seemingly random sequence of laws in Deuteronomy 21-22" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="3">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-03.webp" 
+                         alt="Slide 3: What if the chaos is the key? - comparing row-wise vs column-wise reading strategies" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="4">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-04.webp" 
+                         alt="Slide 4: Reconstructing the Original 10×3 Blueprint - the matrix of Self, Interaction, and Other" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="5">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-05.webp" 
+                         alt="Slide 5: A Journey in Five Stages - thematic pairs covering Couple, Community, Property, Categories, and Synthesis" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="6">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-06.webp" 
+                         alt="Slide 6: The Pattern No Editor Could Fake - agricultural chronology from planting to harvest across Pair 5" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="7">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-07.webp" 
+                         alt="Slide 7: The Scribes Left a Map - 40 ancient textual divisions (parshiyot) form visual architecture" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="8">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-08.webp" 
+                         alt="Slide 8: Three Laws That Don't Seem to Fit - tassels, parapet, and forty lashes as structural keys" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="9">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-09.webp" 
+                         alt="Slide 9: The Text Becomes What It Describes - garment, house, and body metaphors in the structure" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="10">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-10.webp" 
+                         alt="Slide 10: All Three Structures Protect a Sacred Core - segments 2M, 3M, and 4M at the center" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="11">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-11.webp" 
+                         alt="Slide 11: A Covenant of Love, Modeled on Marriage - three stages from homeless love to sealed covenant" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="12">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-12.webp" 
+                         alt="Slide 12: The Beginning Explains the Center - the beautiful captive as hermeneutical key" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="13">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-13.webp" 
+                         alt="Slide 13: Written Torah, Oral Torah - surface text vs underlying two-dimensional structure" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="14">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-14.webp" 
+                         alt="Slide 14: The Wisdom of the Weaver - the author has hidden architectural blueprints in plain sight" 
+                         loading="lazy">
+                </div>
+                <div class="slide" data-slide="15">
+                    <img src="/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave/slide-15.webp" 
+                         alt="Slide 15: Continue the Discovery - link to full monograph at chaver.com" 
+                         loading="lazy">
+                </div>
+                
+                <!-- Navigation -->
+                <div class="slideshow-nav">
+                    <button class="slide-btn" id="prevSlide" disabled>← Previous</button>
+                    <div class="slide-dots">
+                        <button class="slide-dot active" data-slide="1" aria-label="Go to slide 1"></button>
+                        <button class="slide-dot" data-slide="2" aria-label="Go to slide 2"></button>
+                        <button class="slide-dot" data-slide="3" aria-label="Go to slide 3"></button>
+                        <button class="slide-dot" data-slide="4" aria-label="Go to slide 4"></button>
+                        <button class="slide-dot" data-slide="5" aria-label="Go to slide 5"></button>
+                        <button class="slide-dot" data-slide="6" aria-label="Go to slide 6"></button>
+                        <button class="slide-dot" data-slide="7" aria-label="Go to slide 7"></button>
+                        <button class="slide-dot" data-slide="8" aria-label="Go to slide 8"></button>
+                        <button class="slide-dot" data-slide="9" aria-label="Go to slide 9"></button>
+                        <button class="slide-dot" data-slide="10" aria-label="Go to slide 10"></button>
+                        <button class="slide-dot" data-slide="11" aria-label="Go to slide 11"></button>
+                        <button class="slide-dot" data-slide="12" aria-label="Go to slide 12"></button>
+                        <button class="slide-dot" data-slide="13" aria-label="Go to slide 13"></button>
+                        <button class="slide-dot" data-slide="14" aria-label="Go to slide 14"></button>
+                        <button class="slide-dot" data-slide="15" aria-label="Go to slide 15"></button>
+                    </div>
+                    <button class="slide-btn" id="nextSlide">Next →</button>
+                </div>
+            </div>
+            
+            <p class="slide-counter">
+                Slide <span id="currentSlide">1</span> of 15
+            </p>
+        </div>
+    </section>
+    <!-- ========== END SLIDESHOW SECTION ========== -->
+
+    <!-- Abstract -->
+    <main itemprop="articleBody">
+    <section class="commentary-section">
+        <h2>Abstract</h2>
+        <p>This monograph presents a comprehensive analysis of Deuteronomy 21:10–25:4, demonstrating that this legal collection, which we call the "Beautiful Weave," was originally composed as a sophisticated 10×3 matrix containing over fifty laws. Building on recent scholarship that identifies similar woven structures in the Covenant Code (Exodus 22:17–23:19), this analysis reveals that the Torah's literary units were composed using a lost literary paradigm that was subsequently linearized through different editorial strategies.</p>
+        
+        <p>While the Covenant Code was deconstructed by reading across horizontal rows (weft threads), the Beautiful Weave was uniquely deconstructed by reading down vertical columns (warp threads). Of the Torah's eighty-six literary units, this column-wise linearization represents the only known example of purely vertical deconstruction. The discovery of varied linearization methods, combined with the intricate thematic and linguistic patterns that emerge only when the text is reconstructed in its original tabular form, provides compelling evidence for a sophisticated authorial tradition.</p>
+        
+        <p>The weave traces a progression from the most intimate human union to the most abstract principles of separation. The recovery of "literary weaving" as this ancient authorial paradigm suggests we must fundamentally reconsider our approaches to the composition and interpretation of the Torah.</p>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="commentary-section">
+        <h2>Contents</h2>
+        <nav class="toc">
+            <ul>
+                <li><strong>Overview</strong>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#strategic-knowledge">The Strategic Knowledge Revolution</a></li>
+                        <li><a href="#beautiful-captive-testimony">The Beautiful Captive's Testimony</a></li>
+                    </ul>
+                </li>
+                <li><a href="deuteronomy-unit-8-commentary-reconstructing.html">Part I: Reconstructing the Beautiful Weave</a>
+                    <ul>
+                        <li>From Surface Chaos to Hidden Architecture</li>
+                        <li>The Column-wise Linearization Strategy</li>
+                        <li>The 10×3 Matrix: Thirty Segments in Perfect Order</li>
+                        <li>The 40 Parshiyot: Structural Evidence and Visual Architecture</li>
+                    </ul>
+                </li>
+                <li><a href="deuteronomy-unit-8-commentary-five-pairs.html">Part II: The Five Pairs — Detailed Analysis</a>
+                    <ul>
+                        <li>Pair 1 – The Couple</li>
+                        <li>Pair 2 – The Community</li>
+                        <li>Pair 3 – Property, Ownership, and Obligations</li>
+                        <li>Pair 4 – Categories and Distinctions</li>
+                        <li>Pair 5 – The Synthesis of Form and Content</li>
+                    </ul>
+                </li>
+                <li><a href="deuteronomy-unit-8-commentary-architecture.html">Part III: The Deeper Architecture</a>
+                    <ul>
+                        <li>The Architectural Keys</li>
+                        <li>The Protected Center</li>
+                        <li>Hermeneutical Implications</li>
+                    </ul>
+                </li>
+                <li><a href="deuteronomy-unit-8-commentary-implications.html">Part IV: Implications and Evidence</a>
+                    <ul>
+                        <li>The Exceptional Linearization</li>
+                        <li>The Case for Unified Composition</li>
+                        <li>Implications for Biblical Scholarship</li>
+                        <li>Conclusion</li>
+                        <li>Afterword: Kabbalistic Resonances</li>
+                    </ul>
+                </li>
+                <li><a href="deuteronomy-unit-8-commentary-appendix-a.html">Appendix A: Complete Biblical Text of Deuteronomy 21:10–25:4</a>
+                    <ul>
+                        <li>The Beautiful Weave in Tabular Form</li>
+                    </ul>
+                </li>
+                <li><a href="deuteronomy-unit-8-commentary-appendix-b.html">Appendix B: The Covenant Code Comparison</a>
+                    <ul>
+                        <li>Evidence for Unified Authorship</li>
+                        <li>The Same Laws, Different Frameworks</li>
+                        <li>Contrasting Theological Progressions</li>
+                        <li>Visual Composition and Spatial Memory</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Introduction -->
+    <section class="commentary-section" id="introduction">
+        <h2>Introduction</h2>
+        
+        <blockquote>
+            <p lang="he" dir="rtl">כִּי בְתַחְבֻּלוֹת תַּעֲשֶׂה־לְּךָ מִלְחָמָה</p>
+            <p>"For by stratagems you shall make war for yourself"<br>
+            — Proverbs 24:6</p>
+        </blockquote>
+        
+        <blockquote>
+            <p lang="he" dir="rtl">בְּמִי אַתָּה מוֹצֵא מִלְחַמְתָּהּ שֶׁל תּוֹרָה? בְּמִי שֶׁיֵּשׁ בְּיָדוֹ חֲבִילוֹת שֶׁל מִשְׁנָה</p>
+            <p>"In whom do you find the 'war of Torah'? In one who has in his hand 'bundles of Mishnah'"<br>
+            — Babylonian Talmud, Sanhedrin 42a</p>
+        </blockquote>
+        
+        <blockquote>
+            <p lang="he" dir="rtl">שהמשניות סדורות אצלו כחבילות... ויודע לדמות מילתא למילתא, ולהוציא טעמי תורה וסודותיה</p>
+            <p>"That the Mishnayot are arranged for him like bundles... and he knows how to compare one matter to another, and to derive the reasons of the Torah and its secrets"<br>
+            — Rashi's Commentary</p>
+        </blockquote>
+    </section>
+
+    <!-- Strategic Knowledge Revolution -->
+    <section class="commentary-section" id="strategic-knowledge">
+        <h2>The Strategic Knowledge Revolution</h2>
+        
+        <p>The ancient sages understood something profound about how knowledge transforms into wisdom. The transition from <span lang="he">תַּחְבֻּלוֹת</span> (<em>tachbulot</em>, "stratagems") to <span lang="he">חֲבִילוֹת</span> (<em>chavilot</em>, "bundles") represents more than wordplay—it reveals the secret to unlocking Torah's deepest architectural mysteries. What begins as military advice in Proverbs becomes the key to reading the hidden blueprints embedded within biblical texts themselves.</p>
+        
+        <p>The scholar who masters organized "bundles of knowledge" gains what Rashi calls the ultimate interpretive power: "to compare one matter to another, and to derive the reasons of the Torah and its secrets" (<span lang="he">ולהוציא טעמי תורה וסודותיה</span>). This capacity for cross-referential pattern recognition—seeing connections across vast textual territories—is what reveals the sophisticated two-dimensional architectures concealed within apparently linear compositions.</p>
+        
+        <p>This monograph demonstrates that the Torah was composed not as a collection of linear texts, but as a series of carefully woven tabular structures that were systematically converted into readable sequences through two distinct methods of linearization. Most remarkably, one unit—a collection of approximately fifty laws in Deuteronomy 21:10–25:4 that begins with the beautiful captive law—was deliberately linearized using the method that creates maximum surface incoherence while preserving the deepest structural secrets. This "Beautiful Weave" serves as the Torah's own testimony about its hidden compositional technique.</p>
+        
+        <p>Consider what we encounter when reading these laws in their biblical sequence: marriage regulations interrupted by agricultural prescriptions, criminal statutes broken up by ritual requirements, property laws scattered among community boundaries. The surface appears chaotic, almost random.</p>
+        
+        <div class="reading-guide">
+            <h3>Sample: Deuteronomy 21:10–22:12</h3>
+            <p>The opening sequence illustrates this apparent disorder:</p>
+            <blockquote>
+                <p><strong>21:10–14</strong> — When thou goest forth to battle against thine enemies, and the LORD thy God delivereth them into thy hands, and thou carriest them away captive, and seest among the captives a woman of goodly form, and thou hast a desire unto her, and wouldest take her to thee to wife; then thou shalt bring her home to thy house; and she shall shave her head, and pare her nails; and she shall put the raiment of her captivity from off her, and shall remain in thy house, and bewail her father and her mother a full month; and after that thou mayest go in unto her, and be her husband, and she shall be thy wife. And it shall be, if thou have no delight in her, then thou shalt let her go whither she will; but thou shalt not sell her at all for money, thou shalt not deal with her as a slave, because thou hast humbled her.</p>
+                
+                <p><strong>21:15–17</strong> — If a man have two wives, the one beloved, and the other hated, and they have borne him children, both the beloved and the hated; and if the first-born son be hers that was hated; then it shall be, in the day that he causeth his sons to inherit that which he hath, that he may not make the son of the beloved the first-born before the son of the hated, who is the first-born; but he shall acknowledge the first-born, the son of the hated, by giving him a double portion of all that he hath; for he is the first-fruits of his strength, the right of the first-born is his.</p>
+                
+                <p><strong>21:18–21</strong> — If a man have a stubborn and rebellious son, that will not hearken to the voice of his father, or the voice of his mother, and though they chasten him, will not hearken unto them; then shall his father and his mother lay hold on him, and bring him out unto the elders of his city, and unto the gate of his place; and they shall say unto the elders of his city: 'This our son is stubborn and rebellious, he doth not hearken to our voice; he is a glutton, and a drunkard.' And all the men of his city shall stone him with stones, that he die; so shalt thou put away the evil from the midst of thee; and all Israel shall hear, and fear.</p>
+            </blockquote>
+            <p>The sequence continues through hanging laws, lost property, cross-dressing prohibitions, bird nests, and mixed species—an apparent jumble that has puzzled scholars for centuries.</p>
+        </div>
+        
+        <p>Yet this surface chaos is precisely the evidence we need. When we recognize that these laws were linearized by reading down columns rather than across rows, the chaos resolves into sophisticated architecture. The author deliberately chose the linearization method that would create maximum apparent disorder—and in doing so, left the clearest possible signature of intentional compositional design.</p>
+        
+        <p>The Beautiful Weave thus represents the Torah's invitation from randomness to reconstruction—from an unorganized body of laws to a different way of reading the same text—the preservation of the "bundles" that allow scholars to "compare one matter to another and derive the Torah's deepest secrets." The Beautiful Weave serves as the key that unlocks this ancient interpretive tradition, demonstrating that the methods for reading sacred texts as multidimensional compositions were embedded within the texts themselves from the beginning.</p>
+    </section>
+
+    <!-- The Beautiful Captive's Testimony -->
+    <section class="commentary-section" id="beautiful-captive-testimony">
+        <h2>The Beautiful Captive's Testimony</h2>
+        
+        <p>The Beautiful Weave stands as the Torah's own testimony about its hidden compositional technique. By employing the linearization method that creates maximum surface chaos while preserving maximum structural information, it functions as both legal instruction and meta-textual revelation. The beautiful captive teaches not only about ancient legal practice, but about the nature of sacred text itself—how beauty emerges through proper understanding, how apparent disorder conceals sophisticated design, how the most profound teachings often lie hidden within the most challenging surfaces.</p>
+        
+        <p>This connection deepens when we consider the beautiful captive's legal status. The law describes a woman captured in war who undergoes a month of mourning and preparation before being taken as a wife (Deuteronomy 21:10–14). During this preparatory period, she exists in a liminal state—promised to her captor but not yet his wife, a servant designated for future union. This makes her, in legal terms, a promised slave—precisely the figure addressed in the law concerning one who lies with a promised slave (<span lang="he">שפחה חרופה</span>) that stands at the structural center of the entire Torah (Leviticus 19:20–22).</p>
+        
+        <p>As I demonstrated in my analysis of Leviticus 19, this central law is nearly inscrutable, containing several hapax legomena despite its pivotal position. The link between the Beautiful Weave's opening figure and the Torah's structural center suggests that the Beautiful Weave serves as the interpretive key designed to unlock the depths of the entire authorial Torah. The captured woman becomes not just a legal case, but the hermeneutical guide to the Torah's own hidden architecture.</p>
+        
+        <p>As Rashi understood, true mastery comes to those who possess comprehensive knowledge organized in accessible "bundles"—those who can recognize patterns across vast textual territories and thereby unlock the Torah's architectural secrets. The Beautiful Weave teaches us that those secrets were there from the beginning, encoded by an author who understood that the most important discoveries would require the most sophisticated tools to uncover.</p>
+        
+        <p>This monograph follows the beautiful captive's guidance, demonstrating how her unique testimony—and the forty-nine laws that follow her—reveals the compositional principles underlying the Torah, and challenges us to read these ancient texts with the multidimensional awareness their author intended.</p>
+    </section>
+
+    <!-- Continue Reading -->
+    <section class="commentary-section">
+        <div class="structural-note">
+            <h3>Continue Reading</h3>
+            <p>In <a href="deuteronomy-unit-8-commentary-reconstructing.html"><strong>Part I: Reconstructing the Beautiful Weave</strong></a>, we examine the column-wise linearization strategy in detail, present the complete 10×3 matrix structure, and analyze the evidence preserved in the 40 parshiyot divisions.</p>
+        </div>
+    </section>
+    </main>
+
+    <!-- Series Navigation (Bottom) -->
+    <nav class="unit-navigation">
+        <div class="nav-breadcrumb">
+            <a href="/torah-weave/">Torah Weave</a> ›
+            <a href="/torah-weave/Deuteronomy/">Deuteronomy</a> ›
+            <a href="/torah-weave/Deuteronomy/deuteronomy-unit-8/">Unit 8</a> ›
+            Commentary
+        </div>
+        <div class="nav-arrows">
+            <span class="nav-current">Overview</span>
+            <a href="deuteronomy-unit-8-commentary-reconstructing.html">Part I: Reconstructing →</a>
+        </div>
+    </nav>
+
+    <!-- Citation Box -->
+    <aside class="citation-box">
+        <h3>How to Cite</h3>
+        <p>Kline, Moshe. "The Order of Deuteronomy's Laws: Evidence for Unified Torah Authorship." <em>Torah Weave</em>, https://chaver.com/torah-weave/Deuteronomy/deuteronomy-unit-8/. Accessed [date].</p>
+    </aside>
+
+</article>
+
+<!-- Slideshow JavaScript -->
+<script src="/torah-weave/Admin/Assets/JS/torah-weave-slideshow.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new TorahWeaveSlideshow({
+        container: '#beautiful-weave-slideshow',
+        totalSlides: 15,
+        slideFolder: '/torah-weave/Admin/Assets/Slide-Shows/beautiful-weave',
+        slidePrefix: 'slide-',
+        slideExtension: '.webp'
+    });
+});
+</script>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

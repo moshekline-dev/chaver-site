@@ -1,0 +1,797 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deuteronomy Unit 2: The Realization of Divine Law - Torah Commentary Project</title>
+    <style>
+        /* Base styles for standalone use - can be overridden by external CSS */
+        body {
+            font-family: 'Georgia', serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Commentary header */
+        .commentary-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #7ab0f7;
+        }
+        
+        .commentary-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .unit-metadata {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* Diptych note */
+        .diptych-note {
+            background-color: #f0f4f8;
+            border-left: 4px solid #7ab0f7;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        /* Navigation */
+        .commentary-nav {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .commentary-nav a {
+            display: inline-block;
+            margin: 5px 10px;
+            color: #5090f0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .commentary-nav a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Sections */
+        .commentary-section {
+            background-color: white;
+            padding: 35px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .commentary-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 28px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .commentary-section h3 {
+            color: #5090f0;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .commentary-section h4 {
+            color: #666;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        /* Structural Matrix Section */
+        .structural-matrix-section {
+            background-color: #f0f4f8;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 2px solid #7ab0f7;
+        }
+        
+        .matrix-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .matrix-header h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .matrix-overview {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #7ab0f7;
+        }
+        
+        /* Matrix table styling */
+        .commentary-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .commentary-matrix th,
+        .commentary-matrix td {
+            border: 2px solid #ddd;
+            padding: 20px;
+            vertical-align: top;
+        }
+        
+        /* Corner cell */
+        .corner-cell {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* Warp rules (column headers) - Deuteronomy blue */
+        .warp-rule {
+            background-color: #7ab0f7;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .warp-rule .rule {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            margin-top: 8px;
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
+        /* Weft rules (row headers) */
+        .weft-rule {
+            background-color: #80d0a0;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            width: 220px;
+            font-size: 15px;
+        }
+        
+        .weft-rule .rule {
+            display: block;
+            font-weight: normal;
+            font-size: 13px;
+            margin-top: 8px;
+            font-style: italic;
+            line-height: 1.3;
+        }
+        
+        /* Intersection cells */
+        .intersection {
+            background-color: #ffffff;
+            position: relative;
+        }
+        
+        .intersection-header {
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .intersection-content {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .intersection-note {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        /* Pattern tags */
+        .pattern-tags {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #ddd;
+        }
+        
+        .pattern-tag {
+            display: inline-block;
+            background-color: #e8f0fe;
+            color: #5090f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        
+        /* Framework rows styling */
+        .framework-row {
+            background-color: #f8f9fa;
+        }
+        
+        /* Comparison boxes */
+        .comparison-box {
+            background-color: #f0f4f8;
+            border: 1px solid #7ab0f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .comparison-box h4 {
+            color: #5090f0;
+            margin-bottom: 10px;
+        }
+        
+        /* Lists */
+        ul {
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        /* Blockquotes */
+        blockquote {
+            margin: 20px 0;
+            padding: 15px 20px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #7ab0f7;
+            font-style: italic;
+        }
+        
+        /* Tables */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th {
+            background-color: #7ab0f7;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            vertical-align: top;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Conclusion box */
+        .conclusion-box {
+            background-color: #f0f8f0;
+            border: 2px solid #80d0a0;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .conclusion-box h3 {
+            color: #5da77a;
+            margin-bottom: 15px;
+        }
+        
+        /* Links section */
+        .links-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+        
+        .links-section a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #5090f0;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .links-section a:hover {
+            background-color: #3070d0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main class="commentary-content">
+        <!-- Page Header -->
+        <header class="commentary-header">
+            <h1>Deuteronomy Unit 2: The Realization of Divine Law</h1>
+            <div class="unit-metadata">
+                <span><strong>Structure:</strong> 5×2 Regular</span>
+                <span><strong>Verses:</strong> Deuteronomy 4:1-49</span>
+                <span><strong>Theme:</strong> From History to Law</span>
+            </div>
+        </header>
+
+        <!-- Diptych Note -->
+        <div class="diptych-note">
+            <p>This is Part 2 of Moses' opening speech. <a href="deuteronomy-unit-1.html">Read Unit 1 first</a> to understand how Moses' historical revisions set up this legal framework. Together, these units form a rhetorical diptych—two panels that must be read together to grasp Moses' full argument.</p>
+        </div>
+
+        <!-- Quick Navigation -->
+        <nav class="commentary-nav">
+            <a href="#introduction">Introduction</a>
+            <a href="#matrix">Structural Matrix</a>
+            <a href="#framework">Framework Analysis</a>
+            <a href="#mediator">The Mediator's Paradox</a>
+            <a href="#columns">Column Analysis</a>
+            <a href="#rows">Row Progression</a>
+            <a href="#theology">Theological Implications</a>
+            <a href="#conclusion">Conclusion</a>
+        </nav>
+
+        <!-- Introduction -->
+        <section id="introduction" class="commentary-section">
+            <h2>From Chaos to Order: The Legal Transformation</h2>
+            
+            <p>Where Unit 1's irregular 13331 structure permitted Moses maximum flexibility in retelling Israel's history, Unit 2's shift to a regular 5×2 matrix signals a move from narrative chaos to legal order. The regular grid conveys stability, system, and divine law—yet Moses maintains his sophisticated rhetorical strategy.</p>
+
+            <h3>The Structural Shift</h3>
+            <p>The movement from irregular to regular structure is itself a theological statement. Unit 1's flexible framework allowed Moses to:</p>
+            <ul>
+                <li>Revise historical narratives to suit pedagogical needs</li>
+                <li>Take credit for administrative innovations</li>
+                <li>Shift blame for the spy debacle</li>
+                <li>Create new theological frameworks (giant removal theology)</li>
+            </ul>
+
+            <p>Unit 2's rigid 5×2 structure communicates that while history can be reinterpreted, divine law stands firm. Yet even within this regular structure, Moses employs the same framework pattern—Rows 1 and 5 bracket the divine content in Rows 2-4.</p>
+
+            <h3>The Continuing Omission</h3>
+            <p>Remarkably, even as Moses returns to discuss Sinai revelation in Unit 2, the Tabernacle remains completely absent. Moses mentions standing "between YHWH and you" at the mountain (5:5), but never mentions the elaborate sanctuary where YHWH would dwell among the people. This continued omission suggests Moses prioritizes direct divine-human relationship through law over mediated relationship through cult.</p>
+        </section>
+
+        <!-- Structural Matrix -->
+        <section id="matrix" class="structural-matrix-section">
+            <div class="matrix-header">
+                <h2>Torah Map: Structural Matrix</h2>
+                <p>How Moses mediates between Divine Law and Israel</p>
+            </div>
+            
+            <div class="matrix-overview">
+                <h3>Unit Architecture</h3>
+                <p><strong>Framework Structure:</strong> Rows 1 and 5 create a framework focusing on law. The three intermediate rows (2-4) focus on God's actions vis-à-vis Israel. Moses uses descriptions of God's actions as the means for establishing the laws. While Moses was the mediator between God and Israel, the text places God in the middle as facilitator for dissemination of Mosaic Law.</p>
+            </div>
+            
+            <table class="commentary-matrix">
+                <thead>
+                    <tr>
+                        <th class="corner-cell">Thread<br/>Intersection</th>
+                        <th class="warp-rule">
+                            Column א<br/>
+                            <span class="rule">Individual (One)<br/>
+                            Moses as Law Giver<br/>
+                            Past → Future orientation<br/>
+                            Moses' influence as lawgiver & prophet</span>
+                        </th>
+                        <th class="warp-rule">
+                            Column ב<br/>
+                            <span class="rule">Communal (Many)<br/>
+                            The Nation<br/>
+                            Future → Past orientation<br/>
+                            National identity through history</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="framework-row">
+                        <td class="weft-rule">
+                            Row 1: Subjective<br/>
+                            <span class="rule">Moses' View of Laws<br/>
+                            First person speech<br/>
+                            Moses as agent for divinity</span>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">1א: For Life</div>
+                            <div class="intersection-content">
+                                Moses as source of laws. Period before entering land. Laws preserve lives of individuals.
+                            </div>
+                            <div class="intersection-note">
+                                Negative example: Moses had all individuals (כל איש) who followed Baal Peor killed
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">Individual Survival</span>
+                                <span class="pattern-tag">Pre-Land Period</span>
+                                <span class="pattern-tag">Negative Enforcement</span>
+                            </div>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">1ב: Wisdom and Justice</div>
+                            <div class="intersection-content">
+                                God as source of laws. Period after entry to land. Laws establish Israel as wise and just nation.
+                            </div>
+                            <div class="intersection-note">
+                                Positive vision: Other nations will recognize Israel's uniqueness because God is close to them
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">National Wisdom</span>
+                                <span class="pattern-tag">Post-Land Period</span>
+                                <span class="pattern-tag">Positive Recognition</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="weft-rule">
+                            Row 2: Unique Revelation<br/>
+                            <span class="rule">Transcendent God<br/>
+                            Moses associates laws<br/>
+                            with divine revelation</span>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">2א: Bringing Transcendent to Immanent</div>
+                            <div class="intersection-content">
+                                Revelation of divine law through Moses. Singular forms emphasize monotheism. Focus on unique Sinai event.
+                            </div>
+                            <div class="intersection-note">
+                                Emphasizes Israel's intimate relationship with God. Memory: Retaining experience
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">Sinai Revelation</span>
+                                <span class="pattern-tag">Monotheistic Focus</span>
+                                <span class="pattern-tag">Intimate Relationship</span>
+                            </div>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">2ב: Separating Transcendent from Immanent</div>
+                            <div class="intersection-content">
+                                Revelation of incorporeal nature of God. Plural forms list various idolatries. Focus on what to avoid.
+                            </div>
+                            <div class="intersection-note">
+                                Idol worship as portion of other nations. Emphasizes national God. Implications of the past
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">Anti-Idolatry</span>
+                                <span class="pattern-tag">National Distinction</span>
+                                <span class="pattern-tag">Incorporeal God</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="weft-rule">
+                            Row 3: Immanence/Transcendence<br/>
+                            <span class="rule">God's effect on<br/>
+                            human affairs</span>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">3א: God's Immanence Through Moses' Death</div>
+                            <div class="intersection-content">
+                                God's immanence in history expressed through Moses' impending death. Personal consequence demonstrates divine involvement.
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">Personal Consequence</span>
+                                <span class="pattern-tag">Divine Immanence</span>
+                            </div>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">3ב: Transcendent Punishment for Objectification</div>
+                            <div class="intersection-content">
+                                Warning that transcendent God punishes those who try to objectify Him. National consequences for idolatry.
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">National Punishment</span>
+                                <span class="pattern-tag">Divine Transcendence</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="weft-rule">
+                            Row 4: Continual Revelation<br/>
+                            <span class="rule">Immanent God in history<br/>
+                            From beginning to future</span>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">4א: Prophecy of Future Relationship</div>
+                            <div class="intersection-content">
+                                Moses prophesies Israel's future: idolatry → exile → repentance → renewal. Calls heaven and earth as witnesses.
+                            </div>
+                            <div class="intersection-note">
+                                God's compassion ensures covenant renewal (like with Moses?)
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">Future Prophecy</span>
+                                <span class="pattern-tag">Exile-Return Cycle</span>
+                                <span class="pattern-tag">Divine Compassion</span>
+                            </div>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">4ב: History of God's Relationship</div>
+                            <div class="intersection-content">
+                                From Egypt: God redeemed nation to establish in own land. Past demonstrates God's commitment.
+                            </div>
+                            <div class="intersection-note">
+                                National redemption in the past as foundation for future
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">Exodus Memory</span>
+                                <span class="pattern-tag">National Redemption</span>
+                                <span class="pattern-tag">Land Promise</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="framework-row">
+                        <td class="weft-rule">
+                            Row 5: Objective<br/>
+                            <span class="rule">Anonymous narrator<br/>
+                            Moses' laws without God<br/>
+                            Third person perspective</span>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">5א: Laws Dependent on Moses</div>
+                            <div class="intersection-content">
+                                Moses establishes cities of refuge across Jordan. Single law for individuals who (like Moses) committed manslaughter.
+                            </div>
+                            <div class="intersection-note">
+                                Continuity: present → future. Creation of refuge cities for future use
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">Practical Law</span>
+                                <span class="pattern-tag">Individual Protection</span>
+                                <span class="pattern-tag">Moses' Authority</span>
+                            </div>
+                        </td>
+                        <td class="intersection">
+                            <div class="intersection-header">5ב: Laws Dependent on History</div>
+                            <div class="intersection-content">
+                                Details of place across Jordan where Moses delivered whole Torah to whole people.
+                            </div>
+                            <div class="intersection-note">
+                                Continuity: past → present. Torah as object from the past
+                            </div>
+                            <div class="pattern-tags">
+                                <span class="pattern-tag">Torah Transmission</span>
+                                <span class="pattern-tag">Geographic Anchor</span>
+                                <span class="pattern-tag">Historical Record</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Framework Analysis -->
+        <section id="framework" class="commentary-section">
+            <h2>The Framework Pattern Continues</h2>
+            
+            <p>Just as in Unit 1, Moses employs a framework structure—but with crucial differences:</p>
+
+            <h3>Row 1: Subjective Authority</h3>
+            <p>Moses begins in first person: "And now, O Israel, listen to the statutes and the judgments which I teach you" (4:1). He positions himself as the source and teacher of law, emphasizing his role in transmitting divine wisdom. The framework opens with Moses' subjective voice, his personal authority as lawgiver.</p>
+
+            <div class="comparison-box">
+                <h4>Framework Comparison:</h4>
+                <ul>
+                    <li><strong>Unit 1, Row 1:</strong> Moses' authority to interpret history (post-Horeb)</li>
+                    <li><strong>Unit 2, Row 1:</strong> Moses' authority to teach law (for life and wisdom)</li>
+                </ul>
+            </div>
+
+            <h3>Row 5: Objective Disappearance</h3>
+            <p>The unit concludes with an anonymous narrator: "Then Moses set apart three cities beyond the Jordan" (4:41). Moses vanishes into third person, becoming the object rather than subject of the narrative. This matches Unit 1's pattern where Moses' personal plea and rejection conclude the unit.</p>
+
+            <div class="comparison-box">
+                <h4>Moses' Disappearance:</h4>
+                <ul>
+                    <li><strong>Unit 1, Row 5:</strong> Personal tragedy - "I besought YHWH...Let it suffice"</li>
+                    <li><strong>Unit 2, Row 5:</strong> Anonymous action - "Moses set apart...Moses spoke"</li>
+                </ul>
+            </div>
+
+            <p>This pattern of disappearance is theological: the lawgiver demonstrates that he too is subject to law. His authority established, Moses models its limits.</p>
+        </section>
+
+        <!-- The Mediator's Paradox -->
+        <section id="mediator" class="commentary-section">
+            <h2>The Mediator's Paradox</h2>
+            
+            <p>The most striking feature of Unit 2's structure is what I call the mediator's paradox. While Moses presents himself as the mediator between YHWH and Israel, the actual structure places YHWH in the middle:</p>
+
+            <ul>
+                <li><strong>Rows 1 & 5:</strong> Moses' law (human framework)</li>
+                <li><strong>Rows 2-4:</strong> YHWH's actions (divine center)</li>
+            </ul>
+
+            <p>Moses spends Unit 1 establishing his authority as historical interpreter. In Unit 2, he uses that authority to step aside and place YHWH at the center. The laws are "Mosaic" in that Moses speaks them, but they succeed precisely because Moses positions YHWH, not himself, as their source and guarantor.</p>
+
+            <h3>The Three Central Rows: YHWH's Actions</h3>
+            
+            <h4>Row 2: Unique Revelation</h4>
+            <p>Moses recalls Sinai not to glorify the event but to establish two principles:</p>
+            <ul>
+                <li><strong>Column א:</strong> The intimacy of revelation - Israel heard YHWH's voice directly</li>
+                <li><strong>Column ב:</strong> The incorporeality of YHWH - they saw no form, preventing idolatry</li>
+            </ul>
+
+            <h4>Row 3: Divine Immanence and Transcendence</h4>
+            <p>The shortest row demonstrates YHWH's involvement in human affairs:</p>
+            <ul>
+                <li><strong>Column א:</strong> Personal consequence - Moses' death shows YHWH's immanence in history</li>
+                <li><strong>Column ב:</strong> National consequence - idolatry brings transcendent punishment</li>
+            </ul>
+
+            <h4>Row 4: Continual Revelation</h4>
+            <p>YHWH's ongoing relationship with Israel:</p>
+            <ul>
+                <li><strong>Column א:</strong> Future prophecy - exile and return cycle</li>
+                <li><strong>Column ב:</strong> Past demonstration - the Exodus as proof of commitment</li>
+            </ul>
+
+            <p>By placing these divine actions at the structural center, Moses demonstrates that law succeeds not through human authority but through divine involvement.</p>
+        </section>
+
+        <!-- Column Analysis -->
+        <section id="columns" class="commentary-section">
+            <h2>The Two Columns: Individual and Communal</h2>
+            
+            <h3>Column א: The Individual Thread</h3>
+            <p>Throughout Column א, the focus remains on individual relationship with law and deity:</p>
+            <ul>
+                <li><strong>1א:</strong> Laws preserve individual lives - "that you may live"</li>
+                <li><strong>2א:</strong> Individual memory - "take heed...lest you forget"</li>
+                <li><strong>3א:</strong> Moses' personal fate - individual consequence</li>
+                <li><strong>4א:</strong> Individual seeking - "you will seek YHWH...and find"</li>
+                <li><strong>5א:</strong> Cities of refuge - protection for individual manslayers</li>
+            </ul>
+
+            <p>The column traces a movement from past to future, with Moses as the paradigmatic individual whose fate instructs all.</p>
+
+            <h3>Column ב: The National Thread</h3>
+            <p>Column ב consistently addresses Israel as a collective entity:</p>
+            <ul>
+                <li><strong>1ב:</strong> National wisdom - "a wise and understanding people"</li>
+                <li><strong>2ב:</strong> National distinction - avoiding idolatry unlike other nations</li>
+                <li><strong>3ב:</strong> National punishment - collective consequence for idolatry</li>
+                <li><strong>4ב:</strong> National redemption - the Exodus as communal memory</li>
+                <li><strong>5ב:</strong> National teaching - "This is the Torah Moses placed before Israel"</li>
+            </ul>
+
+            <p>The column moves from future to past, establishing national identity through collective memory.</p>
+
+            <h3>The Temporal Inversion</h3>
+            <p>Note the sophisticated temporal structure:</p>
+            <ul>
+                <li><strong>Column א:</strong> Past → Future (Moses' history projects forward)</li>
+                <li><strong>Column ב:</strong> Future → Past (Israel's future grounded in past)</li>
+            </ul>
+
+            <p>This creates a temporal chiasm that reinforces the unity of Israel's story across time.</p>
+        </section>
+
+        <!-- Row-by-Row Analysis -->
+        <section id="rows" class="commentary-section">
+            <h2>Row-by-Row Progression: From Law to Law</h2>
+            
+            <h3>Row 1: The Purpose of Law</h3>
+            <p>Moses opens by establishing why Israel should observe the laws:</p>
+            <ul>
+                <li><strong>For Individuals (1א):</strong> Survival - "that you may live and go in"</li>
+                <li><strong>For the Nation (1ב):</strong> Reputation - "This great nation is wise"</li>
+            </ul>
+
+            <p>The contrast between negative and positive motivations is striking. Column א uses the negative example of Baal Peor (those who followed died), while Column ב presents the positive vision of international recognition.</p>
+
+            <h3>Row 2: The Nature of Revelation</h3>
+            <p>The longest row elaborates the Sinai experience:</p>
+            <ul>
+                <li><strong>2א:</strong> Emphasizes hearing over seeing - "You heard the voice"</li>
+                <li><strong>2ב:</strong> Warns against visual representation - "You saw no form"</li>
+            </ul>
+
+            <p>This prepares for the anti-idolatry legislation that will dominate Deuteronomy.</p>
+
+            <h3>Row 3: The Reality of Consequence</h3>
+            <p>The briefest row carries the most personal weight:</p>
+            <ul>
+                <li><strong>3א:</strong> Moses' own exclusion demonstrates divine justice applies to all</li>
+                <li><strong>3ב:</strong> Idolatry will bring national catastrophe</li>
+            </ul>
+
+            <h3>Row 4: The Hope of Restoration</h3>
+            <p>Despite the warnings, hope remains:</p>
+            <ul>
+                <li><strong>4א:</strong> Even in exile, seeking YHWH brings restoration</li>
+                <li><strong>4ב:</strong> The Exodus proves YHWH's commitment to redemption</li>
+            </ul>
+
+            <h3>Row 5: The Implementation of Law</h3>
+            <p>The framework closes with concrete action:</p>
+            <ul>
+                <li><strong>5א:</strong> Three cities of refuge - law protecting life</li>
+                <li><strong>5ב:</strong> Torah placed before Israel - law as national heritage</li>
+            </ul>
+        </section>
+
+        <!-- Theological Implications -->
+        <section id="theology" class="commentary-section">
+            <h2>Theological Implications</h2>
+            
+
+
+            <h3>The Absent Tabernacle</h3>
+            <p>The complete absence of the Tabernacle from both units is worth noting. Moses mentions standing "between YHWH and you" at the mountain, but never mentions the elaborate sanctuary where YHWH would dwell among the people.</p>
+
+            <h3>The Framework Pattern</h3>
+            <p>The framework pattern across both units shows that human authority (Row 1) must yield to divine reality (Rows 2-4), and even the lawgiver disappears before the law (Row 5).</p>
+
+            <h3>Individual and Communal Balance</h3>
+            <p>The two-column structure addresses both individual and communal dimensions. Column א focuses on the individual perspective with Moses as the paradigmatic example, while Column ב addresses Israel as a collective entity with national concerns.</p>
+        </section>
+
+        <!-- Conclusion -->
+        <div class="conclusion-box">
+            <h3>Conclusion: The Transformation Complete</h3>
+            
+            <p>Units 1-2 together accomplish a remarkable transformation. Moses takes the chaotic wilderness experience—full of failure, rebellion, and death—and transforms it into ordered legal principle. The progression is clear:</p>
+            
+            <ul>
+                <li><strong>Unit 1:</strong> Flexible history → Pedagogical narrative</li>
+                <li><strong>Unit 2:</strong> Fixed structure → Eternal law</li>
+            </ul>
+            
+            <p>The irregular 13331 structure permitted Moses to reshape history for teaching. The regular 5×2 structure presents law as unchangeable divine truth. Yet both units employ the same framework device—Moses' authority established in Row 1, his disappearance in Row 5.</p>
+            
+            <p>This pattern will continue throughout Deuteronomy. Moses will speak with increasing urgency and passion, yet always within structures that limit and define his authority. The lawgiver is servant of the law; the mediator points beyond himself to the divine source.</p>
+            
+            <p>Most remarkably, by placing YHWH at the structural center while maintaining the framework of his own speech, Moses demonstrates the perfect balance of human and divine in revelation. The laws are simultaneously "Mosaic" (spoken by Moses) and divine (centered on YHWH). This duality—human words bearing divine authority—establishes the pattern for all subsequent prophecy in Israel.</p>
+            
+            <p>The new generation stands ready to enter the land precisely because they have received both revised history (Unit 1) and revealed law (Unit 2). They know not only what happened but why it matters. They possess not only commandments but the theological framework to understand them. Moses has given them what their parents lacked: a coherent worldview grounded in divine law interpreted through human wisdom.</p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="links-section">
+            <a href="deuteronomy-unit-1.html">← Previous: Deuteronomy Unit 1</a>
+            <a href="/woven/deuteronomy-unit-2/">View Original Torah Unit</a>
+            <a href="../index.html">Torah Commentary Project Home</a>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/torah-commentary-project/assets/js/includes.js"></script>
+    <script src="/torah-commentary-project/assets/js/commentary.js"></script>
+</body>
+</html>

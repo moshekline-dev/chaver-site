@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Genesis Unit 12: Isaac in Gerar - Commentary | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="/torah-weave/">Torah Weave</a> &gt; 
+    <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis</a> &gt; 
+    Unit 12 Commentary
+</nav>
+
+<!-- Header -->
+<header class="unit-header-section">
+    <h1>Genesis Unit 12: Isaac in Gerar</h1>
+    <div class="unit-meta">Genesis 26:1–33</div>
+</header>
+
+<!-- Position map -->
+<aside class="unit-position-map">
+    <svg viewBox="0 0 280 100" width="280" height="100" style="display: block; margin: 1em auto;">
+        <!-- Column headers -->
+        <text x="50" y="15" font-size="9" text-anchor="middle" fill="#666">A</text>
+        <text x="80" y="15" font-size="9" text-anchor="middle" fill="#666">B</text>
+        <text x="110" y="15" font-size="9" text-anchor="middle" fill="#666">C</text>
+        <text x="140" y="15" font-size="9" text-anchor="middle" fill="#666">D</text>
+        <text x="170" y="15" font-size="9" text-anchor="middle" fill="#666">E</text>
+        <text x="200" y="15" font-size="9" text-anchor="middle" fill="#666">F</text>
+        <text x="230" y="15" font-size="9" text-anchor="middle" fill="#666">G</text>
+        
+        <!-- Row headers -->
+        <text x="20" y="40" font-size="9" text-anchor="middle" fill="#666">1</text>
+        <text x="20" y="60" font-size="9" text-anchor="middle" fill="#666">2</text>
+        <text x="20" y="80" font-size="9" text-anchor="middle" fill="#666">3</text>
+        
+        <!-- Row 1: Unit 12 highlighted -->
+        <rect x="35" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="25" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="25" width="25" height="18" fill="#e6ffee" stroke="#333" stroke-width="2"/>
+        <rect x="215" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 2 -->
+        <rect x="35" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="45" width="25" height="18" fill="#ffe6e6" stroke="#ccc"/>
+        <rect x="95" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 3 -->
+        <rect x="35" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="65" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Unit numbers -->
+        <text x="47" y="37" font-size="8" text-anchor="middle">1</text>
+        <text x="107" y="37" font-size="8" text-anchor="middle">5</text>
+        <text x="137" y="37" font-size="8" text-anchor="middle">6</text>
+        <text x="167" y="37" font-size="8" text-anchor="middle">11</text>
+        <text x="197" y="37" font-size="8" text-anchor="middle" font-weight="bold">12</text>
+        <text x="227" y="37" font-size="8" text-anchor="middle">17</text>
+        
+        <text x="47" y="57" font-size="8" text-anchor="middle">2</text>
+        <text x="77" y="57" font-size="8" text-anchor="middle">4</text>
+        <text x="107" y="57" font-size="8" text-anchor="middle">7</text>
+        <text x="137" y="57" font-size="8" text-anchor="middle">8</text>
+        <text x="167" y="57" font-size="8" text-anchor="middle">13</text>
+        <text x="197" y="57" font-size="8" text-anchor="middle">14</text>
+        <text x="227" y="57" font-size="8" text-anchor="middle">18</text>
+        
+        <text x="47" y="77" font-size="8" text-anchor="middle">3</text>
+        <text x="107" y="77" font-size="8" text-anchor="middle">9</text>
+        <text x="137" y="77" font-size="8" text-anchor="middle">10</text>
+        <text x="167" y="77" font-size="8" text-anchor="middle">15</text>
+        <text x="197" y="77" font-size="8" text-anchor="middle">16</text>
+        <text x="227" y="77" font-size="8" text-anchor="middle">19</text>
+        
+    </svg>
+</aside>
+
+<!-- MAIN COMMENTARY BEGINS -->
+<article>
+
+<section class="commentary-section">
+    <h2>The Puzzle: Why Does Isaac Repeat Abraham's Story?</h2>
+    
+    <p>Isaac's life in Genesis 26 reads like a photocopy of Abraham's. Famine drives him to Gerar. He calls his wife his sister. He prospers enormously. He digs wells. He makes a treaty with Abimelech at Beer-sheba. We've seen all of this before in Abraham's cycle. Why does the text tell this story again?</p>
+    
+    <p>The text itself points us toward the answer. The very first verse announces the connection: "And there was a famine in the land, beside the first famine that was in the days of Abraham" (26:1). This is not accidental repetition but intentional cross-reference. The narrative explicitly tells us to compare Isaac's story with Abraham's. When we do, we discover that the similarity conceals a development. Isaac begins in Abraham's shadow and ends as an independent patriarch. The structure traces his emergence.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Unit's Architecture</h2>
+    
+    <p>Unit 12 arranges itself as a 3×2 matrix with three rows and two columns. Each row contains two segments: Column A with YHWH encounters, Column B with Abimelech encounters. The text alternates systematically between divine speech and human conflict, creating two parallel threads that weave through the unit:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Column A<br><small>YHWH Thread</small></th>
+                <th>Column B<br><small>Abimelech Thread</small></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header">Row 1<br><small>Comparison</small></td>
+                <td><strong>1A:</strong> YHWH promises blessing<br>Gen 26:1-5<br><em>"I will be with thee"</em></td>
+                <td><strong>1B:</strong> Sister-wife crisis<br>Gen 26:6-11<br><em>"he feared... lest I die"</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 2<br><small>Transition</small></td>
+                <td><strong>2A:</strong> YHWH blesses; wells stopped<br>Gen 26:12-15<br><em>"YHWH blessed him"</em></td>
+                <td><strong>2B:</strong> Expulsion; wells re-dug<br>Gen 26:16-22<br><em>"Abraham's wells... his names"</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 3<br><small>Independence</small></td>
+                <td><strong>3A:</strong> YHWH appears; Isaac's well<br>Gen 26:23-25<br><em>"I am with thee"</em></td>
+                <td><strong>3B:</strong> Treaty sworn; Isaac's well<br>Gen 26:26-33<br><em>"blessed of YHWH"</em></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Read linearly, the text seems uneven—jumping between YHWH and Abimelech, between promises and wells. Read as a matrix, the alternation reveals purpose. Column A traces YHWH's blessing; Column B traces Abimelech's recognition. Both threads develop in parallel, and both culminate at Beer-sheba.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Vertical Thread: YHWH's Blessing Progression</h2>
+    
+    <p>Column A traces how YHWH's blessing moves from promise to presence. The progression unfolds across three rows:</p>
+    
+    <p>In Row 1, YHWH promises: <span class="vertical1">"I will be with thee, and will bless thee... and I will multiply thy seed as the stars of heaven"</span> (26:3-4). The blessing is future tense, contingent, inherited. YHWH blesses Isaac explicitly "because that Abraham hearkened to My voice" (26:5). Isaac receives blessing on Abraham's account.</p>
+    
+    <p>In Row 2, Isaac acts and YHWH responds: <span class="vertical1">"And Isaac sowed in that land, and found in the same year a hundredfold; and YHWH blessed him"</span> (26:12). The sequence matters: Isaac sows, Isaac reaps, and then YHWH blesses. Isaac's labor produces the harvest; YHWH's blessing confirms it. He becomes "very great" with "possessions of flocks, and possessions of herds, and a great household" (26:13-14). The promise becomes reality through Isaac's own action.</p>
+    
+    <p>In Row 3, YHWH confirms: <span class="vertical1">"I am with thee, and will bless thee, and multiply thy seed"</span> (26:24). Notice the shift in tense. Where Row 1 said "I will be with thee," Row 3 says "I am with thee." The promise has become presence. YHWH's blessing is no longer future but actual. Isaac builds an altar, calls on YHWH's name, and pitches his tent—the full establishment of an independent patriarch.</p>
+    
+    <p>The progression moves from inherited promise to earned presence. Isaac starts as Abraham's heir and ends as YHWH's own.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Second Vertical Thread: Abimelech's Recognition</h2>
+    
+    <p>Column B traces a parallel progression through Abimelech's encounters with Isaac. Where Column A shows divine blessing, Column B shows human recognition of that blessing.</p>
+    
+    <p>In Row 1, Abimelech confronts: <span class="vertical1">"What is this thou hast done unto us?"</span> (26:10). Isaac is in trouble. He has deceived the king, endangering the community. Abimelech must protect Isaac by royal decree: "He that toucheth this man or his wife shall surely be put to death" (26:11). Isaac needs Abimelech's protection.</p>
+    
+    <p>In Row 2, Abimelech expels: <span class="vertical1">"Go from us; for thou art much mightier than we"</span> (26:16). Isaac's prosperity has become threatening. The Philistines envy him. Abimelech sends him away—not from anger but from fear. The balance has shifted. Isaac no longer needs protection; he has become too powerful for the region.</p>
+    
+    <p>In Row 3, Abimelech seeks: <span class="vertical1">"Wherefore are ye come unto me, seeing ye hate me, and have sent me away from you?"</span> (26:27). Now Isaac is the one asking questions. Now Abimelech comes to him. "We saw plainly that YHWH was with thee," Abimelech admits. "Thou art now the blessed of YHWH" (26:28-29). The king who once protected Isaac now seeks a treaty with him.</p>
+    
+    <p>The reversal is complete. Isaac moves from needing Abimelech's protection (Row 1) to being expelled by Abimelech's fear (Row 2) to receiving Abimelech's petition (Row 3). Human recognition follows divine blessing.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Horizontal Thread: From Abraham's Wells to Isaac's Own</h2>
+    
+    <p>Running across the rows, a horizontal thread traces Isaac's relationship to Abraham's wells. This is where the independence theme becomes explicit.</p>
+    
+    <p>Row 2 presents the problem: <span class="horizontal1">"Now all the wells which his father's servants had digged in the days of Abraham his father, the Philistines had stopped them, and filled them with earth"</span> (26:15). Abraham's wells are blocked. Isaac cannot simply inherit; he must recover what was lost.</p>
+    
+    <p>Isaac responds by re-digging: <span class="horizontal1">"And Isaac digged again the wells of water, which they had digged in the days of Abraham his father... and he called their names after the names by which his father had called them"</span> (26:18). Even in recovery, Isaac remains in Abraham's shadow. He restores his father's wells; he uses his father's names. The inheritance is reclaimed but not yet transcended.</p>
+    
+    <p>Row 3 brings the breakthrough. At Beer-sheba, Isaac's servants dig their own well: <span class="horizontal1">"and there Isaac's servants digged a well"</span> (26:25). This is not recovery but creation. After the treaty, they report: <span class="horizontal1">"We have found water"</span> (26:32). Isaac names it Shibah—"oath"—and "therefore the name of the city is Beer-sheba unto this day" (26:33).</p>
+    
+    <p>The wells trace independence. In Row 2, Isaac re-digs Abraham's wells and uses Abraham's names. In Row 3, Isaac digs his own well and gives his own name. The shift from חָפַר (to dig again) to מָצָא (to find) marks the transition from recovery to discovery, from inheritance to ownership.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Fear Chiasm: From Terror to Reassurance</h2>
+    
+    <p>A chiastic pattern connects Row 1 and Row 3 through the theme of fear. In 1B, Isaac <span class="ciasm2">"feared"</span> to identify Rebekah as his wife: "Because I said: <span class="ciasm2">Lest I die</span> because of her" (26:7, 9). Fear drives deception. Isaac expects death if he tells the truth.</p>
+    
+    <p>In 3A, YHWH responds directly to this fear: <span class="ciasm2">"Fear not, for I am with thee"</span> (26:24). The divine reassurance answers the human terror. What Isaac feared in Gerar—death at human hands—is addressed at Beer-sheba by divine presence. The chiasm traces resolution: fear of death becomes assurance of blessing.</p>
+    
+    <p>The Hebrew root ירא (yare', to fear) connects both moments. Isaac's fear in Row 1 is answered by YHWH's "fear not" in Row 3. The X-pattern crosses the matrix diagonally, linking the sister-wife crisis to the divine theophany. Structure itself argues that YHWH's appearance addresses Isaac's deepest anxiety.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Oath Chiasm: From Divine Promise to Human Treaty</h2>
+    
+    <p>A second chiasm connects the corners through oaths. In 1A, YHWH references <span class="ciasm1">"the oath which I swore unto Abraham thy father"</span> (26:3). The divine oath anchors YHWH's promise to Isaac—blessing flows through Abraham's covenant.</p>
+    
+    <p>In 3B, Isaac and Abimelech <span class="ciasm1">"swore one to another"</span> (26:31). The human oath seals the treaty between patriarch and king. What began with divine oath to Abraham culminates with human oath between Isaac and Abimelech.</p>
+    
+    <p>The Hebrew root שבע (shava', to swear) connects both moments and gives Beer-sheba its name. The well is named Shibah (שִׁבְעָה), from the same root. The oath YHWH swore to Abraham becomes the oath Isaac swears at the well. Divine promise generates human covenant. The chiasm traces how heavenly commitment produces earthly arrangement.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Row 1 Position and YHWH's Active Presence</h2>
+    
+    <p>Unit 12 occupies Row 1 of the Isaac-Jacob cycle, the same row position as <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a> in Abraham's cycle. Row 1 units consistently feature YHWH as active subject—speaking, appearing, blessing. This pattern holds in Unit 12: YHWH appears twice (26:2, 24), YHWH blesses directly (26:12), and human characters recognize "YHWH was with thee" (26:28).</p>
+    
+    <p>The exclusive use of YHWH (seven times, never Elohim) signals what kind of story this is. Row 1 handles the transcendent dimension—divine promise, covenant blessing, heavenly aspect of the patriarchal vocation. Unit 12 establishes Isaac's relationship with YHWH as his own, not merely inherited from Abraham. The Row 1 position means this unit addresses the blessing dimension of Isaac's identity.</p>
+    
+    <p>Compare this with <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Unit 9</a>, which also contains Abimelech material but occupies Row 3. There, Elohim tests Abraham; sons are born, expelled, bound. The same Abimelech, the same Beer-sheba, but different divine name, different row, different question. Unit 9 asks whether Abraham fears Elohim. Unit 12 asks whether Isaac can step into YHWH's blessing independently. Same narrative elements; different structural function.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit 5 and Unit 12: The Explicit Correspondence</h2>
+    
+    <p>The text explicitly links Unit 12 to <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a> in its opening verse: "beside the first famine that was in the days of Abraham" (26:1). This cross-reference teaches the reading strategy—when you encounter Unit 12, remember Unit 5. Both units occupy Row 1 corner positions in their respective cycles. Both feature famine, foreign territory, sister-wife crisis, and departure with wealth.</p>
+    
+    <p>But the correspondence reveals development, not mere repetition. In Unit 5, Abraham goes to Egypt; in Unit 12, YHWH tells Isaac "Go not down unto Egypt" (26:2). Abraham acts on his own judgment; Isaac obeys divine instruction. In Unit 5, Abraham's wealth comes from Pharaoh's gifts for Sarah; in Unit 12, Isaac sows, reaps a hundredfold through his own labor, and then YHWH blesses him. Abraham receives; Isaac earns. The same pattern produces different outcomes.</p>
+    
+    <p>Most significantly, Unit 5 shows Abraham entering the covenant story; Unit 12 shows Isaac establishing his own place in it. What Abraham pioneered, Isaac must earn independently. The explicit textual link invites comparison; the comparison reveals that inheritance requires reappropriation. You cannot live on your father's wells. You must dig your own.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Domain Isolation: Why Unit 12 Has No Jacob or Esau</h2>
+    
+    <p>Unit 12 is surrounded by stories about Jacob and Esau. <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a> closes with Jacob obtaining Esau's birthright. <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a> opens with Esau's marriages and continues with the blessing deception. Yet neither son appears in Unit 12. Isaac stands alone with YHWH and Abimelech.</p>
+    
+    <p>This absence reflects what we might call domain isolation. The covenant track (Unit 12) must be kept separate from the family track (<a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Units 11</a> and <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">13</a>) to show that a patriarch's relationship with the Transcendent (YHWH) and the World (Abimelech) operates independently of his domestic strife. Isaac's standing before YHWH and among nations is one domain; his management of sons and inheritance is another. The tracks alternate in Genesis's matrix, keeping these domains structurally distinct.</p>
+    
+    <p>This isolation protects Isaac's patriarchal dignity. In Unit 12, Isaac is "very great" (26:13)—prosperous, blessed, recognized by foreign kings as "the blessed of YHWH" (26:29). In <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a>, Isaac is blind, deceived, manipulated by wife and son. The same patriarch appears diminished in one unit and exalted in another. The structure does not contradict itself; it isolates domains. Isaac's covenant standing (Unit 12) remains intact even as his family management (<a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a>) fails. What happens in the family track does not contaminate the covenant track.</p>
+    
+    <p>Compare this with <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Unit 9</a>, where Abraham's Abimelech scenes and son scenes appear together. There, the domains interact—alliance-making is juxtaposed with what cannot be alliance-made. Here, Isaac's Abimelech business is kept distinct from his family business. The structural separation clarifies the unit's purpose: Unit 12 establishes Isaac as independent patriarch before YHWH and among nations. His sons are handled elsewhere, in their own domain.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>What the Structure Reveals</h2>
+    
+    <p>We began with a puzzle: why does Unit 12 repeat Abraham's story? The woven structure provides the answer: to show how Isaac transcends it.</p>
+    
+    <p>The three rows trace progression: comparison with Abraham (Row 1), conflict over Abraham's wells (Row 2), creation of Isaac's own well (Row 3). The chiastic patterns connect fear with reassurance, divine oath with human treaty. The horizontal well-thread traces the shift from inheritance to ownership. The alternation between YHWH and Abimelech isn't literary awkwardness but deliberate design. Both threads develop in parallel, and both converge at Beer-sheba. Divine blessing and human recognition move together.</p>
+    
+    <p>When read against <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a>, the pattern becomes clear. Both units tell similar stories in corresponding positions. The similarity teaches by contrast: Isaac begins where Abraham began but must arrive at his own place. The well he digs at Beer-sheba is not Abraham's well reclaimed but Isaac's well discovered. "We have found water" (26:32)—not re-found, not re-dug, but found. The heir becomes patriarch. The shadow steps into his own light.</p>
+</section>
+
+</article>
+
+<!-- Link to unit text -->
+<aside class="unit-link-box">
+    <p><strong>Read the structured text:</strong> <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Genesis Unit 12 with color-coded patterns</a></p>
+</aside>
+
+<!-- Navigation -->
+<nav class="unit-navigation">
+    <div class="nav-arrows">
+        <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">← Unit 11</a>
+        <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13 →</a>
+    </div>
+    <div>
+        <a href="/torah-weave/commentary.html">Commentary</a> &rarr; <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis Map</a>
+    </div>
+</nav>
+
+<!-- Citation -->
+<aside class="citation-box">
+    <strong>To cite:</strong> Torah Weave Project. "Genesis Unit 12: Isaac in Gerar." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Genesis/genesis-unit-12/commentary.html
+</aside>
+
+<!-- Series Navigation -->
+<nav class="series-navigation">
+    <h3>Genesis Commentary Series</h3>
+    <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Overview</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: Units</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: Map</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: Three Rows</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture</a>
+</nav>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

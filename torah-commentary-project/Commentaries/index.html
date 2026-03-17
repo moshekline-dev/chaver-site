@@ -1,0 +1,1730 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../../Dynamic%20Web%20Templates/English.dwt" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- #BeginEditable "doctitle" -->
+<title>Untitled 1</title>
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* Modern CSS Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+    }
+    
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+        background-color: #2c3e50;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 1rem 0;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+    
+    nav a:hover {
+        color: #3498db;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Hero Section - Reduced size */
+    .hero {
+        background: linear-gradient(135deg, #e6f2ff 0%, #cce7ff 100%);
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+    
+    /* Site Title - Smaller */
+    .site-title {
+        margin-bottom: 1rem;
+    }
+    
+    .site-title h1 {
+        font-size: 2.2rem;
+        color: #333;
+        margin-bottom: 0.25rem;
+        font-weight: normal;
+    }
+    
+    .site-title h2 {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: normal;
+    }
+    
+    /* Woven Torah Link Box - Smaller */
+    .woven-torah-link {
+        background-color: white;
+        border: 1px solid #5090f0;
+        padding: 0.8rem 1.2rem;
+        margin: 1rem auto;
+        border-radius: 6px;
+        max-width: 600px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .woven-torah-link h3 {
+        color: #5090f0;
+        font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .woven-torah-link p {
+        color: #666;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Buttons - Smaller */
+    .hero-buttons {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .hero-buttons a {
+        background-color: white;
+        color: #333;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border: 1px solid #ddd;
+    }
+    
+    .hero-buttons a:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        background-color: #f8f9fa;
+    }
+    
+    /* Main Content Area */
+    .main-content {
+        background-color: white;
+        padding: 3rem 0;
+        min-height: 400px;
+    }
+    
+    /* Main Content - Full Width */
+    #content {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 3rem 0 2rem;
+        margin-top: 4rem;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-section h4 {
+        margin-bottom: 1rem;
+        color: #ecf0f1;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+    }
+    
+    .footer-section li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a {
+        color: #bdc3c7;
+        text-decoration: none;
+    }
+    
+    .footer-section a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .footer-section p {
+        color: #bdc3c7;
+        line-height: 1.6;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #34495e;
+        color: #95a5a6;
+    }
+    
+    /* ===== TORAH UNIT STYLES (Compatible with Old DWT) ===== */
+    /* Base styles - maintain compatibility */
+    .unit-header {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 1.5rem 0 1rem;
+        page-break-before: always;
+        page-break-after: avoid;
+    }
+    
+    .cell-label {
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0;
+        page-break-after: avoid;
+    }
+    
+    .torah {
+        text-align: justify;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    /* Semantic highlighting */
+    .cell-subdivision {
+        font-weight: bold;
+    }
+    
+    .verse-number {
+        font-weight: bold;
+    }
+    
+    /* Color highlighting classes - original MS Word names preserved */
+    .horizontal1 {
+        color: #3399FF;
+        font-weight: normal;
+    }
+    
+    .vertical1 {
+        color: #C09200;
+        font-weight: normal;
+    }
+    
+    .internalparallel {
+        color: lime;
+        font-weight: normal;
+    }
+    
+    /* New semantic class names */
+    .horizontal-parallel {
+        color: #3399FF;
+        font-weight: normal;
+    }
+    
+    .vertical-parallel {
+        color: #C09200;
+        font-weight: normal;
+    }
+    
+    .internal-parallel {
+        color: lime;
+        font-weight: normal;
+    }
+    
+    /* Additional highlighting classes */
+    .closure {
+        color: #CC0066;
+        font-weight: normal;
+    }
+    
+    .ciasm1 {
+        color: #7030A0;
+        font-weight: normal;
+    }
+    
+    .ciasm2 {
+        color: #FB81EC;
+        font-weight: normal;
+    }
+    
+    .horizontal2 {
+        color: teal;
+        font-weight: normal;
+    }
+    
+    .horizontal3 {
+        color: maroon;
+        font-weight: normal;
+    }
+    
+    .hebrew-paragraph {
+        font-weight: bold;
+    }
+    
+    /* Layout */
+    .scripture-table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 900px;
+    }
+    
+    .scripture-table td {
+        padding: 0.5rem;
+        vertical-align: top;
+    }
+    
+    /* Page breaks */
+    .page-break {
+        page-break-before: always;
+        clear: both;
+    }
+    
+    /* ===== TORAH WEAVE SPECIFIC ADDITIONS ===== */
+    
+    /* Torah Weave Container */
+    .torah-weave-container {
+        font-family: Arial, 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    /* Book-specific heading colors */
+    .genesis-section h1, .genesis-section h2, .genesis-section h3 {
+        color: #7ab0f7 !important;
+    }
+    
+    .exodus-section h1, .exodus-section h2, .exodus-section h3 {
+        color: #f0b070 !important;
+    }
+    
+    .leviticus-section h1, .leviticus-section h2, .leviticus-section h3 {
+        color: #80d0a0 !important;
+    }
+    
+    .numbers-section h1, .numbers-section h2, .numbers-section h3 {
+        color: #f0b070 !important;
+    }
+    
+    .deuteronomy-section h1, .deuteronomy-section h2, .deuteronomy-section h3 {
+        color: #7ab0f7 !important;
+    }
+    
+    /* Full Torah Map Styles */
+    .map-container {
+        width: 100%;
+        max-width: 1170px;
+        height: 900px;
+        position: relative;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 1200px) {
+        .map-container {
+            width: 100%;
+            height: auto;
+            overflow-x: auto;
+        }
+        
+        .map-inner {
+            width: 1170px;
+            height: 900px;
+            position: relative;
+        }
+    }
+    
+    /* Book containers in full map */
+    .book {
+        position: absolute;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+    
+    .book-title {
+        position: absolute;
+        padding: 5px 0;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        z-index: 2;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Book positioning and colors */
+    .genesis {
+        left: 0px;
+        top: 351px;
+        width: 351px;
+        height: 216px;
+        border: 3px solid #7ab0f7;
+        background-color: rgba(122, 176, 247, 0.1);
+    }
+    
+    .genesis-title {
+        left: 0px;
+        top: 351px;
+        width: 351px;
+        background-color: #7ab0f7;
+    }
+    
+    .exodus {
+        left: 486px;
+        top: 27px;
+        width: 297px;
+        height: 297px;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+    }
+    
+    .exodus-title {
+        left: 486px;
+        top: 0px;
+        width: 297px;
+        background-color: #f0b070;
+    }
+    
+    .leviticus {
+        left: 378px;
+        top: 351px;
+        width: 459px;
+        height: 216px;
+        border: 3px solid #80d0a0;
+        background-color: rgba(128, 208, 160, 0.1);
+    }
+    
+    .leviticus-title {
+        left: 378px;
+        top: 351px;
+        width: 459px;
+        background-color: #80d0a0;
+    }
+    
+    .numbers {
+        left: 486px;
+        top: 621px;
+        width: 297px;
+        height: 297px;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+    }
+    
+    .numbers-title {
+        left: 486px;
+        top: 594px;
+        width: 297px;
+        background-color: #f0b070;
+    }
+    
+    .deuteronomy {
+        left: 864px;
+        top: 351px;
+        width: 270px;
+        height: 216px;
+        border: 3px solid #7ab0f7;
+        background-color: rgba(122, 176, 247, 0.1);
+    }
+    
+    .deuteronomy-title {
+        left: 864px;
+        top: 351px;
+        width: 270px;
+        background-color: #7ab0f7;
+    }
+    
+    /* Unit styles in full map */
+    .unit {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 12px;
+        z-index: 3;
+        transition: transform 0.2s;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .unit:hover {
+        transform: scale(1.2);
+        z-index: 10;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    
+    .unit.special {
+        border: 2px solid #CC0066;
+        width: 23px;
+        height: 23px;
+    }
+    
+    /* Unit background colors */
+    .color-d4f2ff { background-color: #d4f2ff; }
+    .color-e6ffee { background-color: #e6ffee; }
+    .color-d4d4ff { background-color: #d4d4ff; }
+    .color-ffe6e6 { background-color: #ffe6e6; }
+    .color-ffccaa { background-color: #ffccaa; }
+    .color-c8e6d2 { background-color: #c8e6d2; }
+    .color-f0f0f0 { background-color: #f0f0f0; }
+    
+    /* Exodus Quadrant Styles */
+    .exodus-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        height: 0;
+        padding-bottom: 100%;
+        margin: 30px auto;
+        border: 3px solid #f0b070;
+        background-color: rgba(240, 176, 112, 0.1);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .quadrant {
+        position: absolute;
+        width: 45%;
+        height: 42%;
+        z-index: 1;
+        border: 1px dashed rgba(240, 176, 112, 0.2);
+    }
+    
+    .quadrant-1 { top: 8%; left: 2%; }
+    .quadrant-2 { top: 8%; right: 2%; }
+    .quadrant-3 { bottom: 14%; left: 2%; }
+    .quadrant-4 { bottom: 14%; right: 2%; }
+    
+    /* Leviticus Concentric Rings */
+    .ring {
+        border: 2px solid #80d0a0;
+        border-radius: 50%;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .ring-outer { background-color: rgba(128, 208, 160, 0.1); }
+    .ring-middle { background-color: rgba(128, 208, 160, 0.2); }
+    .ring-inner { background-color: rgba(128, 208, 160, 0.3); }
+    .ring-center { 
+        background-color: #ffe6e6;
+        border-color: #CC0066;
+        font-weight: bold;
+    }
+    
+    /* ===== COMMENTARY-SPECIFIC STYLES ===== */
+    
+    /* Breadcrumb Navigation */
+    .breadcrumb {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 0.9em;
+    }
+    
+    .breadcrumb a {
+        color: #3498db;
+        text-decoration: none;
+    }
+    
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Unit Metadata */
+    .unit-metadata {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+        font-size: 0.95em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .unit-metadata span {
+        background-color: rgba(255,255,255,0.1);
+        padding: 5px 15px;
+        border-radius: 4px;
+    }
+    
+    /* Unit Navigation */
+    .unit-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0;
+        padding: 20px;
+        background-color: #ecf0f1;
+        border-radius: 6px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .unit-navigation a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .unit-navigation a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Book Map Container */
+    .book-map-container {
+        background-color: #f8f9fa;
+        border: 2px solid #dee2e6;
+        padding: 20px;
+        text-align: center;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+    
+    .deuteronomy-mini-map {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Opening Hook */
+    .opening-hook {
+        font-size: 1.2em;
+        font-style: italic;
+        color: #555;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-left: 4px solid #3498db;
+        margin-bottom: 30px;
+        line-height: 1.8;
+    }
+    
+    /* Torah Text Section */
+    .torah-text-section {
+        background-color: white;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .torah-text-section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    /* Color Legend */
+    .color-legend {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 6px;
+    }
+    
+    .color-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .color-swatch {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+    }
+    
+    /* Commentary Section */
+    .commentary-section {
+        background-color: white;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .commentary-section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .commentary-section h3 {
+        color: #3498db;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .commentary-section h4 {
+        color: #555;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    /* Structural Matrix Section */
+    .matrix-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .matrix-header h2 {
+        font-size: 28px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    .matrix-header p {
+        color: #666;
+        font-style: italic;
+    }
+    
+    /* Commentary Matrix Table */
+    .commentary-matrix {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+    
+    .commentary-matrix th,
+    .commentary-matrix td {
+        border: 2px solid #ddd;
+        padding: 20px;
+        vertical-align: top;
+    }
+    
+    /* Matrix headers */
+    .weft-rule {
+        background-color: #80d0a0;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        width: 180px;
+        font-size: 15px;
+    }
+    
+    .weft-rule .rule {
+        display: block;
+        font-weight: normal;
+        font-size: 13px;
+        margin-top: 8px;
+        font-style: italic;
+        line-height: 1.3;
+    }
+    
+    .column-header {
+        background-color: #7ab0f7;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .column-subtext {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    /* Matrix intersection cells */
+    .intersection {
+        background-color: #ffffff;
+        position: relative;
+    }
+    
+    .intersection-header {
+        color: #2c3e50;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+    
+    .intersection-content {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .intersection-note {
+        font-style: italic;
+        color: #666;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    
+    /* Variation boxes in matrix */
+    .variation-box {
+        background-color: #fef3c7;
+        border: 1px solid #f59e0b;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 13px;
+    }
+    
+    /* Framework cells */
+    .framework-row {
+        background-color: #f8f9fa;
+    }
+    
+    .framework-cell {
+        background-color: #f8f9fa;
+    }
+    
+    /* Matrix Table (simplified version) */
+    .matrix-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .matrix-table th,
+    .matrix-table td {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: left;
+    }
+    
+    .matrix-table th {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .matrix-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    
+    /* Theological Points */
+    .theological-point {
+        background-color: #e8f4fd;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 6px;
+        border-left: 4px solid #3498db;
+    }
+    
+    .theological-point h4 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    /* Conclusion Section */
+    .conclusion-section {
+        background-color: #f0f8f0;
+        border: 2px solid #80d0a0;
+        padding: 30px;
+        border-radius: 8px;
+        margin-top: 40px;
+    }
+    
+    .conclusion-section h2 {
+        color: #5da77a;
+        margin-bottom: 20px;
+    }
+    
+    /* Enhanced Mobile Responsive Design */
+    @media (max-width: 1024px) {
+        /* Tablet adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        /* MOBILE HEADER FIX - Remove sticky positioning */
+        header {
+            position: relative; /* Changed from sticky to relative */
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+        
+        nav {
+            position: relative;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background-color: #2c3e50;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Hero adjustments */
+        .hero {
+            padding: 1rem 0;
+        }
+        
+        .site-title h1 {
+            font-size: 1.8rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1rem;
+        }
+        
+        .woven-torah-link {
+            padding: 0.7rem 1rem;
+            margin: 0.8rem auto;
+        }
+        
+        .woven-torah-link h3 {
+            font-size: 1.1rem;
+        }
+        
+        .woven-torah-link p {
+            font-size: 0.85rem;
+        }
+        
+        /* Hero buttons stack on mobile */
+        .hero-buttons {
+            gap: 0.6rem;
+            margin-top: 0.8rem;
+        }
+        
+        .hero-buttons a {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+        
+        /* Unit metadata stacks on mobile */
+        .unit-metadata {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Unit navigation stacks */
+        .unit-navigation {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        /* Matrix tables scroll horizontally on mobile */
+        .commentary-matrix {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        /* Reduce padding on mobile */
+        .commentary-section,
+        .torah-text-section {
+            padding: 20px;
+        }
+        
+        /* Stack color legend vertically */
+        .color-legend {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        /* Content adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            gap: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        /* Small mobile adjustments */
+        .container {
+            padding: 0 15px;
+        }
+        
+        .site-title h1 {
+            font-size: 2rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1.1rem;
+        }
+        
+        .woven-torah-link {
+            padding: 1.25rem;
+            margin: 1.5rem auto;
+        }
+        
+        .woven-torah-link h3 {
+            font-size: 1.25rem;
+        }
+        
+        .opening-hook {
+            font-size: 1.1em;
+            padding: 15px;
+        }
+        
+        #content {
+            padding: 1rem;
+        }
+        
+        /* Stack footer sections */
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    /* Hebrew Text Support */
+    [lang=he], .hebrew {
+        font-family: 'David Libre', 'Arial', serif;
+        direction: rtl;
+        text-align: right;
+    }
+    
+    /* Print styles */
+    @media print {
+        header, footer, .menu-toggle {
+            display: none;
+        }
+        
+        .main-content {
+            padding: 0;
+        }
+        
+        .unit-navigation {
+            display: none;
+        }
+        
+        .book-map-container {
+            page-break-inside: avoid;
+        }
+        
+        .commentary-matrix {
+            page-break-inside: avoid;
+        }
+    }/* =======================================
+   Additional Matrix Table Styling for Genesis
+   ======================================= */
+
+/* Fix for matrix table units */
+.matrix-table .unit {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    text-align: left;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.matrix-table .unit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.matrix-table .unit-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.matrix-table .unit-reference {
+    font-style: italic;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: center;
+    font-size: 12px;
+}
+
+.matrix-table .unit-description {
+    font-size: 13px;
+    line-height: 1.3;
+    text-decoration: none !important;
+}
+
+/* Remove underlines from unit links */
+.matrix-table .unit,
+.matrix-table .unit:hover,
+.matrix-table .unit:focus,
+.matrix-table .unit:active,
+.matrix-table .unit * {
+    text-decoration: none !important;
+}
+
+/* Matrix table column header styles */
+.matrix-table .col-cosmic,
+.matrix-table .col-transition,
+.matrix-table .col-covenants,
+.matrix-table .col-family,
+.matrix-table .col-political {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+.matrix-table .col-cosmic { background-color: #7ab0f7; }
+.matrix-table .col-transition { background-color: #CC0066; }
+.matrix-table .col-covenants { background-color: #80d0a0; }
+.matrix-table .col-family { background-color: #9999FF; }
+.matrix-table .col-political { background-color: #7ab0f7; }
+
+/* Column letter and theme label styling */
+.matrix-table .column-letter {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.matrix-table .theme-label {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+/* Row label styling */
+.matrix-table .row-label {
+    background-color: #7ab0f7;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.matrix-table .row-number {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.matrix-table .row-desc {
+    font-size: 12px;
+}
+
+/* Fix empty cells */
+.matrix-table .empty-cell {
+    background-color: rgba(122, 176, 247, 0.1);
+    border: 1px solid rgba(122, 176, 247, 0.2);
+}
+    </style>
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="container">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                    <li><a href="/Mishnah-New/Hebrew/Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">Mishnah</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/hebrew%20index.html">עברית</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section - Shows on homepage and other general pages -->
+    <!-- #BeginEditable "writehere" -->
+                <!-- Commentaries Index Page Content - Goes inside DWT writehere region -->
+<!-- Page Title: Torah Commentary Project - Commentaries -->
+
+<style type="text/css">
+
+
+
+
+/* Commentaries page specific styles */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+}
+
+.page-header h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.progress-summary {
+    background-color: #e8f0fe;
+    border-left: 4px solid #5090f0;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.progress-summary h3 {
+    color: #5090f0;
+    margin-bottom: 1rem;
+}
+
+.commentary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.commentary-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.commentary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.commentary-card.available {
+    border-left: 4px solid #2e7d32;
+}
+
+.commentary-card.coming-soon {
+    border-left: 4px solid #ccc;
+    opacity: 0.7;
+}
+
+.card-header {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.card-title {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-structure {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.key-insights {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.key-insights h5 {
+    color: #333;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.key-insights ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.key-insights li {
+    margin-bottom: 0.5rem;
+}
+
+.card-footer {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status-available {
+    background-color: #e8f5e8;
+    color: #2e7d32;
+}
+
+.status-coming-soon {
+    background-color: #f5f5f5;
+    color: #666;
+}
+
+.read-button {
+    background-color: #5090f0;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.read-button:hover {
+    background-color: #3d7bd6;
+    color: white;
+}
+
+.read-button.disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.methodology-link {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.methodology-link h3 {
+    margin-bottom: 1rem;
+}
+
+.methodology-link p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    background-color: #5090f0;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #3d7bd6;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .commentary-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .card-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    
+    .read-button {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .card-header,
+    .card-body,
+    .card-footer {
+        padding: 1rem;
+    }
+}
+</style>
+
+<div class="page-header">
+    <h1>Torah Unit Commentaries</h1>
+    <p>Detailed analyses of Torah units as woven texts, revealing the sophisticated literary architecture that unlocks hidden layers of meaning.</p>
+</div>
+
+<div class="progress-summary">
+    <h3>Commentary Progress</h3>
+    <p><strong>3 of 86 units completed</strong> • Updated regularly as new insights emerge</p>
+</div>
+
+<div class="commentary-grid">
+    <!-- Genesis Unit 1 -->
+    <div class="commentary-card coming-soon">
+        <div class="card-header">
+            <h3 class="card-title">Genesis Unit 1: Creation Account</h3>
+            <div class="card-meta">
+                Genesis 1:1-2:3 • <span class="card-structure">3×2 Regular</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="card-description">The paradigmatic woven text establishing the pattern for reading the entire Torah. Shows how six days of creation form a sophisticated 3×2 matrix revealing progressive levels of "spirit" through degrees of locomotion.</p>
+            <div class="key-insights">
+                <h5>Key Insights:</h5>
+                <ul>
+                    <li>Days 1-3 establish elements, Days 4-6 impart locomotion<a href="index.html">Untitled 
+					1</a></li>
+                    <li>Progressive levels of movement: fixed paths → current-driven → self-directed</li>
+                    <li>Master example of true sub-rows (A, B, C subdivisions)</li>
+                    <li>Exclusively Elohim (natural creation) vs. later YHWH (supernatural intervention)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-footer">
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+            <a href="Genesis/Units/genesis-unit-1.html" class="read-button disabled">Commentary in Progress</a>
+        </div>
+    </div>
+
+    <!-- Genesis Unit 2 -->
+    <div class="commentary-card available">
+        <div class="card-header">
+            <h3 class="card-title">Genesis Unit 2: Generations of Heaven and Earth</h3>
+            <div class="card-meta">
+                Genesis 2:4-4:26 • <span class="card-structure">3×2 Regular</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="card-description">Traces the progressive separation of heaven and earth through divine name patterns and relational breakdown. Shows how YHWH Elohim fractures at Eden's gate, establishing the theological agenda for the entire Torah.</p>
+            <div class="key-insights">
+                <h5>Key Insights:</h5>
+                <ul>
+                    <li>Divine names separate precisely at Garden boundary (2a/2b)</li>
+                    <li>Eve's unique discrimination between YHWH and Elohim</li>
+                    <li>Two incompatible human lineages: technological vs. spiritual</li>
+                    <li>Ground relationship parallels human relationship breakdown</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-footer">
+            <span class="status-badge status-available">Available</span>
+            <a href="Genesis/Units/genesis-unit-2.html" class="read-button">Read Commentary</a>
+        </div>
+    </div>
+
+    <!-- Exodus Unit 3 -->
+    <div class="commentary-card coming-soon">
+        <div class="card-header">
+            <h3 class="card-title">Exodus Unit 3: The Decreation Weave</h3>
+            <div class="card-meta">
+                Exodus 6:29-11:10 • <span class="card-structure">23332 Irregular</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="card-description">Nine signs in Egypt form a sophisticated 3×3 matrix that systematically reverses the creation process. YHWH demonstrates supernatural control by methodically undoing aspects of Elohim's natural order.</p>
+            <div class="key-insights">
+                <h5>Key Insights:</h5>
+                <ul>
+                    <li>Perfect structural inversion of Genesis Unit 1</li>
+                    <li>Physical reality inverted: earth above, sky below</li>
+                    <li>Three agencies: Aaron (earth) → Mixed → Moses (sky)</li>
+                    <li>YHWH vs. Elohim theological distinction demonstrated</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-footer">
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+            <a href="exodus-unit-3.html" class="read-button disabled">Commentary in Progress</a>
+        </div>
+    </div>
+
+    <!-- Leviticus Unit 13 -->
+    <div class="commentary-card coming-soon">
+        <div class="card-header">
+            <h3 class="card-title">Leviticus Unit 13: The Holiness Code</h3>
+            <div class="card-meta">
+                Leviticus 19:1-20:27 • <span class="card-structure">5×2 Special</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="card-description">The center of Torah showing how holiness reunites YHWH and Elohim through Israel's embodiment of divine presence. The five-pair structure parallels the Decalogue, creating the template for cosmic healing.</p>
+            <div class="key-insights">
+                <h5>Key Insights:</h5>
+                <ul>
+                    <li>"You shall be holy, for I YHWH your Elohim am holy" - reunification</li>
+                    <li>Five-pair structure mirrors Decalogue organization</li>
+                    <li>Central pair: love neighbor as yourself + justice principles</li>
+                    <li>Israel as YHWH's "garment" - visible manifestation of holiness</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-footer">
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+            <a href="leviticus-unit-13.html" class="read-button disabled">Commentary in Progress</a>
+        </div>
+    </div>
+
+    <!-- Genesis Unit 3 placeholder -->
+    <div class="commentary-card coming-soon">
+        <div class="card-header">
+            <h3 class="card-title">Genesis Unit 3: Re-creation After Flood</h3>
+            <div class="card-meta">
+                Genesis 5:1-9:29 • <span class="card-structure">3×2 Regular</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="card-description">Shows how the two lineages from Unit 2 play out cosmically, necessitating the flood and Noah's role in uniting both lines for a new beginning. Third creation narrative in Genesis.</p>
+            <div class="key-insights">
+                <h5>Key Insights:</h5>
+                <ul>
+                    <li>Sons of Elohim and daughters of HaAdam intermarriage</li>
+                    <li>Violence escalation requiring divine intervention</li>
+                    <li>Noah as bridge between technological and spiritual lines</li>
+                    <li>Re-creation following destruction pattern</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-footer">
+            <span class="status-badge status-coming-soon">Planned</span>
+            <a href="genesis-unit-3.html" class="read-button disabled">Future Commentary</a>
+        </div>
+    </div>
+
+    <!-- Numbers Unit 7 placeholder -->
+    <div class="commentary-card coming-soon">
+        <div class="card-header">
+            <h3 class="card-title">Numbers Unit 7: The Korach Rebellion</h3>
+            <div class="card-meta">
+                Numbers 16:1-18:32 • <span class="card-structure">Special Center</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="card-description">One of the seven independent units, positioned at the center of Numbers. Explores the challenge to divine authority and the establishment of proper hierarchical order in the wilderness community.</p>
+            <div class="key-insights">
+                <h5>Key Insights:</h5>
+                <ul>
+                    <li>Center of Numbers, dividing the book structurally</li>
+                    <li>Challenge to both priestly and political authority</li>
+                    <li>Earth opens to swallow rebels - supernatural intervention</li>
+                    <li>Aaron's staff blooms - divine authentication</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-footer">
+            <span class="status-badge status-coming-soon">Planned</span>
+            <a href="numbers-unit-7.html" class="read-button disabled">Future Commentary</a>
+        </div>
+    </div>
+</div>
+
+<div class="methodology-link">
+    <h3>New to Woven Torah Analysis?</h3>
+    <p>Learn the principles and techniques for reading Torah as woven text before diving into the commentaries.</p>
+    <a href="../methodology.html" class="button">Study the Methodology</a>
+</div>
+
+<div style="text-align: center; margin: 3rem 0; padding: 2rem; background-color: #f8f9fa; border-radius: 8px;">
+    <h3>Explore the Original Torah Units</h3>
+    <p>Each commentary analyzes the woven structure. View the original Hebrew text with color-coded parallels:</p>
+    <a href="../../woven/" class="button">Browse Torah Units</a>
+</div>
+    <!-- #EndEditable -->
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="container">
+            <div id="content">
+                <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+                <!-- #EndEditable -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Torah Resources</h4>
+                    <ul>
+                        <li><a href="/woven/">Woven Torah Units</a></li>
+                        <li><a href="/torah-commentary-project/">Torah Commentary Project</a></li>
+                        <li><a href="/articles/">Torah Articles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Mishnah Resources</h4>
+                    <ul>
+                        <li><a href="/mishnah/">Mishnah Chapters</a></li>
+                        <li><a href="/mishnah/structure/">Mishnah Structure</a></li>
+                        <li><a href="/mishnah/about/">About the Mishnah</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About This Site</h4>
+                    <p>This site offers a new approach to the study of the Torah and the Mishnah. It is based on an original discovery which has been published in peer-reviewed journals and is consistent with traditional Jewish understandings.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chaver.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+<!-- #EndTemplate -->
+</html>

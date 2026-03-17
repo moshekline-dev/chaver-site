@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../Dynamic%20Web%20Templates/hebrew.dwt" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- #BeginEditable "doctitle" -->
+	<title>פרקי מסכת דמאי</title><meta name="keywords" content="פרקי מסכת דמאי" /><meta name="description" content="פרקי מסכת דמאי" />
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* Modern CSS Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'David Libre', 'Frank Ruehl CLM', 'Georgia', serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+        direction: rtl;
+    }
+    
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+        background-color: #2c3e50;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 1rem 0;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+    
+    nav a:hover {
+        color: #3498db;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Hero Section with Decalogue Table */
+    .hero {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 3rem 0;
+        text-align: center;
+    }
+    
+    .decalogue-table {
+        display: inline-block;
+        margin: 2rem auto;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    
+    .decalogue-table table {
+        border-collapse: collapse;
+    }
+    
+    .decalogue-table td {
+        padding: 1rem 2rem;
+        text-align: center;
+        font-family: 'David Libre', 'Arial', serif;
+        font-size: 1.1rem;
+        border: 1px solid rgba(0,0,0,0.1);
+        min-width: 120px;
+    }
+    
+    /* Decalogue Colors (matching your original) */
+    .decalogue-table tr:nth-child(1) td { background-color: #FEF0CD; }
+    .decalogue-table tr:nth-child(2) td { background-color: #FEE29C; }
+    .decalogue-table tr:nth-child(3) td { background-color: #FED36B; }
+    .decalogue-table tr:nth-child(4) td { background-color: #C48B01; color: white; }
+    .decalogue-table tr:nth-child(5) td { background-color: #835D00; color: white; }
+    
+    /* Site Title */
+    .site-title {
+        margin-top: 2rem;
+    }
+    
+    .site-title h1 {
+        font-size: 3rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+        font-weight: normal;
+    }
+    
+    .site-title h2 {
+        font-size: 1.5rem;
+        color: #666;
+        font-weight: normal;
+        margin-bottom: 2rem;
+    }
+    
+    /* Woven Torah Link Box */
+    .woven-torah-link {
+        background-color: #e8f0fe;
+        border-right: 4px solid #5090f0;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 4px;
+        max-width: 600px;
+    }
+    
+    .woven-torah-link a {
+        color: #5090f0;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    
+    .woven-torah-link a:hover {
+        text-decoration: underline;
+    }
+    
+    .woven-torah-link p {
+        margin-top: 0.5rem;
+        color: #666;
+    }
+    
+    /* Featured Links */
+    .featured-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+    
+    .featured-links a {
+        background-color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: inline-block;
+    }
+    
+    .featured-links a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    /* Main Content Area */
+    .main-content {
+        background-color: white;
+        padding: 3rem 0;
+        min-height: 400px;
+    }
+    
+    /* Main Content - Full Width */
+    #content {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 3rem 0 2rem;
+        margin-top: 4rem;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-section h4 {
+        margin-bottom: 1rem;
+        color: #ecf0f1;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+    }
+    
+    .footer-section li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a {
+        color: #bdc3c7;
+        text-decoration: none;
+    }
+    
+    .footer-section a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .footer-section p {
+        color: #bdc3c7;
+        line-height: 1.6;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #34495e;
+        color: #95a5a6;
+    }
+    
+    /* Enhanced Mobile Responsive Design */
+    @media (max-width: 1024px) {
+        /* Tablet adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        /* Mobile Menu */
+        .menu-toggle {
+            display: block;
+            position: absolute;
+            left: 20px;
+            top: 0;
+        }
+        
+        nav {
+            position: relative;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background-color: #2c3e50;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Hero adjustments */
+        .hero {
+            padding: 2rem 0;
+        }
+        
+        .site-title h1 {
+            font-size: 2.5rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1.25rem;
+        }
+        
+        /* Decalogue table */
+        .decalogue-table {
+            font-size: 0.9rem;
+        }
+        
+        .decalogue-table td {
+            padding: 0.75rem 1rem;
+            min-width: 100px;
+        }
+        
+        /* Featured links stack on mobile */
+        .featured-links {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 0 1rem;
+        }
+        
+        .featured-links a {
+            text-align: center;
+            padding: 1.25rem 1.5rem;
+        }
+        
+        /* Content adjustments */
+        #content {
+            padding: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            gap: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        /* Small mobile adjustments */
+        .container {
+            padding: 0 15px;
+        }
+        
+        .site-title h1 {
+            font-size: 2rem;
+        }
+        
+        .site-title h2 {
+            font-size: 1.1rem;
+        }
+        
+        /* Even smaller text for decalogue on tiny screens */
+        .decalogue-table {
+            font-size: 0.8rem;
+        }
+        
+        .decalogue-table td {
+            padding: 0.5rem 0.75rem;
+            min-width: 80px;
+        }
+        
+        .woven-torah-link {
+            padding: 1.25rem;
+            margin: 1.5rem auto;
+        }
+        
+        .woven-torah-link a {
+            font-size: 1.1rem;
+        }
+        
+        #content {
+            padding: 1rem;
+        }
+        
+        /* Stack footer sections */
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    /* Print styles */
+    @media print {
+        header, footer, .menu-toggle {
+            display: none;
+        }
+        
+        .main-content {
+            padding: 0;
+        }
+        
+        #content {
+            box-shadow: none;
+            max-width: 100%;
+        }
+    }
+    </style>
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="container">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="navMenu">
+                    <li><a href="../hebrew%20index.html">דף הבית</a></li>
+                    <li><a href="../Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">תורה</a></li>
+                    <li><a href="../Mishnah-New/Hebrew/Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">משנה</a></li>
+                    <li><a href="../General/Contact.htm">צור קשר</a></li>
+                    <li><a href="../index.html">English</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- Site Title -->
+            <div class="site-title">
+                <h1>chaver.com</h1>
+                <h2>גישה חדשה לתורה ולמשנה</h2>
+            </div>
+            
+            <!-- Woven Torah Link -->
+            <div class="woven-torah-link">
+                <a href="https://chaver.com/woven/language/he/hebrew_pages/language-he/index.html">פרויקט התורה הארוגה</a>
+                <p>חקירת המארג הספרותי של התורה - 86 יחידות במבנה דו-ממדי</p>
+            </div>
+            
+            <!-- Featured Links -->
+            <div class="featured-links" style="max-width: 900px; margin: 2rem auto;">
+                <a href="../Mishnah-New/Hebrew/Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">פורטל למשנה כדרכה<br><span style="font-size: 0.9em; font-weight: normal;">כל ששה סדרי משנה</span></a>
+                <a href="../Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">התורה כדרכה<br><span style="font-size: 0.9em; font-weight: normal;">86 יחידות בחמישה חומשים</span></a>
+                <a href="../Mishnah-New/Hebrew/Articles/מבוא%20למשנה%20כדרכה%20כולל%20דוגמאות.pdf">מבוא למשנה כדרכה<br><span style="font-size: 0.9em; font-weight: normal;">הסבר השיטה עם דוגמאות</span></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- #BeginEditable "start" -->
+		
+		<h1>פרקי מסכת דמאי</h1><p>
+		<a href="../Mishnah-New/Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%201.htm">מסכת דמאי פרק א </a></p><p>
+		<a href="../Mishnah-New/Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%202.htm">מסכת דמאי פרק ב </a></p><p>
+		<a href="../Mishnah-New/Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%203.htm">&nbsp;מסכת דמאי פרק ג</a></p><p>
+		<a href="../Mishnah-New/Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%204.htm">מסכת דמאי פרק ד </a></p><p>
+		<a href="../Mishnah-New/Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%205.htm">&nbsp;מסכת דמאי פרק ה</a></p><p>
+		<a href="../Mishnah-New/Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%206.htm">מסכת דמאי פרק ו </a></p><p>
+		<a href="../Mishnah-New/Hebrew/Text/Seder%20Zeraim/Masechet%20Demai/Mesechet%20Demai%20Perek%207.htm">&nbsp;מסכת דמאי פרק ז</a></p><p>&nbsp;</p>
+		
+                <!-- #EndEditable -->
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>מאמרים מומלצים</h4>
+                    <ul>
+                        <li><a href="../Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="../Torah-New/Hebrew/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="../Mishnah-New/Hebrew/Articles/מבוא%20למשנה%20כדרכה%20כולל%20דוגמאות.pdf">מבוא חדש למשנה כדרכה</a></li>
+                        <li><a href="../Mishnah-New/Hebrew/Articles/MAVO.htm">מבוא למשנה כדרכה</a></li>
+                        <li><a href="../Mishnah-New/Hebrew/Articles/TheWholeStructure.pdf">כל חלקי הבית אחוזים זה בזה</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>טקסטים מלאים</h4>
+                    <ul>
+                        <li><a href="../Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">פורטל התורה</a></li>
+                        <li><a href="../Mishnah-New/Hebrew/Text/Links%20to%20hamishnah%20cdarcah%20and%20Hebrew%20articles%20on%20the%20Mishnah.htm">פורטל המשנה</a></li>
+                        <li><a href="../Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">המשנה כדרכה</a></li>
+                        <li><a href="../Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">חמשה חומשי התורה כדרכה</a></li>
+                        <li><a href="../Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">התורה כדרכה ב-PDF</a></li>
+                        <li><a href="../Torah-New/Hebrew/Text/The%20Structured%20Torah.docx">התורה כדרכה ב-DOCX</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul>
+                        <li><a href="../General/Color%20Codes/English%20Color%20Code.htm">מדריך קוד הצבעים</a></li>
+                        <li>
+						<a href="../Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">ההשערה החיבורית</a></li>
+                        <li><a href="http://www.facebook.com/woventorah/">דיון בפייסבוק</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">מצגת וידאו חלק 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">מצגת וידאו חלק 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>אודות משה קליין</h4>
+                    <p>בוגר St. John's College ו-Yeshiva University. למדתי אצל הרב יהודה ליאון אשכנזי, המכונה "מניטו," וקבלתי ממנו תורה שבעל פה. חונכתי בגישות מדעיות על ידי פרו' יעקב מילגרום ומרי דאגלס.</p>
+                    <p><a href="../General/Contact.htm">צור קשר</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 משה קליין. פרויקט הטקסטים הארוגים.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+    function toggleMenu() {
+        var menu = document.getElementById('navMenu');
+        menu.classList.toggle('show');
+    }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        var menu = document.getElementById('navMenu');
+        var menuToggle = document.querySelector('.menu-toggle');
+        var nav = document.querySelector('nav');
+        
+        if (!nav.contains(event.target) && menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        }
+    });
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KNYXKY3VV1');
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

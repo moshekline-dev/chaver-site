@@ -1,0 +1,1275 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>מדריך קוד הצבעים המקיף של אריג התורה | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <meta name="description" content="מדריך מקיף למערכת קידוד הצבעים של אריג התורה - הדגשת חיבורים לשוניים ודפוסים מבניים בתורה">
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <style>
+
+
+
+
+
+
+
+
+
+
+    /* ==========================================
+       HEBREW RTL PAGE OVERRIDES
+       These styles are specific to Hebrew content pages
+       and must override main.css defaults
+       ========================================== */
+    
+    /* Force RTL direction for entire page */
+    html {
+        direction: rtl !important;
+    }
+    
+    body {
+        direction: rtl !important;
+        text-align: right !important;
+        font-family: 'David Libre', 'Frank Ruehl CLM', Georgia, serif !important;
+    }
+    
+    /* Force all lists to display as block (override any flexbox from main.css) */
+    ul, ol {
+        display: block !important;
+        flex-direction: unset !important;
+        flex-wrap: unset !important;
+    }
+    
+    li {
+        display: list-item !important;
+    }
+    
+    /* Main content wrapper - ensure RTL */
+    main.content-wrapper {
+        direction: rtl;
+        text-align: right;
+    }
+    
+    /* ==========================================
+       TABLE OF CONTENTS
+       ========================================== */
+    .toc {
+        background-color: #f8f5f0;
+        border: 1px solid #e8e4df;
+        border-radius: 8px;
+        padding: 20px 30px;
+        margin: 30px 0;
+    }
+    
+    .toc h2 {
+        margin-top: 0;
+        border-bottom: 1px solid #e8e4df;
+        padding-bottom: 10px;
+        font-size: 1.4em;
+    }
+    
+    .toc ul {
+        list-style-type: none !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+    
+    .toc li {
+        margin-bottom: 10px !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .toc ul ul {
+        padding-right: 25px !important;
+        margin-top: 8px !important;
+    }
+    
+    .toc a {
+        color: #5d87a1;
+        text-decoration: none;
+        border-bottom: none;
+    }
+    
+    .toc a:hover {
+        border-bottom: 1px solid #5d87a1;
+    }
+    
+    /* ==========================================
+       CONNECTION TABLE
+       ========================================== */
+    .connection-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        direction: rtl;
+    }
+    
+    .connection-table th,
+    .connection-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: right;
+    }
+    
+    .connection-table th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+    }
+    
+    .connection-table tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+    
+    /* ==========================================
+       EXAMPLE BOXES
+       ========================================== */
+    .example-box {
+        background-color: #f9f9f9;
+        border-right: 4px solid #5d87a1;
+        border-left: none;
+        padding: 15px 20px;
+        margin: 20px 0;
+        border-radius: 0 4px 4px 0;
+    }
+    
+    .example-box .pattern-title {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    .example-box ul,
+    .example-box ol {
+        padding-right: 20px !important;
+        padding-left: 0 !important;
+    }
+    
+    /* ==========================================
+       EXPLANATION BOX
+       ========================================== */
+    .explanation {
+        background-color: #f0f7fa;
+        padding: 25px;
+        border-radius: 8px;
+        margin: 30px 0;
+    }
+    
+    .explanation h3 {
+        color: #2c5282;
+        margin-top: 20px;
+    }
+    
+    .explanation h3:first-child {
+        margin-top: 0;
+    }
+    
+    /* ==========================================
+       SECTION DIVIDER
+       ========================================== */
+    .section-divider {
+        text-align: center;
+        margin: 50px 0;
+        position: relative;
+    }
+    
+    .section-divider::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        border-top: 2px solid #ddd;
+    }
+    
+    .section-divider span {
+        background-color: #fff;
+        padding: 0 20px;
+        position: relative;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    /* ==========================================
+       UNIT CONTAINER
+       ========================================== */
+    .unit-container {
+        margin: 40px 0;
+        padding: 30px;
+        background-color: #fafafa;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+    }
+    
+    .unit-header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #ddd;
+    }
+    
+    .unit-header h2 {
+        margin: 0 0 10px 0;
+        color: #2c5282;
+    }
+    
+    .unit-header p {
+        margin: 0;
+        color: #666;
+        font-size: 1.1em;
+    }
+    
+    /* ==========================================
+       THREAD HEADERS
+       ========================================== */
+    .thread-header {
+        background-color: #e8e4df;
+        padding: 10px 15px;
+        margin: 25px 0 15px 0;
+        border-radius: 4px;
+        font-size: 1.2em;
+    }
+    
+    /* ==========================================
+       HEBREW SCRIPTURE TABLES
+       ========================================== */
+    .hebrew-scripture-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        direction: rtl;
+        table-layout: fixed;
+    }
+    
+    .hebrew-scripture-table th {
+        background-color: #e8e4df;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #ccc;
+        width: auto;
+    }
+    
+    .hebrew-scripture-table td {
+        border: 1px solid #ccc;
+        padding: 15px;
+        vertical-align: top;
+        text-align: right;
+        line-height: 1.8;
+        font-size: 1.05em;
+    }
+    
+    /* For 2-column tables */
+    .hebrew-scripture-table th:first-child,
+    .hebrew-scripture-table td:first-child {
+        width: 50%;
+    }
+    
+    /* For 3-column tables */
+    .hebrew-scripture-table[data-columns="3"] th,
+    .hebrew-scripture-table[data-columns="3"] td {
+        width: 33.33%;
+    }
+    
+    /* ==========================================
+       VERSE AND SUBDIVISION MARKERS
+       ========================================== */
+    .verse-num {
+        color: #888;
+        font-size: 0.85em;
+        margin: 0 3px;
+    }
+    
+    .subdivision {
+        font-weight: bold;
+        color: #5d87a1;
+        margin-left: 8px;
+    }
+    
+    .hebrew-p {
+        color: #888;
+        font-size: 0.9em;
+    }
+    
+    /* ==========================================
+       SCROLL TO TOP BUTTON
+       ========================================== */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        right: auto;
+        width: 50px;
+        height: 50px;
+        background-color: #5d87a1;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+        z-index: 1000;
+    }
+    
+    .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .scroll-to-top:hover {
+        background-color: #4a7291;
+    }
+    
+    /* ==========================================
+       HEADINGS
+       ========================================== */
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    
+    h2 {
+        margin-top: 40px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    /* ==========================================
+       LINKS
+       ========================================== */
+    a {
+        color: #5d87a1;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    /* ==========================================
+       RESPONSIVE STYLES
+       ========================================== */
+    @media (max-width: 768px) {
+        .hebrew-scripture-table {
+            font-size: 0.9em;
+        }
+        
+        .hebrew-scripture-table td {
+            padding: 10px;
+        }
+        
+        .unit-container {
+            padding: 15px;
+        }
+        
+        .toc {
+            padding: 15px;
+        }
+        
+        .example-box {
+            padding: 12px 15px;
+        }
+    }
+    
+    /* ==========================================
+       OVERRIDE NAV LIST STYLES
+       Navigation should remain horizontal - only content lists vertical
+       ========================================== */
+    nav ul {
+        display: flex !important;
+    }
+    
+    nav li {
+        display: block !important;
+    }
+    
+    /* Footer lists can stay as-is from main.css */
+    footer ul {
+        display: block !important;
+    }
+    
+    footer li {
+        display: list-item !important;
+    }
+    </style>
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <h1>מדריך קוד הצבעים המקיף של אריג התורה</h1>
+    
+    <nav class="toc">
+        <h2>תוכן העניינים</h2>
+        <ul>
+            <li><a href="#introduction">הקדמה</a></li>
+            <li><a href="#connection-types">שלושת סוגי החיבורים</a></li>
+            <li><a href="#horizontal-links">חיבורים אופקיים</a></li>
+            <li><a href="#vertical-links">חיבורים אנכיים</a></li>
+            <li><a href="#boundary-links">חיבורי גבול</a></li>
+            <li><a href="#visual-text">התורה כטקסט חזותי</a></li>
+            <li><a href="#example-units">יחידות דוגמה שלמות</a>
+                <ul>
+                    <li><a href="#exodus-unit-4">שמות יחידה 4 (יב:א-יג:טז)</a></li>
+                    <li><a href="#exodus-unit-5">שמות יחידה 5 (יג:יז-טו:כא)</a></li>
+                </ul>
+            </li>
+            <li><a href="#meaning-patterns">כיצד צבעים חושפים משמעות</a></li>
+            <li><a href="#example-patterns">דוגמאות של דפוסי קידוד צבע</a></li>
+            <li><a href="#conclusions">סיכום</a></li>
+        </ul>
+    </nav>
+
+    <h2 id="introduction">הקדמה</h2>
+    <p>אריג התורה משתמש במערכת קידוד צבע מתוחכמת להדגשת חיבורים לשוניים ודפוסים מבניים בתוך הטקסט המקראי. גישה חזותית זו חושפת את העיצוב המורכב של התורה ומסייעת לקוראים לגלות דפוסים משמעותיים שאחרת עלולים להיעלם מהעין.</p>
+    <p>מערכת צבעים זו משנה את הבנתנו את התורה על ידי הפיכת הרשת המורכבת של חיבורים לשוניים שנותנים לטקסט את הלכידות והמשמעות שלו לגלויה. ההדגשה מאפשרת לקוראים לראות במבט חטוף כיצד חלקים שונים קשורים זה לזה וכיצד נושאים מתפתחים לאורך היחידה.</p>
+
+    <h2 id="connection-types">שלושת סוגי החיבורים</h2>
+    <p>מערכת קידוד הצבע מאורגנת לשלוש קבוצות עיקריות של חיבורים:</p>
+
+    <table class="connection-table">
+        <tr>
+            <th>סוג החיבור</th>
+            <th>תיאור</th>
+            <th>צבעים בשימוש</th>
+        </tr>
+        <tr>
+            <td>חיבורים אופקיים</td>
+            <td>חיבורים על פני עמודות באותה שורה</td>
+            <td><span class="horizontal1">כחול</span>, <span class="horizontal2">טורקיז</span>, <span class="horizontal3">חום-אדום</span></td>
+        </tr>
+        <tr>
+            <td>חיבורים אנכיים</td>
+            <td>חיבורים בתוך עמודה</td>
+            <td><span class="vertical1">זהב</span>, <span class="internalparallel">ירוק</span></td>
+        </tr>
+        <tr>
+            <td>חיבורי גבול</td>
+            <td>חיבורים בין תחילת היחידה לסופה</td>
+            <td><span class="closure">ורוד</span>, <span class="ciasm1">סגול</span>, <span class="ciasm2">סגול בהיר</span></td>
+        </tr>
+    </table>
+
+    <h2 id="horizontal-links">חיבורים אופקיים</h2>
+    <p>ישנם שני סוגים של חיבורים אופקיים:</p>
+
+    <div class="example-box">
+        <p class="pattern-title"><span class="horizontal1">מקבילות ישירות (כחול)</span></p>
+        <p>מקבילות ישירות בין כל הקטעים של חוט אופקי מודגשות בצבע זה. זה לעתים קרובות מצביע על הנושא המשותף של החוט. <a href="#horizontal-example">ראה דוגמה 1 למטה</a>.</p>
+    </div>
+
+    <div class="example-box">
+        <p class="pattern-title">מבנה משולש (<span class="horizontal2">טורקיז</span> ו<span class="horizontal3">חום-אדום</span>)</p>
+        <p>בחוט בעל שלושה חלקים, התורה משתמשת בהיגיון חזותי שבו האמצע הרעיוני נמצא פיזית באמצע:</p>
+        <ul>
+            <li>הדגשה ב<span class="horizontal2">טורקיז</span> מסמנת מילות מפתח המופיעות גם בקטע הראשון וגם בשני.</li>
+            <li>הדגשה ב<span class="horizontal3">חום-אדום</span> מסמנת מילות מפתח המופיעות גם בקטע השני וגם בשלישי.</li>
+        </ul>
+        <p>התוצאה היא שהקטע האמצעי מכיל מילים המסומנות בשני הצבעים, מדגים חזותית את תפקידו כאמצע הרעיוני. <a href="#triadic-example">ראה דוגמה 2 למטה</a>.</p>
+    </div>
+
+    <h2 id="vertical-links">חיבורים אנכיים</h2>
+    <p>נעשה שימוש בשני סוגים של הדגשה אנכית:</p>
+
+    <div class="example-box">
+        <p class="pattern-title"><span class="vertical1">המשכיות חוט (זהב)</span></p>
+        <p>הדגשה בזהב מציינת מילים או ביטויים חוזרים בתוך מספר קטעים של חוט שתי (עמודה). הדגשה זו חושפת כיצד נושאים מתפתחים ונמשכים בתוך עמודה. <a href="#vertical-example">ראה דוגמה 3 למטה</a>.</p>
+    </div>
+
+    <div class="example-box">
+        <p class="pattern-title"><span class="internalparallel">מקבילות פנימיות (ירוק)</span></p>
+        <p>הדגשה בירוק משמשת לסימון מקבילות בין חלקים של קטע בודד. <a href="#internal-parallel-example">ראה דוגמה 4 למטה</a>.</p>
+    </div>
+
+    <h2 id="boundary-links">חיבורי גבול</h2>
+    <p>חיבורי גבול מתייחסים לחיבורים בין חוטי הערב הפותח והסוגר:</p>
+
+    <div class="example-box">
+        <p class="pattern-title"><span class="closure">סגירה (ורוד)</span></p>
+        <p>הדגשה בורוד מסמנת חיבורים לשוניים בין חוט הערב הראשון לאחרון, יוצרת "מעטפה" שסוגרת את כל היחידה. <a href="#closure-example">ראה דוגמה 5 למטה</a>.</p>
+    </div>
+
+    <div class="example-box">
+        <p class="pattern-title">מבנה כיאסטי (<span class="ciasm1">סגול</span> ו<span class="ciasm2">סגול בהיר</span>)</p>
+        <p>מבנה כיאסטי יוצר דפוס חיבורים בצורת X:</p>
+        <ul>
+            <li><span class="ciasm1">הדגשה בסגול</span> מציינת את חצי הכיאזם שנוצר על ידי החיבור בין הקטע השמאלי העליון (קטע ראשון של חוט ערב ראשון) לקטע הימני התחתון (קטע אחרון של חוט ערב אחרון).</li>
+            <li><span class="ciasm2">הדגשה בסגול בהיר</span> מציינת את החיבור בין הימני העליון (קטע אחרון של חוט ראשון) לשמאלי התחתון (קטע ראשון של חוט אחרון) חצי הכיאזם.</li>
+        </ul>
+        <p><a href="#chiastic-example">ראה דוגמה 6 למטה</a>.</p>
+    </div>
+
+    <h2 id="visual-text">התורה כטקסט חזותי</h2>
+    <p>מערכת ההדגשה של אריג התורה חושפת שהתורה עוצבה עם היגיון חזותי ולא בעל פה בלבד. זה בולט במיוחד במיקום האמצע הרעיוני במבנים משולשים:</p>
+
+    <ul>
+        <li>ב<strong>היגיון בעל פה</strong>, הסינתזה באה אחרונה: תזה, אנטיתזה, סינתזה.</li>
+        <li>ב<strong>היגיון חזותי</strong>, האמצע הרעיוני נמצא פיזית במיקום האמצעי: מיקום ראשון, <strong>אמצע רעיוני</strong>, מיקום שלישי.</li>
+    </ul>
+
+    <p>עיקרון זה חל לא רק על החלקים בתוך חוט אלא גם על החוטים עצמם. חוט הממוקם בין שני חוטים אחרים צריך להיקרא כאמצע רעיוני המחבר ביניהם. <a href="#visual-logic-example">ראה דוגמה 7 למטה</a>.</p>
+
+    <div class="section-divider">
+        <span>יחידות דוגמה שלמות</span>
+    </div>
+
+    <h2 id="example-units">יחידות דוגמה שלמות</h2>
+
+    <!-- Exodus Unit 4 -->
+    <div class="unit-container" id="exodus-unit-4">
+        <div class="unit-header">
+            <h2>שמות יחידה 4 (יב:א-יג:טז)</h2>
+            <p>הפסח, היציאה וקידוש הבכורות</p>
+        </div>
+
+        <h3 class="thread-header">חוט 1</h3>
+        <table class="hebrew-scripture-table">
+            <thead>
+                <tr>
+                    <th>1א</th>
+                    <th>1ב</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">יב:א</span> ויאמר יהוה אל משה ואל אהרן בארץ מצרים לאמר <span class="verse-num">יב:ב</span> <span class="ciasm1">החדש הזה</span> לכם ראש חדשים ראשון הוא לכם לחדשי השנה <span class="verse-num">יב:ג</span> דברו אל כל עדת ישראל לאמר בעשר לחדש הזה <span class="horizontal1">ויקחו להם איש שה לבית אבת</span> שה לבית <span class="verse-num">יב:ד</span> ואם ימעט הבית מהיות משה ולקח הוא ושכנו הקרב אל ביתו במכסת נפשת איש לפי אכלו תכסו על השה <span class="verse-num">יב:ה</span> שה תמים זכר בן שנה יהיה לכם מן הכבשים ומן העזים תקחו <span class="verse-num">יב:ו</span> והיה לכם למשמרת עד ארבעה עשר יום לחדש הזה <span class="horizontal1">ושחטו אתו</span> כל קהל עדת ישראל בין הערבים <span class="verse-num">יב:ז</span> <span class="horizontal1">ולקחו מן הדם ונתנו על שתי המזוזת ועל המשקוף על הבתים</span> אשר יאכלו אתו בהם <span class="verse-num">יב:ח</span> ואכלו את הבשר בלילה הזה צלי אש ומצות על מררים יאכלהו <span class="verse-num">יב:ט</span> אל תאכלו ממנו נא ובשל מבשל במים כי אם צלי אש ראשו על כרעיו ועל קרבו <span class="verse-num">יב:י</span> ולא תותירו ממנו עד בקר והנתר ממנו עד בקר באש תשרפו <span class="verse-num">יב:יא</span> וככה תאכלו אתו מתניכם חגרים נעליכם ברגליכם ומקלכם בידכם ואכלתם אתו בחפזון פסח הוא ליהוה <span class="verse-num">יב:יב</span> <span class="horizontal1">ועברתי בארץ מצרים בלילה הזה והכיתי כל בכור בארץ מצרים מאדם ועד בהמה ובכל אלהי מצרים אעשה שפטים אני יהוה</span> <span class="verse-num">יב:יג</span> <span class="horizontal1">והיה הדם לכם לאת על הבתים אשר אתם שם וראיתי את הדם ופסחתי עלכם ולא יהיה בכם נגף למשחית בהכתי בארץ מצרים</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">יב:כא</span> ויקרא משה לכל זקני ישראל ויאמר אלהם <span class="horizontal1">משכו וקחו לכם צאן למשפחתיכם ושחטו</span> הפסח <span class="verse-num">יב:כב</span> <span class="horizontal1">ולקחתם אגדת אזוב וטבלתם בדם אשר בסף והגעתם אל המשקוף ואל שתי המזוזת מן הדם אשר בסף</span> ואתם לא תצאו איש מפתח ביתו עד בקר <span class="verse-num">יב:כג</span> <span class="horizontal1">ועבר יהוה לנגף את מצרים וראה את הדם על המשקוף ועל שתי המזוזת ופסח יהוה על הפתח ולא יתן המשחית לבא אל בתיכם לנגף</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">יב:יד</span> <span class="ciasm1">והיה היום הזה לכם לזכרון</span> וחגתם אתו חג ליהוה <span class="horizontal1">לדרתיכם</span> <span class="horizontal1">חקת עולם</span> תחגהו <span class="verse-num">יב:טו</span> <span class="ciasm1">שבעת ימים מצות תאכלו</span> אך ביום הראשון תשביתו שאר מבתיכם כי כל אכל חמץ ונכרתה הנפש ההוא מישראל מיום הראשן עד יום השבעי <span class="verse-num">יב:טז</span> וביום הראשון מקרא קדש וביום השביעי מקרא קדש יהיה לכם כל מלאכה לא יעשה בהם אך אשר יאכל לכל נפש הוא לבדו יעשה לכם <span class="verse-num">יב:יז</span> ושמרתם את המצות כי <span class="vertical1">בעצם היום הזה הוצאתי את צבאותיכם מארץ מצרים</span> ושמרתם את היום הזה לדרתיכם חקת עולם <span class="verse-num">יב:יח</span> בראשן בארבעה עשר יום לחדש בערב תאכלו מצת עד יום האחד ועשרים לחדש בערב <span class="verse-num">יב:יט</span> שבעת ימים שאר לא ימצא בבתיכם כי כל אכל מחמצת ונכרתה הנפש ההוא מעדת ישראל בגר ובאזרח הארץ <span class="verse-num">יב:כ</span> כל מחמצת לא תאכלו בכל מושבתיכם תאכלו מצות <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">יב:כד</span> ושמרתם את הדבר הזה <span class="horizontal1">לחק לך ולבניך עד עולם</span> <span class="verse-num">יב:כה</span> <span class="vertical1">והיה כי תבאו אל הארץ אשר יתן יהוה לכם כאשר דבר</span> ושמרתם את העבדה הזאת <span class="verse-num">יב:כו</span> <span class="vertical1">והיה כי יאמרו אליכם בניכם מה העבדה הזאת לכם</span> <span class="verse-num">יב:כז</span> ואמרתם זבח פסח הוא ליהוה אשר פסח על בתי בני ישראל במצרים בנגפו את מצרים ואת בתינו הציל ויקד העם וישתחוו <span class="verse-num">יב:כח</span> <span class="ciasm2">וילכו ויעשו בני ישראל כאשר צוה יהוה את משה ואהרן כן עשו</span> <span class="hebrew-p">{ס}</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="thread-header">חוט 2</h3>
+        <table class="hebrew-scripture-table">
+            <thead>
+                <tr>
+                    <th>2א</th>
+                    <th>2ב</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">יב:כט</span> ויהי בחצי הלילה <span class="horizontal1">ויהוה הכה כל בכור בארץ מצרים</span> מבכר פרעה הישב על כסאו עד בכור השבי אשר בבית הבור וכל בכור בהמה</p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">יב:לה</span> ובני ישראל עשו כדבר משה וישאלו ממצרים כלי כסף וכלי זהב ושמלת <span class="verse-num">יב:לו</span> <span class="horizontal1">ויהוה נתן את חן העם בעיני מצרים</span> וישאלום וינצלו את מצרים <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">יב:ל</span> ויקם פרעה לילה הוא וכל עבדיו וכל מצרים ותהי צעקה גדלה במצרים כי אין בית אשר אין שם מת <span class="verse-num">יב:לא</span> ויקרא למשה ולאהרן לילה ויאמר קומו צאו מתוך עמי גם אתם גם בני ישראל ולכו עבדו את יהוה כדברכם <span class="verse-num">יב:לב</span> <span class="horizontal1">גם צאנכם גם בקרכם</span> קחו כאשר דברתם ולכו וברכתם גם אתי</p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">יב:לז</span> ויסעו בני ישראל מרעמסס סכתה כשש מאות אלף רגלי הגברים לבד מטף <span class="verse-num">יב:לח</span> וגם ערב רב עלה אתם <span class="horizontal1">וצאן ובקר מקנה כבד מאד</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">C</span> <span class="verse-num">יב:לג</span> ותחזק מצרים על העם למהר לשלחם מן הארץ כי אמרו כלנו מתים <span class="verse-num">יב:לד</span> <span class="horizontal1">וישא העם את בצקו טרם יחמץ</span> משארתם צררת בשמלתם על שכמם</p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">C</span> <span class="verse-num">יב:לט</span> <span class="horizontal1">ויאפו את הבצק אשר הוציאו ממצרים עגת מצות כי לא חמץ כי גרשו ממצרים ולא יכלו להתמהמה</span> וגם צדה לא עשו להם</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="thread-header">חוט 3</h3>
+        <table class="hebrew-scripture-table">
+            <thead>
+                <tr>
+                    <th>3א</th>
+                    <th>3ב</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">יב:מ</span> ומושב <span class="internalparallel">בני ישראל</span> אשר ישבו במצרים שלשים שנה וארבע מאות שנה <span class="verse-num">יב:מא</span> ויהי מקץ שלשים שנה וארבע מאות שנה <span class="vertical1">ויהי בעצם היום הזה יצאו כל צבאות יהוה מארץ מצרים</span> <span class="verse-num">יב:מב</span> ליל שמרים הוא ליהוה להוציאם מארץ מצרים הוא הלילה הזה ליהוה שמרים לכל <span class="internalparallel">בני ישראל</span> לדרתם <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">יג:ג</span> ויאמר משה אל העם <span class="ciasm1">זכור את היום הזה</span> <span class="vertical1">אשר יצאתם ממצרים מבית עבדים</span> <span class="internalparallel">כי בחזק יד הוציא יהוה אתכם מזה</span> <span class="vertical1">ולא יאכל חמץ</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">יב:מג</span> ויאמר יהוה אל משה ואהרן זאת חקת הפסח כל בן נכר לא יאכל בו <span class="verse-num">יב:מד</span> וכל עבד איש מקנת כסף ומלתה אתו אז יאכל בו <span class="verse-num">יב:מה</span> תושב ושכיר לא יאכל בו <span class="verse-num">יב:מו</span> בבית אחד יאכל לא תוציא מן הבית מן הבשר חוצה ועצם לא תשברו בו <span class="verse-num">יב:מז</span> כל עדת ישראל יעשו אתו <span class="verse-num">יב:מח</span> וכי יגור אתך גר ועשה פסח ליהוה המול לו כל זכר ואז יקרב לעשתו והיה כאזרח הארץ וכל ערל לא יאכל בו <span class="verse-num">יב:מט</span> תורה אחת יהיה לאזרח ולגר הגר בתוככם <span class="verse-num">יב:נ</span> <span class="ciasm2">ויעשו כל</span> <span class="internalparallel">בני ישראל</span> <span class="ciasm2">כאשר צוה יהוה את משה ואת אהרן כן עשו</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">יג:ד</span> היום אתם יצאים <span class="ciasm1">בחדש האביב</span> <span class="verse-num">יג:ה</span> <span class="vertical1">והיה כי יביאך יהוה אל ארץ</span> הכנעני והחתי והאמרי והחוי והיבוסי <span class="vertical1">אשר נשבע לאבתיך לתת לך</span> ארץ זבת חלב ודבש ועבדת את העבדה הזאת בחדש הזה <span class="verse-num">יג:ו</span> <span class="ciasm1">שבעת ימים תאכל מצת וביום השביעי חג ליהוה</span> <span class="verse-num">יג:ז</span> <span class="ciasm1">מצות יאכל את שבעת הימים</span> ולא יראה לך חמץ ולא יראה לך שאר בכל גבלך</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">C</span> <span class="hebrew-p">{ס}</span> <span class="verse-num">יב:נא</span> <span class="vertical1">ויהי בעצם היום הזה הוציא יהוה את</span> <span class="internalparallel">בני ישראל</span> <span class="vertical1">מארץ מצרים על צבאתם</span> <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">C</span> <span class="verse-num">יג:ח</span> <span class="vertical1">והגדת לבנך ביום ההוא לאמר</span> בעבור זה עשה יהוה לי בצאתי ממצרים <span class="verse-num">יג:ט</span> והיה לך לאות על ידך ולזכרון בין עיניך למען תהיה תורת יהוה בפיך כי <span class="internalparallel">ביד חזקה הוצאך יהוה ממצרים</span> <span class="verse-num">יג:י</span> ושמרת את החקה הזאת למועדה מימים ימימה <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">D</span> <span class="verse-num">יג:א</span> וידבר יהוה אל משה לאמר <span class="verse-num">יג:ב</span> <span class="horizontal1">קדש לי כל בכור פטר כל רחם</span> ב<span class="internalparallel">בני ישראל</span> <span class="horizontal1">באדם ובבהמה לי הוא</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">D</span> <span class="verse-num">יג:יא</span> <span class="vertical1">והיה כי יבאך יהוה אל ארץ הכנעני כאשר נשבע לך ולאבתיך ונתנה לך</span> <span class="verse-num">יג:יב</span> <span class="horizontal1">והעברת כל פטר רחם ליהוה וכל פטר שגר בהמה אשר יהיה לך הזכרים ליהוה</span> <span class="verse-num">יג:יג</span> וכל פטר חמר תפדה בשה ואם לא תפדה וערפתו וכל בכור אדם בבניך תפדה <span class="verse-num">יג:יד</span> <span class="vertical1">והיה כי ישאלך בנך מחר לאמר מה זאת</span> ואמרת אליו <span class="internalparallel">בחזק יד הוציאנו יהוה ממצרים</span> מבית עבדים <span class="verse-num">יג:טו</span> ויהי כי הקשה פרעה לשלחנו ויהרג יהוה כל בכור בארץ מצרים מבכר אדם ועד בכור בהמה על כן אני זבח ליהוה כל פטר רחם הזכרים וכל בכור בני אפדה <span class="verse-num">יג:טז</span> והיה לאות על ידכה ולטוטפת בין עיניך כי <span class="internalparallel">בחזק יד הוציאנו יהוה ממצרים</span> <span class="hebrew-p">{ס}</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Exodus Unit 5 -->
+    <div class="unit-container" id="exodus-unit-5">
+        <div class="unit-header">
+            <h2>שמות יחידה 5 (יג:יז-טו:כא)</h2>
+            <p>קריעת ים סוף ושירת הים</p>
+        </div>
+
+        <h3 class="thread-header">חוט 1</h3>
+        <table class="hebrew-scripture-table">
+            <thead>
+                <tr>
+                    <th>1א</th>
+                    <th>1ב</th>
+                    <th>1ג</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><span class="verse-num">יג:יז</span> ויהי בשלח פרעה את העם ולא נחם אלהים דרך ארץ פלשתים כי קרוב הוא כי אמר אלהים פן ינחם העם בראתם <span class="closure">מלחמה</span> ושבו מצרימה <span class="verse-num">יג:יח</span> <span class="vertical1">ויסב אלהים את העם דרך המדבר ים סוף</span> וחמשים עלו בני ישראל מארץ מצרים</p>
+                    </td>
+                    <td>
+                        <p><span class="verse-num">יג:יט</span> <span class="vertical1">ויקח משה את עצמות יוסף עמו</span> כי השבע השביע את בני ישראל לאמר <span class="closure">פקד יפקד אלהים אתכם</span> והעליתם את עצמתי מזה אתכם</p>
+                    </td>
+                    <td>
+                        <p><span class="verse-num">יג:כ</span> ויסעו מסכת ויחנו באתם בקצה המדבר <span class="verse-num">יג:כא</span> <span class="vertical1">ויהוה הלך לפניהם יומם בעמוד ענן לנחתם הדרך ולילה בעמוד אש להאיר להם ללכת יומם ולילה</span> <span class="verse-num">יג:כב</span> לא ימיש עמוד הענן יומם ועמוד האש לילה לפני העם <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="thread-header">חוט 2</h3>
+        <table class="hebrew-scripture-table">
+            <thead>
+                <tr>
+                    <th>2א</th>
+                    <th>2ב</th>
+                    <th>2ג</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">יד:א</span> וידבר יהוה אל משה לאמר <span class="verse-num">יד:ב</span> דבר אל בני ישראל וישבו ויחנו לפני פי החירת בין מגדל ובין הים לפני בעל צפן נכחו תחנו <span class="vertical1">על הים</span> <span class="verse-num">יד:ג</span> <span class="vertical1">ואמר פרעה לבני ישראל נבכים הם בארץ סגר עליהם המדבר</span> <span class="verse-num">יד:ד</span> וחזקתי את לב פרעה ורדף אחריהם ואכבדה בפרעה ובכל חילו וידעו מצרים כי אני יהוה ויעשו כן <span class="verse-num">יד:ה</span> ויגד למלך מצרים כי ברח העם ויהפך לבב פרעה ועבדיו אל העם ויאמרו <span class="horizontal2">מה זאת עשינו כי שלחנו את ישראל מעבדנו</span> <span class="verse-num">יד:ו</span> ויאסר את רכבו ואת עמו לקח עמו <span class="verse-num">יד:ז</span> ויקח שש מאות רכב בחור וכל רכב מצרים ושלשם על כלו <span class="verse-num">יד:ח</span> ויחזק יהוה את לב פרעה מלך מצרים וירדף אחרי בני ישראל</p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">A</span> וישאו בני ישראל את עיניהם והנה מצרים נסע אחריהם וייראו מאד ויצעקו בני ישראל אל יהוה <span class="verse-num">יד:יא</span> ויאמרו אל משה <span class="vertical1">המבלי אין קברים במצרים לקחתנו למות במדבר</span> <span class="horizontal2">מה זאת עשית לנו להוציאנו ממצרים</span> <span class="verse-num">יד:יב</span> הלא זה הדבר אשר דברנו אליך במצרים לאמר <span class="horizontal2">חדל ממנו ונעבדה את מצרים כי טוב לנו עבד את מצרים</span> ממתנו במדבר <span class="verse-num">יד:יג</span> ויאמר משה אל העם אל תיראו התיצבו וראו את ישועת יהוה אשר יעשה לכם היום כי אשר ראיתם את מצרים היום לא תספו לראתם עוד עד עולם <span class="verse-num">יד:יד</span> <span class="horizontal3">יהוה ילחם לכם ואתם תחרשון</span> <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">יד:יט</span> <span class="vertical1">ויסע מלאך האלהים ההלך לפני מחנה ישראל וילך מאחריהם ויסע עמוד הענן מפניהם ויעמד מאחריהם</span> <span class="verse-num">יד:כ</span> ויבא בין מחנה מצרים ובין מחנה ישראל <span class="vertical1">ויהי הענן והחשך ויאר את הלילה</span> ולא קרב זה אל זה <span class="vertical1">כל הלילה</span> <span class="verse-num">יד:כא</span> ויט משה את ידו על הים ויולך יהוה את הים ברוח קדים עזה כל הלילה וישם את הים לחרבה ויבקעו המים <span class="verse-num">יד:כב</span> ויבאו בני ישראל בתוך הים ביבשה והמים להם חומה מימינם ומשמאלם <span class="verse-num">יד:כג</span> וירדפו מצרים ויבאו אחריהם כל סוס פרעה רכבו ופרשיו אל תוך הים <span class="verse-num">יד:כד</span> ויהי <span class="vertical1">באשמרת הבקר וישקף יהוה אל מחנה מצרים בעמוד אש וענן</span> ויהם את מחנה מצרים <span class="verse-num">יד:כה</span> ויסר את אפן מרכבתיו וינהגהו בכבדת ויאמר מצרים אנוסה מפני ישראל <span class="horizontal3">כי יהוה נלחם להם במצרים</span> <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">B</span> ובני ישראל יצאים <span class="horizontal1">ביד רמה</span> <span class="verse-num">יד:ט</span> <span class="horizontal1">וירדפו מצרים אחריהם וישיגו אותם חנים על הים כל סוס רכב פרעה ופרשיו וחילו</span> <span class="vertical1">על</span> פי החירת לפני בעל צפן <span class="verse-num">יד:י</span> ופרעה הקריב</p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">יד:טו</span> ויאמר יהוה אל משה מה תצעק אלי דבר אל בני ישראל ויסעו <span class="verse-num">יד:טז</span> <span class="horizontal1">ואתה הרם את מטך ונטה את ידך</span> על הים ובקעהו ויבאו בני ישראל בתוך הים ביבשה <span class="verse-num">יד:יז</span> ואני הנני מחזק את לב <span class="horizontal1">מצרים ויבאו אחריהם ואכבדה בפרעה ובכל חילו ברכבו ובפרשיו</span> <span class="verse-num">יד:יח</span> וידעו מצרים כי אני יהוה בהכבדי בפרעה ברכבו ובפרשיו</p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">יד:כו</span> ויאמר יהוה אל משה <span class="horizontal1">נטה את ידך</span> על הים וישבו המים על מצרים על רכבו ועל פרשיו <span class="verse-num">יד:כז</span> ויט משה את ידו על הים וישב הים <span class="vertical1">לפנות בקר</span> לאיתנו ומצרים נסים לקראתו וינער יהוה את מצרים בתוך הים <span class="verse-num">יד:כח</span> <span class="vertical1">וישבו המים ויכסו</span> <span class="horizontal1">את הרכב ואת הפרשים לכל חיל פרעה הבאים אחריהם</span> <span class="vertical1">בים לא נשאר בהם עד אחד</span> <span class="verse-num">יד:כט</span> <span class="vertical1">ובני ישראל הלכו ביבשה בתוך הים</span> והמים להם חמה מימינם ומשמאלם</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="thread-header">חוט 3</h3>
+        <table class="hebrew-scripture-table">
+            <thead>
+                <tr>
+                    <th>3א</th>
+                    <th>3ב</th>
+                    <th>3ג</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">יד:ל</span> ויושע יהוה ביום ההוא את ישראל <span class="horizontal1">מיד</span> מצרים וירא ישראל את מצרים מת <span class="vertical1">על שפת הים</span> <span class="verse-num">יד:לא</span> וירא ישראל את <span class="horizontal1">היד הגדלה</span> אשר עשה יהוה במצרים וייראו העם את יהוה ויאמינו ביהוה ובמשה עבדו <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">A</span> <span class="verse-num">טו:ו</span> <span class="horizontal1">ימינך יהוה נאדרי בכח</span> ימינך יהוה תרעץ אויב <span class="verse-num">טו:ז</span> וברב גאונך תהרס קמיך תשלח חרנך יאכלמו כקש <span class="verse-num">טו:ח</span> וברוח אפיך נערמו מים נצבו כמו נד נזלים קפאו תהמת בלב ים <span class="verse-num">טו:ט</span> אמר אויב ארדף אשיג אחלק שלל תמלאמו נפשי אריק חרבי תורישמו <span class="horizontal1">ידי</span> <span class="verse-num">טו:י</span> נשפת ברוחך כסמו ים צללו כעופרת במים אדירים</p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">A</span> עד יעבר עמך יהוה עד יעבר עם זו קנית <span class="verse-num">טו:יז</span> תבאמו ותטעמו בהר נחלתך מכון לשבתך פעלת יהוה מקדש אדני כוננו <span class="horizontal1">ידיך</span> <span class="verse-num">טו:יח</span> יהוה ימלך לעלם ועד <span class="verse-num">טו:יט</span> <span class="vertical1">כי בא סוס פרעה ברכבו ובפרשיו בים וישב יהוה עלהם את מי הים ובני ישראל הלכו ביבשה בתוך הים</span> <span class="hebrew-p">{פ}</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">טו:א</span> אז ישיר משה ובני ישראל את השירה הזאת ליהוה ויאמרו לאמר אשירה ליהוה כי גאה גאה סוס ורכבו רמה בים <span class="verse-num">טו:ב</span> עזי וזמרת יה ויהי לי לישועה זה אלי ואנוהו אלהי אבי וארממנהו <span class="verse-num">טו:ג</span> יהוה איש <span class="closure">מלחמה</span> יהוה שמו <span class="verse-num">טו:ד</span> מרכבת פרעה וחילו ירה בים ומבחר שלשיו טבעו בים סוף <span class="verse-num">טו:ה</span> תהמת יכסימו ירדו במצולת <span class="horizontal2">כמו אבן</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">טו:יא</span> מי כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא <span class="verse-num">טו:יב</span> נטית ימינך תבלעמו ארץ <span class="verse-num">טו:יג</span> נחית בחסדך <span class="closure">עם זו גאלת</span> נהלת בעזך אל נוה קדשך <span class="verse-num">טו:יד</span> שמעו עמים ירגזון חיל אחז ישבי פלשת <span class="verse-num">טו:טו</span> אז נבהלו אלופי אדום אילי מואב יאחזמו רעד נמגו כל ישבי כנען <span class="verse-num">טו:טז</span> תפל עליהם אימתה ופחד בגדל זרועך ידמו <span class="horizontal2">כאבן</span></p>
+                    </td>
+                    <td>
+                        <p><span class="subdivision">B</span> <span class="verse-num">טו:כ</span> ותקח מרים הנביאה אחות אהרן את התף בידה ותצאן כל הנשים אחריה בתפים ובמחלת <span class="verse-num">טו:כא</span> ותען להם מרים שירו ליהוה כי גאה גאה סוס ורכבו רמה בים <span class="hebrew-p">{ס}</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="meaning-patterns">כיצד צבעים חושפים משמעות בתורה</h2>
+
+    <div class="explanation">
+        <p>כעת שראיתם את יחידות התורה עם קידוד הצבע שלהן, בואו נחקור מה דפוסים אלה חושפים על מבנה הטקסט ומשמעותו:</p>
+
+        <h3>1. התורה כטקסט חזותי</h3>
+        <p>דפוסי הצבע חושפים שהתורה חוברה עם היגיון חזותי שאולי אינו ברור מיד לקוראים. ההדגשה הופכת לגלויים חיבורים שבנויים במבנה הטקסט אך עלולים להחמיץ בקריאה רגילה.</p>
+
+        <h3>2. נרטיבים משלימים</h3>
+        <p>החיבורים האופקיים <span class="horizontal1">בכחול</span> חושפים כיצד נרטיבים בעמודות שונות משלימים זה את זה. בשמות יחידה 4, אנו רואים הוראות אלוהיות בזיווג עם יישום אנושי. בשמות יחידה 5, אנו רואים את תבוסת מצרים מנוגדת לישועת ישראל.</p>
+
+        <h3>3. התפתחות מתקדמת</h3>
+        <p>החיבורים המשולשים ב<span class="horizontal2">טורקיז</span> ו<span class="horizontal3">חום-אדום</span> בשמות יחידה 5 מדגימים כיצד רעיונות מתקדמים על פני שלוש עמודות. זה חושף מבנה נרטיבי מתוחכם שבו מושגים מתפתחים דרך מספר שלבים.</p>
+
+        <h3>4. המשכיות נושאית</h3>
+        <p>החיבורים האנכיים <span class="vertical1">בזהב</span> בשתי היחידות מראים כיצד נושאים מתפתחים בתוך עמודה. ביחידה 4, אנו רואים את הנושא החוזר של לימוד הילדים על היציאה בדורות הבאים. ביחידה 5, אנו רואים את התקדמות הנהגת האל מעמוד הענן ועד קריעת הים.</p>
+
+        <h3>5. מסגור ספרותי</h3>
+        <p>דפוסי ה<span class="closure">סגירה בורוד</span> וה<span class="ciasm1">כיאסטיים בסגול</span> יוצרים מסגרות אלגנטיות סביב כל יחידה, מחברים התחלות וסיומים. ביחידה 5, "מלחמה" בתחילה מתחברת לזהות האל כ"איש מלחמה" בהמשך, מראה כיצד הנרטיב סוגר מעגל.</p>
+
+        <h3>6. מוטיבים מרכזיים</h3>
+        <p>ה<span class="internalparallel">מקבילות הפנימיות בירוק</span> מדגישות ביטויים חוזרים שיוצרים מוטיבים מרכזיים. ביחידה 4, הביטוי החוזר "ביד חזקה הוציא יהוה אתכם ממצרים" יוצר נושא מאחד של כוח אלוהי.</p>
+    </div>
+
+    <h2>קריאת אריג התורה</h2>
+
+    <p>מערכת הצבעים של אריג התורה משנה את האופן שבו אנו קוראים את התורה על ידי הפיכת העיצוב הספרותי שלה לגלוי. על ידי ראיית הדפוסים הצבעוניים, קוראים יכולים:</p>
+
+    <ul>
+        <li><strong>לזהות יחידות מבניות</strong> שאולי אינן עוקבות אחר חלוקת הפרקים</li>
+        <li><strong>לזהות חיבורים נושאיים</strong> בין קטעים שעשויים להיראות לא קשורים</li>
+        <li><strong>להעריך אמנות ספרותית</strong> שבנויה במבנה הטקסט</li>
+        <li><strong>להבין את התקדמות הרעיונות</strong> על פני נרטיבים לכאורה נפרדים</li>
+        <li><strong>לראות את הטקסט כמכלול מאוחד</strong> ולא כאפיזודות מנותקות</li>
+    </ul>
+
+    <p>הדפוסים הצבעוניים חושפים שהתורה היא יצירה ספרותית מעוצבת בקפידה עם אלמנטים עיצוביים מתוחכמים שמעצימים את משמעותה. מה שעשוי להיראות כחזרה פשוטה או קטעים מנותקים בקריאה רגילה הופך לשטיח ארוג לכיד ומורכב כאשר מסתכלים עליו דרך מערכת הצבעים של אריג התורה.</p>
+
+    <h2 id="example-patterns">דוגמאות של דפוסי קידוד צבע</h2>
+
+    <div class="example-box" id="horizontal-example">
+        <p class="pattern-title"><span class="horizontal1">דוגמה 1: מקבילות ישירות (כחול)</span></p>
+        <p>בשמות יחידה 4, הוראת האל "<span class="horizontal1">ויקחו להם איש שה לבית אבת</span>" (יב:ג) מקבילה לדברי משה לזקנים "<span class="horizontal1">משכו וקחו לכם צאן למשפחתיכם</span>" (יב:כא), מראה כיצד הציווי האלוהי מועבר נאמנה לעם.</p>
+        <p>החיבורים האופקיים <span class="horizontal1">בכחול</span> בחוט 1 חושפים כיצד ההוראות המפורטות של האל (1א) מועברות נאמנה על ידי משה לעם ואז מבוצעות (1ב). זיווג זה מראה את יחסי הברית שבהם ציוויים אלוהיים מובילים לציות אנושי.</p>
+    </div>
+
+    <div class="example-box" id="triadic-example">
+        <p class="pattern-title">דוגמה 2: מבנה משולש (<span class="horizontal3">חום-אדום</span> ו<span class="horizontal2">טורקיז</span>)</p>
+        <p>בשמות יחידה 5, משה אומר "<span class="horizontal3">יהוה ילחם לכם</span>" (יד:יד) בעמודה האמצעית (2ב), ומאוחר יותר המצרים מבינים "<span class="horizontal3">כי יהוה נלחם להם במצרים</span>" (יד:כה) ב-2ג, יוצרים חיבור שמדגים כיצד הפעולה המובטחת של האל הופכת למציאות.</p>
+        <p>חוט 2 של שמות יחידה 5 מדגים את דפוס הצבע המשולש המלא עם <span class="horizontal2">הדגשה בטורקיז</span> המחברת 2א ו-2ב (רצון פרעה וישראל שהמצרים ימשיכו לשרת אותם) ו<span class="horizontal3">הדגשה בחום-אדום</span> המחברת 2ב ו-2ג ("יהוה ילחם לכם" ו"כי יהוה נלחם להם"). זה יוצר התקדמות המראה כיצד דחיית מצרים, פחד ישראל ופעולת האל יוצרים קשת נרטיבית שלמה.</p>
+    </div>
+
+    <div class="example-box" id="vertical-example">
+        <p class="pattern-title"><span class="vertical1">דוגמה 3: המשכיות חוט (זהב)</span></p>
+        <p>בשמות יחידה 5, "<span class="vertical1">עמוד הענן</span>" מופיע מספר פעמים לאורך העמודה השלישית (1ג, 2ג) בקטעים יג:כא, יד:יט, יד:כד, מראה את הדרכת האל הרציפה במהלך המסע והקרב.</p>
+        <p>בשמות יחידה 4, החיבורים האנכיים <span class="vertical1">בזהב</span> ב-3ב מדגישים את הוראת היציאה לילדים בעתיד בארץ המובטחת, מראים כיצד האירוע הופך למסורת דרך ביטויים כמו "והיה כי יאמרו אליכם בניכם" ו"והגדת לבנך".</p>
+    </div>
+
+    <div class="example-box" id="internal-parallel-example">
+        <p class="pattern-title"><span class="internalparallel">דוגמה 4: מקבילות פנימיות (ירוק)</span></p>
+        <p>בשמות יחידה 4, הביטוי החוזר "<span class="internalparallel">ביד חזקה הוציא יהוה אתכם ממצרים</span>" (יג:ט, יג:יד, יג:טז) יוצר נושא מאחד של כוח אלוהי שמדגיש את תפקיד האל ביציאה. חזרה זו יוצרת פזמון עוצמתי שמדגיש את ההתערבות האלוהית.</p>
+    </div>
+
+    <div class="example-box" id="closure-example">
+        <p class="pattern-title"><span class="closure">דוגמה 5: סגירה (ורוד)</span></p>
+        <p>בשמות יחידה 5, האזכור של "<span class="closure">מלחמה</span>" (יג:יז) בתחילה מתחבר עם האל כאיש "<span class="closure">מלחמה</span>" (טו:ג) קרוב לסוף, מראה כיצד הגנת האל מפני מלחמה הופכת למלחמתו למען ישראל.</p>
+        <p>דפוס ה<span class="closure">סגירה בורוד</span> בחוט 1 של שמות יחידה 5 יוצר מבנה מעטפה עם המונח "מלחמה" ב-1א וההבטחה ש"פקד יפקד אלהים אתכם" ב-1ב. זה מדגיש כיצד הנהגת האל הגנה על ישראל ממלחמה על ידי הפניית דרכם, מקיימת את הבטחתו לזכור אותם.</p>
+    </div>
+
+    <div class="example-box" id="chiastic-example">
+        <p class="pattern-title"><span class="ciasm1">דוגמה 6: מבנה כיאסטי (סגול)</span></p>
+        <p>בשמות יחידה 4, "<span class="ciasm1">החדש הזה</span>" (יב:ב) ו"<span class="ciasm1">שבעת ימים מצות תאכלו</span>" ביב:טו מתחברים עם "<span class="ciasm1">שבעת ימים תאכל מצת וביום השביעי חג ליהוה</span>" ביג:ו, יוצרים מסגרת כיאסטית שמבססת את המשמעות הקלנדרית של אירועי היציאה.</p>
+        <p>ביב:כח "<span class="ciasm2">וילכו ויעשו בני ישראל כאשר צוה יהוה את משה ואהרן כן עשו</span>" חוזר כ"<span class="ciasm2">ויעשו כל בני ישראל כאשר צוה יהוה את משה ואת אהרן כן עשו</span>" ביב:נ. זה סוגר את היחידה בציות בני ישראל.</p>
+        <p>הכיאזם אפוא משלב את מסגרת הטבע, דרך הלוח השנה, עם הקשר הברית בין ישראל לאלוהיהם.</p>
+    </div>
+
+    <div class="example-box" id="visual-logic-example">
+        <p class="pattern-title">דוגמה 7: היגיון חזותי במבנים משולשים</p>
+        <p>בשמות יחידה 5 חוט 2, קטע 2ב מראה את פחד ישראל והרגעת משה כאמצע הרעיוני בין רדיפת מצרים (2א) לישועת האל (2ג). זה יוצר התקדמות: איום ← משבר ← פתרון, כשהמשבר הוא האמצע הפיזי של הנרטיב.</p>
+        <p>חוט 3 של שמות יחידה 5 מראה דפוסים משמעותיים מרובים:</p>
+        <ul>
+            <li>החיבורים האופקיים <span class="horizontal1">בכחול</span> של "יד"/"ידיך" על פני כל שלושת הקטעים (3א, 3ב, 3ג) מנגידים את ידה המובסת של מצרים עם ידו המנצחת של האל.</li>
+            <li>החיבורים ב<span class="horizontal2">טורקיז</span> בין "כמו אבן" ב-3א ו-3ב יוצרים דימוי עוצמתי של המצרים הטובעים "כמו אבן" והעמים הסובבים הופכים דוממים "כאבן" מפחד.</li>
+            <li>דפוס ה<span class="closure">סגירה בורוד</span> מחבר "מלחמה" בטו:ג עם "עם זו גאלת" בטו:יג, מראה כיצד מלחמת האל הביאה לגאולה.</li>
+        </ul>
+    </div>
+
+    <h2 id="conclusions">סיכום</h2>
+    <p>מערכת קידוד הצבע של אריג התורה משנה את קריאתנו את התורה על ידי הפיכת הדפוסים הספרותיים המתוחכמים שמארגנים את הטקסט לגלויים. דפוסים אלה אינם רק דקורטיביים אלא חושפים חיבורים תיאולוגיים ונרטיביים עמוקים שאחרת עלולים להישאר נסתרים.</p>
+
+    <div class="example-box">
+        <h3>קריאת התורה כטקסט ארוג</h3>
+        <p>על ידי תשומת לב לדפוסים המודגשים, אנו יכולים:</p>
+        <ul>
+            <li>לזהות כיצד נושאים מתפתחים על פני חלקים שונים של יחידה</li>
+            <li>להעריך את האומנות הספרותית של הטקסט</li>
+            <li>להבין כיצד פרטים נרטיביים מתחברים למסרים תיאולוגיים גדולים יותר</li>
+            <li>לראות כיצד התורה מתקשרת באמצעים חזותיים כמו גם מילוליים</li>
+        </ul>
+        <p>דפוסי הצבע מזמינים אותנו לקרוא את התורה לא רק כרצף של פסוקים אלא כשטיח ארוג מורכב שבו כל חוט תורם לעיצוב השלם.</p>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="חזרה לראש העמוד">↑</button>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <script>
+        // Scroll to top functionality
+        const scrollBtn = document.getElementById('scroll-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 500) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Structured Mishnah: Ohalot 9 | מסכת Ohalot</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<div align="right"><table border="0" cellpadding="0" cellspacing="0" dir="rtl" width="100%"><tr><td valign="top"><p class="Mesechet" dir="rtl">מסכת אהלות</p></td><td colspan="2" valign="top"><p class="logo" dir="rtl">המשנה כדרכה</p></td><td valign="top"><p class="Perek" dir="rtl">פרק ט<br/></p></td></tr><tr><td colspan="2" valign="top"><p class="HMC" dir="rtl"><span class="Subunit">1א<br/>A</span> (א) כורת שהיא בתוך הפתח ופיה לחוץ<br/>כזית מן המת נתון תחתיה או על גבה מבחוץ<br/>כל שהוא כנגד הזית תחתיה וגבה טמא<br/>וכל שאינו כנגד הזית תוכה והבית טהור<br/>בבית אין טמא אלא הבית בתוכה הכל טמא<br/>(ב) היתה גבוהה מן הארץ טפח<br/>טמאה תחתיה או בבית או על גבה הכל טמא אלא תוכה בתוכה הכל טמא<br/>(ג) במה דברים אמורים בזמן שהיא כלי מחלחלת<span class="Subunit"><br/>B</span> היתה פחותה ופקוקה בקש או אפוצה<br/>איזו היא אפוצה כל שאין לה טפח ממקום אחר<br/>כזית מן המת נתון תחתיה כנגדו עד התהום טמא<br/>על גבה כנגדו עד הרקיע טמא<br/>בבית אין טמא אלא הבית בתוכה אין טמא אלא תוכה<br/>(ד) היתה גבוהה מן הארץ טפח טמאה תחתיה או בבית<br/>תחתיה והבית טמא תוכה וגבה טהור<br/>בתוכה אין טמא אלא תוכה על גבה כנגדו עד הרקיע טמא<br/>(ה) במה דברים אמורים בזמן שפיה לחוץ</p></td><td colspan="2" valign="top"><p class="HMC" dir="rtl"><span class="Subunit">1ב<br/>A</span> היה פיה לפנים<br/>וכזית מן המת נתון תחתיה או על גבה מבחוץ<br/>כל שהוא כנגד הזית תחתיה וגבה (ותוכה) טמא<br/>וכל שאינו כנגד הזית תוכה והבית טהור<br/>בתוכה או בבית הכל טמא<br/>(ו) היתה גבוהה מן הארץ טפח<br/>טמאה תחתיה או בבית או בתוכה או על גבה הכל טמא<br/>(ז) במה דברים אמורים בזמן שהיא כלי מחלחלת<span class="Subunit"><br/>B</span> היתה פחותה ופקוקה בקש או אפוצה<br/>איזו היא אפוצה שאין לה טפח ממקום אחר<br/>כזית מן המת נתון תחתיה כנגדו עד התהום טמא<br/>על גבה כנגדו עד הרקיע טמא<br/>בתוכה או בבית תוכה והבית טמאים<br/>(ח) היתה גבוהה מן הארץ טפח טמאה תחתיה או בבית או בתוכה<br/>הכל טמא אלא גבה<br/>על גבה כנגדו עד הרקיע טמא</p></td></tr><tr><td colspan="2" valign="top"><p class="HMC" dir="rtl"><span class="Subunit">2א</span><br/>(ט) היתה ממלאה את כל הבית ואין בינה לבין הקורות פותח טפח<br/>טמאה בתוכה הבית טמא טמאה בבית מה שבתוכה טהור<br/>שדרך טמאה לצאת ואין דרכה להכנס<br/>בין עומדת בין מטה על צדה בין אחת בין שתים</p></td><td colspan="2" valign="top"><p class="HMC" dir="rtl"><span class="Subunit">2ב</span><br/>(י) היתה עומדת בתוך הפתח ואין בינה לבין המשקוף פותח טפח<br/>טמאה בתוכה הבית טהור טמאה בבית מה שבתוכה טמא<br/>שדרך הטמאה לצאת ואין דרכה להכנס</p></td></tr><tr><td colspan="2" valign="top"><p class="HMC" dir="rtl"><span class="Subunit">3א<br/>A</span> (יא) היתה מטה על צדה באויר<br/>וכזית מן המת נתון תחתיה או על גבה<br/>כל שהוא כנגד הזית תחתיה וגבה טמא<br/>וכל שאינו כנגד הזית תוכה טהור בתוכה הכל טמא<br/>(יב) היתה גבוהה מן הארץ טפח<br/>טמאה תחתיה או על גבה הכל טמא אלא תוכה בתוכה הכל טמא<br/>במה דברים אמורים בזמן שהיא כלי<span class="Subunit"><br/>B</span> היתה פחותה ופקוקה בקש<br/>או מחזקת ארבעים סאה כדברי חכמים<br/>כזית מן המת נתון תחתיה כנגדו עד התהום טמא<br/>על גבה כנגדו עד הרקיע טמא<br/>בתוכה אין טמא אלא תוכה<br/>היתה גבוהה מן הארץ טפח<br/>טמאה תחתיה תחתיה טמא בתוכה תוכה טמא<br/>על גבה כנגדו עד הרקיע טמא</p></td><td colspan="2" valign="top"><p class="HMC" dir="rtl"><span class="Subunit">3ב<br/>A</span> (יג) היתה יושבת על שוליה והיא כלי<br/>טמאה תחתיה בתוכה או על גבה<br/>טמאה בוקעת ועולה בוקעת ויורדת<br/>היתה גבוהה מן הארץ טפח או מכסה או כפויה על פיה<br/>טמאה תחתיה בתוכה או על גבה הכל טמא<br/>(יד) במה דברים אמורים בזמן שהיא כלי<span class="Subunit"><br/>B</span> היתה פחותה ופקוקה בקש או מחזקת ארבעים סאה כדברי חכמים<br/>טמאה תחתיה בתוכה או על גבה טמאה<br/>בוקעת ועולה בוקעת ויורדת<br/>רבי אלעזר ורבי שמעון אומרים<br/>אין טמאה עולה לה אף לא יורדת ממנה<br/>היתה גבוהה מן הארץ טפח<br/>טמאה תחתיה תחתיה טמא<br/>בתוכה או על גבה כנגדו עד הרקיע טמא</p></td></tr><tr><td colspan="2" valign="top"><p class="HMC" dir="rtl"><span class="Subunit">4א</span><br/>(טו) ארון שהיא רחבה מלמטן וצרה מלמעלן והמת בתוכה<br/>הנוגע בה מלמטן טהור ומלמעלן טמא<br/>רחבה מלמעלן וצרה מלמטן<br/>הנוגע בה מכל מקום טמא<br/>היתה שוה הנוגע בה מכל מקום טמא<br/>דברי רבי אליעזר<br/>רבי יהושע אומר<br/>מטפח ולמטן טהור מטפח ולמעלן טמא<br/>העשויה כמין קמטרא הנוגע בה מכל מקום טמא<br/>כמין גלסקום הנוגע בה מכל מקום טהור חוץ ממקום פתיחתה</p></td><td colspan="2" valign="top"><p class="HMC" dir="rtl"><span class="Subunit">4ב</span><br/>(טז) חבית שהיא יושבת על שוליה באויר<br/>וכזית מן המת נתון תחתיה או בתוכה כנגד קרקרתה<br/>טמאה בוקעת ועולה בוקעת וירדת והחבית טמאה<br/>תחת דפנה מבחוץ<br/>טמאה בוקעת ועולה בוקעת ויורדת והחבית טהורה<br/>בתוכה ותחת דפנה<br/>אם יש בדפנות פותח טפח הכל טמא וכנגד פיה טהור<br/>ואם לאו טמאה בוקעת ועולה בוקעת ויורדת<br/>במה דברים אמורים בטהורה<br/>אבל אם היתה טמאה או גבוהה מן הארץ טפח<br/>או מכסה או כפויה על פיה<br/>טמאה תחתיה בתוכה או על גבה הכל טמא</p></td></tr></table></div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

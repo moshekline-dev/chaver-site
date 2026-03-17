@@ -1,0 +1,986 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+        /* Landscape phones - hamburger menu */
+@media (max-height: 500px) and (orientation: landscape) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav li {
+        width: 100%;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+    }
+    
+    main.content-wrapper {
+        padding: 15px 10px;
+    }
+}
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">עברית</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/torah-weave/">Torah Weave</a> &gt; 
+    <a href="/torah-weave/Genesis/genesis-map/genesis-map.html">Genesis</a> &gt; 
+    Unit 3 Commentary
+</nav>
+
+<!-- Header -->
+<header class="unit-header-section">
+    <h1>Genesis Unit 3: Elohim and YHWH Defined</h1>
+    <div class="unit-meta">Genesis 5:1–10:32</div>
+</header>
+
+<!-- Small position map -->
+<aside class="unit-position-map">
+    <svg viewBox="0 0 280 100" width="280" height="100" style="display: block; margin: 1em auto;">
+        <!-- Column headers -->
+        <text x="50" y="15" font-size="9" text-anchor="middle" fill="#666">A</text>
+        <text x="80" y="15" font-size="9" text-anchor="middle" fill="#666">B</text>
+        <text x="110" y="15" font-size="9" text-anchor="middle" fill="#666">C</text>
+        <text x="140" y="15" font-size="9" text-anchor="middle" fill="#666">D</text>
+        <text x="170" y="15" font-size="9" text-anchor="middle" fill="#666">E</text>
+        <text x="200" y="15" font-size="9" text-anchor="middle" fill="#666">F</text>
+        <text x="230" y="15" font-size="9" text-anchor="middle" fill="#666">G</text>
+        
+        <!-- Row headers -->
+        <text x="20" y="40" font-size="9" text-anchor="middle" fill="#666">1</text>
+        <text x="20" y="60" font-size="9" text-anchor="middle" fill="#666">2</text>
+        <text x="20" y="80" font-size="9" text-anchor="middle" fill="#666">3</text>
+        
+        <!-- Row 1 -->
+        <rect x="35" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="25" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="25" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="25" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="25" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 2 -->
+        <rect x="35" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        <rect x="65" y="45" width="25" height="18" fill="#ffe6e6" stroke="#ccc"/>
+        <rect x="95" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="45" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="45" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="45" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Row 3: Unit 3 highlighted -->
+        <rect x="35" y="65" width="25" height="18" fill="#d4f2ff" stroke="#333" stroke-width="2"/>
+        <rect x="65" y="65" width="25" height="18" fill="#fff" stroke="#ccc"/>
+        <rect x="95" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="125" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="155" y="65" width="25" height="18" fill="#d4d4ff" stroke="#ccc"/>
+        <rect x="185" y="65" width="25" height="18" fill="#e6ffee" stroke="#ccc"/>
+        <rect x="215" y="65" width="25" height="18" fill="#d4f2ff" stroke="#ccc"/>
+        
+        <!-- Unit numbers -->
+        <text x="47" y="37" font-size="8" text-anchor="middle">1</text>
+        <text x="107" y="37" font-size="8" text-anchor="middle">5</text>
+        <text x="137" y="37" font-size="8" text-anchor="middle">6</text>
+        <text x="167" y="37" font-size="8" text-anchor="middle">11</text>
+        <text x="197" y="37" font-size="8" text-anchor="middle">12</text>
+        <text x="227" y="37" font-size="8" text-anchor="middle">17</text>
+        
+        <text x="47" y="57" font-size="8" text-anchor="middle">2</text>
+        <text x="77" y="57" font-size="8" text-anchor="middle">4</text>
+        <text x="107" y="57" font-size="8" text-anchor="middle">7</text>
+        <text x="137" y="57" font-size="8" text-anchor="middle">8</text>
+        <text x="167" y="57" font-size="8" text-anchor="middle">13</text>
+        <text x="197" y="57" font-size="8" text-anchor="middle">14</text>
+        <text x="227" y="57" font-size="8" text-anchor="middle">18</text>
+        
+        <text x="47" y="77" font-size="8" text-anchor="middle" font-weight="bold">3</text>
+        <text x="107" y="77" font-size="8" text-anchor="middle">9</text>
+        <text x="137" y="77" font-size="8" text-anchor="middle">10</text>
+        <text x="167" y="77" font-size="8" text-anchor="middle">15</text>
+        <text x="197" y="77" font-size="8" text-anchor="middle">16</text>
+        <text x="227" y="77" font-size="8" text-anchor="middle">19</text>
+    </svg>
+</aside>
+
+<!-- MAIN COMMENTARY BEGINS -->
+<article>
+
+<section class="commentary-section">
+    <h2>When the Names Separate, the People Integrate</h2>
+    
+    <p>Here is the puzzle at the heart of Unit 3. As we reach the flood narrative, three types of people populate the earth: descendants of Elohim through Adam, descendants of YHWH through Cain, and descendants of Seth who combine both divine associations. Three different names for deity have appeared as well: Elohim alone in Unit 1, the combined YHWH Elohim in Unit 2, and now both names operating separately. The distinctions between human lineages track the distinctions between divine names.</p>
+    
+    <p>Then the flood destroys the "pure" lines. Cain's descendants vanish entirely—not one appears after the waters recede. The sons of Elohim who took human wives disappear from the narrative. Only Noah's hybrid line survives to people the post-diluvian world. Everyone alive after the flood can trace ancestry back to Elohim through Seth's father Adam and to YHWH through Seth's mother Eve.</p>
+    
+    <p>What are we to make of this inversion? As the divine names separate into distinct characters, the human lines integrate through Noah. The unified deity of the Garden narrative gives way to two divine figures operating in parallel; meanwhile, a single human family emerges carrying both streams. The godhead divides while humanity consolidates. If the division in heaven parallels a consolidation on earth, we might wonder whether people—who now have within themselves both divine sources—have the potential to help repair what Eve's action divided. The Torah might be tracing the fulfillment of human potential by working toward reunification of the divine names.</p>
+    
+    <p>This reading differs so dramatically from conventional approaches that we need to examine it carefully. Unit 3's woven structure places Elohim and YHWH in parallel columns, allowing us to observe how each operates in comparable situations. The flood becomes a laboratory for distinguishing the divine names—and for understanding why only the hybrid survives.</p>
+    
+    <p>Before examining the structure, we need to situate Unit 3 within the larger pattern of creation narratives that opens Genesis.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Three Creation Units</h2>
+    
+    <p>It is common to speak of Genesis having two creation stories—in chapters 1 and 2. But the repeating literary devices suggest a reading of the first ten chapters as three creation Units, setting out a holistic view of origins. The key marker is the Hebrew verb ברא ("create"), which appears at or near the opening of each:</p>
+    
+    <blockquote>
+        <p><strong>Unit 1 (1:1):</strong> בְּרֵאשִׁית בָּרָא אֱלֹהִים — "In the beginning Elohim created"</p>
+        <p><strong>Unit 2 (2:4):</strong> בְּהִבָּרְאָם — "when they were created"</p>
+        <p><strong>Unit 3 (5:1-2):</strong> בְּיוֹם בְּרֹא אֱלֹהִים אָדָם — "In the day Elohim created Adam"</p>
+    </blockquote>
+    
+    <p>Even a cursory reflection on these three introductions suggests meaning—the structure implies rhetorical purpose. The first Unit has a divine, transcendent, above-orientation. The third Unit has an earthly-mundane, human, immanent, below-orientation. The middle unit addresses the relationship between the above and the below, between YHWH and humans, both their connection and separation. So the middle Unit structurally is also a conceptual middle between the above and the below Units.</p>
+    
+    <p>By reading the first ten chapters as three creation Units rather than two, we see the complete vocabulary for understanding divine action established before the particular covenant story begins with Abraham. Elohim operates in the physical, visible, covenantal realm. YHWH operates in the moral, hidden, sacrificial realm. This vocabulary governs every subsequent appearance of the divine names.</p>
+    
+    <p>With this larger context established, we can now examine how Unit 3 itself is organized.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Unit's Architecture: A 6×2 Envelope</h2>
+    
+    <p>Unit 3 organizes as a 6×2 envelope structure—six rows, each containing two pericopes (Column A and Column B). But this isn't a simple grid. The rows form concentric pairs: rows 1 and 6 bracket the narrative with genealogical material, rows 2 and 5 pair as divine commands before and responses after the flood, and rows 3 and 4 form the center—the flood itself, commencing and receding.</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Column A</th>
+                <th>Column B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-header">Row 1<br><small>Generations: Prologue</small></td>
+                <td><strong>1A:</strong> Adam's Line (5:1-32)<br><em>Ten generations to Noah; Enoch and Noah "walked with Elohim"</em></td>
+                <td><strong>1B:</strong> Mixed Lines (6:1-10)<br><em>Sons of Elohim see daughters good; YHWH sees wickedness; Noah finds grace</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 2<br><small>Before the Flood</small></td>
+                <td><strong>2A:</strong> Elohim's Instructions (6:11-22)<br><em>Sees violence; ark specs; covenant promised; "two of every sort"</em></td>
+                <td><strong>2B:</strong> YHWH's Instructions (7:1-5)<br><em>Sees righteousness; "seven of clean, two of unclean"; forty days rain</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 3<br><small>Flood Commences</small></td>
+                <td><strong>3A:</strong> Entry (7:6-10)<br><em>Noah 600 years old; seven days before flood; animals enter</em></td>
+                <td><strong>3B:</strong> Waters Released (7:11-16)<br><em>Fountains and windows opened; "YHWH shut him in"</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 4<br><small>Flood Proper</small></td>
+                <td><strong>4A:</strong> Waters Prevail (7:17-8:5)<br><em>40 days; 150 days; ark rests on Ararat; waters decrease</em></td>
+                <td><strong>4B:</strong> Drying (8:6-14)<br><em>Raven, dove, olive leaf; earth dried; "in the first of the month"</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 5<br><small>After the Flood</small></td>
+                <td><strong>5A:</strong> Exit and Offering (8:15-22)<br><em>Noah offers olot to YHWH; YHWH speaks "in his heart"; curse lifted</em></td>
+                <td><strong>5B:</strong> Elohim's Covenant (9:1-17)<br><em>Public blessing; food laws; rainbow sign; covenant with all flesh</em></td>
+            </tr>
+            <tr>
+                <td class="row-header">Row 6<br><small>Generations: Epilogue</small></td>
+                <td><strong>6A:</strong> Noah's Sons (9:18-29)<br><em>Vineyard; Ham's transgression; curse of Canaan; Noah's death</em></td>
+                <td><strong>6B:</strong> Table of Nations (10:1-32)<br><em>Seventy nations; "from these the nations spread out after the flood"</em></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>The envelope structure announces itself through a fourfold repetition. "Shem, Ham, and Japheth" appears at the end of 1A (5:32), at the end of 1B (6:10), at the beginning of 6A (9:18), and at the beginning of 6B (10:1). This redundant information—the same three names appearing four times—instructs us to view Row 6 as resuming exactly where Row 1 ended. The genealogical frame closes as it opened: with Noah's three sons. Everything between constitutes the flood narrative proper, bracketed by this genealogical inclusio. Like the four corners of a jigsaw puzzle, these repetitions bind the unit into a single composition.</p>
+    
+    <p>With the overall architecture in view, we can now trace how each row develops its themes through the parallel columns.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Row 1: Two Kinds of "Generations"</h2>
+    
+    <p>Both pericopes in Row 1 are marked by the word תּוֹלְדוֹת (<em>toledot</em>, "generations"), from the root ילד ("to beget"). But the word carries two different meanings across the columns. In 1A, <em>toledot</em> means offspring—ten generations of Adam's descendants, each begetting the next. In 1B, <em>toledot</em> shifts to something more like "behaviors" or "character"—the generations of Noah are not about who he begot but about who he was: "righteous," "blameless," one who "walked with Elohim."</p>
+    
+    <p>The genealogical formula in 1A follows an identical pattern for all ten generations:</p>
+    
+    <blockquote>
+        <p>And [PN1] lived X years and begot [PN2].<br>
+        And [PN1] lived after begetting [PN2] Y years, and begot sons and daughters.<br>
+        And all the days of [PN1] were Z years, and he died.</p>
+    </blockquote>
+    
+    <p>But there are four exceptions to this formula—verbal changes and additions for Adam, Enoch, Lamech, and Noah. These exceptions, when read against their parallels in 1B, reveal the rhetorical purpose of the paired structure.</p>
+    
+    <h3>The Four Exceptions</h3>
+    
+    <p><strong>Adam:</strong> In 1A, Adam is re-presented as "in the likeness of Elohim," and he begets Seth "in his own likeness, after his image" (5:3). The capacity to transmit likeness and image passes from Elohim to Adam to Seth. But contrast 1B: "the sons of Elohim saw the daughters of HaAdam that they were good; and they took them wives" (6:2). These sons beget not image-bearers but Nephilim—"mighty men," "men of renown" (אַנְשֵׁי הַשֵּׁם)—obviously not in the likeness of YHWH (whose name is השם!), grieving his heart.</p>
+    
+    <p><strong>Enoch:</strong> In 1A, Enoch "walked with Elohim" (5:22, 24), and "Elohim took him" so that he did not face death as all others did. But in 1B, HaAdam clearly did not walk with Elohim—"every imagination of the thoughts of his heart was only evil all the time" (6:5). YHWH determined to wipe HaAdam from the face of the <em>adamah</em>. Walking with Elohim leads to being taken by Elohim; failing to walk leads to being blotted out.</p>
+    
+    <p><strong>Lamech:</strong> In 1A, Lamech names his son Noah, hoping Noah will "comfort us (יְנַחֲמֵנוּ) from our work and from the toil of our hands, from the ground which YHWH has cursed" (5:29). The verb is נחם in the <em>piel</em>—to bring comfort, relief. But in 1B, YHWH was "pained" (עצב) by HaAdam's evil and "regretted" (וַיִּנָּחֶם, נחם in the <em>niphal</em>) his human creation (6:6). The same root, different conjugations: Lamech hopes for comfort; YHWH feels regret. Lamech was not comforted—not yet.</p>
+    
+    <p><strong>Noah:</strong> In 1A, Noah is simply "a son of 500 years" when he begets his three sons—a mundane, earthly description, a son of time. But in 1B, Noah "found grace (חֵן) in the eyes of YHWH" (6:8), and was "a man righteous, blameless in his generation, walking with Elohim" (6:9). And here is a beautiful wordplay: the Hebrew word נֹחַ (Noah) is the mirror of חֵן (grace/favor). The bi-literal root, reversed: נח ↔ חן. Noah found chen—the one named נח discovered חן in YHWH's eyes. This is like a metaphor for the whole Unit: Noach found Chen!</p>
+    
+    <p>Reading the pericopes in pairs reveals rhetorical meanings invisible in linear reading. The similar canvas highlights the differences. 1A traces physical continuity through offspring; 1B traces moral assessment through behavior. Together they establish the dual meaning of "generations" that the entire unit will explore.</p>
+    
+    <p>Row 1 establishes the pre-flood situation. Row 2 presents the divine response—two sets of instructions from the two divine names.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Row 2: What Is Seen</h2>
+    
+    <p>The opening of Row 2 maintains the distinction between Elohim and YHWH through what each "sees." In 2A: "And Elohim saw the earth, and behold, it was corrupt; for all flesh had corrupted their way upon the earth" (6:12). Elohim sees physical corruption and violence—external, visible, behavioral. In 2B: "For thee have I seen righteous before me in this generation" (7:1). YHWH sees Noah's righteousness—internal, moral, a quality of character.</p>
+    
+    <p>Both pericopes close with a striking compliance formula: "And Noah did according to all that [divine name] commanded him." In 2A: "Thus did Noah; according to all that Elohim commanded him, so did he" (6:22). In 2B: "And Noah did according unto all that YHWH commanded him" (7:5). Noah hears commands from both divine names and obeys both. This double obedience formula—appearing nowhere else in Torah in this exact form—reinforces that Noah has close connections with both Elohim and YHWH. He can hear and execute the wishes of both.</p>
+    
+    <h3>Covenant and Clean Animals</h3>
+    
+    <p>A curious parallel emerges in Row 2 that seems unrelated at first. In 2A, Elohim says to Noah: "I will establish my covenant with you" (6:18). In 2B, YHWH tells Noah to take "seven pairs of clean animals, two pairs of unclean" (7:2). Covenant in 2A; clean animals in 2B. Why would these be parallel?</p>
+    
+    <p>The answer comes in Row 5, where the parallel resolves. In 5A, Noah takes "of every clean beast, and of every clean fowl, and offered burnt offerings (עֹלֹת) on the altar" to YHWH (8:20). In 5B, Elohim "establishes" (הֵקִים) his covenant with Noah and all flesh (9:9-11). The clean animals YHWH commanded in 2B become the offerings Noah presents in 5A. The covenant Elohim promised in 2A becomes the covenant Elohim establishes in 5B. Clean animals and covenant are parallel because sacrifice and covenant are parallel—two aspects of the restored divine-human relationship.</p>
+    
+    <p>Surely YHWH's command to take seven pairs of clean animals included a reason for the extra pairs. Noah's compliance in 5A—building an altar and causing the <em>olot</em> to ascend—is yet another example of his obedience to YHWH's command. The structure reveals what the linear text leaves implicit.</p>
+    
+    <h3>Two Commands, One Obedient Noah</h3>
+    
+    <p>One of the most problematic-seeming repetitions in Torah appears here. Elohim says: "Of every living thing of all flesh, two of every sort shalt thou bring into the ark" (6:19-20). YHWH says: "Of every clean beast thou shalt take to thee seven and seven... and of the beasts that are not clean two and two" (7:2-3). Two of everything—or seven of the clean? The commands seem contradictory.</p>
+    
+    <p>Yet Noah obeys both. The text does not resolve this as modern readers might expect—by harmonizing or explaining away the difference. Instead, it simply reports that Noah did as Elohim commanded and did as YHWH commanded. The parallel structure suggests we should not see contradiction but complementarity: Elohim provides the baseline (two of every kind for survival), YHWH adds the specification (additional clean animals for sacrifice). Noah executes both because Noah serves both.</p>
+    
+    <p>With the preparations complete, Row 3 presents the flood's commencement—the structural center where the narrative turns.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Row 3: The Turning Point</h2>
+    
+    <p>Both pericopes in Row 3 open with mention of the flood commencing in Noah's 600th year, and both end with the animals entering "male and female" with a compliance formula: "as Elohim commanded Noah." The exact repetition of three phrases in both pericopes—"they entered into Noah into the ark" (בָּאוּ אֶל־נֹחַ אֶל־הַתֵּבָה), "two two" (שְׁנַיִם שְׁנַיִם), and "male and female" (זָכָר וּנְקֵבָה)—binds the pericopes together as a pair.</p>
+    
+    <p>But the similar canvas highlights the differences. Pericope 3A reads as simple description—circumstantial, mundane: "And the flood was water upon the earth" (7:10). The wording is unusual—a fronted subject followed by a perfect verb—as if the writer is halting the narrative sequence to define what a flood is for readers. Apparently this was a new phenomenon in the story-world.</p>
+    
+    <p>Pericope 3B reads more dramatically, as fulfillment of YHWH's prediction in 2B. It provides a full date expression: "the 17th day of the 2nd month" (7:11). It refers back to the seven-day warning YHWH gave in 7:4. It describes a three-fold cataclysm: "Were broken up all the fountains of the great deep, and the lattice-windows of the heavens were opened, and the rain was upon the earth forty days and forty nights" (7:11-12). And it emphasizes "the breath of life" (רוּחַ חַיִּים) in the animals entering—life preserved amidst death.</p>
+    
+    <h3>"And YHWH Shut Behind Him"</h3>
+    
+    <p>The most dramatic moment in Row 3—and perhaps the unit's turning point—comes at the end of 3B: "And YHWH shut behind him" (וַיִּסְגֹּר יְהוָה בַּעֲדוֹ, 7:16). This is startling. At the beginning of the pericope, the lattice-windows of heaven were opened (v. 11), but now YHWH shuts the door of the ark behind Noah and his family. A very personal and engaged touch!</p>
+    
+    <p>The sense is similar to the instructions for Passover, where the family must not leave the door of the house, and YHWH protects the house from the destroying angel (Exod 12:22-23). As in Isaiah 26:20: "Come, my people, enter into your chambers, and shut your doors behind you; hide yourself for a little moment, until the indignation passes by." YHWH is closing the door behind Noah and those with him in the ark, hiding them until the anger passes.</p>
+    
+    <p>This closing act marks the structural center of the unit. Row 3 is sandwiched between compliance formulas—"Noah did as deity commanded" appears at the end of 2A, 2B, 3A, and 3B (6:22, 7:5, 7:9, 7:16). This would seem odd unless the device is being used rhetorically, binding the pericopes in pairs and marking Row 3 as the transition from preparation to event.</p>
+    
+    <p>The turning point passed, Row 4 traces the flood proper—the waters prevailing and then receding toward a new beginning.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Row 4: Rest and New Beginning</h2>
+    
+    <p>Row 4 opens with anaphora about forty days: "And the flood was forty days upon the earth" (7:17) in 4A; "And it came to pass at the end of forty days" (8:6) in 4B. Both pericopes address the flood proper—prevailing and receding in 4A, abating and drying in 4B.</p>
+    
+    <p>On first consideration, it may not seem obvious why these two pericopes should be read in parallel rather than as linear narrative—the content is so different (flood details versus Noah and the birds). But structural repetitions bind them together. Both use "ark" five times. Both use "waters" repeatedly (eight times in 4A, five in 4B). Both end with double chronological details, strikingly with the day terms "in the seventh month, on the seventeenth day of the month" (8:4) and "in the first month, on the first day of the month" (8:13) in chiastic parallel.</p>
+    
+    <h3>Wordplays on Noah's Name</h3>
+    
+    <p>A dramatic wordplay connects the pericopes. In 4A, the ark comes to rest (וַתָּנַח) on the mountains of Ararat as the waters began to decrease (8:4). The verb is נוח—"to rest"—the root of Noah's name. In 4B, the dove finds no resting place (מָנוֹחַ) for the sole of her foot (8:9). Same root, different outcome: the ark finds rest, but the dove cannot. Not yet. The waters must continue to recede before rest is complete.</p>
+    
+    <p>And Ararat itself may contain another wordplay—on YHWH's curse. The Hebrew verb for "curse" is אָרַר (<em>arar</em>). The mountains where the ark rests sound like the curse that Noah was named to comfort. The ark rests on the curse.</p>
+    
+    <h3>"In the Beginning"</h3>
+    
+    <p>Pericope 4A centers on the perishing and blotting out of all living things in the old creation: "And all flesh perished... all in whose nostrils was the breath of life... and they were blotted out from the earth" (7:21-23). But 4B marks a new beginning. The phrase בָּרִאשׁוֹן ("in the first") appears in 8:13: "in the first month, on the first day of the month." This word shares the same root as בְּרֵאשִׁית ("in the beginning") from Genesis 1:1. The writer seems to be making an intentional allusion—this is the beginning of a new creation.</p>
+    
+    <p>The timing reinforces this: "in the first day of the month" (8:13). A new calendar, a new world. And the dating of the dry earth as "in the six hundredth and first year" (8:13) of Noah's life suggests a sabbath year—after the six hundred years of Noah's life before the flood, the earth enters its seven-hundredth year, its rest.</p>
+    
+    <p>The waters having receded and the earth dried, Row 5 presents the aftermath—Noah's exit, his offering, and the divine responses that will shape post-diluvian existence.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Row 5: Ascending Offerings and Rising Covenant</h2>
+    
+    <p>Row 5 is about exiting (יָצָא) the ark, and the parallel structure reveals the unit's most important rhetorical connection. In 5A, Elohim speaks to Noah commanding the exit, and Noah builds an altar and offers <em>olot</em> (burnt offerings) to YHWH. In 5B, Elohim blesses Noah and his sons and establishes the covenant with all flesh.</p>
+    
+    <p>For functional repetitions, both pericopes contain the command to "be fruitful and multiply" in the new world (8:17 and 9:1, 7). Both contain the promise to "not again" judge or flood the earth—YHWH's promise in 5A uses "not again" (לֹא אֹסִף) three times (8:21), and Elohim's promise in 5B uses similar language three times (9:11, 15). Nature's rhythms are guaranteed by YHWH in 5A—"seedtime and harvest, cold and heat, summer and winter, day and night shall not cease" (8:22). This is paralleled in 5B by Elohim's "perpetual covenant" guaranteed by the sign of the rainbow (9:12-16).</p>
+    
+    <h3>The Causative Verb Parallel</h3>
+    
+    <p>The deepest parallel in Row 5 lies in the Hebrew verbs. In 5A, Noah "offered burnt offerings" is literally "caused to ascend ascenders" (וַיַּעַל עֹלֹת)—the <em>hiphil</em> (causative) of עָלָה ("to go up"). The <em>olot</em> ascend to YHWH as smoke. In 5B, Elohim says "I will establish my covenant" is literally "I will cause my covenant to stand/rise" (וַהֲקִמֹתִי אֶת־בְּרִיתִי)—the <em>hiphil</em> of קוּם ("to stand/rise").</p>
+    
+    <p>So "causing to ascend ascenders" in 5A parallels "causing to rise a covenant" in 5B. Acceptable sacrifice and perpetual covenant are palpably parallel in the Hebrew of this row. What Noah causes to rise up to YHWH through offerings, Elohim causes to stand through covenant. The two divine names each receive their appropriate response—YHWH receives sacrifice, Elohim establishes covenant.</p>
+    
+    <h3>The Comforting Aroma</h3>
+    
+    <p>When Noah offers the <em>olot</em>, "YHWH smelled the comforting aroma" (וַיָּרַח יְהוָה אֶת־רֵיחַ הַנִּיחֹחַ, 8:21). The word נִיחֹחַ ("comforting" or "soothing") is yet another wordplay on Noah's name (נֹחַ). Remember Lamech's prophecy: "This one will comfort us (יְנַחֲמֵנוּ) from our work and from the toil of our hands, from the ground which YHWH has cursed" (5:29). Now, finally, the prophecy is fulfilled. Noah's clean animal offerings have impacted YHWH such that YHWH can continue in relationship with humanity despite humanity's evil hearts. The נִיחֹחַ aroma brings the נחם relief that Lamech foresaw.</p>
+    
+    <p>And immediately after smelling the comforting aroma, YHWH says "in his heart: I will not again curse the ground (אֲדָמָה) for man's sake" (8:21). The curse on the <em>adamah</em> is lifted. What YHWH cursed in Unit 2, YHWH removes in Unit 3. Noah has fulfilled his naming.</p>
+    
+    <h3>Private and Public Speech</h3>
+    
+    <p>Notice how YHWH and Elohim speak differently in Row 5. YHWH "said in his heart" (8:21)—privately, internally, a monologue that Noah does not hear. This speech is for the reader alone. There is no further direct communication between YHWH and Noah after this point. YHWH speaks in his heart about the hearts of humanity: "the imagination of man's heart is evil from his youth" (8:21). The deity who perceives hearts now speaks within his own heart.</p>
+    
+    <p>Elohim, by contrast, "spoke unto Noah, and to his sons with him, saying" (9:8)—publicly, formally, directly addressing humanity. Elohim establishes covenant not just with Noah but with "every living creature of all flesh that is upon the earth" (9:16). He creates a visible sign—the rainbow—and explains its meaning. This is public proclamation, not private meditation. YHWH operates in the hidden realm; Elohim operates in the visible realm.</p>
+    
+    <p>Row 5 establishes the post-flood divine-human relationship. Row 6 returns to the genealogical frame, closing the envelope that Row 1 opened.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Row 6: The Ark Exiters</h2>
+    
+    <p>Row 6 opens with reference to the sons of Noah, naming them as Shem, Ham, and Japheth, which matches the ending of Row 1—the four corners of the envelope structure. But in 6A, these "sons of Noah" receive a dramatic label: "the ones exiting from the ark" (הַיֹּצְאִים מִן־הַתֵּבָה, 9:18). These are the Ark Exiters—the ones who survived the divine judgment in the protection of the ark. And not only did they exit; 6B emphatically asserts that these same sons "were born to them sons after the flood" (10:1). Survival and continuation.</p>
+    
+    <p>The repeating epiphora for this row are "after the flood" (אַחַר הַמַּבּוּל), appearing at 9:19, 10:1, and 10:32. Three out of four "corners" of the two pericopes have this repetition, binding them together and firmly closing the whole Unit. The closing sentence of 6B—and so of the entire Unit—is climactic: "and from these the nations spread out in the earth after the flood" (10:32).</p>
+    
+    <h3>Noah's Missing Death</h3>
+    
+    <p>Something curious happens with genealogical formulas. In 1A, we expected Noah's death formula to appear at the end of the genealogy—every other patriarch has one. But it was missing. The text jumps from Noah's sons to the events of 1B. Where did the death formula go?</p>
+    
+    <p>It appears here, at the end of 6A: "And all the days of Noah were nine hundred and fifty years; and he died" (9:29). The formula that was expected at the close of 1A now appears (apparently arbitrarily) at the end of the nakedness narrative. Reading the whole Unit as six pericopes in pairs explains this placement: the pericopes in between (1B to 6A) function as a rhetorical insertion into "the generations of Adam." The judgment and preservation narrative is sandwiched between the bookends of Noah's life. This is evidence that Unit 3 is primarily about "the generations" of Adam and HaAdam—not narrowly about "the flood."</p>
+    
+    <h3>Expansion Verbs</h3>
+    
+    <p>The functional relationship between 6A and 6B becomes clear when we notice the expansion verbs. Pericope 6A opens with "from these was the whole earth overspread" (נָפְצָה, 9:19). Pericope 6B closes with "from these the nations spread out" (נִפְרְדוּ, 10:32). Related scattering verbs appear throughout: נָפֹצוּ (10:18) uses the same root as 9:19. All three verbs describe expansion and dispersal. Both pericopes are about what the three sons generate—6A summarizes in one sentence, 6B provides the detailed genealogy.</p>
+    
+    <p>And specifically, both pericopes amplify Ham and Canaan. In 6A, Ham's sin and Canaan's curse receive 6½ verses (9:18, 22-27). In 6B, Ham's descendants receive 15 verses (10:6-20), the longest genealogical section. The parallel structure focuses attention on this lineage that will become Israel's primary antagonist.</p>
+    
+    <p>Having traced each row, we can now step back to see the larger pattern that organizes them all.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Chiastic Structure</h2>
+    
+    <p>Viewing the unit as a whole reveals a chiastic architecture. The six rows pair in concentric rings:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Outer Pair</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Row 1</strong></td>
+                <td>Generations before: offspring (1A) / behaviors (1B)</td>
+            </tr>
+            <tr>
+                <td><strong>Row 6</strong></td>
+                <td>Generations after: behaviors (6A) / offspring (6B)</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Middle Pair</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Row 2</strong></td>
+                <td>Preparation: covenant promised (2A) / clean animals commanded (2B)</td>
+            </tr>
+            <tr>
+                <td><strong>Row 5</strong></td>
+                <td>Response: clean animals offered (5A) / covenant established (5B)</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Inner Pair</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Row 3</strong></td>
+                <td>Flood commencing: entry / waters released</td>
+            </tr>
+            <tr>
+                <td><strong>Row 4</strong></td>
+                <td>Flood proper: waters prevailing / drying</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Rows 1 and 6 show chiasm in their themes—offspring vs. behaviors reverses to behaviors vs. offspring. Rows 2 and 5 show chiasm in covenant and sacrifice—promise and command becomes offering and establishment. The structure demonstrates that this Unit is about human generation in the fullest sense—not narrowly "the flood story" but the complete account of how humanity was reconstituted through judgment and preservation.</p>
+    
+    <p>The chiastic structure reveals the overall shape. But the two columns also carry distinct patterns that run vertically through all six rows.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Column Pattern: Individual and Collective</h2>
+    
+    <p>The columns also show a pattern visible only when read as a weave. Column A tends toward individual focus: Adam's genealogy through firstborn sons (1A), Elohim's commands to Noah specifically (2A), the ark's physical journey (3A, 4A), Noah's personal offering (5A), Noah's own story and death (6A). Column B tends toward collective focus: the behaviors of "HaAdam" as a group (1B), YHWH's assessment of the generation (2B), the fate of "all flesh" (3B, 4B), the covenant with "all flesh" and "the earth" (5B), the Table of Nations spreading across the earth (6B).</p>
+    
+    <p>This individual/collective distinction maps onto the Elohim/YHWH distinction in interesting ways. Elohim's covenant (Column A theme, resolved in Column B of Row 5) is ultimately with the collective—"every living creature of all flesh." YHWH's concern (Column B theme, resolved in Column A of Row 5) is ultimately with the individual—Noah's righteousness, Noah's offering. The structure holds both in tension.</p>
+    
+    <p>The column patterns illuminate the unit's organization. Several additional features further distinguish how the two divine names operate within the narrative.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Two Sources of Destruction</h2>
+    
+    <p>When both divine names determine to destroy life, notice how differently they describe their plans:</p>
+    
+    <blockquote>
+        <p><strong>Elohim:</strong> "I do bring the flood of waters upon the earth, to destroy all flesh, wherein is the breath of life, <strong>from under heaven</strong>" (6:17)</p>
+        <p><strong>YHWH:</strong> "I will cause it to rain upon the earth forty days and forty nights; and every living substance that I have made will I blot out <strong>from off the face of the earth</strong>" (7:4)</p>
+    </blockquote>
+    
+    <p>The flood waters came from two sources, above and below. YHWH sends rain downward to blot out what is on "the face of the earth"—his perspective is from above, looking down. Elohim releases the waters of the earth to destroy all flesh "under heaven"—his perspective is from below, looking up. YHWH occupies the transcendent position, raining destruction from heaven. Elohim operates from the earthly realm, releasing the waters from beneath. They have different perspectives: YHWH sees from above and Elohim from below.</p>
+    
+    <p>The spatial distinction between the divine names extends to the vocabulary each uses for the earth itself.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Adamah and Eretz Distinction</h2>
+    
+    <p>A subtle but consistent pattern emerges when we attend to which Hebrew word for "earth" or "ground" each divine name uses. When YHWH speaks in his heart after Noah's offering, the text employs אֲדָמָה (<em>adamah</em>), the ground or soil: "I will not again curse the <em>adamah</em> for man's sake" (8:21). But when Elohim establishes his covenant, the text uses אֶרֶץ (<em>eretz</em>), the earth or land—and it does so seven times: "neither shall there any more be a flood to destroy the <em>eretz</em>" (9:11), "between Me and the <em>eretz</em>" (9:13), and so forth throughout the rainbow covenant.</p>
+    
+    <p>This vocabulary distinction maps onto the broader pattern. YHWH operates in the personal, relational sphere—the <em>adamah</em> is the ground from which אָדָם (<em>adam</em>, the human) was formed in Unit 2, the cursed soil that responds to human behavior. <em>Adamah</em> carries relational weight; it is the dust to which humans return. Elohim operates in the cosmic, universal sphere—the <em>eretz</em> is the earth created in Unit 1's opening verse, the land promised to nations, the comprehensive territory over which divine sovereignty extends.</p>
+    
+    <p>These vocabulary patterns reflect a larger development that occurred between Unit 2 and Unit 3—the emergence of YHWH as a distinct character from the earlier compound name.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>YHWH Elohim Becomes YHWH</h2>
+    
+    <p>Pay attention to what Lamech says when naming Noah. He attributes the curse on the ground to YHWH: "the ground which YHWH hath cursed" (5:29). But look back at Unit 2—it was YHWH Elohim who cursed the ground (3:17), not YHWH alone. Lamech treats the combined name as equivalent to YHWH.</p>
+    
+    <p>And YHWH accepts this identification. "I will blot out HaAdam whom I have created from the face of the earth" (6:7). YHWH claims ownership of HaAdam's creation—but HaAdam was formed by YHWH Elohim (2:7), not by YHWH alone. YHWH has taken on the persona of YHWH Elohim. The combined name that appeared in Unit 2 should be understood as a precursor to YHWH; what was introduced as YHWH Elohim continues now as simply YHWH. When we read YHWH Elohim in Unit 2, we should see YHWH-in-emergence. By Unit 3, the emergence is complete, and the names operate as distinct characters.</p>
+    
+    <p>If YHWH emerged from the compound name, we might ask why YHWH maintains particular connection to humanity—specifically through Eve.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Eve-YHWH Resonance</h2>
+    
+    <p>Why does YHWH maintain connection to humanity through Eve rather than through HaAdam? Consider the parallels between them. Eve is separated from an earlier creation with a generic name—HaAdam. Similarly, YHWH is separated from an earlier generic name—Elohim. Eve comes into being through separation; so does the distinct YHWH of Unit 3.</p>
+    
+    <p>Even their names resonate in Hebrew. YHWH derives from the root היה, "being." Eve (חַוָּה) derives from the root חיה, "living." The deity of being connects to the woman of living. This character mapping runs deep. Eve, not HaAdam, is in the "form and image" of YHWH—a character who comes into being through separation from a prior unity.</p>
+    
+    <p>And it is Eve's declaration at Cain's birth that establishes the YHWH line: "I have gotten a man with YHWH" (4:1). Not "Elohim gave me a son" but "I have acquired/created with YHWH." Eve claims co-creation with YHWH. Her descendants through Cain form the YHWH line—and the YHWH line perishes in the flood, except insofar as it continues through Eve's connection to Seth.</p>
+    
+    <p>The Eve-YHWH connection illuminates the larger pattern: Unit 3 completes a process of three creations, each producing different kinds of humanity.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Three Creations</h2>
+    
+    <p>If we attend carefully to what each unit creates—and destroys—a deeper pattern emerges. We might call it the paradigm of three creations.</p>
+    
+    <p>In Unit 1, Elohim creates cosmic Adam—humanity that exists as image and likeness of the transcendent creator, blessed to be fruitful and multiply across the earth. In Unit 2, YHWH Elohim forms earthly HaAdam from the dust of the <em>adamah</em>, breathing life into his nostrils, placing him in a garden to work the soil. These are not identical humans—one is cosmic, created by speech; the other is formed from clay, animated by divine breath. Unit 1's Adam receives dominion over creation; Unit 2's Adam receives a prohibition and eventually a curse.</p>
+    
+    <p>Then comes Unit 3, and the flood destroys both pure lines. The <em>bnei elohim</em>—those sons of Elohim who saw and took—perish. Cain's line, traced back to Eve's declaration "I have gotten a man with YHWH," likewise vanishes. Only Noah survives, and Noah belongs to neither pure line. He descends from Seth, the replacement for Abel, bearing aspects of both. His father Lamech speaks of YHWH's curse on the אדמה; Noah himself walks with Elohim. The flood is a third creation—not by Elohim alone as in Unit 1, not by YHWH Elohim together as in Unit 2, but through both operating in parallel yet distinctly, preserving only the hybrid who integrates what neither pure line could maintain.</p>
+    
+    <p>The three creations establish a pattern. What changes for the divine names once the flood waters recede?</p>
+</section>
+
+<section class="commentary-section">
+    <h2>What Changes After the Waters Recede</h2>
+    
+    <p>The three opening units present a process through which YHWH becomes an independent entity associated with the transcendent realm and the female—through Eve. Elohim undergoes an opposite process. Starting as the independent creator of everything through speech, he becomes connected to the earth and those who dwell upon it—immanent—through a covenant that includes rational laws regulating human life, spoken publicly to Noah and his sons. His connection to people is through male Adam.</p>
+    
+    <p>After the flood, YHWH withdraws from direct earthly engagement. He speaks "in his heart" (8:21)—privately, internally, no longer addressing humanity directly. When Unit 4 opens with the Tower of Babel, YHWH speaks using divine council language: "Come, let us go down" (11:7). He must descend to see what happens on earth, and he addresses the heavenly assembly rather than the human builders. This is a YHWH who operates from above, who has retreated from the earthly realm where he once walked freely.</p>
+    
+    <p>Meanwhile, Elohim becomes the earthly interface. It is Elohim who speaks publicly "unto Noah, and to his sons with him" (9:8). It is Elohim who establishes the visible covenant sign. The cosmic deity who created through speech in Unit 1 now takes over the work of direct communication with post-diluvian humanity. YHWH ascends toward transcendence while Elohim descends to manage covenant relationship.</p>
+    
+    <p>The patterns established in Unit 3 do not remain isolated. They connect forward to later units, particularly in the covenant formulations.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit 3 and <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>: The Covenant Template</h2>
+    
+    <p>A striking verbal connection links Unit 3's Elohim covenant with <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>'s covenant with Abraham. When Elohim establishes covenant with Noah in Row 5B, the language creates a template that the Abraham covenant will follow almost verbatim.</p>
+    
+    <blockquote>
+        <p>To Noah: וַאֲנִי הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם—"As for me, behold, I establish my covenant with you" (9:9)</p>
+        <p>To Abraham: אֲנִי הִנֵּה בְרִיתִי אִתָּךְ—"I, behold, my covenant is with you" (17:4)</p>
+    </blockquote>
+    
+    <p>The parallels extend through the entire covenant structure. Both covenants use וַהֲקִמֹתִי אֶת־בְּרִיתִי ("and I will establish my covenant")—to Noah at 9:11, to Abraham at 17:7. Both address descendants: "with you and with your seed after you" appears in the Noah covenant (9:9) and echoes in the Abraham covenant (17:7). Both specify eternal duration: לְדֹרֹת עוֹלָם ("for perpetual generations") appears in both (9:12 and 17:7, 17:9). And both employ ארץ language throughout—the cosmic earth that Elohim governs. What Unit 3 establishes as Elohim's covenant mode, <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a> reprises with Abraham.</p>
+    
+    <h3>Noah and Abraham: "Walk and Be Perfect"</h3>
+    
+    <p>The verbal connection extends to characterization. The text introduces Noah: נֹחַ אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ—"Noah was a righteous man, perfect (<em>tamim</em>) in his generations; Noah walked with Elohim" (6:9). Two terms define him: תָּמִים (wholehearted, perfect) and הִתְהַלֶּךְ אֶת־הָאֱלֹהִים (walked with Elohim).</p>
+    
+    <p>When YHWH appears to Abraham in <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>, the opening words are: הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים—"Walk before me and be perfect" (17:1). The same two terms—now as commands rather than descriptions. Abraham is explicitly told to follow Noah's pattern. The preposition shifts—Noah walked "with" (אֶת) Elohim, Abraham must walk "before" (לְפָנַי) YHWH—but the verbal echo is unmistakable. The covenant-bearer of <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a> is called to replicate the covenant-bearer of Unit 3.</p>
+    
+    <p>Unit 3's structure embeds more than just covenant formulas. Its six-row architecture mirrors the book of Genesis itself.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit 3 as Fractal of Genesis</h2>
+    
+    <p>Here is something remarkable about Unit 3's structure. Its six rows mirror the six triads of Genesis itself. The unit contains within it a miniature version of the entire book's three-ring architecture:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Unit 3 Internal Rows</th>
+                <th>Content</th>
+                <th>Maps to Genesis Triads</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Rows 1 &amp; 6</strong></td>
+                <td>Genealogies (before/after)</td>
+                <td><strong>Triads A &amp; G</strong> (Outer Ring—Kingship, cosmic order)</td>
+            </tr>
+            <tr>
+                <td><strong>Rows 2 &amp; 5</strong></td>
+                <td>Divine commands/responses</td>
+                <td><strong>Triads B &amp; F</strong> (Middle Ring—Covenant relationships)</td>
+            </tr>
+            <tr>
+                <td><strong>Rows 3 &amp; 4</strong></td>
+                <td>Family in ark (crisis/resolution)</td>
+                <td><strong>Triads C/D &amp; E</strong> (Inner Ring—Family core)</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>The flood narrative is not merely one episode in Genesis—it is a structural microcosm of the entire book. The genealogical frame (Rows 1 and 6) corresponds to the cosmic/political bookends of Genesis. The covenant material (Rows 2 and 5) corresponds to the covenant relationships that structure the middle portion. The family-in-crisis at the center (Rows 3 and 4) corresponds to the family dynamics at Genesis's heart. Unit 3 embeds the book's architecture within itself.</p>
+    
+    <p>If Unit 3 contains a fractal of Genesis, we might expect to find its structural twin elsewhere in the book.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Unit 3 and Unit 18: The Six-Row Pair</h2>
+    
+    <p>Only two units in Genesis have six internal rows: Unit 3 and <a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">Unit 18</a> (the Joseph famine narrative). They sit as bookends—one near the opening of Genesis, one near its close—and each contains within itself the structural pattern of the entire book between them.</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Unit 18 Internal Rows</th>
+                <th>Content</th>
+                <th>Structural Parallel to Unit 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Rows 1 &amp; 6</strong></td>
+                <td>Joseph's control / Egypt's transformation</td>
+                <td>Political order (Outer)</td>
+            </tr>
+            <tr>
+                <td><strong>Rows 2 &amp; 5</strong></td>
+                <td>Brothers' journey / Jacob's migration</td>
+                <td>Covenant testing (Middle)</td>
+            </tr>
+            <tr>
+                <td><strong>Rows 3 &amp; 4</strong></td>
+                <td>Benjamin crisis / Joseph's revelation</td>
+                <td>Family drama (Inner)</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Both units deal with family preserved through catastrophe—flood in Unit 3, famine in Unit 18. Both show divine providence working through natural means. Both result in the reestablishment of blessing after judgment. The structural parallel between these two six-row units suggests the author built clues about the book's overall architecture into the units themselves.</p>
+    
+    <p>We have traced patterns through rows, columns, and structural correspondences. We can now summarize the systematic distinctions between the divine names that emerge from this analysis.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>The Pattern of Distinctions</h2>
+    
+    <p>By the end of Unit 3, we can observe systematic differences in how Elohim and YHWH operate:</p>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Elohim</th>
+                <th>YHWH</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Generic name</td><td>Proper name</td></tr>
+            <tr><td>Blesses, sees "good"</td><td>Warns, sees wickedness in hearts</td></tr>
+            <tr><td>Operates from below ("under heaven")</td><td>Operates from above ("face of the earth")</td></tr>
+            <tr><td>Creates through speech</td><td>Forms from dust, breathes life</td></tr>
+            <tr><td>Addresses ארץ (earth/land)</td><td>Addresses אדמה (ground/soil)</td></tr>
+            <tr><td>Speaks publicly to Noah and sons</td><td>Speaks "in his heart" privately</td></tr>
+            <tr><td>Establishes covenant with all flesh</td><td>Receives offerings, lifts curse</td></tr>
+            <tr><td>Connection through male Adam</td><td>Connection through female Eve</td></tr>
+            <tr><td>Creates visible signs (rainbow, luminaries)</td><td>Perceives what is hidden in hearts</td></tr>
+            <tr><td>"Walked with" (Enoch, Noah)</td><td>"Found grace in eyes of" (Noah)</td></tr>
+            <tr><td>Engineers physical solutions (ark specs)</td><td>Feels grief, regret, acceptance</td></tr>
+            <tr><td>Becomes immanent through covenant</td><td>Becomes transcendent after flood</td></tr>
+            <tr><td>Concerned with physical realm, actions</td><td>Concerned with moral realm, hearts</td></tr>
+            <tr><td>Public declamations</td><td>Private monologues</td></tr>
+        </tbody>
+    </table>
+    
+    <p>These aren't random differences but a systematic characterization. Elohim operates in the physical, visible, public realm—cosmic creation, earthly covenant, signs that can be seen. YHWH operates in the hidden, interior, transcendent realm—perceiving hearts, speaking privately, positioned above looking down. The flood narrative places them in parallel situations precisely so we can observe these distinctions.</p>
+    
+    <p>We began with a puzzle: why do the divine names separate while humanity integrates? We can now answer that question.</p>
+</section>
+
+<section class="commentary-section">
+    <h2>Reading the Unit</h2>
+    
+    <p>Unit 3 completes the Creation Triad that opens Genesis. All three units employ the verb ברא ("create")—Unit 1 at the beginning (1:1), Unit 2 at 2:4, and Unit 3 at 5:1-2 where it recalls creation in Adam's genealogy. But Unit 3 does something the first two could not: it places Elohim and YHWH in comparable situations across parallel columns, allowing us to observe how each operates when facing similar circumstances.</p>
+    
+    <p>What we observe is that the divine names function as distinct characters with different modes of perception, communication, and relationship. Elohim sees the physical world and judges it good or corrupt; YHWH sees into hearts and perceives moral reality. Elohim speaks publicly and establishes covenants with formal signs; YHWH speaks privately, within his heart, and relates through offerings and response to human initiative. Elohim releases waters from below; YHWH sends rain from above. Elohim provides the engineering; YHWH provides the emotional response.</p>
+    
+    <p>And as the divine names separate into these distinct operations, humanity integrates through Noah—the one who walked with Elohim and found grace (חֵן) in YHWH's eyes, whose very name (נֹחַ) mirrors favor, whose father attributed his naming to YHWH's curse, whose descendants will carry both divine streams into the post-diluvian world. The separation above enables the integration below. What the godhead divides, the surviving human family combines.</p>
+    
+    <p>Reading the pericopes in pairs—two by two, like the animals entering the ark—gives rich rhetorical meanings that are not visible when read in a linear manner. The doublets are not sources awkwardly combined but parallel hermeneutical perspectives, each contributing what the other lacks. The double-telling serves rhetorical intensification, helping us see aspects we would not recognize without the stereo spectacles of paired reading.</p>
+    
+    <p>Unit 3 thus establishes the framework for everything that follows. The covenant formula Elohim uses with Noah will reappear with Abraham. The command to "walk and be perfect" that describes Noah will become Abraham's calling. The spatial arrangement—YHWH transcendent, Elohim immanent—will structure the patriarchal narratives until Jacob's ladder begins to bridge the divide. And the six-row structure that encodes Genesis's architecture will recur in Unit 18, framing the Joseph narrative with the same tripartite organization.</p>
+    
+    <p>The flood is not merely destruction and preservation; it is reconfiguration, establishing the terms under which divine and human will interact for the rest of Genesis and beyond. Structure is meaning. The architecture is the revelation.</p>
+</section>
+
+</article>
+
+<!-- Link to unit text -->
+<aside class="unit-link-box">
+    <p><strong>Read the structured text:</strong> <a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">Genesis Unit 3 with color-coded patterns</a></p>
+</aside>
+
+<!-- Navigation -->
+<nav class="unit-navigation">
+    <div class="nav-arrows">
+        <a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">← Unit 2: Eden and Cain</a>
+        <a href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4.html">Unit 4: Tower of Babel →</a>
+    </div>
+    <div>
+        <a href="/torah-weave/Genesis/genesis-map/genesis-map.html">Genesis Map</a>
+    </div>
+</nav>
+
+<!-- Citation -->
+<aside class="citation-box">
+    <strong>To cite:</strong> Torah Weave Project. "Genesis Unit 3: Elohim and YHWH Defined." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Genesis/genesis-unit-3/commentary.html
+</aside>
+
+<!-- Series Navigation -->
+<nav class="series-navigation">
+    <h3>Genesis Commentary Series</h3>
+    <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Overview</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: Units</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: Map</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: Three Rows</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture</a>
+</nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">התורה כדרכה</a></li>
+                        <li>T<a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+
+<!-- #EndTemplate -->
+
+

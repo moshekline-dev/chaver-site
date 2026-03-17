@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+        /* Landscape phones - hamburger menu */
+@media (max-height: 500px) and (orientation: landscape) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav li {
+        width: 100%;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+    }
+    
+    main.content-wrapper {
+        padding: 15px 10px;
+    }
+}
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">עברית</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/torah-weave/index.html">Torah Weave</a> &raquo;
+    <a href="/torah-weave/Genesis/genesis-map/genesis-map.html">Genesis</a> &raquo;
+    <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Genesis Analysis</a> &raquo;
+    <span>Part C: The Three Rows</span>
+</nav>
+<article itemscope itemtype="https://schema.org/ScholarlyArticle">
+
+<header class="unit-header-section">
+    <h1 itemprop="headline">Part C: The Three Rows</h1>
+    <div class="unit-meta">
+        <span itemprop="description">The Hidden Warp: Divine Names and Cosmic Geography</span>
+    </div>
+</header>
+
+<main itemprop="articleBody">
+
+<h2>Introduction: The Hidden Warp</h2>
+
+<h3>The Ancient Egyptian Horizontal Loom</h3>
+
+<p>Ancient Egyptian tomb paintings preserve vivid images of weaving technology. At Beni Hasan, Middle Kingdom tombs (circa 2000 BCE) show horizontal looms, and later Ramesside period tombs such as that of Nefer-ronpet, Superintendent of Weavers at Thebes (circa 1200 BCE), provide detailed representations. These depictions show a simple but sophisticated device: two beams anchored to the ground by vertical posts, with warp threads stretched horizontally between them. Weavers sit or kneel in the middle space, passing weft threads vertically through the stretched warp, creating fabric.</p>
+
+<p>The structure is elegant: two fixed anchors at opposite ends, horizontal threads stretched between them providing the structural framework, vertical threads woven through the middle creating the visible pattern. The anchoring posts hold everything—they establish the space within which weaving happens. The warp threads stretched between these anchors remain mostly hidden in the finished fabric. You see the weft's pattern on the surface, but the warp provides the foundation that makes the pattern possible.</p>
+
+<figure style="margin: 2em 0; text-align: center;">
+    <img src="weavers 12 cent BCE.png" alt="Ancient Egyptian weavers at horizontal and vertical looms from the Tomb of Nefer-ronpet" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+    <figcaption style="margin-top: 1em; font-size: 0.9em; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <strong>Ancient Egyptian Weaving Technology:</strong> Weavers at work as represented in the Tomb of Nefer-ronpet, Superintendent of Weavers at Thebes, circa 1200 BCE. The horizontal looms (left side of image) show two weavers working at looms with warp threads stretched horizontally between vertical anchoring posts—the same structure Genesis employs as its literary architecture. Drawing by N. de G. Davies.
+    </figcaption>
+</figure>
+
+<h3>Genesis's Horizontal Loom Structure</h3>
+
+<p>Genesis was woven on a horizontal loom. Part B demonstrated that the text organizes into a three-by-seven matrix: nineteen units arranged in three rows and seven columns. The structure mirrors the ancient Egyptian loom with remarkable precision.</p>
+
+<p><span class="emphasis">Column A (<a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Units 1</a>-<a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">2</a>-<a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">3</a>) and Column G (<a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Units 17</a>-<a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">18</a>-<a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">19</a>) function as the anchoring beams.</span> The opening triad establishes the framework: creation, Eden, flood—universal scope, divine kingship, foundational patterns. The closing triad provides the opposite anchor: Joseph's narrative—universal blessing through particular family, human administration serving divine purposes, the promise fulfilled. Like the pegs driven into earth at Beni Hasan, these two triads are fixed points anchoring the entire literary structure.</p>
+
+<p><span class="emphasis">The three rows function as warp threads stretched horizontally between the anchors.</span> Row 1 runs from <a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Unit 1</a> through <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Units 5</a>, <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">6</a>, <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">11</a>, <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a> to <a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Unit 17</a>. Row 2 runs from <a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Unit 2</a> through <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Units 7</a>, <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">8</a>, <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">13</a>, <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">14</a> to <a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">Unit 18</a>. Row 3 runs from <a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">Unit 3</a> through <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Units 9</a>, <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">10</a>, <a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">15</a>, <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a> to <a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">Unit 19</a>. In Columns C-G, divine name distribution follows consistent patterns: Row 1 units feature YHWH as active subject, Row 2 units feature both names operating together, Row 3 units feature Elohim as active subject. The rows provide the cosmological framework: heaven, interface, earth. They remain mostly hidden in linear reading, but they hold everything together.</p>
+
+<p><span class="emphasis">Columns B through F are the weaving space.</span> The pivot unit (Column B, <a href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4.html">Unit 4</a>) marks the transition from universal frame to particular patriarchs. Columns C through F contain the four patriarchal triads where covenant and family tracks alternate vertically—these are the weft threads creating the visible narrative pattern. These vertical threads weave through the horizontal warp of divine name distribution, creating the two-dimensional matrix structure.</p>
+
+<h3>The Creation Week Blueprint: From Elemental Stasis to Animated Movement</h3>
+
+<p>The opening and closing triads (Columns A and G) mirror the six days of creation, but with a crucial distinction that illuminates the entire row structure. Days 1-3 produce <span class="emphasis">static elemental entities</span>—separate, named, immobile substances parallel to the classical elements (fire, air, water, earth). Days 4-6 produce <span class="emphasis">animated movement</span>—three distinct types of motion filling the domains the first three days established.</p>
+
+<p><strong>Days 1-3: Establishing Named Domains Through Separation</strong></p>
+<ul>
+<li><strong>Day 1:</strong> Light separated from darkness—fire element, named "Day" and "Night"</li>
+<li><strong>Day 2:</strong> Waters above separated from waters below—air element (expanse), named "Heaven"</li>
+<li><strong>Day 3:</strong> Waters gathered, dry land appears—earth and water elements, named "Earth" and "Seas"</li>
+</ul>
+
+<p>These three days establish fundamental categories through divine naming. Each produces a singular, static domain—the raw materials of existence held in separation.</p>
+
+<p><strong>Days 4-6: Populating Domains Through Increasing Freedom of Movement</strong></p>
+<ul>
+<li><strong>Day 4:</strong> Sun, moon, stars—<span class="emphasis">no freedom</span>, predetermined cyclical movement, governing time through fixed orbits</li>
+<li><strong>Day 5:</strong> Birds and fish—<span class="emphasis">passive movement</span>, carried by currents of air and water, traversing realms but not freely</li>
+<li><strong>Day 6:</strong> Land animals and humans—<span class="emphasis">free horizontal movement</span>, unimpeded by currents, autonomous locomotion across the earth</li>
+</ul>
+
+<p>These three days fill the separated domains with living things characterized by <span class="emphasis">increasing degrees of freedom</span>. Stars follow predetermined paths with no autonomy. Birds and fish move but are subject to currents—passive traversers. Land creatures alone possess unimpeded horizontal movement, free to go where they choose across the earth's surface. The gradient moves from complete constraint to full earthly freedom.</p>
+
+<h3>Each Row Spans Its Creation Day Pair</h3>
+
+<p>This elemental-animation gradient establishes the conceptual space that each row traverses. The opening triad units correspond to Days 1-3 (static elements), the closing triad units to Days 4-6 (animated movement). Each row's four middle units span the conceptual journey from static establishment to animated fulfillment:</p>
+
+<div class="structural-note">
+<p><strong>ROW 1: Day 1 (Light) → Day 4 (Luminaries)</strong><br>
+From initial illumination → to predetermined celestial governance (no freedom)<br>
+Units: <a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">1</a> → (<a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">5</a>, <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">6</a>, <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">11</a>, <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a>) → <a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">17</a></p>
+
+<p><strong>ROW 2: Day 2 (Separation) → Day 5 (Crossing)</strong><br>
+From establishing division → to creatures traversing boundaries (passive, current-borne)<br>
+Units: <a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">2</a> → (<a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">7</a>, <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">8</a>, <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">13</a>, <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">14</a>) → <a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">18</a></p>
+
+<p><strong>ROW 3: Day 3 (Land/Vegetation) → Day 6 (Multiplication)</strong><br>
+From earthly foundation → to life multiplying freely across the earth (unimpeded horizontal movement)<br>
+Units: <a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">3</a> → (<a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">9</a>, <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">10</a>, <a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">15</a>, <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a>) → <a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">19</a></p>
+</div>
+
+<p>The methodology becomes clear: to understand each row, we examine how its four middle units work through the conceptual space established by its Creation Day boundaries, tracing the divine name trajectory that accompanies this journey.</p>
+
+<h2>Row 1: Heaven—From Light to Luminaries</h2>
+
+<div class="structural-note">
+<p><strong>Row 1 units:</strong> <a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">1</a> (opening) → <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">5</a>, <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">6</a>, <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">11</a>, <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a> (middle) → <a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">17</a> (closing)</p>
+<p><strong>Creation Day span:</strong> Day 1 (Light created) → Day 4 (Luminaries govern with no freedom)</p>
+<p><strong>Gradient:</strong> Initial transcendent illumination → Predetermined celestial cycles governing time</p>
+<p><strong>Divine name trajectory:</strong> Elohim alone → YHWH alone → YHWH hidden within Elohim</p>
+</div>
+
+<h3>The Posts: Day 1 and Day 4</h3>
+
+<p>Day 1 creates light itself—the primordial illumination that separates from darkness. Elohim speaks: <span class="verse">"Let there be light"</span> (1:3). The light is good, but it remains elemental, unnamed except as "Day" when separated from "Night." This is raw transcendent power—light preceding any source, pure emanation from divine speech.</p>
+
+<p>Day 4 provides the governance: sun, moon, stars placed in the firmament <span class="verse">"to rule over the day and over the night"</span> (1:18). The initial light becomes <span class="emphasis">organized into predetermined patterns</span>—seasons, days, years. The celestial bodies have no freedom; they follow fixed orbits, governing time through unvarying cycles. What was pure emanation now operates through established heavenly bodies whose courses cannot deviate.</p>
+
+<p><strong>The conceptual span:</strong> From transcendent light-bursting-forth to predetermined celestial governance with no freedom. Row 1's middle units must work through this transformation—transcendent power becoming systematized into fixed providential patterns.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Unit 1</a>: Elohim Creates the Framework</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Unit 1</a> employs Elohim exclusively—thirty-two times the name appears with no YHWH. Elohim creates through speech, establishes cosmic order, separates light from darkness. But Elohim does not begin as transcendent. The transcendent becomes possible only <span class="emphasis">after</span> the immanent has been completed: <span class="verse">"And the heaven and the earth were finished, and all the host of them"</span> (2:1). Once creation is complete, separation becomes possible. On the seventh day, Elohim <span class="verse">"blessed the seventh day, and hallowed it"</span> (2:3)—introducing קדש (holiness), the first appearance of transcendence through sanctification. The Sabbath marks the moment when transcendent becomes distinguishable from immanent, when the Creator can be set apart from the creation. Day 1's light creation belongs to this framework—the beginning of what will culminate in transcendent holiness.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Units 5</a>, <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">6</a>, <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">11</a>, <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a>: YHWH Alone as Transcendent Initiator</h3>
+
+<p>In all four middle Row 1 units, <span class="emphasis">only YHWH appears as active divine subject</span>. The pattern is consistent and striking:</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a> (Abraham's call):</strong> <span class="verse">"YHWH said to Abram, 'Go from your country...'"</span> (12:1). Divine speech from the transcendent dimension, commanding radical obedience—a voice from above initiating action downward.</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6</a> (Lot separation):</strong> <span class="verse">"YHWH said to Abram, after Lot had separated from him, 'Lift up now your eyes, and look...'"</span> (13:14). After family separation, YHWH reveals the full scope of promised land—transcendent vision encompassing all directions, initiating the next phase of covenant.</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a> (Isaac-Jacob births):</strong> <span class="verse">"YHWH said to her, 'Two nations are in your womb...'"</span> (25:23). Divine revelation about the future, heavenly knowledge disclosed to the earthly realm.</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a> (Isaac's blessings):</strong> <span class="verse">"YHWH appeared to him and said, 'Do not go down to Egypt...'"</span> (26:2). Direct theophany with explicit instruction—YHWH manifesting from above.</p>
+
+<p>Row 1 units feature YHWH as <span class="emphasis">initiating subject</span>, acting upon the human realm from the transcendent dimension. Like Day 1's light, these are moments of divine power breaking through from above—raw transcendent intervention.</p>
+
+<h3>The Holiness Thread: From Sabbath to Hidden Presence</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Unit 1</a> introduces a concept that then disappears from Genesis entirely: קדש (holiness). <span class="verse">"Elohim blessed the seventh day, and hallowed it (וַיְקַדֵּשׁ אֹתוֹ)"</span> (2:3). The Sabbath receives the only occurrence of holiness in creation—the seventh day set apart, sanctified. But holiness vanishes from Genesis after this moment, not reappearing until Exodus.</p>
+
+<p>Yet YHWH fills Row 1. The transcendent deity who initiates from above, who appears directly to patriarchs, who reveals future patterns—this YHWH operates throughout Row 1 units. The connection emerges: YHWH becomes revealed <span class="emphasis">through holiness</span>. What <a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Unit 1</a> establishes (the concept of sanctification) and what Row 1 develops (YHWH's transcendent operations) will reunite in Exodus when holiness becomes the mode of YHWH's dwelling. The Row 1 trajectory—from Sabbath holiness through YHWH's direct appearances to hidden providential governance—prepares for the Tabernacle where holiness enables YHWH's presence among the multiplying people.</p>
+
+<h3>The Transformation: YHWH's Actions Becoming Cyclical</h3>
+
+<p>Notice the progression across the four units. <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a> initiates Abraham's journey with the call. <a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6</a> expands the land promise after Lot's separation. <a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Units 11</a> and <a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a> repeat the pattern for the next generation—similar divine appearances, similar promises, similar interventions. YHWH's transcendent actions are becoming <span class="emphasis">patterned</span>, establishing cycles of blessing across generations. The raw light is becoming organized into ruling luminaries.</p>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a> makes this explicit by referencing <a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a>: <span class="verse">"the first famine that was in the days of Abraham"</span> (26:1). The text itself teaches that Isaac's experience follows Abraham's pattern. YHWH's interventions operate cyclically, governing covenant history like the luminaries govern time.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Unit 17</a>: YHWH Hidden Within Elohim's Governance</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Unit 17</a> opens with Esau's genealogy—the toledot of Esau/Edom establishing the parallel line. But then Joseph's dream follows: <span class="verse">"the sun and the moon and eleven stars were bowing down to me"</span> (37:9). Day 4's luminaries appear explicitly, recognizing Joseph's authority. The Creation Day correspondence is literal.</p>
+
+<p>But the divine name pattern shifts dramatically. In <a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Unit 17</a>, <span class="emphasis">YHWH acts but Joseph knows only Elohim</span>. The brothers sense guilt and punishment from heaven—YHWH's transcendent justice operating. Yet Joseph consistently credits Elohim: <span class="verse">"It is not in me; Elohim will give Pharaoh an answer"</span> (41:16). YHWH's providence works <span class="emphasis">through</span> Elohim's natural governance—through dreams, through circumstances, through Joseph's wisdom in managing the physical world.</p>
+
+<p><strong>The Row 1 arc complete:</strong> Elohim alone (<a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Unit 1</a>) → YHWH alone (<a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Units 5</a>-<a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">12</a>) → YHWH hidden within Elohim (<a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Unit 17</a>). The transcendent light that burst forth in creation, then appeared directly to the patriarchs, now operates through established cycles of providence. Like the sun and moon that rule invisibly through their regular courses, YHWH's heavenly governance works through the patterns of earthly life. The raw light has become the governing luminaries—still transcendent, but now operating through established order rather than direct intervention.</p>
+
+<h2>Row 2: Interface—From Separation to Crossing</h2>
+
+<div class="structural-note">
+<p><strong>Row 2 units:</strong> <a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">2</a> (opening) → <a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">7</a>, <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">8</a>, <a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">13</a>, <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">14</a> (middle) → <a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">18</a> (closing)</p>
+<p><strong>Creation Day span:</strong> Day 2 (Separation established) → Day 5 (Creatures traverse boundaries, borne by currents)</p>
+<p><strong>Gradient:</strong> Division creating expanse → Living things crossing the divided space (passive movement)</p>
+<p><strong>Divine name trajectory:</strong> United → Divided → Marked → Hinted → Visualized → Encapsulated</p>
+</div>
+
+<h3>The Posts: Day 2 and Day 5</h3>
+
+<p>Day 2 is the only day not called "good" because it <span class="emphasis">only separates</span>—waters above from waters below, creating the expanse between. The separation establishes a problem: realms divided with no connection. The day produces the named domain "Heaven," but the division itself remains unresolved.</p>
+
+<p>Day 5 <span class="emphasis">solves Day 2's problem</span> by creating birds and fish—living creatures that traverse the separated realms. But these creatures move <span class="emphasis">passively, borne by currents</span>. Birds are carried by air currents, fish by water currents. They cross the boundaries but not through autonomous choice—the medium itself moves them. Day 5 provides traversers of the separation, but with limited freedom; the currents determine their paths.</p>
+
+<p><strong>The conceptual span:</strong> From establishing division to providing the means of crossing it, though passively. Row 2's middle units must work through the problem of separation and develop the possibility of reconnection—not through autonomous action but through being carried by larger forces.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Unit 2</a>: The Divine Names United, Then Divided</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Unit 2</a> stands alone in Genesis for its sustained use of the compound name <span class="emphasis">YHWH Elohim</span>. Throughout the Garden narrative (2:4-3:24), this unified form dominates—transcendent and immanent aspects operating together in sacred space. Eden represents the place where heaven and earth cohere, where YHWH and Elohim function as one.</p>
+
+<p>But within the same unit, the separation occurs. The serpent speaks only of "Elohim," never the compound name. Eve eats. Their eyes open. They hide. Interrogation follows, then expulsion from the Garden. <span class="emphasis">Immediately after expulsion</span>, the compound name disappears from Genesis entirely (except for two verses in Exodus during the plagues). What was unified in Eden splits apart—YHWH and Elohim become separate operations.</p>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Unit 2</a> enacts Day 2's pattern: establishing separation itself. The division between YHWH (transcendent) and Elohim (immanent) parallels the division between waters above and waters below. Row 2 begins with fracture.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Units 7</a> and <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">8</a>: The Division Marked</h3>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a>: Covenant Through Cutting</strong></p>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a> contains two covenant ceremonies that <span class="emphasis">mark</span> the separation through their contrasting divine names. Genesis 15 employs YHWH: <span class="verse">"the word of YHWH came to Abram in a vision"</span> (15:1). Abraham cuts animals in half, falls into deep sleep, sees a smoking torch pass between the divided pieces. Supernatural vision, transcendent revelation, covenant established through cutting/division.</p>
+
+<p>Genesis 17 employs Elohim: <span class="verse">"Elohim said to him"</span> (17:9). Circumcision cuts flesh—earthly sign in human body. The covenant sign is physical, material, embodied. Same covenant, but one ceremony emphasizes YHWH's transcendent vision, the other Elohim's earthly sign. The division is <span class="emphasis">marked</span>—both names operate, but separately across ceremonies.</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>: Separation as Strategy</strong></p>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a> resolves the Lot relationship through permanent separation. The nephew's line must be disposed of—geographically removed, covenantally distinct. Both divine names appear: <span class="verse">"YHWH rained upon Sodom"</span> (19:24) for transcendent judgment from above, <span class="verse">"Elohim destroyed the cities"</span> (19:29) for earthly annihilation. But the unit's function is separation—Lot's descendants (Moab, Ammon) persist parallel but permanently apart from covenant line. The division between covenant and non-covenant families is marked and established.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Units 13</a> and <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">14</a>: Reconnection Hinted and Visualized</h3>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a>: Integration Hinted</strong></p>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a> reverses <a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a>'s strategy. Where Lot could be separated (nephew permits distance), Esau cannot (twin requires integration). Jacob must <span class="emphasis">wear Esau</span>—goat skins covering his hands, brother's garments on his body. <span class="verse">"The voice is the voice of Jacob, but the hands are the hands of Esau"</span> (27:22). Interior essence clothed in exterior material—YHWH's transcendent aspect (voice) covered by Elohim's earthly aspect (hands).</p>
+
+<p>The Tabernacle parallel emerges: Jacob's goat skins (עִזִּים, 27:16) → Tabernacle's goat hair curtains (עִזִּים, Exod 26:7). Esau's redness (אַדְמוֹנִי, 25:25) → ram skins dyed red (אֵילִם מְאָדָּמִים, Exod 26:14). YHWH's voice from the Holy of Holies (Exod 25:22) covered by goat hair and red-dyed coverings. The temporary deception becomes permanent sacred architecture—integration <span class="emphasis">hinted</span> through the blueprint for divine dwelling.</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">Unit 14</a>: Connection Visualized</strong></p>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">Unit 14</a> makes the crossing explicit. Jacob's ladder: <span class="verse">"a ladder set up on the earth, and its top reached to heaven; and behold, the angels of Elohim ascending and descending on it. And behold, YHWH stood above it"</span> (28:12-13). The separated realms are visualized—Elohim's angels starting from earth, YHWH positioned above, the ladder providing the connection Day 2 lacked.</p>
+
+<p>Jacob's vow crystallizes the entire program: <span class="verse">"If Elohim will be with me and will give me bread to eat and clothing to wear... then YHWH shall be Elohim for me"</span> (28:20-21). He demands that the transcendent prove capable in the immanent realm. If YHWH can operate through Elohim's domain (providing earthly sustenance), then YHWH shall <span class="emphasis">become</span> Elohim—the division overcome, the separation resolved.</p>
+
+<p><strong>The נחש Pattern: Serpent-Knowledge Redeemed</strong></p>
+
+<p>A vocabulary parallel connects <a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Units 2</a>, <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">14</a>, and <a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">18</a>. In <a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Unit 2</a>, the נָחָשׁ (nachash, serpent) brings knowledge that fractures—eating from the Tree separates YHWH Elohim. In <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">Unit 14</a>, Laban uses the verb form: <span class="verse">"I have learned by divination (נִחַשְׁתִּי, nichashti), and YHWH has blessed me because of you"</span> (30:27). The same root—now serpent-knowledge serves recognition rather than rebellion. In <a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">Unit 18</a>, Joseph uses the same root for his silver cup: <span class="verse">"whereby he divines (נַחֵשׁ יְנַחֵשׁ)"</span> (44:5)—serpent-knowledge fully integrated into redemption work. What caused separation in <a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Unit 2</a> becomes recognition in <a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">Unit 14</a> and redemption in <a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">Unit 18</a>. Row 2 transforms the very knowledge that created the fracture.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">Unit 18</a>: The Crossing Achieved</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">Unit 18</a> completes the Day 2 → Day 5 trajectory. The brothers function as Day 5 creatures—birds and fish that traverse separated realms. They move between Canaan (above) and Egypt (below), but like birds and fish, they are <span class="emphasis">carried by currents</span> rather than moving autonomously. The famine drives them down; the need for grain draws them back. Universal events create the currents that bear them between realms—they are passive traversers, moved by forces larger than themselves. The beginning and end of the unit emphasize this current-borne movement: famine pushes, provision pulls, the brothers shuttle between worlds without controlling their trajectory.</p>
+
+<p>The climactic verse encapsulates the entire Row 2 arc:</p>
+
+<blockquote>
+<p><span class="verse">וַיֹּאמֶר אֱלֹהִים לְיִשְׂרָאֵל בְּמַרְאֹת הַלַּיְלָה וַיֹּאמֶר יַעֲקֹב יַעֲקֹב וַיֹּאמֶר הִנֵּנִי׃ וַיֹּאמֶר אָנֹכִי הָאֵל אֱלֹהֵי אָבִיךָ אַל־תִּירָא מֵרְדָה מִצְרַיְמָה... אָנֹכִי אֵרֵד עִמְּךָ מִצְרַיְמָה וְאָנֹכִי אַעַלְךָ גַם־עָלֹה</span></p>
+<p>"Elohim spoke to Israel in visions of the night... 'I am the God, Elohim of your father; fear not to go down to Egypt... <strong>I will go down with you to Egypt, and I will bring you up</strong>'" (46:2-4)</p>
+</blockquote>
+
+<p><span class="emphasis">Elohim descending and ascending with Jacob</span>—this is Day 5's crossing movement incarnated in divine accompaniment. The ladder vision (<a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">Unit 14</a>) becomes reality. Elohim now moves between realms, carrying Jacob (and YHWH's promise) down and promising to bring him up. The deity that was divided at Eden's gate now traverses the separation. YHWH has become <span class="emphasis">encapsulated</span> within Elohim's movement—operating through the immanent divine aspect exactly as Jacob's vow demanded.</p>
+
+<p><strong>The Row 2 arc complete:</strong> United (<a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Unit 2</a>) → Divided (<a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Units 7</a>-<a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">8</a>) → Hinting integration (<a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a>) → Visualizing connection (<a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">Unit 14</a>) → Achieving crossing (<a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">Unit 18</a>). The separation Day 2 established is overcome by Day 5's crossing movement. This encapsulation of YHWH within Elohim sets the stage for Exodus, where YHWH will re-emerge from within the signs—physical plagues (Elohim's elements) revealing transcendent power (YHWH's sovereignty).</p>
+
+<h2>Row 3: Earth—From Land to Multiplication</h2>
+
+<div class="structural-note">
+<p><strong>Row 3 units:</strong> <a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">3</a> (opening) → <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">9</a>, <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">10</a>, <a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">15</a>, <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a> (middle) → <a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">19</a> (closing)</p>
+<p><strong>Creation Day span:</strong> Day 3 (Land appears, vegetation) → Day 6 (Animals and humans with free horizontal movement)</p>
+<p><strong>Gradient:</strong> Earthly foundation established → Life multiplying freely across the earth (unimpeded movement)</p>
+<p><strong>Divine name trajectory:</strong> YHWH withdraws → Elohim alone in earthly matters → YHWH hidden at the center</p>
+</div>
+
+<h3>The Posts: Day 3 and Day 6</h3>
+
+<p>Day 3 gathers waters so dry land appears, then covers it with vegetation—grass, herbs, fruit trees. The earth produces statically, bringing forth plant life rooted in the ground. Named domains established: "Earth" and "Seas." The foundation is ready, but lifeless except for immobile vegetation.</p>
+
+<p>Day 6 fills the land with living creatures and culminates in humanity: <span class="verse">"Let us make man in our image, after our likeness"</span> (1:26). The blessing follows: <span class="verse">"Be fruitful and multiply and fill the earth"</span> (1:28). Day 6 provides <span class="emphasis">free horizontal movement</span>—land creatures move unimpeded by currents, autonomous in their locomotion across earth's surface. Unlike stars (no freedom) or birds/fish (passive movement), land animals and humans possess genuine freedom of movement. They choose where to go, multiplying to fill the earth through autonomous action.</p>
+
+<p><strong>The conceptual span:</strong> From earth appearing as static foundation to life multiplying freely across its surface with unimpeded movement. Row 3's middle units must work through earthly concerns—mortality, material provision, family proliferation—moving toward fulfillment of the multiplication mandate through genuine earthly freedom.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">Unit 3</a>: YHWH Withdraws as Earth Regenerates</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">Unit 3</a> recreates Day 3 precisely—the Flood covers everything with water, then waters recede to reveal dry land again. Noah sends out the dove until it finds dry ground. Earth is renewed, vegetation appears. The Day 3 pattern repeats.</p>
+
+<p>But the divine name pattern shifts critically. After the Flood, YHWH withdraws from direct earthly engagement. <span class="verse">"YHWH said in his heart..."</span> (8:21)—speaking only to himself, not to humanity. At Babel: <span class="verse">"Come, let us go down..."</span> (11:7)—divine council language, not addressing humans. YHWH retreats to transcendent realm while Elohim becomes the earthly interface: <span class="verse">"Elohim blessed Noah"</span> (9:1), <span class="verse">"Elohim said to Noah"</span> (9:8). Row 3 begins with YHWH's withdrawal from worldly matters, leaving the earthly domain to Elohim.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Units 9</a>, <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">10</a>, <a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">15</a>, <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a>: Death and Mortality Dominate</h3>
+
+<p>All four middle Row 3 units employ <span class="emphasis">Elohim alone as active divine subject</span>, and all focus on death or fear of death:</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Unit 9</a> (Abimelech and Akedah):</strong> <span class="verse">"Elohim tested Abraham"</span> (22:1). The Binding of Isaac—death commanded then averted at the last moment. Sarah endangered (potential death of promise), Isaac nearly sacrificed. Verbal envelope of ירא (fear/awe): <span class="verse">"no fear of Elohim in this place"</span> (20:11) to <span class="verse">"now I know you fear Elohim"</span> (22:12). Fear of death pervades.</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">Unit 10</a> (Abraham's death):</strong> Sarah dies, elaborate burial purchased. Abraham's servant secures wife for next generation—continuity despite death. Abraham dies: <span class="verse">"Abraham breathed his last and died in a good old age... and was gathered to his people"</span> (25:8). Ishmael and Isaac together bury him. The unit focuses on death and succession.</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">Unit 15</a> (Esau reconciliation):</strong> Jacob fears Esau will kill him: <span class="verse">"Deliver me from the hand of my brother, from the hand of Esau; for I fear him, lest he come and smite me"</span> (32:11). Wrestling at Jabbok—physical struggle causing injury (touched hip socket). Fear of death, threat of violence.</p>
+
+<p><strong><a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a> (Dinah and deaths):</strong> Dinah violated at Shechem. Brothers' violent response—massacre of entire city. <span class="verse">"Elohim said to Jacob, 'Arise, go up to Bethel'"</span> (35:1)—Elohim responding to crisis. Deborah dies (35:8). Rachel dies (35:19). Isaac dies (35:29). Death pervades the unit.</p>
+
+<p><strong>The Row 3 pattern:</strong> Elohim operates in earthly realm, working through natural processes, responding to human initiative. YHWH has withdrawn; Elohim handles material concerns. And the dominant earthly concern is mortality—death threatens, death occurs, death must be navigated. Yet through all this mortality, family proliferation continues. Life multiplies despite death. The Day 3 foundation supports Day 6's multiplication even as mortality threatens it.</p>
+
+<p><strong>Boundary Violations:</strong> <a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Units 9</a> and <a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a> specifically involve sexual/bodily boundary violations threatening covenant continuity. Sarah endangered (<a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Unit 9</a>), Dinah violated, Reuben with Bilhah (<a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a>). In Row 3's earthly register, covenant boundaries face material threats. Both units employ Elohim working through circumstance to preserve what mortality and violation endanger.</p>
+
+<p><strong>The Gift-List Formula:</strong> <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">Units 10</a> and <a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">15</a> employ identical literary technique—detailed wealth descriptions at moments of family transition. <a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">Unit 10</a>: <span class="verse">"YHWH has blessed my master greatly... sheep and cattle, silver and gold, male servants and female servants, camels and donkeys"</span> (24:35). <a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">Unit 15</a>: <span class="verse">"I have ox and donkey, sheep, male servant and female servant"</span> (32:5). Corresponding Row 3 positions use same formula—wealth/gift language for navigating family relationships in Elohim's material domain.</p>
+
+<h3><a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">Unit 19</a>: Multiplication Achieved, YHWH Hidden at Center</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">Unit 19</a> opens with Day 6's fulfillment:</p>
+
+<blockquote>
+<p><span class="verse">וַיֵּשֶׁב יִשְׂרָאֵל בְּאֶרֶץ מִצְרַיִם בְּאֶרֶץ גֹּשֶׁן וַיֵּאָחֲזוּ בָהּ וַיִּפְרוּ וַיִּרְבּוּ מְאֹד</span></p>
+<p>"And Israel dwelt in the land of Egypt, in the land of Goshen; and they got them possessions therein, and <strong>were fruitful and multiplied exceedingly</strong>" (47:27)</p>
+</blockquote>
+
+<p>Direct echo of Day 6: <span class="verse">"Be fruitful and multiply"</span> (פְּרוּ וּרְבוּ). Humanity created in Elohim's image now multiplies to fill their portion of earth. The Day 3 → Day 6 trajectory completes—land foundation supports life multiplication.</p>
+
+<p>Throughout <a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">Unit 19</a>, <span class="emphasis">only Elohim is referenced</span> for Joseph's and Jacob's heroics. Joseph credits Elohim consistently: <span class="verse">"Elohim has shown Pharaoh what he is about to do"</span> (41:25). Jacob blesses through Elohim: <span class="verse">"The Elohim before whom my fathers Abraham and Isaac did walk"</span> (48:15). YHWH has withdrawn completely from the earthly narrative.</p>
+
+<p>Except for one extraordinary moment. In the middle of Jacob's tribal blessings—with six tribes before and six tribes after—appears:</p>
+
+<blockquote>
+<p><span class="verse">לִישׁוּעָתְךָ קִוִּיתִי יְהוָה</span></p>
+<p>"<strong>For your deliverance I have waited, YHWH</strong>" (49:18)</p>
+</blockquote>
+
+<p>Whether Jacob's voice or the narrator's, this single YHWH reference is positioned <span class="emphasis">exactly at the center</span>—six tribes, then YHWH, then six tribes. The arrangement foreshadows the camp structure: twelve tribes surrounding the Tabernacle with YHWH's presence at center. The transcendent divine that withdrew from earthly engagement now awaits at the hidden center of the multiplying nation.</p>
+
+<p><strong>The Row 3 arc complete:</strong> YHWH withdraws (<a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">Unit 3</a>) → Elohim alone handles earthly mortality (<a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Units 9</a>-<a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">16</a>) → Multiplication achieved with YHWH hidden at center (<a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">Unit 19</a>). The transcendent has not disappeared—it awaits central position. Row 3 traces the journey from withdrawal through mortality to hidden centrality, preparing for the Exodus revelation where the awaited deliverance will arrive and the hidden presence will be revealed.</p>
+
+<h2>Conclusion: The Three Warp Threads and the Exodus Preparation</h2>
+
+<p>The three rows function as warp threads stretched between the Creation Day anchors, each tracing a distinct journey that converges toward the same conclusion: preparation for Exodus.</p>
+
+<p><span class="emphasis">Row 1</span> traces YHWH's transcendent governance moving from direct intervention to cyclical providence to hidden operation through Elohim. By <a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Unit 17</a>, YHWH acts but Joseph knows only Elohim—the heavenly governance works through earthly administration.</p>
+
+<p><span class="emphasis">Row 2</span> traces the separation between YHWH and Elohim moving from fracture through division marking toward reconnection. By <a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">Unit 18</a>, Jacob's vow is fulfilled—YHWH has become encapsulated within Elohim's mode of operation, the transcendent deity now descending and ascending with his people.</p>
+
+<p><span class="emphasis">Row 3</span> traces YHWH's withdrawal from earthly matters while multiplication continues despite mortality. By <a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">Unit 19</a>, YHWH awaits hidden at the center of the twelve tribes—transcendent presence positioned for revelation.</p>
+
+<p>All three rows end with YHWH <span class="emphasis">hidden within or behind Elohim</span>. Joseph knows only Elohim. Jacob's people are accompanied by Elohim. The tribes multiply under Elohim's material provision with YHWH awaiting at center. This convergence creates the necessity for Exodus.</p>
+
+<p><span class="verse">"I am YHWH... I appeared to Abraham, to Isaac, and to Jacob as El Shaddai, but by my name YHWH I did not make myself known to them"</span> (Exod 6:2-3).</p>
+
+<p>Genesis systematically prepares for this revelation. The patriarchs experienced YHWH, but the name became progressively hidden within Elohim's operations. By Genesis's end, YHWH must <span class="emphasis">re-emerge</span> from within the encapsulation. The plagues will be Elohim's elements (water, earth, sky, animals) revealing YHWH's transcendent power. The hidden warp threads must become visible. The awaited deliverance must arrive. The hidden center must speak.</p>
+
+<p>The three rows—heaven, interface, earth—have prepared the architectural framework for this moment. Each warp thread has traced its journey from static element to animated movement, from initial establishment to fulfilled pattern. The loom's work is complete. The fabric awaits its revelation.</p>
+
+</main>
+
+</article>
+
+<aside class="citation-box">
+    <strong>How to cite this analysis:</strong><br>
+    Torah Weave Project. "Part C: The Three Rows." <em>Torah Weave Commentary Series</em>, 
+    <a href="https://chaver.com/torah-weave/Genesis/genesis-analysis/Part-C-The-Three-Rows.html">https://chaver.com/torah-weave/Genesis/genesis-analysis/Part-C-The-Three-Rows.html</a>. 
+    Accessed [date].
+</aside>
+
+<div class="series-navigation">
+    <h3>Genesis Commentary Series</h3>
+    <div class="series-navigation-links">
+        <a href="/torah-weave/Genesis/genesis-analysis/overview.html">Overview</a>
+        <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: The Units</a>
+        <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: The Map</a>
+        <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: The Three Rows</a>
+        <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture & Meaning</a>
+    </div>
+</div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">התורה כדרכה</a></li>
+                        <li>T<a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+
+<!-- #EndTemplate -->

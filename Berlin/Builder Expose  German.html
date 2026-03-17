@@ -1,0 +1,614 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entwicklungsmöglichkeit - Schlesische Str. 21</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 20mm;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            font-size: 12pt;
+        }
+        .page {
+            page-break-after: always;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 25px;
+            background: white;
+        }
+        .page:last-child {
+            page-break-after: auto;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5f3d 100%);
+            color: white;
+            padding: 30px 35px;
+            margin: -25px -25px 30px -25px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 32pt;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        .header .subtitle {
+            font-size: 14pt;
+            color: #c8e6c9;
+            margin: 0;
+        }
+        .dynamite-banner {
+            background: #ffd700;
+            border: 3px solid #ff6b00;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .dynamite-banner h2 {
+            color: #c62828;
+            font-size: 24pt;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .dynamite-banner .big-number {
+            font-size: 36pt;
+            font-weight: bold;
+            color: #1a472a;
+            line-height: 1;
+        }
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-box {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-left: 5px solid #2d5f3d;
+            border-radius: 8px;
+        }
+        .stat-number {
+            font-size: 26pt;
+            font-weight: bold;
+            color: #1a472a;
+            display: block;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 11pt;
+            color: #666;
+            margin-top: 8px;
+            display: block;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #1a472a;
+            font-size: 18pt;
+            margin: 0 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #2d5f3d;
+        }
+        .section h3 {
+            color: #2d5f3d;
+            font-size: 14pt;
+            margin: 20px 0 10px 0;
+        }
+        .payment-flow {
+            background: #f0f7f0;
+            border: 3px solid #2d5f3d;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .payment-step {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+        .step-number {
+            background: #2d5f3d;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18pt;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        .step-content {
+            flex-grow: 1;
+        }
+        .step-amount {
+            font-weight: bold;
+            color: #1a472a;
+            font-size: 16pt;
+        }
+        .step-desc {
+            font-size: 11pt;
+            color: #666;
+            margin-top: 5px;
+        }
+        .economics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 12pt;
+        }
+        .economics-table th {
+            background: #2d5f3d;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13pt;
+        }
+        .economics-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .economics-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .economics-table .total-row {
+            font-weight: bold;
+            background: #e8f5e9 !important;
+            border-top: 3px solid #2d5f3d;
+            font-size: 14pt;
+        }
+        .highlight-box {
+            background: #fff9e6;
+            border-left: 5px solid #ffc107;
+            padding: 15px 20px;
+            margin: 15px 0;
+            font-size: 12pt;
+        }
+        .highlight-box strong {
+            color: #1a472a;
+        }
+        .key-point {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 15px 20px;
+            margin: 12px 0;
+            border-radius: 8px;
+            font-size: 12pt;
+        }
+        .key-point strong {
+            color: #1a472a;
+            font-size: 13pt;
+        }
+        .profit-highlight {
+            background: #e8f5e9;
+            border: 3px solid #2d5f3d;
+            padding: 25px;
+            text-align: center;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+        .profit-highlight .big-number {
+            font-size: 40pt;
+            font-weight: bold;
+            color: #1a472a;
+            line-height: 1;
+        }
+        .profit-highlight .label {
+            font-size: 13pt;
+            color: #666;
+            margin-top: 8px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        ul li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .green-box {
+            background: #e8f5e9;
+            border: 2px solid #2d5f3d;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .green-box h4 {
+            color: #1a472a;
+            margin: 0 0 10px 0;
+            font-size: 14pt;
+        }
+        .footer {
+            text-align: center;
+            font-size: 10pt;
+            color: #999;
+            padding-top: 15px;
+            margin-top: 30px;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- SEITE 1 -->
+    <div class="page">
+        <div class="header">
+            <h1>Entwicklungsmöglichkeit</h1>
+            <p class="subtitle">Schlesische Straße 21 • Wrangelkiez, Kreuzberg • Vorbescheid liegt vor</p>
+        </div>
+
+        <div class="dynamite-banner">
+            <h2>🔥 TOP-CHANCE FÜR BAUTRÄGER 🔥</h2>
+            <div class="big-number">430 T€ → 1,26 Mio. €</div>
+            <div style="font-size: 16pt; margin-top: 10px; color: #c62828; font-weight: bold;">293% ROI in 18 Monaten</div>
+        </div>
+
+        <div class="quick-stats">
+            <div class="stat-box">
+                <span class="stat-number">600m²</span>
+                <span class="stat-label">GRUNDSTÜCK</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">741m²</span>
+                <span class="stat-label">BGF GENEHMIGT</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">12</span>
+                <span class="stat-label">WOHNUNGEN</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">1,26 Mio. €</span>
+                <span class="stat-label">IHR GEWINN</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Warum dies eine Top-Chance ist</h2>
+            
+            <div class="green-box">
+                <h4>🎯 Minimaler Kapitaleinsatz</h4>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                    <li><strong>Gesamt benötigt: 430.000 €</strong> (die meisten Bauträger brauchen 25-30% EK = 1,7 Mio. €+)</li>
+                    <li><strong>75 T€ am Start</strong> → Option sichern, Genehmigung beginnen</li>
+                    <li><strong>75 T€ bei Genehmigung</strong> → Vorvermarktung läuft bereits</li>
+                    <li><strong>1,05 Mio. € bei Closing</strong> → Durch 20% Käuferanzahlungen gedeckt (1,15 Mio. € eingegangen)</li>
+                    <li><strong>Baukosten</strong> → Durch weitere Anzahlungen + Bankfinanzierung gedeckt</li>
+                </ul>
+            </div>
+
+            <div class="green-box">
+                <h4>💰 Außergewöhnliche Rendite</h4>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                    <li><strong>Nettogewinn: 1.260.000 €</strong></li>
+                    <li><strong>Gewinnmarge: 21,9%</strong> vom Umsatz</li>
+                    <li><strong>ROI: 293%</strong> auf Ihr eingesetztes Kapital</li>
+                    <li><strong>Jeder eingesetzte Euro bringt 2,93 € zurück</strong></li>
+                </ul>
+            </div>
+
+            <div class="green-box">
+                <h4>⚡ Schneller Vorverkauf = Geringes Risiko</h4>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                    <li><strong>Erwartet: 3-6 Monate um alle 12 Einheiten zu verkaufen</strong></li>
+                    <li>Käufer erhalten insolvenzfeste Struktur (sie besitzen Grundstück ab Tag 1)</li>
+                    <li>Käufer sparen 27.000 € Grunderwerbsteuer pro Einheit</li>
+                    <li>Käufer erhalten 6% Mietrendite (vs. 3,5% Berlin-Durchschnitt)</li>
+                    <li>Käufer erhalten 83.000 € Steuervorteile über 10 Jahre</li>
+                    <li>Toplage Wrangelkiez</li>
+                </ul>
+            </div>
+
+            <div class="green-box">
+                <h4>🏢 Flexibilität durch 3 Gebäude</h4>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                    <li><strong>Drei separate Gebäude</strong> mit unabhängigen Eingängen</li>
+                    <li><strong>Je 4 Wohnungen</strong> → Verkauf an vermögende Investoren als Komplettgebäude möglich</li>
+                    <li><strong>Komplettgebäude-Preis: ~1.920.000 €</strong> (4 × 480 T€)</li>
+                    <li><strong>Strategien mischen:</strong> 1-2 Komplettgebäude + Einzelwohnungen verkaufen</li>
+                    <li>Wenn 1 Gebäude an Investor verkauft → Vorverkauf in 1-3 Monaten erledigt!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            Seite 1 von 4 • Schlesische Str. 21 Entwicklung • Vertraulich
+        </div>
+    </div>
+
+    <!-- SEITE 2 -->
+    <div class="page">
+        <div class="header">
+            <h1>Grundstückszahlungsstruktur</h1>
+            <p class="subtitle">Einfache, phasenweise Zahlung abgestimmt auf Meilensteine</p>
+        </div>
+
+        <div class="payment-flow">
+            <div class="payment-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-amount">75.000 €</div>
+                    <div class="step-desc">Tag 1 - Optionszahlung • Sie erhalten Vollmacht für Genehmigung & Teilung • Rücktritt möglich falls nötig</div>
+                </div>
+            </div>
+            <div class="payment-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-amount">75.000 €</div>
+                    <div class="step-desc">Bei Baugenehmigung (Monat 6-8) • Baugenehmigung erteilt • Vorvermarktungs-Momentum stark</div>
+                </div>
+            </div>
+            <div class="payment-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-amount">1.050.000 €</div>
+                    <div class="step-desc">Bei Closing (Monat 9-12) • Genehmigung + Teilung vollständig • Grundstück geht an Käufer-WEG • Durch Anzahlungen gedeckt</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <strong>Gesamte Grundstückskosten: 1.200.000 €</strong> • Bei Rücktritt vor Closing behält Eigentümer alle Zahlungen + gemachte Verbesserungen. Aber mit schnellem Vorverkauf ist Ihr Risiko nach den ersten Monaten minimal.
+        </div>
+
+        <div class="section">
+            <h2>Ihre vollständige Kalkulation</h2>
+            
+            <table class="economics-table">
+                <tr>
+                    <th>Erlöse & Kosten</th>
+                    <th style="text-align: right; width: 200px;">Betrag</th>
+                </tr>
+                <tr>
+                    <td><strong>Gesamtverkaufserlös</strong> (12 Einheiten × 480.000 €)</td>
+                    <td style="text-align: right;">5.760.000 €</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 30px;">Abzgl.: Grundstückszahlung</td>
+                    <td style="text-align: right;">-1.200.000 €</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 30px;">Abzgl.: Baukosten (3.645 €/m² × 741m² BGF)</td>
+                    <td style="text-align: right;">-2.700.000 €</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 30px;">Abzgl.: Baunebenkosten (Architektur, Statik, Genehmigungen, Teilung, Marketing, Rechtsberatung)</td>
+                    <td style="text-align: right;">-600.000 €</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>Ihr Nettogewinn</strong></td>
+                    <td style="text-align: right;"><strong>1.260.000 €</strong></td>
+                </tr>
+            </table>
+
+            <p style="font-size: 11pt; color: #666; margin: 10px 0;"><strong>Gewinnmarge:</strong> 21,9% vom Umsatz • <strong>Baukosten:</strong> Basierend auf Ihren direkten Kosten (kein Aufschlag an sich selbst, MwSt. erstattungsfähig)</p>
+        </div>
+
+        <div class="section">
+            <h2>Ihr Kapitalbedarf</h2>
+            
+            <div class="two-col">
+                <div class="key-point">
+                    <strong>Mit 20% Anzahlungen (Wahrscheinlichste)</strong><br><br>
+                    Genehmigung & Teilung: 230 T€<br>
+                    Erste Grundstückszahlung: 75 T€<br>
+                    Marketingmaterialien: 50 T€<br>
+                    Reservepuffer: 75 T€<br>
+                    <br>
+                    <strong style="color: #2d5f3d; font-size: 16pt;">Gesamt: 430.000 €</strong><br><br>
+                    <em style="font-size: 11pt;">Käuferanzahlungen (1,15 Mio. €) decken Restgrundstück + starten Bau</em>
+                </div>
+                <div class="key-point">
+                    <strong>Mit 15% Anzahlungen (Konservativ)</strong><br><br>
+                    Genehmigung & Teilung: 230 T€<br>
+                    Alle Grundstückszahlungen vorab: 150 T€<br>
+                    Marketingmaterialien: 50 T€<br>
+                    Brücke zu Bau: 220 T€<br>
+                    <br>
+                    <strong style="color: #2d5f3d; font-size: 16pt;">Gesamt: 650.000 €</strong><br><br>
+                    <em style="font-size: 11pt;">Niedrigere Anzahlungen bedeuten mehr Vorkapital, aber immer noch exzellenter ROI</em>
+                </div>
+            </div>
+        </div>
+
+        <div class="profit-highlight">
+            <div class="big-number">293% ROI</div>
+            <div class="label">430 T€ Investment → 1,26 Mio. € Gewinn in 18 Monaten</div>
+            <p style="margin: 15px 0 0 0; font-size: 12pt; color: #666;">
+                Dies ist Kapitaleffizienz vom Feinsten. Die meisten Entwicklungsprojekte erfordern 5-10× mehr Vorkapital.
+            </p>
+        </div>
+
+        <div class="footer">
+            Seite 2 von 4 • Schlesische Str. 21 Entwicklung • Vertraulich
+        </div>
+    </div>
+
+    <!-- SEITE 3 -->
+    <div class="page">
+        <div class="header">
+            <h1>Zeitplan & Vorverkaufsstrategie</h1>
+            <p class="subtitle">Monatlicher Ausführungsplan</p>
+        </div>
+
+        <div class="section">
+            <h2>18-Monats-Entwicklungszeitplan</h2>
+
+            <div style="margin: 20px 0;">
+                <h3 style="background: #2d5f3d; color: white; padding: 12px; margin: 0; border-radius: 6px 6px 0 0;">Monat 1: Option unterzeichnet</h3>
+                <div style="border: 2px solid #2d5f3d; border-top: none; padding: 15px; border-radius: 0 0 6px 6px; background: #fafafa;">
+                    <ul style="margin: 5px 0;">
+                        <li><strong>75 T€ Zahlung 1</strong></li>
+                        <li>Vollmacht für Genehmigung erteilt</li>
+                        <li>Baugenehmigungsverfahren beginnen</li>
+                        <li>Vorvermarktungsmaterialien starten</li>
+                        <li>Architekt- und Ingenieurteam beauftragen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <h3 style="background: #2d5f3d; color: white; padding: 12px; margin: 0; border-radius: 6px 6px 0 0;">Monate 2-4: Genehmigung + Aktiver Vorverkauf</h3>
+                <div style="border: 2px solid #2d5f3d; border-top: none; padding: 15px; border-radius: 0 0 6px 6px; background: #fafafa;">
+                    <ul style="margin: 5px 0;">
+                        <li>Vollständigen Baugenehmigungsantrag einreichen</li>
+                        <li><strong>Aktive Vorverkaufs-Marketingkampagne starten</strong></li>
+                        <li><strong>Ziel: Erste 4-6 Einheiten verkaufen</strong></li>
+                        <li>15-20% Anzahlungen sammeln (345-460 T€)</li>
+                        <li>Falls Komplettgebäude-Investor interessiert → Deal schnell abschließen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <h3 style="background: #2d5f3d; color: white; padding: 12px; margin: 0; border-radius: 6px 6px 0 0;">Monate 5-8: Genehmigung + Vorverkaufs-Beschleunigung</h3>
+                <div style="border: 2px solid #2d5f3d; border-top: none; padding: 15px; border-radius: 0 0 6px 6px; background: #fafafa;">
+                    <ul style="margin: 5px 0;">
+                        <li><strong>Baugenehmigung erteilt (löst 75 T€ Zahlung 2 aus)</strong></li>
+                        <li>Grundstücksteilung abschließen</li>
+                        <li><strong>Ziel: 10-12 Einheiten unter Vertrag</strong></li>
+                        <li>Anzahlungen gesammelt: 1-1,3 Mio. €</li>
+                        <li>Baufinanzierung vorbereiten</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <h3 style="background: #2d5f3d; color: white; padding: 12px; margin: 0; border-radius: 6px 6px 0 0;">Monate 9-12: Closing & Baubeginn</h3>
+                <div style="border: 2px solid #2d5f3d; border-top: none; padding: 15px; border-radius: 0 0 6px 6px; background: #fafafa;">
+                    <ul style="margin: 5px 0;">
+                        <li><strong>Alle 12 Einheiten vorverkauft</strong></li>
+                        <li>Grundstücksteilung abgeschlossen</li>
+                        <li><strong>Finale 1,05 Mio. € Zahlung (durch Anzahlungen gedeckt)</strong></li>
+                        <li>WEG-Gründung</li>
+                        <li>Grundstück geht an Käufer</li>
+                        <li>Baufinanzierung gesichert</li>
+                        <li><strong>Baubeginn</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <h3 style="background: #2d5f3d; color: white; padding: 12px; margin: 0; border-radius: 6px 6px 0 0;">Monate 13-18: Bau & Übergabe</h3>
+                <div style="border: 2px solid #2d5f3d; border-top: none; padding: 15px; border-radius: 0 0 6px 6px; background: #fafafa;">
+                    <ul style="margin: 5px 0;">
+                        <li>Hauptbauphase</li>
+                        <li>Ratenzahlungen von Käufern bei Meilensteinen</li>
+                        <li>Ihr Gewinn während Bau realisiert</li>
+                        <li>Finale Übergabe an Eigentümer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Seite 3 von 4 • Schlesische Str. 21 Entwicklung • Vertraulich
+        </div>
+    </div>
+
+    <!-- SEITE 4 -->
+    <div class="page">
+        <div class="header">
+            <h1>Warum schneller Vorverkauf funktioniert</h1>
+            <p class="subtitle">Die Käufervorteile, die dies zum leichtesten Verkauf in Berlin machen</p>
+        </div>
+
+        <div class="section">
+            <h2>Vier massive Käufervorteile</h2>
+
+            <div class="key-point">
+                <strong>1. Insolvenzfeste Struktur 🛡️</strong><br><br>
+                Käufer besitzen Grundstück DIREKT ab Tag 1 in ihrer WEG (Wohnungseigentümergemeinschaft). Sie werden nur als Bauunternehmen beauftragt, nicht als Bauträger der ihnen Eigentum verkauft. Dies eliminiert die Angst Nr. 1 im Berliner Markt nach den jüngsten prominenten Bauträgerinsolvenzen. Käufer schlafen gut in dem Wissen, dass sie das Grundstück direkt besitzen.
+            </div>
+
+            <div class="key-point">
+                <strong>2. Außergewöhnliche 6% Nettomietrendite 💰</strong><br><br>
+                Bei 35 €/m² Kaltmiete generiert eine typische 53m² Wohnung 22.260 €/Jahr. Nach Kosten erhalten Käufer ~6% Nettorendite auf ihre 480 T€ Investition. Vergleichen Sie dies mit 3,5% für typischen Berliner Neubau. Dies erleichtert die Finanzierung und schafft starke Investorennachfrage. Banken lieben die Zahlen.
+            </div>
+
+            <div class="key-point">
+                <strong>3. 27.000 € Grunderwerbsteuer-Ersparnis Pro Einheit 💸</strong><br><br>
+                <strong>Normaler Kauf:</strong> 6% Grunderwerbsteuer auf 480.000 € = 28.800 €<br>
+                <strong>Diese Struktur:</strong> 6% Grunderwerbsteuer nur auf ~106.000 € Grundstückswert = 6.360 €<br>
+                <strong>Käufer spart: 22.440 € pro Einheit</strong><br><br>
+                Diese Ersparnis deckt fast die Hälfte ihrer Anzahlung! Es ist ein sofortiger, greifbarer Vorteil, der Ihre Einheiten 22 T€ günstiger macht als vergleichbarer Neubau.
+            </div>
+
+            <div class="key-point">
+                <strong>4. 83.000 € Steuervorteile über 10 Jahre 📊</strong><br><br>
+                <strong>Jahre 1-10:</strong> 5% degressive AfA (20-22 T€/Jahr Steuerersparnis)<br>
+                <strong>Jahre 11+:</strong> 3% lineare AfA geht weiter<br>
+                <strong>Jahr 10+:</strong> Steuerfreier Verkauf nach deutschem Recht möglich<br><br>
+                Zielkäufer: Gutverdiener in 42-47% Steuersatz die Steuerschutz brauchen. Es gibt Tausende dieser Käufer in Berlin die genau diese Gelegenheit suchen.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Drei-Gebäude-Flexibilität = Schnellerer Exit</h2>
+            
+            <div class="highlight-box">
+                <strong>Drei separate Gebäude mit unabhängigen Eingängen:</strong><br><br>
+                <strong>Gebäude 1:</strong> 4 Einheiten = 1.920.000 €<br>
+                <strong>Gebäude 2:</strong> 4 Einheiten = 1.920.000 €<br>
+                <strong>Gebäude 3:</strong> 4 Einheiten = 1.920.000 €<br><br>
+                
+                Jedes Gebäude kann separat aufgeteilt und an vermögende Investoren verkauft werden, die wollen:<br>
+                • Einfaches Eigentum (eine Einheit besitzt ganzes Gebäude)<br>
+                • 92 T€ Jahresmieteinnahmen pro Gebäude<br>
+                • 6% Rendite auf 1,92 Mio. € Investment<br>
+                • Alle gleichen Steuervorteile<br>
+                • Einfache Verwaltung (4 Einheiten, nicht 12 separate Käufer)<br><br>
+                
+                <strong>Strategischer Vorteil:</strong> Wenn 1-2 Gebäude in ersten 2 Monaten an Investoren verkauft werden, sind Sie bereits 33-66% vorverkauft. Die verbleibenden Einzelwohnungen schließen den Deal ab.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Exit-Strategie & Risikominimierung</h2>
+            
+            <div class="key-point">
+                <strong>Ihr Exit-Zeitplan:</strong><br>
+                Erste Zahlung (75 T€) in Monat 1 → Zweite Zahlung (75 T€) in Monat 6-8 → Finale Zahlung (1,05 Mio. €, durch Anzahlungen gedeckt) in Monat 9-12. Vorverkaufsanzahlungen decken den Großteil der finalen Grundstückszahlung. Sie sind praktisch risikofrei sobald der Vorverkaufs-Momentum in Monaten 3-4 einsetzt.
+            </div>
+
+            <div class="key-point">
+                <strong>Falls Vorverkauf langsamer als erwartet:</strong><br>
+                Sie besitzen immer noch die Option und kontrollieren den Zeitplan. Zeitplan mit Zustimmung des Eigentümers verlängern oder vor finalem Closing zurücktreten (Verkäufer behält Zahlungen + Verbesserungen). Keine Verpflichtung zum Closing bis Sie Käufer gesichert haben. Aber realistisch, mit diesen Käufervorteilen ist langsamer Vorverkauf extrem unwahrscheinlich.
+            </div>
+        </div>
+
+        <div class="profit-highlight">
+            <div class="big-number">1.260.000 €</div>
+            <div class="label">Nettogewinn • 293% ROI • 21,9% Marge</div>
+            <p style="margin: 15px 0 0 0; font-size: 12pt; color: #666;">
+                <strong>Dies ist die Definition einer Top-Chance:</strong><br>
+                Geringer Kapitalbedarf • Schneller Vorverkauf • Außergewöhnliche Rendite • Toplage • Genehmigung liegt vor
+            </p>
+        </div>
+
+        <div class="footer">
+            Seite 4 von 4 • Nur zur Diskussion • Alle Zahlen sind Schätzungen vorbehaltlich Überprüfung
+        </div>
+    </div>
+</body>
+</html>

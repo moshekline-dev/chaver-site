@@ -1,0 +1,759 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Genesis Analysis Overview | Torah Weave Commentary</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <main class="content-wrapper">
+
+<h1>The Architecture of Genesis: A Structural Reading</h1>
+
+<!-- SLIDESHOW SECTION -->
+<section class="slideshow-section">
+    <div class="slideshow-container">
+        <div class="slideshow-intro">
+            <h2>Visual Summary: The Genesis Matrix</h2>
+            <p>This 15-slide presentation reveals how Genesis's 50 chapters organize into 19 distinct literary units arranged in a sophisticated two-dimensional matrix structure.</p>
+        </div>
+        
+        <div class="slideshow-wrapper">
+            <div class="slide active" data-slide="1">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-01.webp" alt="Slide 1: Introduction to the Genesis Matrix" loading="eager">
+            </div>
+            <div class="slide" data-slide="2">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-02.webp" alt="Slide 2" loading="lazy">
+            </div>
+            <div class="slide" data-slide="3">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-03.webp" alt="Slide 3" loading="lazy">
+            </div>
+            <div class="slide" data-slide="4">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-04.webp" alt="Slide 4" loading="lazy">
+            </div>
+            <div class="slide" data-slide="5">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-05.webp" alt="Slide 5" loading="lazy">
+            </div>
+            <div class="slide" data-slide="6">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-06.webp" alt="Slide 6" loading="lazy">
+            </div>
+            <div class="slide" data-slide="7">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-07.webp" alt="Slide 7" loading="lazy">
+            </div>
+            <div class="slide" data-slide="8">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-08.webp" alt="Slide 8" loading="lazy">
+            </div>
+            <div class="slide" data-slide="9">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-09.webp" alt="Slide 9" loading="lazy">
+            </div>
+            <div class="slide" data-slide="10">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-10.webp" alt="Slide 10" loading="lazy">
+            </div>
+            <div class="slide" data-slide="11">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-11.webp" alt="Slide 11" loading="lazy">
+            </div>
+            <div class="slide" data-slide="12">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-12.webp" alt="Slide 12" loading="lazy">
+            </div>
+            <div class="slide" data-slide="13">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-13.webp" alt="Slide 13" loading="lazy">
+            </div>
+            <div class="slide" data-slide="14">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-14.webp" alt="Slide 14" loading="lazy">
+            </div>
+            <div class="slide" data-slide="15">
+                <img src="/torah-weave/Admin/Assets/Slide-Shows/genesis-matrix/slide-15.webp" alt="Slide 15: Conclusion" loading="lazy">
+            </div>
+            
+            <div class="slideshow-nav">
+                <button class="slide-btn" id="prevSlide" disabled>← Previous</button>
+                <div class="slide-dots">
+                    <button class="slide-dot active" data-slide="1"></button>
+                    <button class="slide-dot" data-slide="2"></button>
+                    <button class="slide-dot" data-slide="3"></button>
+                    <button class="slide-dot" data-slide="4"></button>
+                    <button class="slide-dot" data-slide="5"></button>
+                    <button class="slide-dot" data-slide="6"></button>
+                    <button class="slide-dot" data-slide="7"></button>
+                    <button class="slide-dot" data-slide="8"></button>
+                    <button class="slide-dot" data-slide="9"></button>
+                    <button class="slide-dot" data-slide="10"></button>
+                    <button class="slide-dot" data-slide="11"></button>
+                    <button class="slide-dot" data-slide="12"></button>
+                    <button class="slide-dot" data-slide="13"></button>
+                    <button class="slide-dot" data-slide="14"></button>
+                    <button class="slide-dot" data-slide="15"></button>
+                </div>
+                <button class="slide-btn" id="nextSlide">Next →</button>
+            </div>
+        </div>
+        
+        <p class="slide-counter">Slide <span id="currentSlide">1</span> of 15 · <a href="The_Genesis_Matrix.pdf" style="color: #8b7355;">Download PDF version</a></p>
+    </div>
+</section>
+
+<h2>Introduction</h2>
+
+<p>In the Garden of Eden, the divine presence appears unified: "YHWH Elohim" speaks and acts throughout the narrative. At the Garden's boundary, that compound name fractures—YHWH alone confronts Cain, while Elohim appears only when Eve names Seth. This textual phenomenon, along with doublets, stylistic variations, and apparent contradictions, has driven over a century of source-critical inquiry. The documentary hypothesis has provided one influential framework for understanding these features through multiple source documents redacted into final form.</p>
+
+<p>This study explores whether these textual features might reflect sophisticated literary architecture rather than editorial compilation. By identifying Genesis's structural building blocks—<em>toledot</em> formulas, death notices, geographic markers, and patterns of structural perfection—we discover compositional design operating at macro-structural levels that systematically deploys divine names, parallels units across generational cycles, and creates meaning through structural arrangement.</p>
+
+<h2>Methodology and Scope</h2>
+
+<p>This study employs close literary analysis focused on observable textual features: formulas, envelopes, repetitions, structural symmetries, divine name usage, and cross-references. The approach is descriptive rather than speculative—it documents patterns that exist in the text rather than reconstructing hypothetical compositional histories.</p>
+
+<p>The analysis remains primarily synchronic, examining the final form of Genesis as a literary unity. While acknowledging the value of diachronic approaches to biblical texts, this study demonstrates that much can be learned from sustained attention to how the text organizes its material in its received form.</p>
+
+<p>The scope is limited to Genesis itself. While connections to broader pentateuchal themes appear (particularly Exodus's revelation of YHWH's name and the Tabernacle's architecture), this study focuses on Genesis's internal structure and how that structure creates meaning within the book's boundaries.</p>
+
+<h2>The Four Parts: Summary of the Argument</h2>
+
+<p><em>This overview provides brief introductions to four separate, detailed documents. Each Part (A, B, C, D) offers a summary of a fuller analysis available through the links at the end of this page.</em></p>
+
+<h3>Part A: The Units of Genesis</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A</a> establishes the foundation by identifying Genesis's nineteen literary units through observable boundary evidence. The text itself provides two complementary systems of boundary markers: <strong>Type A (External Markers)</strong>—<em>toledot</em> formulas, death formulas, geographic envelopes, and transitional phrases; and <strong>Type B (Internal Structural Perfection)</strong>—three-part structures, verbal envelopes, and thematic progression that validate unit independence through internal architecture.</p>
+
+<p>Each of the nineteen units receives detailed analysis showing its <strong>Boundary Markers</strong> (what makes it a distinct unit) and <strong>Internal Coherence</strong> (how its structure validates its independence). The evidence ranges from units with multiple converging markers to those validated through perfect structural symmetry. A striking pattern emerges: the three creation units (1-3) all open with <em>bara</em> (בָּרָא, "created"), while the three Joseph units (17-19) all open with age formulas—suggesting the Joseph narrative functions as a new creation, a reconstitution of Israel in Egypt parallel to cosmic creation.</p>
+
+<h3>Part B: The Map of Genesis</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B</a> reveals the architectural map of Genesis. The nineteen units do not just follow linearly—they are organized into a precise <strong>3-Row by 7-Column matrix</strong>, as shown in the table below. This structure unifies all the book's major patterns.</p>
+
+<div style="background-color: #f8f9fa; border: 2px solid #dee2e6; border-radius: 8px; padding: 25px; margin: 30px 0;">
+<strong>Genesis: 3-Row × 7-Column Structure</strong><br><br>
+<table style="width: 100%; border-collapse: collapse; text-align: center;">
+    <thead>
+        <tr style="background-color: #3498db; color: white;">
+            <th style="border: 1px solid #999; padding: 8px;">Row</th>
+            <th style="border: 1px solid #999; padding: 8px;">A<br><small>Opening<br>Triad</small></th>
+            <th style="border: 1px solid #999; padding: 8px;">B<br><small>Pivot</small></th>
+            <th style="border: 1px solid #999; padding: 8px;" colspan="2">C-D<br><small>Abraham Cycle</small></th>
+            <th style="border: 1px solid #999; padding: 8px;" colspan="2">E-F<br><small>Isaac-Jacob Cycle</small></th>
+            <th style="border: 1px solid #999; padding: 8px;">G<br><small>Closing<br>Triad</small></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="border: 1px solid #999; padding: 8px; font-weight: bold;">1</td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4f2ff;"><a href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1.html">Unit 1</a><br><small>Creation</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #f5f5f5;"></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #e6ffee;"><a href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5.html">Unit 5</a><br><small>Call</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4d4ff;"><a href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6.html">Unit 6</a><br><small>Lot</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4d4ff;"><a href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11.html">Unit 11</a><br><small>Twins</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #e6ffee;"><a href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12.html">Unit 12</a><br><small>Isaac</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4f2ff;"><a href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17.html">Unit 17</a><br><small>Joseph</small></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #999; padding: 8px; font-weight: bold;">2</td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4f2ff;"><a href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2.html">Unit 2</a><br><small>Eden</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #ffe6e6;"><a href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4.html">Unit 4</a><br><small>Babel</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #e6ffee;"><a href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7.html">Unit 7</a><br><small>Covenants</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4d4ff;"><a href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8.html">Unit 8</a><br><small>Sodom</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4d4ff;"><a href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13.html">Unit 13</a><br><small>Blessing</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #e6ffee;"><a href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14.html">Unit 14</a><br><small>Laban</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4f2ff;"><a href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18.html">Unit 18</a><br><small>Famine</small></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #999; padding: 8px; font-weight: bold;">3</td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4f2ff;"><a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3.html">Unit 3</a><br><small>Nations</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #f5f5f5;"></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #e6ffee;"><a href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9.html">Unit 9</a><br><small>Isaac Born</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4d4ff;"><a href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10.html">Unit 10</a><br><small>Machpelah</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4d4ff;"><a href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15.html">Unit 15</a><br><small>Esau</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #e6ffee;"><a href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16.html">Unit 16</a><br><small>Shechem</small></td>
+            <td style="border: 1px solid #999; padding: 10px; background-color: #d4f2ff;"><a href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19.html">Unit 19</a><br><small>Blessings</small></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<strong>Color Key:</strong><br>
+• <span style="background-color: #d4f2ff; padding: 2px 8px; border: 1px solid #999;">Light Blue</span>: Opening &amp; Closing Triads (Universal Scope)<br>
+• <span style="background-color: #ffe6e6; padding: 2px 8px; border: 1px solid #999;">Light Red</span>: Babel Pivot (Transition)<br>
+• <span style="background-color: #e6ffee; padding: 2px 8px; border: 1px solid #999;">Light Green</span>: Covenant Track (Units 5,7,9 &amp; 12,14,16)<br>
+• <span style="background-color: #d4d4ff; padding: 2px 8px; border: 1px solid #999;">Light Purple</span>: Family Track (Units 6,8,10 &amp; 11,13,15)<br>
+</div>
+
+<p>This 3×7 architecture reveals several layers of compositional design:</p>
+
+<p><strong>The Columns (Thematic Flow):</strong> The seven columns organize the narrative.</p>
+<ul>
+<li><strong>Outer Frame (Cols A &amp; G):</strong> The Opening Triad (Units 1-3) and Closing Triad (Units 17-19) frame the entire book, dealing with universal themes of creation, nations, and empire.</li>
+<li><strong>The Pivot (Col B):</strong> The Tower of Babel (Unit 4) stands alone as the central pivot, transitioning the book from universal history to the particular patriarchal story.</li>
+<li><strong>The Patriarchal Matrix (Cols C-F):</strong> The central twelve units form a perfect <strong>3-Row, 4-Column matrix</strong> containing the two major patriarchal cycles.</li>
+</ul>
+
+<p><strong>The Rows (Theological Weave):</strong> The three rows are distributed according to divine name usage, creating a "vertical" theological weave across the entire book.</p>
+<ul>
+<li><strong>Row 1 (YHWH):</strong> Emphasizes YHWH as the active, covenant-making, and speaking deity.</li>
+<li><strong>Row 3 (Elohim):</strong> Emphasizes Elohim as the universal creator, blesser, and deity of natural processes.</li>
+<li><strong>Row 2 (YHWH Elohim):</strong> Serves as the interface, featuring both names and narratives where heaven and earth intersect (Eden, Babel, Covenant, Bethel).</li>
+</ul>
+
+<p><strong>Patterns within the Matrix (C-F):</strong> This structure reveals the sophisticated internal logic of the patriarchal narratives.</p>
+<ul>
+<li><strong>Alternating Tracks:</strong> The columns in the patriarchal matrix alternate by theme. The Abraham cycle begins with Covenant (Col C) and alternates with Family (Col D). The Isaac-Jacob cycle inverts this, beginning with Family (Col E) and alternating with Covenant (Col F).</li>
+<li><strong>Non-Linear Triads:</strong> Reading the columns vertically reveals the four non-linear triads (e.g., 5-7-9; 6-8-10; etc.) that tell complete, coherent stories.</li>
+<li><strong>Strategic Clustering:</strong> This visual map confirms the deliberate placement of material. Sister-wife crises appear at the four corners of the matrix (Units 5, 9, 12, 16). Major divine revelations cluster at the centers (Units 7, 14).</li>
+<li><strong>Textual Cross-References:</strong> Genesis 26:1 explicitly references "the first famine in the days of Abraham," connecting Unit 12 back to Units 5 and 9—units that occupy corresponding matrix positions.</li>
+</ul>
+
+<h3>Part C: The Three Rows</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C</a> examines the hidden warp of Genesis's structure—the three horizontal rows that run across the matrix. Using the metaphor of the ancient Egyptian horizontal loom, where horizontal warp threads are stretched between anchoring posts while vertical weft threads weave through them to create the visible pattern, this analysis reveals how divine name distribution creates a systematic theological weave across the entire book.</p>
+
+<p><strong>The Row System:</strong> Row 1 emphasizes YHWH as the active, covenant-making deity. Row 3 emphasizes Elohim as the universal creator and blesser. Row 2 serves as the interface where both names appear, marking narratives where heaven and earth intersect. This distribution is not random but architecturally systematic.</p>
+
+<h3>Part D: Architecture and Meaning</h3>
+
+<p><a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D</a> interprets what the discovered structure reveals about Genesis's theological vision. Structure in Genesis is not merely organizational convenience—the architecture itself communicates through pattern and position.</p>
+
+<p><strong>Three-Ring Concentric Pattern:</strong> The units organize concentrically around a theological center. The outer ring (Units 1-3, 17-19) operates at universal scope, framing everything with kingship themes—divine sovereignty opening, human empire closing. The middle ring (Units 5, 7, 9, 12, 14, 16) occupies matrix corners and centers, containing covenant-making material, boundary crises, and major divine revelations. The inner ring (Units 6, 8, 10, 11, 13, 15) focuses on brother relationships and family dynamics—Lot's disposal, Jacob-Esau reconciliation, securing succession through family work.</p>
+
+<p><strong>Divine Name Theology:</strong> The systematic distribution of YHWH and Elohim by matrix rows reflects distinct divine operations. YHWH acts as the covenant-making, promise-giving, personally involved deity who appears to individuals and speaks promises. Elohim operates as the universal creator, blessing-giver, and deity of natural processes who makes covenants through cosmic signs. Both names together mark interfaces where heaven and earth meet, where divine and human realms intersect. The structure uses divine names not as source indicators but as theological vocabulary distinguishing types of divine activity.</p>
+
+<p><strong>Universal-Particular-Universal Movement:</strong> The outer triads move in opposite directions. Units 1-3 contract from universal creation through human expansion to scattered nations—narrowing toward the particular. Units 17-19 expand from one family through universal famine administration to national formation—broadening toward universal significance. The structure embodies the theological claim that particularity (the chosen family) is not the end goal but the means toward universal blessing. Genesis moves from universal through particular back to universal, and the architecture enacts this movement through its scope patterns.</p>
+
+<p><strong>Repeating Patterns Across Generations:</strong> Corresponding positions across the two patriarchal cycles contain parallel content: both cycles open with selection and call (Units 5, 11), both have major covenant moments at their centers (Units 7, 14), both face boundary crises at their close (Units 9, 16). The structure demonstrates that covenant identity must be renewed in each generation through the same essential pattern—election, covenant formation, testing, succession.</p>
+
+<h2>Key Findings</h2>
+
+<p><strong>Evidence-Based Unit Divisions:</strong> Nineteen literary units identified through the text's own boundary markers—<em>toledot</em> formulas, death notices, geographic transitions, and internal structural perfection. Each boundary rests on multiple converging lines of evidence that ancient readers would have recognized as structural signals.</p>
+
+<p><strong>Triadic Organization:</strong> Six triads of three units each, plus one pivot unit. The opening triad (1-3), four middle triads forming non-linear tracks (5-7-9, 6-8-10, 11-13-15, 12-14-16), and closing triad (17-19). The number three operates at every structural level.</p>
+
+<p><strong>Alternating Tracks with Inversion:</strong> Covenant and family themes alternate throughout the middle twelve units, with the odd/even assignment inverting between Abraham's cycle and Isaac-Jacob's cycle. This creates both linear narrative flow and thematic coherence within each track.</p>
+
+<p><strong>Matrix Capability:</strong> The middle section operates two-dimensionally. Three rows correlate with divine name patterns (YHWH, both names, Elohim). Four columns represent the four non-linear triads. This enables multiple valid reading strategies: linear (following patriarchal sequence) or thematic (following covenant or family tracks).</p>
+
+<p><strong>Strategic Thematic Clustering:</strong> Specific motifs appear exclusively at specific structural positions. Sister-wife material at matrix corners, divine revelations at centers, Jacob-Esau conflict in one complete column. Position matters architecturally.</p>
+
+<p><strong>Textual Cross-References:</strong> Explicit verbal links connect corresponding positions across cycles (Genesis 26:1 references "the first famine in the days of Abraham"). The text itself teaches readers to compare parallel structural positions.</p>
+
+<p><strong>Systematic Divine Name Distribution:</strong> YHWH and Elohim usage distributes according to matrix position. Opening positions feature YHWH as active subject, closing positions feature Elohim as active subject, middle positions feature both names together. The distribution creates a woven structure where horizontal thematic tracks intersect with vertical divine name patterns.</p>
+
+<p><strong>Concentric Ring Architecture:</strong> The book organizes concentrically around a theological center. Outer rings address universal scope (creation, nations, empire), middle ring handles covenant formation and boundary crises, inner ring works through brother relationships and family succession.</p>
+
+<p><strong>Directional Scope Movement:</strong> The outer triads move in opposite directions—Units 1-3 contract from universal to particular, Units 17-19 expand from particular to universal. This embodies the theological movement from universal through particular back to universal blessing.</p>
+
+<h2>Relationship to Source-Critical Approaches</h2>
+
+<p>Source criticism emerged from real textual phenomena: doublets, divine name alternation, apparent contradictions, and stylistic variations. These observations remain valid regardless of compositional theory. The question is how best to explain them.</p>
+
+<p>This study proposes that these features may reflect sophisticated literary architecture: systematic divine name deployment for theological purposes, structural parallelism across generational cycles creating intentional doublets, and unit boundaries serving compositional design. These explanations account for the same textual complexity without requiring reconstruction of hypothetical source documents.</p>
+
+<p>The architectural patterns documented here require explanation within any compositional theory. Whether these patterns reflect unitary composition, sophisticated final redaction, or something between, they demonstrate compositional sophistication that enriches our understanding of Genesis.</p>
+
+<h2>Patterns Observable and Falsifiable: Limitations and Invitation</h2>
+
+<p>The patterns documented here are observable and falsifiable—they can be verified, challenged, or refined through continued analysis. The structure makes testable predictions about textual relationships that either hold or fail under scrutiny.</p>
+
+<p>Scholars can independently verify: the <em>toledot</em> and death formulas marking unit boundaries, the double/triple <em>toledot</em> pattern at generational transitions (Units 5, 11, 17), the sister-wife clustering at Units 5, 9, 12, 16, the exclusive appearance of Esau in Units 11, 13, 15, the explicit verbal cross-reference in Genesis 26:1, the divine name distribution by matrix rows, the alternating covenant/family pattern with inversion between cycles.</p>
+
+<p>The strength of this analysis lies in its descriptive foundation. While interpretive claims built on structural patterns remain arguable, the patterns themselves exist as textual features available for examination. Reasonable scholars may accept the structural evidence while disagreeing about theological significance or compositional implications.</p>
+
+<h3>Limitations and Open Questions</h3>
+
+<p>This structural approach has inherent limitations. It cannot definitively resolve questions of historical authorship or composition date. The patterns identified here could, in principle, reflect either unitary composition or sophisticated final redaction. The study focuses on literary structure rather than historical development, leaving diachronic questions for scholars working in that mode.</p>
+
+<p>Additionally, while the architectural patterns documented here are demonstrable, their interpretation remains arguable. The study's strength lies in its descriptive analysis of observable patterns; its interpretive claims built on that foundation remain more speculative and open to debate.</p>
+
+<h3>Invitation to Engagement</h3>
+
+<p>This study presents evidence and argument that merit scholarly engagement. The patterns documented here are observable—they can be verified, challenged, or refined through continued analysis.</p>
+
+<p>We invite critical engagement with this work: testing the unit boundaries against alternative divisions, evaluating whether the discovered patterns truly exist or represent analytical imposition, assessing whether the theological interpretations follow from the structural evidence, and considering how structural analysis might complement existing approaches to Genesis.</p>
+
+<p>The four parts that follow present detailed evidence and sustained argument. Whether one ultimately accepts the unitary authorship implications, prefers modified source-critical models, or sees the patterns as evidence of sophisticated final redaction, the architectural features identified here require explanation. This study aims to contribute to ongoing scholarly conversation about Genesis's composition by offering a detailed structural analysis of the final form.</p>
+
+<div class="series-navigation">
+    <h3>Genesis Commentary Series</h3>
+    <span>Overview (Current)</span>
+    <a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis.html">Part A: The Units of Genesis →</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">Part B: The Map of Genesis →</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/the-three-rows.html">Part C: The Three Rows →</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/architecture-and-meaning-in-genesis.html">Part D: Architecture and Meaning →</a>
+</div>
+
+    </main>
+    
+    <script>
+    // Slideshow functionality
+    (function() {
+        const totalSlides = 15;
+        let currentSlide = 1;
+        
+        function goToSlide(n) {
+            document.querySelector('.slide.active').classList.remove('active');
+            document.querySelector('.slide-dot.active').classList.remove('active');
+            
+            currentSlide = n;
+            document.querySelector('.slide[data-slide="' + n + '"]').classList.add('active');
+            document.querySelector('.slide-dot[data-slide="' + n + '"]').classList.add('active');
+            
+            document.getElementById('currentSlide').textContent = n;
+            
+            document.getElementById('prevSlide').disabled = (n === 1);
+            document.getElementById('nextSlide').disabled = (n === totalSlides);
+        }
+        
+        document.getElementById('prevSlide').addEventListener('click', function() {
+            if (currentSlide > 1) goToSlide(currentSlide - 1);
+        });
+        
+        document.getElementById('nextSlide').addEventListener('click', function() {
+            if (currentSlide < totalSlides) goToSlide(currentSlide + 1);
+        });
+        
+        document.querySelectorAll('.slide-dot').forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                goToSlide(parseInt(this.dataset.slide));
+            });
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' && currentSlide > 1) goToSlide(currentSlide - 1);
+            if (e.key === 'ArrowRight' && currentSlide < totalSlides) goToSlide(currentSlide + 1);
+        });
+        
+        // Touch/swipe support
+        let touchStartX = 0;
+        const wrapper = document.querySelector('.slideshow-wrapper');
+        
+        if (wrapper) {
+            wrapper.addEventListener('touchstart', function(e) {
+                touchStartX = e.touches[0].clientX;
+            }, {passive: true});
+            
+            wrapper.addEventListener('touchend', function(e) {
+                const touchEndX = e.changedTouches[0].clientX;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0 && currentSlide < totalSlides) {
+                        goToSlide(currentSlide + 1);
+                    } else if (diff < 0 && currentSlide > 1) {
+                        goToSlide(currentSlide - 1);
+                    }
+                }
+            }, {passive: true});
+        }
+    })();
+    </script>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

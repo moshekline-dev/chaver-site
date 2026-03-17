@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<!-- #BeginTemplate "../../../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+	<title>מסכת סדר היום</title><meta name="keywords" content="מסכת סדר היום" /><meta name="description" content="מסכת סדר היום" />
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific styles can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+		<div align="right"><table border="0" cellpadding="0" cellspacing="0" dir="rtl" width="100%"><tr><td colspan="2" valign="top"><p class="Mesechet" dir="rtl">מסכת יומא</p></td><td colspan="3" valign="top"><p class="logo" dir="rtl">המשנה כדרכה</p></td><td colspan="2" valign="top"><p class="Perek" dir="rtl">סדר היום</p></td></tr><tr><td colspan="3" valign="top"><p dir="rtl"><span class="Subunit">1א<br />פרק ג A</span> הורידו <span class="Horizontal1">כהן גדול</span> לבית הטבילה<br /><span class="Subunit">&nbsp;</span>חמש טבילות ועשרה קדושין טובל כהן גדול ומקדש בו ביום<br />וכלן בקדש על בית הפרוה חוץ מזו בלבד<br />(ד) <span class="Horizontal1">פרסו סדין שלבוץ בינו לבין העם</span> פשט ירד וטבל עלה ונסתפג<br />הביאו לו בגדי זהב ולבש וקדש ידיו ורגליו<br /><span class="Subunit">B</span> הביאו לו את התמיד קרצו ומרק אחר שחיטה על ידו קבל את הדם וזרקו<br /><span class="Ciasm1">נכנס להקטיר קטרת</span> <span class="Horizontal1">שלשחר </span>ולהטיב את הנרות<br />ולהקריב את הראש ואת האברים ואת החבתין ואת היין<br />(ה) קטרת <span class="Horizontal1">שלשחר</span> היתה קרבה בין הדם לאברים<br /><span class="Horizontal1">שלבין הערבים</span> בין אברים לנסכים</p></td><td colspan="4" valign="top"><p dir="rtl"><span class="Subunit">1ב<br />A</span> אם היה <span class="Horizontal1">כהן גדול</span> זקן או אסטניס מחמין לו חמין ומטילין לתוך הצונין כדי שתפוג צנתן<br />(ו) הביאוהו לבית הפרוה ובקדש היתה <span class="Horizontal1">פרסו סדין שלבוץ בינו לבין העם</span> קדש ידיו ורגליו ופשט<br />רבי מאיר אומר פשט קדש ידיו ורגליו<br />ירד וטבל עלה ונסתפג<br /><span class="Ciasm2">הביאו לו בגדי לבן</span> לבש וקדש ידיו ורגליו<br /><span class="Subunit">B</span> (ז) <span class="Horizontal1">בשחר</span> היה לובש פלוסין שלשנים עשר מנה <span class="Horizontal1">ובין הערבים</span> הנדוין שלשמונה מאות זוז<br />דברי רבי מאיר<br />וחכמים אומרים <span class="Horizontal1">בשחר </span>היה לובש שלשמונה עשר מנה<br /><span class="Horizontal1">ובין הערבים</span> שלשנים עשר מנה הכל שלשים מנה<br />אלו משלצבור ואם רצה להוסיף מוסיף <span class="Closure">משלו</span></p></td></tr><tr><td colspan="2" valign="top"><p dir="rtl"><span class="Subunit">2א<br /></span>(ח) <span class="Horizontal1">בא לו</span> אצל פרו<br />ופרו היה עומד בין האולם ולמזבח ראשו לדרום ופניו למערב<br />והכהן עומד במזרח ופניו למערב<br />וסומך שתי ידיו עליו ומתודה וכך היה <span class="Horizontal1">אומר</span><br />אנא השם עויתי פשעתי חטאתי לפניך אני וביתי<br />אנא השם כפר נא לעונות ולפשעים ולחטאים<br />שעויתי ושפשעתי ושחטאתי לפניך אני וביתי<br /><span class="Vertical1">ככתוב בתורת</span> משה עבדך כי ביום הזה יכפר עליכם וגו&#39;<br /><span class="Horizontal1">והן עונין אחריו ברוך שם כבוד מלכותו לעולם ועד</span></p></td><td colspan="3" valign="top"><p dir="rtl"><span class="Subunit">2ב<br /></span>(ט<span class="Horizontal1">) בא לו</span> למזרח העזרה לצפון המזבח<br />הסגן מימינו וראש בית אב משמאלו<br />ושם שני שעירים וקלפי היתה שם<br />ובה שני גורלות שלאשכרוע היו<br /><strong>פרק ד</strong> (א) טרף בקלפי והעלה שני גורלות<br />אחד כתוב עליו לשם ואחד כתוב עליו לעזאזל<br />הסגן מימינו וראש בית אב משמאלו<br />אם שלשם עלה בימינו הסגן אומר לו <br />אישי כהן גדול הגבה ימינך ואם שלשם עלה בשמאלו<br />ראש בית אב אומר לו אישי כהן גדול הגבה שמאלך<br />נתנן על שני השעירים <span class="Horizontal1">ואומר</span> לה&#39; חטאת<br />רבי ישמעאל אומר לא היה צריך לומר חטאת אלא לה&#39;<br /><span class="Horizontal1">והן עונין אחריו ברוך שם כבוד מלכותו לעולם ועד<br /></span>(ב) קשר לשון שלזהורית בראש שעיר המשתלח<br />והעמידו כנגד בית שלוחו ולנשחט כנגד בית שחיטתו</p></td><td colspan="2" valign="top"><p dir="rtl"><span class="Subunit">2ג</span><br /><span class="Horizontal1">בא לו</span> אצל פרו שניה<br />וסומך שתי ידיו עליו ומתודה<br />וכך היה <span class="Horizontal1">אומר<br /></span>אנא השם עויתי פשעתי חטאתי לפניך<br />אני וביתי ובני אהרן עם קדושיך<br />אנא השם כפר נא לעונות ולפשעים ולחטאים<br />שעויתי ושפשעתי ושחטאתי לפניך<br />אני וביתי ובני אהרן עם קדושיך<br /><span class="Vertical1">ככתוב בתורת</span> משה עבדך<br />כי ביום הזה יכפר עליכם<br />לטהר אתכם מכל חטאתיכם<br />לפני ה&#39; תטהרו<br /><span class="Horizontal1">והן עונין אחריו<br />ברוך שם כבוד מלכותו לעולם ועד</span></p></td></tr><tr><td colspan="2" valign="top"><p dir="rtl"><span class="Subunit">3א</span> </p><p dir="rtl"><span class="Subunit">A</span> (ג) שחטו וקבל במזרק את <span class="Horizontal1">דמו </span><br /><span class="Horizontal2">ונתנו למי שהוא ממרס בו</span> על הרובד הרביעי שבהיכל <br />כדי שלא יקרש<br /><span class="Subunit">B</span> נטל את המחתה ועלה לראש המזבח ופנה גחלים אילך ואילך וחותה מן המעכלות הפנימיות <br />וירד והניחה על הרובד הרביעי שבעזרה<br /><strong>פרק ה</strong> (א) הוציאו לו את הכף ואת המחתה וחפן מלא חפניו &nbsp;<br />ונתן לתוך הכף הגדול לפי גדלו והקטן לפי קטנו <br />וכך היתה מדתה<br />נטל את המחתה בימינו ואת הכף בשמאלו <br />היה מהלך בהיכל עד שמגיע לבין שתי הפרכות <br />המבדילות בין הקדש ובין קדש הקדשים ובניהן אמה<br />רבי יוסי אומר לא היתה שם אלא פרכת אחת בלבד שנאמר והבדילה הפרכת לכם בין הקדש ובין קדש הקדשים<br />החיצונה היתה פרופה מן הדרום והפנימית מן הצפון<br /><span color:windowtext="color:windowtext;" =""="">מהלך ביניהן עד שמגיע לצפון <br />הגיע לצפון הופך פניו לדרום <br />מהלך לשמאלו עם הפרכת עד שהוא מגיע לארון<br /></span>הגיע לארון נותן את המחתה בין שני הבדים <br />צבר את הקטרת על גבי הגחלים ונתמלא כל הבית כלו עשן<br />יצא ובא לו בדרך בית כניסתו ומתפלל תפלה קצרה בבית החיצון ולא היה מאריך בתפלתו שלא להבעית את ישראל <br /><span class="Subunit">C</span> (ב) משנטל הארון אבן היתה שם מימות נביאים הראשונים ושתיה היתה נקראת <br />גבוהה מן הארץ שלש אצבעות<br />&nbsp;ועליה היה נותן</p></td><td colspan="3" valign="top"><p dir="rtl"><span class="Subunit">3ב<br />A</span> (ג) <span class="Horizontal2">נטל את </span><span class="Horizontal1">הדם </span><span class="Horizontal2">ממי שהיה ממרס בו</span> <br />נכנס למקום שנכנס ועמד במקום שעמד<span class="Horizontal3"> </span><br /><span class="Horizontal3">והזה</span><span class="InternalParallel"> ממנו</span> <span class="InternalParallel">אחת למעלה ושבע למטה <br />ולא היה מתכון להזות לא למעלה ולא למטה אלא היה כמצליף</span><br /><span class="InternalParallel">וכך היה מונה אחת אחת ואחת אחת ושתים אחת ושלש <br /><br /></span>יצא והניחו על כן הזהב שבהיכל<br /><span class="Subunit">B</span> (ד) הביאו לו את השעיר שחטו וקבל במזרק את דמו<br />נכנס למקום שנכנס ועמד במקום שעמד <br /><span class="Horizontal3">והזה</span><span class="InternalParallel"> ממנו אחת למעלה ושבע למטה<br />ולא היה מתכון להזות לא למעלה ולא למטה אלא כמצליף<br />וכך היה מונה אחת אחת ואחת אחת ושתים אחת ושלש <br />אחת וארבע אחת וחמש אחת ושש אחת ושבע</span><br />יצא והניחו על כן השני שהיה בהיכל<br />רבי יהודה אומר לא היה שם אלא כן אחד בלבד </p><p dir="rtl"><span class="Subunit">C</span> נטל דם הפר והניח דם השעיר <br /><span class="Horizontal3">והזה</span><span class="InternalParallel"> ממנו על הפרכת שכנגד הארון מבחוץ<br />אחת למעלה ושבע למטה <br />ולא היה מתכון להזות לא למעלה ולא למטה אלא כמצליף</span><br /><span class="InternalParallel">וכך היה מונה אחת אחת ואחת אחת ושתים אחת ושלש <br />אחת וארבע אחת וחמש אחת ושש אחת ושבע<br /></span><span class="Subunit">D</span> נטל דם השעיר והניח דם הפר<br /><span class="Horizontal3">והזה</span><span class="InternalParallel"> ממנו על הפרכת שכנגד הארון מבחוץ<br />אחת למעלה ושבע למטה<br />ולא היה מתכון להזות לא למעלה ולא למטה אלא כמצליף</span><br /><span class="InternalParallel">וכך היה מונה אחת אחת ואחת אחת ושתים אחת ושלש<br />אחת וארבע אחת וחמש אחת ושש אחת ושבע</span></p></td><td colspan="2" valign="top"><p dir="rtl"><span class="Subunit">3ג<br />A</span> ערה <span class="Horizontal1">דם</span> הפר לתוך דם השעיר ונתן את המלא בריקן <br /><span class="Subunit">B</span> (ה) ויצא אל המזבח אשר לפני ה&#39; זה מזבח הזהב <br />התחיל מחטא ויורד <br />מהיכן הוא מתחיל <br />מקרן מזרחית צפונית צפונית מערבית <br />מערבית דרומית דרומית מזרחית<br />מקום שהוא מתחיל בחטאת על מזבח החיצון <br />משם היה גומר על מזבח הפנימי<br />רבי אליעזר אומר במקומו היה עומד ומחטא<br />ועל כלן היה נותן מלמטה למעלה חוץ מזו שהיתה לפניו <br />שעליה היה נותן מלמעלה למטה<br /><span class="Subunit">C</span> (ו) <span class="Horizontal3">הזה </span>על טהרו שלמזבח שבע פעמים<br />&nbsp;ושירי הדם היה שופך על יסוד מערבי שלמזבח החיצון <br />ושלמזבח החיצון היה שופך על יסוד דרומי <br />אלו ואלו מתערבין באמה ויוצאין לנחל קדרון <br />ונמכרין לגננין לזבל ומועלין בהן</p></td></tr><tr><td colspan="2" valign="top"><p dir="rtl"><span class="Subunit">4א</span><br /><strong>פרק ו</strong> (ב) <span class="Horizontal1">בא לו </span>אצל שעיר המשתלח<br />וסומך שתי ידיו עליו ומתודה<br />וכך היה <span class="Horizontal1">אומר</span><br />אנא השם עוו פשעו חטאו לפניך עמך בית ישראל<br />אנא בשם כפר נא לעונות ולפשעים ולחטאים<br />שעוו ושפשעו ושחטאו לפניך עמך בית ישראל<br /><span class="Vertical1">ככתוב בתורת</span> משה עבדך לאמר<br />כי ביום הזה יכפר עליכם לטהר אתכם<br />מכל חטאתיכם לפני ה&#39; תטהרו<span class="Subunit"><br />&nbsp;</span>והכהנים והעם העומדים בעזרה כשהיו שומעים שם המפרש<br />שהוא יוצא מפי כהן גדול<br />היו כורעים ומשתחוים<br />ונופלים על פניהם ואומרים<br />ברוך שם כבוד מלכותו לעולם ועד</p></td><td colspan="3" valign="top"><p dir="rtl"><span class="Subunit">4ב<br />&nbsp;</span>(ז) <span class="Horizontal1">בא לו</span> אצל הפר<br />&nbsp;&nbsp;&nbsp; ואצל השעיר הנשרפין<br />קרען והוציא את אמוריהן<br />נתנן במגיס והקטירן על גבי המזבח<br />קלען במקלעות והוציאן לבית השרפה<br /><span class="Subunit">&nbsp;</span>(ח) <span class="Horizontal1">אמרו</span> לו לכהן גדול הגיע שעיר למדבר</p></td><td colspan="2" valign="top"><p dir="rtl"><span class="Subunit">4ג</span><br /><strong>פרק ז</strong> (א) <span class="Horizontal1">בא לו</span> כהן גדול לקרות<br />אם רצה לקרות בבגדי בוץ קורא<br />ואם לא קורא באצטלית לבן משלו <br />חזן הכנסת נוטל ספר תורה ונותנו לראש הכנסת<br />וראש הכנסת נותנו לסגן והסגן נותנו לכהן גדול<br />וכהן גדול עומד ומקבל <br />וקורא (עומד וקורא) אחרי מות ואך בעשור<br />וגולל את התורה ומניחה בחיקו <span class="Horizontal1">ואומר<br /></span>יותר ממהשקראתי לפניכם <span class="Vertical1">כתוב כאן<br /></span>ובעשור שבחומש הפקודים קורא על פה<br />ומברך עליה שמונה ברכות<br />על התורה ועל העבודה ועל ההודאה ועל מחילת העון <br />ועל המקדש בפני עצמו ועל ישראל בפני עצמן<br />(ועל ירושלם בפני עצמה)<br />ועל הכהנים בפני עצמן ועל שאר התפלה</p></td></tr><tr><td colspan="3" valign="top"><p dir="rtl"><span class="Subunit">5א</span><br />(ג) אם בבגדי בוץ קורא <span class="Horizontal1">קדש ידיו ורגליו</span> <span class="Horizontal1">פשט ירד וטבל עלה ונסתפג</span><br /><span class="Horizontal1">הביאו לו בגדי זהב ולבש וקדש ידיו ורגליו</span><br />ויצא ועשה את אילו ואת איל העם ואת שבעת כבשים תמימים בני שנה דברי רבי אליעזר<br />רבי עקיבא אומר עם תמיד שלשחר היו קרבין<br />ופר העולה ושעיר הנעשה בחוץ היו קרבין עם תמיד שלבין הערבים <br />(ד) קדש ידיו ורגליו ופשט וירד וטבל ועלה ונסתפג<br /><span class="Ciasm2">הביאו לו בגדי לבן</span> ולבש וקדש ידיו ורגליו נכנס להוציא את הכף ואת המחתה</p></td><td colspan="4" valign="top"><p dir="rtl"><span class="Subunit">5ב<br /></span><span class="Horizontal1">קדש ידיו ורגליו ופשט וירד וטבל עלה ונסתפג</span><br /><span class="Horizontal1">הביאו לו בגדי זהב ולבש וקדש ידיו ורגליו</span><br /><span class="Ciasm1">ונכנס להקטיר את הקטרת</span> שלבין הערבים<br />ולהטיב את הנרות וקדש ידיו ורגליו ופשט<br />הביאו לו <span class="Closure">בגדי עצמו</span> ולבש<br />ומלוין אותו עד ביתו<br />ויום טוב היה עושה לאוהביו בשעה שיצא בשלום מן הקדש</p></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div>
+		
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

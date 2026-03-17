@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 10 (Exodus 23:20-24:18) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 10
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-9/exodus-unit-9.html" rel="prev">← Unit 9</a>
+            <a href="/torah-weave/Exodus/exodus-unit-11/exodus-unit-11.html" rel="next">Unit 11 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 10</h1>
+                <div class="unit-meta" itemprop="about">Exodus 23:20-24:18</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-left">1A</th><th class="col-middle">1B</th><th class="col-right">1C</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>23:20</b></span> Behold, <span class="horizontal1"><b>I send an angel before thee</b></span>, to keep thee by
+  the way, and <span class="horizontal1"><b>to bring thee into the place which I
+  have prepared</b></span>. <span class="VerseNumber"><b>23:21</b></span> Take
+  heed of him, and hearken unto his voice; be not rebellious against him; for
+  he will not pardon your transgression; for My name is in him. <span class="VerseNumber"><b>23:22</b></span> But if thou shalt indeed hearken unto
+  his voice, <span class="vertical1"><b>and do all that I speak</b></span>; then
+  I will be an enemy unto thine enemies, and an adversary unto thine
+  adversaries.</p></td><td><p class="torah"><span class="VerseNumber"><b>23:23</b></span> <span class="horizontal1"><b>For Mine angel shall go before thee</b></span>, <span class="horizontal1"><b>and bring thee in unto the Amorite, and the Hittite, and
+  the Perizzite, and the Canaanite, the Hivite, and the Jebusite</b></span>;
+  and I will cut them off. <span class="VerseNumber"><b>23:24</b></span> Thou
+  shalt not bow down to their gods, nor serve them, nor do after their doings;
+  but thou shalt utterly overthrow them, and break in pieces their pillars. <span class="VerseNumber"><b>23:25</b></span> And ye shall serve the LORD your God,
+  and He will bless thy bread, and thy water; and I will take sickness away
+  from the midst of thee. <span class="HebrewParagraph"><span style="font-weight:
+  normal">{S}</span></span> <span class="VerseNumber"><b>23:26</b></span> None
+  shall miscarry, nor be barren, in thy land; the number of thy days I will
+  fulfil. <span class="VerseNumber"><b>23:27</b></span> I will send My terror
+  before thee, and will discomfit all the people to whom thou shalt come, and I
+  will make all thine enemies turn their backs unto thee.</p></td><td><p class="torah"><span class="VerseNumber"><b>23:28</b></span> <span class="horizontal1"><b>And I will send the hornet before thee</b></span>, <span class="horizontal1"><b>which shall drive out the Hivite, the Canaanite, and the
+  Hittite, from before thee</b></span>. <span class="VerseNumber"><b>23:29</b></span>
+  I will not drive them out from before thee in one year, lest the land become
+  desolate, and the beasts of the field multiply against thee. <span class="VerseNumber"><b>23:30</b></span> By little and little I will drive them
+  out from before thee, until thou be increased, and inherit the land. <span class="VerseNumber"><b>23:31</b></span> And I will set thy border from the Red
+  Sea even unto the sea of the Philistines, and from the wilderness unto the
+  River; for I will deliver the inhabitants of the land into your hand; and
+  thou shalt drive them out before thee. <span class="VerseNumber"><b>23:32</b></span>
+  Thou shalt make no covenant with them, nor with their gods. <span class="VerseNumber"><b>23:33</b></span> They shall not dwell in thy land--lest
+  they make thee sin against Me, for thou wilt serve their gods--for they will
+  be a snare unto thee. <span class="HebrewParagraph"><span style="font-weight:
+  normal">{P}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-middle">2B</th><th class="col-right">2C</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>24:1</b></span> <span class="vertical1"><b>And unto Moses He said: 'Come up</b></span> unto the LORD,
+  thou, and Aaron, Nadab, and Abihu, and seventy of the elders of Israel; and
+  worship ye afar off; <span class="VerseNumber"><b>24:2</b></span> and Moses
+  alone shall come near unto the LORD; but they shall not come near; neither
+  shall the people go up with him.' <span class="VerseNumber"><b>24:3</b></span>
+  And Moses came and told the people all the words of the LORD, and all the
+  ordinances; and all the people answered with one voice, and said: <span class="vertical1"><b>'All the words which the LORD hath spoken will we do</b></span>.'</p></td><td><p class="torah"><span class="VerseNumber"><b>24:4</b></span> And Moses wrote all
+  the words of the LORD, and rose up early in the morning, and builded an altar
+  under the mount, and twelve pillars, according to the twelve tribes of
+  Israel. <span class="VerseNumber"><b>24:5</b></span> And he sent the young men
+  of the children of Israel, who offered burnt-offerings, and sacrificed
+  peace-offerings of oxen unto the LORD. <span class="VerseNumber"><b>24:6</b></span>
+  And Moses took half of the blood, and put it in basins; and half of the blood
+  he dashed against the altar. <span class="VerseNumber"><b>24:7</b></span> And
+  he took the book of the covenant, and read in the hearing of the people; and
+  they said: 'All that the LORD hath spoken will we do, and obey.' <span class="VerseNumber"><b>24:8</b></span> And Moses took the blood, and sprinkled
+  it on the people, and said: 'Behold the blood of the covenant, which the LORD
+  hath made with you in agreement with all these words.'</p></td><td><p class="torah"><span class="VerseNumber"><b>24:9</b></span> Then went up Moses,
+  and Aaron, Nadab, and Abihu, and seventy of the elders of Israel; <span class="VerseNumber"><b>24:10</b></span> <span class="vertical1"><b>and they saw
+  the God of Israel; and there was under His feet the like of a paved work of
+  sapphire stone, and the like of the very heaven for clearness</b></span>. <span class="VerseNumber"><b>24:11</b></span> And upon the nobles of the children of
+  Israel He laid not His hand; and they beheld God, and did eat and drink. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">3A</th><th class="col-middle">3B</th><th class="col-right">3C</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>24:12</b></span> <span class="vertical1"><b>And the LORD said unto Moses: 'Come up</b></span> to Me
+  into the mount and be there; and I will give thee the tables of stone, and the
+  law and the commandment, which I have written, that thou mayest teach them.' <span class="VerseNumber"><b>24:13</b></span> And Moses rose up, and Joshua his
+  minister; and Moses went up into the mount of God.</p></td><td><p class="torah"><span class="VerseNumber"><b>24:14</b></span> And unto the
+  elders he said: 'Tarry ye here for us, until we come back unto you; and,
+  behold, Aaron and Hur are with you; whosoever hath a cause, let him come near
+  unto them.' <span class="VerseNumber"><b>24:15</b></span> And Moses went up
+  into the mount, and the cloud covered the mount.</p></td><td><p class="torah"><span class="VerseNumber"><b>24:16</b></span> And the glory of
+  the LORD abode upon mount Sinai, and the cloud covered it six days; and the
+  seventh day He called unto Moses out of the midst of the cloud. <span class="VerseNumber"><b>24:17</b></span> <span class="vertical1"><b>And the
+  appearance of the glory of the LORD was like devouring fire on the top of the
+  mount in the eyes of the children of Israel</b></span>. <span class="VerseNumber"><b>24:18</b></span> And Moses entered into the midst of the
+  cloud, and went up into the mount; and Moses was in the mount forty days and
+  forty nights. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 10 (Exodus 23:20-24:18)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-10/exodus-unit-10.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-9/exodus-unit-9.html" rel="prev">← Unit 9</a>
+            <a href="/torah-weave/Exodus/exodus-unit-11/exodus-unit-11.html" rel="next">Unit 11 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

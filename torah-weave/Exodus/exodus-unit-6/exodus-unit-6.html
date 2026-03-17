@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    
+    <title>Exodus Unit 6 (Exodus 15:22-17:16) | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+    <nav class="unit-navigation" aria-label="Top navigation">
+        <div class="nav-breadcrumb">
+            <a href="/">Home</a> → <a href="/torah-weave/">Torah Weave</a> → <a href="/torah-weave/Exodus/exodus-map/exodus-map.html">Exodus</a> → Unit 6
+        </div>
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-5/exodus-unit-5.html" rel="prev">← Unit 5</a>
+            <a href="/torah-weave/Exodus/exodus-unit-7/exodus-unit-7.html" rel="next">Unit 7 →</a>
+        </div>
+    </nav>
+
+    <main>
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <header class="unit-header-section">
+                <h1 itemprop="headline">Exodus Unit 6</h1>
+                <div class="unit-meta" itemprop="about">Exodus 15:22-17:16</div>
+            </header>
+            
+            <aside class="commentary-link-box">
+                <strong>Commentary:</strong> Analysis of this unit's structure and patterns coming soon.
+            </aside>
+            
+            <section class="unit-content">
+<table class="scripture-table"><thead><tr><th class="col-left">1A</th><th class="col-right">1B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>15:22</b></span> <span class="vertical1"><b>And Moses led Israel onward from the Red Sea, and they
+  went out into the wilderness of Shur</b></span>; and they went three days in
+  the wilderness, and found no water. <span class="VerseNumber"><b>15:23</b></span>
+  And when they came to Marah, they could not drink of the waters of Marah, for
+  they were bitter. Therefore the name of it was called Marah. <span class="VerseNumber"><b>15:24</b></span> <span class="vertical1"><b>And the people
+  murmured</b></span> against Moses, saying: 'What shall we drink?' <span class="VerseNumber"><b>15:25</b></span> And he cried unto the LORD; and the
+  LORD showed him a tree, and he cast it into the waters, and the waters were
+  made sweet. There He made for them a statute and an ordinance, and there He
+  proved them;</p></td><td><p class="torah"><span class="VerseNumber"><b>15:26</b></span> and He said: 'If
+  thou wilt diligently hearken to the voice of the LORD thy God, and wilt do
+  that which is right in His eyes, and wilt give ear to His commandments, and
+  keep all His statutes, I will put none of the diseases upon thee, which I
+  have put upon the Egyptians; for I am the LORD that healeth thee.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span> <span class="VerseNumber"><b>15:27</b></span> And they came to Elim, where were
+  twelve springs of water, and three score and ten palm-trees; and they
+  encamped there by the waters.</p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">2A</th><th class="col-right">2B</th></tr></thead><tbody><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>16:1</b></span> <span class="vertical1"><b>And they took
+  their journey from Elim, and all the congregation of the children of Israel
+  came unto the wilderness of Sin</b></span>, which is between Elim and Sinai,
+  on the fifteenth day of the second month after their departing out of the
+  land of Egypt. <span class="VerseNumber"><b>16:2</b></span> <span class="vertical1"><b>And the whole congregation of the children of Israel
+  murmured</b></span> against Moses and against Aaron in the wilderness; <span class="VerseNumber"><b>16:3</b></span> and the children of Israel said unto
+  them: 'Would that we had died by the hand of the LORD in the land of Egypt,
+  when we sat by <span class="internalparallel"><b>the flesh-pots, when we did
+  eat bread to the full</b></span>; for ye have brought us forth into this
+  wilderness, to kill this whole assembly with hunger.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span> <span class="VerseNumber"><b>16:4</b></span> Then said the LORD unto Moses: 'Behold,
+  I will cause to rain bread from heaven for you; and the people shall go out and
+  gather a day's portion every day, that I may prove them, whether they will
+  walk in My law, or not. <span class="VerseNumber"><b>16:5</b></span> And it
+  shall come to pass on the sixth day that they shall prepare that which they
+  bring in, and it shall be twice as much as they gather daily.' </p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>16:16</b></span> <span class="internalparallel"><b>This is
+  the thing which the LORD hath commanded</b></span>: Gather ye of it every man
+  according to his eating; an omer a head, according to the number of your
+  persons, shall ye take it, every man for them that are in his tent.' <span class="VerseNumber"><b>16:17</b></span> And the children of Israel did so, and
+  gathered some more, some less. <span class="VerseNumber"><b>16:18</b></span>
+  And when they did mete it with an omer, he that gathered much had nothing
+  over, and he that gathered little had no lack; they gathered every man
+  according to his eating. <span class="VerseNumber"><b>16:19</b></span> And
+  Moses said unto them: 'Let no man leave of it till the morning.' <span class="VerseNumber"><b>16:20</b></span> Notwithstanding they hearkened not unto
+  Moses; but some of them left of it until the morning, and it bred worms, and
+  rotted; and Moses was wroth with them. <span class="VerseNumber"><b>16:21</b></span>
+  And they gathered it morning by morning, every man according to his eating;
+  and as the sun waxed hot, it melted. <span class="VerseNumber"><b>16:22</b></span>
+  And it came to pass that on the sixth day they gathered twice as much bread,
+  two omers for each one; and all the rulers of the congregation came and told
+  Moses. </p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>16:6</b></span> And Moses and Aaron said unto all the
+  children of Israel: 'At even, then ye shall know that the LORD hath brought
+  you out from the land of Egypt; <span class="VerseNumber"><b>16:7</b></span>
+  and in the morning, then ye shall see the glory of the LORD; for that He hath
+  heard <span class="vertical1"><b>your murmurings</b></span> against the LORD;
+  and what are we, that ye murmur against us?' <span class="VerseNumber"><b>16:8</b></span>
+  And Moses said: 'This shall be, when the LORD shall give you in <span class="internalparallel"><b>the evening flesh to eat, and in the morning bread
+  to the full</b></span>; for that the LORD heareth your murmurings which ye
+  murmur against Him; and what are we? <span class="vertical1"><b>your murmurings</b></span>
+  are not against us, but against the LORD.' <span class="VerseNumber"><b>16:9</b></span>
+  And Moses said unto Aaron: 'Say unto all the congregation of the children of
+  Israel: Come near before the LORD; for He hath heard your murmurings.' <span class="VerseNumber"><b>16:10</b></span> And it came to pass, as Aaron spoke
+  unto the whole congregation of the children of Israel, that they looked
+  toward the wilderness, and, behold, the glory of the LORD appeared in the
+  cloud. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>16:23</b></span> And he said unto them: <span class="internalparallel"><b>'This is that which the LORD hath spoken</b></span>:
+  To-morrow is a solemn rest, a holy sabbath unto the LORD. Bake that which ye
+  will bake, and seethe that which ye will seethe; and all that remaineth over
+  lay up for you to be kept until the morning.' <span class="VerseNumber"><b>16:24</b></span>
+  And they laid it up till the morning, as Moses bade; and it did not rot,
+  neither was there any worm therein. <span class="VerseNumber"><b>16:25</b></span>
+  And Moses said: 'Eat that to-day; for to-day is a sabbath unto the LORD;
+  to-day ye shall not find it in the field. <span class="VerseNumber"><b>16:26</b></span>
+  Six days ye shall gather it; but on the seventh day is the sabbath, in it
+  there shall be none.' <span class="VerseNumber"><b>16:27</b></span> And it came
+  to pass on the seventh day, that there went out some of the people to gather,
+  and they found none. <span class="HebrewParagraph"><span style="font-weight:
+  normal">{S}</span></span> <span class="VerseNumber"><b>16:28</b></span> And the
+  LORD said unto Moses: 'How long refuse ye to keep My commandments and My
+  laws? <span class="VerseNumber"><b>16:29</b></span> See that the LORD hath
+  given you the sabbath; therefore He giveth you on the sixth day the bread of
+  two days; abide ye every man in his place, let no man go out of his place on
+  the seventh day.' <span class="VerseNumber"><b>16:30</b></span> So the people
+  rested on the seventh day.</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>16:11</b></span> And the LORD spoke unto Moses, saying: <span class="VerseNumber"><b>16:12</b></span> 'I have heard <span class="vertical1"><b>the
+  murmurings</b></span> of the children of Israel. Speak unto them, saying: <span class="internalparallel"><b>At dusk ye shall eat flesh, and in the morning ye
+  shall be filled with bread</b></span>; and ye shall know that I am the LORD
+  your God.' <span class="VerseNumber"><b>16:13</b></span> And it came to pass at
+  even, that the quails came up, and covered the camp; and in the morning there
+  was a layer of dew round about the camp. <span class="VerseNumber"><b>16:14</b></span>
+  And when the layer of dew was gone up, behold upon the face of the wilderness
+  a fine, scale-like thing, fine as the hoar-frost on the ground. <span class="VerseNumber"><b>16:15</b></span> <span class="horizontal1"><b>And when the
+  children of Israel saw it, they said one to another: 'What is it</b></span>?'--for
+  they knew not what it was. And Moses said unto them: <span class="horizontal1"><b>'It
+  is the bread which the LORD hath given you to eat</b></span>.</p></td><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>16:31</b></span> <span class="horizontal1"><b>And the
+  house of Israel called the name thereof Manna</b></span>; and it was like
+  coriander seed, white; and the taste of it was like wafers made with honey. <span class="VerseNumber"><b>16:32</b></span> And Moses said: <span class="internalparallel"><b>'This is the thing which the LORD hath commanded</b></span>:
+  Let an omerful of it be kept throughout your generations; that they may see <span class="horizontal1"><b>the bread wherewith I fed you</b></span> in the
+  wilderness, when I brought you forth from the land of Egypt.' <span class="VerseNumber"><b>16:33</b></span> And Moses said unto Aaron: 'Take a jar,
+  and put an omerful of manna therein, and lay it up before the LORD, to be
+  kept throughout your generations.' <span class="VerseNumber"><b>16:34</b></span>
+  As the LORD commanded Moses, so Aaron laid it up before the Testimony, to be
+  kept. <span class="VerseNumber"><b>16:35</b></span> And the children of Israel
+  did eat the manna forty years, until they came to a land inhabited; they did
+  eat the manna, until they came unto the borders of the land of Canaan. <span class="VerseNumber"><b>16:36</b></span> Now an omer is the tenth part of an
+  ephah. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+
+                <table class="scripture-table"><thead><tr><th class="col-left">3A</th><th class="col-right">3B</th></tr></thead><tbody><tr><td><p class="torah"><span class="VerseNumber"><b>17:</b></span><span class="vertical1"><b>1 And all the congregation of the children of Israel
+  journeyed from the wilderness of Sin</b></span>, by their stages, according
+  to the commandment of the LORD, and encamped in Rephidim; and there was no
+  water for the people to drink. <span class="VerseNumber"><b>17:2</b></span>
+  Wherefore the people strove with Moses, and said: 'Give us water that we may
+  drink.' And Moses said unto them: 'Why strive ye with me? wherefore do ye try
+  the LORD?' <span class="VerseNumber"><b>17:3</b></span> And the people thirsted
+  there for water; <span class="vertical1"><b>and the people murmured against
+  Moses</b></span>, and said: 'Wherefore hast thou brought us up out of Egypt,
+  to kill us and our children and our cattle with thirst?' <span class="VerseNumber"><b>17:4</b></span> And Moses cried unto the LORD, saying:
+  'What shall I do unto this people? they are almost ready to stone me.' <span class="VerseNumber"><b>17:5</b></span> And the LORD said unto Moses: <span class="horizontal1"><b>'Pass on before the people, and take with thee of the
+  elders of Israel; and thy rod, wherewith thou smotest the river, take in thy
+  hand, and go</b></span>. <span class="VerseNumber"><b>17:6</b></span> <span class="horizontal1"><b>Behold, I will stand before thee there upon the rock</b></span>
+  in Horeb; and thou shalt smite the rock, and there shall come water out of
+  it, that the people may drink.' <span class="horizontal1"><b>And Moses did so</b></span>
+  in the sight of the elders of Israel. <span class="VerseNumber"><b>17:7</b></span>
+<span class="horizontal1"><b>And the name of the place was called Massah, and
+  Meribah, because of the striving of the children of Israel, and because they
+  tried the LORD</b></span>, saying: 'Is the LORD among us, or not?' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="VerseNumber"><b>17:8</b></span> Then came Amalek,
+  and fought with Israel in Rephidim. <span class="VerseNumber"><b>17:9</b></span>
+  And Moses said unto Joshua: <span class="horizontal1"><b>'Choose us out men,
+  and go out, fight with Amalek; tomorrow I will stand on the top of the hill
+  with the rod of God in my hand</b></span>.' <span class="VerseNumber"><b>17:10</b></span>
+<span class="horizontal1"><b>So Joshua did as Moses had said to him</b></span>,
+  and fought with Amalek; and Moses, Aaron, and Hur went up to the top of the
+  hill. <span class="VerseNumber"><b>17:11</b></span> And it came to pass, when
+  Moses held up his hand, that Israel prevailed; and when he let down his hand,
+  Amalek prevailed. <span class="VerseNumber"><b>17:12</b></span> But Moses'
+  hands were heavy; and they took a stone, and put it under him, <span class="vertical1"><b>and he sat thereon</b></span>; and Aaron and Hur stayed up
+  his hands, the one on the one side, and the other on the other side; and his
+  hands were steady until the going down of the sun. <span class="VerseNumber"><b>17:13</b></span>
+  And Joshua discomfited Amalek and his people with the edge of the sword. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr></tbody></table>
+            </section>
+
+            <aside class="citation-box">
+                <strong>To cite this resource:</strong> Torah Weave Project. "Exodus Unit 6 (Exodus 15:22-17:16)." <em>Torah Weave</em>, 2025. https://chaver.com/torah-weave/Exodus/exodus-unit-6/exodus-unit-6.html
+            </aside>
+        </article>
+    </main>
+
+    <nav class="unit-navigation" aria-label="Bottom navigation">
+        <div class="nav-arrows">
+            <a href="/torah-weave/Exodus/exodus-unit-5/exodus-unit-5.html" rel="prev">← Unit 5</a>
+            <a href="/torah-weave/Exodus/exodus-unit-7/exodus-unit-7.html" rel="next">Unit 7 →</a>
+        </div>
+        <div><a href="/torah-weave/Exodus/exodus-map/exodus-map.html">→ Exodus Map</a></div>
+    </nav>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The Structured Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>
