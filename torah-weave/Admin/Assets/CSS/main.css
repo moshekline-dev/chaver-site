@@ -55,6 +55,12 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* ====================================
    2. TYPOGRAPHY
    ==================================== */
@@ -325,12 +331,12 @@ footer.site-footer {
 }
 
 .commentary-content {
-    max-width: 850px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background: white;
-    font-size: 1.15rem;
 }
+
 .commentary-header {
     text-align: center;
     margin-bottom: 40px;
@@ -345,16 +351,7 @@ footer.site-footer {
 }
 
 .commentary-section {
-    margin: 20px 0;
-}
-
-.commentary-section + .commentary-section {
-    margin-top: 10px;
-}
-
-.unit-content + .commentary-section,
-.commentary-section + .unit-content {
-    margin-top: 10px;
+    margin: 30px 0;
 }
 
 .commentary-section h2 {
@@ -369,6 +366,39 @@ footer.site-footer {
     color: #34495e;
     margin-top: 25px;
     margin-bottom: 15px;
+}
+
+/* Levels Grid (Torah Portal) */
+.levels-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.level-card {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 20px;
+}
+
+.level-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.level-number {
+    display: inline-block;
+    background: #8b7355;
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -766,95 +796,7 @@ span.HebrewParagraph {
     margin: 10px 0;
     padding: 5px 0;
 }
-/* Hebrew Block Quotation */
-.hebrew-block {
-    font-family: 'David Libre', 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif;
-    direction: rtl;
-    unicode-bidi: isolate;
-    text-align: right;
-    margin: 1.5em 0 1.5em 1em;
-    font-size: 1.05em;
-    line-height: 2;
-    color: #333;
-}
 
-/* Translation Block */
-.trans-block {
-    margin: 0.5em 1em 1.5em 1em;
-    font-style: italic;
-    color: #555;
-    line-height: 1.7;
-}/* ---- Overview / Article Elements ---- */
-
-/* Hebrew Block Quotation */
-.hebrew-block {
-    font-family: 'David Libre', 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif;
-    direction: rtl;
-    unicode-bidi: isolate;
-    text-align: right;
-    margin: 1.5em 0 1.5em 1em;
-    font-size: 1.05em;
-    line-height: 2;
-    color: #333;
-}
-
-/* Translation Block */
-.trans-block {
-    margin: 0.5em 1em 1.5em 1em;
-    font-style: italic;
-    color: #555;
-    line-height: 1.7;
-}
-
-/* Simple Structure Tables */
-.structure-table {
-    border-collapse: collapse;
-    margin: 1.5em auto;
-    font-size: 0.92em;
-}
-.structure-table td {
-    padding: 6px 16px;
-    text-align: center;
-    border: 1px solid #ccc;
-}
-.structure-table .label {
-    background: #f5f3ee;
-    font-style: italic;
-    color: #555;
-    font-size: 0.9em;
-}
-
-/* Dimension Color Coding */
-.dim-time { color: #8B4513; font-weight: bold; }
-.dim-person { color: #1a5276; font-weight: bold; }
-.dim-space { color: #196F3D; font-weight: bold; }
-
-/* Centered Display Block */
-.centered-block {
-    margin: 1.8em auto;
-    text-align: center;
-    line-height: 1.7;
-}
-
-/* Parallel Comparison Box */
-.parallel-box {
-    background: #f9f8f5;
-    border: 1px solid #ddd;
-    padding: 1.2em 1.5em;
-    margin: 1.5em 0;
-    font-size: 0.93em;
-    line-height: 1.7;
-}
-.parallel-box .label-pos { color: #2E7D32; font-weight: bold; }
-.parallel-box .label-neg { color: #C62828; font-weight: bold; }
-
-/* Element Tally Counter */
-.tally {
-    text-align: center;
-    font-style: italic;
-    color: #888;
-    margin: 2em 0;
-}
 
 /* ====================================
    8. NAVIGATION ELEMENTS
@@ -2286,13 +2228,13 @@ body.mishnah-portal {
 }
 
 /* Individual Slides - with fade transition */
-.slideshow-wrapper .slide {
+.slide {
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.slideshow-wrapper .slide.active {
+.slide.active {
     display: block;
     opacity: 1;
 }
@@ -2796,8 +2738,8 @@ body.mishnah-portal {
 .article-container {
     max-width: 900px;
     margin: 0 auto;
-    font-size: 1.15rem;
 }
+
 .article-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -3047,8 +2989,8 @@ div.WordSection1 {
     }
     
     /* Hide nav by default, positioned as dropdown */
-    header.site-header nav ul:not(.dropdown),
-    .main-nav > ul:not(.dropdown) {
+    header.site-header nav ul,
+    .main-nav > ul {
         visibility: hidden;
         opacity: 0;
         height: 0;
@@ -3099,54 +3041,6 @@ div.WordSection1 {
     header.site-header nav ul li:last-child a,
     .main-nav > ul li:last-child a {
         border-bottom: none;
-    }
-    
-    /* Mobile dropdown: expand inline instead of flyout */
-    .has-dropdown {
-        position: relative !important;
-    }
-    
-    .has-dropdown details {
-        display: block !important;
-        width: 100% !important;
-    }
-    
-    .has-dropdown summary {
-        display: block !important;
-        padding: 1rem;
-        color: #3d2f1f;
-        font-weight: 500;
-        font-size: 1.05rem;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-    
-    .dropdown {
-        position: static !important;
-        display: none !important;
-        box-shadow: none !important;
-        min-width: 0 !important;
-        padding: 0 !important;
-        background: rgba(0,0,0,0.05) !important;
-        width: 100% !important;
-        top: auto !important;
-        left: auto !important;
-        float: none !important;
-    }
-    
-    /* Show dropdown when details is open */
-    .has-dropdown details[open] .dropdown {
-        display: block !important;
-    }
-    
-    .dropdown li {
-        width: 100%;
-        display: block !important;
-    }
-    
-    .dropdown a {
-        padding-left: 2rem;
-        font-size: 0.95rem;
-        white-space: normal !important;
     }
 }
 
@@ -3454,6 +3348,7 @@ div.WordSection1 {
         text-align: center;
         border: 2px solid #ffc107;
     }
+    
     .demonstration-section .mobile-notice strong {
         display: block;
         margin-bottom: 0.5rem;
