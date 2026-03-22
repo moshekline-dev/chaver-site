@@ -1,0 +1,3773 @@
+﻿/* ============================================
+   TORAH COMMENTARY PROJECT - MAIN.CSS
+   Consolidated & Cleaned Version
+   Last Updated: December 9, 2025 (Chrome fix, transparent mobile header)
+   ============================================ */
+
+/* ====================================
+   TABLE OF CONTENTS
+   ====================================
+   1. RESET & BASE
+   2. TYPOGRAPHY
+   3. DWT STRUCTURE (Header, Footer, Navigation)
+   4. LAYOUT & CONTENT STRUCTURE
+   5. TORAH UNIT TABLES
+   6. PATTERN HIGHLIGHTING
+   7. COMMENTARY ELEMENTS
+   8. NAVIGATION ELEMENTS
+   9. BOOK-SPECIFIC COLORS
+   10. TORAH MAP STYLES
+   11. MISHNAH PORTAL STYLES
+   12. HOMEPAGE STYLES
+   13. SLIDESHOW COMPONENT
+   14. CHAPTER GRID STYLES
+   15. MONOGRAPH STYLES
+   16. SVG & BOOK MAPS
+   17. RESPONSIVE DESIGN
+   18. PRINT STYLES
+   ==================================== */
+
+
+/* ====================================
+   1. RESET & BASE
+   ==================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    line-height: 1.8;
+    color: #2c3e50;
+    background-color: #fdfcf8;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    overflow-x: hidden;
+}
+
+/* ====================================
+   2. TYPOGRAPHY
+   ==================================== */
+
+h1 {
+    font-size: 2.2em;
+    color: #1a1a1a;
+    border-bottom: 2px solid #8b7355;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #34495e;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.1em;
+    color: #546e7a;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+p {
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+a {
+    color: #5d87a1;
+    text-decoration: none;
+    border-bottom: 1px dotted #5d87a1;
+}
+
+a:hover {
+    color: #3d5770;
+    border-bottom: 1px solid #3d5770;
+}
+
+blockquote {
+    border-left: 3px solid #bdc3c7;
+    padding-left: 20px;
+    margin: 25px 0;
+    color: #555;
+    font-style: italic;
+}
+
+ul, ol {
+    margin: 18px 0;
+    padding-left: 40px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+/* Word-generated class normalization */
+p.MsoNormal, li.MsoNormal, div.MsoNormal,
+p.Torah, li.Torah, div.Torah {
+    margin-bottom: 18px;
+    text-align: justify;
+    font-size: 1em;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    line-height: 1.8;
+}
+
+p.UnitHeader, li.UnitHeader, div.UnitHeader {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #8b7355;
+}
+
+p.CellLabel, li.CellLabel, div.CellLabel {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+    background: #f0f0f0;
+    padding: 5px;
+    margin: 0;
+}
+
+.MsoChpDefault {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+}
+
+.MsoPapDefault {
+    margin-bottom: 8pt;
+    line-height: 115%;
+}
+
+
+/* ====================================
+   3. DWT STRUCTURE (Header, Footer, Navigation)
+   ==================================== */
+
+/* Site Header */
+header.site-header {
+    background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    max-height: 80px;
+    overflow: visible;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 20px;
+    position: relative;
+    min-height: 44px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    width: 28px;
+    height: 24px;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+    overflow: hidden;
+}
+
+.menu-toggle::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #3d2f1f;
+    border-radius: 2px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    box-shadow: 0 8px 0 #3d2f1f, 0 16px 0 #3d2f1f;
+}
+
+header.site-header nav ul,
+.main-nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+header.site-header nav a,
+.main-nav a {
+    color: #3d2f1f;
+    font-weight: 500;
+    font-size: 1.05rem;
+    border: none;
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+header.site-header nav a:hover,
+.main-nav a:hover {
+    color: #8b4513;
+    background-color: rgba(61, 47, 31, 0.1);
+}
+
+/* Site Footer */
+footer.site-footer {
+    background: linear-gradient(135deg, #b39f7d 0%, #9d8968 100%);
+    color: #2c1810;
+    margin-top: 80px;
+    padding: 40px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h4 {
+    color: #2c1810;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #4a3220;
+    text-decoration: none;
+    border-bottom: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #8b4513;
+}
+
+.footer-section p {
+    color: #4a3220;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(61, 47, 31, 0.3);
+    color: #4a3220;
+    font-size: 0.9rem;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+/* ====================================
+   4. LAYOUT & CONTENT STRUCTURE
+   ==================================== */
+
+.WordSection1 {
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.commentary-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    font-size: 1.15rem;
+}
+.commentary-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #7ab0f7;
+}
+
+.commentary-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.commentary-section {
+    margin: 20px 0;
+}
+
+.commentary-section + .commentary-section {
+    margin-top: 10px;
+}
+
+.unit-content + .commentary-section,
+.commentary-section + .unit-content {
+    margin-top: 10px;
+}
+
+.commentary-section h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.commentary-section h3 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+
+/* ====================================
+   5. TORAH UNIT TABLES
+   ==================================== */
+
+table.MsoNormalTable,
+.torah-table,
+.scripture-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px 0;
+    table-layout: fixed;
+}
+
+table.MsoNormalTable td,
+.torah-table td,
+.scripture-table tbody td {
+    vertical-align: top;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    width: 50%;
+}
+
+/* Three-column layout */
+.torah-table.three-col td,
+.scripture-table.three-col tbody td {
+    width: 33.33%;
+}
+
+/* Single-column layout */
+.torah-table.single-col td,
+.scripture-table.single-col tbody td {
+    width: 100%;
+}
+
+/* Scripture Table - Enhanced version */
+.scripture-table {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    border: 1px solid #d4cfc7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: white;
+}
+
+.scripture-table thead th {
+    color: #fdfcf8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid #5d4e37;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    width: 50%;
+}
+
+/* Column Header Colors */
+.scripture-table thead th.col-left,
+.scripture-table thead th.col-a {
+    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    color: #fdfcf8;
+}
+
+.scripture-table thead th.col-middle,
+.scripture-table thead th.col-b {
+    background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+    color: #3d2f1f;
+}
+
+.scripture-table thead th.col-right,
+.scripture-table thead th.col-c {
+    background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+    color: #5d4e37;
+}
+
+.scripture-table thead th.col-full,
+.scripture-table thead th.col-envelope {
+    background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+    color: #3d2f1f;
+}
+
+.scripture-table tbody td {
+    padding: 1rem 2rem;
+    border-right: 1px solid #e8e4df;
+    border-bottom: 1px solid #e8e4df;
+    background: #fdfcf8;
+}
+
+.scripture-table tbody td:last-child {
+    border-right: none;
+}
+
+.scripture-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.scripture-table .torah,
+.torah {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
+    color: #2c3e50;
+}
+
+
+/* ====================================
+   6. PATTERN HIGHLIGHTING
+   Uses COLOR for text, NOT background-color
+   ==================================== */
+
+.horizontal1, .horizontal-parallel {
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.horizontal2 {
+    color: #008080;
+    font-weight: 500;
+}
+
+.horizontal3 {
+    color: #800000;
+    font-weight: 500;
+}
+
+.vertical1, .vertical-parallel {
+    color: #d97706;
+    font-weight: 500;
+}
+
+.vertical2 {
+    color: #FFD700;
+    font-weight: 500;
+}
+
+.vertical3 {
+    color: #B8860B;
+    font-weight: 500;
+}
+
+.closure {
+    color: #db2777;
+    font-weight: 500;
+}
+
+.closure-secondary {
+    color: #FF69B4;
+    font-weight: 500;
+}
+
+.ciasm1 {
+    color: #7c3aed;
+    font-weight: 500;
+}
+
+.ciasm2 {
+    color: #c026d3;
+    font-weight: 500;
+}
+
+.internalparallel, .internal-parallel {
+    color: #16a34a;
+    font-weight: 500;
+}
+
+.theme-covenant {
+    color: #FFD700;
+    font-weight: 500;
+}
+
+.theme-judgment {
+    color: #FF4500;
+    font-weight: 500;
+}
+
+.theme-redemption {
+    color: #9370DB;
+    font-weight: 500;
+}
+
+/* Ensure colored spans inherit typography */
+span[class*="horizontal"],
+span[class*="vertical"],
+span[class*="closure"],
+span[class*="ciasm"],
+span[class*="internal"],
+span[class*="theme"] {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+}
+
+span[class*="horizontal"] strong,
+span[class*="vertical"] strong,
+span[class*="closure"] strong,
+span[class*="ciasm"] strong,
+span[class*="internal"] strong {
+    font-weight: bold;
+}
+
+/* ====================================
+   7. COMMENTARY ELEMENTS
+   ==================================== */
+
+.verse {
+    font-style: italic;
+    color: #6b705c;
+}
+
+.emphasis {
+    font-weight: bold;
+}
+
+span.VerseNumber,
+.verse-number, 
+.verse-num {
+    font-weight: bold;
+    color: #999;
+    font-family: 'Courier New', monospace;
+    margin-right: 5px;
+}
+
+span.CellSubdivision {
+    font-weight: bold;
+    color: #666;
+    margin-right: 5px;
+}
+
+span.HebrewParagraph {
+    font-style: italic;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.section-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Hebrew text (RTL) */
+[lang=he], [dir=rtl] {
+    direction: rtl;
+    text-align: right;
+    font-family: 'David Libre', 'Frank Ruehl CLM', 'SBL Hebrew', serif;
+}
+
+/* Highlighted Boxes */
+.structural-note,
+.observation {
+    background-color: #f0f4f8;
+    border-left: 4px solid #5d87a1;
+    padding: 18px;
+    margin: 25px 0;
+    font-size: 0.95em;
+}
+
+.pattern {
+    background-color: #fef9e7;
+    border-left: 4px solid #f39c12;
+    padding: 10px 15px;
+    margin: 15px 0;
+}
+
+.structure-box {
+    border: 2px solid #2c3e50;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #ecf0f1;
+}
+
+.speculative {
+    background-color: #fff3cd;
+    border-left: 4px solid #856404;
+    padding: 10px 15px;
+    margin: 15px 0;
+}
+
+.section-marker {
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+    padding: 15px;
+    margin: 30px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.reading-guide {
+    background-color: #e6ffe6;
+    border: 1px solid #80d0a0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.reading-guide h3 {
+    color: #5da77a;
+    margin-bottom: 10px;
+}
+
+.diagram,
+.matrix-display {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 25px 0;
+    border: 1px solid #dee2e6;
+    overflow-x: auto;
+    font-size: 0.9em;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.pattern-tag {
+    display: inline-block;
+    background-color: #e8f0fe;
+    color: #5090f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Matrix Tables */
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: #f8f9fa;
+    font-size: 0.95em;
+}
+
+.matrix-table th, 
+.matrix-table td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.matrix-table thead th {
+    background-color: #e9ecef;
+    font-weight: 600;
+}
+
+.matrix-table .row-header {
+    font-weight: 600;
+    background-color: #f0f4f8;
+}
+
+.matrix-table .covenant-cell {
+    background-color: #fff3cd;
+}
+
+.matrix-table .family-cell {
+    background-color: #d1ecf1;
+}
+
+.matrix-table .cell-label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Color Legend */
+.color-legend {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.color-legend h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.color-legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.color-legend li {
+    margin: 10px 0;
+    padding: 5px 0;
+}
+/* Hebrew Block Quotation */
+.hebrew-block {
+    font-family: 'David Libre', 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif;
+    direction: rtl;
+    unicode-bidi: isolate;
+    text-align: right;
+    margin: 1.5em 0 1.5em 1em;
+    font-size: 1.05em;
+    line-height: 2;
+    color: #333;
+}
+
+/* Translation Block */
+.trans-block {
+    margin: 0.5em 1em 1.5em 1em;
+    font-style: italic;
+    color: #555;
+    line-height: 1.7;
+}/* ---- Overview / Article Elements ---- */
+
+/* Hebrew Block Quotation */
+.hebrew-block {
+    font-family: 'David Libre', 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif;
+    direction: rtl;
+    unicode-bidi: isolate;
+    text-align: right;
+    margin: 1.5em 0 1.5em 1em;
+    font-size: 1.05em;
+    line-height: 2;
+    color: #333;
+}
+
+/* Translation Block */
+.trans-block {
+    margin: 0.5em 1em 1.5em 1em;
+    font-style: italic;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Simple Structure Tables */
+.structure-table {
+    border-collapse: collapse;
+    margin: 1.5em auto;
+    font-size: 0.92em;
+}
+.structure-table td {
+    padding: 6px 16px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.structure-table .label {
+    background: #f5f3ee;
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Dimension Color Coding */
+.dim-time { color: #8B4513; font-weight: bold; }
+.dim-person { color: #1a5276; font-weight: bold; }
+.dim-space { color: #196F3D; font-weight: bold; }
+
+/* Centered Display Block */
+.centered-block {
+    margin: 1.8em auto;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* Parallel Comparison Box */
+.parallel-box {
+    background: #f9f8f5;
+    border: 1px solid #ddd;
+    padding: 1.2em 1.5em;
+    margin: 1.5em 0;
+    font-size: 0.93em;
+    line-height: 1.7;
+}
+.parallel-box .label-pos { color: #2E7D32; font-weight: bold; }
+.parallel-box .label-neg { color: #C62828; font-weight: bold; }
+
+/* Element Tally Counter */
+.tally {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    margin: 2em 0;
+}
+
+/* ====================================
+   8. NAVIGATION ELEMENTS
+   ==================================== */
+
+.breadcrumb {
+    margin: 20px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Unit Navigation */
+.unit-navigation {
+    background: linear-gradient(to bottom, #f8f6f2 0%, #f0ebe3 100%);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 6px;
+    border: 1px solid #d4cfc7;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.unit-navigation a {
+    color: #5d4e37;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    border-bottom: none;
+}
+
+.unit-navigation a:hover {
+    background: rgba(139, 115, 85, 0.12);
+    color: #3d2f1f;
+    transform: translateY(-1px);
+}
+
+.nav-breadcrumb {
+    font-size: 0.95rem;
+    color: #6b5d4f;
+    font-weight: 500;
+}
+
+.nav-breadcrumb a {
+    color: #8b7355;
+    border-bottom: 1px dotted #8b7355;
+    padding: 0;
+}
+
+.nav-breadcrumb a:hover {
+    color: #5d4e37;
+    border-bottom: 1px solid #5d4e37;
+    background: none;
+}
+
+.nav-arrows {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-arrows a {
+    background: white;
+    border: 1px solid #d4cfc7;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.nav-disabled {
+    color: #999;
+    font-style: italic;
+}
+
+.nav-arrows a:hover {
+    background: #8b7355;
+    color: white;
+    border-color: #8b7355;
+    box-shadow: 0 2px 6px rgba(139, 115, 85, 0.25);
+}
+
+/* Unit Header Section */
+.unit-header-section {
+    text-align: center;
+    margin: 0 0 3rem 0;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 50%, #5d4e37 100%);
+    color: #fdfcf8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.unit-header-section h1 {
+    margin: 0 0 0.75rem 0;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #fdfcf8;
+    letter-spacing: -0.01em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 0;
+}
+
+.unit-meta {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #f5f3ef;
+}
+
+/* Commentary Link Callout */
+.commentary-link {
+    background: linear-gradient(to right, #fef5e7 0%, #fdebd0 100%);
+    border-left: 4px solid #d4a574;
+    padding: 1.25rem 1.5rem;
+    margin: 2.5rem 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(212, 165, 116, 0.15);
+    font-size: 1.05rem;
+}
+
+.commentary-link a {
+    color: #8b6914;
+    font-weight: 600;
+    border-bottom: 2px solid #d4a574;
+    transition: all 0.2s ease;
+}
+
+.commentary-link a:hover {
+    color: #6b5411;
+    border-bottom-color: #8b6914;
+    background: rgba(212, 165, 116, 0.1);
+}
+
+/* Citation Box */
+.citation-box {
+    background: linear-gradient(to right, #e8f4fd 0%, #d6ebfa 100%);
+    border-left: 4px solid #5d87a1;
+    padding: 1.25rem 1.5rem;
+    margin: 2.5rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(93, 135, 161, 0.12);
+}
+
+.citation-box strong {
+    color: #3d5770;
+    font-weight: 600;
+}
+
+/* Series Navigation */
+.series-navigation {
+    text-align: center;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.series-navigation h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.series-navigation span {
+    color: #6c757d;
+    font-weight: bold;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.series-navigation a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin: 0 10px;
+    display: inline-block;
+    transition: color 0.2s ease;
+    border-bottom: none;
+}
+
+.series-navigation a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* TOC Fix - override nav ul flex for .toc */
+.toc ul {
+    display: block !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+}
+
+.toc ul ul {
+    padding-left: 20px;
+    margin-top: 6px;
+}
+
+.toc > ul > li {
+    padding: 8px 0;
+}
+
+
+/* ====================================
+   9. BOOK-SPECIFIC COLORS
+   ==================================== */
+
+/* Genesis - Blue */
+.genesis-section h1,
+.genesis-section h2 {
+    color: #7ab0f7;
+}
+
+.genesis-section .commentary-header {
+    border-bottom-color: #7ab0f7;
+}
+
+.genesis-map .matrix-table thead th,
+.genesis-map .row-label {
+    background: linear-gradient(135deg, #7ab0f7 0%, #5a90d7 100%) !important;
+    border-color: #5a90d7 !important;
+}
+
+/* Exodus - Orange */
+.exodus-section h1,
+.exodus-section h2 {
+    color: #f0b070;
+}
+
+.exodus-section .commentary-header {
+    border-bottom-color: #f0b070;
+}
+
+.exodus-map .matrix-table thead th,
+.exodus-map .row-label {
+    background: linear-gradient(135deg, #f0b070 0%, #d09050 100%) !important;
+    border-color: #d09050 !important;
+}
+
+/* Leviticus - Green */
+.leviticus-section h1,
+.leviticus-section h2 {
+    color: #80d0a0;
+}
+
+.leviticus-section .commentary-header {
+    border-bottom-color: #80d0a0;
+}
+
+.leviticus-map .matrix-table thead th,
+.leviticus-map .row-label {
+    background: linear-gradient(135deg, #80d0a0 0%, #60b080 100%) !important;
+    border-color: #60b080 !important;
+}
+
+/* Numbers - Orange */
+.numbers-section h1,
+.numbers-section h2 {
+    color: #f0b070;
+}
+
+.numbers-section .commentary-header {
+    border-bottom-color: #f0b070;
+}
+
+.numbers-map .matrix-table thead th,
+.numbers-map .row-label {
+    background: linear-gradient(135deg, #f0b070 0%, #d09050 100%) !important;
+    border-color: #d09050 !important;
+}
+
+/* Deuteronomy - Blue */
+.deuteronomy-section h1,
+.deuteronomy-section h2 {
+    color: #7ab0f7;
+}
+
+.deuteronomy-section .commentary-header {
+    border-bottom-color: #7ab0f7;
+}
+
+.deuteronomy-map .matrix-table thead th,
+.deuteronomy-map .row-label {
+    background: linear-gradient(135deg, #7ab0f7 0%, #5a90d7 100%) !important;
+    border-color: #5a90d7 !important;
+}
+
+
+/* ====================================
+   10. TORAH MAP STYLES
+   ==================================== */
+
+.torah-map-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.torah-map-title {
+    font-size: 2.5em;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #8b7355;
+    padding-bottom: 15px;
+}
+
+.torah-map-intro {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mobile-notice {
+    display: none;
+    background-color: #e8f0fe;
+    color: #1967d2;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+.matrix-wrapper {
+    overflow-x: auto;
+    margin: 30px 0;
+    border: 1px solid #d4cfc7;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Map Matrix Table - NO min-width to prevent Chrome zoom-out in portrait mode */
+.torah-map-container .matrix-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    background-color: white;
+    font-size: 0.9em;
+    /* REMOVED: min-width: 1200px - was causing Chrome portrait microtext */
+}
+
+.torah-map-container .matrix-table thead th {
+    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    color: #fdfcf8;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: 600;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    vertical-align: top;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.torah-map-container .matrix-table thead th:first-child {
+    background: linear-gradient(135deg, #5d4e37 0%, #4a3f2d 100%);
+    width: 80px;
+}
+
+.torah-map-container .matrix-table thead th:last-child {
+    border-right: none;
+}
+
+.column-letter {
+    display: block;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.theme-label {
+    display: block;
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.9;
+    line-height: 1.3;
+}
+
+/* Row Labels */
+.row-label {
+    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    color: #fdfcf8;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: 600;
+    vertical-align: middle;
+    width: 80px;
+}
+
+.row-number {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.row-desc {
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.empty-cell {
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+}
+
+/* Column Header Variations */
+.col-cosmic {
+    background: linear-gradient(135deg, #7ab0f7 0%, #5a90d7 100%) !important;
+}
+
+.col-transition {
+    background: linear-gradient(135deg, #f0a0a0 0%, #d08080 100%) !important;
+}
+
+.col-covenants {
+    background: linear-gradient(135deg, #80d0a0 0%, #60b080 100%) !important;
+}
+
+.col-family {
+    background: linear-gradient(135deg, #b0a0d0 0%, #9080b0 100%) !important;
+}
+
+.col-political {
+    background: linear-gradient(135deg, #d0b080 0%, #b09060 100%) !important;
+}
+
+/* Unit Cards */
+.unit {
+    display: block;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: all 0.2s ease;
+    min-height: 140px;
+    background: white;
+}
+
+.unit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #8b7355;
+}
+
+.unit-title {
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+}
+
+.unit-reference {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.unit-description {
+    font-size: 0.85em;
+    line-height: 1.4;
+    color: #444;
+}
+
+/* Unit Background Colors */
+.color-d4f2ff {
+    background-color: #d4f2ff !important;
+}
+
+.color-e6ffee {
+    background-color: #e6ffee !important;
+}
+
+.color-d4d4ff {
+    background-color: #d4d4ff !important;
+}
+
+.color-ffe6e6 {
+    background-color: #ffe6e6 !important;
+    border-color: #cc0066 !important;
+    border-width: 3px !important;
+}
+
+/* Torah Book Description */
+.torah-book-description {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fdfcf8;
+    border-radius: 8px;
+}
+
+.torah-book-description .main-heading {
+    font-size: 1.8em;
+    color: #1a1a1a;
+    border-bottom: 2px solid #8b7355;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.torah-book-description h3 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.torah-book-description ul {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+.torah-book-description li {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, #6b5d4f 0%, #5d4e37 100%);
+    transform: translateY(-1px);
+}
+
+
+/* ====================================
+   11. MISHNAH PORTAL STYLES
+   ==================================== */
+
+/* RTL Hebrew Portal Override */
+body.mishnah-portal {
+    direction: rtl !important;
+    font-family: 'David', 'Frank Ruehl CLM', Georgia, serif;
+}
+
+/* Portal Container */
+.mishnah-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    direction: rtl !important;
+    text-align: right;
+}
+
+/* Portal Header */
+.mishnah-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mishnah-header h1 {
+    font-size: 3em;
+    color: #8b7355;
+    border-bottom: none;
+    margin-bottom: 5px;
+}
+
+.mishnah-header .subtitle {
+    font-size: 1.3em;
+    color: #666;
+    font-family: Georgia, serif;
+}
+
+/* Resource Cards Section */
+.resources-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.resource-card {
+    background: #fdfcf8;
+    border: 1px solid #d4cfc7;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 300px;
+    max-width: 450px;
+    text-align: right;
+}
+
+.resource-card h3 {
+    margin-top: 0;
+    color: #8b7355;
+    border-bottom: 2px solid #8b7355;
+    padding-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-list li {
+    margin-bottom: 12px;
+}
+
+.resource-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    border-bottom: none;
+}
+
+.resource-list a:hover {
+    background-color: #fff;
+    color: #8b7355;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.resource-icon {
+    margin-left: 8px;
+    color: #8b7355;
+}
+
+/* Seder Sections */
+.seder-block {
+    margin-bottom: 50px;
+    border: 1px solid #d4cfc7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.seder-header {
+    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-bottom: 3px solid #5d4e37;
+    position: relative;
+    text-align: right;
+}
+
+.seder-header .english-seder {
+    font-size: 0.5em;
+    font-family: Georgia, serif;
+    opacity: 0.8;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    font-weight: normal;
+}
+
+/* Tractate Grid */
+.tractate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 25px;
+    background-color: #fdfcf8;
+}
+
+.tractate-card {
+    background: white;
+    border: 1px solid #d4cfc7;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.tractate-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-color: #8b7355;
+}
+
+.tractate-title {
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.tractate-eng {
+    display: block;
+    font-size: 0.9em;
+    color: #888;
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Chapter Buttons */
+.chapter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.ch-btn {
+    display: inline-block;
+    width: 35px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.ch-btn:hover {
+    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    color: white;
+    border-color: #8b7355;
+}
+
+/* Portal Divider */
+.portal-divider {
+    border: 0;
+    border-top: 1px solid #d4cfc7;
+    margin-bottom: 50px;
+}
+
+/* Portal Footer */
+.portal-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-family: Georgia, serif;
+    color: #777;
+}
+
+.portal-footer a {
+    color: #8b7355;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/* ====================================
+   12. HOMEPAGE STYLES
+   ==================================== */
+
+/* Hero Section */
+.hero {
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    background: transparent;
+}
+
+.hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-title {
+    margin-bottom: 1.5rem;
+}
+
+.site-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    border: none;
+    padding: 0;
+}
+
+.site-title .subtitle {
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #546e7a;
+    margin-bottom: 0.75rem;
+}
+
+.site-title .credentials {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.hero-cta {
+    margin: 1.5rem auto;
+    max-width: 700px;
+}
+
+.hero-cta p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.hero-cta strong {
+    color: #8b7355;
+    font-size: 1.15rem;
+}
+
+.featured-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.featured-links a {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+    background: #2c3e50;
+    color: white !important;
+    font-weight: 500;
+    border: none;
+}
+
+.featured-links a:hover {
+    transform: translateY(-2px);
+    background: #1a252f;
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.3);
+}
+
+/* Video Section */
+.video-section {
+    background: #fff;
+    padding: 1rem 0 3rem 0;
+    text-align: center;
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 4px solid #fff;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-context {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-context h3 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.video-context p {
+    color: #546e7a;
+    font-size: 1.1rem;
+}
+
+/* Demonstration Section (Animation) */
+.demonstration-section {
+    background: #ece9e3;
+    padding: 3rem 0 4rem 0;
+    margin: 0;
+}
+
+.demo-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.demo-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #dcd9d0;
+}
+
+.demo-header h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1a252f;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.demo-header p {
+    font-size: 1em;
+    color: #546e7a;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Control Panel */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 60px;
+    z-index: 999;
+    background: #ece9e3;
+    padding: 1rem 0;
+}
+
+.transform-button {
+    padding: 0.875rem 2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.transform-button:hover {
+    background: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(44, 62, 80, 0.4);
+}
+
+.transform-button:active {
+    transform: translateY(0);
+}
+
+/* Main Card View */
+.view-container {
+    position: relative;
+    min-height: 800px;
+    background: #f9f7f2;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.view-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(139, 115, 85, 0.1);
+    color: #8b7355;
+    border: 1px solid #8b7355;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Linear View */
+.linear-view {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.linear-view p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Table Scroll Wrapper */
+.table-scroll-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Homepage Scripture Table Overrides - NO min-width to prevent Chrome zoom-out */
+.demonstration-section .scripture-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    max-width: none;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    /* REMOVED: min-width: 900px - was causing Chrome portrait microtext */
+}
+
+.demonstration-section .scripture-table th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1.5rem;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-bottom: 2px solid #dcd9d0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    color: #2c3e50;
+}
+
+.demonstration-section .col-header-a { 
+    background: #f4f8fb; 
+}
+
+.demonstration-section .col-header-b { 
+    background: #fffaf0; 
+}
+
+.demonstration-section .col-header-struct { 
+    background: #f5f5f5; 
+    width: 200px; 
+    border-right: 1px solid #eee; 
+}
+
+.demonstration-section .header-desc {
+    display: block;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #546e7a;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+.demonstration-section .scripture-table td {
+    padding: 1.5rem;
+    vertical-align: top;
+    border-bottom: 1px solid #eee;
+}
+
+.demonstration-section .scripture-table td:nth-child(2) { 
+    background: rgba(244, 248, 251, 0.3); 
+    border-right: 1px solid #eee; 
+}
+
+.demonstration-section .scripture-table td:nth-child(3) { 
+    background: rgba(255, 250, 240, 0.3); 
+}
+
+/* Label Cell Styling */
+.label-cell {
+    background: #fff;
+    border-right: 3px solid #c4a57b !important;
+}
+
+.row-tag {
+    display: inline-block;
+    background: #2c3e50;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.chiasm-box {
+    background: #f0ebe3;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+/* Highlight Colors for Animation */
+.hl-blue { 
+    background-color: #e3f2fd; 
+    box-decoration-break: clone; 
+    -webkit-box-decoration-break: clone; 
+    padding: 1px 3px; 
+    border-radius: 2px; 
+}
+
+.hl-gold { 
+    background-color: #fff8e1; 
+    box-decoration-break: clone; 
+    -webkit-box-decoration-break: clone; 
+    padding: 1px 3px; 
+    border-radius: 2px; 
+}
+
+.hl-red { 
+    background-color: #fce4ec; 
+    box-decoration-break: clone; 
+    -webkit-box-decoration-break: clone; 
+    padding: 1px 3px; 
+    border-radius: 2px; 
+}
+
+.hl-purple {
+    background-color: #e8d4f8;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 1px 3px;
+    border-radius: 2px;
+}
+
+.hl-chiasm-blue {
+    background-color: #d4e8f8;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 1px 3px;
+    border-radius: 2px;
+}
+
+.hl-tan {
+    background-color: #f8e8d4;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 1px 3px;
+    border-radius: 2px;
+}
+
+/* Insights Box */
+.insights-box {
+    margin-top: 3rem;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.insights-box h4 {
+    margin-top: 0;
+    color: #c4a57b;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.insights-box ul {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.insights-box li {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #bdc3c7;
+    line-height: 1.6;
+}
+
+.insights-box strong {
+    color: white;
+}
+
+.insights-box em {
+    color: #c4a57b;
+    font-style: italic;
+}
+
+/* Main Content Section */
+.main-content {
+    padding: 3rem 0;
+    min-height: 400px;
+    background: transparent;
+}
+
+.main-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-content #content {
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.main-content #content h1 {
+    font-size: 2.2em;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+}
+
+.main-content #content h2 {
+    font-size: 1.6em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.main-content #content h3 {
+    font-size: 1.3em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.main-content #content p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+.main-content #content ul {
+    margin: 18px 0;
+    padding-left: 40px;
+}
+
+.main-content #content li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* Book Highlight Box */
+.book-highlight {
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 3px solid #2c3e50;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.book-highlight h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.book-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.book-links a {
+    padding: 0.75rem 1.5rem;
+    background: #2c3e50;
+    color: white !important;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+    border: none;
+}
+
+.book-links a:hover {
+    background: #1a252f;
+}
+
+/* Testimonial */
+.testimonial {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #f8f9fa;
+    border-left: 4px solid #2c3e50;
+    border-radius: 4px;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    font-style: normal;
+    color: #2c3e50;
+}
+
+/* Stats Highlight */
+.stats-highlight {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-left: 4px solid #2c3e50;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.stats-highlight strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 0.5rem;
+}
+
+/* Publication Note */
+.publication-note {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    background: #e8f4f8;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+}
+
+.publication-note strong {
+    color: #2c3e50;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+.faq-question {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.faq-answer {
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* ====================================
+   13. SLIDESHOW COMPONENT
+   ==================================== */
+
+/* Main Container */
+.slideshow-section {
+    margin: 40px -20px;
+    padding: 3rem 0;
+    background: #ece9e3;
+    border-radius: 0;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Intro Text */
+.slideshow-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 2rem auto;
+}
+
+.slideshow-intro h2 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0;
+}
+
+.slideshow-intro p {
+    font-size: 1.1rem;
+    color: #3d5161;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Slide Wrapper */
+.slideshow-wrapper {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Individual Slides - with fade transition */
+.slideshow-wrapper .slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slideshow-wrapper .slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Bar */
+.slideshow-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #8b7355, #6b5d4f);
+}
+
+/* Navigation Buttons */
+.slide-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fdfcf8;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-family: Georgia, serif;
+    transition: all 0.2s ease;
+}
+
+.slide-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.slide-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Dot Navigation */
+.slide-dots {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.slide-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.slide-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.slide-dot.active {
+    background: #fdfcf8;
+    transform: scale(1.2);
+}
+
+/* Slide Counter */
+.slide-counter {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.slide-counter a {
+    color: #8b7355;
+}
+
+
+/* ====================================
+   14. CHAPTER GRID STYLES
+   ==================================== */
+
+/* Chapter Grid Container */
+.chapter-grid-container {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #fdfcf8;
+    border: 1px solid #d4cfc7;
+    border-radius: 8px;
+}
+
+.grid-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #8b7355;
+}
+
+/* 50-Chapter Grid - 10 columns × 5 rows */
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 4px;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+/* Individual Chapter Box */
+.chapter-box {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease;
+}
+
+.chapter-box span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chapter-box:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+/* Chapter States */
+.ch-identified {
+    background: #4CAF50;
+    color: white;
+    border-color: #2e7d32;
+}
+
+.ch-unknown {
+    background: #FFB74D;
+    color: #5d4037;
+    border-color: #e65100;
+}
+
+/* Markers - Toledot (↓) */
+.ch-marker::before {
+    content: "↓";
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    font-size: 0.6rem;
+    color: #1a237e;
+    font-weight: bold;
+}
+
+/* Markers - Death (☠) */
+.ch-death::after {
+    content: "☠";
+    position: absolute;
+    bottom: 2px;
+    left: 4px;
+    font-size: 0.5rem;
+    color: #c62828;
+}
+
+/* Grid Legend */
+.grid-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.legend-box {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+/* Stage Section */
+.stage-section {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: white;
+    border-left: 4px solid #8b7355;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.stage-section h3 {
+    color: #8b7355;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.stage-section h4 {
+    color: #2c3e50;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Stage Summary Box */
+.stage-summary {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 6px;
+    border-left: 4px solid #4CAF50;
+}
+
+.stage-summary strong {
+    color: #2e7d32;
+}
+
+.next-question {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-style: italic;
+    color: #1565c0;
+}
+
+/* Verification Section */
+.verification-section {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+}
+
+.verification-section h3 {
+    color: #e65100;
+    margin-top: 0;
+}
+
+.verification-summary {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: white;
+    border-radius: 6px;
+    border: 2px solid #4CAF50;
+}
+
+/* Emphasis Box */
+.emphasis-box {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    background: #e3f2fd;
+    border-left: 4px solid #1976d2;
+    border-radius: 0 6px 6px 0;
+}
+
+.emphasis-box p {
+    margin-bottom: 0;
+}
+
+/* Envelope Table */
+.envelope-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.envelope-table th,
+.envelope-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border: 1px solid #d4cfc7;
+}
+
+.envelope-table thead th {
+    background: #2c3e50;
+    color: white;
+    font-weight: 600;
+}
+
+.envelope-table tbody tr.envelope-outer {
+    background: #e3f2fd;
+}
+
+.envelope-table tbody tr.envelope-inner {
+    background: #fce4ec;
+}
+
+/* Final Table */
+.final-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+.final-table th,
+.final-table td {
+    padding: 0.6rem 1rem;
+    text-align: left;
+    border: 1px solid #d4cfc7;
+}
+
+.final-table thead th {
+    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.final-table tbody tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+/* Key Terms Box */
+.key-terms {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.key-terms h3 {
+    margin-top: 0;
+    color: #495057;
+    border-bottom: 2px solid #8b7355;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.key-terms dl {
+    margin: 0;
+}
+
+.key-terms dt {
+    font-weight: 700;
+    color: #2c3e50;
+    margin-top: 1rem;
+}
+
+.key-terms dt:first-of-type {
+    margin-top: 0;
+}
+
+.key-terms dd {
+    margin-left: 1.5rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+
+/* ====================================
+   15. MONOGRAPH STYLES
+   ==================================== */
+
+/* Title Page */
+.title-page {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #8b7355;
+}
+
+.title-page h1 {
+    font-size: 2.4em;
+    border: none;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+}
+
+.title-page .subtitle {
+    font-size: 1.4em;
+    color: #5d4e37;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.title-page .document-type {
+    font-size: 1.1em;
+    color: #6b5d4f;
+    margin-top: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Table of Contents */
+.toc {
+    background: #fdfcf8;
+    padding: 25px 30px;
+    border: 1px solid #d4cfc7;
+    border-radius: 6px;
+    margin: 30px 0;
+}
+
+.toc h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #8b7355;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.toc li {
+    padding: 6px 0;
+    border-bottom: 1px dotted #d4cfc7;
+}
+
+.toc li:last-child {
+    border-bottom: none;
+}
+
+.toc a {
+    color: #5d4e37;
+    border-bottom: none;
+}
+
+.toc a:hover {
+    color: #8b7355;
+}
+
+.toc-indent {
+    padding-left: 20px;
+}
+
+.toc-indent-2 {
+    padding-left: 40px;
+}
+
+/* Epigraph */
+.epigraph {
+    text-align: center;
+    padding: 25px 40px;
+    margin: 40px 0;
+    border-top: 1px solid #d4cfc7;
+    border-bottom: 1px solid #d4cfc7;
+}
+
+.epigraph .hebrew {
+    font-size: 1.3em;
+    font-family: 'David Libre', 'SBL Hebrew', 'Times New Roman', serif;
+    direction: rtl;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.epigraph .translation {
+    font-style: italic;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.epigraph .source {
+    color: #6b5d4f;
+    font-size: 0.9em;
+}
+
+/* Section Divider */
+.section-divider {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 1.5em;
+    color: #8b7355;
+    letter-spacing: 0.3em;
+}
+
+/* Inline Hebrew */
+.hebrew-inline {
+    font-family: 'David Libre', 'SBL Hebrew', 'Times New Roman', serif;
+    direction: rtl;
+    unicode-bidi: embed;
+    font-size: 1.05em;
+}
+
+/* References */
+.references {
+    font-size: 0.95em;
+    line-height: 1.7;
+}
+
+.references p {
+    padding-left: 30px;
+    text-indent: -30px;
+    margin-bottom: 12px;
+}
+
+/* Article Styles */
+.article-container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+}
+.article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #dcd9d0;
+}
+
+.article-header h1 {
+    font-size: 2.4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.article-subtitle {
+    font-size: 1.2rem;
+    color: #546e7a;
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.article-meta {
+    font-size: 0.95rem;
+    color: #8b7355;
+}
+
+/* Revelation Sections */
+.revelation-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fdfcf8 0%, #f5f3ee 100%);
+    border-left: 4px solid #c4a57b;
+    border-radius: 0 8px 8px 0;
+}
+
+.revelation-section h2 {
+    color: #5d4e37;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.revelation-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: #8b7355;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Key Insight */
+.key-insight {
+    background: #fff8e1;
+    border: 1px solid #c4a57b;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    font-style: italic;
+}
+
+.key-insight strong {
+    color: #8b7355;
+    font-style: normal;
+}
+
+/* Divine Names Cards */
+.divine-names {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.divine-name-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.divine-name-card.elohim {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border: 1px solid #5d87a1;
+}
+
+.divine-name-card.yhwh {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border: 1px solid #c4a57b;
+}
+
+.divine-name-card h4 {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Conclusion Section */
+.conclusion-section {
+    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    color: #fdfcf8;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+}
+
+.conclusion-section h2 {
+    color: #fef5e7;
+    margin-bottom: 1.5rem;
+}
+
+.conclusion-section p {
+    color: #f5f3ee;
+    margin-bottom: 1rem;
+}
+
+/* CTA Box */
+.tablets-cta {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.tablets-cta p {
+    margin-bottom: 1rem;
+}
+
+.tablets-cta a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #fef5e7;
+    color: #5d4e37;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.tablets-cta a:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.cta-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.cta-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #fef5e7;
+    color: #5d4e37;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+
+/* ====================================
+   16. SVG & BOOK MAPS
+   ==================================== */
+
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-map-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+
+/* ====================================
+   WORD COMPATIBILITY
+   ==================================== */
+
+@page WordSection1 {
+    size: 8.5in 11in;
+    margin: 1in 1in 1in 1in;
+}
+
+div.WordSection1 {
+    page: WordSection1;
+}
+
+/* ====================================
+   17. RESPONSIVE DESIGN
+   ==================================== */
+
+/* Tablet/Mobile Navigation */
+@media (max-width: 1024px) {
+    /* Make header a floating hamburger button */
+    header.site-header {
+        background: transparent !important;
+        box-shadow: none !important;
+        position: fixed !important;
+        top: 10px;
+        right: 10px;
+        left: auto;
+        width: auto;
+        z-index: 1000;
+        max-height: none;
+        overflow: visible;
+    }
+    
+    .main-nav {
+        padding: 0;
+        min-height: auto;
+    }
+    
+    /* Show hamburger button with background */
+    .menu-toggle {
+        display: block !important;
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 6px;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        width: 44px;
+        height: 40px;
+    }
+    
+    .menu-toggle::before {
+        top: 10px;
+        left: 8px;
+    }
+    
+    /* Hide nav by default, positioned as dropdown */
+    header.site-header nav ul:not(.dropdown),
+    .main-nav > ul:not(.dropdown) {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        gap: 0;
+        position: fixed !important;
+        top: 60px;
+        right: 10px;
+        left: auto;
+        width: 200px;
+        background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border-radius: 8px;
+        z-index: 999;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    
+    /* Show nav when .show class is added */
+    header.site-header nav ul.show,
+    .main-nav > ul.show,
+    #nav-menu.show {
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 0.5rem 0;
+    }
+    
+    /* Navigation items in dropdown */
+    header.site-header nav ul li,
+    .main-nav > ul li {
+        display: block !important;
+        width: 100%;
+        visibility: visible !important;
+    }
+    
+    /* Navigation links in dropdown */
+    header.site-header nav a,
+    .main-nav a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        border-radius: 0;
+    }
+    
+    header.site-header nav ul li:last-child a,
+    .main-nav > ul li:last-child a {
+        border-bottom: none;
+    }
+    
+    /* Mobile dropdown: expand inline instead of flyout */
+    .has-dropdown {
+        position: relative !important;
+    }
+    
+    .has-dropdown details {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .has-dropdown summary {
+        display: block !important;
+        padding: 1rem;
+        color: #3d2f1f;
+        font-weight: 500;
+        font-size: 1.05rem;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .dropdown {
+        position: static !important;
+        display: none !important;
+        box-shadow: none !important;
+        min-width: 0 !important;
+        padding: 0 !important;
+        background: rgba(0,0,0,0.05) !important;
+        width: 100% !important;
+        top: auto !important;
+        left: auto !important;
+        float: none !important;
+    }
+    
+    /* Show dropdown when details is open */
+    .has-dropdown details[open] .dropdown {
+        display: block !important;
+    }
+    
+    .dropdown li {
+        width: 100%;
+        display: block !important;
+    }
+    
+    .dropdown a {
+        padding-left: 2rem;
+        font-size: 0.95rem;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* General Layout */
+    body {
+        padding: 10px;
+    }
+    
+    .WordSection1 {
+        padding: 20px;
+    }
+    
+    /* Typography */
+    p.UnitHeader {
+        font-size: 20px;
+    }
+    
+    p.Torah {
+        font-size: 14px;
+    }
+    
+    .commentary-header h1 {
+        font-size: 24px;
+    }
+    
+    /* Navigation */
+    .unit-navigation {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .series-navigation {
+        padding: 20px 10px;
+    }
+    
+    .series-navigation a,
+    .series-navigation span {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    /* Map adjustments */
+    .torah-map-title {
+        font-size: 1.8em;
+    }
+    
+    .torah-map-intro {
+        font-size: 1em;
+    }
+    
+    .torah-map-container .matrix-table {
+        font-size: 0.75em;
+    }
+    
+    .unit {
+        padding: 8px;
+        min-height: 100px;
+    }
+    
+    .column-letter {
+        font-size: 1.1em;
+    }
+    
+    .theme-label {
+        font-size: 0.75em;
+    }
+    
+    /* Homepage */
+    .hero {
+        padding: 1.5rem 0 1rem 0;
+    }
+    
+    .site-title h1 {
+        font-size: 2rem;
+    }
+    
+    .site-title .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .featured-links {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 1rem;
+    }
+    
+    .featured-links a {
+        text-align: center;
+        padding: 1rem 1.5rem;
+    }
+    
+    .book-links {
+        flex-direction: column;
+    }
+    
+    .book-links a {
+        text-align: center;
+    }
+    
+    .main-content #content {
+        padding: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Articles */
+    .divine-names {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .revelation-section {
+        padding: 1.5rem;
+    }
+    
+    .revelation-section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .conclusion-section {
+        padding: 1.5rem;
+    }
+    
+    .cta-links {
+        flex-direction: column;
+    }
+    
+    /* Animation Controls */
+    .controls {
+        top: 50px;
+    }
+    
+    .view-container {
+        padding: 1.5rem;
+    }
+    
+    .demo-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Slideshow */
+    .slideshow-section {
+        margin: 25px -10px;
+        padding: 2rem 0;
+    }
+    
+    .slideshow-container {
+        padding: 0 15px;
+    }
+    
+    .slideshow-intro h2 {
+        font-size: 1.6rem;
+    }
+    
+    .slideshow-nav {
+        padding: 0.75rem 1rem;
+    }
+    
+    .slide-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .slide-dots {
+        gap: 6px;
+    }
+    
+    .slide-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    /* Chapter Grid */
+    .chapter-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3px;
+    }
+    
+    .chapter-box {
+        font-size: 0.7rem;
+    }
+    
+    .grid-legend {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .stage-section {
+        padding: 1rem;
+    }
+    
+    .envelope-table {
+        font-size: 0.8rem;
+    }
+    
+    .envelope-table th,
+    .envelope-table td {
+        padding: 0.4rem;
+    }
+    
+    /* Mishnah Portal */
+    .mishnah-container {
+        padding: 20px;
+    }
+    
+    .mishnah-header h1 {
+        font-size: 2em;
+    }
+    
+    .seder-header {
+        font-size: 1.4em;
+        padding: 12px 20px;
+    }
+    
+    .seder-header .english-seder {
+        position: static;
+        display: block;
+        margin-top: 5px;
+    }
+    
+    .tractate-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .site-title h1 {
+        font-size: 1.75rem;
+    }
+    
+    .site-title .subtitle {
+        font-size: 1rem;
+    }
+    
+    main.content-wrapper {
+        padding: 20px 15px;
+    }
+    
+    p.Torah {
+        font-size: 13px;
+    }
+    
+    table.MsoNormalTable td,
+    .torah-table td,
+    .scripture-table tbody td {
+        padding: 10px;
+    }
+    
+    .main-content #content {
+        padding: 1rem;
+    }
+    
+    .slideshow-intro h2 {
+        font-size: 1.3em;
+    }
+    
+    .slideshow-intro p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Map Notice on Tablets */
+@media (max-width: 1200px) {
+    .mobile-notice {
+        display: block;
+    }
+    
+    .torah-map-container .matrix-table {
+        font-size: 0.8em;
+    }
+    
+    .unit {
+        padding: 10px;
+        min-height: 120px;
+    }
+    
+    .unit-description {
+        font-size: 0.8em;
+    }
+}
+
+/* Animation Mobile Notice */
+@media (max-width: 768px) and (orientation: portrait) {
+    .demonstration-section .mobile-notice {
+        display: block;
+        background: #fff3cd;
+        color: #856404;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        border: 2px solid #ffc107;
+    }
+    .demonstration-section .mobile-notice strong {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 1.1em;
+    }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    .slide {
+        transition: none;
+    }
+    
+    .unit,
+    .chapter-box,
+    .transform-button,
+    .featured-links a,
+    .book-links a {
+        transition: none;
+    }
+}
+
+/* Hebrew/Mishnah Auto-Detection */
+main.content-wrapper:has(.Mesechet) {
+    direction: rtl !important;
+    text-align: center !important;
+    font-family: 'SBL Hebrew', 'Ezra SIL', 'David', 'Frank Ruehl', serif !important;
+}
+
+main.content-wrapper:has(.Mesechet) table {
+    direction: rtl;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main.content-wrapper:has(.Mesechet) td,
+main.content-wrapper:has(.Mesechet) p,
+main.content-wrapper:has(.Mesechet) span {
+    text-align: center !important;
+    font-family: 'SBL Hebrew', 'Ezra SIL', 'David', 'Frank Ruehl', sans-serif;
+}
+
+main.content-wrapper:has(.Mesechet) .Mesechet,
+main.content-wrapper:has(.Mesechet) .Perek {
+    font-family: 'David', serif;
+    text-align: center !important;
+}
+
+
+/* ====================================
+   18. PRINT STYLES
+   ==================================== */
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .WordSection1 {
+        box-shadow: none;
+        padding: 20px;
+    }
+    
+    /* Hide interactive elements */
+    header.site-header, 
+    footer.site-footer,
+    .unit-navigation,
+    .series-navigation,
+    .breadcrumb,
+    .mobile-notice,
+    .menu-toggle,
+    .hero,
+    .demonstration-section,
+    .video-section,
+    .slideshow-section,
+    .slideshow-nav,
+    .slide-dots,
+    .slide-btn,
+    .controls,
+    .back-to-top {
+        display: none;
+    }
+    
+    .main-content {
+        padding: 0;
+    }
+    
+    /* Page breaks */
+    table.MsoNormalTable,
+    .torah-table,
+    .scripture-table {
+        page-break-inside: avoid;
+    }
+    
+    p.UnitHeader {
+        page-break-after: avoid;
+    }
+    
+    /* Links */
+    a {
+        color: #000;
+        text-decoration: none;
+        border-bottom: none;
+    }
+    
+    /* Preserve pattern colors */
+    .horizontal1, .horizontal-parallel {
+        color: #2563eb !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .horizontal2 { 
+        color: #008080 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .horizontal3 { 
+        color: #800000 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .vertical1, .vertical-parallel {
+        color: #d97706 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .closure {
+        color: #db2777 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .ciasm1 { 
+        color: #7c3aed !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .ciasm2 { 
+        color: #c026d3 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .internalparallel, .internal-parallel { 
+        color: #16a34a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+/* ===== AVOT ARTICLE PRINT ENHANCEMENTS ===== */
+
+@media print {
+    /* Page setup */
+    @page {
+        size: letter;
+        margin: 0.75in 0.6in 1in 0.6in;
+    }
+    
+    /* Ensure article fills page width */
+    article, main, .commentary-section {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    /* Better heading page breaks */
+    h1, h2, h3 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    
+    h2 {
+        margin-top: 24pt;
+        padding-top: 12pt;
+        border-top: 1pt solid #ccc;
+    }
+    
+    .commentary-section h2,
+    .commentary-section h3 {
+        page-break-after: avoid;
+        orphans: 3;
+        widows: 3;
+    }
+    
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    /* === BASE TABLE STYLES === */
+    .scripture-table {
+        page-break-inside: avoid;
+        margin: 12pt 0;
+        box-shadow: none;
+        border: 1pt solid #999;
+        width: 100%;
+    }
+    
+    .scripture-table thead th {
+        background: #e0e0e0 !important;
+        color: #000 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        border-bottom: 2pt solid #666;
+        padding: 4pt 6pt;
+        font-size: 9pt;
+        line-height: 1.2;
+    }
+    
+    .scripture-table thead th.col-a,
+    .scripture-table thead th.col-left {
+        background: #d0d0d0 !important;
+    }
+    
+    .scripture-table thead th.col-b,
+    .scripture-table thead th.col-middle {
+        background: #e8e8e8 !important;
+    }
+    
+    /* Single spacing in all table cells */
+    .scripture-table tbody td {
+        padding: 4pt 6pt;
+        border: 0.5pt solid #ccc;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+    
+    .scripture-table td p,
+    .scripture-table td p.torah,
+    .scripture-table .torah {
+        margin: 0;
+        padding: 0;
+        line-height: 1.2;
+        font-size: 10pt;
+    }
+    
+    /* === 4-COLUMN TABLES === */
+    .scripture-table thead tr:has(th:nth-child(4):last-child) th {
+        font-size: 8pt;
+        padding: 3pt 4pt;
+    }
+    
+    .scripture-table tbody tr:has(td:nth-child(4):last-child) td {
+        font-size: 9pt;
+        padding: 3pt 4pt;
+    }
+    
+    .scripture-table tbody tr:has(td:nth-child(4):last-child) p,
+    .scripture-table tbody tr:has(td:nth-child(4):last-child) p.torah,
+    .scripture-table tbody tr:has(td:nth-child(4):last-child) .torah {
+        font-size: 9pt;
+        line-height: 1.2;
+    }
+    
+    /* === 5-COLUMN TABLES === */
+    .scripture-table thead tr:has(th:nth-child(5)) th {
+        font-size: 7pt;
+        padding: 3pt 3pt;
+        letter-spacing: -0.02em;
+    }
+    
+    .scripture-table tbody tr:has(td:nth-child(5)) td {
+        font-size: 8pt;
+        padding: 3pt 3pt;
+    }
+    
+    .scripture-table tbody tr:has(td:nth-child(5)) p,
+    .scripture-table tbody tr:has(td:nth-child(5)) p.torah,
+    .scripture-table tbody tr:has(td:nth-child(5)) .torah {
+        font-size: 8pt;
+        line-height: 1.2;
+    }
+    
+    /* === BLOCKQUOTES === */
+    blockquote {
+        border-left: 2pt solid #666;
+        padding-left: 12pt;
+        margin: 12pt 0 12pt 12pt;
+        font-size: 10pt;
+    }
+    
+    /* === HEADER SECTION === */
+    .unit-header-section {
+        text-align: center;
+        border-bottom: 2pt solid #333;
+        padding-bottom: 12pt;
+        margin-bottom: 24pt;
+    }
+    
+    .unit-header-section h1 {
+        font-size: 18pt;
+        border: none;
+        margin-bottom: 6pt;
+    }
+    
+    .unit-meta {
+        font-size: 11pt;
+        color: #666;
+    }
+    
+    /* === HIDE NAVIGATION === */
+    .nav-breadcrumb,
+    .unit-navigation,
+    nav {
+        display: none !important;
+    }
+}
+
+/* ====================================
+   END OF MAIN.CSS
+   ==================================== */
