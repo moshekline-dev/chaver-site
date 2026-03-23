@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Love Your Neighbor Is Not a Standalone Law: The Hidden Structure of Leviticus 19 | Chaver.com</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/">Home</a> &gt;
+    <a href="/torah-weave/">Torah Weave</a> &gt;
+    <a href="/torah-weave/ten-commandments-two-tablets.html">Decalogue Series</a> &gt;
+    Leviticus 19: The Ark at the Center
+</nav>
+
+<article class="commentary-content">
+
+<header>
+    <h1>Love Your Neighbor Is Not a Standalone Law</h1>
+    <p class="unit-meta">Moshe Kline &nbsp;|&nbsp; Based on "The Editor Was Nodding," <em>Journal of Hebrew Scriptures</em> 8 (2008)</p>
+</header>
+
+<div class="key-insight">
+<p><strong>In brief:</strong> "Love your neighbor as yourself" is the most quoted verse in the Bible. It sits in Leviticus 19, between laws about peace offerings and mixed breeding. Why there? Because Leviticus 19 is not a random list. It is a composed table — and "love your neighbor" is its climax.</p>
+</div>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Chapter That Nobody Reads</h2>
+
+<p>Open a Bible to Leviticus 19. You will find, in rapid succession: "Be holy, for I am holy." Revere your parents. Keep the sabbath. Don't make idols. How to eat a peace offering. Leave the corners of your field for the poor. Don't steal. Don't curse the deaf. Judge fairly. Don't hate your brother. Love your neighbor as yourself. Don't mix your seeds. Don't eat blood. Don't cut your beard. Don't tattoo yourself. Don't turn to ghosts. Rise before the elderly. Love the stranger. Use honest weights.</p>
+
+<p>It reads like someone emptied a filing cabinet onto the floor.</p>
+
+<p>For centuries, that is more or less what scholars concluded. The chapter was a grab bag — laws from different periods thrown together by an editor who was, as the anthropologist Mary Douglas put it, "nodding." Not paying attention.</p>
+
+<p>But there is a problem with this theory. The chapter contains repetitions that a careless editor would not produce. "Keep my sabbaths" appears in verse 3 and again in verse 30. "Fear your God" appears in verse 14 and again in verse 32. "Don't turn to" appears in verse 4 and again in verse 31. "No injustice in judgment" appears in verse 15 and again in verse 35. Why would a careless editor repeat himself so precisely?</p>
+
+<p>Unless the repetitions are not mistakes. Unless they are stitches.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Follow the Stitches</h2>
+
+<p>In 1979, the biblical scholar Gordon Wenham noticed that the sections of Leviticus 19 end with two different formulas. Some end with "I am the LORD." Others end with "I the LORD am your God." When you sort the sections by their endings, two groups emerge — and the groups differ in content. One contains what we might call private duties: holiness, parents, sabbaths, offerings. The other contains social duties: don't steal, don't defraud, judge fairly, love your neighbor.</p>
+
+<p>A second marker confirms the split. Every section in the social group opens with the word "you shall not." None of the sections in the private group does. The sections are sorted into two columns by both their openings and their closings.</p>
+
+<p>Now watch what happens to the repetitions. Each repeated phrase appears once in the first half of the chapter and once in the second half — but always in the same column. "Keep my sabbaths" appears twice in the private column. "Fear your God" appears twice in the social column. "Don't turn to" appears twice in the private column. "No injustice in judgment" appears twice in the social column.</p>
+
+<p>The repeated phrases are not mistakes. They are the stitches that sew the two halves of the chapter together — connecting the first block of laws to the second block, column by column. The editor was not nodding. The editor was weaving.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Two Directions</h2>
+
+<p>Once you see the two columns, something else appears. They move in opposite directions.</p>
+
+<p>The private column opens with the widest possible lens — "Speak to the whole community of Israel: you shall be holy" — and narrows. Families. Sabbath. Idols. A person who desecrates the offering is "cut off from his kin." The column moves from communal holiness to individual isolation.</p>
+
+<p>The social column opens at the bottom — stealing, lying, desecrating the divine name — and climbs. Don't exploit the vulnerable. Judge fairly. Don't hate your brother in your heart. Reprove him. "Love your neighbor as yourself." The column moves from crime to love.</p>
+
+<p>"Be holy" and "love your neighbor" are not two unrelated laws that happen to appear in the same chapter. One opens the private column. The other climaxes the social column. They are the two poles of a single composition.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Shattered Tablets and the Whole</h2>
+
+<p>Scholars have always noticed that Leviticus 19 contains pieces of the Ten Commandments. Parents and sabbaths echo the fourth and fifth commandments. Idols echo the first and second. Stealing and lying echo the seventh and eighth. "I am the LORD your God" opens both the Decalogue and this chapter. The fragments are unmistakable. But nobody could explain why they appeared scattered among peace offerings and tattoos.</p>
+
+<p>The woven reading provides the answer. When you lay out the two columns, the chapter divides into five pairs — ten units total. Two columns, five rows. A table. The same format as the Ten Commandments on two tablets.</p>
+
+<p>Leviticus 19 is not merely quoting the Decalogue. It <em>is</em> a decalogue — a literary table built on the same architecture as the tablets of Sinai. The Decalogue fragments that scholars noticed are real. They are the shattered tablets — broken pieces lying in apparent disorder. The chapter's own two-column, five-pair structure is the whole tablets — an intact composition that becomes visible only when you read it as a table.</p>
+
+<p>Both exist in the same text. Just as both sets of tablets existed in the same Ark.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Ark at the Center</h2>
+
+<p>Where was the Ark? At the center of the Tabernacle, inside the Holy of Holies.</p>
+
+<p>Where is Leviticus 19? At the center of Leviticus. And where is Leviticus? At the center of the Torah — the third of five books.</p>
+
+<p>At the center of the Torah sits a chapter that contains both the shattered fragments and the whole structure of the Decalogue. A literary Ark.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Explore the Evidence</h2>
+
+<div class="section-link">
+<p><a href="/torah-weave/ten-commandments-two-tablets.html">Part 1: The Ten Commandments Were Not a List — Why Two Tablets?</a> — How the Decalogue's 5×2 structure creates meaning through position.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">The Full Study: "The Editor Was Nodding" (PDF)</a> — The complete 59-page analysis published in the <em>Journal of Hebrew Scriptures</em>.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/Mishnah-New/English/Articles/the-esoteric-decalogue.html">Part 3: The Esoteric Decalogue</a> — How Rabbi Yehuda HaNasi encoded the same structure in the Mishnah.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13.html">See the Text: Leviticus 19 in Woven Format</a> — The full text with color-coded structural markers.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/torah.pdf">Download the Complete Torah PDF</a> — All five books in woven format. Free, 275 pages.</p>
+</div>
+
+</section>
+
+<aside class="commentary-appendix">
+<h3>How to Cite This Article</h3>
+<p>Kline, Moshe. "Love Your Neighbor Is Not a Standalone Law: The Hidden Structure of Leviticus 19." <em>Torah Weave</em>, Chaver.com, 2026. https://chaver.com/torah-weave/leviticus-19-ark-at-the-center.html</p>
+
+<h3>Original Publication</h3>
+<p>Kline, Moshe. "'The Editor Was Nodding': A Reading of Leviticus 19 in Memory of Mary Douglas." <em>Journal of Hebrew Scriptures</em> 8 (2008): art. 17, 1–59. <a href="https://doi.org/10.5508/jhs.2008.v8.a17">DOI: 10.5508/jhs.2008.v8.a17</a></p>
+</aside>
+
+<div class="series-navigation">
+    <h3>The Decalogue Series</h3>
+    <a href="/torah-weave/ten-commandments-two-tablets.html">Part 1: Why Two Tablets?</a>
+    <a href="/torah-weave/leviticus-19-ark-at-the-center.html"><strong>Part 2: The Ark at the Center (this article)</strong></a>
+    <a href="/Mishnah-New/English/Articles/the-esoteric-decalogue.html">Part 3: The Esoteric Decalogue</a>
+</div>
+
+</article>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>
