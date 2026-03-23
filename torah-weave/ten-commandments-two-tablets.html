@@ -1,0 +1,622 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>The Ten Commandments Were Not a List: Why Two Tablets? | Chaver.com</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <details>
+                        <summary>Torah</summary>
+                        <ul class="dropdown">
+                            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                            <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                            <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="/">Home</a> &gt;
+    <a href="/torah-weave/">Torah Weave</a> &gt;
+    The Ten Commandments: Why Two Tablets?
+</nav>
+
+<article class="commentary-content">
+
+<header>
+    <h1>The Ten Commandments Were Not a List: Why Two Tablets?</h1>
+    <p class="unit-meta">Moshe Kline &nbsp;|&nbsp; Based on research published in JBL, SBL Press, and JHS</p>
+</header>
+
+<!-- Quick Facts for AI extraction -->
+<div class="key-insight">
+<p><strong>In brief:</strong> The Ten Commandments were not written as a numbered list. They were inscribed on two stone tablets — five pairs of commandments, one Word from each pair on each tablet. Tablet A addresses the individual; Tablet B addresses relationships. The rows trace a hierarchy from the deity (Pair 1) to inner desire (Pair 5). Each commandment is defined by the intersection of its row and its column. The two-tablet format is a true literary table — and the same two-dimensional compositional principle operates throughout all 86 literary units of the Torah.</p>
+</div>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Question No One Asks</h2>
+
+<p>Everyone knows the Ten Commandments were written on two stone tablets. But why two? The standard answers are surprisingly thin. Some say the commandments were divided between the tablets — five on one, five on the other. Others, following ancient Near Eastern treaty parallels, argue that both tablets contained all ten commandments as duplicate copies of a covenant document, one for each party.</p>
+
+<p>Both answers treat the two tablets as a practical matter — of space, or of legal convention. Neither asks whether the two-tablet format might itself carry meaning. Neither considers the possibility that the Torah's only text described as written by the deity was composed not as a list but as a <em>table</em> — a two-dimensional composition in which the arrangement generates content that the linear sequence does not.</p>
+
+<p>That is the question this article explores. And the answer turns out to illuminate not just the Ten Commandments, but the compositional logic of the entire Torah.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Written Across Both Sides</h2>
+
+<p>Exodus 32:15 describes the tablets with a phrase that deserves attention: they were "written across both sides; on one and on the other were they written" (כָּתוּב מִשְּׁנֵי עֶבְרֵיהֶם מִזֶּה וּמִזֶּה הֵם כְּתֻבִים). The Hebrew עֶבְרֵיהֶם means "sides," as in the two sides of a narrow pass (I Samuel 14:4) — not "front and back" as later commentators assumed. The literal sense is that the Words alternated from one tablet to the other: the first Word on one side, the second on the other, the third returning to the first, and so on.</p>
+
+<p>This is precisely the format of a table with two columns.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Five Pairs, Not Ten Items</h2>
+
+<p>When we restore the Decalogue to its two-tablet format, something emerges that the numbered list conceals. The ten Words are not ten independent items. They are five pairs — each pair consisting of one Word from Tablet A and one from Tablet B, sitting side by side at the same level.</p>
+
+<div class="matrix-wrapper">
+<h3>The Decalogue as a 5×2 Table</h3>
+<table class="matrix-table">
+    <thead>
+        <tr>
+            <th>Pair</th>
+            <th>Tablet A<br><small>The Individual</small></th>
+            <th>Tablet B<br><small>Relationships</small></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">1</td>
+            <td>I am YHWH your deity who brought you out of Egypt, the house of bondage. You shall have no other deities before Me. You shall not make a graven image&hellip; for I YHWH your deity am a jealous deity&hellip;</td>
+            <td>You shall not take the name of YHWH your deity in vain, for YHWH will not hold guiltless one who takes His name in vain.</td>
+        </tr>
+        <tr>
+            <td class="row-header">2</td>
+            <td>Remember the Sabbath day to keep it holy.</td>
+            <td>Honor your father and your mother.</td>
+        </tr>
+        <tr>
+            <td class="row-header">3</td>
+            <td>You shall not murder.</td>
+            <td>You shall not commit adultery.</td>
+        </tr>
+        <tr>
+            <td class="row-header">4</td>
+            <td>You shall not steal.</td>
+            <td>You shall not bear false witness against your neighbor.</td>
+        </tr>
+        <tr>
+            <td class="row-header">5</td>
+            <td>You shall not covet your neighbor's house.</td>
+            <td>You shall not covet your neighbor's wife, or his male or female slave, or his ox, or his donkey, or anything that is your neighbor's.</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<p>Read as a list, these are ten laws. Read as a table, they are a composition — and the composition says things the list does not.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Rows: A Hierarchy from the Deity to the Self</h2>
+
+<p>The five pairs are ordered hierarchically. Pair 1 concerns the deity. Pair 2 concerns actions determined by divine will — the Sabbath and honoring parents, the only positive commands in the Decalogue. Pair 3 concerns the physical existence of another person: murder and adultery. Pair 4 concerns property and legal systems: theft and false testimony. Pair 5 concerns subjective emotion alone: coveting.</p>
+
+<p>There is a graduated passage from the most encompassing of all possible subjects — the deity — to the most limited: a private human emotion that may never become an action at all. This flow has a clear direction. Rearranging the pairs would destroy it.</p>
+
+<div class="key-insight">
+<p><strong>The hierarchy:</strong> Deity → Divine will → Physical life → Property and law → Inner desire. Each level is more limited than the one above it. The Decalogue traces the full range of moral reality, from the infinite to the interior.</p>
+</div>
+
+<p>The pairs also exhibit concentric symmetry. Pairs 1 and 5 both describe emotive beings — the deity calls himself "jealous" (קַנָּא) in Pair 1; human beings must restrain their desire in Pair 5. Between these two emotional poles stand three intermediary levels. Pairs 2 and 4 mirror each other as expressions of will: divine will in 2, human will in 4. Pair 3 — murder and adultery, life and death — stands at the center.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Columns: Individual and Relational</h2>
+
+<p>If the rows tell us about the <em>level</em> of each pair, the columns tell us about the <em>mode</em>. And here the two-tablet format proves indispensable.</p>
+
+<p>The clearest evidence comes from Pair 5, where both Words prohibit the same action — coveting — and the distinction lies entirely in the objects. Word 5A has a single object: "your neighbor's house." Word 5B has multiple objects: "your neighbor's wife, or his male or female slave, or his ox, or his donkey, or anything that is your neighbor's." One object on Tablet A. Many objects on Tablet B.</p>
+
+<p>But the Hebrew בֵּית (bayit, "house") means more than a building. Throughout the Torah, it denotes lineage, clan, identity — "the house of Jacob," "the house of Israel." Word 5A prohibits coveting your neighbor's identity, his place in the world. Word 5B prohibits coveting the people and possessions that belong to him. The distinction is between who someone is and what someone has.</p>
+
+<p>This same word connects the top and bottom of Tablet A. Word 1A begins: "I am YHWH your deity who brought you out of the land of Egypt, the house of bondage (בֵּית עֲבָדִים)." Word 5A ends: "You shall not covet your neighbor's house (בֵּית)." The deity delivered Israel from one "house" — bondage — and the last Word on Tablet A prohibits coveting another "house" — your neighbor's identity. The vertical thread running through Tablet A, from first Word to last, is the word בֵּית.</p>
+
+<p>This distinction extends through the tablets. Tablet B concentrates interpersonal relationships — honoring parents (2B) is a family bond, adultery (3B) violates a marriage, false witness (4B) requires multiple people conspiring against a third, and coveting (5B) lists a web of social connections. On Tablet A, each Word concerns the individual alone: the deity addressing "you" singular (1A), personal cessation on the Sabbath (2A), ending a single life (3A), one person's act of theft (4A), coveting one object (5A).</p>
+
+<div class="key-insight">
+<p><strong>Tablet A</strong> — the individual standing alone before the deity.<br>
+<strong>Tablet B</strong> — the individual in relationship with others.</p>
+</div>
+
+<p>The distinction holds across all five pairs. Tablet A addresses the individual in isolation — "you" standing alone before the deity. Tablet B addresses the individual embedded in a web of relationships — family, community, society.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>A Table, Not a List</h2>
+
+<p>We have now identified two independent organizing principles: the five hierarchically ordered pairs (rows) and the two tablets distinguished by the dyad of one-and-many (columns). The cumulative effect is to identify the two-tablet format as a true table. Each individual Word is defined by the intersection of two concepts: the subject of its pair and the mode of its tablet.</p>
+
+<p>The Decalogue is a two-dimensional text. It has a linear reading — a list of ten laws — and a structural reading, in which the arrangement carries content that the linear list does not.</p>
+
+<p>The linear reading is exoteric: available to anyone who hears the words. The structural reading is esoteric: available only to the reader who sees the table. As Leo Strauss observed, certain ancient texts consist of exactly these two strata — "a popular teaching of an edifying character, which is in the foreground" and "a philosophic teaching concerning the most important subject, which is indicated only between the lines."</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Two Sets of Tablets, Two Readings</h2>
+
+<p>The Torah narrates two occasions on which Moses received tablets. The details differ in ways that matter.</p>
+
+<p>The first time, Moses descended with the tablets in his hands, apparently intending to present them to the entire nation. When he saw the golden calf, he shattered the tablets before the people's eyes. No one saw the writing. The people saw only fragments.</p>
+
+<p>The second time was different. Before ascending, Moses was instructed to prepare a wooden box and to place the tablets inside immediately upon receiving them. He did so. The tablets were hidden away at once, placed in the Ark in the Holy of Holies. No one other than Moses ever saw them whole.</p>
+
+<p>The first tablets were exoteric — intended for all, shattered like the linear reading that breaks the composition into disconnected laws. The second tablets were esoteric — intended for Moses alone, kept whole like the structural reading that sees the ten Words as a unified composition. The two narratives embody the distinction between the two readings.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Source Code of the Torah</h2>
+
+<p>Why does this matter beyond the Decalogue itself? Because the same two-dimensional compositional principle — rows and columns creating meaning through intersection — operates throughout the entire Torah. All five books. Eighty-six literary units. The Decalogue is the key that unlocks the rest.</p>
+
+<p>The full analysis is available in the studies linked below.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Explore the Evidence</h2>
+
+<p>The analysis summarized here is developed in full detail across several studies:</p>
+
+<div class="section-link">
+<p><a href="/Mishnah-New/English/Articles/the-esoteric-decalogue.html">The Esoteric Decalogue</a> — The complete analysis: how the Decalogue's 5×2 structure maps onto the Avot Pairs, demonstrating that Rabbi possessed the esoteric reading and encoded it in the Mishnah.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/torah-weave/introduction/decalogue-presentation/decalogue-woven-code.html">The Woven Decalogue: Visual Presentation</a> — Interactive slideshow showing the Decalogue's transformation from list to table.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP: A Structural Alternative to the Documentary Hypothesis</a> — How the same two-dimensional architecture that operates in the Decalogue extends across all five books of the Torah.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/Mishnah-New/English/Articles/men-of-kfar-hananya.html">The Woven Table Series</a> — Learn the two-dimensional reading method through four progressively complex examples from Tractate Avot.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/torah.pdf">Download the Complete Torah PDF</a> — All five books in woven format, showing the 86 literary units with their two-dimensional structure visible. Free, 275 pages.</p>
+</div>
+
+</section>
+
+<!-- Citation -->
+<aside class="commentary-appendix">
+<h3>How to Cite This Article</h3>
+<p>Kline, Moshe. "The Ten Commandments Were Not a List: Why Two Tablets?" <em>Torah Weave</em>, Chaver.com, 2026. https://chaver.com/torah-weave/ten-commandments-two-tablets.html</p>
+
+<h3>Related Publications</h3>
+<p>Hocking, Paul, and Moshe Kline. "The Covenant Code: A New Way of Reading the Writing." <em>Journal of Biblical Literature</em> 144, no. 2 (2025): 217–239.</p>
+<p>Kline, Moshe. "Structure is Theology: The Composition of Leviticus." In <em>Current Issues in Priestly and Related Literature</em>, edited by Roy E. Gane and Ada Taggar-Cohen, 225–264. SBL Press, 2015.</p>
+<p>Kline, Moshe. "'The Editor was Nodding': A Reading of Leviticus 19 in Memory of Mary Douglas." <em>Journal of Hebrew Scriptures</em>, 2008.</p>
+</aside>
+
+</article>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>
