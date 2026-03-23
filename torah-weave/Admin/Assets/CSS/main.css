@@ -3043,6 +3043,23 @@ div.WordSection1 {
         border-bottom: none;
     }
 }
+/* Mobile dropdown fix */
+.has-dropdown details[open] .dropdown {
+    display: flex !important;
+    flex-direction: column;
+    position: static;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: none;
+    min-width: 0;
+    padding: 0;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+}
+
+.has-dropdown summary {
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
     /* General Layout */
