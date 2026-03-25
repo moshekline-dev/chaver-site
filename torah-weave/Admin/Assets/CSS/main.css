@@ -3063,9 +3063,13 @@ div.WordSection1 {
 .has-dropdown summary {
     cursor: pointer;
 }
-
+.has-dropdown details[open] .dropdown {
+    max-height: 60vh;
+    overflow-y: auto;
+}
 @media (max-width: 768px) {
     /* General Layout */
+    
     body {
         padding: 10px;
     }
@@ -3073,10 +3077,6 @@ div.WordSection1 {
     .WordSection1 {
         padding: 20px;
     }
-    .has-dropdown details[open] .dropdown {
-    max-height: 60vh;
-    overflow-y: auto;
-}
     
     /* Typography */
     p.UnitHeader {
