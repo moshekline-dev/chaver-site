@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Who Wrote the Bible? Four Theories of Authorship Compared | Chaver.com</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names.html">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture.html">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers.html">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets.html">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center.html">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse.html">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map.html">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+    <li><a href="/General/Contact.htm">Contact</a></li>
+    <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<article>
+
+<header class="unit-header-section">
+    <h1>Who Wrote the Bible? Four Theories Compared</h1>
+    <div class="unit-meta">Four Explanations for the Name Shifts, Repetitions, and Stylistic Differences in the Five Books of Moses</div>
+</header>
+
+<section class="commentary-section">
+
+<p>Anyone who reads the first five books of the Bible carefully notices the same things: the name for God changes, stories seem to repeat, and the writing style shifts. These observations are real. The question is what they mean.</p>
+
+<p>For over two centuries, different theories have been proposed to explain these features in Genesis, Exodus, Leviticus, Numbers, and Deuteronomy — the books known as the Torah, the Pentateuch, or the Five Books of Moses. The most famous theory is the Documentary Hypothesis (JEDP), but it is not the only one — and its consensus has eroded significantly since the 1970s. Today, several competing models offer different explanations for the same evidence.</p>
+
+<p>The table below compares four major theories side by side. Each one accepts the same textual observations. They differ in what they conclude from them.</p>
+
+<h2>The Four Theories at a Glance</h2>
+
+<div class="table-scroll-wrapper">
+<table class="final-table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Documentary (JEDP)</th>
+            <th>Supplementary</th>
+            <th>Fragmentary</th>
+            <th>Woven Torah</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Core claim</strong></td>
+            <td>Four independent documents were combined by editors into one text</td>
+            <td>A single core document was expanded with additions over time</td>
+            <td>Many independent fragments were collected and arranged together</td>
+            <td>The Torah is a single unified composition of 86 literary units arranged in two-dimensional weaves</td>
+        </tr>
+        <tr>
+            <td><strong>Why two names for God?</strong></td>
+            <td>Different documents used different names: J used "the LORD" (YHWH), E used "God" (Elohim)</td>
+            <td>The core text used one name; supplements introduced the other</td>
+            <td>Different fragments originated in communities that preferred different names</td>
+            <td>The two names are structural organizing principles: each name correlates with the unit's position and function in the composition</td>
+        </tr>
+        <tr>
+            <td><strong>Why do stories repeat?</strong></td>
+            <td>Parallel versions from different documents were preserved side by side</td>
+            <td>Later editors added alternative versions to expand the core</td>
+            <td>Independent traditions about the same events were collected together</td>
+            <td>Repetitions are deliberate parallels — horizontal and vertical connections in a woven literary structure</td>
+        </tr>
+        <tr>
+            <td><strong>Why do styles differ?</strong></td>
+            <td>Each document had its own author with a distinct vocabulary and perspective</td>
+            <td>The core and its supplements were written in different periods and styles</td>
+            <td>Fragments from different times and places naturally differ in style</td>
+            <td>Style shifts correspond to structural position: different rows and columns in the weave carry different registers</td>
+        </tr>
+        <tr>
+            <td><strong>How many authors?</strong></td>
+            <td>At least four (J, E, D, P) plus editors</td>
+            <td>One primary author plus multiple supplementers</td>
+            <td>Many anonymous contributors</td>
+            <td>A single compositional intelligence (whether one person or a school)</td>
+        </tr>
+        <tr>
+            <td><strong>What holds the text together?</strong></td>
+            <td>Editors (redactors) who combined the sources</td>
+            <td>The original core document provides continuity</td>
+            <td>Thematic arrangement by a final compiler</td>
+            <td>Architectural design: each unit is positioned in a two-dimensional matrix with systematic cross-references</td>
+        </tr>
+        <tr>
+            <td><strong>Key scholars</strong></td>
+            <td>Wellhausen (1878), Gunkel, Noth, Friedman</td>
+            <td>Van Seters, Schmid</td>
+            <td>Rendtorff, Blum</td>
+            <td>Kline (JBL 2025, JHS 2008, SBL Press 2015)</td>
+        </tr>
+        <tr>
+            <td><strong>Greatest strength</strong></td>
+            <td>Takes the textual differences seriously as data requiring explanation</td>
+            <td>Explains unity better than JEDP while acknowledging editorial growth</td>
+            <td>Avoids forcing all material into four artificial source categories</td>
+            <td>Explains both the differences <em>and</em> the unity — without requiring hypothetical sources no one has ever found</td>
+        </tr>
+        <tr>
+            <td><strong>Greatest limitation</strong></td>
+            <td>No physical evidence for J, E, D, or P as independent documents; scholars cannot agree on where to draw the source boundaries</td>
+            <td>Difficult to identify what belongs to the core versus the supplements</td>
+            <td>Cannot explain the Torah's structural consistency and cross-book patterns</td>
+            <td>Requires readers to learn a new way of reading the text as a two-dimensional composition</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<h2>What the Evidence Actually Shows</h2>
+
+<p>All four theories agree on the evidence: the divine name shifts are real, the repetitions are real, and the stylistic differences are real. The theories disagree on the cause.</p>
+
+<p>Three of the four theories assume the text was assembled — from documents, supplements, or fragments. The Woven Torah hypothesis asks a different question: what if the text was <em>composed</em>? What if the name shifts, repetitions, and style changes are not accidents of editing but features of a deliberate literary architecture?</p>
+
+<p>To test this, the Woven Torah hypothesis examines the Torah's own structural markers — "these are the generations of..." formulas, death notices, and repeated phrases that open and close each section. These markers divide the text into 86 literary units across the five books. When the units are mapped, they reveal a <a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis.html">systematic two-dimensional architecture</a> in which the divine names, repetitions, and stylistic shifts all correlate with structural position.</p>
+
+<p>The result is a reading that preserves everything the Documentary Hypothesis noticed — but explains it as composition rather than compilation.</p>
+
+<h2>Explore Further</h2>
+
+</section>
+
+<nav class="series-navigation">
+<h3>Related Pages</h3>
+    <a href="/torah-weave/why-two-names-for-god.html">Why Does God Have Two Names in the Bible?</a>
+    <a href="/torah-weave/documentary-hypothesis-alternative.html">A Structural Alternative to the Documentary Hypothesis</a>
+    <a href="/torah-weave/Genesis/genesis-analysis/overview.html">The Architecture of Genesis: A Structural Reading</a>
+    <a href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3-commentary.html">The Flood Narrative: One Story, Two Names</a>
+    <a href="/torah-weave/six-days-of-creation-picture.html">The Six Days of Creation: A Two-Column Structure</a>
+    <a href="/torah-weave/Torah-pdf/torah-pdf.html">Download the Complete Woven Torah (Free PDF)</a>
+</nav>
+
+</article>
+
+<aside class="citation-box">
+    <strong>About this research:</strong><br>
+    The Woven Torah hypothesis argues that the Torah is a single, architecturally unified composition built from 86 literary units arranged in two-dimensional weaves. This structural analysis is based on 40 years of research by Moshe Kline, published in the <em>Journal of Biblical Literature</em> (2025), <em>Journal of Hebrew Scriptures</em> (2008), and SBL Press (2015). The complete Torah in woven format is available as a <a href="/torah-weave/Torah-pdf/torah-pdf.html">free PDF download</a>.
+</aside>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2025 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>
