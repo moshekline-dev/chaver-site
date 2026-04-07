@@ -556,61 +556,76 @@
     }
 
     function buildGrid(cellsDetail, format) {
-        // Separate cells into columns by their column letter
-        const columns = {}; // column letter -> [{label, range, startVerse}]
-        const singleCol = []; // cells with no column letter (irregular single-width rows)
+        // Step 1: Group cells by grid position (row + column letter)
+        // "1A", "1Aa", "1Ab" all belong to grid position "1A"
+        // "2B", "2Ba" belong to grid position "2B"
+        // "1", "5" (no column letter) are single-column positions
+        const gridPositions = {}; // key -> { parts: [{label, range}], startVerse }
 
         for (const [label, range] of Object.entries(cellsDetail)) {
-            const m = label.match(/^(\d+)([A-Z]?)(.*)$/);
+            const m = label.match(/^(\d+)([A-Z]?)([a-z]*)$/);
             if (!m) continue;
-            const col = m[2] || '_single';
-            const startVerse = verseToNum(getFirstVerse(range));
-            if (col === '_single') {
-                singleCol.push({ label, range, startVerse });
+            const rowNum = m[1];
+            const colLetter = m[2]; // "" for single-column
+            const posKey = rowNum + colLetter; // e.g., "1A", "2B", "1"
+
+            if (!gridPositions[posKey]) {
+                gridPositions[posKey] = { parts: [], startVerse: Infinity, col: colLetter, rowNum };
+            }
+            const sv = verseToNum(getFirstVerse(range));
+            gridPositions[posKey].parts.push({ label, range, startVerse: sv });
+            gridPositions[posKey].startVerse = Math.min(gridPositions[posKey].startVerse, sv);
+        }
+
+        // Sort parts within each position by verse order
+        for (const pos of Object.values(gridPositions)) {
+            pos.parts.sort((a, b) => a.startVerse - b.startVerse);
+        }
+
+        // Step 2: Separate into columns
+        const columns = {}; // col letter -> [positions sorted by verse]
+        const singleCol = []; // positions with no column letter
+
+        for (const [key, pos] of Object.entries(gridPositions)) {
+            if (pos.col) {
+                if (!columns[pos.col]) columns[pos.col] = [];
+                columns[pos.col].push(pos);
             } else {
-                if (!columns[col]) columns[col] = [];
-                columns[col].push({ label, range, startVerse });
+                singleCol.push(pos);
             }
         }
 
-        // Sort each column by verse order
+        // Sort each column's positions by starting verse
         for (const col of Object.keys(columns)) {
             columns[col].sort((a, b) => a.startVerse - b.startVerse);
         }
         singleCol.sort((a, b) => a.startVerse - b.startVerse);
 
-        // Get column letters sorted
+        // Step 3: Build table rows using format
         const colLetters = Object.keys(columns).sort();
         const rowWidths = parseFormat(format);
-
-        // Build rows according to format
         const gridRows = [];
-        const colIndex = {}; // track position within each column
-        colLetters.forEach(c => colIndex[c] = 0);
+        const colIdx = {};
+        colLetters.forEach(c => colIdx[c] = 0);
         let singleIdx = 0;
 
         for (const width of rowWidths) {
             if (width === 1 && singleCol.length > singleIdx) {
-                // Single-column row (irregular)
-                gridRows.push({
-                    type: 'single',
-                    cell: singleCol[singleIdx++]
-                });
+                gridRows.push({ type: 'single', pos: singleCol[singleIdx++] });
             } else if (width === 1 && colLetters.length >= 1) {
-                // Single column but from regular columns - take one from each? 
-                // Just take next available from first column
-                const cells = [];
-                if (colIndex[colLetters[0]] < columns[colLetters[0]].length) {
-                    cells.push(columns[colLetters[0]][colIndex[colLetters[0]]++]);
+                // Take next from first column as single
+                const col = colLetters[0];
+                if (colIdx[col] < columns[col].length) {
+                    gridRows.push({ type: 'single', pos: columns[col][colIdx[col]++] });
+                } else {
+                    gridRows.push({ type: 'single', pos: null });
                 }
-                gridRows.push({ type: 'single', cell: cells[0] || null });
             } else {
-                // Multi-column row
                 const rowCells = [];
                 for (let c = 0; c < width && c < colLetters.length; c++) {
                     const col = colLetters[c];
-                    if (colIndex[col] < columns[col].length) {
-                        rowCells.push(columns[col][colIndex[col]++]);
+                    if (colIdx[col] < columns[col].length) {
+                        rowCells.push(columns[col][colIdx[col]++]);
                     } else {
                         rowCells.push(null);
                     }
@@ -619,25 +634,36 @@
             }
         }
 
-        // If there are leftover cells not assigned, add extra rows
-        let hasLeftover = true;
-        while (hasLeftover) {
-            hasLeftover = false;
+        // Leftover positions get extra rows
+        let hasMore = true;
+        while (hasMore) {
+            hasMore = false;
             const rowCells = [];
             for (const col of colLetters) {
-                if (colIndex[col] < columns[col].length) {
-                    rowCells.push(columns[col][colIndex[col]++]);
-                    hasLeftover = true;
+                if (colIdx[col] < columns[col].length) {
+                    rowCells.push(columns[col][colIdx[col]++]);
+                    hasMore = true;
                 } else {
                     rowCells.push(null);
                 }
             }
-            if (hasLeftover) {
+            if (hasMore) {
                 gridRows.push({ type: 'multi', cells: rowCells, width: colLetters.length });
             }
         }
 
         return { gridRows, colLetters };
+    }
+
+    function getPositionText(verseMap, pos) {
+        // Combine all parts of a grid position into one cell's text
+        if (!pos) return '<em>(empty)</em>';
+        const allText = [];
+        for (const part of pos.parts) {
+            const t = getCellText(verseMap, part.range);
+            if (t) allText.push(t);
+        }
+        return allText.join('<br><br>') || '<em>(verses not found)</em>';
     }
 
     document.getElementById('convert-btn').addEventListener('click', function() {
@@ -687,25 +713,14 @@
             for (const row of gridRows) {
                 html += '<tr>';
                 if (row.type === 'single') {
-                    const cell = row.cell;
-                    if (cell) {
-                        const cellText = getCellText(verseMap, cell.range);
-                        html += '<td colspan="' + maxCols + '"><strong>' + cell.label + '</strong><br>';
-                        html += cellText || '<em>(verses not found)</em>';
-                        html += '</td>';
-                    } else {
-                        html += '<td colspan="' + maxCols + '"><em>(empty)</em></td>';
-                    }
+                    html += '<td colspan="' + maxCols + '">';
+                    html += getPositionText(verseMap, row.pos);
+                    html += '</td>';
                 } else {
-                    for (const cell of row.cells) {
-                        if (cell) {
-                            const cellText = getCellText(verseMap, cell.range);
-                            html += '<td><strong>' + cell.label + '</strong><br>';
-                            html += cellText || '<em>(verses not found)</em>';
-                            html += '</td>';
-                        } else {
-                            html += '<td></td>';
-                        }
+                    for (const pos of row.cells) {
+                        html += '<td>';
+                        html += getPositionText(verseMap, pos);
+                        html += '</td>';
                     }
                 }
                 html += '</tr>';
