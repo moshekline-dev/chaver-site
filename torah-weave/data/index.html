@@ -556,18 +556,15 @@
     }
 
     function buildGrid(cellsDetail, format) {
-        // Step 1: Group cells by grid position (row + column letter)
-        // "1A", "1Aa", "1Ab" all belong to grid position "1A"
-        // "2B", "2Ba" belong to grid position "2B"
-        // "1", "5" (no column letter) are single-column positions
-        const gridPositions = {}; // key -> { parts: [{label, range}], startVerse }
+        // Group cells by grid position (row + column letter)
+        const gridPositions = {};
 
         for (const [label, range] of Object.entries(cellsDetail)) {
             const m = label.match(/^(\d+)([A-Z]?)([a-z]*)$/);
             if (!m) continue;
             const rowNum = m[1];
-            const colLetter = m[2]; // "" for single-column
-            const posKey = rowNum + colLetter; // e.g., "1A", "2B", "1"
+            const colLetter = m[2];
+            const posKey = rowNum + colLetter;
 
             if (!gridPositions[posKey]) {
                 gridPositions[posKey] = { parts: [], startVerse: Infinity, col: colLetter, rowNum };
@@ -577,78 +574,39 @@
             gridPositions[posKey].startVerse = Math.min(gridPositions[posKey].startVerse, sv);
         }
 
-        // Sort parts within each position by verse order
         for (const pos of Object.values(gridPositions)) {
             pos.parts.sort((a, b) => a.startVerse - b.startVerse);
         }
 
-        // Step 2: Separate into columns
-        const columns = {}; // col letter -> [positions sorted by verse]
-        const singleCol = []; // positions with no column letter
+        // Get all unique row numbers and column letters
+        const rowNums = [...new Set(Object.values(gridPositions).map(p => p.rowNum))];
+        rowNums.sort((a, b) => {
+            // Sort by first verse in that row
+            const aMin = Math.min(...Object.values(gridPositions).filter(p => p.rowNum === a).map(p => p.startVerse));
+            const bMin = Math.min(...Object.values(gridPositions).filter(p => p.rowNum === b).map(p => p.startVerse));
+            return aMin - bMin;
+        });
 
-        for (const [key, pos] of Object.entries(gridPositions)) {
-            if (pos.col) {
-                if (!columns[pos.col]) columns[pos.col] = [];
-                columns[pos.col].push(pos);
-            } else {
-                singleCol.push(pos);
-            }
-        }
+        const colLetters = [...new Set(Object.values(gridPositions).filter(p => p.col).map(p => p.col))].sort();
 
-        // Sort each column's positions by starting verse
-        for (const col of Object.keys(columns)) {
-            columns[col].sort((a, b) => a.startVerse - b.startVerse);
-        }
-        singleCol.sort((a, b) => a.startVerse - b.startVerse);
-
-        // Step 3: Build table rows using format
-        const colLetters = Object.keys(columns).sort();
-        const rowWidths = parseFormat(format);
+        // Build rows from actual data
         const gridRows = [];
-        const colIdx = {};
-        colLetters.forEach(c => colIdx[c] = 0);
-        let singleIdx = 0;
+        for (const rn of rowNums) {
+            const rowPositions = Object.entries(gridPositions).filter(([k, p]) => p.rowNum === rn);
+            const hasCols = rowPositions.some(([k, p]) => p.col);
 
-        for (const width of rowWidths) {
-            if (width === 1 && singleCol.length > singleIdx) {
-                gridRows.push({ type: 'single', pos: singleCol[singleIdx++] });
-            } else if (width === 1 && colLetters.length >= 1) {
-                // Take next from first column as single
-                const col = colLetters[0];
-                if (colIdx[col] < columns[col].length) {
-                    gridRows.push({ type: 'single', pos: columns[col][colIdx[col]++] });
-                } else {
-                    gridRows.push({ type: 'single', pos: null });
-                }
+            if (!hasCols) {
+                // Single-column row
+                const pos = rowPositions[0] ? rowPositions[0][1] : null;
+                gridRows.push({ type: 'single', pos, rowNum: rn });
             } else {
+                // Multi-column row — one cell per column letter
                 const rowCells = [];
-                for (let c = 0; c < width && c < colLetters.length; c++) {
-                    const col = colLetters[c];
-                    if (colIdx[col] < columns[col].length) {
-                        rowCells.push(columns[col][colIdx[col]++]);
-                    } else {
-                        rowCells.push(null);
-                    }
+                for (const col of colLetters) {
+                    const match = rowPositions.find(([k, p]) => p.col === col);
+                    rowCells.push(match ? match[1] : null);
                 }
-                gridRows.push({ type: 'multi', cells: rowCells, width });
-            }
-        }
-
-        // Leftover positions get extra rows
-        let hasMore = true;
-        while (hasMore) {
-            hasMore = false;
-            const rowCells = [];
-            for (const col of colLetters) {
-                if (colIdx[col] < columns[col].length) {
-                    rowCells.push(columns[col][colIdx[col]++]);
-                    hasMore = true;
-                } else {
-                    rowCells.push(null);
-                }
-            }
-            if (hasMore) {
-                gridRows.push({ type: 'multi', cells: rowCells, width: colLetters.length });
+                gridRows.push({ type: 'multi', cells: rowCells, rowNum: rn });
             }
         }
 
@@ -661,7 +619,15 @@
         const allText = [];
         for (const part of pos.parts) {
             const t = getCellText(verseMap, part.range);
-            if (t) allText.push(t);
+            if (t) {
+                // Extract subdivision suffix (lowercase letters after the main label)
+                const subMatch = part.label.match(/^\d+[A-Z]?([a-z]+)$/);
+                if (subMatch) {
+                    allText.push('<b>' + subMatch[1] + '.</b> ' + t);
+                } else {
+                    allText.push(t);
+                }
+            }
         }
         return allText.join('<br><br>') || '<em>(verses not found)</em>';
     }
@@ -707,25 +673,25 @@
             }
             html += '</tr></thead><tbody>';
 
-            let rowNum = 1;
+            let rowIdx = 0;
             for (const row of gridRows) {
                 html += '<tr>';
                 if (row.type === 'single') {
-                    const coord = rowNum;
+                    const coord = row.rowNum;
                     html += '<td colspan="' + maxCols + '"><p class="CellLabel"><b>' + coord + '</b></p>';
                     html += getPositionText(verseMap, row.pos);
                     html += '</td>';
                 } else {
                     for (let c = 0; c < row.cells.length; c++) {
                         const col = colLetters[c] || '';
-                        const coord = rowNum + col;
+                        const coord = row.rowNum + col;
                         const pos = row.cells[c];
                         html += '<td><p class="CellLabel"><b>' + coord + '</b></p>';
                         html += getPositionText(verseMap, pos);
                         html += '</td>';
                     }
                 }
-                rowNum++;
+                rowIdx++;
                 html += '</tr>';
             }
             html += '</tbody></table>';
