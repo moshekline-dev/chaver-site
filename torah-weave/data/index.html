@@ -699,19 +699,28 @@
             html += '<p class="unit-meta">' + unit.verses + ' &middot; Format: ' + unit.format + '</p>';
 
             const { gridRows, colLetters } = buildGrid(cells, unit.format);
-            const maxCols = Math.max(colLetters.length, 1);
+            const maxCols = colLetters.length || 1;
+            const hasMultiCols = colLetters.length > 0;
 
-            // Column headers
+            // Column headers with row label column
             html += '<table class="scripture-table"><thead><tr>';
-            if (colLetters.length > 0) {
+            html += '<th class="col-full">Row</th>';
+            if (hasMultiCols) {
                 for (const col of colLetters) {
                     html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
                 }
+            } else {
+                html += '<th class="col-a"></th>';
             }
             html += '</tr></thead><tbody>';
 
+            let rowNum = 1;
             for (const row of gridRows) {
                 html += '<tr>';
+                // Row number label
+                html += '<td class="row-label">' + rowNum + '</td>';
+                rowNum++;
+
                 if (row.type === 'single') {
                     html += '<td colspan="' + maxCols + '">';
                     html += getPositionText(verseMap, row.pos);
