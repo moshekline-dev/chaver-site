@@ -556,7 +556,6 @@
     }
 
     function buildGrid(cellsDetail, format) {
-        // Parse each cell into row, column, subdivision
         const parsed = [];
         for (const [label, range] of Object.entries(cellsDetail)) {
             const m = label.match(/^(\d+)([A-Z]?)([a-z]*)$/);
@@ -570,7 +569,6 @@
             });
         }
 
-        // Get unique row numbers sorted by verse order
         const rowNumSet = [...new Set(parsed.map(p => p.rowNum))];
         rowNumSet.sort((a, b) => {
             const aMin = Math.min(...parsed.filter(p => p.rowNum === a).map(p => p.startVerse));
@@ -578,46 +576,50 @@
             return aMin - bMin;
         });
 
-        // Get unique column letters
-        const colLetters = [...new Set(parsed.filter(p => p.col).map(p => p.col))].sort();
+        // Get max columns and per-row widths from format
+        const rowWidths = parseFormat(format);
+        const maxCols = Math.max(...rowWidths);
+        const allColLetters = 'ABCDE'.slice(0, maxCols).split('');
 
-        // Build sub-rows for each structural row
+        // Map each row number to its expected width
+        const rowWidthMap = {};
+        for (let i = 0; i < rowNumSet.length && i < rowWidths.length; i++) {
+            rowWidthMap[rowNumSet[i]] = rowWidths[i];
+        }
+
         const allRows = [];
 
         for (const rn of rowNumSet) {
             const rowCells = parsed.filter(p => p.rowNum === rn);
-            const hasCols = rowCells.some(p => p.col);
             const subs = [...new Set(rowCells.map(p => p.sub))].sort();
             const hasSubdivisions = subs.length > 1 || (subs.length === 1 && subs[0] !== '');
+            const thisWidth = rowWidthMap[rn] || maxCols;
+            const thisColLetters = allColLetters.slice(0, thisWidth);
 
-            // Relabel: if there are subdivisions, '' becomes 'a', 'a' becomes 'b', etc.
             const subLabels = [];
             for (let i = 0; i < subs.length; i++) {
-                if (hasSubdivisions) {
-                    subLabels.push(String.fromCharCode(97 + i)); // a, b, c, d...
-                } else {
-                    subLabels.push('');
-                }
+                subLabels.push(hasSubdivisions ? String.fromCharCode(97 + i) : '');
             }
 
-            if (!hasCols) {
+            if (thisWidth === 1) {
+                // Single-column row
                 for (let i = 0; i < subs.length; i++) {
                     const cell = rowCells.find(p => p.sub === subs[i]);
-                    allRows.push({ rowNum: rn, sub: subLabels[i], type: 'single', cells: [cell || null] });
+                    allRows.push({ rowNum: rn, sub: subLabels[i], type: 'single', cells: [cell || null], width: 1, maxCols });
                 }
             } else {
                 for (let i = 0; i < subs.length; i++) {
                     const rowArr = [];
-                    for (const col of colLetters) {
+                    for (const col of thisColLetters) {
                         const cell = rowCells.find(p => p.col === col && p.sub === subs[i]);
                         rowArr.push(cell || null);
                     }
-                    allRows.push({ rowNum: rn, sub: subLabels[i], type: 'multi', cells: rowArr });
+                    allRows.push({ rowNum: rn, sub: subLabels[i], type: 'multi', cells: rowArr, width: thisWidth, maxCols });
                 }
             }
         }
 
-        return { allRows, colLetters };
+        return { allRows, colLetters: allColLetters, maxCols };
     }
 
     function getCellLabel(rowNum, col, sub) {
@@ -657,14 +659,12 @@
             html += '<h3>' + book + ' Unit ' + unit.unit_number + ': ' + unit.title + '</h3>';
             html += '<p class="unit-meta">' + unit.verses + ' &middot; Format: ' + unit.format + '</p>';
 
-            const { allRows, colLetters } = buildGrid(cells, unit.format);
-            const maxCols = colLetters.length || 1;
+            const { allRows, colLetters, maxCols } = buildGrid(cells, unit.format);
 
             html += '<table class="scripture-table"><thead><tr>';
             for (const col of colLetters) {
                 html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
             }
-            if (colLetters.length === 0) html += '<th class="col-a"></th>';
             html += '</tr></thead><tbody>';
 
             for (const row of allRows) {
@@ -680,11 +680,15 @@
                     }
                     html += '</td>';
                 } else {
-                    for (let c = 0; c < row.cells.length; c++) {
-                        const col = colLetters[c] || '';
+                    const numCells = row.cells.length;
+                    for (let c = 0; c < numCells; c++) {
+                        const colLetter = 'ABCDE'[c] || '';
                         const cell = row.cells[c];
-                        const lbl = getCellLabel(row.rowNum, col, row.sub);
-                        html += '<td><p class="CellLabel">' + lbl + '</p>';
+                        const lbl = getCellLabel(row.rowNum, colLetter, row.sub);
+                        // Calculate colspan for irregular rows
+                        let cs = Math.floor(maxCols / numCells);
+                        if (c === numCells - 1) cs = maxCols - cs * (numCells - 1); // last cell gets remainder
+                        html += '<td' + (cs > 1 ? ' colspan="' + cs + '"' : '') + '><p class="CellLabel">' + lbl + '</p>';
                         if (cell) {
                             html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
                         } else {
@@ -694,6 +698,7 @@
                     }
                 }
                 html += '</tr>';
+            }
             }
             html += '</tbody></table>';
         }
