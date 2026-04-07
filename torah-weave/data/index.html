@@ -700,38 +700,32 @@
 
             const { gridRows, colLetters } = buildGrid(cells, unit.format);
             const maxCols = colLetters.length || 1;
-            const hasMultiCols = colLetters.length > 0;
 
-            // Column headers with row label column
             html += '<table class="scripture-table"><thead><tr>';
-            html += '<th class="col-full">Row</th>';
-            if (hasMultiCols) {
-                for (const col of colLetters) {
-                    html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
-                }
-            } else {
-                html += '<th class="col-a"></th>';
+            for (const col of colLetters) {
+                html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
             }
             html += '</tr></thead><tbody>';
 
             let rowNum = 1;
             for (const row of gridRows) {
                 html += '<tr>';
-                // Row number label
-                html += '<td class="row-label">' + rowNum + '</td>';
-                rowNum++;
-
                 if (row.type === 'single') {
-                    html += '<td colspan="' + maxCols + '">';
+                    const coord = rowNum;
+                    html += '<td colspan="' + maxCols + '"><p class="CellLabel"><b>' + coord + '</b></p>';
                     html += getPositionText(verseMap, row.pos);
                     html += '</td>';
                 } else {
-                    for (const pos of row.cells) {
-                        html += '<td>';
+                    for (let c = 0; c < row.cells.length; c++) {
+                        const col = colLetters[c] || '';
+                        const coord = rowNum + col;
+                        const pos = row.cells[c];
+                        html += '<td><p class="CellLabel"><b>' + coord + '</b></p>';
                         html += getPositionText(verseMap, pos);
                         html += '</td>';
                     }
                 }
+                rowNum++;
                 html += '</tr>';
             }
             html += '</tbody></table>';
