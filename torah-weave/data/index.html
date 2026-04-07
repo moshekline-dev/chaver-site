@@ -556,80 +556,73 @@
     }
 
     function buildGrid(cellsDetail, format) {
-        // Group cells by grid position (row + column letter)
-        const gridPositions = {};
-
+        // Parse each cell into row, column, subdivision
+        const parsed = [];
         for (const [label, range] of Object.entries(cellsDetail)) {
             const m = label.match(/^(\d+)([A-Z]?)([a-z]*)$/);
             if (!m) continue;
-            const rowNum = m[1];
-            const colLetter = m[2];
-            const posKey = rowNum + colLetter;
-
-            if (!gridPositions[posKey]) {
-                gridPositions[posKey] = { parts: [], startVerse: Infinity, col: colLetter, rowNum };
-            }
-            const sv = verseToNum(getFirstVerse(range));
-            gridPositions[posKey].parts.push({ label, range, startVerse: sv });
-            gridPositions[posKey].startVerse = Math.min(gridPositions[posKey].startVerse, sv);
+            parsed.push({
+                label, range,
+                rowNum: m[1],
+                col: m[2] || '',
+                sub: m[3] || '',
+                startVerse: verseToNum(getFirstVerse(range))
+            });
         }
 
-        for (const pos of Object.values(gridPositions)) {
-            pos.parts.sort((a, b) => a.startVerse - b.startVerse);
-        }
-
-        // Get all unique row numbers and column letters
-        const rowNums = [...new Set(Object.values(gridPositions).map(p => p.rowNum))];
-        rowNums.sort((a, b) => {
-            // Sort by first verse in that row
-            const aMin = Math.min(...Object.values(gridPositions).filter(p => p.rowNum === a).map(p => p.startVerse));
-            const bMin = Math.min(...Object.values(gridPositions).filter(p => p.rowNum === b).map(p => p.startVerse));
+        // Get unique row numbers sorted by verse order
+        const rowNumSet = [...new Set(parsed.map(p => p.rowNum))];
+        rowNumSet.sort((a, b) => {
+            const aMin = Math.min(...parsed.filter(p => p.rowNum === a).map(p => p.startVerse));
+            const bMin = Math.min(...parsed.filter(p => p.rowNum === b).map(p => p.startVerse));
             return aMin - bMin;
         });
 
-        const colLetters = [...new Set(Object.values(gridPositions).filter(p => p.col).map(p => p.col))].sort();
+        // Get unique column letters
+        const colLetters = [...new Set(parsed.filter(p => p.col).map(p => p.col))].sort();
 
-        // Build rows from actual data
-        const gridRows = [];
-        for (const rn of rowNums) {
-            const rowPositions = Object.entries(gridPositions).filter(([k, p]) => p.rowNum === rn);
-            const hasCols = rowPositions.some(([k, p]) => p.col);
+        // Build sub-rows for each structural row
+        const allRows = [];
+
+        for (const rn of rowNumSet) {
+            const rowCells = parsed.filter(p => p.rowNum === rn);
+            const hasCols = rowCells.some(p => p.col);
+            const subs = [...new Set(rowCells.map(p => p.sub))].sort();
+            const hasSubdivisions = subs.length > 1 || (subs.length === 1 && subs[0] !== '');
+
+            // Relabel: if there are subdivisions, '' becomes 'a', 'a' becomes 'b', etc.
+            const subLabels = [];
+            for (let i = 0; i < subs.length; i++) {
+                if (hasSubdivisions) {
+                    subLabels.push(String.fromCharCode(97 + i)); // a, b, c, d...
+                } else {
+                    subLabels.push('');
+                }
+            }
 
             if (!hasCols) {
-                // Single-column row
-                const pos = rowPositions[0] ? rowPositions[0][1] : null;
-                gridRows.push({ type: 'single', pos, rowNum: rn });
-            } else {
-                // Multi-column row — one cell per column letter
-                const rowCells = [];
-                for (const col of colLetters) {
-                    const match = rowPositions.find(([k, p]) => p.col === col);
-                    rowCells.push(match ? match[1] : null);
+                for (let i = 0; i < subs.length; i++) {
+                    const cell = rowCells.find(p => p.sub === subs[i]);
+                    allRows.push({ rowNum: rn, sub: subLabels[i], type: 'single', cells: [cell || null] });
                 }
-                gridRows.push({ type: 'multi', cells: rowCells, rowNum: rn });
+            } else {
+                for (let i = 0; i < subs.length; i++) {
+                    const rowArr = [];
+                    for (const col of colLetters) {
+                        const cell = rowCells.find(p => p.col === col && p.sub === subs[i]);
+                        rowArr.push(cell || null);
+                    }
+                    allRows.push({ rowNum: rn, sub: subLabels[i], type: 'multi', cells: rowArr });
+                }
             }
         }
 
-        return { gridRows, colLetters };
+        return { allRows, colLetters };
     }
 
-    function getPositionText(verseMap, pos) {
-        // Combine all parts of a grid position into one cell's text
-        if (!pos) return '<em>(empty)</em>';
-        const allText = [];
-        for (const part of pos.parts) {
-            const t = getCellText(verseMap, part.range);
-            if (t) {
-                // Extract subdivision suffix (lowercase letters after the main label)
-                const subMatch = part.label.match(/^\d+[A-Z]?([a-z]+)$/);
-                if (subMatch) {
-                    allText.push('<b>' + subMatch[1] + '.</b> ' + t);
-                } else {
-                    allText.push(t);
-                }
-            }
-        }
-        return allText.join('<br><br>') || '<em>(verses not found)</em>';
+    function getCellLabel(rowNum, col, sub) {
+        if (sub) return '<b>' + rowNum + (col || '') + sub + '</b>';
+        return '<b>' + rowNum + (col || '') + '</b>';
     }
 
     document.getElementById('convert-btn').addEventListener('click', function() {
@@ -664,34 +657,42 @@
             html += '<h3>' + book + ' Unit ' + unit.unit_number + ': ' + unit.title + '</h3>';
             html += '<p class="unit-meta">' + unit.verses + ' &middot; Format: ' + unit.format + '</p>';
 
-            const { gridRows, colLetters } = buildGrid(cells, unit.format);
+            const { allRows, colLetters } = buildGrid(cells, unit.format);
             const maxCols = colLetters.length || 1;
 
             html += '<table class="scripture-table"><thead><tr>';
             for (const col of colLetters) {
                 html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
             }
+            if (colLetters.length === 0) html += '<th class="col-a"></th>';
             html += '</tr></thead><tbody>';
 
-            let rowIdx = 0;
-            for (const row of gridRows) {
+            for (const row of allRows) {
                 html += '<tr>';
                 if (row.type === 'single') {
-                    const coord = row.rowNum;
-                    html += '<td colspan="' + maxCols + '"><p class="CellLabel"><b>' + coord + '</b></p>';
-                    html += getPositionText(verseMap, row.pos);
+                    const cell = row.cells[0];
+                    const lbl = getCellLabel(row.rowNum, '', row.sub);
+                    html += '<td colspan="' + maxCols + '"><p class="CellLabel">' + lbl + '</p>';
+                    if (cell) {
+                        html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
+                    } else {
+                        html += '<em>(empty)</em>';
+                    }
                     html += '</td>';
                 } else {
                     for (let c = 0; c < row.cells.length; c++) {
                         const col = colLetters[c] || '';
-                        const coord = row.rowNum + col;
-                        const pos = row.cells[c];
-                        html += '<td><p class="CellLabel"><b>' + coord + '</b></p>';
-                        html += getPositionText(verseMap, pos);
+                        const cell = row.cells[c];
+                        const lbl = getCellLabel(row.rowNum, col, row.sub);
+                        html += '<td><p class="CellLabel">' + lbl + '</p>';
+                        if (cell) {
+                            html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
+                        } else {
+                            html += '<em>(empty)</em>';
+                        }
                         html += '</td>';
                     }
                 }
-                rowIdx++;
                 html += '</tr>';
             }
             html += '</tbody></table>';
