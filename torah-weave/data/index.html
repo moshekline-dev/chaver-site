@@ -627,6 +627,36 @@
         return '<b>' + rowNum + (col || '') + '</b>';
     }
 
+    function renderRow(row, numCols, verseMap) {
+        let html = '<tr>';
+        if (row.type === 'single') {
+            const cell = row.cells[0];
+            const lbl = getCellLabel(row.rowNum, '', row.sub);
+            html += '<td colspan="' + numCols + '"><p class="CellLabel">' + lbl + '</p>';
+            if (cell) {
+                html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
+            } else {
+                html += '<em>(empty)</em>';
+            }
+            html += '</td>';
+        } else {
+            for (let c = 0; c < row.cells.length; c++) {
+                const colLetter = 'ABCDE'[c] || '';
+                const cell = row.cells[c];
+                const lbl = getCellLabel(row.rowNum, colLetter, row.sub);
+                html += '<td><p class="CellLabel">' + lbl + '</p>';
+                if (cell) {
+                    html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
+                } else {
+                    html += '<em>(empty)</em>';
+                }
+                html += '</td>';
+            }
+        }
+        html += '</tr>';
+        return html;
+    }
+
     document.getElementById('convert-btn').addEventListener('click', function() {
         if (!unitsData) {
             document.getElementById('output').innerHTML = '<p><em>Dataset not loaded yet. Please wait a moment and try again.</em></p>';
@@ -660,46 +690,51 @@
             html += '<p class="unit-meta">' + unit.verses + ' &middot; Format: ' + unit.format + '</p>';
 
             const { allRows, colLetters, maxCols } = buildGrid(cells, unit.format);
+            const isIrregular = unit.irregular;
 
-            html += '<table class="scripture-table"><thead><tr>';
-            for (const col of colLetters) {
-                html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
-            }
-            html += '</tr></thead><tbody>';
-
-            for (const row of allRows) {
-                html += '<tr>';
-                if (row.type === 'single') {
-                    const cell = row.cells[0];
-                    const lbl = getCellLabel(row.rowNum, '', row.sub);
-                    html += '<td colspan="' + maxCols + '"><p class="CellLabel">' + lbl + '</p>';
-                    if (cell) {
-                        html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
-                    } else {
-                        html += '<em>(empty)</em>';
-                    }
-                    html += '</td>';
-                } else {
-                    const numCells = row.cells.length;
-                    for (let c = 0; c < numCells; c++) {
-                        const colLetter = 'ABCDE'[c] || '';
-                        const cell = row.cells[c];
-                        const lbl = getCellLabel(row.rowNum, colLetter, row.sub);
-                        // Calculate colspan for irregular rows
-                        let cs = Math.floor(maxCols / numCells);
-                        if (c === numCells - 1) cs = maxCols - cs * (numCells - 1); // last cell gets remainder
-                        html += '<td' + (cs > 1 ? ' colspan="' + cs + '"' : '') + '><p class="CellLabel">' + lbl + '</p>';
-                        if (cell) {
-                            html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
-                        } else {
-                            html += '<em>(empty)</em>';
-                        }
-                        html += '</td>';
-                    }
+            if (!isIrregular) {
+                // Regular unit: one table
+                html += '<table class="scripture-table"><thead><tr>';
+                for (const col of colLetters) {
+                    html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
                 }
-                html += '</tr>';
+                html += '</tr></thead><tbody>';
+
+                for (const row of allRows) {
+                    html += renderRow(row, colLetters.length, verseMap);
+                }
+                html += '</tbody></table>';
+            } else {
+                // Irregular unit: separate table per structural row
+                let currentRowNum = null;
+                let currentWidth = 0;
+                let tableOpen = false;
+
+                for (const row of allRows) {
+                    if (row.rowNum !== currentRowNum) {
+                        // Close previous table
+                        if (tableOpen) html += '</tbody></table>';
+                        currentRowNum = row.rowNum;
+                        currentWidth = row.cells.length;
+                        if (row.type === 'single') currentWidth = 1;
+
+                        // Open new table for this row group
+                        html += '<table class="scripture-table"><thead><tr>';
+                        if (row.type === 'single' || currentWidth === 1) {
+                            html += '<th class="col-full"></th>';
+                        } else {
+                            const cols = 'ABCDE'.slice(0, currentWidth).split('');
+                            for (const col of cols) {
+                                html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
+                            }
+                        }
+                        html += '</tr></thead><tbody>';
+                        tableOpen = true;
+                    }
+                    html += renderRow(row, currentWidth, verseMap);
+                }
+                if (tableOpen) html += '</tbody></table>';
             }
-            html += '</tbody></table>';
         }
 
         document.getElementById('output').innerHTML = html;
