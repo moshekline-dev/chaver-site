@@ -393,7 +393,12 @@
 <section class="commentary-section">
 <h2>Convert Any Translation to Woven Format</h2>
 
-<p>Paste the text of any Bible book below (with chapter:verse numbers), select the book, and the tool will arrange it into the woven literary units.</p>
+<p>Paste the text of any Bible book below. The tool needs <strong>chapter:verse numbers</strong> at the start of each verse (e.g., <code>1:1</code>, <code>15:3</code>). Most online Bible sites and apps include these numbers. Select the matching book from the dropdown &mdash; the tool uses your selection to know which unit structure to apply.</p>
+
+<p><strong>What works:</strong> <code>1:1 In the beginning God created...</code> or <code>Gen 1:1 In the beginning...</code><br>
+<strong>What does not work:</strong> Plain paragraph text without verse numbers.</p>
+
+<p>Where to get text with verse numbers: copy from <a href="https://www.sefaria.org">Sefaria</a>, <a href="https://www.biblegateway.com">BibleGateway</a>, <a href="https://mechon-mamre.org">Mechon Mamre</a>, or any Bible app. Works with English, Hebrew, or any language.</p>
 
 <div id="converter-app">
     <p>
@@ -408,7 +413,7 @@
     </p>
     <p>
         <label for="text-input"><strong>Paste your text:</strong></label><br>
-        <textarea id="text-input" rows="12" placeholder="Paste Bible text here with verse numbers, e.g.:&#10;1:1 In the beginning God created the heaven and the earth.&#10;1:2 Now the earth was unformed and void...&#10;&#10;Accepts formats like 1:1, 1.1, or chapter and verse on separate lines."></textarea>
+        <textarea id="text-input" rows="12" placeholder="Paste Bible text here. Each verse must start with chapter:verse, e.g.:&#10;&#10;1:1 In the beginning God created the heaven and the earth.&#10;1:2 Now the earth was unformed and void, and darkness was upon the face of the deep; and the spirit of God hovered over the face of the waters.&#10;1:3 And God said: Let there be light. And there was light.&#10;&#10;Tip: Copy full chapters from Sefaria, BibleGateway, or Mechon Mamre."></textarea>
     </p>
     <p><button id="convert-btn" type="button">Convert to Woven Format</button></p>
     <div id="output"></div>
@@ -526,20 +531,113 @@
         return parts.join(' ');
     }
 
-    function organizeGrid(cellsDetail) {
-        // Organize cells into rows and columns for display
-        // Parse labels like "1A", "1B", "2A", "2Aa", "2Ab" etc.
-        const rows = {};
-        for (const [label, range] of Object.entries(cellsDetail)) {
-            // Extract row number
-            const m = label.match(/^(\d+)(.*)/);
-            if (!m) continue;
-            const rowNum = m[1];
-            const colPart = m[2]; // e.g., "A", "B", "Aa", "Ba", "", etc.
-            if (!rows[rowNum]) rows[rowNum] = [];
-            rows[rowNum].push({ label, colPart, range });
+    function verseToNum(ref) {
+        // Convert "15:3" to sortable number 15003
+        const p = ref.split(':').map(Number);
+        return p[0] * 1000 + (p[1] || 0);
+    }
+
+    function getFirstVerse(rangeStr) {
+        const m = rangeStr.match(/(\d+:\d+)/);
+        return m ? m[1] : '0:0';
+    }
+
+    function parseFormat(fmt) {
+        // "3x2" -> [2,2,2] (three rows of width 2)
+        // "12221" -> [1,2,2,2,1]
+        const m = fmt.match(/^(\d+)[x×](\d+)$/i);
+        if (m) {
+            const rows = parseInt(m[1]);
+            const cols = parseInt(m[2]);
+            return Array(rows).fill(cols);
         }
-        return rows;
+        // Irregular: each digit is a row width
+        return fmt.split('').map(Number).filter(n => n > 0);
+    }
+
+    function buildGrid(cellsDetail, format) {
+        // Separate cells into columns by their column letter
+        const columns = {}; // column letter -> [{label, range, startVerse}]
+        const singleCol = []; // cells with no column letter (irregular single-width rows)
+
+        for (const [label, range] of Object.entries(cellsDetail)) {
+            const m = label.match(/^(\d+)([A-Z]?)(.*)$/);
+            if (!m) continue;
+            const col = m[2] || '_single';
+            const startVerse = verseToNum(getFirstVerse(range));
+            if (col === '_single') {
+                singleCol.push({ label, range, startVerse });
+            } else {
+                if (!columns[col]) columns[col] = [];
+                columns[col].push({ label, range, startVerse });
+            }
+        }
+
+        // Sort each column by verse order
+        for (const col of Object.keys(columns)) {
+            columns[col].sort((a, b) => a.startVerse - b.startVerse);
+        }
+        singleCol.sort((a, b) => a.startVerse - b.startVerse);
+
+        // Get column letters sorted
+        const colLetters = Object.keys(columns).sort();
+        const rowWidths = parseFormat(format);
+
+        // Build rows according to format
+        const gridRows = [];
+        const colIndex = {}; // track position within each column
+        colLetters.forEach(c => colIndex[c] = 0);
+        let singleIdx = 0;
+
+        for (const width of rowWidths) {
+            if (width === 1 && singleCol.length > singleIdx) {
+                // Single-column row (irregular)
+                gridRows.push({
+                    type: 'single',
+                    cell: singleCol[singleIdx++]
+                });
+            } else if (width === 1 && colLetters.length >= 1) {
+                // Single column but from regular columns - take one from each? 
+                // Just take next available from first column
+                const cells = [];
+                if (colIndex[colLetters[0]] < columns[colLetters[0]].length) {
+                    cells.push(columns[colLetters[0]][colIndex[colLetters[0]]++]);
+                }
+                gridRows.push({ type: 'single', cell: cells[0] || null });
+            } else {
+                // Multi-column row
+                const rowCells = [];
+                for (let c = 0; c < width && c < colLetters.length; c++) {
+                    const col = colLetters[c];
+                    if (colIndex[col] < columns[col].length) {
+                        rowCells.push(columns[col][colIndex[col]++]);
+                    } else {
+                        rowCells.push(null);
+                    }
+                }
+                gridRows.push({ type: 'multi', cells: rowCells, width });
+            }
+        }
+
+        // If there are leftover cells not assigned, add extra rows
+        let hasLeftover = true;
+        while (hasLeftover) {
+            hasLeftover = false;
+            const rowCells = [];
+            for (const col of colLetters) {
+                if (colIndex[col] < columns[col].length) {
+                    rowCells.push(columns[col][colIndex[col]++]);
+                    hasLeftover = true;
+                } else {
+                    rowCells.push(null);
+                }
+            }
+            if (hasLeftover) {
+                gridRows.push({ type: 'multi', cells: rowCells, width: colLetters.length });
+            }
+        }
+
+        return { gridRows, colLetters };
     }
 
     document.getElementById('convert-btn').addEventListener('click', function() {
@@ -574,19 +672,41 @@
             html += '<h3>' + book + ' Unit ' + unit.unit_number + ': ' + unit.title + '</h3>';
             html += '<p class="unit-meta">' + unit.verses + ' &middot; Format: ' + unit.format + '</p>';
 
-            // Build table from cells
-            const rows = organizeGrid(cells);
-            const rowNums = Object.keys(rows).sort((a, b) => Number(a) - Number(b));
+            const { gridRows, colLetters } = buildGrid(cells, unit.format);
+            const maxCols = Math.max(colLetters.length, 1);
 
-            html += '<table class="final-table"><tbody>';
-            for (const rowNum of rowNums) {
-                const rowCells = rows[rowNum].sort((a, b) => a.colPart.localeCompare(b.colPart));
+            // Column headers
+            html += '<table class="scripture-table"><thead><tr>';
+            if (colLetters.length > 0) {
+                for (const col of colLetters) {
+                    html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
+                }
+            }
+            html += '</tr></thead><tbody>';
+
+            for (const row of gridRows) {
                 html += '<tr>';
-                for (const cell of rowCells) {
-                    const cellText = getCellText(verseMap, cell.range);
-                    html += '<td><strong>' + cell.label + '</strong><br>';
-                    html += cellText || '<em>(verses not found in input)</em>';
-                    html += '</td>';
+                if (row.type === 'single') {
+                    const cell = row.cell;
+                    if (cell) {
+                        const cellText = getCellText(verseMap, cell.range);
+                        html += '<td colspan="' + maxCols + '"><strong>' + cell.label + '</strong><br>';
+                        html += cellText || '<em>(verses not found)</em>';
+                        html += '</td>';
+                    } else {
+                        html += '<td colspan="' + maxCols + '"><em>(empty)</em></td>';
+                    }
+                } else {
+                    for (const cell of row.cells) {
+                        if (cell) {
+                            const cellText = getCellText(verseMap, cell.range);
+                            html += '<td><strong>' + cell.label + '</strong><br>';
+                            html += cellText || '<em>(verses not found)</em>';
+                            html += '</td>';
+                        } else {
+                            html += '<td></td>';
+                        }
+                    }
                 }
                 html += '</tr>';
             }
