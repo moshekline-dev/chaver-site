@@ -633,7 +633,7 @@
         if (row.type === 'single') {
             const cell = row.cells[0];
             const lbl = getCellLabel(row.rowNum, '', row.sub);
-            html += '<td colspan="' + numCols + '"><p class="CellLabel">' + lbl + '</p>';
+            html += '<td dir="auto" colspan="' + numCols + '"><p class="CellLabel">' + lbl + '</p>';
             if (cell) {
                 html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
             } else {
@@ -645,7 +645,7 @@
                 const colLetter = 'ABCDE'[c] || '';
                 const cell = row.cells[c];
                 const lbl = getCellLabel(row.rowNum, colLetter, row.sub);
-                html += '<td><p class="CellLabel">' + lbl + '</p>';
+                html += '<td dir="auto"><p class="CellLabel">' + lbl + '</p>';
                 if (cell) {
                     html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
                 } else {
