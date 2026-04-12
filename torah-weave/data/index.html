@@ -19,8 +19,43 @@
     <!-- #EndEditable -->
     
     <!-- #BeginEditable "meta" -->
-    <!-- Page-specific meta tags can be added here -->
-    <!-- #EndEditable -->
+      <meta name="description" content="Free open dataset of all 86 literary units of the Torah — JSON and CSV formats. Includes verse ranges, column/row structures, formats, and metadata. CC BY 4.0 license.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Torah Literary Units Dataset — Open Data">
+    <meta property="og:description" content="Free, machine-readable dataset of the Torah's 86 literary units in JSON and CSV. Verse ranges, structures, formats, and metadata. CC BY 4.0.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chaver.com/torah-weave/data/">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Torah Literary Units Dataset",
+      "description": "Complete dataset of all 86 literary units of the Torah identified by the Woven Torah hypothesis. Includes verse ranges, column/row structures, unit formats, book assignments, and structural metadata.",
+      "url": "https://chaver.com/torah-weave/data/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": {
+        "@type": "Person",
+        "name": "Moshe Kline",
+        "url": "https://chaver.com"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://chaver.com/torah-weave/data/torah-units.json"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://chaver.com/torah-weave/data/torah-units.csv"
+        }
+      ],
+      "keywords": ["Torah", "literary units", "Woven Torah", "Bible structure", "Pentateuch", "open data", "biblical studies dataset"]
+    }
+    </script>    <!-- #EndEditable -->
     
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
