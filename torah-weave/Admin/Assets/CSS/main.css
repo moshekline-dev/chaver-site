@@ -178,6 +178,7 @@ header.site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    max-height: 80px;
     overflow: visible;
 }
 
@@ -250,22 +251,8 @@ header.site-header nav a:hover,
     color: #8b4513;
     background-color: rgba(61, 47, 31, 0.1);
 }
-.dropdown li {
-    margin-bottom: 0;
-}
 
-.dropdown {
-    max-height: 80vh;
-    overflow-y: auto;
-}
-
-@media (min-width: 1025px) {
-    .has-dropdown .dropdown {
-        display: block;
-        top: calc(100% + 8px);
-        padding-top: 0;
-    }
-}/* Site Footer */
+/* Site Footer */
 footer.site-footer {
     background: linear-gradient(135deg, #b39f7d 0%, #9d8968 100%);
     color: #2c1810;
@@ -894,6 +881,120 @@ span.HebrewParagraph {
     font-weight: 500;
     letter-spacing: 0.02em;
     color: #f5f3ef;
+}
+
+.unit-header-section .subtitle {
+    text-align: center;
+    font-size: 1.15rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+    opacity: 0.85;
+    color: #f5f3ef;
+}
+
+/* Sticky Unit Navigation Grid */
+.unit-nav-toggle {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    z-index: 1001;
+    background: #1a5276;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.unit-nav-toggle:hover {
+    opacity: 0.85;
+}
+
+.unit-nav-panel {
+    position: fixed;
+    bottom: 44px;
+    right: 12px;
+    z-index: 1000;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    padding: 10px 12px 8px;
+    display: none;
+    max-width: 340px;
+}
+
+.unit-nav-panel.open {
+    display: block;
+}
+
+.unit-nav-panel table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.75rem;
+}
+
+.unit-nav-panel th {
+    font-weight: 600;
+    padding: 2px 6px;
+    text-align: center;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+}
+
+.unit-nav-panel td {
+    padding: 4px 5px;
+    text-align: center;
+}
+
+.unit-nav-panel td a {
+    display: block;
+    padding: 3px 4px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.72rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    border-bottom: none;
+}
+
+.unit-nav-panel td a:hover {
+    background: #eef6fc;
+}
+
+.unit-nav-panel td.irregular a {
+    background: #fff3cd;
+    border: 1px solid #b8860b;
+    font-weight: 600;
+}
+
+.unit-nav-panel td.irregular a:hover {
+    background: #ffecb3;
+}
+
+.unit-nav-panel .row-label {
+    font-weight: 600;
+    color: #666;
+    padding-right: 6px;
+    text-align: right;
+    font-size: 0.7rem;
+}
+
+.unit-nav-panel .deut-row td {
+    padding-top: 6px;
+    border-top: 1px solid #ccc;
+}
+
+.unit-nav-title {
+    font-size: 0.7rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 4px;
 }
 
 /* Commentary Link Callout */
@@ -3008,7 +3109,7 @@ div.WordSection1 {
     header.site-header nav a,
     .main-nav a {
         display: block;
-        padding: 0.5rem 1rem;
+        padding: 1rem;
         border-bottom: 1px solid rgba(0,0,0,0.1);
         border-radius: 0;
     }
@@ -3016,29 +3117,6 @@ div.WordSection1 {
     header.site-header nav ul li:last-child a,
     .main-nav > ul li:last-child a {
         border-bottom: none;
-    }
-    
-    /* Mobile dropdown fix */
-    .has-dropdown details[open] .dropdown {
-        display: flex !important;
-        flex-direction: column;
-        position: static;
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: none;
-        min-width: 0;
-        padding: 0;
-        visibility: visible !important;
-        opacity: 1 !important;
-        height: auto !important;
-    }
-    
-    .has-dropdown details[open] .dropdown a {
-        white-space: normal;
-        word-wrap: break-word;
-    }
-    
-    .has-dropdown summary {
-        cursor: pointer;
     }
 }
 
@@ -3428,7 +3506,9 @@ main.content-wrapper:has(.Mesechet) .Perek {
     .slide-dots,
     .slide-btn,
     .controls,
-    .back-to-top {
+    .back-to-top,
+    .unit-nav-toggle,
+    .unit-nav-panel {
         display: none;
     }
     
