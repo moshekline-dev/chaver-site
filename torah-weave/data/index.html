@@ -19,43 +19,62 @@
     <!-- #EndEditable -->
     
     <!-- #BeginEditable "meta" -->
-      <meta name="description" content="Free open dataset of all 86 literary units of the Torah — JSON and CSV formats. Includes verse ranges, column/row structures, formats, and metadata. CC BY 4.0 license.">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Torah Literary Units Dataset — Open Data">
-    <meta property="og:description" content="Free, machine-readable dataset of the Torah's 86 literary units in JSON and CSV. Verse ranges, structures, formats, and metadata. CC BY 4.0.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chaver.com/torah-weave/data/">
-    
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
+     <!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Torah Literary Units Dataset",
+  "alternateName": "The 86 Literary Units of the Pentateuch",
+  "description": "Complete dataset of all 86 literary units of the Torah identified by the Woven Torah hypothesis. Includes verse ranges, column/row structures, unit formats, book assignments, and structural metadata. Every verse is mapped to its cell position in one of 600 structural cells, enabling reconstruction of the woven reading with any Bible translation.",
+  "url": "https://chaver.com/torah-weave/data/",
+  "version": "1.0",
+  "dateCreated": "2026",
+  "dateModified": "2026",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Person",
+    "name": "Moshe Kline",
+    "url": "https://chaver.com/about-Moshe-Kline"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Chaver.com — The Woven Texts Project",
+    "url": "https://chaver.com"
+  },
+  "citation": "Kline, Moshe. Torah Literary Units Dataset, version 1.0. Chaver.com, 2026. https://chaver.com/torah-weave/data/",
+  "keywords": ["Torah", "literary units", "Woven Torah", "Bible structure", "Pentateuch", "open data", "biblical studies dataset", "Hebrew Bible", "Documentary Hypothesis Alternative", "structural analysis"],
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "serial_number", "description": "Unit number from 1 to 86 across the entire Torah"},
+    {"@type": "PropertyValue", "name": "book", "description": "Genesis, Exodus, Leviticus, Numbers, or Deuteronomy"},
+    {"@type": "PropertyValue", "name": "unit_number", "description": "Unit number within its book"},
+    {"@type": "PropertyValue", "name": "title", "description": "Descriptive title of the literary unit"},
+    {"@type": "PropertyValue", "name": "verse_range", "description": "Starting and ending chapter:verse boundaries"},
+    {"@type": "PropertyValue", "name": "format", "description": "Structural format (e.g., 3x2 for regular rectangular; digit string like 12221 for irregular symmetrical units)"},
+    {"@type": "PropertyValue", "name": "type", "description": "F = framework unit; CL = closure unit; U = unique (outside triadic patterns)"},
+    {"@type": "PropertyValue", "name": "cells_detail", "description": "Mapping from each cell label (e.g., 1A, 2Ba) to its specific verse range"}
+  ],
+  "distribution": [
     {
-      "@context": "https://schema.org",
-      "@type": "Dataset",
-      "name": "Torah Literary Units Dataset",
-      "description": "Complete dataset of all 86 literary units of the Torah identified by the Woven Torah hypothesis. Includes verse ranges, column/row structures, unit formats, book assignments, and structural metadata.",
-      "url": "https://chaver.com/torah-weave/data/",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "creator": {
-        "@type": "Person",
-        "name": "Moshe Kline",
-        "url": "https://chaver.com"
-      },
-      "distribution": [
-        {
-          "@type": "DataDownload",
-          "encodingFormat": "application/json",
-          "contentUrl": "https://chaver.com/torah-weave/data/torah-units.json"
-        },
-        {
-          "@type": "DataDownload",
-          "encodingFormat": "text/csv",
-          "contentUrl": "https://chaver.com/torah-weave/data/torah-units.csv"
-        }
-      ],
-      "keywords": ["Torah", "literary units", "Woven Torah", "Bible structure", "Pentateuch", "open data", "biblical studies dataset"]
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://chaver.com/torah-weave/data/torah-units.json",
+      "contentSize": "51KB"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://chaver.com/torah-weave/data/torah-units.csv",
+      "contentSize": "23KB"
     }
-    </script>    <!-- #EndEditable -->
+  ],
+  "sameAs": [
+    "https://chaver.com/torah-weave/Woven-Torah-Method"
+  ]
+}
+</script><!-- #EndEditable -->
     
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
