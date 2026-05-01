@@ -31,6 +31,7 @@
     
     <style type="text/css">
 
+
     /* ==========================================
        CRITICAL DWT LAYOUT STYLES ONLY
        Everything else comes from main.css
@@ -414,7 +415,7 @@
 
   function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-  fetch('/Mishnah-New/mishnah_db.json')
+  fetch('mishnah_db.json')
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
     .then(function(data){
       DB=data;
