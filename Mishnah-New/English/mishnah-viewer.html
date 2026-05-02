@@ -26,11 +26,33 @@
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
     <!-- #BeginEditable "additional-styles" -->
-    <!-- Page-specific style overrides can go here -->
-    <!-- #EndEditable -->
+   <style>
+.mishnah-table p,
+.mishnah-table td,
+.mishnah-table span {
+    text-align: right !important;
+    direction: rtl;
+}
+.mishnah-table { width:100%; border-collapse:collapse; direction:rtl; table-layout:fixed; margin-bottom:10px; }
+.mishnah-table td { border:1px solid #888; padding:6px 8px; vertical-align:top; }
+.mishnah-table p { line-height:1.8; font-size:9pt; font-family:'Times New Roman','David',serif; margin:0 0 4px 0; }
+p.CellLabel { text-align:center !important; font-weight:bold; font-size:9pt; border-bottom:1px solid #ccc; margin-bottom:4px; }
+p.Mesechet, p.Perek { font-weight:bold; font-size:11pt; }
+p.logo { text-align:center !important; font-size:10pt; color:#555; }
+.Subunit { font-weight:bold; }
+.MishnaNum { font-weight:bold; font-size:0.85em; color:#444; }
+#mv-topbar { background:#2c1f0e; color:#e8d8b0; padding:8px 14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; direction:rtl; margin-bottom:0; border-radius:4px 4px 0 0; }
+#mv-topbar select { background:#3d2b12; color:#e8d8b0; border:1px solid #6b4c1e; padding:4px 8px; font-family:'Times New Roman',serif; font-size:13px; cursor:pointer; direction:rtl; border-radius:3px; }
+#mv-title { font-size:15px; font-weight:bold; flex:1; text-align:center !important; min-width:160px; }
+.mv-nav-btn { background:#3d2b12; color:#e8d8b0; border:1px solid #6b4c1e; padding:4px 10px; cursor:pointer; font-size:13px; border-radius:3px; }
+.mv-nav-btn:hover { background:#5a3d18; }
+.mv-nav-btn:disabled { opacity:0.35; cursor:default; }
+#mv-legend { background:#f0e8d0; border:1px solid #c9b98a; border-top:none; padding:5px 14px; display:flex; gap:12px; flex-wrap:wrap; direction:rtl; font-size:11px; margin-bottom:14px; }
+.mv-leg { display:flex; align-items:center; gap:4px; }
+.mv-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0; }
+</style>    <!-- #EndEditable -->
     
     <style type="text/css">
-
 
     /* ==========================================
        CRITICAL DWT LAYOUT STYLES ONLY
