@@ -164,7 +164,29 @@ p.CellLabel, li.CellLabel, div.CellLabel {
     margin-bottom: 8pt;
     line-height: 115%;
 }
+/* Aliases for the Structured Mishnah pages
+   (the docx-exported HTML uses capitalized class names) */
+.Horizontal1, .Horizontal10 { color: #2563eb; font-weight: 500; }
+.Horizontal2 { color: #008080; font-weight: 500; }
+.Horizontal3 { color: #800000; font-weight: 500; }
+.Vertical1   { color: #d97706; font-weight: 500; }
+.Closure     { color: #db2777; font-weight: 500; }
+.Ciasm1      { color: #7c3aed; font-weight: 500; }
+.Ciasm2      { color: #c026d3; font-weight: 500; }
+.InternalParallel { color: #16a34a; font-weight: 500; }
 
+.Subunit { font-weight: 700; }
+.Albeck  { color: #555; font-size: 0.95em; }
+
+/* The "Red" run style appears as an empty span in the source —
+   left harmless if it ever has content. */
+.Red { color: #cc0000; }
+
+/* Page layout for the structured-Mishnah chapter table */
+.Mesechet { font-weight: 700; font-size: 1.1rem; }
+.Perek    { font-weight: 700; font-size: 1.1rem; }
+.logo     { font-weight: 700; text-align: center; }
+.HMC      { text-align: center; }   /* "Hebrew Mishnah Cell" — the cell paragraph style */
 
 /* ====================================
    3. DWT STRUCTURE (Header, Footer, Navigation)
