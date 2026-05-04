@@ -391,12 +391,12 @@
 <input type="text" id="text-query" placeholder="לדוגמה: משה קבל תורה" oninput="onTextSearch()">
 </label>
 <div class="filter-row">
-<label data-i18n="filter_seder">Seder:
+<label><span data-i18n="filter_seder">Seder:</span>
 <select id="text-seder" onchange="onTextSearch()">
 <option value="">All</option>
 </select>
 </label>
-<label data-i18n="filter_tractate">Tractate:
+<label><span data-i18n="filter_tractate">Tractate:</span>
 <select id="text-tractate" onchange="onTextSearch()">
 <option value="">All</option>
 </select>
@@ -407,7 +407,7 @@
 <!-- STRUCTURE SEARCH CONTROLS -->
 <div id="controls-structure" class="search-controls" style="display:none">
 <div class="filter-row">
-<label data-i18n="filter_shape">Shape pattern:
+<label><span data-i18n="filter_shape">Shape pattern:</span>
 <select id="struct-shape" onchange="onStructSearch()">
 <option value="">Any</option>
 <option value="palindrome" data-i18n="shape_palindrome">Palindromic (rows mirror)</option>
@@ -417,8 +417,9 @@
 <option value="has_full_row" data-i18n="shape_has_full">Contains a full-width row</option>
 </select>
 </label>
-<label data-i18n="filter_has_headers">
-<input type="checkbox" id="struct-headers" onchange="onStructSearch()"> Has named column headers
+<label>
+<input type="checkbox" id="struct-headers" onchange="onStructSearch()">
+<span data-i18n="filter_has_headers">Has named column headers</span>
 </label>
 </div>
 <div class="filter-row">
@@ -435,12 +436,12 @@
 </span>
 </div>
 <div class="filter-row">
-<label data-i18n="filter_seder">Seder:
+<label><span data-i18n="filter_seder">Seder:</span>
 <select id="struct-seder" onchange="onStructSearch()">
 <option value="">All</option>
 </select>
 </label>
-<label data-i18n="filter_rows">Rows:
+<label><span data-i18n="filter_rows">Rows:</span>
 <select id="struct-rows" onchange="onStructSearch()">
 <option value="">Any</option>
 <option value="1">1</option><option value="2">2</option><option value="3">3</option>
