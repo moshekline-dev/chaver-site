@@ -19,60 +19,7 @@
     <!-- #EndEditable -->
     
     <!-- #BeginEditable "meta" -->
-    <meta name="description" content="Search the Hebrew text of all 524 Mishnah chapters, or find chapters by structural pattern — palindromes, envelopes, chiastic structures, marker types. Built on the open Mishnah dataset by Moshe Kline.">
-
-<meta name="keywords" content="Mishnah search, search Mishnah online, Hebrew Mishnah search, structured Mishnah search, Mishnah text search, Mishnah palindrome, Mishnah envelope structure, חיפוש משנה">
-
-<meta name="author" content="Moshe Kline">
-
-<link rel="canonical" href="https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-search">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Search the Structured Mishnah | Chaver.com">
-<meta property="og:description" content="Search Hebrew text across all 524 Mishnah chapters or find chapters by structural pattern. Free tool built on the open Mishnah dataset.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-search">
-<meta property="og:site_name" content="Chaver.com">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Search the Structured Mishnah">
-<meta name="twitter:description" content="Search Hebrew text across all 524 chapters or find chapters by structural pattern.">
-
-<!-- Schema.org WebApplication markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Mishnah Search",
-  "alternateName": "חיפוש במשנה כדרכה",
-  "description": "Free search tool for the structured Mishnah. Search Hebrew text across all 524 chapters, find chapters by structural pattern, or discover chapters with similar architectural shapes.",
-  "url": "https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-search",
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Any (browser-based)",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "creator": {
-    "@type": "Person",
-    "name": "Moshe Kline",
-    "url": "https://chaver.com/about-Moshe-Kline.html"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Chaver.com",
-    "url": "https://chaver.com"
-  },
-  "isBasedOn": {
-    "@type": "Dataset",
-    "name": "The Structured Mishnah Dataset",
-    "url": "https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-data"
-  },
-  "inLanguage": ["he", "en"]
-}
-</script>
+    <!-- Page-specific meta tags can be added here -->
     <!-- #EndEditable -->
     
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
@@ -646,29 +593,43 @@ async function loadDataset() {
 }
 
 function populateDropdowns() {
-    // Sedarim
-    const sedarim = new Set();
+    // Build canonical Hebrew-name lookups that survive empty fields
+    const sederHebByEn = {};
+    const tractateHebByEn = {};
     const tractatesBySeder = {};
-    const tractateLabels = {};
+    
     chapterKeys.forEach(k => {
         const ch = dataset[k];
-        sedarim.add(ch.seder_en);
+        if (ch.seder_he && !sederHebByEn[ch.seder_en]) {
+            sederHebByEn[ch.seder_en] = ch.seder_he.replace(/^סדר\s+/, '');
+        }
+        if (ch.tractate_he && !tractateHebByEn[ch.tractate_en]) {
+            tractateHebByEn[ch.tractate_en] = ch.tractate_he.replace(/^מסכת\s+/, '');
+        }
         if (!tractatesBySeder[ch.seder_en]) tractatesBySeder[ch.seder_en] = new Set();
         tractatesBySeder[ch.seder_en].add(ch.tractate_en);
-        tractateLabels[ch.tractate_en] = lang === 'he' ? ch.tractate_he : ch.tractate_en;
     });
     
-    const orderedSedarim = SEDER_ORDER.filter(s => sedarim.has(s));
+    // Stash on window so renderers can use them
+    window._sederHebByEn = sederHebByEn;
+    window._tractateHebByEn = tractateHebByEn;
+    
+    const sederLabel = (en) => lang === 'he'
+        ? ('סדר ' + (sederHebByEn[en] || en))
+        : en;
+    const tractateLabel = (en) => lang === 'he'
+        ? ('מסכת ' + (tractateHebByEn[en] || en))
+        : en;
+    
+    const orderedSedarim = SEDER_ORDER.filter(s => tractatesBySeder[s]);
     
     ['text-seder', 'struct-seder'].forEach(id => {
         const el = document.getElementById(id);
         const current = el.value;
         el.innerHTML = '<option value="">' + (lang === 'he' ? 'הכל' : 'All') + '</option>';
         orderedSedarim.forEach(s => {
-            const ch = chapterKeys.find(k => dataset[k].seder_en === s);
-            const label = lang === 'he' ? dataset[ch].seder_he : s;
             const opt = document.createElement('option');
-            opt.value = s; opt.textContent = label;
+            opt.value = s; opt.textContent = sederLabel(s);
             el.appendChild(opt);
         });
         el.value = current;
@@ -682,7 +643,7 @@ function populateDropdowns() {
     allTractates.forEach(tr => {
         const opt = document.createElement('option');
         opt.value = tr;
-        opt.textContent = tractateLabels[tr] || tr;
+        opt.textContent = tractateLabel(tr);
         tractateEl.appendChild(opt);
     });
     tractateEl.value = currentTr;
@@ -700,13 +661,32 @@ function populateDropdowns() {
     }).forEach(k => {
         const ch = dataset[k];
         const label = lang === 'he'
-            ? `${ch.tractate_he} פרק ${ch.chapter_he}`
+            ? `${tractateLabel(ch.tractate_en)} פרק ${ch.chapter_he || ch.chapter_num}`
             : `${ch.tractate_en} ${ch.chapter_num}`;
         const opt = document.createElement('option');
         opt.value = k; opt.textContent = label;
         simEl.appendChild(opt);
     });
     simEl.value = currentSim;
+}
+
+// Helper for renderers to get the same Hebrew labels
+function tractateDisplay(ch) {
+    if (lang === 'he') {
+        const stem = (window._tractateHebByEn && window._tractateHebByEn[ch.tractate_en])
+            || ch.tractate_he.replace(/^מסכת\s+/, '')
+            || ch.tractate_en;
+        return 'מסכת ' + stem;
+    }
+    return ch.tractate_en;
+}
+
+// Append .htm to clean URLs so the server resolves them
+function chapterUrl(ch) {
+    const u = ch.source_url || '';
+    if (!u) return '#';
+    if (/\.html?$/i.test(u)) return u;
+    return u + '.htm';
 }
 
 function getCellsAndSubdivisions(cell) {
@@ -787,17 +767,17 @@ function renderTextResults(matches, count, query) {
     
     for (const tr of orderedTractates) {
         const trData = matches[tr];
-        const trLabel = lang === 'he' ? trData[0].chapter.tractate_he : tr;
+        const trLabel = tractateDisplay(trData[0].chapter);
         html += `<div class="tractate-group"><h3>${escapeHtml(trLabel)}</h3>`;
         
         trData.sort((a, b) => a.chapter.chapter_num - b.chapter.chapter_num);
         for (const {chapter, hits} of trData) {
             const chLabel = lang === 'he'
-                ? `פרק ${chapter.chapter_he}`
+                ? `פרק ${chapter.chapter_he || chapter.chapter_num}`
                 : `${t('chapter')} ${chapter.chapter_num}`;
             html += `<div class="chapter-result">`;
             html += `<div class="chapter-result-header"><strong>${escapeHtml(chLabel)}</strong>`;
-            html += `<a href="${chapter.source_url}">${t('view_in_portal')}</a></div>`;
+            html += `<a href="${chapterUrl(chapter)}">${t('view_in_portal')}</a></div>`;
             for (const h of hits) {
                 html += `<div class="cell-result">`;
                 html += `<span class="cell-label">${escapeHtml(h.label)}${h.mishnah ? ' (' + escapeHtml(h.mishnah) + ')' : ''}</span>`;
@@ -933,17 +913,17 @@ function renderStructResults(results) {
     
     for (const tr of ordered) {
         const list = byTractate[tr];
-        const trLabel = lang === 'he' ? list[0].chapter.tractate_he : tr;
+        const trLabel = tractateDisplay(list[0].chapter);
         html += `<div class="tractate-group"><h3>${escapeHtml(trLabel)}</h3>`;
         list.sort((a, b) => a.chapter.chapter_num - b.chapter.chapter_num);
         for (const {chapter} of list) {
             const chLabel = lang === 'he'
-                ? `פרק ${chapter.chapter_he}`
+                ? `פרק ${chapter.chapter_he || chapter.chapter_num}`
                 : `${t('chapter')} ${chapter.chapter_num}`;
             const markers = [...chapterMarkers(chapter)].sort();
             html += `<div class="chapter-result">`;
             html += `<div class="chapter-result-header"><strong>${escapeHtml(chLabel)}</strong>`;
-            html += `<a href="${chapter.source_url}">${t('view_in_portal')}</a></div>`;
+            html += `<a href="${chapterUrl(chapter)}">${t('view_in_portal')}</a></div>`;
             html += `<div class="shape-display">${t('shape_label')} ${escapeHtml(JSON.stringify(chapter.shape))} · ${chapterCellCount(chapter)} ${t('cells_label')}</div>`;
             if (chapter.column_headers) {
                 html += `<div class="cell-result">${chapter.column_headers.map(escapeHtml).join(' / ')}</div>`;
@@ -1012,11 +992,11 @@ function renderSimilarList(list) {
     let html = '<ul class="results-list">';
     for (const {chapter, score} of list) {
         const chLabel = lang === 'he'
-            ? `${chapter.tractate_he} פרק ${chapter.chapter_he}`
+            ? `${tractateDisplay(chapter)} פרק ${chapter.chapter_he || chapter.chapter_num}`
             : `${chapter.tractate_en} ${t('chapter')} ${chapter.chapter_num}`;
         html += `<li class="chapter-result">`;
         html += `<div class="chapter-result-header"><strong>${escapeHtml(chLabel)}</strong>`;
-        html += `<a href="${chapter.source_url}">${t('view_in_portal')}</a></div>`;
+        html += `<a href="${chapterUrl(chapter)}">${t('view_in_portal')}</a></div>`;
         html += `<div class="shape-display">${t('shape_label')} ${escapeHtml(JSON.stringify(chapter.shape))}`;
         if (score < 1) html += ` · ${Math.round(score * 100)}%`;
         html += `</div></li>`;
