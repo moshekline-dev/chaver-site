@@ -665,7 +665,18 @@ strong.element-count {
     text-align: right;
     font-family: 'David Libre', 'Frank Ruehl CLM', 'SBL Hebrew', serif;
 }
+/* RTL override for Hebrew Torah tables */
+[dir=rtl] .torah-table td,
+[dir=rtl] .scripture-table tbody td {
+    text-align: right;
+    direction: rtl;
+}
 
+[dir=rtl] .scripture-table .torah,
+[dir=rtl] .torah {
+    text-align: right;
+    direction: rtl;
+}
 /* Highlighted Boxes */
 .structural-note,
 .observation {
