@@ -677,6 +677,13 @@ strong.element-count {
     text-align: right;
     direction: rtl;
 }
+/* Keep cell labels and headers centered in RTL */
+[dir=rtl] .cell-label,
+[dir=rtl] .scripture-table thead th,
+[dir=rtl] .scripture-table .cell-label {
+    text-align: center;
+}
+
 /* Highlighted Boxes */
 .structural-note,
 .observation {
