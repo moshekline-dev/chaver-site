@@ -1,4 +1,369 @@
-<div dir="rtl" lang="he">
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained.html">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names.html">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture.html">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers.html">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets.html">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center.html">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse.html">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map.html">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared.html">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline.html">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <div dir="rtl" lang="he">
 <div class="hebrew-torah-unit-wrapper" dir="rtl">
 <div class="unit-header" style="text-align: center">
 <h1 dir="rtl">ספר בראשית יחידה 15</h1>
@@ -8,39 +373,39 @@
 <table class="torah-table" style="direction: rtl" dir="rtl">
 <tr>
 <td class="torah-column">
-<h3 class="section-header">1א</h3>
+<h3 class="section-header">1A</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">לב:ד</span> <span class="vertical1">וישלח</span> יעקב מלאכים לפניו אל עשו אחיו ארצה שעיר שדה אדום <span class="verse-number">לב:ה</span> ויצו אתם לאמר כה תאמרון לאדני לעשו כה אמר עבדך יעקב עם לבן גרתי ואחר עד עתה <span class="verse-number">לב:ו</span> ויהי לי שור וחמור צאן ועבד ושפחה <span class="vertical1">ואשלחה</span> להגיד לאדני למצא חן בעיניך <span class="verse-number">לב:ז</span> וישבו המלאכים אל יעקב לאמר באנו אל אחיך אל עשו וגם הלך לקראתך וארבע מאות איש עמו <span class="verse-number">לב:ח</span> ויירא יעקב מאד ויצר לו ויחץ את העם אשר אתו ואת הצאן ואת הבקר והגמלים לשני מחנות <span class="verse-number">לב:ט</span> ויאמר אם יבוא עשו אל המחנה האחת והכהו והיה המחנה הנשאר לפליטה
+<span class="section-label">a</span> <span class="verse-number">לב:ד</span> <span class="vertical1">וישלח</span> יעקב מלאכים לפניו אל עשו אחיו ארצה שעיר שדה אדום <span class="verse-number">לב:ה</span> ויצו אתם לאמר כה תאמרון לאדני לעשו כה אמר עבדך יעקב עם לבן גרתי ואחר עד עתה <span class="verse-number">לב:ו</span> ויהי לי שור וחמור צאן ועבד ושפחה <span class="vertical1">ואשלחה</span> להגיד לאדני למצא חן בעיניך <span class="verse-number">לב:ז</span> וישבו המלאכים אל יעקב לאמר באנו אל אחיך אל עשו וגם הלך לקראתך וארבע מאות איש עמו <span class="verse-number">לב:ח</span> ויירא יעקב מאד ויצר לו ויחץ את העם אשר אתו ואת הצאן ואת הבקר והגמלים לשני מחנות <span class="verse-number">לב:ט</span> ויאמר אם יבוא עשו אל המחנה האחת והכהו והיה המחנה הנשאר לפליטה
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">1ב</h3>
+<h3 class="section-header">1B</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">לב:יד</span> וילן שם בלילה ההוא ויקח מן הבא בידו מנחה לעשו אחיו <span class="verse-number">לב:טו</span> עזים מאתים ותישים עשרים רחלים מאתים ואילים עשרים <span class="verse-number">לב:טז</span> גמלים מיניקות ובניהם שלשים פרות ארבעים ופרים עשרה אתנת עשרים ועירם עשרה <span class="verse-number">לב:יז</span> ויתן ביד עבדיו עדר עדר לבדו ויאמר אל עבדיו עברו לפני ורוח תשימו בין עדר ובין עדר <span class="verse-number">לב:יח</span> ויצו את הראשון לאמר כי יפגשך עשו אחי ושאלך לאמר למי אתה ואנה תלך ולמי אלה לפניך <span class="verse-number">לב:יט</span> ואמרת לעבדך ליעקב מנחה הוא שלוחה לאדני לעשו והנה גם הוא אחרינו <span class="verse-number">לב:כ</span> ויצו גם את השני גם את השלישי גם את כל ההלכים אחרי העדרים לאמר כדבר הזה תדברון אל עשו במצאכם אתו <span class="verse-number">לב:כא</span> ואמרתם גם הנה עבדך יעקב אחרינו כי אמר אכפרה פניו במנחה ההלכת לפני ואחרי כן אראה פניו אולי ישא פני
-          </div>
-</td>
-</tr>
-<tr>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">לב:י</span> ויאמר יעקב אלהי אבי אברהם ואלהי אבי יצחק <span class="a">יהוה</span> האמר אלי שוב לארצך ולמולדתך ואיטיבה עמך <span class="verse-number">לב:יא</span> קטנתי מכל החסדים ומכל האמת אשר עשית את עבדך כי במקלי עברתי את הירדן הזה ועתה הייתי לשני מחנות <span class="verse-number">לב:יב</span> הצילני נא מיד אחי מיד עשו כי ירא אנכי אתו פן יבוא והכני <span class="horizontal1">אם על בנים</span> <span class="verse-number">לב:יג</span> ואתה אמרת היטב איטיב עמך ושמתי את זרעך כחול הים אשר לא יספר מרב
-          </div>
-</td>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">לב:כב</span> ותעבר המנחה על פניו והוא לן בלילה ההוא במחנה <span class="verse-number">לב:כג</span> ויקם בלילה הוא ויקח <span class="horizontal1">את שתי נשיו ואת שתי שפחתיו ואת אחד עשר ילדיו</span> ויעבר את מעבר יבק <span class="verse-number">לב:כד</span> ויקחם ויעברם את הנחל ויעבר את אשר לו
+<span class="section-label">a</span> <span class="verse-number">לב:יד</span> וילן שם בלילה ההוא ויקח מן הבא בידו מנחה לעשו אחיו <span class="verse-number">לב:טו</span> עזים מאתים ותישים עשרים רחלים מאתים ואילים עשרים <span class="verse-number">לב:טז</span> גמלים מיניקות ובניהם שלשים פרות ארבעים ופרים עשרה אתנת עשרים ועירם עשרה <span class="verse-number">לב:יז</span> ויתן ביד עבדיו עדר עדר לבדו ויאמר אל עבדיו עברו לפני ורוח תשימו בין עדר ובין עדר <span class="verse-number">לב:יח</span> ויצו את הראשון לאמר כי יפגשך עשו אחי ושאלך לאמר למי אתה ואנה תלך ולמי אלה לפניך <span class="verse-number">לב:יט</span> ואמרת לעבדך ליעקב מנחה הוא שלוחה לאדני לעשו והנה גם הוא אחרינו <span class="verse-number">לב:כ</span> ויצו גם את השני גם את השלישי גם את כל ההלכים אחרי העדרים לאמר כדבר הזה תדברון אל עשו במצאכם אתו <span class="verse-number">לב:כא</span> ואמרתם גם הנה עבדך יעקב אחרינו כי אמר אכפרה פניו במנחה ההלכת לפני ואחרי כן אראה פניו אולי ישא פני
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
-<h3 class="section-header">2א</h3>
+<div class="torah-text">
+<span class="section-label">b</span> <span class="verse-number">לב:י</span> ויאמר יעקב אלהי אבי אברהם ואלהי אבי יצחק <span class="a">יהוה</span> האמר אלי שוב לארצך ולמולדתך ואיטיבה עמך <span class="verse-number">לב:יא</span> קטנתי מכל החסדים ומכל האמת אשר עשית את עבדך כי במקלי עברתי את הירדן הזה ועתה הייתי לשני מחנות <span class="verse-number">לב:יב</span> הצילני נא מיד אחי מיד עשו כי ירא אנכי אתו פן יבוא והכני <span class="horizontal1">אם על בנים</span> <span class="verse-number">לב:יג</span> ואתה אמרת היטב איטיב עמך ושמתי את זרעך כחול הים אשר לא יספר מרב
+          </div>
+</td>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">b</span> <span class="verse-number">לב:כב</span> ותעבר המנחה על פניו והוא לן בלילה ההוא במחנה <span class="verse-number">לב:כג</span> ויקם בלילה הוא ויקח <span class="horizontal1">את שתי נשיו ואת שתי שפחתיו ואת אחד עשר ילדיו</span> ויעבר את מעבר יבק <span class="verse-number">לב:כד</span> ויקחם ויעברם את הנחל ויעבר את אשר לו
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<h3 class="section-header">2A</h3>
 <div class="torah-text">
 <span class="verse-number">לב:כה</span> ויותר יעקב לבדו ויאבק איש עמו עד עלות השחר <span class="verse-number">לב:כו</span> וירא כי לא יכל לו ויגע בכף ירכו ותקע כף ירך יעקב בהאבקו עמו <span class="verse-number">לב:כז</span> ויאמר <span class="vertical1">שלחני</span> כי עלה השחר ויאמר לא <span class="vertical1">אשלחך</span> כי אם ברכתני <span class="verse-number">לב:כח</span> ויאמר אליו מה שמך ויאמר יעקב <span class="verse-number">לב:כט</span> ויאמר לא יעקב יאמר עוד שמך כי אם ישראל כי שרית עם <span>אלהים</span> ועם אנשים ותוכל <span class="verse-number">לב:ל</span> וישאל יעקב ויאמר הגידה נא שמך ויאמר למה זה תשאל לשמי <span class="horizontal1">ויברך אתו</span> שם <span class="verse-number">לב:לא</span> <span class="horizontal1">ויקרא יעקב שם המקום פניאל כי ראיתי</span> <span>אלהים</span> <span class="horizontal1">פנים אל פנים ותנצל נפשי</span> <span class="verse-number">לב:לב</span> ויזרח לו השמש כאשר עבר את פנואל והוא צלע על ירכו <span class="verse-number">לב:לג</span> על כן לא יאכלו בני ישראל את גיד הנשה אשר על כף הירך עד היום הזה כי נגע בכף ירך יעקב בגיד הנשה
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">2ב</h3>
+<h3 class="section-header">2B</h3>
 <div class="torah-text">
 <span class="verse-number">לג:א</span> וישא יעקב עיניו וירא והנה עשו בא ועמו ארבע מאות איש ויחץ את הילדים על לאה ועל רחל ועל שתי השפחות <span class="verse-number">לג:ב</span> וישם את השפחות ואת ילדיהן ראשנה ואת לאה וילדיה אחרנים ואת רחל ואת יוסף אחרנים <span class="verse-number">לג:ג</span> והוא עבר לפניהם וישתחו ארצה שבע פעמים עד גשתו עד אחיו <span class="verse-number">לג:ד</span> וירץ עשו לקראתו ויחבקהו ויפל על צוארו וישקהו ויבכו <span class="verse-number">לג:ה</span> וישא את עיניו וירא את הנשים ואת הילדים ויאמר מי אלה לך ויאמר הילדים אשר חנן <span>אלהים</span> את עבדך <span class="verse-number">לג:ו</span> ותגשן השפחות הנה וילדיהן ותשתחוין <span class="verse-number">לג:ז</span> ותגש גם לאה וילדיה וישתחוו ואחר נגש יוסף ורחל וישתחוו <span class="verse-number">לג:ח</span> ויאמר מי לך כל המחנה הזה אשר פגשתי ויאמר למצא חן בעיני אדני <span class="verse-number">לג:ט</span> ויאמר עשו יש לי רב אחי יהי לך אשר לך <span class="verse-number">לג:י</span> ויאמר יעקב אל נא אם נא מצאתי חן בעיניך ולקחת מנחתי מידי <span class="horizontal1">כי על כן ראיתי פניך כראת פני</span> <span>אלהים</span> <span class="horizontal1">ותרצני</span> <span class="verse-number">לג:יא</span> <span class="horizontal1">קח נא את ברכתי</span> אשר הבאת לך כי חנני <span>אלהים</span> וכי יש לי כל ויפצר בו ויקח <span class="verse-number">לג:יב</span> ויאמר נסעה ונלכה ואלכה לנגדך <span class="verse-number">לג:יג</span> ויאמר אליו אדני ידע כי הילדים רכים והצאן והבקר עלות עלי ודפקום יום אחד ומתו כל הצאן <span class="verse-number">לג:יד</span> יעבר נא אדני לפני עבדו ואני אתנהלה לאטי לרגל המלאכה אשר לפני ולרגל הילדים עד אשר אבא אל אדני שעירה <span class="verse-number">לג:טו</span> ויאמר עשו אציגה נא עמך מן העם אשר אתי ויאמר למה זה אמצא חן בעיני אדני <span class="verse-number">לג:טז</span> וישב ביום ההוא עשו לדרכו שעירה
           </div>
@@ -50,3 +415,83 @@
 </div>
 </div>
 </div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline.html">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

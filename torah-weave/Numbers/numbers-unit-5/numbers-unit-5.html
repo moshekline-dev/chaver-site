@@ -1,6 +1,371 @@
-<div class="content">
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained.html">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names.html">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture.html">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers.html">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets.html">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center.html">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse.html">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map.html">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared.html">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline.html">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <div class="content">
 <h1 class="unit-header">Numbers Unit 5 (13:1-14:45)</h1>
-<div><table class="scripture-table"><tr><td><p class="cell-label">1a</p></td><td><p class="cell-label">1b</p></td></tr><tr><td><p class="torah"><span class="VerseNumber"><b>13:1</b></span> And the LORD spoke
+<div><table class="scripture-table"><tr><td><p class="cell-label">1A</p></td><td><p class="cell-label">1B</p></td></tr><tr><td><p class="torah"><span class="VerseNumber"><b>13:1</b></span> And the LORD spoke
   unto Moses, saying: <span class="VerseNumber"><b>13:2</b></span> <span class="horizontal1"><b>'Send thou men, that they may spy out the land of Canaan</b></span>,
   which I give unto the children of Israel; of every tribe of their fathers
   shall ye send a man, every one a prince among them.' <span class="VerseNumber"><b>13:3</b></span>
@@ -37,7 +402,7 @@
   Eshcol, and cut down from thence a branch with one cluster of grapes, and
   they bore it upon a pole between two; they took also of the pomegranates, and
   of the figs.-- <span class="VerseNumber"><b>13:24</b></span> <span class="horizontal1"><b>That place was called the valley of Eshcol</b></span>,
-  because of the cluster which the children of Israel cut down from thence.--</p></td></tr><tr><td><p class="cell-label">2a</p></td><td><p class="cell-label">2b</p></td></tr><tr><td><p class="torah"><span class="VerseNumber"><b>13:25</b></span> And they returned
+  because of the cluster which the children of Israel cut down from thence.--</p></td></tr><tr><td><p class="cell-label">2A</p></td><td><p class="cell-label">2B</p></td></tr><tr><td><p class="torah"><span class="VerseNumber"><b>13:25</b></span> And they returned
   from spying out the land at the end of forty days. <span class="VerseNumber"><b>13:26</b></span>
   And they went and came to Moses, and to Aaron, and to all the congregation of
   the children of Israel, unto the wilderness of Paran, to Kadesh; and brought
@@ -82,7 +447,7 @@
   is with us; fear them not.' <span class="VerseNumber"><b>14:10</b></span> But <span class="horizontal1"><b>all the congregation</b></span> bade stone them with
   stones, when the glory of the LORD appeared in the tent of meeting unto all
   the children of Israel. <span class="HebrewParagraph"><span style="font-weight:
-  normal">{P}</span></span></p></td></tr></table><table class="scripture-table"><tr><td><p class="cell-label">3a</p></td><td><p class="cell-label">3b</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>A</b></span> <span class="VerseNumber"><b>14:11</b></span> And the LORD said unto Moses: <span class="horizontal1"><b>'How long </b></span>will this people despise Me? and how
+  normal">{P}</span></span></p></td></tr></table><table class="scripture-table"><tr><td><p class="cell-label">3A</p></td><td><p class="cell-label">3B</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>14:11</b></span> And the LORD said unto Moses: <span class="horizontal1"><b>'How long </b></span>will this people despise Me? and how
   long will they not believe in Me, for all the signs which I have wrought
   among them? <span class="VerseNumber"><b>14:12</b></span> I will smite them
   with the pestilence, and destroy them, and will make of thee a nation greater
@@ -102,7 +467,7 @@
   will by no means clear the guilty; visiting the iniquity of the fathers upon
   the children, upon the third and upon the fourth generation. <span class="VerseNumber"><b>14:19</b></span> Pardon, I pray Thee, the iniquity of
   this people according unto the greatness of Thy lovingkindness, and according
-  as Thou hast forgiven this people, from Egypt even until now.' </p></td><td><p class="torah"><span class="CellSubdivision"><b>A</b></span> <span class="VerseNumber"><b>14:26</b></span> And the LORD spoke unto Moses and unto
+  as Thou hast forgiven this people, from Egypt even until now.' </p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>14:26</b></span> And the LORD spoke unto Moses and unto
   Aaron, saying: <span class="VerseNumber"><b>14:27</b></span> '<span class="horizontal1"><b>How long </b></span>shall I bear with this evil
   congregation, that keep <span class="vertical1"><b>murmuring against Me</b></span>?
   I have heard the murmurings of the children of Israel, which they keep
@@ -122,7 +487,7 @@
   ye spied out the land, even forty days, for every day a year, shall ye bear
   your iniquities, even forty years, and ye shall know My displeasure. <span class="VerseNumber"><b>14:35</b></span> I the LORD have spoken, surely this
   will I do unto all this evil congregation, that are gathered together against
-  Me; in this wilderness they shall be consumed, and there they shall die.' </p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>B</b></span> <span class="VerseNumber"><b>14:20</b></span> And the LORD said: 'I have pardoned
+  Me; in this wilderness they shall be consumed, and there they shall die.' </p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>14:20</b></span> And the LORD said: 'I have pardoned
   according to thy word. <span class="VerseNumber"><b>14:21</b></span> But in
   very deed, as I live--and all the earth shall be filled with the glory of the
   LORD-- <span class="VerseNumber"><b>14:22</b></span> surely all those men that
@@ -136,12 +501,12 @@
   whereinto he went; and his seed shall possess it. <span class="VerseNumber"><b>14:25</b></span>
 <span class="vertical1"><b>Now the Amalekite and the Canaanite dwell in the
   Vale</b></span>; tomorrow turn ye, and get you into the wilderness by the way
-  to the Red Sea.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>B</b></span> <span class="VerseNumber"><b>14:36</b></span> And the men, whom Moses sent to spy out
+  to the Red Sea.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>14:36</b></span> And the men, whom Moses sent to spy out
   the land, and who, when they returned, made all the congregation to murmur
   against him, by bringing up an evil report against the land, <span class="VerseNumber"><b>14:37</b></span> even those men that did bring up an
   evil report of the land, died by the plague before the LORD. <span class="VerseNumber"><b>14:38</b></span> But <span class="vertical1"><b>Joshua the
   son of Nun, and Caleb the son of Jephunneh</b></span>, remained alive of
-  those men that went to spy out the land.</p></td></tr><tr><td><p class="cell-label">4a</p></td><td><p class="cell-label">4b</p></td></tr><tr><td><p class="torah"><span class="VerseNumber"><b>14:39</b></span> And Moses told
+  those men that went to spy out the land.</p></td></tr><tr><td><p class="cell-label">4A</p></td><td><p class="cell-label">4B</p></td></tr><tr><td><p class="torah"><span class="VerseNumber"><b>14:39</b></span> And Moses told
   these words unto all the children of Israel; and the people mourned greatly. <span class="VerseNumber"><b>14:40</b></span> And they rose up early in the morning, and
   got them up to the top of the mountain, saying: 'Lo, we are here, and will go
   up unto the place which the LORD hath promised; for we have sinned.' <span class="VerseNumber"><b>14:41</b></span> And Moses said: <span class="closure"><b>'Wherefore
@@ -156,3 +521,83 @@
   and the Canaanite, who dwelt in that hill-country, came down, and smote them
   and beat them down, even unto Hormah. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr></table></div>
 </div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline.html">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,4 +1,369 @@
-<div dir="rtl" lang="he">
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained.html">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names.html">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture.html">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers.html">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets.html">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center.html">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse.html">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map.html">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared.html">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline.html">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <div dir="rtl" lang="he">
 <div class="hebrew-torah-unit-wrapper" dir="rtl">
 <div class="unit-header" style="text-align: center">
 <h1 dir="rtl">ספר ויקרא יחידה 4</h1>
@@ -8,113 +373,113 @@
 <table class="torah-table" style="direction: rtl" dir="rtl">
 <tr>
 <td class="torah-column">
-<h3 class="section-header">1א</h3>
+<h3 class="section-header">1A</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ח:א</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ח:ב</span> <span class="horizontal1">קח</span> את אהרן ואת בניו אתו ואת הבגדים ואת שמן המשחה ואת פר החטאת ואת שני האילים ואת סל המצות <span class="verse-number">ח:ג</span> ואת כל העדה הקהל אל פתח אהל מועד <span class="verse-number">ח:ד</span> ויעש משה <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> אתו ותקהל העדה אל פתח אהל מועד <span class="verse-number">ח:ה</span> ויאמר משה אל העדה זה הדבר <span class="internalparallel">אשר צוה</span> <span class="a">יהוה</span> לעשות
+<span class="section-label">a</span> <span class="verse-number">ח:א</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ח:ב</span> <span class="horizontal1">קח</span> את אהרן ואת בניו אתו ואת הבגדים ואת שמן המשחה ואת פר החטאת ואת שני האילים ואת סל המצות <span class="verse-number">ח:ג</span> ואת כל העדה הקהל אל פתח אהל מועד <span class="verse-number">ח:ד</span> ויעש משה <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> אתו ותקהל העדה אל פתח אהל מועד <span class="verse-number">ח:ה</span> ויאמר משה אל העדה זה הדבר <span class="internalparallel">אשר צוה</span> <span class="a">יהוה</span> לעשות
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">1ב</h3>
+<h3 class="section-header">1B</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ט:א</span> ויהי ביום השמיני קרא משה לאהרן ולבניו ולזקני ישראל <span class="verse-number">ט:ב</span> ויאמר אל אהרן <span class="horizontal1">קח</span> לך עגל בן בקר לחטאת ואיל לעלה תמימם והקרב לפני <span class="a">יהוה</span> <span class="verse-number">ט:ג</span> ואל בני ישראל תדבר לאמר קחו <span class="vertical1">שעיר עזים לחטאת</span> ועגל וכבש בני שנה תמימם לעלה <span class="verse-number">ט:ד</span> <span class="vertical1">ושור ואיל לשלמים לזבח לפני</span> <span class="a">יהוה</span> <span class="vertical1">ומנחה בלולה בשמן</span> כי היום <span class="a">יהוה</span> נראה אליכם <span class="verse-number">ט:ה</span> ויקחו את <span class="internalparallel">אשר צוה</span> משה אל פני אהל מועד
+<span class="section-label">a</span> <span class="verse-number">ט:א</span> ויהי ביום השמיני קרא משה לאהרן ולבניו ולזקני ישראל <span class="verse-number">ט:ב</span> ויאמר אל אהרן <span class="horizontal1">קח</span> לך עגל בן בקר לחטאת ואיל לעלה תמימם והקרב לפני <span class="a">יהוה</span> <span class="verse-number">ט:ג</span> ואל בני ישראל תדבר לאמר קחו <span class="vertical1">שעיר עזים לחטאת</span> ועגל וכבש בני שנה תמימם לעלה <span class="verse-number">ט:ד</span> <span class="vertical1">ושור ואיל לשלמים לזבח לפני</span> <span class="a">יהוה</span> <span class="vertical1">ומנחה בלולה בשמן</span> כי היום <span class="a">יהוה</span> נראה אליכם <span class="verse-number">ט:ה</span> ויקחו את <span class="internalparallel">אשר צוה</span> משה אל פני אהל מועד
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">ח:ו</span> <span class="horizontal1">ויקרב</span> משה את אהרן ואת בניו וירחץ אתם במים <span class="verse-number">ח:ז</span> ויתן עליו את הכתנת ויחגר אתו באבנט וילבש אתו את המעיל ויתן עליו את האפד ויחגר אתו בחשב האפד ויאפד לו בו <span class="verse-number">ח:ח</span> וישם עליו את החשן ויתן אל החשן את האורים ואת התמים <span class="verse-number">ח:ט</span> וישם את המצנפת על ראשו וישם על המצנפת אל מול פניו את ציץ הזהב נזר הקדש <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
+<span class="section-label">b</span> <span class="verse-number">ח:ו</span> <span class="horizontal1">ויקרב</span> משה את אהרן ואת בניו וירחץ אתם במים <span class="verse-number">ח:ז</span> ויתן עליו את הכתנת ויחגר אתו באבנט וילבש אתו את המעיל ויתן עליו את האפד ויחגר אתו בחשב האפד ויאפד לו בו <span class="verse-number">ח:ח</span> וישם עליו את החשן ויתן אל החשן את האורים ואת התמים <span class="verse-number">ח:ט</span> וישם את המצנפת על ראשו וישם על המצנפת אל מול פניו את ציץ הזהב נזר הקדש <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="horizontal1">ויקרבו</span> כל העדה ויעמדו לפני <span class="a">יהוה</span> <span class="verse-number">ט:ו</span> ויאמר משה זה הדבר <span class="internalparallel">אשר צוה</span> <span class="a">יהוה</span> תעשו וירא אליכם כבוד <span class="a">יהוה</span>
+<span class="section-label">b</span> <span class="horizontal1">ויקרבו</span> כל העדה ויעמדו לפני <span class="a">יהוה</span> <span class="verse-number">ט:ו</span> ויאמר משה זה הדבר <span class="internalparallel">אשר צוה</span> <span class="a">יהוה</span> תעשו וירא אליכם כבוד <span class="a">יהוה</span>
 </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">ח:י</span> ויקח משה את שמן המשחה וימשח את המשכן ואת כל אשר בו ויקדש אתם <span class="verse-number">ח:יא</span> ויז ממנו על המזבח שבע פעמים וימשח את המזבח ואת כל כליו ואת הכיר ואת כנו לקדשם <span class="verse-number">ח:יב</span> <span class="vertical1">ויצק משמן המשחה על ראש אהרן וימשח אתו לקדשו</span> <span class="verse-number">ח:יג</span> ויקרב משה את בני אהרן וילבשם כתנת ויחגר אתם אבנט ויחבש להם מגבעות <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
+<span class="section-label">c</span> <span class="verse-number">ח:י</span> ויקח משה את שמן המשחה וימשח את המשכן ואת כל אשר בו ויקדש אתם <span class="verse-number">ח:יא</span> ויז ממנו על המזבח שבע פעמים וימשח את המזבח ואת כל כליו ואת הכיר ואת כנו לקדשם <span class="verse-number">ח:יב</span> <span class="vertical1">ויצק משמן המשחה על ראש אהרן וימשח אתו לקדשו</span> <span class="verse-number">ח:יג</span> ויקרב משה את בני אהרן וילבשם כתנת ויחגר אתם אבנט ויחבש להם מגבעות <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">ט:ז</span> ויאמר משה אל אהרן קרב אל המזבח ועשה את חטאתך ואת עלתך וכפר בעדך ובעד העם ועשה את קרבן העם וכפר בעדם <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span>
+<span class="section-label">c</span> <span class="verse-number">ט:ז</span> ויאמר משה אל אהרן קרב אל המזבח ועשה את חטאתך ואת עלתך וכפר בעדך ובעד העם ועשה את קרבן העם וכפר בעדם <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span>
 </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">D</span> <span class="verse-number">ח:יד</span> ויגש את פר <span class="horizontal1">החטאת</span> ויסמך אהרן ובניו את ידיהם על ראש פר החטאת <span class="verse-number">ח:טו</span> וישחט <span class="horizontal1">ויקח משה את הדם ויתן על קרנות המזבח סביב באצבעו ויחטא את המזבח ואת הדם יצק אל יסוד המזבח</span> ויקדשהו לכפר עליו <span class="verse-number">ח:טז</span> <span class="horizontal1">ויקח את כל החלב אשר על הקרב ואת יתרת הכבד ואת שתי הכלית ואת חלבהן ויקטר משה המזבחה</span> <span class="verse-number">ח:יז</span> ואת הפר ואת ערו ואת בשרו ואת פרשו שרף באש מחוץ למחנה <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
+<span class="section-label">d</span> <span class="verse-number">ח:יד</span> ויגש את פר <span class="horizontal1">החטאת</span> ויסמך אהרן ובניו את ידיהם על ראש פר החטאת <span class="verse-number">ח:טו</span> וישחט <span class="horizontal1">ויקח משה את הדם ויתן על קרנות המזבח סביב באצבעו ויחטא את המזבח ואת הדם יצק אל יסוד המזבח</span> ויקדשהו לכפר עליו <span class="verse-number">ח:טז</span> <span class="horizontal1">ויקח את כל החלב אשר על הקרב ואת יתרת הכבד ואת שתי הכלית ואת חלבהן ויקטר משה המזבחה</span> <span class="verse-number">ח:יז</span> ואת הפר ואת ערו ואת בשרו ואת פרשו שרף באש מחוץ למחנה <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">D</span> <span class="verse-number">ט:ח</span> ויקרב אהרן אל המזבח וישחט את עגל <span class="horizontal1">החטאת</span> אשר לו <span class="verse-number">ט:ט</span> <span class="horizontal1">ויקרבו בני אהרן את הדם אליו ויטבל אצבעו בדם ויתן על קרנות המזבח ואת הדם יצק אל יסוד המזבח</span> <span class="verse-number">ט:י</span> <span class="horizontal1">ואת החלב ואת הכלית ואת היתרת מן הכבד מן החטאת הקטיר המזבחה</span> <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה <span class="verse-number">ט:יא</span> ואת הבשר ואת העור שרף באש מחוץ למחנה
+<span class="section-label">d</span> <span class="verse-number">ט:ח</span> ויקרב אהרן אל המזבח וישחט את עגל <span class="horizontal1">החטאת</span> אשר לו <span class="verse-number">ט:ט</span> <span class="horizontal1">ויקרבו בני אהרן את הדם אליו ויטבל אצבעו בדם ויתן על קרנות המזבח ואת הדם יצק אל יסוד המזבח</span> <span class="verse-number">ט:י</span> <span class="horizontal1">ואת החלב ואת הכלית ואת היתרת מן הכבד מן החטאת הקטיר המזבחה</span> <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה <span class="verse-number">ט:יא</span> ואת הבשר ואת העור שרף באש מחוץ למחנה
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">E</span> <span class="verse-number">ח:יח</span> <span class="horizontal1">ויקרב את איל העלה</span> ויסמכו אהרן ובניו את ידיהם על ראש האיל <span class="verse-number">ח:יט</span> וישחט <span class="horizontal1">ויזרק משה את הדם על המזבח סביב</span> <span class="verse-number">ח:כ</span> <span class="horizontal1">ואת האיל נתח לנתחיו ויקטר משה את הראש ואת הנתחים</span> ואת הפדר <span class="verse-number">ח:כא</span> <span class="horizontal1">ואת הקרב ואת הכרעים רחץ במים ויקטר משה את כל האיל המזבחה</span> עלה הוא לריח ניחח אשה הוא ל<span class="a">יהוה</span> <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
+<span class="section-label">e</span> <span class="verse-number">ח:יח</span> <span class="horizontal1">ויקרב את איל העלה</span> ויסמכו אהרן ובניו את ידיהם על ראש האיל <span class="verse-number">ח:יט</span> וישחט <span class="horizontal1">ויזרק משה את הדם על המזבח סביב</span> <span class="verse-number">ח:כ</span> <span class="horizontal1">ואת האיל נתח לנתחיו ויקטר משה את הראש ואת הנתחים</span> ואת הפדר <span class="verse-number">ח:כא</span> <span class="horizontal1">ואת הקרב ואת הכרעים רחץ במים ויקטר משה את כל האיל המזבחה</span> עלה הוא לריח ניחח אשה הוא ל<span class="a">יהוה</span> <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">E</span> <span class="verse-number">ט:יב</span> <span class="horizontal1">וישחט את העלה</span> <span class="horizontal1">וימצאו בני אהרן אליו את הדם ויזרקהו על המזבח סביב</span> <span class="verse-number">ט:יג</span> <span class="horizontal1">ואת העלה המציאו אליו לנתחיה ואת הראש ויקטר על המזבח</span> <span class="verse-number">ט:יד</span> <span class="horizontal1">וירחץ את הקרב ואת הכרעים ויקטר על העלה המזבחה</span>
+<span class="section-label">e</span> <span class="verse-number">ט:יב</span> <span class="horizontal1">וישחט את העלה</span> <span class="horizontal1">וימצאו בני אהרן אליו את הדם ויזרקהו על המזבח סביב</span> <span class="verse-number">ט:יג</span> <span class="horizontal1">ואת העלה המציאו אליו לנתחיה ואת הראש ויקטר על המזבח</span> <span class="verse-number">ט:יד</span> <span class="horizontal1">וירחץ את הקרב ואת הכרעים ויקטר על העלה המזבחה</span>
 </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">F</span> <span class="verse-number">ח:כב</span> ויקרב את האיל השני איל המלאים ויסמכו אהרן ובניו את ידיהם על ראש האיל <span class="verse-number">ח:כג</span> וישחט ויקח משה מדמו ויתן על תנוך אזן אהרן הימנית ועל בהן ידו הימנית ועל בהן רגלו הימנית <span class="verse-number">ח:כד</span> ויקרב את בני אהרן ויתן משה מן הדם על תנוך אזנם הימנית ועל בהן ידם הימנית ועל בהן רגלם הימנית <span class="horizontal1">ויזרק משה את הדם על המזבח סביב</span> <span class="verse-number">ח:כה</span> <span class="horizontal1">ויקח את החלב ואת האליה ואת כל החלב אשר על הקרב ואת יתרת הכבד ואת שתי הכלית ואת חלבהן ואת שוק הימין</span> <span class="verse-number">ח:כו</span> ומסל המצות אשר לפני <span class="a">יהוה</span> לקח חלת מצה אחת וחלת לחם שמן אחת ורקיק אחד וישם על החלבים ועל שוק הימין <span class="verse-number">ח:כז</span> <span class="horizontal1">ויתן את הכל על כפי אהרן ועל כפי בניו וינף אתם תנופה לפני</span> <span class="a">יהוה</span> <span class="verse-number">ח:כח</span> ויקח משה אתם מעל כפיהם ויקטר המזבחה על העלה מלאים הם לריח ניחח אשה הוא ל<span class="a">יהוה</span> <span class="verse-number">ח:כט</span> ויקח משה את החזה ויניפהו תנופה לפני <span class="a">יהוה</span> מאיל המלאים למשה היה למנה <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
+<span class="section-label">f</span> <span class="verse-number">ח:כב</span> ויקרב את האיל השני איל המלאים ויסמכו אהרן ובניו את ידיהם על ראש האיל <span class="verse-number">ח:כג</span> וישחט ויקח משה מדמו ויתן על תנוך אזן אהרן הימנית ועל בהן ידו הימנית ועל בהן רגלו הימנית <span class="verse-number">ח:כד</span> ויקרב את בני אהרן ויתן משה מן הדם על תנוך אזנם הימנית ועל בהן ידם הימנית ועל בהן רגלם הימנית <span class="horizontal1">ויזרק משה את הדם על המזבח סביב</span> <span class="verse-number">ח:כה</span> <span class="horizontal1">ויקח את החלב ואת האליה ואת כל החלב אשר על הקרב ואת יתרת הכבד ואת שתי הכלית ואת חלבהן ואת שוק הימין</span> <span class="verse-number">ח:כו</span> ומסל המצות אשר לפני <span class="a">יהוה</span> לקח חלת מצה אחת וחלת לחם שמן אחת ורקיק אחד וישם על החלבים ועל שוק הימין <span class="verse-number">ח:כז</span> <span class="horizontal1">ויתן את הכל על כפי אהרן ועל כפי בניו וינף אתם תנופה לפני</span> <span class="a">יהוה</span> <span class="verse-number">ח:כח</span> ויקח משה אתם מעל כפיהם ויקטר המזבחה על העלה מלאים הם לריח ניחח אשה הוא ל<span class="a">יהוה</span> <span class="verse-number">ח:כט</span> ויקח משה את החזה ויניפהו תנופה לפני <span class="a">יהוה</span> מאיל המלאים למשה היה למנה <span class="internalparallel">כאשר צוה</span> <span class="a">יהוה</span> את משה
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">F</span> <span class="verse-number">ט:טו</span> ויקרב את קרבן העם <span class="vertical1">ויקח את שעיר החטאת אשר לעם</span> וישחטהו ויחטאהו כראשון <span class="verse-number">ט:טז</span> ויקרב את העלה ויעשה כמשפט <span class="verse-number">ט:יז</span> <span class="vertical1">ויקרב את המנחה וימלא כפו ממנה ויקטר על המזבח</span> מלבד עלת הבקר <span class="verse-number">ט:יח</span> וישחט את השור ואת האיל זבח השלמים אשר לעם <span class="horizontal1">וימצאו בני אהרן את הדם אליו ויזרקהו על המזבח סביב</span> <span class="verse-number">ט:יט</span> <span class="horizontal1">ואת החלבים מן השור ומן האיל האליה והמכסה והכלית ויתרת הכבד</span> <span class="verse-number">ט:כ</span> וישימו את החלבים על החזות ויקטר החלבים המזבחה <span class="verse-number">ט:כא</span> <span class="vertical1">ואת החזות ואת שוק הימין הניף אהרן תנופה לפני</span> <span class="a">יהוה</span> <span class="internalparallel">כאשר צוה</span> משה
-          </div>
-</td>
-</tr>
-<tr>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">G</span> <span class="verse-number">ח:ל</span> ויקח משה משמן המשחה ומן הדם אשר על המזבח ויז על אהרן על בגדיו ועל בניו ועל בגדי בניו אתו ויקדש את אהרן את בגדיו ואת בניו ואת בגדי בניו אתו <span class="verse-number">ח:לא</span> ויאמר משה אל אהרן ואל בניו בשלו את הבשר פתח אהל מועד ושם תאכלו אתו ואת הלחם אשר בסל המלאים כאשר צויתי לאמר אהרן ובניו יאכלהו <span class="verse-number">ח:לב</span> והנותר בבשר ובלחם באש תשרפו <span class="verse-number">ח:לג</span> <span class="horizontal1">ומפתח אהל מועד לא תצאו</span> שבעת ימים עד יום מלאת ימי מלאיכם כי שבעת ימים ימלא את ידכם <span class="verse-number">ח:לד</span> כאשר עשה ביום הזה צוה <span class="a">יהוה</span> לעשת לכפר עליכם <span class="verse-number">ח:לה</span> <span class="vertical1">ופתח אהל מועד תשבו יומם ולילה שבעת ימים ושמרתם את משמרת</span> <span class="a">יהוה</span> <span class="vertical1">ולא תמותו</span> כי כן צויתי <span class="verse-number">ח:לו</span> ויעש אהרן ובניו את כל הדברים <span class="internalparallel">אשר צוה</span> <span class="a">יהוה</span> ביד משה {ס}
-          </div>
-</td>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">G</span> <span class="verse-number">ט:כב</span> וישא אהרן את ידו אל העם ויברכם וירד מעשת החטאת והעלה והשלמים <span class="verse-number">ט:כג</span> <span class="horizontal1">ויבא משה ואהרן אל אהל מועד ויצאו</span> ויברכו את העם וירא כבוד <span class="a">יהוה</span> אל כל העם <span class="verse-number">ט:כד</span> ותצא אש מלפני <span class="a">יהוה</span> ותאכל על המזבח את העלה ואת החלבים וירא כל העם וירנו ויפלו על פניהם
+<span class="section-label">f</span> <span class="verse-number">ט:טו</span> ויקרב את קרבן העם <span class="vertical1">ויקח את שעיר החטאת אשר לעם</span> וישחטהו ויחטאהו כראשון <span class="verse-number">ט:טז</span> ויקרב את העלה ויעשה כמשפט <span class="verse-number">ט:יז</span> <span class="vertical1">ויקרב את המנחה וימלא כפו ממנה ויקטר על המזבח</span> מלבד עלת הבקר <span class="verse-number">ט:יח</span> וישחט את השור ואת האיל זבח השלמים אשר לעם <span class="horizontal1">וימצאו בני אהרן את הדם אליו ויזרקהו על המזבח סביב</span> <span class="verse-number">ט:יט</span> <span class="horizontal1">ואת החלבים מן השור ומן האיל האליה והמכסה והכלית ויתרת הכבד</span> <span class="verse-number">ט:כ</span> וישימו את החלבים על החזות ויקטר החלבים המזבחה <span class="verse-number">ט:כא</span> <span class="vertical1">ואת החזות ואת שוק הימין הניף אהרן תנופה לפני</span> <span class="a">יהוה</span> <span class="internalparallel">כאשר צוה</span> משה
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
-<h3 class="section-header">2א</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">י:א</span> ויקחו בני אהרן נדב ואביהוא איש מחתתו ויתנו בהן אש וישימו עליה קטרת ויקריבו לפני <span class="a">יהוה</span> אש זרה אשר לא צוה אתם <span class="verse-number">י:ב</span> ותצא אש מלפני <span class="a">יהוה</span> ותאכל אותם <span class="vertical1">וימתו</span> לפני <span class="a">יהוה</span> <span class="verse-number">י:ג</span> ויאמר משה אל אהרן הוא אשר דבר <span class="a">יהוה</span> לאמר בקרבי אקדש ועל פני כל העם אכבד וידם אהרן <span class="verse-number">י:ד</span> ויקרא משה אל מישאל ואל אלצפן בני עזיאל דד אהרן ויאמר אלהם קרבו שאו את אחיכם מאת פני הקדש אל מחוץ למחנה <span class="verse-number">י:ה</span> ויקרבו וישאם בכתנתם אל מחוץ למחנה כאשר דבר משה <span class="verse-number">י:ו</span> <span class="horizontal1">ויאמר משה אל אהרן ולאלעזר ולאיתמר בניו</span> ראשיכם אל תפרעו ובגדיכם לא תפרמו <span class="vertical1">ולא תמתו</span> ועל כל העדה יקצף ואחיכם כל בית ישראל יבכו את השרפה אשר שרף <span class="a">יהוה</span> <span class="verse-number">י:ז</span> <span class="vertical1">ומפתח אהל מועד לא תצאו פן תמתו כי שמן משחת</span> <span class="a">יהוה</span> <span class="vertical1">עליכם</span> ויעשו כדבר משה {פ}
+<span class="section-label">g</span> <span class="verse-number">ח:ל</span> ויקח משה משמן המשחה ומן הדם אשר על המזבח ויז על אהרן על בגדיו ועל בניו ועל בגדי בניו אתו ויקדש את אהרן את בגדיו ואת בניו ואת בגדי בניו אתו <span class="verse-number">ח:לא</span> ויאמר משה אל אהרן ואל בניו בשלו את הבשר פתח אהל מועד ושם תאכלו אתו ואת הלחם אשר בסל המלאים כאשר צויתי לאמר אהרן ובניו יאכלהו <span class="verse-number">ח:לב</span> והנותר בבשר ובלחם באש תשרפו <span class="verse-number">ח:לג</span> <span class="horizontal1">ומפתח אהל מועד לא תצאו</span> שבעת ימים עד יום מלאת ימי מלאיכם כי שבעת ימים ימלא את ידכם <span class="verse-number">ח:לד</span> כאשר עשה ביום הזה צוה <span class="a">יהוה</span> לעשת לכפר עליכם <span class="verse-number">ח:לה</span> <span class="vertical1">ופתח אהל מועד תשבו יומם ולילה שבעת ימים ושמרתם את משמרת</span> <span class="a">יהוה</span> <span class="vertical1">ולא תמותו</span> כי כן צויתי <span class="verse-number">ח:לו</span> ויעש אהרן ובניו את כל הדברים <span class="internalparallel">אשר צוה</span> <span class="a">יהוה</span> ביד משה {ס}
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">2ב</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">י:יב</span> <span class="horizontal1">וידבר משה אל אהרן ואל אלעזר ואל איתמר בניו הנותרים</span> קחו את <span class="vertical1">המנחה הנותרת</span> מאשי <span class="a">יהוה</span> ואכלוה מצות אצל המזבח כי קדש קדשים הוא <span class="verse-number">י:יג</span> ואכלתם אתה במקום קדוש כי חקך וחק בניך הוא מאשי <span class="a">יהוה</span> כי כן צויתי <span class="verse-number">י:יד</span> <span class="vertical1">ואת חזה התנופה ואת שוק התרומה</span> תאכלו במקום טהור אתה ובניך ובנתיך אתך כי חקך וחק בניך נתנו מזבחי שלמי בני ישראל <span class="verse-number">י:טו</span> שוק התרומה וחזה התנופה על אשי החלבים יביאו להניף תנופה לפני <span class="a">יהוה</span> והיה לך ולבניך אתך לחק עולם כאשר צוה <span class="a">יהוה</span>
+<span class="section-label">g</span> <span class="verse-number">ט:כב</span> וישא אהרן את ידו אל העם ויברכם וירד מעשת החטאת והעלה והשלמים <span class="verse-number">ט:כג</span> <span class="horizontal1">ויבא משה ואהרן אל אהל מועד ויצאו</span> ויברכו את העם וירא כבוד <span class="a">יהוה</span> אל כל העם <span class="verse-number">ט:כד</span> ותצא אש מלפני <span class="a">יהוה</span> ותאכל על המזבח את העלה ואת החלבים וירא כל העם וירנו ויפלו על פניהם
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<h3 class="section-header">2A</h3>
+<div class="torah-text">
+<span class="section-label">a</span> <span class="verse-number">י:א</span> ויקחו בני אהרן נדב ואביהוא איש מחתתו ויתנו בהן אש וישימו עליה קטרת ויקריבו לפני <span class="a">יהוה</span> אש זרה אשר לא צוה אתם <span class="verse-number">י:ב</span> ותצא אש מלפני <span class="a">יהוה</span> ותאכל אותם <span class="vertical1">וימתו</span> לפני <span class="a">יהוה</span> <span class="verse-number">י:ג</span> ויאמר משה אל אהרן הוא אשר דבר <span class="a">יהוה</span> לאמר בקרבי אקדש ועל פני כל העם אכבד וידם אהרן <span class="verse-number">י:ד</span> ויקרא משה אל מישאל ואל אלצפן בני עזיאל דד אהרן ויאמר אלהם קרבו שאו את אחיכם מאת פני הקדש אל מחוץ למחנה <span class="verse-number">י:ה</span> ויקרבו וישאם בכתנתם אל מחוץ למחנה כאשר דבר משה <span class="verse-number">י:ו</span> <span class="horizontal1">ויאמר משה אל אהרן ולאלעזר ולאיתמר בניו</span> ראשיכם אל תפרעו ובגדיכם לא תפרמו <span class="vertical1">ולא תמתו</span> ועל כל העדה יקצף ואחיכם כל בית ישראל יבכו את השרפה אשר שרף <span class="a">יהוה</span> <span class="verse-number">י:ז</span> <span class="vertical1">ומפתח אהל מועד לא תצאו פן תמתו כי שמן משחת</span> <span class="a">יהוה</span> <span class="vertical1">עליכם</span> ויעשו כדבר משה {פ}
+          </div>
+</td>
+<td class="torah-column">
+<h3 class="section-header">2B</h3>
+<div class="torah-text">
+<span class="section-label">a</span> <span class="verse-number">י:יב</span> <span class="horizontal1">וידבר משה אל אהרן ואל אלעזר ואל איתמר בניו הנותרים</span> קחו את <span class="vertical1">המנחה הנותרת</span> מאשי <span class="a">יהוה</span> ואכלוה מצות אצל המזבח כי קדש קדשים הוא <span class="verse-number">י:יג</span> ואכלתם אתה במקום קדוש כי חקך וחק בניך הוא מאשי <span class="a">יהוה</span> כי כן צויתי <span class="verse-number">י:יד</span> <span class="vertical1">ואת חזה התנופה ואת שוק התרומה</span> תאכלו במקום טהור אתה ובניך ובנתיך אתך כי חקך וחק בניך נתנו מזבחי שלמי בני ישראל <span class="verse-number">י:טו</span> שוק התרומה וחזה התנופה על אשי החלבים יביאו להניף תנופה לפני <span class="a">יהוה</span> והיה לך ולבניך אתך לחק עולם כאשר צוה <span class="a">יהוה</span>
 </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">י:ח</span> וידבר <span class="a">יהוה</span> אל אהרן לאמר <span class="verse-number">י:ט</span> יין ושכר אל תשת אתה ובניך אתך <span class="vertical1">בבאכם אל אהל מועד ולא תמתו</span> חקת עולם לדרתיכם <span class="verse-number">י:י</span> ולהבדיל בין הקדש ובין החל ובין הטמא ובין הטהור <span class="verse-number">י:יא</span> ולהורת את בני ישראל את כל החקים אשר דבר <span class="a">יהוה</span> אליהם ביד משה {פ}
+<span class="section-label">b</span> <span class="verse-number">י:ח</span> וידבר <span class="a">יהוה</span> אל אהרן לאמר <span class="verse-number">י:ט</span> יין ושכר אל תשת אתה ובניך אתך <span class="vertical1">בבאכם אל אהל מועד ולא תמתו</span> חקת עולם לדרתיכם <span class="verse-number">י:י</span> ולהבדיל בין הקדש ובין החל ובין הטמא ובין הטהור <span class="verse-number">י:יא</span> ולהורת את בני ישראל את כל החקים אשר דבר <span class="a">יהוה</span> אליהם ביד משה {פ}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">י:טז</span> <span class="vertical1">ואת שעיר החטאת דרש דרש משה</span> והנה שרף ויקצף על אלעזר ועל איתמר בני אהרן הנותרם לאמר <span class="verse-number">י:יז</span> מדוע לא אכלתם את החטאת במקום הקדש כי קדש קדשים הוא ואתה נתן לכם לשאת את עון העדה לכפר עליהם לפני <span class="a">יהוה</span> <span class="verse-number">י:יח</span> הן לא הובא את דמה אל הקדש פנימה אכול תאכלו אתה בקדש כאשר צויתי <span class="verse-number">י:יט</span> וידבר אהרן אל משה הן היום הקריבו את חטאתם ואת עלתם לפני <span class="a">יהוה</span> ותקראנה אתי כאלה ואכלתי חטאת היום הייטב בעיני <span class="a">יהוה</span> <span class="verse-number">י:כ</span> וישמע משה וייטב בעיניו {פ}
+<span class="section-label">b</span> <span class="verse-number">י:טז</span> <span class="vertical1">ואת שעיר החטאת דרש דרש משה</span> והנה שרף ויקצף על אלעזר ועל איתמר בני אהרן הנותרם לאמר <span class="verse-number">י:יז</span> מדוע לא אכלתם את החטאת במקום הקדש כי קדש קדשים הוא ואתה נתן לכם לשאת את עון העדה לכפר עליהם לפני <span class="a">יהוה</span> <span class="verse-number">י:יח</span> הן לא הובא את דמה אל הקדש פנימה אכול תאכלו אתה בקדש כאשר צויתי <span class="verse-number">י:יט</span> וידבר אהרן אל משה הן היום הקריבו את חטאתם ואת עלתם לפני <span class="a">יהוה</span> ותקראנה אתי כאלה ואכלתי חטאת היום הייטב בעיני <span class="a">יהוה</span> <span class="verse-number">י:כ</span> וישמע משה וייטב בעיניו {פ}
           </div>
 </td>
 </tr>
@@ -122,3 +487,83 @@
 </div>
 </div>
 </div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline.html">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

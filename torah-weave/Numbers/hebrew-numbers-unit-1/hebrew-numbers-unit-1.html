@@ -1,4 +1,369 @@
-<div dir="rtl" lang="he">
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained.html">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names.html">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture.html">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers.html">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets.html">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center.html">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse.html">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map.html">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared.html">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline.html">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <div dir="rtl" lang="he">
 <div class="hebrew-torah-unit-wrapper" dir="rtl">
 <div class="unit-header" style="text-align: center">
 <h1 dir="rtl">ספר במדבר יחידה 1</h1>
@@ -8,115 +373,115 @@
 <table class="torah-table" style="direction: rtl" dir="rtl">
 <tr>
 <td class="torah-column">
-<h3 class="section-header">1א</h3>
+<h3 class="section-header">1A</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">א:א</span> וידבר <span class="a">יהוה</span> אל משה במדבר סיני באהל מועד באחד לחדש השני בשנה השנית לצאתם מארץ מצרים לאמר <span class="verse-number">א:ב</span> שאו את ראש כל עדת בני ישראל למשפחתם לבית אבתם במספר שמות כל זכר לגלגלתם <span class="verse-number">א:ג</span> מבן עשרים שנה ומעלה כל יצא צבא בישראל<span class="horizontal1"> תפקדו </span>אתם לצבאתם אתה ואהרן <span class="verse-number">א:ד</span> ואתכם יהיו איש איש למטה איש ראש לבית אבתיו הוא <span class="verse-number">א:ה</span> ואלה שמות האנשים אשר יעמדו אתכם לראובן אליצור בן שדיאור <span class="verse-number">א:ו</span> לשמעון שלמיאל בן צורישדי <span class="verse-number">א:ז</span> ליהודה נחשון בן עמינדב <span class="verse-number">א:ח</span> ליששכר נתנאל בן צוער <span class="verse-number">א:ט</span> לזבולן אליאב בן חלן <span class="verse-number">א:י</span> לבני יוסף לאפרים אלישמע בן עמיהוד למנשה גמליאל בן פדהצור <span class="verse-number">א:יא</span> לבנימן אבידן בן גדעני <span class="verse-number">א:יב</span> לדן אחיעזר בן עמישדי <span class="verse-number">א:יג</span> לאשר פגעיאל בן עכרן <span class="verse-number">א:יד</span> לגד אליסף בן דעואל <span class="verse-number">א:טו</span> לנפתלי אחירע בן עינן <span class="verse-number">א:טז</span> אלה קריאי (קרואי) העדה נשיאי מטות אבותם ראשי אלפי ישראל הם <span class="verse-number">א:יז</span> ויקח משה ואהרן את האנשים האלה אשר נקבו בשמת <span class="verse-number">א:יח</span> ואת כל העדה הקהילו באחד לחדש השני ויתילדו על משפחתם לבית אבתם במספר שמות מבן עשרים שנה ומעלה לגלגלתם <span class="verse-number">א:יט</span> <span class="horizontal1">כאשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה</span> ויפקדם במדבר סיני {ס}
+<span class="section-label">a</span> <span class="verse-number">א:א</span> וידבר <span class="a">יהוה</span> אל משה במדבר סיני באהל מועד באחד לחדש השני בשנה השנית לצאתם מארץ מצרים לאמר <span class="verse-number">א:ב</span> שאו את ראש כל עדת בני ישראל למשפחתם לבית אבתם במספר שמות כל זכר לגלגלתם <span class="verse-number">א:ג</span> מבן עשרים שנה ומעלה כל יצא צבא בישראל<span class="horizontal1"> תפקדו </span>אתם לצבאתם אתה ואהרן <span class="verse-number">א:ד</span> ואתכם יהיו איש איש למטה איש ראש לבית אבתיו הוא <span class="verse-number">א:ה</span> ואלה שמות האנשים אשר יעמדו אתכם לראובן אליצור בן שדיאור <span class="verse-number">א:ו</span> לשמעון שלמיאל בן צורישדי <span class="verse-number">א:ז</span> ליהודה נחשון בן עמינדב <span class="verse-number">א:ח</span> ליששכר נתנאל בן צוער <span class="verse-number">א:ט</span> לזבולן אליאב בן חלן <span class="verse-number">א:י</span> לבני יוסף לאפרים אלישמע בן עמיהוד למנשה גמליאל בן פדהצור <span class="verse-number">א:יא</span> לבנימן אבידן בן גדעני <span class="verse-number">א:יב</span> לדן אחיעזר בן עמישדי <span class="verse-number">א:יג</span> לאשר פגעיאל בן עכרן <span class="verse-number">א:יד</span> לגד אליסף בן דעואל <span class="verse-number">א:טו</span> לנפתלי אחירע בן עינן <span class="verse-number">א:טז</span> אלה קריאי (קרואי) העדה נשיאי מטות אבותם ראשי אלפי ישראל הם <span class="verse-number">א:יז</span> ויקח משה ואהרן את האנשים האלה אשר נקבו בשמת <span class="verse-number">א:יח</span> ואת כל העדה הקהילו באחד לחדש השני ויתילדו על משפחתם לבית אבתם במספר שמות מבן עשרים שנה ומעלה לגלגלתם <span class="verse-number">א:יט</span> <span class="horizontal1">כאשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה</span> ויפקדם במדבר סיני {ס}
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">1ב</h3>
+<h3 class="section-header">1B</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">א:מח</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">א:מט</span> אך את מטה לוי לא תפקד ואת ראשם לא תשא בתוך בני ישראל <span class="verse-number">א:נ</span> ואתה <span class="horizontal1">הפקד</span> את הלוים על משכן העדת ועל כל כליו ועל כל אשר לו המה ישאו את המשכן ואת כל כליו והם ישרתהו וסביב למשכן יחנו <span class="verse-number">א:נא</span> ובנסע המשכן יורידו אתו הלוים ובחנת המשכן יקימו אתו הלוים והזר הקרב יומת <span class="verse-number">א:נב</span> וחנו בני ישראל איש על מחנהו ואיש על דגלו לצבאתם <span class="verse-number">א:נג</span> והלוים יחנו סביב למשכן העדת ולא יהיה קצף על עדת בני ישראל ושמרו הלוים את משמרת משכן העדות <span class="verse-number">א:נד</span> ויעשו בני ישראל <span class="horizontal1">ככל אשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה כן עשו</span> {פ}
-          </div>
-</td>
-</tr>
-<tr>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">א:כ</span> ויהיו בני ראובן בכר ישראל תולדתם למשפחתם לבית אבתם במספר שמות לגלגלתם כל זכר מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כא</span> <span class="horizontal1">פקדיהם למטה ראובן ששה וארבעים אלף וחמש מאות </span>{פ}<span class="verse-number"> א:כב</span> לבני שמעון תולדתם למשפחתם לבית אבתם פקדיו במספר שמות לגלגלתם כל זכר מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כג</span> <span class="horizontal1">פקדיהם למטה שמעון תשעה וחמשים אלף ושלש מאות</span> {פ} <span class="verse-number">א:כד</span> לבני גד תולדתם למשפחתם לבית אבתם במספר שמות מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כה</span> <span class="horizontal1">פקדיהם למטה גד חמשה וארבעים אלף ושש מאות וחמשים</span> {פ} <span class="verse-number">א:כו</span> לבני יהודה תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כז</span> <span class="horizontal1">פקדיהם למטה יהודה ארבעה ושבעים אלף ושש מאות</span> {פ} <span class="verse-number">א:כח</span> לבני יששכר תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כט</span> <span class="horizontal1">פקדיהם למטה יששכר ארבעה וחמשים אלף וארבע מאות</span> {פ}<span class="verse-number"> א:ל</span> לבני זבולן תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לא</span> <span class="horizontal1">פקדיהם למטה זבולן שבעה וחמשים אלף וארבע מאות</span> {פ} <span class="verse-number">א:לב</span> לבני יוסף לבני אפרים תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לג</span> פקדיהם למטה אפרים ארבעים אלף וחמש מאות {פ} <span class="verse-number">א:לד</span> לבני מנשה תולדתם למשפחתם לבית אבתם במספר שמות מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לה</span> <span class="horizontal1">פקדיהם למטה מנשה שנים ושלשים אלף ומאתים</span> {פ} <span class="verse-number">א:לו</span> לבני בנימן תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לז</span> <span class="horizontal1">פקדיהם למטה בנימן חמשה ושלשים אלף וארבע מאות</span> {פ<span class="verse-number"> א:לח</span> לבני דן תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לט</span> <span class="horizontal1">פקדיהם למטה דן שנים וששים אלף ושבע מאות</span> {פ} <span class="verse-number">א:מ</span> לבני אשר תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:מא</span> <span class="horizontal1">פקדיהם למטה אשר אחד וארבעים אלף וחמש מאות</span> {פ}<span class="verse-number">א:מב</span> בני נפתלי תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:מג</span> <span class="horizontal1">פקדיהם למטה נפתלי שלשה וחמשים אלף וארבע מאות</span> {פ}
-          </div>
-</td>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">ב:א</span> וידבר <span class="a">יהוה</span> אל משה ואל אהרן לאמר <span class="verse-number">ב:ב</span> איש על דגלו באתת לבית אבתם יחנו בני ישראל מנגד סביב לאהל מועד יחנו <span class="verse-number">ב:ג</span> והחנים קדמה מזרחה דגל מחנה יהודה לצבאתם ונשיא לבני יהודה נחשון בן עמינדב <span class="verse-number">ב:ד</span> <span class="horizontal1">וצבאו ופקדיהם ארבעה ושבעים אלף ושש מאות</span> <span class="verse-number">ב:ה</span> והחנים עליו מטה יששכר ונשיא לבני יששכר נתנאל בן צוער <span class="verse-number">ב:ו</span> <span class="horizontal1">וצבאו ופקדיו ארבעה וחמשים אלף וארבע מאות</span> <span class="verse-number">ב:ז</span> מטה זבולן ונשיא לבני זבולן אליאב בן חלן <span class="verse-number">ב:ח</span> <span class="horizontal1">וצבאו ופקדיו שבעה וחמשים אלף וארבע מאות </span><span class="verse-number">ב:ט</span> כל הפקדים למחנה יהודה מאת אלף ושמנים אלף וששת אלפים וארבע מאות לצבאתם ראשנה יסעו {ס} <span class="verse-number">ב:י</span> דגל מחנה ראובן תימנה לצבאתם ונשיא לבני ראובן אליצור בן שדיאור <span class="verse-number">ב:יא</span> <span class="horizontal1">וצבאו ופקדיו ששה וארבעים אלף וחמש מאות</span> <span class="verse-number">ב:יב</span> והחונם עליו מטה שמעון ונשיא לבני שמעון שלמיאל בן צורישדי <span class="verse-number">ב:יג</span> <span class="horizontal1">וצבאו ופקדיהם תשעה וחמשים אלף ושלש מאות </span><span class="verse-number">ב:יד</span> ומטה גד ונשיא לבני גד אליסף בן רעואל <span class="verse-number">ב:טו</span> <span class="horizontal1">וצבאו ופקדיהם חמשה וארבעים אלף ושש מאות וחמשים</span> <span class="verse-number">ב:טז</span> כל הפקדים למחנה ראובן מאת אלף ואחד וחמשים אלף וארבע מאות וחמשים לצבאתם ושנים יסעו {ס} <span class="verse-number">ב:יז</span> ונסע אהל מועד מחנה הלוים בתוך המחנת כאשר יחנו כן יסעו איש על ידו לדגליהם {ס} <span class="verse-number">ב:יח</span> דגל מחנה אפרים לצבאתם ימה ונשיא לבני אפרים אלישמע בן עמיהוד <span class="verse-number">ב:יט</span> <span class="horizontal1">וצבאו ופקדיהם ארבעים אלף וחמש מאות</span> <span class="verse-number">ב:כ</span> ועליו מטה מנשה ונשיא לבני מנשה גמליאל בן פדהצור <span class="verse-number">ב:כא</span> <span class="horizontal1">וצבאו ופקדיהם שנים ושלשים אלף ומאתים</span> <span class="verse-number">ב:כב</span> ומטה בנימן ונשיא לבני בנימן אבידן בן גדעני <span class="verse-number">ב:כג</span> <span class="horizontal1">וצבאו ופקדיהם חמשה ושלשים אלף וארבע מאות</span> <span class="verse-number">ב:כד</span> כל הפקדים למחנה אפרים מאת אלף ושמנת אלפים ומאה לצבאתם ושלשים יסעו {ס} <span class="verse-number">ב:כה</span> דגל מחנה דן צפנה לצבאתם ונשיא לבני דן אחיעזר בן עמישדי <span class="verse-number">ב:כו</span> <span class="horizontal1">וצבאו ופקדיהם שנים וששים אלף ושבע מאות</span> <span class="verse-number">ב:כז</span> והחנים עליו מטה אשר ונשיא לבני אשר פגעיאל בן עכרן <span class="verse-number">ב:כח</span> וצבאו ופקדיהם אחד וארבעים אלף וחמש מאות <span class="verse-number">ב:כט</span> ומטה נפתלי ונשיא לבני נפתלי אחירע בן עינן <span class="verse-number">ב:ל</span> <span class="horizontal1">צבאו ופקדיהם שלשה וחמשים אלף וארבע מאות</span> <span class="verse-number">ב:לא</span> כל הפקדים למחנה דן מאת אלף ושבעה וחמשים אלף ושש מאות לאחרנה יסעו לדגליהם {פ}
+<span class="section-label">a</span> <span class="verse-number">א:מח</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">א:מט</span> אך את מטה לוי לא תפקד ואת ראשם לא תשא בתוך בני ישראל <span class="verse-number">א:נ</span> ואתה <span class="horizontal1">הפקד</span> את הלוים על משכן העדת ועל כל כליו ועל כל אשר לו המה ישאו את המשכן ואת כל כליו והם ישרתהו וסביב למשכן יחנו <span class="verse-number">א:נא</span> ובנסע המשכן יורידו אתו הלוים ובחנת המשכן יקימו אתו הלוים והזר הקרב יומת <span class="verse-number">א:נב</span> וחנו בני ישראל איש על מחנהו ואיש על דגלו לצבאתם <span class="verse-number">א:נג</span> והלוים יחנו סביב למשכן העדת ולא יהיה קצף על עדת בני ישראל ושמרו הלוים את משמרת משכן העדות <span class="verse-number">א:נד</span> ויעשו בני ישראל <span class="horizontal1">ככל אשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה כן עשו</span> {פ}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">א:מד</span> אלה הפקדים אשר פקד משה ואהרן ונשיאי ישראל שנים עשר איש איש אחד לבית אבתיו היו <span class="verse-number">א:מה</span> ויהיו כל פקודי בני ישראל לבית אבתם מבן עשרים שנה ומעלה כל יצא צבא בישראל <span class="verse-number">א:מו</span> <span class="horizontal1">ויהיו כל הפקדים שש מאות אלף ושלשת אלפים וחמש מאות וחמשים</span> <span class="verse-number">א:מז</span> והלוים למטה אבתם לא התפקדו בתוכם {פ}
+<span class="section-label">b</span> <span class="verse-number">א:כ</span> ויהיו בני ראובן בכר ישראל תולדתם למשפחתם לבית אבתם במספר שמות לגלגלתם כל זכר מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כא</span> <span class="horizontal1">פקדיהם למטה ראובן ששה וארבעים אלף וחמש מאות </span>{פ}<span class="verse-number"> א:כב</span> לבני שמעון תולדתם למשפחתם לבית אבתם פקדיו במספר שמות לגלגלתם כל זכר מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כג</span> <span class="horizontal1">פקדיהם למטה שמעון תשעה וחמשים אלף ושלש מאות</span> {פ} <span class="verse-number">א:כד</span> לבני גד תולדתם למשפחתם לבית אבתם במספר שמות מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כה</span> <span class="horizontal1">פקדיהם למטה גד חמשה וארבעים אלף ושש מאות וחמשים</span> {פ} <span class="verse-number">א:כו</span> לבני יהודה תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כז</span> <span class="horizontal1">פקדיהם למטה יהודה ארבעה ושבעים אלף ושש מאות</span> {פ} <span class="verse-number">א:כח</span> לבני יששכר תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:כט</span> <span class="horizontal1">פקדיהם למטה יששכר ארבעה וחמשים אלף וארבע מאות</span> {פ}<span class="verse-number"> א:ל</span> לבני זבולן תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לא</span> <span class="horizontal1">פקדיהם למטה זבולן שבעה וחמשים אלף וארבע מאות</span> {פ} <span class="verse-number">א:לב</span> לבני יוסף לבני אפרים תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לג</span> פקדיהם למטה אפרים ארבעים אלף וחמש מאות {פ} <span class="verse-number">א:לד</span> לבני מנשה תולדתם למשפחתם לבית אבתם במספר שמות מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לה</span> <span class="horizontal1">פקדיהם למטה מנשה שנים ושלשים אלף ומאתים</span> {פ} <span class="verse-number">א:לו</span> לבני בנימן תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לז</span> <span class="horizontal1">פקדיהם למטה בנימן חמשה ושלשים אלף וארבע מאות</span> {פ<span class="verse-number"> א:לח</span> לבני דן תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:לט</span> <span class="horizontal1">פקדיהם למטה דן שנים וששים אלף ושבע מאות</span> {פ} <span class="verse-number">א:מ</span> לבני אשר תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:מא</span> <span class="horizontal1">פקדיהם למטה אשר אחד וארבעים אלף וחמש מאות</span> {פ}<span class="verse-number">א:מב</span> בני נפתלי תולדתם למשפחתם לבית אבתם במספר שמת מבן עשרים שנה ומעלה כל יצא צבא <span class="verse-number">א:מג</span> <span class="horizontal1">פקדיהם למטה נפתלי שלשה וחמשים אלף וארבע מאות</span> {פ}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">ב:לב</span> <span class="horizontal1">אלה פקודי בני ישראל לבית אבתם כל פקודי המחנת לצבאתם שש מאות אלף ושלשת אלפים וחמש מאות וחמשים</span> <span class="verse-number">ב:לג</span> והלוים לא התפקדו בתוך בני ישראל כאשר צוה <span class="a">יהוה</span> את משה <span class="verse-number">ב:לד</span> ויעשו בני ישראל ככל אשר צוה <span class="a">יהוה</span> את משה כן חנו לדגליהם וכן נסעו איש למשפחתיו על בית אבתיו {פ}
-          </div>
-</td>
-</tr>
-<tr>
-<td class="torah-column">
-<h3 class="section-header">2א</h3>
-<div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ג:א</span> ואלה תולדת אהרן ומשה ביום דבר <span class="a">יהוה</span> את משה בהר סיני <span class="verse-number">ג:ב</span> ואלה שמות בני אהרן הבכר נדב ואביהוא אלעזר ואיתמר <span class="verse-number">ג:ג</span> אלה <span class="horizontal1">שמות בני אהרן</span> הכהנים המשחים אשר מלא ידם לכהן <span class="verse-number">ג:ד</span> וימת נדב ואביהוא לפני <span class="a">יהוה</span> בהקרבם אש זרה לפני <span class="a">יהוה</span> <span class="horizontal1">במדבר סיני </span>ובנים לא היו להם ויכהן אלעזר ואיתמר על פני אהרן אביהם {פ}
-          </div>
-</td>
-<td class="torah-column">
-<h3 class="section-header">2ב</h3>
-<div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ג:יד</span> וידבר <span class="a">יהוה</span> אל משה <span class="horizontal1">במדבר סיני</span> לאמר <span class="verse-number">ג:טו</span> פקד את בני לוי לבית אבתם למשפחתם כל זכר מבן חדש ומעלה תפקדם <span class="verse-number">ג:טז</span> ויפקד אתם משה על פי <span class="a">יהוה</span> כאשר צוה <span class="verse-number">ג:יז</span> <span class="horizontal1">ויהיו אלה בני לוי בשמתם </span>גרשון וקהת ומררי <span class="verse-number">ג:יח</span> ואלה שמות בני גרשון למשפחתם לבני ושמעי <span class="verse-number">ג:יט</span> ובני קהת למשפחתם עמרם ויצהר חברון ועזיאל <span class="verse-number">ג:כ</span> ובני מררי למשפחתם מחלי ומושי אלה הם משפחת הלוי לבית אבתם
+<span class="section-label">b</span> <span class="verse-number">ב:א</span> וידבר <span class="a">יהוה</span> אל משה ואל אהרן לאמר <span class="verse-number">ב:ב</span> איש על דגלו באתת לבית אבתם יחנו בני ישראל מנגד סביב לאהל מועד יחנו <span class="verse-number">ב:ג</span> והחנים קדמה מזרחה דגל מחנה יהודה לצבאתם ונשיא לבני יהודה נחשון בן עמינדב <span class="verse-number">ב:ד</span> <span class="horizontal1">וצבאו ופקדיהם ארבעה ושבעים אלף ושש מאות</span> <span class="verse-number">ב:ה</span> והחנים עליו מטה יששכר ונשיא לבני יששכר נתנאל בן צוער <span class="verse-number">ב:ו</span> <span class="horizontal1">וצבאו ופקדיו ארבעה וחמשים אלף וארבע מאות</span> <span class="verse-number">ב:ז</span> מטה זבולן ונשיא לבני זבולן אליאב בן חלן <span class="verse-number">ב:ח</span> <span class="horizontal1">וצבאו ופקדיו שבעה וחמשים אלף וארבע מאות </span><span class="verse-number">ב:ט</span> כל הפקדים למחנה יהודה מאת אלף ושמנים אלף וששת אלפים וארבע מאות לצבאתם ראשנה יסעו {ס} <span class="verse-number">ב:י</span> דגל מחנה ראובן תימנה לצבאתם ונשיא לבני ראובן אליצור בן שדיאור <span class="verse-number">ב:יא</span> <span class="horizontal1">וצבאו ופקדיו ששה וארבעים אלף וחמש מאות</span> <span class="verse-number">ב:יב</span> והחונם עליו מטה שמעון ונשיא לבני שמעון שלמיאל בן צורישדי <span class="verse-number">ב:יג</span> <span class="horizontal1">וצבאו ופקדיהם תשעה וחמשים אלף ושלש מאות </span><span class="verse-number">ב:יד</span> ומטה גד ונשיא לבני גד אליסף בן רעואל <span class="verse-number">ב:טו</span> <span class="horizontal1">וצבאו ופקדיהם חמשה וארבעים אלף ושש מאות וחמשים</span> <span class="verse-number">ב:טז</span> כל הפקדים למחנה ראובן מאת אלף ואחד וחמשים אלף וארבע מאות וחמשים לצבאתם ושנים יסעו {ס} <span class="verse-number">ב:יז</span> ונסע אהל מועד מחנה הלוים בתוך המחנת כאשר יחנו כן יסעו איש על ידו לדגליהם {ס} <span class="verse-number">ב:יח</span> דגל מחנה אפרים לצבאתם ימה ונשיא לבני אפרים אלישמע בן עמיהוד <span class="verse-number">ב:יט</span> <span class="horizontal1">וצבאו ופקדיהם ארבעים אלף וחמש מאות</span> <span class="verse-number">ב:כ</span> ועליו מטה מנשה ונשיא לבני מנשה גמליאל בן פדהצור <span class="verse-number">ב:כא</span> <span class="horizontal1">וצבאו ופקדיהם שנים ושלשים אלף ומאתים</span> <span class="verse-number">ב:כב</span> ומטה בנימן ונשיא לבני בנימן אבידן בן גדעני <span class="verse-number">ב:כג</span> <span class="horizontal1">וצבאו ופקדיהם חמשה ושלשים אלף וארבע מאות</span> <span class="verse-number">ב:כד</span> כל הפקדים למחנה אפרים מאת אלף ושמנת אלפים ומאה לצבאתם ושלשים יסעו {ס} <span class="verse-number">ב:כה</span> דגל מחנה דן צפנה לצבאתם ונשיא לבני דן אחיעזר בן עמישדי <span class="verse-number">ב:כו</span> <span class="horizontal1">וצבאו ופקדיהם שנים וששים אלף ושבע מאות</span> <span class="verse-number">ב:כז</span> והחנים עליו מטה אשר ונשיא לבני אשר פגעיאל בן עכרן <span class="verse-number">ב:כח</span> וצבאו ופקדיהם אחד וארבעים אלף וחמש מאות <span class="verse-number">ב:כט</span> ומטה נפתלי ונשיא לבני נפתלי אחירע בן עינן <span class="verse-number">ב:ל</span> <span class="horizontal1">צבאו ופקדיהם שלשה וחמשים אלף וארבע מאות</span> <span class="verse-number">ב:לא</span> כל הפקדים למחנה דן מאת אלף ושבעה וחמשים אלף ושש מאות לאחרנה יסעו לדגליהם {פ}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">ג:ה</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ג:ו</span> הקרב את מטה לוי והעמדת אתו לפני אהרן הכהן ושרתו אתו <span class="verse-number">ג:ז</span> ושמרו את משמרתו ואת משמרת כל העדה לפני אהל מועד לעבד את עבדת המשכן <span class="verse-number">ג:ח</span> ושמרו את כל כלי אהל מועד ואת משמרת בני ישראל לעבד את עבדת המשכן <span class="verse-number">ג:ט</span> ונתתה את הלוים לאהרן ולבניו נתונם נתונם המה לו מאת בני ישראל <span class="verse-number">ג:י</span><span class="horizontal1"> ואת אהרן ואת בניו</span> <span class="horizontal1">תפקד ושמרו את כהנתם והזר הקרב יומת</span> {פ}
+<span class="section-label">c</span> <span class="verse-number">א:מד</span> אלה הפקדים אשר פקד משה ואהרן ונשיאי ישראל שנים עשר איש איש אחד לבית אבתיו היו <span class="verse-number">א:מה</span> ויהיו כל פקודי בני ישראל לבית אבתם מבן עשרים שנה ומעלה כל יצא צבא בישראל <span class="verse-number">א:מו</span> <span class="horizontal1">ויהיו כל הפקדים שש מאות אלף ושלשת אלפים וחמש מאות וחמשים</span> <span class="verse-number">א:מז</span> והלוים למטה אבתם לא התפקדו בתוכם {פ}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">ג:כא</span> לגרשון משפחת הלבני ומשפחת השמעי אלה הם משפחת הגרשני <span class="verse-number">ג:כב</span> פקדיהם במספר כל זכר מבן חדש ומעלה פקדיהם שבעת אלפים וחמש מאות <span class="verse-number">ג:כג</span> משפחת הגרשני אחרי המשכן יחנו ימה <span class="verse-number">ג:כד</span> ונשיא בית אב לגרשני אליסף בן לאל <span class="verse-number">ג:כה</span> ומשמרת בני גרשון באהל מועד המשכן והאהל מכסהו ומסך פתח אהל מועד <span class="verse-number">ג:כו</span> וקלעי החצר ואת מסך פתח החצר אשר על המשכן ועל המזבח סביב ואת מיתריו לכל עבדתו {ס} <span class="verse-number">ג:כז</span> ולקהת משפחת העמרמי ומשפחת היצהרי ומשפחת החברני ומשפחת העזיאלי אלה הם משפחת הקהתי <span class="verse-number">ג:כח</span> במספר כל זכר מבן חדש ומעלה שמנת אלפים ושש מאות שמרי משמרת הקדש <span class="verse-number">ג:כט</span> משפחת בני קהת יחנו על ירך המשכן תימנה <span class="verse-number">ג:ל</span> ונשיא בית אב למשפחת הקהתי אליצפן בן עזיאל <span class="verse-number">ג:לא</span> ומשמרתם הארן והשלחן והמנרה והמזבחת וכלי הקדש אשר ישרתו בהם והמסך וכל עבדתו <span class="verse-number">ג:לב</span> ונשיא נשיאי הלוי אלעזר בן אהרן הכהן פקדת שמרי משמרת הקדש <span class="verse-number">ג:לג</span> למררי משפחת המחלי ומשפחת המושי אלה הם משפחת מררי <span class="verse-number">ג:לד</span> ופקדיהם במספר כל זכר מבן חדש ומעלה ששת אלפים ומאתים <span class="verse-number">ג:לה</span> ונשיא בית אב למשפחת מררי צוריאל בן אביחיל על ירך המשכן יחנו צפנה <span class="verse-number">ג:לו</span> ופקדת משמרת בני מררי קרשי המשכן ובריחיו ועמדיו ואדניו וכל כליו וכל עבדתו <span class="verse-number">ג:לז</span> ועמדי החצר סביב ואדניהם ויתדתם ומיתריהם <span class="verse-number">ג:לח</span> והחנים לפני המשכן קדמה לפני אהל מועד מזרחה <span class="horizontal1">משה ואהרן ובניו שמרים משמרת המקדש למשמרת בני ישראל והזר הקרב יומת</span> <span class="verse-number">ג:לט</span> כל פקודי הלוים אשר פקד משה ואהרן על פי <span class="a">יהוה</span> למשפחתם כל זכר מבן חדש ומעלה שנים ועשרים אלף {ס}
+<span class="section-label">c</span> <span class="verse-number">ב:לב</span> <span class="horizontal1">אלה פקודי בני ישראל לבית אבתם כל פקודי המחנת לצבאתם שש מאות אלף ושלשת אלפים וחמש מאות וחמשים</span> <span class="verse-number">ב:לג</span> והלוים לא התפקדו בתוך בני ישראל כאשר צוה <span class="a">יהוה</span> את משה <span class="verse-number">ב:לד</span> ויעשו בני ישראל ככל אשר צוה <span class="a">יהוה</span> את משה כן חנו לדגליהם וכן נסעו איש למשפחתיו על בית אבתיו {פ}
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<h3 class="section-header">2A</h3>
+<div class="torah-text">
+<span class="section-label">a</span> <span class="verse-number">ג:א</span> ואלה תולדת אהרן ומשה ביום דבר <span class="a">יהוה</span> את משה בהר סיני <span class="verse-number">ג:ב</span> ואלה שמות בני אהרן הבכר נדב ואביהוא אלעזר ואיתמר <span class="verse-number">ג:ג</span> אלה <span class="horizontal1">שמות בני אהרן</span> הכהנים המשחים אשר מלא ידם לכהן <span class="verse-number">ג:ד</span> וימת נדב ואביהוא לפני <span class="a">יהוה</span> בהקרבם אש זרה לפני <span class="a">יהוה</span> <span class="horizontal1">במדבר סיני </span>ובנים לא היו להם ויכהן אלעזר ואיתמר על פני אהרן אביהם {פ}
+          </div>
+</td>
+<td class="torah-column">
+<h3 class="section-header">2B</h3>
+<div class="torah-text">
+<span class="section-label">a</span> <span class="verse-number">ג:יד</span> וידבר <span class="a">יהוה</span> אל משה <span class="horizontal1">במדבר סיני</span> לאמר <span class="verse-number">ג:טו</span> פקד את בני לוי לבית אבתם למשפחתם כל זכר מבן חדש ומעלה תפקדם <span class="verse-number">ג:טז</span> ויפקד אתם משה על פי <span class="a">יהוה</span> כאשר צוה <span class="verse-number">ג:יז</span> <span class="horizontal1">ויהיו אלה בני לוי בשמתם </span>גרשון וקהת ומררי <span class="verse-number">ג:יח</span> ואלה שמות בני גרשון למשפחתם לבני ושמעי <span class="verse-number">ג:יט</span> ובני קהת למשפחתם עמרם ויצהר חברון ועזיאל <span class="verse-number">ג:כ</span> ובני מררי למשפחתם מחלי ומושי אלה הם משפחת הלוי לבית אבתם
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">ג:יא</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ג:יב</span> <span class="horizontal1">ואני הנה לקחתי את הלוים מתוך בני ישראל תחת כל בכור פטר רחם מבני ישראל והיו לי הלוים</span> <span class="verse-number">ג:יג</span> <span class="horizontal1">כי לי כל בכור ביום הכתי כל בכור בארץ מצרים הקדשתי לי כל בכור בישראל מאדם עד בהמה לי יהיו אני </span><span class="a">יהוה</span> {פ}
+<span class="section-label">b</span> <span class="verse-number">ג:ה</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ג:ו</span> הקרב את מטה לוי והעמדת אתו לפני אהרן הכהן ושרתו אתו <span class="verse-number">ג:ז</span> ושמרו את משמרתו ואת משמרת כל העדה לפני אהל מועד לעבד את עבדת המשכן <span class="verse-number">ג:ח</span> ושמרו את כל כלי אהל מועד ואת משמרת בני ישראל לעבד את עבדת המשכן <span class="verse-number">ג:ט</span> ונתתה את הלוים לאהרן ולבניו נתונם נתונם המה לו מאת בני ישראל <span class="verse-number">ג:י</span><span class="horizontal1"> ואת אהרן ואת בניו</span> <span class="horizontal1">תפקד ושמרו את כהנתם והזר הקרב יומת</span> {פ}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">ג:מ</span> ויאמר <span class="a">יהוה</span> אל משה פקד כל בכר זכר לבני ישראל מבן חדש ומעלה ושא את מספר שמתם <span class="verse-number">ג:מא</span> ולקחת את הלוים לי אני <span class="a">יהוה</span> תחת כל בכר בבני ישראל ואת בהמת הלוים תחת כל בכור בבהמת בני ישראל <span class="verse-number">ג:מב</span> ויפקד משה כאשר צוה <span class="a">יהוה</span> אתו את כל בכור בבני ישראל <span class="verse-number">ג:מג</span> ויהי כל בכור זכר במספר שמת מבן חדש ומעלה לפקדיהם שנים ועשרים אלף שלשה ושבעים ומאתים {פ} <span class="verse-number">ג:מד</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ג:מה</span> <span class="horizontal1">קח את הלוים תחת כל בכור בבני ישראל ואת בהמת הלוים תחת בהמתם והיו לי הלוים אני </span><span class="a">יהוה</span> <span class="verse-number">ג:מו</span> ואת פדויי השלשה והשבעים והמאתים העדפים על הלוים מבכור בני ישראל <span class="verse-number">ג:מז</span> ולקחת חמשת חמשת שקלים לגלגלת בשקל הקדש תקח עשרים גרה השקל <span class="verse-number">ג:מח</span> ונתתה הכסף לאהרן ולבניו פדויי העדפים בהם <span class="verse-number">ג:מט</span> ויקח משה את כסף הפדיום מאת העדפים על פדויי הלוים <span class="verse-number">ג:נ</span> מאת בכור בני ישראל לקח את הכסף חמשה וששים ושלש מאות ואלף בשקל הקדש <span class="verse-number">ג:נא</span> ויתן משה את כסף הפדים לאהרן ולבניו על פי <span class="a">יהוה</span> כאשר צוה <span class="a">יהוה</span> את משה {פ}
-          </div>
-</td>
-</tr>
-<tr>
-<td class="torah-column">
-<h3 class="section-header">3א</h3>
-<div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ד:א</span> וידבר <span class="a">יהוה</span> אל משה ואל אהרן לאמר <span class="verse-number">ד:ב</span> <span class="horizontal1">נשא את ראש בני קהת מתוך בני לוי למשפחתם לבית אבתם </span><span class="verse-number">ד:ג</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל בא לצבא לעשות מלאכה באהל מועד <span class="verse-number">ד:ד</span> זאת עבדת בני קהת באהל מועד קדש הקדשים <span class="verse-number">ד:ה</span> ובא אהרן ובניו בנסע המחנה והורדו את פרכת המסך וכסו בה את ארן העדת <span class="verse-number">ד:ו</span> ונתנו עליו כסוי עור תחש ופרשו בגד כליל תכלת מלמעלה ושמו בדיו <span class="verse-number">ד:ז</span> ועל שלחן הפנים יפרשו בגד תכלת ונתנו עליו את הקערת ואת הכפת ואת המנקית ואת קשות הנסך ולחם התמיד עליו יהיה <span class="verse-number">ד:ח</span> ופרשו עליהם בגד תולעת שני וכסו אתו במכסה עור תחש ושמו את בדיו <span class="verse-number">ד:ט</span> ולקחו בגד תכלת וכסו את מנרת המאור ואת נרתיה ואת מלקחיה ואת מחתתיה ואת כל כלי שמנה אשר ישרתו לה בהם <span class="verse-number">ד:י</span> ונתנו אתה ואת כל כליה אל מכסה עור תחש ונתנו על המוט <span class="verse-number">ד:יא</span> ועל מזבח הזהב יפרשו בגד תכלת וכסו אתו במכסה עור תחש ושמו את בדיו <span class="verse-number">ד:יב</span> ולקחו את כל כלי השרת אשר ישרתו בם בקדש ונתנו אל בגד תכלת וכסו אותם במכסה עור תחש ונתנו על המוט <span class="verse-number">ד:יג</span> ודשנו את המזבח ופרשו עליו בגד ארגמן <span class="verse-number">ד:יד</span> ונתנו עליו את כל כליו אשר ישרתו עליו בהם את המחתת את המזלגת ואת היעים ואת המזרקת כל כלי המזבח ופרשו עליו כסוי עור תחש ושמו בדיו <span class="verse-number">ד:טו</span> וכלה אהרן ובניו לכסת את הקדש ואת כל כלי הקדש בנסע המחנה ואחרי כן יבאו בני קהת לשאת ולא יגעו אל הקדש ומתו אלה משא בני קהת באהל מועד <span class="verse-number">ד:טז</span> ופקדת אלעזר בן אהרן הכהן שמן המאור וקטרת הסמים ומנחת התמיד ושמן המשחה פקדת כל המשכן וכל אשר בו בקדש ובכליו {פ}<span class="verse-number">ד:יז</span> וידבר <span class="a">יהוה</span> אל משה ואל אהרן לאמר <span class="verse-number">ד:יח</span> אל תכריתו את שבט משפחת הקהתי מתוך הלוים <span class="verse-number">ד:יט</span> וזאת עשו להם וחיו ולא ימתו בגשתם את קדש הקדשים אהרן ובניו יבאו ושמו אותם איש איש על עבדתו ואל משאו <span class="verse-number">ד:כ</span> ולא יבאו לראות כבלע את הקדש ומתו {פ}
-          </div>
-</td>
-<td class="torah-column">
-<h3 class="section-header">3ב</h3>
-<div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ד:לד</span> <span class="horizontal1">ויפקד משה ואהרן ונשיאי העדה את בני הקהתי למשפחתם ולבית אבתם</span> <span class="verse-number">ד:לה</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל הבא לצבא לעבדה באהל מועד <span class="verse-number">ד:לו</span> ויהיו פקדיהם למשפחתם אלפים שבע מאות וחמשים <span class="verse-number">ד:לז</span> אלה פקודי משפחת הקהתי כל העבד באהל מועד אשר פקד משה ואהרן על פי <span class="a">יהוה</span> ביד משה {ס}
+<span class="section-label">b</span> <span class="verse-number">ג:כא</span> לגרשון משפחת הלבני ומשפחת השמעי אלה הם משפחת הגרשני <span class="verse-number">ג:כב</span> פקדיהם במספר כל זכר מבן חדש ומעלה פקדיהם שבעת אלפים וחמש מאות <span class="verse-number">ג:כג</span> משפחת הגרשני אחרי המשכן יחנו ימה <span class="verse-number">ג:כד</span> ונשיא בית אב לגרשני אליסף בן לאל <span class="verse-number">ג:כה</span> ומשמרת בני גרשון באהל מועד המשכן והאהל מכסהו ומסך פתח אהל מועד <span class="verse-number">ג:כו</span> וקלעי החצר ואת מסך פתח החצר אשר על המשכן ועל המזבח סביב ואת מיתריו לכל עבדתו {ס} <span class="verse-number">ג:כז</span> ולקהת משפחת העמרמי ומשפחת היצהרי ומשפחת החברני ומשפחת העזיאלי אלה הם משפחת הקהתי <span class="verse-number">ג:כח</span> במספר כל זכר מבן חדש ומעלה שמנת אלפים ושש מאות שמרי משמרת הקדש <span class="verse-number">ג:כט</span> משפחת בני קהת יחנו על ירך המשכן תימנה <span class="verse-number">ג:ל</span> ונשיא בית אב למשפחת הקהתי אליצפן בן עזיאל <span class="verse-number">ג:לא</span> ומשמרתם הארן והשלחן והמנרה והמזבחת וכלי הקדש אשר ישרתו בהם והמסך וכל עבדתו <span class="verse-number">ג:לב</span> ונשיא נשיאי הלוי אלעזר בן אהרן הכהן פקדת שמרי משמרת הקדש <span class="verse-number">ג:לג</span> למררי משפחת המחלי ומשפחת המושי אלה הם משפחת מררי <span class="verse-number">ג:לד</span> ופקדיהם במספר כל זכר מבן חדש ומעלה ששת אלפים ומאתים <span class="verse-number">ג:לה</span> ונשיא בית אב למשפחת מררי צוריאל בן אביחיל על ירך המשכן יחנו צפנה <span class="verse-number">ג:לו</span> ופקדת משמרת בני מררי קרשי המשכן ובריחיו ועמדיו ואדניו וכל כליו וכל עבדתו <span class="verse-number">ג:לז</span> ועמדי החצר סביב ואדניהם ויתדתם ומיתריהם <span class="verse-number">ג:לח</span> והחנים לפני המשכן קדמה לפני אהל מועד מזרחה <span class="horizontal1">משה ואהרן ובניו שמרים משמרת המקדש למשמרת בני ישראל והזר הקרב יומת</span> <span class="verse-number">ג:לט</span> כל פקודי הלוים אשר פקד משה ואהרן על פי <span class="a">יהוה</span> למשפחתם כל זכר מבן חדש ומעלה שנים ועשרים אלף {ס}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">ד:כא</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ד:כב</span> <span class="horizontal1">נשא את ראש בני גרשון גם הם לבית אבתם למשפחתם</span> <span class="verse-number">ד:כג</span> מבן שלשים שנה ומעלה עד בן חמשים שנה תפקד אותם כל הבא לצבא צבא לעבד עבדה באהל מועד <span class="verse-number">ד:כד</span> זאת עבדת משפחת הגרשני לעבד ולמשא <span class="verse-number">ד:כה</span> ונשאו את יריעת המשכן ואת אהל מועד מכסהו ומכסה התחש אשר עליו מלמעלה ואת מסך פתח אהל מועד <span class="verse-number">ד:כו</span> ואת קלעי החצר ואת מסך פתח שער החצר אשר על המשכן ועל המזבח סביב ואת מיתריהם ואת כל כלי עבדתם ואת כל אשר יעשה להם ועבדו <span class="verse-number">ד:כז</span> על פי אהרן ובניו תהיה כל עבדת בני הגרשני לכל משאם ולכל עבדתם ופקדתם עלהם במשמרת את כל משאם <span class="verse-number">ד:כח</span> זאת עבדת משפחת בני הגרשני באהל מועד ומשמרתם ביד איתמר בן אהרן הכהן {ס}
+<span class="section-label">c</span> <span class="verse-number">ג:יא</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ג:יב</span> <span class="horizontal1">ואני הנה לקחתי את הלוים מתוך בני ישראל תחת כל בכור פטר רחם מבני ישראל והיו לי הלוים</span> <span class="verse-number">ג:יג</span> <span class="horizontal1">כי לי כל בכור ביום הכתי כל בכור בארץ מצרים הקדשתי לי כל בכור בישראל מאדם עד בהמה לי יהיו אני </span><span class="a">יהוה</span> {פ}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">ד:לח</span> <span class="horizontal1">ופקודי בני גרשון למשפחותם ולבית אבתם</span> <span class="verse-number">ד:לט</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל הבא לצבא לעבדה באהל מועד <span class="verse-number">ד:מ</span> ויהיו פקדיהם למשפחתם לבית אבתם אלפים ושש מאות ושלשים <span class="verse-number">ד:מא</span> אלה פקודי משפחת בני גרשון כל העבד באהל מועד אשר פקד משה ואהרן על פי <span class="a">יהוה</span>
+<span class="section-label">c</span> <span class="verse-number">ג:מ</span> ויאמר <span class="a">יהוה</span> אל משה פקד כל בכר זכר לבני ישראל מבן חדש ומעלה ושא את מספר שמתם <span class="verse-number">ג:מא</span> ולקחת את הלוים לי אני <span class="a">יהוה</span> תחת כל בכר בבני ישראל ואת בהמת הלוים תחת כל בכור בבהמת בני ישראל <span class="verse-number">ג:מב</span> ויפקד משה כאשר צוה <span class="a">יהוה</span> אתו את כל בכור בבני ישראל <span class="verse-number">ג:מג</span> ויהי כל בכור זכר במספר שמת מבן חדש ומעלה לפקדיהם שנים ועשרים אלף שלשה ושבעים ומאתים {פ} <span class="verse-number">ג:מד</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ג:מה</span> <span class="horizontal1">קח את הלוים תחת כל בכור בבני ישראל ואת בהמת הלוים תחת בהמתם והיו לי הלוים אני </span><span class="a">יהוה</span> <span class="verse-number">ג:מו</span> ואת פדויי השלשה והשבעים והמאתים העדפים על הלוים מבכור בני ישראל <span class="verse-number">ג:מז</span> ולקחת חמשת חמשת שקלים לגלגלת בשקל הקדש תקח עשרים גרה השקל <span class="verse-number">ג:מח</span> ונתתה הכסף לאהרן ולבניו פדויי העדפים בהם <span class="verse-number">ג:מט</span> ויקח משה את כסף הפדיום מאת העדפים על פדויי הלוים <span class="verse-number">ג:נ</span> מאת בכור בני ישראל לקח את הכסף חמשה וששים ושלש מאות ואלף בשקל הקדש <span class="verse-number">ג:נא</span> ויתן משה את כסף הפדים לאהרן ולבניו על פי <span class="a">יהוה</span> כאשר צוה <span class="a">יהוה</span> את משה {פ}
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<h3 class="section-header">3A</h3>
+<div class="torah-text">
+<span class="section-label">a</span> <span class="verse-number">ד:א</span> וידבר <span class="a">יהוה</span> אל משה ואל אהרן לאמר <span class="verse-number">ד:ב</span> <span class="horizontal1">נשא את ראש בני קהת מתוך בני לוי למשפחתם לבית אבתם </span><span class="verse-number">ד:ג</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל בא לצבא לעשות מלאכה באהל מועד <span class="verse-number">ד:ד</span> זאת עבדת בני קהת באהל מועד קדש הקדשים <span class="verse-number">ד:ה</span> ובא אהרן ובניו בנסע המחנה והורדו את פרכת המסך וכסו בה את ארן העדת <span class="verse-number">ד:ו</span> ונתנו עליו כסוי עור תחש ופרשו בגד כליל תכלת מלמעלה ושמו בדיו <span class="verse-number">ד:ז</span> ועל שלחן הפנים יפרשו בגד תכלת ונתנו עליו את הקערת ואת הכפת ואת המנקית ואת קשות הנסך ולחם התמיד עליו יהיה <span class="verse-number">ד:ח</span> ופרשו עליהם בגד תולעת שני וכסו אתו במכסה עור תחש ושמו את בדיו <span class="verse-number">ד:ט</span> ולקחו בגד תכלת וכסו את מנרת המאור ואת נרתיה ואת מלקחיה ואת מחתתיה ואת כל כלי שמנה אשר ישרתו לה בהם <span class="verse-number">ד:י</span> ונתנו אתה ואת כל כליה אל מכסה עור תחש ונתנו על המוט <span class="verse-number">ד:יא</span> ועל מזבח הזהב יפרשו בגד תכלת וכסו אתו במכסה עור תחש ושמו את בדיו <span class="verse-number">ד:יב</span> ולקחו את כל כלי השרת אשר ישרתו בם בקדש ונתנו אל בגד תכלת וכסו אותם במכסה עור תחש ונתנו על המוט <span class="verse-number">ד:יג</span> ודשנו את המזבח ופרשו עליו בגד ארגמן <span class="verse-number">ד:יד</span> ונתנו עליו את כל כליו אשר ישרתו עליו בהם את המחתת את המזלגת ואת היעים ואת המזרקת כל כלי המזבח ופרשו עליו כסוי עור תחש ושמו בדיו <span class="verse-number">ד:טו</span> וכלה אהרן ובניו לכסת את הקדש ואת כל כלי הקדש בנסע המחנה ואחרי כן יבאו בני קהת לשאת ולא יגעו אל הקדש ומתו אלה משא בני קהת באהל מועד <span class="verse-number">ד:טז</span> ופקדת אלעזר בן אהרן הכהן שמן המאור וקטרת הסמים ומנחת התמיד ושמן המשחה פקדת כל המשכן וכל אשר בו בקדש ובכליו {פ}<span class="verse-number">ד:יז</span> וידבר <span class="a">יהוה</span> אל משה ואל אהרן לאמר <span class="verse-number">ד:יח</span> אל תכריתו את שבט משפחת הקהתי מתוך הלוים <span class="verse-number">ד:יט</span> וזאת עשו להם וחיו ולא ימתו בגשתם את קדש הקדשים אהרן ובניו יבאו ושמו אותם איש איש על עבדתו ואל משאו <span class="verse-number">ד:כ</span> ולא יבאו לראות כבלע את הקדש ומתו {פ}
+          </div>
+</td>
+<td class="torah-column">
+<h3 class="section-header">3B</h3>
+<div class="torah-text">
+<span class="section-label">a</span> <span class="verse-number">ד:לד</span> <span class="horizontal1">ויפקד משה ואהרן ונשיאי העדה את בני הקהתי למשפחתם ולבית אבתם</span> <span class="verse-number">ד:לה</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל הבא לצבא לעבדה באהל מועד <span class="verse-number">ד:לו</span> ויהיו פקדיהם למשפחתם אלפים שבע מאות וחמשים <span class="verse-number">ד:לז</span> אלה פקודי משפחת הקהתי כל העבד באהל מועד אשר פקד משה ואהרן על פי <span class="a">יהוה</span> ביד משה {ס}
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">b</span> <span class="verse-number">ד:כא</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ד:כב</span> <span class="horizontal1">נשא את ראש בני גרשון גם הם לבית אבתם למשפחתם</span> <span class="verse-number">ד:כג</span> מבן שלשים שנה ומעלה עד בן חמשים שנה תפקד אותם כל הבא לצבא צבא לעבד עבדה באהל מועד <span class="verse-number">ד:כד</span> זאת עבדת משפחת הגרשני לעבד ולמשא <span class="verse-number">ד:כה</span> ונשאו את יריעת המשכן ואת אהל מועד מכסהו ומכסה התחש אשר עליו מלמעלה ואת מסך פתח אהל מועד <span class="verse-number">ד:כו</span> ואת קלעי החצר ואת מסך פתח שער החצר אשר על המשכן ועל המזבח סביב ואת מיתריהם ואת כל כלי עבדתם ואת כל אשר יעשה להם ועבדו <span class="verse-number">ד:כז</span> על פי אהרן ובניו תהיה כל עבדת בני הגרשני לכל משאם ולכל עבדתם ופקדתם עלהם במשמרת את כל משאם <span class="verse-number">ד:כח</span> זאת עבדת משפחת בני הגרשני באהל מועד ומשמרתם ביד איתמר בן אהרן הכהן {ס}
+          </div>
+</td>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">b</span> <span class="verse-number">ד:לח</span> <span class="horizontal1">ופקודי בני גרשון למשפחותם ולבית אבתם</span> <span class="verse-number">ד:לט</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל הבא לצבא לעבדה באהל מועד <span class="verse-number">ד:מ</span> ויהיו פקדיהם למשפחתם לבית אבתם אלפים ושש מאות ושלשים <span class="verse-number">ד:מא</span> אלה פקודי משפחת בני גרשון כל העבד באהל מועד אשר פקד משה ואהרן על פי <span class="a">יהוה</span>
 </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">ד:כט</span> <span class="horizontal1">בני מררי למשפחתם לבית אבתם תפקד אתם</span> <span class="verse-number">ד:ל</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה תפקדם כל הבא לצבא לעבד את עבדת אהל מועד <span class="verse-number">ד:לא</span> וזאת משמרת משאם לכל עבדתם באהל מועד קרשי המשכן ובריחיו ועמודיו ואדניו <span class="verse-number">ד:לב</span> ועמודי החצר סביב ואדניהם ויתדתם ומיתריהם לכל כליהם ולכל עבדתם ובשמת תפקדו את כלי משמרת משאם <span class="verse-number">ד:לג</span> זאת עבדת משפחת בני מררי לכל עבדתם באהל מועד ביד איתמר בן אהרן הכהן
+<span class="section-label">c</span> <span class="verse-number">ד:כט</span> <span class="horizontal1">בני מררי למשפחתם לבית אבתם תפקד אתם</span> <span class="verse-number">ד:ל</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה תפקדם כל הבא לצבא לעבד את עבדת אהל מועד <span class="verse-number">ד:לא</span> וזאת משמרת משאם לכל עבדתם באהל מועד קרשי המשכן ובריחיו ועמודיו ואדניו <span class="verse-number">ד:לב</span> ועמודי החצר סביב ואדניהם ויתדתם ומיתריהם לכל כליהם ולכל עבדתם ובשמת תפקדו את כלי משמרת משאם <span class="verse-number">ד:לג</span> זאת עבדת משפחת בני מררי לכל עבדתם באהל מועד ביד איתמר בן אהרן הכהן
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">ד:מב</span> <span class="horizontal1">ופקודי משפחת בני מררי למשפחתם לבית אבתם</span> <span class="verse-number">ד:מג</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל הבא לצבא לעבדה באהל מועד <span class="verse-number">ד:מד</span> ויהיו פקדיהם למשפחתם שלשת אלפים ומאתים <span class="verse-number">ד:מה</span> אלה פקודי משפחת בני מררי אשר פקד משה ואהרן על פי <span class="a">יהוה</span> ביד משה <span class="verse-number">ד:מו</span> כל הפקדים אשר פקד משה ואהרן ונשיאי ישראל את הלוים למשפחתם ולבית אבתם <span class="verse-number">ד:מז</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל הבא לעבד עבדת עבדה ועבדת משא באהל מועד <span class="verse-number">ד:מח</span> ויהיו פקדיהם שמנת אלפים וחמש מאות ושמנים <span class="verse-number">ד:מט</span> על פי <span class="a">יהוה</span> פקד אותם ביד משה איש איש על עבדתו ועל משאו ופקדיו אשר צוה <span class="a">יהוה</span> את משה {פ}
+<span class="section-label">c</span> <span class="verse-number">ד:מב</span> <span class="horizontal1">ופקודי משפחת בני מררי למשפחתם לבית אבתם</span> <span class="verse-number">ד:מג</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל הבא לצבא לעבדה באהל מועד <span class="verse-number">ד:מד</span> ויהיו פקדיהם למשפחתם שלשת אלפים ומאתים <span class="verse-number">ד:מה</span> אלה פקודי משפחת בני מררי אשר פקד משה ואהרן על פי <span class="a">יהוה</span> ביד משה <span class="verse-number">ד:מו</span> כל הפקדים אשר פקד משה ואהרן ונשיאי ישראל את הלוים למשפחתם ולבית אבתם <span class="verse-number">ד:מז</span> מבן שלשים שנה ומעלה ועד בן חמשים שנה כל הבא לעבד עבדת עבדה ועבדת משא באהל מועד <span class="verse-number">ד:מח</span> ויהיו פקדיהם שמנת אלפים וחמש מאות ושמנים <span class="verse-number">ד:מט</span> על פי <span class="a">יהוה</span> פקד אותם ביד משה איש איש על עבדתו ועל משאו ופקדיו אשר צוה <span class="a">יהוה</span> את משה {פ}
           </div>
 </td>
 </tr>
@@ -124,3 +489,83 @@
 </div>
 </div>
 </div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline.html">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

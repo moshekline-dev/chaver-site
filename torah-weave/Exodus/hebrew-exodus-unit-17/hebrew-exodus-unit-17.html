@@ -1,4 +1,369 @@
-<div dir="rtl" lang="he">
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained.html">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names.html">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture.html">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers.html">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets.html">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center.html">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse.html">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map.html">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared.html">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline.html">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <div dir="rtl" lang="he">
 <div class="hebrew-torah-unit-wrapper" dir="rtl">
 <div class="unit-header" style="text-align: center">
 <h1 dir="rtl">ספר שמות יחידה 17</h1>
@@ -8,63 +373,63 @@
 <table class="torah-table" style="direction: rtl" dir="rtl">
 <tr>
 <td class="torah-column">
-<h3 class="section-header">1א</h3>
+<h3 class="section-header">1A</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">לו:ח</span> ויעשו כל חכם לב בעשי המלאכה את המשכן עשר יריעת שש משזר ותכלת וארגמן ותולעת שני כרבים מעשה חשב עשה אתם <span class="verse-number">לו:ט</span> ארך היריעה האחת שמנה ועשרים באמה ורחב ארבע באמה היריעה האחת מדה אחת לכל היריעת <span class="verse-number">לו:י</span> ויחבר את חמש היריעת אחת אל אחת וחמש יריעת חבר אחת אל אחת <span class="verse-number">לו:יא</span> ויעש ללאת תכלת על שפת היריעה האחת מקצה במחברת כן עשה בשפת היריעה הקיצונה במחברת השנית <span class="verse-number">לו:יב</span> חמשים ללאת עשה ביריעה האחת וחמשים ללאת עשה בקצה היריעה אשר במחברת השנית מקבילת הללאת אחת אל אחת <span class="verse-number">לו:יג</span> ויעש חמשים קרסי זהב ויחבר את היריעת אחת אל אחת בקרסים ויהי המשכן אחד {פ}
+<span class="section-label">a</span> <span class="verse-number">לו:ח</span> ויעשו כל חכם לב בעשי המלאכה את המשכן עשר יריעת שש משזר ותכלת וארגמן ותולעת שני כרבים מעשה חשב עשה אתם <span class="verse-number">לו:ט</span> ארך היריעה האחת שמנה ועשרים באמה ורחב ארבע באמה היריעה האחת מדה אחת לכל היריעת <span class="verse-number">לו:י</span> ויחבר את חמש היריעת אחת אל אחת וחמש יריעת חבר אחת אל אחת <span class="verse-number">לו:יא</span> ויעש ללאת תכלת על שפת היריעה האחת מקצה במחברת כן עשה בשפת היריעה הקיצונה במחברת השנית <span class="verse-number">לו:יב</span> חמשים ללאת עשה ביריעה האחת וחמשים ללאת עשה בקצה היריעה אשר במחברת השנית מקבילת הללאת אחת אל אחת <span class="verse-number">לו:יג</span> ויעש חמשים קרסי זהב ויחבר את היריעת אחת אל אחת בקרסים ויהי המשכן אחד {פ}
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">1ב</h3>
+<h3 class="section-header">1B</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">לז:א</span> ויעש בצלאל את הארן עצי שטים אמתים וחצי ארכו ואמה וחצי רחבו ואמה וחצי קמתו <span class="verse-number">לז:ב</span> ויצפהו זהב טהור מבית ומחוץ ויעש לו זר זהב סביב <span class="verse-number">לז:ג</span> ויצק לו ארבע טבעת זהב על ארבע פעמתיו ושתי טבעת על צלעו האחת ושתי טבעת על צלעו השנית <span class="verse-number">לז:ד</span> ויעש בדי עצי שטים ויצף אתם זהב <span class="verse-number">לז:ה</span> ויבא את הבדים בטבעת על צלעת הארן לשאת את הארן
-          </div>
-</td>
-</tr>
-<tr>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">לו:יד</span> ויעש יריעת עזים לאהל על המשכן עשתי עשרה יריעת עשה אתם <span class="verse-number">לו:טו</span> ארך היריעה האחת שלשים באמה וארבע אמות רחב היריעה האחת מדה אחת לעשתי עשרה יריעת <span class="verse-number">לו:טז</span> ויחבר את חמש היריעת לבד ואת שש היריעת לבד <span class="verse-number">לו:יז</span> ויעש ללאת חמשים על שפת היריעה הקיצנה במחברת וחמשים ללאת עשה על שפת היריעה החברת השנית <span class="verse-number">לו:יח</span> ויעש קרסי נחשת חמשים לחבר את האהל להית אחד <span class="verse-number">לו:יט</span> ויעש מכסה לאהל ערת אילם מאדמים ומכסה ערת תחשים מלמעלה {ס}
-          </div>
-</td>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">לז:ו</span> ויעש כפרת זהב טהור אמתים וחצי ארכה ואמה וחצי רחבה <span class="verse-number">לז:ז</span> ויעש שני כרבים זהב מקשה עשה אתם משני קצות הכפרת <span class="verse-number">לז:ח</span> כרוב אחד מקצה מזה וכרוב אחד מקצה מזה מן הכפרת עשה את הכרבים משני קצוותו (קצותיו) <span class="verse-number">לז:ט</span> ויהיו הכרבים פרשי כנפים למעלה סככים בכנפיהם על הכפרת ופניהם איש אל אחיו אל הכפרת היו פני הכרבים {פ}
+<span class="section-label">a</span> <span class="verse-number">לז:א</span> ויעש בצלאל את הארן עצי שטים אמתים וחצי ארכו ואמה וחצי רחבו ואמה וחצי קמתו <span class="verse-number">לז:ב</span> ויצפהו זהב טהור מבית ומחוץ ויעש לו זר זהב סביב <span class="verse-number">לז:ג</span> ויצק לו ארבע טבעת זהב על ארבע פעמתיו ושתי טבעת על צלעו האחת ושתי טבעת על צלעו השנית <span class="verse-number">לז:ד</span> ויעש בדי עצי שטים ויצף אתם זהב <span class="verse-number">לז:ה</span> ויבא את הבדים בטבעת על צלעת הארן לשאת את הארן
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">לו:כ</span> ויעש את הקרשים למשכן עצי שטים עמדים <span class="verse-number">לו:כא</span> עשר אמת ארך הקרש ואמה וחצי האמה רחב הקרש האחד <span class="verse-number">לו:כב</span> שתי ידת לקרש האחד משלבת אחת אל אחת כן עשה לכל קרשי המשכן <span class="verse-number">לו:כג</span> ויעש את הקרשים למשכן עשרים קרשים לפאת נגב תימנה <span class="verse-number">לו:כד</span> וארבעים אדני כסף עשה תחת עשרים הקרשים שני אדנים תחת הקרש האחד לשתי ידתיו ושני אדנים תחת הקרש האחד לשתי ידתיו <span class="verse-number">לו:כה</span> ולצלע המשכן השנית לפאת צפון עשה עשרים קרשים <span class="verse-number">לו:כו</span> וארבעים אדניהם כסף שני אדנים תחת הקרש האחד ושני אדנים תחת הקרש האחד <span class="verse-number">לו:כז</span> ולירכתי המשכן ימה עשה ששה קרשים <span class="verse-number">לו:כח</span> ושני קרשים עשה למקצעת המשכן בירכתים <span class="verse-number">לו:כט</span> והיו תואמם מלמטה ויחדו יהיו תמים אל ראשו אל הטבעת האחת כן עשה לשניהם לשני המקצעת <span class="verse-number">לו:ל</span> והיו שמנה קרשים ואדניהם כסף ששה עשר אדנים שני אדנים שני אדנים תחת הקרש האחד <span class="verse-number">לו:לא</span> ויעש בריחי עצי שטים חמשה לקרשי צלע המשכן האחת <span class="verse-number">לו:לב</span> וחמשה בריחם לקרשי צלע המשכן השנית וחמשה בריחם לקרשי המשכן לירכתים ימה <span class="verse-number">לו:לג</span> ויעש את הבריח התיכן לברח בתוך הקרשים מן הקצה אל הקצה <span class="verse-number">לו:לד</span> ואת הקרשים צפה זהב ואת טבעתם עשה זהב בתים לבריחם ויצף את הבריחם זהב
+<span class="section-label">b</span> <span class="verse-number">לו:יד</span> ויעש יריעת עזים לאהל על המשכן עשתי עשרה יריעת עשה אתם <span class="verse-number">לו:טו</span> ארך היריעה האחת שלשים באמה וארבע אמות רחב היריעה האחת מדה אחת לעשתי עשרה יריעת <span class="verse-number">לו:טז</span> ויחבר את חמש היריעת לבד ואת שש היריעת לבד <span class="verse-number">לו:יז</span> ויעש ללאת חמשים על שפת היריעה הקיצנה במחברת וחמשים ללאת עשה על שפת היריעה החברת השנית <span class="verse-number">לו:יח</span> ויעש קרסי נחשת חמשים לחבר את האהל להית אחד <span class="verse-number">לו:יט</span> ויעש מכסה לאהל ערת אילם מאדמים ומכסה ערת תחשים מלמעלה {ס}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">C</span> <span class="verse-number">לז:י</span> ויעש את השלחן עצי שטים אמתים ארכו ואמה רחבו ואמה וחצי קמתו <span class="verse-number">לז:יא</span> ויצף אתו זהב טהור ויעש לו זר זהב סביב <span class="verse-number">לז:יב</span> ויעש לו מסגרת טפח סביב ויעש זר זהב למסגרתו סביב <span class="verse-number">לז:יג</span> ויצק לו ארבע טבעת זהב ויתן את הטבעת על ארבע הפאת אשר לארבע רגליו <span class="verse-number">לז:יד</span> לעמת המסגרת היו הטבעת בתים לבדים לשאת את השלחן <span class="verse-number">לז:טו</span> ויעש את הבדים עצי שטים ויצף אתם זהב לשאת את השלחן <span class="verse-number">לז:טז</span> ויעש את הכלים אשר על השלחן את קערתיו ואת כפתיו ואת מנקיתיו ואת הקשות אשר יסך בהן זהב טהור {פ}
+<span class="section-label">b</span> <span class="verse-number">לז:ו</span> ויעש כפרת זהב טהור אמתים וחצי ארכה ואמה וחצי רחבה <span class="verse-number">לז:ז</span> ויעש שני כרבים זהב מקשה עשה אתם משני קצות הכפרת <span class="verse-number">לז:ח</span> כרוב אחד מקצה מזה וכרוב אחד מקצה מזה מן הכפרת עשה את הכרבים משני קצוותו (קצותיו) <span class="verse-number">לז:ט</span> ויהיו הכרבים פרשי כנפים למעלה סככים בכנפיהם על הכפרת ופניהם איש אל אחיו אל הכפרת היו פני הכרבים {פ}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">D</span> <span class="verse-number">לו:לה</span> ויעש את הפרכת תכלת וארגמן ותולעת שני ושש משזר מעשה חשב עשה אתה כרבים <span class="verse-number">לו:לו</span> ויעש לה ארבעה עמודי שטים ויצפם זהב וויהם זהב ויצק להם ארבעה אדני כסף <span class="verse-number">לו:לז</span> ויעש מסך לפתח האהל תכלת וארגמן ותולעת שני ושש משזר מעשה רקם <span class="verse-number">לו:לח</span> ואת עמודיו חמשה ואת וויהם וצפה ראשיהם וחשקיהם זהב ואדניהם חמשה נחשת {פ}
+<span class="section-label">c</span> <span class="verse-number">לו:כ</span> ויעש את הקרשים למשכן עצי שטים עמדים <span class="verse-number">לו:כא</span> עשר אמת ארך הקרש ואמה וחצי האמה רחב הקרש האחד <span class="verse-number">לו:כב</span> שתי ידת לקרש האחד משלבת אחת אל אחת כן עשה לכל קרשי המשכן <span class="verse-number">לו:כג</span> ויעש את הקרשים למשכן עשרים קרשים לפאת נגב תימנה <span class="verse-number">לו:כד</span> וארבעים אדני כסף עשה תחת עשרים הקרשים שני אדנים תחת הקרש האחד לשתי ידתיו ושני אדנים תחת הקרש האחד לשתי ידתיו <span class="verse-number">לו:כה</span> ולצלע המשכן השנית לפאת צפון עשה עשרים קרשים <span class="verse-number">לו:כו</span> וארבעים אדניהם כסף שני אדנים תחת הקרש האחד ושני אדנים תחת הקרש האחד <span class="verse-number">לו:כז</span> ולירכתי המשכן ימה עשה ששה קרשים <span class="verse-number">לו:כח</span> ושני קרשים עשה למקצעת המשכן בירכתים <span class="verse-number">לו:כט</span> והיו תואמם מלמטה ויחדו יהיו תמים אל ראשו אל הטבעת האחת כן עשה לשניהם לשני המקצעת <span class="verse-number">לו:ל</span> והיו שמנה קרשים ואדניהם כסף ששה עשר אדנים שני אדנים שני אדנים תחת הקרש האחד <span class="verse-number">לו:לא</span> ויעש בריחי עצי שטים חמשה לקרשי צלע המשכן האחת <span class="verse-number">לו:לב</span> וחמשה בריחם לקרשי צלע המשכן השנית וחמשה בריחם לקרשי המשכן לירכתים ימה <span class="verse-number">לו:לג</span> ויעש את הבריח התיכן לברח בתוך הקרשים מן הקצה אל הקצה <span class="verse-number">לו:לד</span> ואת הקרשים צפה זהב ואת טבעתם עשה זהב בתים לבריחם ויצף את הבריחם זהב
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">D</span> <span class="verse-number">לז:יז</span> ויעש את המנרה זהב טהור מקשה עשה את המנרה ירכה וקנה גביעיה כפתריה ופרחיה ממנה היו <span class="verse-number">לז:יח</span> וששה קנים יצאים מצדיה שלשה קני מנרה מצדה האחד ושלשה קני מנרה מצדה השני <span class="verse-number">לז:יט</span> שלשה גבעים משקדים בקנה האחד כפתר ופרח ושלשה גבעים משקדים בקנה אחד כפתר ופרח כן לששת הקנים היצאים מן המנרה <span class="verse-number">לז:כ</span> ובמנרה ארבעה גבעים משקדים כפתריה ופרחיה <span class="verse-number">לז:כא</span> וכפתר תחת שני הקנים ממנה וכפתר תחת שני הקנים ממנה וכפתר תחת שני הקנים ממנה לששת הקנים היצאים ממנה <span class="verse-number">לז:כב</span> כפתריהם וקנתם ממנה היו כלה מקשה אחת זהב טהור <span class="verse-number">לז:כג</span> ויעש את נרתיה שבעה ומלקחיה ומחתתיה זהב טהור <span class="verse-number">לז:כד</span> ככר זהב טהור עשה אתה ואת כל כליה {פ}
+<span class="section-label">c</span> <span class="verse-number">לז:י</span> ויעש את השלחן עצי שטים אמתים ארכו ואמה רחבו ואמה וחצי קמתו <span class="verse-number">לז:יא</span> ויצף אתו זהב טהור ויעש לו זר זהב סביב <span class="verse-number">לז:יב</span> ויעש לו מסגרת טפח סביב ויעש זר זהב למסגרתו סביב <span class="verse-number">לז:יג</span> ויצק לו ארבע טבעת זהב ויתן את הטבעת על ארבע הפאת אשר לארבע רגליו <span class="verse-number">לז:יד</span> לעמת המסגרת היו הטבעת בתים לבדים לשאת את השלחן <span class="verse-number">לז:טו</span> ויעש את הבדים עצי שטים ויצף אתם זהב לשאת את השלחן <span class="verse-number">לז:טז</span> ויעש את הכלים אשר על השלחן את קערתיו ואת כפתיו ואת מנקיתיו ואת הקשות אשר יסך בהן זהב טהור {פ}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
-<h3 class="section-header">2א</h3>
+<div class="torah-text">
+<span class="section-label">d</span> <span class="verse-number">לו:לה</span> ויעש את הפרכת תכלת וארגמן ותולעת שני ושש משזר מעשה חשב עשה אתה כרבים <span class="verse-number">לו:לו</span> ויעש לה ארבעה עמודי שטים ויצפם זהב וויהם זהב ויצק להם ארבעה אדני כסף <span class="verse-number">לו:לז</span> ויעש מסך לפתח האהל תכלת וארגמן ותולעת שני ושש משזר מעשה רקם <span class="verse-number">לו:לח</span> ואת עמודיו חמשה ואת וויהם וצפה ראשיהם וחשקיהם זהב ואדניהם חמשה נחשת {פ}
+          </div>
+</td>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">d</span> <span class="verse-number">לז:יז</span> ויעש את המנרה זהב טהור מקשה עשה את המנרה ירכה וקנה גביעיה כפתריה ופרחיה ממנה היו <span class="verse-number">לז:יח</span> וששה קנים יצאים מצדיה שלשה קני מנרה מצדה האחד ושלשה קני מנרה מצדה השני <span class="verse-number">לז:יט</span> שלשה גבעים משקדים בקנה האחד כפתר ופרח ושלשה גבעים משקדים בקנה אחד כפתר ופרח כן לששת הקנים היצאים מן המנרה <span class="verse-number">לז:כ</span> ובמנרה ארבעה גבעים משקדים כפתריה ופרחיה <span class="verse-number">לז:כא</span> וכפתר תחת שני הקנים ממנה וכפתר תחת שני הקנים ממנה וכפתר תחת שני הקנים ממנה לששת הקנים היצאים ממנה <span class="verse-number">לז:כב</span> כפתריהם וקנתם ממנה היו כלה מקשה אחת זהב טהור <span class="verse-number">לז:כג</span> ויעש את נרתיה שבעה ומלקחיה ומחתתיה זהב טהור <span class="verse-number">לז:כד</span> ככר זהב טהור עשה אתה ואת כל כליה {פ}
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<h3 class="section-header">2A</h3>
 <div class="torah-text">
 <span class="verse-number">לז:כה</span> <span class="horizontal1">ויעש את מזבח</span> הקטרת עצי שטים אמה ארכו ואמה רחבו רבוע ואמתים קמתו ממנו היו קרנתיו <span class="verse-number">לז:כו</span> ויצף אתו זהב טהור את גגו ואת קירתיו סביב ואת קרנתיו ויעש לו זר זהב סביב <span class="verse-number">לז:כז</span> ושתי טבעת זהב עשה לו מתחת לזרו על שתי צלעתיו על שני צדיו לבתים לבדים לשאת אתו בהם <span class="verse-number">לז:כח</span> ויעש את הבדים עצי שטים ויצף אתם זהב <span class="verse-number">לז:כט</span> ויעש את שמן המשחה קדש ואת קטרת הסמים טהור מעשה רקח {ס}
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">2ב</h3>
+<h3 class="section-header">2B</h3>
 <div class="torah-text">
 <span class="verse-number">לח:א</span> <span class="horizontal1">ויעש את מזבח</span> העלה עצי שטים חמש אמות ארכו וחמש אמות רחבו רבוע ושלש אמות קמתו <span class="verse-number">לח:ב</span> ויעש קרנתיו על ארבע פנתיו ממנו היו קרנתיו ויצף אתו נחשת <span class="verse-number">לח:ג</span> ויעש את כל כלי המזבח את הסירת ואת היעים ואת המזרקת את המזלגת ואת המחתת כל כליו עשה נחשת <span class="verse-number">לח:ד</span> ויעש למזבח מכבר מעשה רשת נחשת תחת כרכבו מלמטה עד חציו <span class="verse-number">לח:ה</span> ויצק ארבע טבעת בארבע הקצות למכבר הנחשת בתים לבדים <span class="verse-number">לח:ו</span> ויעש את הבדים עצי שטים ויצף אתם נחשת <span class="verse-number">לח:ז</span> ויבא את הבדים בטבעת על צלעת המזבח לשאת אתו בהם נבוב לחת עשה אתו {ס}
           </div>
@@ -72,13 +437,13 @@
 </tr>
 <tr>
 <td class="torah-column">
-<h3 class="section-header">3א</h3>
+<h3 class="section-header">3A</h3>
 <div class="torah-text">
 <span class="verse-number">לח:ח</span> ויעש את הכיור נחשת ואת כנו נחשת במראת הצבאת אשר צבאו פתח אהל מועד {ס}
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">3ב</h3>
+<h3 class="section-header">3B</h3>
 <div class="torah-text">
 <span class="verse-number">לח:ט</span> ויעש את החצר לפאת נגב תימנה קלעי החצר שש משזר מאה באמה <span class="verse-number">לח:י</span> עמודיהם עשרים ואדניהם עשרים נחשת ווי העמודים וחשקיהם כסף <span class="verse-number">לח:יא</span> ולפאת צפון מאה באמה עמודיהם עשרים ואדניהם עשרים נחשת ווי העמודים וחשקיהם כסף <span class="verse-number">לח:יב</span> ולפאת ים קלעים חמשים באמה עמודיהם עשרה ואדניהם עשרה ווי העמדים וחשוקיהם כסף <span class="verse-number">לח:יג</span> ולפאת קדמה מזרחה חמשים אמה <span class="verse-number">לח:יד</span> קלעים חמש עשרה אמה אל הכתף עמודיהם שלשה ואדניהם שלשה <span class="verse-number">לח:טו</span> ולכתף השנית מזה ומזה לשער החצר קלעים חמש עשרה אמה עמדיהם שלשה ואדניהם שלשה <span class="verse-number">לח:טז</span> כל קלעי החצר סביב שש משזר <span class="verse-number">לח:יז</span> והאדנים לעמדים נחשת ווי העמודים וחשוקיהם כסף וצפוי ראשיהם כסף והם מחשקים כסף כל עמדי החצר <span class="verse-number">לח:יח</span> ומסך שער החצר מעשה רקם תכלת וארגמן ותולעת שני ושש משזר ועשרים אמה ארך וקומה ברחב חמש אמות לעמת קלעי החצר <span class="verse-number">לח:יט</span> ועמדיהם ארבעה ואדניהם ארבעה נחשת וויהם כסף וצפוי ראשיהם וחשקיהם כסף <span class="verse-number">לח:כ</span> וכל היתדת למשכן ולחצר סביב נחשת {ס}
           </div>
@@ -88,3 +453,83 @@
 </div>
 </div>
 </div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline.html">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

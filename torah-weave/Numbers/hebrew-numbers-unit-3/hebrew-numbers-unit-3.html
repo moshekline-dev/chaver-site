@@ -1,4 +1,369 @@
-<div dir="rtl" lang="he">
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained.html">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names.html">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture.html">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers.html">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets.html">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center.html">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse.html">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map.html">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared.html">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline.html">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <div dir="rtl" lang="he">
 <div class="hebrew-torah-unit-wrapper" dir="rtl">
 <div class="unit-header" style="text-align: center">
 <h1 dir="rtl">ספר במדבר יחידה 3</h1>
@@ -8,19 +373,19 @@
 <table class="torah-table" style="direction: rtl" dir="rtl">
 <tr>
 <td class="torah-column">
-<h3 class="section-header">1א</h3>
+<h3 class="section-header">1A</h3>
 <div class="torah-text">
 <span class="verse-number">ו:כב</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ו:כג</span> <span class="vertical1">דבר אל אהרן ואל בניו </span>לאמר כה תברכו את בני ישראל אמור להם {ס} <span class="verse-number">ו:כד</span> יברכך <span class="a">יהוה</span><span class="closure"> וישמרך</span> {ס} <span class="verse-number">ו:כה</span> <span class="closure">יאר </span><span class="a">יהוה</span><span class="closure"> פניו אליך ויחנך</span> {ס} <span class="verse-number">ו:כו</span> ישא <span class="a">יהוה</span> פניו אליך וישם לך שלום {ס} <span class="verse-number">ו:כז</span> ושמו את שמי על בני ישראל ואני אברכם {ס}
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">1ב</h3>
+<h3 class="section-header">1B</h3>
 <div class="torah-text">
 <span class="verse-number">ז:א</span> ויהי ביום כלות משה להקים את המשכן וימשח אתו ויקדש אתו ואת כל כליו ואת המזבח ואת כל כליו וימשחם ויקדש אתם <span class="verse-number">ז:ב</span> ויקריבו נשיאי ישראל ראשי בית אבתם הם נשיאי המטת הם העמדים על הפקדים <span class="verse-number">ז:ג</span> ויביאו את קרבנם לפני <span class="a">יהוה</span> שש עגלת צב ושני עשר בקר עגלה על שני הנשאים ושור לאחד ויקריבו אותם לפני המשכן <span class="verse-number">ז:ד</span> ויאמר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ז:ה</span> קח מאתם והיו לעבד את עבדת אהל מועד <span class="vertical1">ונתתה אותם אל הלוים</span> איש כפי עבדתו <span class="verse-number">ז:ו</span> ויקח משה את העגלת ואת הבקר ויתן אותם אל הלוים <span class="verse-number">ז:ז</span> את שתי העגלות ואת ארבעת הבקר נתן לבני גרשון כפי עבדתם <span class="verse-number">ז:ח</span> ואת ארבע העגלת ואת שמנת הבקר נתן לבני מררי כפי עבדתם ביד איתמר בן אהרן הכהן <span class="verse-number">ז:ט</span> <span class="closure">ולבני קהת לא נתן כי עבדת הקדש עלהם בכתף ישאו </span>
 </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">1ג</h3>
+<h3 class="section-header">1C</h3>
 <div class="torah-text">
 <span class="verse-number">ז:י</span> ויקריבו הנשאים את חנכת המזבח ביום המשח אתו <span class="vertical1">ויקריבו</span> <span class="vertical1">הנשיאם את קרבנם </span>לפני המזבח <span class="verse-number">ז:יא</span> ויאמר <span class="a">יהוה</span> אל משה נשיא אחד ליום נשיא אחד ליום יקריבו את קרבנם לחנכת המזבח {ס} <span class="verse-number">ז:יב</span> ויהי המקריב ביום הראשון את קרבנו נחשון בן עמינדב למטה יהודה <span class="verse-number">ז:יג</span> וקרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:יד</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:טו</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:טז</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:יז</span> ולזבח השלמים בקר שנים אילם חמשה עתודים חמשה כבשים בני שנה חמשה זה קרבן נחשון בן עמינדב {פ} <span class="verse-number">ז:יח</span> ביום השני הקריב נתנאל בן צוער נשיא יששכר <span class="verse-number">ז:יט</span> הקרב את קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:כ</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:כא</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:כב</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:כג</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן נתנאל בן צוער {פ} <span class="verse-number">ז:כד</span> ביום השלישי נשיא לבני זבולן אליאב בן חלן <span class="verse-number">ז:כה</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:כו</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:כז</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:כח</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:כט</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן אליאב בן חלן {פ} <span class="verse-number">ז:ל</span> ביום הרביעי נשיא לבני ראובן אליצור בן שדיאור <span class="verse-number">ז:לא</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:לב</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:לג</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:לד</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:לה</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן אליצור בן שדיאור {פ} <span class="verse-number">ז:לו</span> ביום החמישי נשיא לבני שמעון שלמיאל בן צורישדי <span class="verse-number">ז:לז</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:לח</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:לט</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:מ</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:מא</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן שלמיאל בן צורישדי {פ} <span class="verse-number">ז:מב</span> ביום הששי נשיא לבני גד אליסף בן דעואל <span class="verse-number">ז:מג</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:מד</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:מה</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:מו</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:מז</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן אליסף בן דעואל {פ} <span class="verse-number">ז:מח</span> ביום השביעי נשיא לבני אפרים אלישמע בן עמיהוד <span class="verse-number">ז:מט</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:נ</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:נא</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:נב</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:נג</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן אלישמע בן עמיהוד {פ} <span class="verse-number">ז:נד</span> ביום השמיני נשיא לבני מנשה גמליאל בן פדהצור <span class="verse-number">ז:נה</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:נו</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:נז</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:נח</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:נט</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן גמליאל בן פדהצור {פ} <span class="verse-number">ז:ס</span> ביום התשיעי נשיא לבני בנימן אבידן בן גדעני <span class="verse-number">ז:סא</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:סב</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:סג</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:סד</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:סה</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן אבידן בן גדעני {פ} <span class="verse-number">ז:סו</span> ביום העשירי נשיא לבני דן אחיעזר בן עמישדי <span class="verse-number">ז:סז</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:סח</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:סט</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:ע</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:עא</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן אחיעזר בן עמישדי {פ} <span class="verse-number">ז:עב</span> ביום עשתי עשר יום נשיא לבני אשר פגעיאל בן עכרן <span class="verse-number">ז:עג</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:עד</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:עה</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:עו</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:עז</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן פגעיאל בן עכרן {פ} <span class="verse-number">ז:עח</span> ביום שנים עשר יום נשיא לבני נפתלי אחירע בן עינן <span class="verse-number">ז:עט</span> קרבנו קערת כסף אחת שלשים ומאה משקלה מזרק אחד כסף שבעים שקל בשקל הקדש שניהם מלאים סלת בלולה בשמן למנחה <span class="verse-number">ז:פ</span> כף אחת עשרה זהב מלאה קטרת <span class="verse-number">ז:פא</span> פר אחד בן בקר איל אחד כבש אחד בן שנתו לעלה <span class="verse-number">ז:פב</span> שעיר עזים אחד לחטאת <span class="verse-number">ז:פג</span> ולזבח השלמים בקר שנים אילם חמשה עתדים חמשה כבשים בני שנה חמשה זה קרבן אחירע בן עינן {פ} <span class="verse-number">ז:פד</span> זאת חנכת המזבח ביום המשח אתו מאת נשיאי ישראל קערת כסף שתים עשרה מזרקי כסף שנים עשר כפות זהב שתים עשרה <span class="verse-number">ז:פה</span> שלשים ומאה הקערה האחת כסף ושבעים המזרק האחד כל כסף הכלים אלפים וארבע מאות בשקל הקדש <span class="verse-number">ז:פו</span> כפות זהב שתים עשרה מלאת קטרת עשרה עשרה הכף בשקל הקדש כל זהב הכפות עשרים ומאה <span class="verse-number">ז:פז</span> כל הבקר לעלה שנים עשר פרים אילם שנים עשר כבשים בני שנה שנים עשר ומנחתם ושעירי עזים שנים עשר לחטאת <span class="verse-number">ז:פח</span> וכל בקר זבח השלמים עשרים וארבעה פרים אילם ששים עתדים ששים כבשים בני שנה ששים זאת חנכת המזבח אחרי המשח אתו <span class="verse-number">ז:פט</span> ובבא משה אל אהל מועד לדבר אתו וישמע את הקול מדבר אליו מעל הכפרת אשר על ארן העדת מבין שני הכרבים וידבר אליו {פ}
           </div>
@@ -28,75 +393,75 @@
 </tr>
 <tr>
 <td class="torah-column">
-<h3 class="section-header">2א</h3>
+<h3 class="section-header">2A</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ח:א</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ח:ב</span> <span class="vertical1">דבר אל אהרן </span>ואמרת אליו בהעלתך את הנרת אל מול פני המנורה יאירו שבעת הנרות <span class="verse-number">ח:ג</span> ויעש כן <span class="vertical1">אהרן</span> אל מול פני המנורה העלה נרתיה <span class="horizontal1">כאשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה </span>
+<span class="section-label">a</span> <span class="verse-number">ח:א</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ח:ב</span> <span class="vertical1">דבר אל אהרן </span>ואמרת אליו בהעלתך את הנרת אל מול פני המנורה יאירו שבעת הנרות <span class="verse-number">ח:ג</span> ויעש כן <span class="vertical1">אהרן</span> אל מול פני המנורה העלה נרתיה <span class="horizontal1">כאשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה </span>
 </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">2ב</h3>
+<h3 class="section-header">2B</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ח:ה</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ח:ו</span> <span class="vertical1">קח את הלוים </span>מתוך בני ישראל וטהרת אתם <span class="verse-number">ח:ז</span> וכה תעשה להם לטהרם הזה עליהם מי חטאת והעבירו תער על כל בשרם וכבסו בגדיהם והטהרו <span class="verse-number">ח:ח</span> ולקחו פר בן בקר ומנחתו סלת בלולה בשמן ופר שני בן בקר תקח לחטאת <span class="verse-number">ח:ט</span> <span class="vertical1">והקרבת את הלוים</span> לפני אהל מועד והקהלת את כל עדת בני ישראל <span class="verse-number">ח:י</span> והקרבת את הלוים לפני <span class="a">יהוה</span> וסמכו בני ישראל את ידיהם על הלוים <span class="verse-number">ח:יא</span> והניף אהרן את הלוים תנופה לפני <span class="a">יהוה</span> מאת בני ישראל והיו לעבד את עבדת <span class="a">יהוה</span> <span class="verse-number">ח:יב</span> והלוים יסמכו את ידיהם על ראש הפרים ועשה את האחד חטאת ואת האחד עלה ל<span class="a">יהוה</span> לכפר על הלוים <span class="verse-number">ח:יג</span> והעמדת את הלוים לפני אהרן ולפני בניו והנפת אתם תנופה ל<span class="a">יהוה</span> <span class="verse-number">ח:יד</span> והבדלת את הלוים מתוך בני ישראל והיו לי הלוים <span class="verse-number">ח:טו</span> ואחרי כן יבאו הלוים לעבד את אהל מועד וטהרת אתם והנפת אתם תנופה <span class="verse-number">ח:טז</span> כי נתנים נתנים המה לי מתוך בני ישראל תחת פטרת כל רחם בכור כל מבני ישראל לקחתי אתם לי <span class="verse-number">ח:יז</span> כי לי כל בכור בבני ישראל באדם ובבהמה ביום הכתי כל בכור בארץ מצרים הקדשתי אתם לי <span class="verse-number">ח:יח</span> ואקח את הלוים תחת כל בכור בבני ישראל <span class="verse-number">ח:יט</span> ואתנה את הלוים נתנים לאהרן ולבניו מתוך בני ישראל לעבד את עבדת בני ישראל באהל מועד ולכפר על בני ישראל ולא יהיה בבני ישראל נגף בגשת בני ישראל אל הקדש <span class="verse-number">ח:כ</span> ויעש משה ואהרן וכל עדת בני ישראל ללוים ככל אשר צוה <span class="a">יהוה</span> את משה ללוים כן עשו להם בני ישראל <span class="verse-number">ח:כא</span> ויתחטאו הלוים ויכבסו בגדיהם וינף אהרן אתם תנופה לפני <span class="a">יהוה</span> ויכפר עליהם אהרן לטהרם <span class="verse-number">ח:כב</span> ואחרי כן באו הלוים לעבד את עבדתם באהל מועד לפני אהרן ולפני בניו <span class="horizontal1">כאשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה על הלוים כן עשו להם</span> {ס}
+<span class="section-label">a</span> <span class="verse-number">ח:ה</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ח:ו</span> <span class="vertical1">קח את הלוים </span>מתוך בני ישראל וטהרת אתם <span class="verse-number">ח:ז</span> וכה תעשה להם לטהרם הזה עליהם מי חטאת והעבירו תער על כל בשרם וכבסו בגדיהם והטהרו <span class="verse-number">ח:ח</span> ולקחו פר בן בקר ומנחתו סלת בלולה בשמן ופר שני בן בקר תקח לחטאת <span class="verse-number">ח:ט</span> <span class="vertical1">והקרבת את הלוים</span> לפני אהל מועד והקהלת את כל עדת בני ישראל <span class="verse-number">ח:י</span> והקרבת את הלוים לפני <span class="a">יהוה</span> וסמכו בני ישראל את ידיהם על הלוים <span class="verse-number">ח:יא</span> והניף אהרן את הלוים תנופה לפני <span class="a">יהוה</span> מאת בני ישראל והיו לעבד את עבדת <span class="a">יהוה</span> <span class="verse-number">ח:יב</span> והלוים יסמכו את ידיהם על ראש הפרים ועשה את האחד חטאת ואת האחד עלה ל<span class="a">יהוה</span> לכפר על הלוים <span class="verse-number">ח:יג</span> והעמדת את הלוים לפני אהרן ולפני בניו והנפת אתם תנופה ל<span class="a">יהוה</span> <span class="verse-number">ח:יד</span> והבדלת את הלוים מתוך בני ישראל והיו לי הלוים <span class="verse-number">ח:טו</span> ואחרי כן יבאו הלוים לעבד את אהל מועד וטהרת אתם והנפת אתם תנופה <span class="verse-number">ח:טז</span> כי נתנים נתנים המה לי מתוך בני ישראל תחת פטרת כל רחם בכור כל מבני ישראל לקחתי אתם לי <span class="verse-number">ח:יז</span> כי לי כל בכור בבני ישראל באדם ובבהמה ביום הכתי כל בכור בארץ מצרים הקדשתי אתם לי <span class="verse-number">ח:יח</span> ואקח את הלוים תחת כל בכור בבני ישראל <span class="verse-number">ח:יט</span> ואתנה את הלוים נתנים לאהרן ולבניו מתוך בני ישראל לעבד את עבדת בני ישראל באהל מועד ולכפר על בני ישראל ולא יהיה בבני ישראל נגף בגשת בני ישראל אל הקדש <span class="verse-number">ח:כ</span> ויעש משה ואהרן וכל עדת בני ישראל ללוים ככל אשר צוה <span class="a">יהוה</span> את משה ללוים כן עשו להם בני ישראל <span class="verse-number">ח:כא</span> ויתחטאו הלוים ויכבסו בגדיהם וינף אהרן אתם תנופה לפני <span class="a">יהוה</span> ויכפר עליהם אהרן לטהרם <span class="verse-number">ח:כב</span> ואחרי כן באו הלוים לעבד את עבדתם באהל מועד לפני אהרן ולפני בניו <span class="horizontal1">כאשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה על הלוים כן עשו להם</span> {ס}
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">2ג</h3>
+<h3 class="section-header">2C</h3>
 <div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ט:א</span> וידבר <span class="a">יהוה</span> אל משה במדבר סיני בשנה השנית לצאתם מארץ מצרים בחדש הראשון לאמר <span class="verse-number">ט:ב</span> ויעשו בני ישראל את הפסח במועדו <span class="verse-number">ט:ג</span> בארבעה עשר יום בחדש הזה בין הערבים תעשו אתו במעדו ככל חקתיו וככל משפטיו תעשו אתו <span class="verse-number">ט:ד</span> וידבר משה אל בני ישראל לעשת הפסח <span class="verse-number">ט:ה</span> ויעשו את הפסח בראשון בארבעה עשר יום לחדש בין הערבים במדבר סיני <span class="horizontal1">ככל אשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה כן עשו בני ישראל</span>
+<span class="section-label">a</span> <span class="verse-number">ט:א</span> וידבר <span class="a">יהוה</span> אל משה במדבר סיני בשנה השנית לצאתם מארץ מצרים בחדש הראשון לאמר <span class="verse-number">ט:ב</span> ויעשו בני ישראל את הפסח במועדו <span class="verse-number">ט:ג</span> בארבעה עשר יום בחדש הזה בין הערבים תעשו אתו במעדו ככל חקתיו וככל משפטיו תעשו אתו <span class="verse-number">ט:ד</span> וידבר משה אל בני ישראל לעשת הפסח <span class="verse-number">ט:ה</span> ויעשו את הפסח בראשון בארבעה עשר יום לחדש בין הערבים במדבר סיני <span class="horizontal1">ככל אשר צוה </span><span class="a">יהוה</span><span class="horizontal1"> את משה כן עשו בני ישראל</span>
 </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">ח:ד</span> וזה מעשה המנרה מקשה זהב עד ירכה עד פרחה מקשה הוא כמראה אשר הראה <span class="a">יהוה</span> את משה <span class="horizontal1">כן עשה</span> את המנרה {פ}
+<span class="section-label">b</span> <span class="verse-number">ח:ד</span> וזה מעשה המנרה מקשה זהב עד ירכה עד פרחה מקשה הוא כמראה אשר הראה <span class="a">יהוה</span> את משה <span class="horizontal1">כן עשה</span> את המנרה {פ}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">ח:כג</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ח:כד</span> <span class="vertical1">זאת אשר ללוים </span>מבן חמש ועשרים שנה ומעלה יבוא לצבא צבא בעבדת אהל מועד <span class="verse-number">ח:כה</span> ומבן חמשים שנה ישוב מצבא העבדה ולא יעבד עוד <span class="verse-number">ח:כו</span> ושרת את אחיו באהל מועד לשמר משמרת ועבדה לא יעבד <span class="horizontal1">ככה תעשה</span> ללוים במשמרתם {פ}
+<span class="section-label">b</span> <span class="verse-number">ח:כג</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ח:כד</span> <span class="vertical1">זאת אשר ללוים </span>מבן חמש ועשרים שנה ומעלה יבוא לצבא צבא בעבדת אהל מועד <span class="verse-number">ח:כה</span> ומבן חמשים שנה ישוב מצבא העבדה ולא יעבד עוד <span class="verse-number">ח:כו</span> ושרת את אחיו באהל מועד לשמר משמרת ועבדה לא יעבד <span class="horizontal1">ככה תעשה</span> ללוים במשמרתם {פ}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">ט:ו</span> ויהי אנשים אשר היו טמאים לנפש אדם ולא יכלו לעשת הפסח ביום ההוא ויקרבו לפני משה ולפני אהרן ביום ההוא <span class="verse-number">ט:ז</span> ויאמרו האנשים ההמה אליו אנחנו טמאים לנפש אדם למה נגרע לבלתי <span class="vertical1">הקריב את קרבן</span> <span class="a">יהוה</span> במעדו בתוך בני ישראל <span class="verse-number">ט:ח</span> ויאמר אלהם משה עמדו ואשמעה מה יצוה <span class="a">יהוה</span> לכם {פ} <span class="verse-number">ט:ט</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ט:י</span> דבר אל בני ישראל לאמר איש איש כי יהיה טמא לנפש או בדרך רחקה לכם או לדרתיכם ועשה פסח ל<span class="a">יהוה</span> <span class="verse-number">ט:יא</span> בחדש השני בארבעה עשר יום בין הערבים יעשו אתו על מצות ומררים יאכלהו <span class="verse-number">ט:יב</span> לא ישאירו ממנו עד בקר ועצם לא ישברו בו ככל חקת הפסח יעשו אתו <span class="verse-number">ט:יג</span> והאיש אשר הוא טהור ובדרך לא היה וחדל לעשות הפסח ונכרתה הנפש ההוא מעמיה כי קרבן <span class="a">יהוה</span> לא הקריב במעדו חטאו ישא האיש ההוא <span class="verse-number">ט:יד</span> וכי יגור אתכם גר ועשה פסח ל<span class="a">יהוה</span> כחקת הפסח וכמשפטו <span class="horizontal1">כן יעשה </span>חקה אחת יהיה לכם ולגר ולאזרח הארץ {ס}
-          </div>
-</td>
-</tr>
-<tr>
-<td class="torah-column">
-<h3 class="section-header">3א</h3>
-<div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">ט:טו</span> וביום הקים את המשכן כסה הענן את המשכן לאהל העדת ובערב יהיה על המשכן כמראה אש עד בקר <span class="verse-number">ט:טז</span> כן יהיה תמיד הענן יכסנו ומראה אש לילה <span class="verse-number">ט:יז</span> ולפי העלות הענן מעל האהל ואחרי כן יסעו בני ישראל ובמקום אשר ישכן שם הענן שם יחנו בני ישראל <span class="verse-number">ט:יח</span> על פי <span class="a">יהוה</span> יסעו בני ישראל ועל פי <span class="a">יהוה</span> יחנו כל ימי אשר ישכן הענן על המשכן יחנו <span class="verse-number">ט:יט</span> ובהאריך הענן על המשכן ימים רבים ושמרו בני ישראל את משמרת <span class="a">יהוה</span> ולא יסעו <span class="verse-number">ט:כ</span> ויש אשר יהיה הענן ימים מספר על המשכן על פי <span class="a">יהוה</span> יחנו ועל פי <span class="a">יהוה</span> יסעו <span class="verse-number">ט:כא</span> ויש אשר יהיה הענן מערב עד בקר ונעלה הענן בבקר ונסעו או יומם ולילה ונעלה הענן ונסעו <span class="verse-number">ט:כב</span> או ימים או חדש או ימים בהאריך הענן על המשכן לשכן עליו יחנו בני ישראל ולא יסעו ובהעלתו יסעו <span class="verse-number">ט:כג</span> <span class="closure">על פי </span><span class="a">יהוה</span><span class="closure"> יחנו ועל פי </span><span class="a">יהוה</span><span class="closure"> יסעו את משמרת </span><span class="a">יהוה</span><span class="closure"> שמרו</span> על פי <span class="a">יהוה</span> ביד משה {פ}
-          </div>
-</td>
-<td class="torah-column">
-<h3 class="section-header">3ב</h3>
-<div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">י:יא</span> ויהי בשנה השנית בחדש השני בעשרים בחדש נעלה הענן מעל משכן העדת <span class="verse-number">י:יב</span> ויסעו בני ישראל למסעיהם ממדבר סיני וישכן הענן במדבר פארן <span class="verse-number">י:יג</span> ויסעו בראשנה על פי <span class="a">יהוה</span> ביד משה
-          </div>
-</td>
-<td class="torah-column">
-<h3 class="section-header">3ג</h3>
-<div class="torah-text">
-<span class="section-label">A</span> <span class="verse-number">י:כט</span> ויאמר משה לחבב בן רעואל המדיני חתן משה נסעים אנחנו אל המקום אשר אמר <span class="a">יהוה</span> אתו אתן לכם לכה אתנו והטבנו לך כי <span class="a">יהוה</span> דבר טוב על ישראל <span class="verse-number">י:ל</span> ויאמר אליו לא אלך כי אם אל ארצי ואל מולדתי אלך <span class="verse-number">י:לא</span> ויאמר אל נא תעזב אתנו כי על כן ידעת חנתנו במדבר והיית לנו לעינים <span class="verse-number">י:לב</span> והיה כי תלך עמנו והיה הטוב ההוא אשר ייטיב <span class="a">יהוה</span> עמנו והטבנו לך
+<span class="section-label">b</span> <span class="verse-number">ט:ו</span> ויהי אנשים אשר היו טמאים לנפש אדם ולא יכלו לעשת הפסח ביום ההוא ויקרבו לפני משה ולפני אהרן ביום ההוא <span class="verse-number">ט:ז</span> ויאמרו האנשים ההמה אליו אנחנו טמאים לנפש אדם למה נגרע לבלתי <span class="vertical1">הקריב את קרבן</span> <span class="a">יהוה</span> במעדו בתוך בני ישראל <span class="verse-number">ט:ח</span> ויאמר אלהם משה עמדו ואשמעה מה יצוה <span class="a">יהוה</span> לכם {פ} <span class="verse-number">ט:ט</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">ט:י</span> דבר אל בני ישראל לאמר איש איש כי יהיה טמא לנפש או בדרך רחקה לכם או לדרתיכם ועשה פסח ל<span class="a">יהוה</span> <span class="verse-number">ט:יא</span> בחדש השני בארבעה עשר יום בין הערבים יעשו אתו על מצות ומררים יאכלהו <span class="verse-number">ט:יב</span> לא ישאירו ממנו עד בקר ועצם לא ישברו בו ככל חקת הפסח יעשו אתו <span class="verse-number">ט:יג</span> והאיש אשר הוא טהור ובדרך לא היה וחדל לעשות הפסח ונכרתה הנפש ההוא מעמיה כי קרבן <span class="a">יהוה</span> לא הקריב במעדו חטאו ישא האיש ההוא <span class="verse-number">ט:יד</span> וכי יגור אתכם גר ועשה פסח ל<span class="a">יהוה</span> כחקת הפסח וכמשפטו <span class="horizontal1">כן יעשה </span>חקה אחת יהיה לכם ולגר ולאזרח הארץ {ס}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
+<h3 class="section-header">3A</h3>
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">י:א</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">י:ב</span> עשה לך שתי חצוצרת כסף מקשה תעשה אתם והיו לך למקרא העדה <span class="horizontal1">ולמסע את </span>המחנות <span class="verse-number">י:ג</span> ותקעו בהן ונועדו אליך כל העדה אל פתח אהל מועד <span class="verse-number">י:ד</span> ואם באחת יתקעו ונועדו אליך הנשיאים ראשי אלפי ישראל <span class="verse-number">י:ה</span> ותקעתם תרועה ונסעו המחנות החנים קדמה <span class="verse-number">י:ו</span> ותקעתם תרועה שנית ונסעו המחנות החנים תימנה תרועה יתקעו למסעיהם <span class="verse-number">י:ז</span> ובהקהיל את הקהל תתקעו ולא תריעו <span class="verse-number">י:ח</span> <span class="vertical1">ובני אהרן הכהנים </span>יתקעו בחצצרות והיו לכם לחקת עולם לדרתיכם <span class="verse-number">י:ט</span> וכי תבאו מלחמה בארצכם על הצר הצרר אתכם והרעתם בחצצרת ונזכרתם לפני <span class="a">יהוה</span> אלהיכם ונושעתם מאיביכם <span class="verse-number">י:י</span> וביום שמחתכם ובמועדיכם ובראשי חדשיכם ותקעתם בחצצרת על עלתיכם ועל זבחי שלמיכם והיו לכם לזכרון לפני אלהיכם אני <span class="a">יהוה</span> אלהיכם {פ}
+<span class="section-label">a</span> <span class="verse-number">ט:טו</span> וביום הקים את המשכן כסה הענן את המשכן לאהל העדת ובערב יהיה על המשכן כמראה אש עד בקר <span class="verse-number">ט:טז</span> כן יהיה תמיד הענן יכסנו ומראה אש לילה <span class="verse-number">ט:יז</span> ולפי העלות הענן מעל האהל ואחרי כן יסעו בני ישראל ובמקום אשר ישכן שם הענן שם יחנו בני ישראל <span class="verse-number">ט:יח</span> על פי <span class="a">יהוה</span> יסעו בני ישראל ועל פי <span class="a">יהוה</span> יחנו כל ימי אשר ישכן הענן על המשכן יחנו <span class="verse-number">ט:יט</span> ובהאריך הענן על המשכן ימים רבים ושמרו בני ישראל את משמרת <span class="a">יהוה</span> ולא יסעו <span class="verse-number">ט:כ</span> ויש אשר יהיה הענן ימים מספר על המשכן על פי <span class="a">יהוה</span> יחנו ועל פי <span class="a">יהוה</span> יסעו <span class="verse-number">ט:כא</span> ויש אשר יהיה הענן מערב עד בקר ונעלה הענן בבקר ונסעו או יומם ולילה ונעלה הענן ונסעו <span class="verse-number">ט:כב</span> או ימים או חדש או ימים בהאריך הענן על המשכן לשכן עליו יחנו בני ישראל ולא יסעו ובהעלתו יסעו <span class="verse-number">ט:כג</span> <span class="closure">על פי </span><span class="a">יהוה</span><span class="closure"> יחנו ועל פי </span><span class="a">יהוה</span><span class="closure"> יסעו את משמרת </span><span class="a">יהוה</span><span class="closure"> שמרו</span> על פי <span class="a">יהוה</span> ביד משה {פ}
+          </div>
+</td>
+<td class="torah-column">
+<h3 class="section-header">3B</h3>
+<div class="torah-text">
+<span class="section-label">a</span> <span class="verse-number">י:יא</span> ויהי בשנה השנית בחדש השני בעשרים בחדש נעלה הענן מעל משכן העדת <span class="verse-number">י:יב</span> ויסעו בני ישראל למסעיהם ממדבר סיני וישכן הענן במדבר פארן <span class="verse-number">י:יג</span> ויסעו בראשנה על פי <span class="a">יהוה</span> ביד משה
+          </div>
+</td>
+<td class="torah-column">
+<h3 class="section-header">3C</h3>
+<div class="torah-text">
+<span class="section-label">a</span> <span class="verse-number">י:כט</span> ויאמר משה לחבב בן רעואל המדיני חתן משה נסעים אנחנו אל המקום אשר אמר <span class="a">יהוה</span> אתו אתן לכם לכה אתנו והטבנו לך כי <span class="a">יהוה</span> דבר טוב על ישראל <span class="verse-number">י:ל</span> ויאמר אליו לא אלך כי אם אל ארצי ואל מולדתי אלך <span class="verse-number">י:לא</span> ויאמר אל נא תעזב אתנו כי על כן ידעת חנתנו במדבר והיית לנו לעינים <span class="verse-number">י:לב</span> והיה כי תלך עמנו והיה הטוב ההוא אשר ייטיב <span class="a">יהוה</span> עמנו והטבנו לך
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">b</span> <span class="verse-number">י:א</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="verse-number">י:ב</span> עשה לך שתי חצוצרת כסף מקשה תעשה אתם והיו לך למקרא העדה <span class="horizontal1">ולמסע את </span>המחנות <span class="verse-number">י:ג</span> ותקעו בהן ונועדו אליך כל העדה אל פתח אהל מועד <span class="verse-number">י:ד</span> ואם באחת יתקעו ונועדו אליך הנשיאים ראשי אלפי ישראל <span class="verse-number">י:ה</span> ותקעתם תרועה ונסעו המחנות החנים קדמה <span class="verse-number">י:ו</span> ותקעתם תרועה שנית ונסעו המחנות החנים תימנה תרועה יתקעו למסעיהם <span class="verse-number">י:ז</span> ובהקהיל את הקהל תתקעו ולא תריעו <span class="verse-number">י:ח</span> <span class="vertical1">ובני אהרן הכהנים </span>יתקעו בחצצרות והיו לכם לחקת עולם לדרתיכם <span class="verse-number">י:ט</span> וכי תבאו מלחמה בארצכם על הצר הצרר אתכם והרעתם בחצצרת ונזכרתם לפני <span class="a">יהוה</span> אלהיכם ונושעתם מאיביכם <span class="verse-number">י:י</span> וביום שמחתכם ובמועדיכם ובראשי חדשיכם ותקעתם בחצצרת על עלתיכם ועל זבחי שלמיכם והיו לכם לזכרון לפני אלהיכם אני <span class="a">יהוה</span> אלהיכם {פ}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">י:יד</span> <span class="horizontal1">ויסע דגל מחנה </span>בני יהודה בראשנה לצבאתם ועל צבאו נחשון בן עמינדב <span class="verse-number">י:טו</span> ועל צבא מטה בני יששכר נתנאל בן צוער <span class="verse-number">י:טז</span> ועל צבא מטה בני זבולן אליאב בן חלן <span class="verse-number">י:יז</span> והורד המשכן ונסעו בני גרשון ובני מררי נשאי המשכן <span class="verse-number">י:יח</span> ונסע דגל מחנה ראובן לצבאתם ועל צבאו אליצור בן שדיאור <span class="verse-number">י:יט</span> ועל צבא מטה בני שמעון שלמיאל בן צורישדי <span class="verse-number">י:כ</span> ועל צבא מטה בני גד אליסף בן דעואל <span class="verse-number">י:כא</span> <span class="closure">ונסעו הקהתים נשאי המקדש</span> והקימו את המשכן עד באם <span class="verse-number">י:כב</span> ונסע דגל מחנה בני אפרים לצבאתם ועל צבאו אלישמע בן עמיהוד <span class="verse-number">י:כג</span> ועל צבא מטה בני מנשה גמליאל בן פדהצור <span class="verse-number">י:כד</span> ועל צבא מטה בני בנימן אבידן בן גדעוני <span class="verse-number">י:כה</span> ונסע דגל מחנה בני דן מאסף לכל המחנת לצבאתם ועל צבאו אחיעזר בן עמישדי <span class="verse-number">י:כו</span> ועל צבא מטה בני אשר פגעיאל בן עכרן <span class="verse-number">י:כז</span> ועל צבא מטה בני נפתלי אחירע בן עינן <span class="verse-number">י:כח</span> אלה מסעי בני ישראל לצבאתם ויסעו {ס}
+<span class="section-label">b</span> <span class="verse-number">י:יד</span> <span class="horizontal1">ויסע דגל מחנה </span>בני יהודה בראשנה לצבאתם ועל צבאו נחשון בן עמינדב <span class="verse-number">י:טו</span> ועל צבא מטה בני יששכר נתנאל בן צוער <span class="verse-number">י:טז</span> ועל צבא מטה בני זבולן אליאב בן חלן <span class="verse-number">י:יז</span> והורד המשכן ונסעו בני גרשון ובני מררי נשאי המשכן <span class="verse-number">י:יח</span> ונסע דגל מחנה ראובן לצבאתם ועל צבאו אליצור בן שדיאור <span class="verse-number">י:יט</span> ועל צבא מטה בני שמעון שלמיאל בן צורישדי <span class="verse-number">י:כ</span> ועל צבא מטה בני גד אליסף בן דעואל <span class="verse-number">י:כא</span> <span class="closure">ונסעו הקהתים נשאי המקדש</span> והקימו את המשכן עד באם <span class="verse-number">י:כב</span> ונסע דגל מחנה בני אפרים לצבאתם ועל צבאו אלישמע בן עמיהוד <span class="verse-number">י:כג</span> ועל צבא מטה בני מנשה גמליאל בן פדהצור <span class="verse-number">י:כד</span> ועל צבא מטה בני בנימן אבידן בן גדעוני <span class="verse-number">י:כה</span> ונסע דגל מחנה בני דן מאסף לכל המחנת לצבאתם ועל צבאו אחיעזר בן עמישדי <span class="verse-number">י:כו</span> ועל צבא מטה בני אשר פגעיאל בן עכרן <span class="verse-number">י:כז</span> ועל צבא מטה בני נפתלי אחירע בן עינן <span class="verse-number">י:כח</span> אלה מסעי בני ישראל לצבאתם ויסעו {ס}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">B</span> <span class="verse-number">י:לג</span> <span class="horizontal1">ויסעו</span> מהר <span class="a">יהוה</span> דרך שלשת ימים וארון ברית <span class="a">יהוה</span> נסע לפניהם דרך שלשת ימים לתור להם מנוחה <span class="verse-number">י:לד</span> וענן <span class="a">יהוה</span> עליהם יומם בנסעם מן המחנה {ס} ] {ס} <span class="verse-number">י:לה</span> ויהי בנסע הארן ויאמר משה קומה <span class="a">יהוה</span> ויפצו איביך וינסו משנאיך מפניך <span class="verse-number">י:לו</span> ובנחה יאמר שובה <span class="a">יהוה</span> רבבות אלפי ישראל {ס} ] {פ}
+<span class="section-label">b</span> <span class="verse-number">י:לג</span> <span class="horizontal1">ויסעו</span> מהר <span class="a">יהוה</span> דרך שלשת ימים וארון ברית <span class="a">יהוה</span> נסע לפניהם דרך שלשת ימים לתור להם מנוחה <span class="verse-number">י:לד</span> וענן <span class="a">יהוה</span> עליהם יומם בנסעם מן המחנה {ס} ] {ס} <span class="verse-number">י:לה</span> ויהי בנסע הארן ויאמר משה קומה <span class="a">יהוה</span> ויפצו איביך וינסו משנאיך מפניך <span class="verse-number">י:לו</span> ובנחה יאמר שובה <span class="a">יהוה</span> רבבות אלפי ישראל {ס} ] {פ}
           </div>
 </td>
 </tr>
@@ -104,3 +469,83 @@
 </div>
 </div>
 </div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline.html">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

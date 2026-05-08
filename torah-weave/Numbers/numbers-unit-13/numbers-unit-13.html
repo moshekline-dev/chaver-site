@@ -1,6 +1,371 @@
-<div class="content">
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained.html">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names.html">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture.html">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers.html">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets.html">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center.html">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse.html">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map.html">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared.html">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline.html">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <div class="content">
 <h1 class="unit-header">Numbers Unit 13 (31:1-36:13)</h1>
-<div><table class="scripture-table"><tr><td><p class="cell-label">1a</p></td><td><p class="cell-label">1b</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>A</b></span> <span class="VerseNumber"><b>31:1</b></span> And the LORD spoke unto Moses, saying: <span class="VerseNumber"><b>31:2</b></span> 'Avenge the children of Israel of the
+<div><table class="scripture-table"><tr><td><p class="cell-label">1A</p></td><td><p class="cell-label">1B</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>31:1</b></span> And the LORD spoke unto Moses, saying: <span class="VerseNumber"><b>31:2</b></span> 'Avenge the children of Israel of the
   Midianites; afterward shalt thou be gathered unto thy people.' <span class="VerseNumber"><b>31:3</b></span> And Moses spoke unto the people, saying:
   'Arm ye men from among you for the war, that they may go against Midian, to
   execute the LORD'S vengeance on Midian. <span class="VerseNumber"><b>31:4</b></span>
@@ -21,14 +386,14 @@
   the prey, both of man and of beast. <span class="VerseNumber"><b>31:12</b></span>
   And they brought the captives, and the prey, and the spoil, unto Moses, and
   unto Eleazar the priest, and unto the congregation of the children of Israel,
-  unto the camp, unto the plains of Moab, which are by the Jordan at Jericho. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span> </p></td><td><p class="torah"><span class="CellSubdivision"><b>A</b></span> <span class="VerseNumber"><b>32:1</b></span> Now the children of Reuben and the
+  unto the camp, unto the plains of Moab, which are by the Jordan at Jericho. <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span> </p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>32:1</b></span> Now the children of Reuben and the
   children of Gad had a very great multitude of cattle; and when they saw the
   land of Jazer, and the land of Gilead, that, behold, the place was a place
   for cattle, <span class="VerseNumber"><b>32:2</b></span> the children of Gad
   and the children of Reuben came and spoke unto Moses, and to Eleazar the
   priest, and unto the princes of the congregation, saying: <span class="VerseNumber"><b>32:3</b></span> 'Ataroth, and Dibon, and Jazer, and
   Nimrah, and Heshbon, and Elealeh, and Sebam, and Nebo, and Beon, <span class="VerseNumber"><b>32:4</b></span> the land which the LORD smote before the
-  congregation of Israel, is a land for cattle, and thy servants have cattle.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>B</b></span> <span class="VerseNumber"><b>31:13</b></span> And Moses, and Eleazar the priest, and
+  congregation of Israel, is a land for cattle, and thy servants have cattle.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>31:13</b></span> And Moses, and Eleazar the priest, and
   all the princes of the congregation, went forth to meet them without the
   camp. <span class="VerseNumber"><b>31:14</b></span> And Moses was wroth with
   the officers of the host, the captains of thousands and the captains of
@@ -45,7 +410,7 @@
   touched any slain, purify yourselves on the third day and on the seventh day,
   ye and your captives. <span class="VerseNumber"><b>31:20</b></span> And as to
   every garment, and all that is made of skin, and all work of goats' hair, and
-  all things made of wood, ye shall purify.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>B</b></span> <span class="VerseNumber"><b>32:5</b></span> And they said: 'If we have found favour
+  all things made of wood, ye shall purify.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>32:5</b></span> And they said: 'If we have found favour
   in thy sight, let this land be given unto thy servants for a possession;
   bring us not over the Jordan.' <span class="VerseNumber"><b>32:6</b></span> And
   Moses said unto the children of Gad and to the children of Reuben: 'Shall
@@ -68,7 +433,7 @@
   And, behold, ye are risen up in your fathers' stead, a brood of sinful men,
   to augment yet the fierce anger of the LORD toward Israel. <span class="VerseNumber"><b>32:15</b></span> For if ye turn away from after Him, He
   will yet again leave them in the wilderness; and so ye will destroy all this
-  people.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></table><table class="scripture-table"><tr><td><p class="torah"><span class="CellSubdivision"><b>C</b></span> <span class="VerseNumber"><b>31:21</b></span> And Eleazar the priest said unto the
+  people.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td></tr></table><table class="scripture-table"><tr><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>31:21</b></span> And Eleazar the priest said unto the
   men of war that went to the battle: 'This is the statute of the law which the
   LORD hath commanded Moses: <span class="VerseNumber"><b>31:22</b></span> Howbeit
   the gold, and the silver, the brass, the iron, the tin, and the lead, <span class="VerseNumber"><b>31:23</b></span> every thing that may abide the fire, ye
@@ -76,7 +441,7 @@
   shall be purified with the water of sprinkling; and all that abideth not the
   fire ye shall make to go through the water. <span class="VerseNumber"><b>31:24</b></span>
   And ye shall wash your clothes on the seventh day, and ye shall be clean, and
-  afterward ye may come into the camp.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>C</b></span> <span class="VerseNumber"><b>32:16</b></span> And they came near unto him, and said:
+  afterward ye may come into the camp.' <span class="HebrewParagraph"><span style="font-weight:normal">{S}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>32:16</b></span> And they came near unto him, and said:
   'We will build sheepfolds here for our cattle, and cities for our little
   ones; <span class="VerseNumber"><b>32:17</b></span> but we ourselves will be
   ready armed to go before the children of Israel, until we have brought them
@@ -86,7 +451,7 @@
   inherited every man his inheritance. <span class="VerseNumber"><b>32:19</b></span>
   For we will not inherit with them on the other side of the Jordan, and
   forward, because our inheritance is fallen to us on this side of the Jordan
-  eastward.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>D</b></span><span class="VerseNumber"><b>31:25</b></span> And the LORD spoke unto Moses, saying: <span class="VerseNumber"><b>31:26</b></span> 'Take the sum of the prey that was
+  eastward.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>d</b></span><span class="VerseNumber"><b>31:25</b></span> And the LORD spoke unto Moses, saying: <span class="VerseNumber"><b>31:26</b></span> 'Take the sum of the prey that was
   taken, both of man and of beast, thou, and Eleazar the priest, and the heads
   of the fathers' houses of the congregation; <span class="VerseNumber"><b>31:27</b></span>
   and divide the prey into two parts: between the men skilled in war, that went
@@ -249,7 +614,7 @@
   And they journeyed from Dibon-gad, and pitched in Almon-diblathaim. <span class="VerseNumber"><b>33:47</b></span> And they journeyed from
   Almon-diblathaim, and pitched in the mountains of Abarim, in front of Nebo. <span class="VerseNumber"><b>33:48</b></span> And they journeyed from the mountains
   of Abarim, and pitched in the plains of Moab by the Jordan at Jericho. <span class="VerseNumber"><b>33:49</b></span> And they pitched by the Jordan, from
-  Beth-jeshimoth even unto Abel-shittim in the plains of Moab.<span class="HebrewParagraph"><span style="font-weight:normal"> {S}</span></span></p></td></tr></table><table class="scripture-table"><tr><td><p class="cell-label">3a</p></td><td><p class="cell-label">3b</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>A</b></span> <span class="VerseNumber"><b>33:50</b></span> <span class="horizontal1"><b>And the LORD
+  Beth-jeshimoth even unto Abel-shittim in the plains of Moab.<span class="HebrewParagraph"><span style="font-weight:normal"> {S}</span></span></p></td></tr></table><table class="scripture-table"><tr><td><p class="cell-label">3A</p></td><td><p class="cell-label">3B</p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>33:50</b></span> <span class="horizontal1"><b>And the LORD
   spoke unto Moses in the plains of Moab by the Jordan at Jericho, saying</b></span>:
   <span class="VerseNumber"><b>33:51</b></span> 'Speak unto the children of Israel,
   and say unto them: When ye pass over the Jordan into the land of Canaan, <span class="VerseNumber"><b>33:52</b></span> then ye shall drive out all the
@@ -266,7 +631,7 @@
   then shall those that ye let remain of them be as thorns in your eyes, and as
   pricks in your sides, and they shall harass you in the land wherein ye dwell.
   <span class="VerseNumber"><b>33:56</b></span> And it shall come to pass, that
-  as I thought to do unto them, so will I do unto you. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>A</b></span> <span class="VerseNumber"><b>35:1</b></span> <span class="horizontal1"><b>And the LORD
+  as I thought to do unto them, so will I do unto you. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>a</b></span> <span class="VerseNumber"><b>35:1</b></span> <span class="horizontal1"><b>And the LORD
   spoke unto Moses in the plains of Moab by the Jordan at Jericho, saying</b></span>:
   <span class="VerseNumber"><b>35:2</b></span> 'Command the children of Israel,
   that they give unto the Levites of the inheritance of their possession cities
@@ -288,7 +653,7 @@
   cities: them shall ye give with the open land about them. <span class="VerseNumber"><b>35:8</b></span> And concerning the cities which ye shall
   give of the possession of the children of Israel, from the many ye shall take
   many, and from the few ye shall take few; each tribe according to its
-  inheritance which it inheriteth shall give of its cities unto the Levites.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>B</b></span> <span class="VerseNumber"><b>34:1</b></span> <span class="horizontal1"><b>And the LORD spoke
+  inheritance which it inheriteth shall give of its cities unto the Levites.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>34:1</b></span> <span class="horizontal1"><b>And the LORD spoke
   unto Moses, saying</b></span>: <span class="VerseNumber"><b>34:2</b></span> <span class="horizontal1"><b>'Command the children of Israel, and say unto them: When
   ye come into the land of Canaan</b></span>, this shall be the land that shall
   fall unto you for an inheritance, even the land of Canaan according to the
@@ -321,7 +686,7 @@
   children of Gad according to their fathers' houses, have received, and the
   half-tribe of Manasseh have received, their inheritance; <span class="VerseNumber"><b>34:15</b></span> the two tribes and the half-tribe have
   received their inheritance beyond the Jordan at Jericho eastward, toward the
-  sun-rising.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>B</b></span> <span class="VerseNumber"><b>35:9</b></span> <span class="horizontal1"><b>And the LORD
+  sun-rising.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>b</b></span> <span class="VerseNumber"><b>35:9</b></span> <span class="horizontal1"><b>And the LORD
   spoke unto Moses, saying</b></span>: <span class="VerseNumber"><b>35:10</b></span>
 <span class="horizontal1"><b>'Speak unto the children of Israel, and say unto
   them: When ye pass over the Jordan into the land of Canaan</b></span>, <span class="VerseNumber"><b>35:11</b></span> then ye shall appoint you cities to be cities
@@ -377,7 +742,7 @@
   made for the land for the blood that is shed therein, but by the blood of him
   that shed it. <span class="VerseNumber"><b>35:34</b></span> And thou shalt not
   defile the land which ye inhabit, in the midst of which I dwell; for I the
-  LORD dwell in the midst of the children of Israel.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>C</b></span> <span class="VerseNumber"><b>34:16</b></span> And the LORD spoke unto Moses, saying: <span class="VerseNumber"><b>34:17</b></span> 'These are the names of the men that
+  LORD dwell in the midst of the children of Israel.' <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr><tr><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>34:16</b></span> And the LORD spoke unto Moses, saying: <span class="VerseNumber"><b>34:17</b></span> 'These are the names of the men that
   shall take possession of the land for you: Eleazar the priest, and Joshua the
   son of Nun. <span class="VerseNumber"><b>34:18</b></span> And ye shall take one
   prince of every tribe, to take possession of the land. <span class="VerseNumber"><b>34:19</b></span> And these are the names of the men: of
@@ -395,7 +760,7 @@
   Shelomi. <span class="VerseNumber"><b>34:28</b></span> And of the tribe of the
   children of Naphtali a prince, Pedahel the son of Ammihud. <span class="VerseNumber"><b>34:29</b></span> These are they whom the LORD commanded
   to divide the inheritance unto the children of Israel in the land of Canaan.'
-  <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>C</b></span> <span class="VerseNumber"><b>36:1</b></span> And the heads of the fathers' houses of
+  <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td><td><p class="torah"><span class="CellSubdivision"><b>c</b></span> <span class="VerseNumber"><b>36:1</b></span> And the heads of the fathers' houses of
   the family of the children of Gilead, the son of Machir, <span class="horizontal1"><b>the son of Manasseh, of the families of the sons of
   Joseph</b></span>, came near, and spoke before Moses, and before the princes,
   the heads of the fathers' houses of the children of Israel; <span class="VerseNumber"><b>36:2</b></span> and they said: 'The LORD commanded my
@@ -430,3 +795,83 @@
   ordinances, which the LORD commanded by the hand of Moses unto the children
   of Israel in the plains of Moab by the Jordan at Jericho. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr></table></div>
 </div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline.html">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

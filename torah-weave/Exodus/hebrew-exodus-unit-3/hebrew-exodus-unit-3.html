@@ -1,20 +1,385 @@
-<div dir="rtl" lang="he">
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary.html">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/index.html">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained.html">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names.html">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture.html">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers.html">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets.html">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center.html">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse.html">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map.html">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared.html">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative.html">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method.html">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline.html">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <div dir="rtl" lang="he">
 <div class="hebrew-torah-unit-wrapper">
 <h1 class="unit-header" dir="rtl">ספר שמות יחידה 3 (ו:כט-יא:י)</h1>
 
 <table class="scripture-table" dir="rtl">
 <tr>
 <td>
-<p class="cell-label">1א</p>
+<p class="cell-label">1A</p>
 </td>
 <td>
-<p class="cell-label">1ב</p>
+<p class="cell-label">1B</p>
 </td>
 </tr>
 <tr>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 <span class="verse-number">ו:כט</span> וידבר <span class="a">יהוה</span> אל משה לאמר <span class="internalparallel">אני </span><span class="a">יהוה</span> דבר אל פרעה מלך מצרים את כל אשר אני דבר אליך 
                     <span class="verse-number">ו:ל</span> ויאמר משה לפני <span class="a">יהוה</span> הן אני ערל שפתים ואיך ישמע אלי פרעה {פ}
                     <span class="verse-number">ז:א</span> ויאמר <span class="a">יהוה</span> אל משה ראה נתתיך <span>אלהים</span> לפרעה ואהרן אחיך יהיה נביאך 
@@ -25,7 +390,7 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 <span class="verse-number">ז:ח</span> ויאמר <span class="a">יהוה</span> אל משה ואל אהרן לאמר 
                     <span class="verse-number">ז:ט</span> כי ידבר אלכם פרעה לאמר <span class="horizontal1">תנו לכם מופת</span> ואמרת אל אהרן קח את מטך והשלך לפני פרעה יהי לתנין 
                     <span class="verse-number">ז:י</span> ויבא משה ואהרן אל פרעה ויעשו כן כאשר צוה <span class="a">יהוה</span>
@@ -35,7 +400,7 @@
 <tr>
 <td>
 <p class="torah">
-<span class="section-label">B</span> ונתתי את ידי במצרים והוצאתי את צבאתי את עמי בני ישראל מארץ מצרים בשפטים גדלים 
+<span class="section-label">b</span> ונתתי את ידי במצרים והוצאתי את צבאתי את עמי בני ישראל מארץ מצרים בשפטים גדלים 
                     <span class="verse-number">ז:ה</span> וידעו מצרים כי <span class="internalparallel">אני </span><span class="a">יהוה</span> בנטתי את ידי על מצרים והוצאתי את בני ישראל מתוכם 
                     <span class="verse-number">ז:ו</span> <span class="closure">ויעש משה ואהרן כאשר צוה </span><span class="a">יהוה</span><span class="closure"> אתם כן עשו</span>
 <span class="verse-number">ז:ז</span> <span class="closure">ומשה בן שמנים שנה ואהרן בן שלש ושמנים שנה בדברם אל פרעה</span> {פ}
@@ -43,7 +408,7 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">B</span> וישלך אהרן את מטהו לפני פרעה ולפני עבדיו ויהי לתנין 
+<span class="section-label">b</span> וישלך אהרן את מטהו לפני פרעה ולפני עבדיו ויהי לתנין 
                     <span class="verse-number">ז:יא</span> ויקרא גם פרעה לחכמים ולמכשפים ויעשו גם הם חרטמי מצרים בלהטיהם כן 
                     <span class="verse-number">ז:יב</span> וישליכו איש מטהו ויהיו לתנינם ויבלע מטה אהרן את מטתם 
                     <span class="verse-number">ז:יג</span> ויחזק לב פרעה ולא שמע אלהם כאשר דבר <span class="a">יהוה</span> {ס}
@@ -55,19 +420,19 @@
 <table class="scripture-table" dir="rtl">
 <tr>
 <td>
-<p class="cell-label">2א</p>
+<p class="cell-label">2A</p>
 </td>
 <td>
-<p class="cell-label">2ב</p>
+<p class="cell-label">2B</p>
 </td>
 <td>
-<p class="cell-label">2ג</p>
+<p class="cell-label">2C</p>
 </td>
 </tr>
 <tr>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 <span class="verse-number">ז:יד</span> ויאמר <span class="a">יהוה</span> אל משה כבד לב פרעה מאן לשלח העם 
                     <span class="verse-number">ז:טו</span> <span class="vertical1">לך אל פרעה בבקר הנה יצא המימה ונצבת לקראתו על שפת היאר</span> והמטה אשר נהפך לנחש תקח בידך 
                     <span class="verse-number">ז:טז</span> ואמרת אליו <span class="a">יהוה</span> אלהי העברים שלחני אליך לאמר שלח את עמי ויעבדני במדבר והנה לא שמעת עד כה 
@@ -77,7 +442,7 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 <span class="verse-number">ז:כו</span> ויאמר <span class="a">יהוה</span> אל משה <span class="vertical1">בא אל פרעה</span> ואמרת אליו כה אמר <span class="a">יהוה</span> <span class="vertical1">שלח את עמי ויעבדני</span>
 <span class="verse-number">ז:כז</span> <span class="vertical1">ואם מאן אתה לשלח </span>הנה אנכי נגף את כל גבולך בצפרדעים 
                     <span class="verse-number">ז:כח</span> ושרץ היאר צפרדעים ועלו ובאו בביתך ובחדר משכבך ועל מטתך ובבית עבדיך ובעמך ובתנוריך ובמשארותיך 
@@ -86,14 +451,14 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 </p>
 </td>
 </tr>
 <tr>
 <td>
 <p class="torah">
-<span class="section-label">B</span>
+<span class="section-label">b</span>
 <span class="verse-number">ז:יט</span> <span class="horizontal1">ויאמר </span><span class="a">יהוה</span><span class="horizontal1"> אל משה אמר אל אהרן קח מטך ונטה ידך</span> על מימי מצרים על נהרתם על יאריהם ועל אגמיהם ועל כל מקוה מימיהם ויהיו דם והיה דם בכל ארץ מצרים ובעצים ובאבנים 
                     <span class="verse-number">ז:כ</span> ויעשו כן משה ואהרן כאשר צוה <span class="a">יהוה</span> וירם במטה ויך את המים אשר ביאר לעיני פרעה ולעיני עבדיו ויהפכו כל המים אשר ביאר לדם 
                     <span class="verse-number">ז:כא</span> והדגה אשר ביאר מתה ויבאש היאר ולא יכלו מצרים לשתות מים מן היאר ויהי הדם בכל ארץ מצרים 
@@ -105,7 +470,7 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">B</span>
+<span class="section-label">b</span>
 <span class="verse-number">ח:א</span> <span class="horizontal1">ויאמר </span><span class="a">יהוה</span><span class="horizontal1"> אל משה אמר אל אהרן נטה את ידך במטך </span>על הנהרת על היארים ועל האגמים והעל את הצפרדעים על ארץ מצרים 
                     <span class="verse-number">ח:ב</span> ויט אהרן את ידו על מימי מצרים ותעל הצפרדע ותכס את ארץ מצרים 
                     <span class="verse-number">ח:ג</span> <span class="horizontal1">ויעשו כן החרטמים בלטיהם</span> ויעלו את הצפרדעים על ארץ מצרים 
@@ -121,7 +486,7 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">B</span>
+<span class="section-label">b</span>
 <span class="verse-number">ח:יב</span> <span class="horizontal1">ויאמר </span><span class="a">יהוה</span><span class="horizontal1"> אל משה אמר אל אהרן נטה את מטך</span> והך את עפר הארץ והיה לכנם בכל ארץ מצרים 
                     <span class="verse-number">ח:יג</span> ויעשו כן <span class="vertical1">ויט אהרן את ידו במטהו ויך את עפר הארץ</span> ותהי הכנם באדם ובבהמה כל עפר הארץ היה כנים בכל ארץ מצרים 
                     <span class="verse-number">ח:יד</span> <span class="horizontal1">ויעשו כן החרטמים בלטיהם</span> להוציא את הכנים ולא יכלו ותהי הכנם באדם ובבהמה 
@@ -134,13 +499,13 @@
 <table class="scripture-table" dir="rtl">
 <tr>
 <td>
-<p class="cell-label">3א</p>
+<p class="cell-label">3A</p>
 </td>
 <td>
-<p class="cell-label">3ב</p>
+<p class="cell-label">3B</p>
 </td>
 <td>
-<p class="cell-label">3ג</p>
+<p class="cell-label">3C</p>
 </td>
 </tr>
 <tr>
@@ -187,19 +552,19 @@
 <table class="scripture-table" dir="rtl">
 <tr>
 <td>
-<p class="cell-label">4א</p>
+<p class="cell-label">4A</p>
 </td>
 <td>
-<p class="cell-label">4ב</p>
+<p class="cell-label">4B</p>
 </td>
 <td>
-<p class="cell-label">4ג</p>
+<p class="cell-label">4C</p>
 </td>
 </tr>
 <tr>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 <span class="verse-number">ט:יג</span> ויאמר <span class="a">יהוה</span> אל משה <span class="vertical1">השכם בבקר והתיצב לפני פרעה</span> ואמרת אליו כה אמר <span class="a">יהוה</span> אלהי העברים שלח את עמי ויעבדני 
                     <span class="verse-number">ט:יד</span> כי בפעם הזאת אני שלח את כל מגפתי אל לבך ובעבדיך ובעמך <span class="vertical1">בעבור תדע כי אין כמני בכל הארץ</span>
 <span class="verse-number">ט:טו</span> כי עתה שלחתי את ידי ואך אותך ואת עמך בדבר ותכחד מן הארץ 
@@ -213,7 +578,7 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 <span class="verse-number">י:א</span> ויאמר <span class="a">יהוה</span> אל משה <span class="vertical1">בא אל פרעה </span>כי אני הכבדתי את לבו ואת לב עבדיו למען שתי אתתי אלה בקרבו 
                     <span class="verse-number">י:ב</span> ולמען תספר באזני בנך ובן בנך את אשר התעללתי במצרים ואת אתתי אשר שמתי בם וידעתם כי אני <span class="a">יהוה</span>
 <span class="verse-number">י:ג</span> ויבא משה ואהרן אל פרעה ויאמרו אליו כה אמר <span class="a">יהוה</span> אלהי העברים <span class="vertical1">עד מתי מאנת לענת מפני שלח עמי ויעבדני</span>
@@ -229,14 +594,14 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 </p>
 </td>
 </tr>
 <tr>
 <td>
 <p class="torah">
-<span class="section-label">B</span>
+<span class="section-label">b</span>
 <span class="verse-number">ט:כב</span> <span class="horizontal1">ויאמר </span><span class="a">יהוה</span><span class="horizontal1"> אל משה נטה את ידך על השמים ויהי ברד בכל ארץ מצרים</span> על האדם ועל הבהמה ועל כל עשב השדה בארץ מצרים 
                     <span class="verse-number">ט:כג</span> ויט משה את מטהו על השמים ו<span class="a">יהוה</span> נתן קלת וברד ותהלך אש ארצה וימטר <span class="a">יהוה</span> ברד על ארץ מצרים 
                     <span class="verse-number">ט:כד</span> ויהי ברד ואש מתלקחת בתוך הברד כבד מאד אשר לא היה כמהו בכל ארץ מצרים מאז היתה לגוי 
@@ -255,7 +620,7 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">B</span>
+<span class="section-label">b</span>
 <span class="verse-number">י:יב</span> <span class="horizontal1">ויאמר </span><span class="a">יהוה</span><span class="horizontal1"> אל משה נטה ידך על ארץ מצרים בארבה ויעל על ארץ מצרים</span> ויאכל את כל עשב הארץ את כל אשר השאיר הברד 
                     <span class="verse-number">י:יג</span> ויט משה את מטהו על ארץ מצרים ו<span class="a">יהוה</span> נהג רוח קדים בארץ כל היום ההוא וכל הלילה הבקר היה ורוח הקדים נשא את הארבה 
                     <span class="verse-number">י:יד</span> ויעל הארבה על כל ארץ מצרים וינח בכל גבול מצרים כבד מאד לפניו לא היה כן ארבה כמהו ואחריו לא יהיה כן 
@@ -269,7 +634,7 @@
 </td>
 <td>
 <p class="torah">
-<span class="section-label">B</span>
+<span class="section-label">b</span>
 <span class="verse-number">י:כא</span> <span class="horizontal1">ויאמר </span><span class="a">יהוה</span><span class="horizontal1"> אל משה נטה ידך על השמים ויהי חשך על ארץ מצרים</span> וימש חשך 
                     <span class="verse-number">י:כב</span> <span class="vertical1">ויט משה את ידו על השמים ויהי חשך</span> אפלה בכל ארץ מצרים שלשת ימים 
                     <span class="verse-number">י:כג</span> לא ראו איש את אחיו ולא קמו איש מתחתיו שלשת ימים ולכל בני ישראל היה אור במושבתם 
@@ -287,22 +652,22 @@
 <table class="scripture-table" dir="rtl">
 <tr>
 <td>
-<p class="cell-label">5א</p>
+<p class="cell-label">5A</p>
 </td>
 <td>
-<p class="cell-label">5ב</p>
+<p class="cell-label">5B</p>
 </td>
 </tr>
 <tr>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 <span class="verse-number">יא:א</span> ויאמר <span class="a">יהוה</span> אל משה עוד נגע אחד אביא על פרעה ועל מצרים <span class="horizontal1">אחרי כן ישלח אתכם מזה כשלחו כלה גרש יגרש אתכם מזה </span>
 </p>
 </td>
 <td>
 <p class="torah">
-<span class="section-label">A</span>
+<span class="section-label">a</span>
 <span class="verse-number">יא:ד</span> ויאמר משה כה אמר <span class="a">יהוה</span> כחצת הלילה אני יוצא בתוך מצרים 
                     <span class="verse-number">יא:ה</span> ומת כל בכור בארץ מצרים מבכור פרעה הישב על כסאו עד בכור השפחה אשר אחר הרחים וכל בכור בהמה 
                     <span class="verse-number">יא:ו</span> והיתה צעקה גדלה בכל ארץ מצרים אשר כמהו לא נהיתה וכמהו לא תסף 
@@ -314,14 +679,14 @@
 <tr>
 <td>
 <p class="torah">
-<span class="section-label">B</span>
+<span class="section-label">b</span>
 <span class="verse-number">יא:ב</span> דבר נא באזני העם וישאלו איש מאת רעהו ואשה מאת רעותה כלי כסף וכלי זהב 
                     <span class="verse-number">יא:ג</span> <span class="internalparallel">ויתן </span><span class="a">יהוה</span><span class="internalparallel"> את חן העם בעיני מצרים</span>
 </p>
 </td>
 <td>
 <p class="torah">
-<span class="section-label">B</span>
+<span class="section-label">b</span>
 <span class="verse-number">יא:ט</span> ויאמר <span class="a">יהוה</span> אל משה לא ישמע אליכם פרעה למען רבות <span class="internalparallel">מופתי</span> בארץ מצרים
                 </p>
 </td>
@@ -329,13 +694,13 @@
 <tr>
 <td>
 <p class="torah">
-<span class="section-label">C</span>
+<span class="section-label">c</span>
 <span class="internalparallel">גם האיש משה גדול מאד בארץ מצרים בעיני עבדי פרעה ובעיני העם</span> {ס}
                 </p>
 </td>
 <td>
 <p class="torah">
-<span class="section-label">C</span>
+<span class="section-label">c</span>
 <span class="verse-number">יא:י</span> <span class="closure">ומשה ואהרן עשו את כל </span><span class="internalparallel">המפתים </span><span class="closure">האלה לפני פרעה</span> ויחזק <span class="a">יהוה</span> את לב פרעה ולא שלח את בני ישראל מארצו {ס}
                 </p>
 </td>
@@ -343,3 +708,83 @@
 </table>
 </div>
 </div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue.html">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline.html">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>
