@@ -667,23 +667,19 @@ strong.element-count {
 }
 /* RTL override for Hebrew Torah tables */
 [dir=rtl] .torah-table td,
-[dir=rtl] .scripture-table tbody td {
+[dir=rtl] .torah-column {
     text-align: right;
     direction: rtl;
 }
 
-[dir=rtl] .scripture-table .torah,
-[dir=rtl] .torah {
-    text-align: right;
-    direction: rtl;
-}
-/* Keep cell labels and headers centered in RTL */
-[dir=rtl] .cell-label,
-[dir=rtl] .scripture-table thead th,
-[dir=rtl] .scripture-table .cell-label {
+[dir=rtl] .section-header {
     text-align: center;
 }
 
+[dir=rtl] .torah-text {
+    text-align: right;
+    direction: rtl;
+}
 /* Highlighted Boxes */
 .structural-note,
 .observation {
