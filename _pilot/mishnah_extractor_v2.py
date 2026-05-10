@@ -1,5 +1,5 @@
 """
-Mishnah Structural Marker Extractor — v2
+Mishnah Structural Marker Extractor — v2.1
 
 Extracts structural markers from 'The Whole Structured Mishnah for pdf.docx'
 into JSON entries compatible with mishnah_db.json.
@@ -16,6 +16,12 @@ direct colors). Each style maps to a CSS class used on the chaver.com site:
     Ciasm1            -> ciasm1          (violet #7030A0)
     Ciasm2            -> ciasm2          (violet #7030A0, underlined)
 
+Changes in v2.1:
+    - Fixed hebrew_num to use proper gematria (not letter indices)
+    - Added reversed-header matching (some tables have perek first, masekhet last)
+    - Fixed key-name mismatches (oktzin, tevulyom, avodazara, tahorot)
+    - Added alternate Hebrew spellings (eduyot, niddah, middot, eruvin, kiddushin)
+
 Usage:
     python mishnah_extractor_v2.py <docx_path> [chapter_key] [output_path]
 
@@ -24,7 +30,7 @@ Examples:
     python mishnah_extractor_v2.py "The Whole Structured Mishnah for pdf.docx" --all all.json
 """
 
-__version__ = "2.0"
+__version__ = "2.1"
 
 import json, re, sys, os
 from typing import Dict, List, Optional, Any
@@ -183,14 +189,28 @@ def _detect_subdivisions(runs):
     return subdivisions
 
 
-HEBREW_LETTERS = "אבגדהוזחטיכלמנסעפצקרשת"
-
-
 def _hebrew_chapter_num_to_str(num):
-    """Convert chapter number (1-22) to Hebrew letter."""
-    if 1 <= num <= 22:
-        return HEBREW_LETTERS[num - 1]
-    return str(num)
+    """Convert chapter number to Hebrew numeral (gematria).
+
+    Uses standard Hebrew numeral conventions:
+    - ones: א=1 through ט=9
+    - tens: י=10, כ=20, ל=30
+    - 15=טו (not יה), 16=טז (not יו) — religious convention
+    """
+    if num <= 0:
+        return str(num)
+    ones = ['', 'א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ז', 'ח', 'ט']
+    tens = ['', 'י', 'כ', 'ל']
+    if num == 15:
+        return 'טו'
+    if num == 16:
+        return 'טז'
+    result = ''
+    if num >= 10:
+        result += tens[num // 10]
+        num = num % 10
+    result += ones[num]
+    return result
 
 
 TRACTATE_NAMES = {
@@ -199,6 +219,7 @@ TRACTATE_NAMES = {
     "ברכות": "berakhot",
     "שבת": "shabbat",
     "עירובין": "eruvin",
+    "ערובין": "eruvin",
     "פסחים": "pesachim",
     "שקלים": "shekalim",
     "יומא": "yoma",
@@ -215,6 +236,7 @@ TRACTATE_NAMES = {
     "סוטה": "sotah",
     "גיטין": "gittin",
     "קידושין": "kiddushin",
+    "קדושין": "kiddushin",
     "בבא קמא": "bava_kamma",
     "בבא מציעא": "bava_metzia",
     "בבא בתרא": "bava_batra",
@@ -222,7 +244,8 @@ TRACTATE_NAMES = {
     "מכות": "makkot",
     "שבועות": "shevuot",
     "עדויות": "eduyot",
-    "עבודה זרה": "avodah_zarah",
+    "עדיות": "eduyot",
+    "עבודה זרה": "avodazara",
     "אבות": "avot",
     "הוריות": "horayot",
     "זבחים": "zevachim",
@@ -235,19 +258,22 @@ TRACTATE_NAMES = {
     "מעילה": "meilah",
     "תמיד": "tamid",
     "מדות": "middot",
+    "מידות": "middot",
     "קנים": "kinnim",
     "כלים": "kelim",
     "אהלות": "ohalot",
     "נגעים": "negaim",
     "פרה": "parah",
-    "טהרות": "toharot",
+    "טהרות": "tahorot",
     "מקואות": "mikvaot",
     "נדה": "niddah",
+    "נידה": "niddah",
     "מכשירין": "makhshirin",
     "זבים": "zavim",
-    "טבול יום": "tevul_yom",
+    "טבול יום": "tevulyom",
     "ידים": "yadayim",
-    "עוקצין": "uktzin",
+    "עוקצין": "oktzin",
+    "עוקצים": "oktzin",
     "פאה": "peah",
     "דמאי": "demai",
     "כלאים": "kilayim",
@@ -289,13 +315,19 @@ def main():
             if len(table.rows) < 2:
                 continue
             hcells = table.rows[0].cells
-            if len(hcells) < 3:
+            if len(hcells) < 2:
                 continue
             c0 = hcells[0].text.strip()
             cl = hcells[-1].text.strip()
+            # Try both header orientations
+            tractate_text = chapter_text = None
             if 'מסכת' in c0 and 'פרק' in cl:
+                tractate_text, chapter_text = c0, cl
+            elif 'פרק' in c0 and 'מסכת' in cl:
+                tractate_text, chapter_text = cl, c0
+            if tractate_text and chapter_text:
                 chapter_data = extract_chapter(table)
-                key = f"{c0}|{cl}"
+                key = f"{tractate_text}|{chapter_text}"
                 results[key] = chapter_data
         print(f"  Found {len(results)} chapters")
         with open(output_path, 'w', encoding='utf-8') as f:
@@ -319,12 +351,18 @@ def main():
             if len(table.rows) < 2:
                 continue
             hcells = table.rows[0].cells
-            if len(hcells) < 3:
+            if len(hcells) < 2:
                 continue
             c0 = hcells[0].text.strip()
             cl = hcells[-1].text.strip()
+            # Try both header orientations (standard and reversed)
+            tractate_text = None
             if 'מסכת' in c0 and target_perek in cl:
-                eng = _match_tractate(c0)
+                tractate_text = c0
+            elif target_perek in c0 and 'מסכת' in cl:
+                tractate_text = cl
+            if tractate_text:
+                eng = _match_tractate(tractate_text)
                 if eng and eng == tractate_name:
                     found_table = table
                     print(f"  Found: {c0} / {cl}")
