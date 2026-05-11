@@ -22,6 +22,11 @@ Changes in v2.1:
     - Fixed key-name mismatches (oktzin, tevulyom, avodazara, tahorot)
     - Added alternate Hebrew spellings (eduyot, niddah, middot, eruvin, kiddushin)
 
+Changes in v2.1.1:
+    - Cell-order fix: reversed-header tables now produce cells in א-first order
+      (matching JSON convention). Standard-header tables unchanged.
+    - Added alternate Hebrew spelling: קינים -> kinnim
+
 Usage:
     python mishnah_extractor_v2.py <docx_path> [chapter_key] [output_path]
 
@@ -30,7 +35,7 @@ Examples:
     python mishnah_extractor_v2.py "The Whole Structured Mishnah for pdf.docx" --all all.json
 """
 
-__version__ = "2.1"
+__version__ = "2.1.1"
 
 import json, re, sys, os
 from typing import Dict, List, Optional, Any
@@ -85,7 +90,27 @@ def extract_run_text(run_el) -> str:
 
 
 def extract_chapter(table) -> Dict:
-    """Extract a chapter's structure and markers from a Word table."""
+    """Extract a chapter's structure and markers from a Word table.
+
+    v2.1.1: Detects reversed-header tables (פרק in first cell) and reverses
+    cell order so that column א is always at index 0 in the output.
+    """
+    # Detect header orientation early
+    header_cells = table.rows[0].cells
+    c0 = header_cells[0].text.strip()
+    cl = header_cells[-1].text.strip()
+    is_reversed_header = 'פרק' in c0 and 'מסכת' not in c0
+
+    # Assign tractate/chapter from the correct header cells
+    if is_reversed_header:
+        tractate_he = cl
+        chapter_text = c0
+    else:
+        tractate_he = c0
+        chapter_text = cl
+    chapter_he_match = re.search(r'פרק\s+(.+)', chapter_text)
+    chapter_he = chapter_he_match.group(1).strip() if chapter_he_match else ""
+
     rows_data = []
     for row_idx, row in enumerate(table.rows):
         if row_idx == 0:
@@ -121,14 +146,20 @@ def extract_chapter(table) -> Dict:
             if cell_dict:
                 cells_data.append(cell_dict)
             grid_col += colspan
+
+        # v2.1.1: Reverse cell order for reversed-header tables so column א
+        # is always at array index 0 (matching the JSON convention).
+        if is_reversed_header and cells_data:
+            cells_data.reverse()
+            # Reassign position col indices after reversal
+            col = 1
+            for cell in cells_data:
+                cell['position']['col'] = col
+                col += cell['position']['colspan']
+
         if cells_data:
             rows_data.append({"row_num": row_idx, "cells": cells_data})
     shape = [[c['position']['colspan'] for c in r['cells']] for r in rows_data]
-    header_cells = table.rows[0].cells
-    tractate_he = header_cells[0].text.strip()
-    chapter_text = header_cells[-1].text.strip()
-    chapter_he_match = re.search(r'פרק\s+(.+)', chapter_text)
-    chapter_he = chapter_he_match.group(1).strip() if chapter_he_match else ""
     return {"tractate_he": tractate_he, "chapter_he": chapter_he, "shape": shape, "rows": rows_data}
 
 
@@ -260,6 +291,7 @@ TRACTATE_NAMES = {
     "מדות": "middot",
     "מידות": "middot",
     "קנים": "kinnim",
+    "קינים": "kinnim",
     "כלים": "kelim",
     "אהלות": "ohalot",
     "נגעים": "negaim",
