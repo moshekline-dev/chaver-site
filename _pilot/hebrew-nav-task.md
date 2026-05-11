@@ -72,7 +72,7 @@ The file's nav block (lines 312–350 of the original) was byte-identical to the
                     </ul>
                 </details>
             </li>
-            <li><a href="/woven-torah/full-torah-map-2/">&#1502;&#1508;&#1514; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+            <li><a href="/torah-weave/hebrew-full-torah-map/">&#1502;&#1508;&#1514; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
             <li><a href="/torah-weave/data/">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</a></li>
             <li><a href="/">English</a></li>
         </ul>
