@@ -167,3 +167,98 @@ A new session should:
 - **54 legacy DWT pages:** The `legacy-audit.csv` has recommendations (keep/retire/migrate) but no action has been taken yet. Low priority.
 
 - **`internalparallel` CSS class:** The Torah HTML pages don't use this class (it's Mishnah-only). Needs verification that main.css has a rule for it — or one needs to be added.
+
+---
+
+## 8. Pass 6 — Full Re-extraction with v2.1.4 (2026-05-11)
+
+### What changed
+
+Full corpus re-extraction with extractor v2.1.4 against a freshly updated source docx. The live `Mishnah-New/English/mishnah_db.json` was promoted from `2026-05-rev7` to `2026-05-rev8`. Total markers increased by **+3,385** (7,020 → 10,405). Chapters with markers increased by **+13** (297 → 310). The dataset now has **525 keys** (524 chapters with `sotah_9` split into `sotah_9a` and `sotah_9b`).
+
+### Extractor changes (v2.1.3 → v2.1.4)
+
+- `TABLE_OVERRIDES` constant pins specific docx tables when duplicate `(tractate, chap)` resolution would otherwise pick the wrong one. Currently contains a single entry: `shabbat_22 → ti=110`. (The duplicate for shabbat_22 has since been eliminated in the docx itself, so the override is now defensive.)
+- `sotah_9` split: `build_table_index` keys tables whose `chapter_text` contains `חלק א` / `חלק ב` as `sotah_9a` / `sotah_9b` respectively. The unified `sotah_9` key is not produced. `extract_all_chapters_from_json` suppresses the live `sotah_9` key (no placeholder) and emits fresh `sotah_9a` / `sotah_9b` entries inheriting metadata from the live `sotah_9` entry, with a new `chapter_part_he` field on each half.
+
+### Scholarly review — six duplicate-table decisions
+
+| Chapter | Decision | How v2.1.4 handles it |
+|---|---|---|
+| `middot_1` | Use later table (3×3) | Last-write-wins; docx update eliminated the duplicate |
+| `middot_2` | Use later table (5×2) | Last-write-wins; docx update eliminated the duplicate |
+| `kelim_4` | Use later table (2×3) | Last-write-wins; docx update eliminated the duplicate |
+| `shabbat_22` | Use EARLIER table (ti=110, 3×2, 10 markers) | `TABLE_OVERRIDES` (defensive — docx update also eliminated the duplicate) |
+| `zevachim_5` | Palindrome `[1,2,3,2,1]` cells per row | Moshe relabelled mislabelled `5ג` → `5` in docx; duplicate eliminated, single table now extracts the palindrome shape |
+| `sotah_9` | Split into two scholarly chapters | New `sotah_9` split logic; emits `sotah_9a` (36 markers, חלק א) and `sotah_9b` (55 markers, חלק ב) |
+
+### Dataset state — Pass 6
+
+- **Live JSON:** `Mishnah-New/English/mishnah_db.json`, version `2026-05-rev8`
+- **Total keys:** 526 (525 chapter entries + `_meta`)
+- **Sotah split:** 524 original chapters minus 1 (`sotah_9`) plus 2 (`sotah_9a`, `sotah_9b`) = 525
+- **Chapters with markers:** 310 (vs rev7's 297, delta +13)
+- **Total markers:** 10,405 (vs rev7's 7,020, delta +3,385)
+- **Missing-from-docx:** 2 — `ketubot_14`, `yadayim_4` (down from rev7's investigation that flagged ketubot_14, yadayim_4, sukkah_3; sukkah_3 was restored in the docx for Pass 6)
+- **Marker types:** 8 canonical only (no `internal_parallel` / `chiastic1` / `chiastic2`)
+- **Header rule firings:** 13 firings across 9 unique chapters (avot_1 has 5 — chain-of-tradition pattern)
+- **No duplicate `(tractate, chap)` clashes** in the new docx (all upstream-fixed)
+
+### Known open issues (after Pass 6)
+
+- `nazir_8` docx typo: header cell reads `סכת נזיר` (missing the leading `מ`). v2.1.3+'s tolerant matcher handles this via fallback. Should be fixed in the docx upstream eventually.
+- 311 vs 297 marker-count discrepancy: Claude in Word reported 311 chapters with colored highlights in the docx; the new dataset has 310. Close, but not byte-identical. Deferred for investigation.
+- `_meta.description` still says "all 524 chapters" — superseded by 525 entries after the sotah split. Minor wording; can be updated when convenient.
+
+### Files touched (Pass 6)
+
+- `_pilot/mishnah_extractor_v2.py` — v2.1.4
+- `Mishnah-New/English/mishnah_db.json` — promoted from rev7 to rev8 (byte-identical to staged before promotion)
+- `_pilot/MIGRATION-STATE.md` — this update
+- `_pilot/pass-6-report.md` — new
+- `_pilot/stage-a-revised-report.md` — created during the prior session (v2.1.3 extraction)
+- `_pilot/stage-a-report.md` — historical record of the halted v2.1.2 attempt
+- `_pilot/mishnah_db_reextracted.json` — staged file left in place (the bash mount rejected the deletion); safe to delete manually
+
+### What's next
+
+- Stage B (planned but not started): comprehensive diff of the dataset against any external sources of truth (e.g., the 311 vs 310 reconciliation).
+- Hebrew chapter page regeneration with marker spans (now unblocked — Pass 3's prerequisite met).
+
+---
+
+## 9. Pass 6 re-run — rev8 → rev9 (2026-05-11)
+
+Re-run of Pass 6 against an updated docx (May 11 09:30, sourced from the Research folder rather than the upload, so the canonical KDP location is now the build input). The docx fixes targeted the two remaining missing chapters and a layout error:
+
+- **ketubot_14 added** as a 2×3 table (`[[1,1,1],[1,1,1]]`); 0 markers (structurally populated, no styled text yet).
+- **yadayim_3 corrected** from a 6-row table that conflated ch.3 and ch.4 to a clean 3×2 table (`[[2,2],[2,2],[2,2]]`); 0 markers.
+- **yadayim_4 separated** as its own 2×2 table (`[[2,2],[2,2]]`); 0 markers.
+
+The v2.1.4 extractor was unchanged — no code edits this round. Just a clean re-extraction against the corrected docx, byte-identical promotion to live.
+
+### Headline numbers — rev8 → rev9
+
+| Metric | rev8 | rev9 | Δ |
+|---|---:|---:|---:|
+| Total chapters | 525 | 525 | 0 |
+| Matched chapters | 523 | **525** | +2 |
+| Missing-from-docx | 2 (ketubot_14, yadayim_4) | **0** | −2 |
+| Chapters with markers | 310 | 310 | 0 (three new chapters have no styled text yet) |
+| Total markers | 10,405 | 10,405 | 0 |
+| Duplicate-table conflicts | 0 | 0 | 0 |
+
+`yadayim_3` is no longer 6 rows; it is now the intended 3 rows of 2 cells each. `yadayim_4` exists as its own entry. `ketubot_14` exists as its own entry. All three are populated and free of `_missing_from_docx`.
+
+### Files touched (this re-run)
+
+- `Mishnah-New/English/mishnah_db.json` — rev8 → rev9 (byte-identical to staged before promotion). sha256 `5500c5e6bd018c96…`.
+- `_pilot/MIGRATION-STATE.md` — this section.
+- `_pilot/pass-6-rerun-report.md` — new short report.
+- `_pilot/mishnah_db_reextracted.json` — staged file left in place (mount rejected deletion); byte-identical to live, safe to delete manually.
+
+### Known open issues (still)
+
+- `nazir_8` docx typo (`סכת נזיר`) — handled by v2.1.3+ fallback; should be fixed upstream eventually.
+- 311 vs 310 marker-chapter-count discrepancy — deferred.
+- `_meta.description` still says "all 524 chapters" — wording carryover; `total_chapters` correctly reports 525.
