@@ -3874,37 +3874,52 @@ main.content-wrapper:has(.Mesechet) .Perek {
 }
 
 /* ====================================
-   MOBILE NAV DROPDOWN — VISIBILITY + LAYOUT
-   On mobile, fix two things:
-   1. Make <details> display: block (it's display: inline on desktop,
-      which causes block-level children to render off-screen on mobile
-      where .dropdown is position: static).
-   2. Tie .dropdown visibility to the parent <details>[open] attribute.
+   MOBILE NAV — FLAT LIST APPROACH
+   On mobile, eliminate dropdown UI entirely.
+   <details> renders as display: contents (passes through),
+   so its children (<summary> + <ul.dropdown>) flow as direct
+   children of <li.has-dropdown>. Everything is visible at once;
+   no tap-to-expand. Dropdown children are slightly indented
+   to show hierarchy.
    ==================================== */
 
 @media (max-width: 768px) {
-    /* Make <details> block-level so children flow correctly */
+    /* <details> becomes transparent in the layout tree */
     .has-dropdown details {
-        display: block;
-        width: 100%;
+        display: contents;
     }
 
-    /* Ensure the dropdown fills the menu width on mobile */
-    .has-dropdown .dropdown {
-        width: 100%;
-        left: auto;
-        right: auto;
-        top: auto;
+    /* <summary> renders as a section header (just an item) */
+    .has-dropdown summary {
+        cursor: default;
+        list-style: none;
+        pointer-events: none; /* Prevents accidental taps; summary is now informational */
     }
-
-    /* Hide dropdown items when parent <details> is closed */
-    .has-dropdown details:not([open]) .dropdown {
+    .has-dropdown summary::-webkit-details-marker {
         display: none;
     }
+    .has-dropdown summary::after {
+        content: ''; /* Remove the ▾ chevron — there's no dropdown to indicate */
+    }
 
-    /* Show dropdown items when parent <details> is open */
-    .has-dropdown details[open] .dropdown {
-        display: flex;
+    /* Dropdown <ul> shows all items always, no flyout */
+    .has-dropdown .dropdown {
+        display: flex !important;
+        flex-direction: column;
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        min-width: 0;
+        padding: 0;
+        background: transparent;
+    }
+
+    /* Indent dropdown items to show hierarchy */
+    .has-dropdown .dropdown li a {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        font-size: 0.95em;
+        opacity: 0.92;
     }
 }
 
