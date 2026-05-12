@@ -315,7 +315,7 @@
            <ul id="nav-menu">
     <li><a href="/hebrew%20index.html">&#1491;&#1507; &#1492;&#1489;&#1497;&#1514;</a></li>
     <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle">&#1514;&#1493;&#1512;&#1492;</a>
+        <a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm" class="dropdown-toggle">&#1514;&#1493;&#1512;&#1492;</a>
         <ul class="dropdown">
             <li><a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">&#1513;&#1506;&#1512; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
             <li><a href="/torah-weave/hebrew-full-torah-map/">&#1502;&#1508;&#1514; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
@@ -323,7 +323,7 @@
         </ul>
     </li>
     <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle">&#1502;&#1513;&#1504;&#1492;</a>
+        <a href="/mishnah/" class="dropdown-toggle">&#1502;&#1513;&#1504;&#1492;</a>
         <ul class="dropdown">
             <li><a href="/mishnah/">&#1513;&#1506;&#1512; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
             <li><a href="/Mishnah-New/Hebrew/Articles/MAVO.htm">&#1502;&#1489;&#1493;&#1488;</a></li>
@@ -332,7 +332,7 @@
         </ul>
     </li>
     <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</a>
+        <a href="/torah-weave/data/" class="dropdown-toggle">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</a>
         <ul class="dropdown">
             <li><a href="/torah-weave/data/">&#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
             <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">&#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
@@ -418,34 +418,12 @@
 
             if (!menu.contains(event.target) && !toggle.contains(event.target)) {
                 menu.classList.remove('show');
-                // Also close any open dropdowns
-                document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                    li.classList.remove('is-open');
-                });
             }
         });
 
-        // Dropdown toggle handler — class-based, works on mobile and desktop
-        document.addEventListener('DOMContentLoaded', function() {
-            var toggles = document.querySelectorAll('.has-dropdown .dropdown-toggle');
-            toggles.forEach(function(toggle) {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var parentLi = toggle.closest('.has-dropdown');
-                    var wasOpen = parentLi.classList.contains('is-open');
-
-                    // Close all dropdowns
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                        li.classList.remove('is-open');
-                    });
-
-                    // Open this one if it wasn't already
-                    if (!wasOpen) {
-                        parentLi.classList.add('is-open');
-                    }
-                });
-            });
-        });
+        // Note: dropdown behavior is CSS-only.
+        // Desktop opens .dropdown on .has-dropdown:hover; mobile hides them entirely.
+        // Parent labels (.dropdown-toggle) are direct links to their parent destination.
     </script>
 
     <!-- no page scripts -->

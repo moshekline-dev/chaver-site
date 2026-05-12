@@ -315,7 +315,7 @@
            <ul id="nav-menu">
     <li><a href="/">Home</a></li>
     <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle">Torah</a>
+        <a href="/Torah-New/English/Torah%20Portal.htm" class="dropdown-toggle">Torah</a>
         <ul class="dropdown">
             <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
             <li><a href="/torah-weave/commentary">Commentary</a></li>
@@ -419,34 +419,12 @@
 
             if (!menu.contains(event.target) && !toggle.contains(event.target)) {
                 menu.classList.remove('show');
-                // Also close any open dropdowns
-                document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                    li.classList.remove('is-open');
-                });
             }
         });
 
-        // Dropdown toggle handler — class-based, works on mobile and desktop
-        document.addEventListener('DOMContentLoaded', function() {
-            var toggles = document.querySelectorAll('.has-dropdown .dropdown-toggle');
-            toggles.forEach(function(toggle) {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var parentLi = toggle.closest('.has-dropdown');
-                    var wasOpen = parentLi.classList.contains('is-open');
-
-                    // Close all dropdowns
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                        li.classList.remove('is-open');
-                    });
-
-                    // Open this one if it wasn't already
-                    if (!wasOpen) {
-                        parentLi.classList.add('is-open');
-                    }
-                });
-            });
-        });
+        // Note: dropdown behavior is CSS-only.
+        // Desktop opens .dropdown on .has-dropdown:hover; mobile hides them entirely.
+        // Parent labels (.dropdown-toggle) are direct links to their parent destination.
     </script>
     
     {{ region: page-scripts }}

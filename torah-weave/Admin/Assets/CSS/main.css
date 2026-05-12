@@ -3835,40 +3835,30 @@ main.content-wrapper:has(.Mesechet) .Perek {
 }
 
 /* ====================================
-   NAV DROPDOWN — CLASS-TOGGLE PATTERN
-   Replaces the previous <details>/<summary> approach with
-   standard <a>/<ul> markup and JS-controlled .is-open class.
-   This is the pattern used by working mobile navs everywhere
-   (Elementor, Bootstrap, every CMS theme).
-
-   Visibility is controlled by:
-   - .is-open class (toggled by JS on tap/click)
-   - :hover pseudo-class (desktop hover)
-   - Both apply at all viewport sizes; mobile users tap, desktop users hover.
+   NAV DROPDOWN BEHAVIOR — DESKTOP HOVER + MOBILE HIDE
+   Desktop (hover-capable): hover on .has-dropdown opens the dropdown.
+   Mobile (no hover): dropdowns are HIDDEN entirely. Users see only
+   top-level nav items. The .dropdown-toggle <a> for each top-level
+   dropdown acts as a direct link to the parent destination
+   (e.g., tap "תורה" goes to the Hebrew Torah Portal directly).
    ==================================== */
 
-/* Dropdown toggle label — styled like a regular nav link */
+/* Dropdown toggle label — clickable in all viewports */
 .has-dropdown .dropdown-toggle {
     cursor: pointer;
     user-select: none;
 }
 
-/* Show a chevron on the toggle */
+/* Chevron on the toggle (hidden on mobile via the rule below) */
 .has-dropdown .dropdown-toggle::after {
     content: ' \25BE';
     font-size: 0.7em;
     margin-inline-start: 0.25em;
 }
 
-/* By default, dropdown is hidden */
+/* Default: dropdown hidden everywhere */
 .has-dropdown .dropdown {
     display: none;
-}
-
-/* Show dropdown when parent <li> has .is-open class (tap/click toggle) */
-.has-dropdown.is-open .dropdown {
-    display: flex;
-    flex-direction: column;
 }
 
 /* Desktop only: hover-to-open behavior */
@@ -3879,23 +3869,14 @@ main.content-wrapper:has(.Mesechet) .Perek {
     }
 }
 
-/* Mobile-specific layout adjustments */
+/* Mobile: hide dropdowns entirely. Parent .dropdown-toggle navigates
+   to its href as a direct link instead. */
 @media (max-width: 768px) {
-    /* On mobile, dropdown flows inline below the toggle, full width */
     .has-dropdown .dropdown {
-        position: static;
-        box-shadow: none;
-        min-width: 0;
-        padding: 0;
-        width: 100%;
-        background: transparent;
+        display: none !important;
     }
-
-    /* Indent dropdown items so the hierarchy is visible */
-    .has-dropdown .dropdown li a {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        font-size: 0.95em;
+    .has-dropdown .dropdown-toggle::after {
+        content: '' !important;
     }
 }
 
