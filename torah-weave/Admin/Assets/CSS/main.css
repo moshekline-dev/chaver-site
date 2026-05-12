@@ -3874,5 +3874,26 @@ main.content-wrapper:has(.Mesechet) .Perek {
 }
 
 /* ====================================
+   MOBILE NAV DROPDOWN VISIBILITY
+   On mobile, explicitly tie .dropdown visibility to the
+   parent <details> [open] attribute. The inline CSS sets
+   .dropdown { display: flex } which overrides the native
+   <details> hide-when-closed behavior on some mobile
+   browsers. This block restores correct mobile behavior.
+   ==================================== */
+
+@media (max-width: 768px) {
+    /* Hide dropdown items when parent <details> is closed */
+    .has-dropdown details:not([open]) .dropdown {
+        display: none;
+    }
+
+    /* Show dropdown items when parent <details> is open */
+    .has-dropdown details[open] .dropdown {
+        display: flex;
+    }
+}
+
+/* ====================================
    END OF MAIN.CSS
    ==================================== */
