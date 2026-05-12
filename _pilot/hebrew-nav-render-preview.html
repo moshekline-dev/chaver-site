@@ -83,62 +83,6 @@
     }
 
     /* ==========================================
-       DROPDOWN MENU - NATIVE details/summary
-       ========================================== */
-
-    .has-dropdown {
-        position: relative;
-    }
-
-    .has-dropdown details {
-        display: inline;
-    }
-
-    .has-dropdown summary {
-        cursor: pointer;
-        list-style: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-
-    .has-dropdown summary::-webkit-details-marker {
-        display: none;
-    }
-
-    .has-dropdown summary::after {
-        content: ' \25BE';
-        font-size: 0.7em;
-    }
-
-    .dropdown {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        min-width: 200px;
-        padding: 0.4rem 0;
-        border-radius: 4px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        background: #fff;
-        z-index: 1001;
-        gap: 0;
-    }
-
-    .dropdown li {
-        width: 100%;
-    }
-
-    .dropdown a {
-        display: block;
-        padding: 0.5rem 1rem;
-        white-space: nowrap;
-        border-radius: 0;
-    }
-
-    /* ==========================================
        MAIN CONTENT AREA LAYOUT
        ========================================== */
 
@@ -213,22 +157,9 @@
             width: 100%;
         }
 
-        nav a, .has-dropdown summary {
+        nav a {
             display: block;
             padding: 1rem;
-        }
-
-        /* Mobile dropdown: no flyout, just indent */
-        .dropdown {
-            position: static;
-            box-shadow: none;
-            min-width: 0;
-            padding: 0;
-        }
-
-        .dropdown a {
-            padding-left: 2rem;
-            font-size: 0.95em;
         }
 
         /* Landscape phones - hamburger menu */
@@ -258,7 +189,7 @@
                 width: 100%;
             }
 
-            nav a, .has-dropdown summary {
+            nav a {
                 display: block;
                 padding: 0.75rem 1rem;
                 border-bottom: 1px solid rgba(61, 47, 31, 0.2);
@@ -315,7 +246,7 @@
            <ul id="nav-menu">
     <li><a href="/hebrew%20index.html">&#1491;&#1507; &#1492;&#1489;&#1497;&#1514;</a></li>
     <li class="has-dropdown">
-        <a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm" class="dropdown-toggle">&#1514;&#1493;&#1512;&#1492;</a>
+        <a href="#" class="dropdown-toggle">&#1514;&#1493;&#1512;&#1492;</a>
         <ul class="dropdown">
             <li><a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">&#1513;&#1506;&#1512; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
             <li><a href="/torah-weave/hebrew-full-torah-map/">&#1502;&#1508;&#1514; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
@@ -323,7 +254,7 @@
         </ul>
     </li>
     <li class="has-dropdown">
-        <a href="/mishnah/" class="dropdown-toggle">&#1502;&#1513;&#1504;&#1492;</a>
+        <a href="#" class="dropdown-toggle">&#1502;&#1513;&#1504;&#1492;</a>
         <ul class="dropdown">
             <li><a href="/mishnah/">&#1513;&#1506;&#1512; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
             <li><a href="/Mishnah-New/Hebrew/Articles/MAVO.htm">&#1502;&#1489;&#1493;&#1488;</a></li>
@@ -332,7 +263,7 @@
         </ul>
     </li>
     <li class="has-dropdown">
-        <a href="/torah-weave/data/" class="dropdown-toggle">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</a>
+        <a href="#" class="dropdown-toggle">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</a>
         <ul class="dropdown">
             <li><a href="/torah-weave/data/">&#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
             <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">&#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
@@ -411,19 +342,40 @@
             menu.classList.toggle('show');
         }
 
-        // Close mobile menu when clicking outside
+        // Close mobile menu when clicking outside; also close any open dropdowns
         document.addEventListener('click', function(event) {
             var menu = document.getElementById('nav-menu');
             var toggle = document.querySelector('.menu-toggle');
 
             if (!menu.contains(event.target) && !toggle.contains(event.target)) {
                 menu.classList.remove('show');
+                document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                    li.classList.remove('is-open');
+                });
             }
         });
 
-        // Note: dropdown behavior is CSS-only.
-        // Desktop opens .dropdown on .has-dropdown:hover; mobile hides them entirely.
-        // Parent labels (.dropdown-toggle) are direct links to their parent destination.
+        // Dropdown toggle handler — class-based, tap-to-expand on mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggles = document.querySelectorAll('.has-dropdown .dropdown-toggle');
+            toggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var parentLi = toggle.closest('.has-dropdown');
+                    var wasOpen = parentLi.classList.contains('is-open');
+
+                    // Close all dropdowns first
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                    });
+
+                    // Open this one if it wasn't already
+                    if (!wasOpen) {
+                        parentLi.classList.add('is-open');
+                    }
+                });
+            });
+        });
     </script>
 
     <!-- no page scripts -->

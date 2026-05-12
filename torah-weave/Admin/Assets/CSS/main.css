@@ -3835,12 +3835,15 @@ main.content-wrapper:has(.Mesechet) .Perek {
 }
 
 /* ====================================
-   NAV DROPDOWN BEHAVIOR — DESKTOP HOVER + MOBILE HIDE
-   Desktop (hover-capable): hover on .has-dropdown opens the dropdown.
-   Mobile (no hover): dropdowns are HIDDEN entirely. Users see only
-   top-level nav items. The .dropdown-toggle <a> for each top-level
-   dropdown acts as a direct link to the parent destination
-   (e.g., tap "תורה" goes to the Hebrew Torah Portal directly).
+   NAV DROPDOWN — CLASS-TOGGLE PATTERN
+   Tap-to-expand on mobile, hover-to-open on desktop.
+   Class-based: JS toggles .is-open on the parent <li>;
+   CSS shows the dropdown when .is-open is present.
+
+   !important flags ensure these rules win over any
+   leftover inline CSS in DWT-attached pages (where the
+   orphan <details>/<summary> CSS still exists and won't
+   be removed in this task).
    ==================================== */
 
 /* Dropdown toggle label — clickable in all viewports */
@@ -3849,7 +3852,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     user-select: none;
 }
 
-/* Chevron on the toggle (hidden on mobile via the rule below) */
+/* Chevron on the toggle */
 .has-dropdown .dropdown-toggle::after {
     content: ' \25BE';
     font-size: 0.7em;
@@ -3858,25 +3861,42 @@ main.content-wrapper:has(.Mesechet) .Perek {
 
 /* Default: dropdown hidden everywhere */
 .has-dropdown .dropdown {
-    display: none;
+    display: none !important;
 }
 
-/* Desktop only: hover-to-open behavior */
+/* Show dropdown when parent <li> has .is-open class (set by JS on tap) */
+.has-dropdown.is-open .dropdown {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Desktop: also show on hover */
 @media (hover: hover) and (pointer: fine) {
     .has-dropdown:hover .dropdown {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
     }
 }
 
-/* Mobile: hide dropdowns entirely. Parent .dropdown-toggle navigates
-   to its href as a direct link instead. */
+/* Mobile-specific layout: dropdown flows inline, full width */
 @media (max-width: 768px) {
     .has-dropdown .dropdown {
-        display: none !important;
+        position: static !important;
+        box-shadow: none !important;
+        min-width: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        background: transparent !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
     }
-    .has-dropdown .dropdown-toggle::after {
-        content: '' !important;
+
+    /* Indent dropdown items so the hierarchy is visible */
+    .has-dropdown .dropdown li a {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        font-size: 0.95em;
     }
 }
 
