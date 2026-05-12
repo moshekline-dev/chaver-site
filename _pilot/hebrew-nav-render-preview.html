@@ -13,9 +13,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>בדיקת ניווט וכותרת תחתונה עברית | Chaver.com</title>
+    <title>בדיקת ניווט בריחוף | Chaver.com</title>
     
-    <meta name="description" content="Hebrew chrome rendering preview — Mishnah Portal placeholder now at /mishnah/. Not for deploy.">
+    <meta name="description" content="Hebrew chrome preview — hover-to-open dropdowns and close-others behavior. Not for deploy.">
     
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
@@ -356,9 +356,14 @@
          ========================================== -->
     <main class="content-wrapper">
         <article style="max-width:800px;margin:0 auto;padding:2rem;">
-<h1>בדיקת ניווט וכותרת תחתונה עברית</h1>
-<p>תצוגה מקדימה לאחר עדכון מיקום פורטל המשנה אל <code>/mishnah/</code> (במקום <code>/Mishnah-New/Hebrew/Mishnah Portal.htm</code>).</p>
-<p>בדקו את הקישור <strong>שער המשנה</strong> בתפריט הנפתח של משנה, ואת הקישור <strong>פורטל המשנה</strong> במדור המשנה כדרכה שבכותרת התחתונה — שניהם אמורים להוביל ל-<code>/mishnah/</code>.</p>
+<h1>בדיקת ניווט בריחוף</h1>
+<p>גרסה זו של הניווט פותחת את התפריטים הנפתחים בריחוף העכבר (Desktop). במכשירי מגע נשמרת ההתנהגות הרגילה (נגיעה לפתיחה/סגירה).</p>
+<p>כאשר תפריט אחד נפתח, האחרים נסגרים אוטומטית. בדקו:</p>
+<ul>
+  <li>ריחוף מעל <strong>תורה</strong> פותח את התפריט.</li>
+  <li>הזזת העכבר ל<strong>משנה</strong> סוגרת את תורה ופותחת את משנה.</li>
+  <li>הסטת העכבר מחוץ לסרגל הניווט סוגרת את הכול.</li>
+</ul>
 </article>
     </main>
     
@@ -411,4 +416,38 @@
     
     <!-- ==========================================
          MOBILE MENU SCRIPT - HAMBURGER ONLY
-         ====================                                                              
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+
+        // Close other nav dropdowns when one is opened (accordion behavior)
+        document.addEventListener('DOMContentLoaded', function() {
+            var allDetails = document.querySelectorAll('.has-dropdown details');
+            allDetails.forEach(function(d) {
+                d.addEventListener('toggle', function() {
+                    if (this.open) {
+                        allDetails.forEach(function(other) {
+                            if (other !== d) { other.open = false; }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- no page scripts -->
+</body>
+</html>

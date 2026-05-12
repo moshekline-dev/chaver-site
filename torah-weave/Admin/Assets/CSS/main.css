@@ -3835,5 +3835,44 @@ main.content-wrapper:has(.Mesechet) .Perek {
 }
 
 /* ====================================
+   NAV DROPDOWN HOVER BEHAVIOR
+   Applies to both English and Hebrew templates.
+   Visual rules for .has-dropdown / .dropdown live in each
+   template's inline <style> block (DWT layout styles).
+   This file adds open/close BEHAVIOR only.
+   ==================================== */
+
+@media (hover: hover) and (pointer: fine) {
+    /* Desktop / pointer-capable devices: hover-to-open */
+
+    .has-dropdown summary {
+        list-style: none;
+        cursor: pointer;
+    }
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Force the dropdown visible on hover, regardless of <details> open state */
+    .has-dropdown:hover .dropdown {
+        display: block;
+    }
+
+    /* Hide the dropdown when not hovered, even if <details> was clicked open */
+    .has-dropdown:not(:hover) .dropdown {
+        display: none;
+    }
+
+    .has-dropdown summary {
+        pointer-events: auto;
+    }
+}
+
+@media (hover: none) {
+    /* Touch devices keep the native <details> click-to-open/close behavior. */
+    /* No additional rules needed — browser default. */
+}
+
+/* ====================================
    END OF MAIN.CSS
    ==================================== */

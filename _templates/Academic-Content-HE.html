@@ -407,4 +407,38 @@
     
     <!-- ==========================================
          MOBILE MENU SCRIPT - HAMBURGER ONLY
-         ====================
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+
+        // Close other nav dropdowns when one is opened (accordion behavior)
+        document.addEventListener('DOMContentLoaded', function() {
+            var allDetails = document.querySelectorAll('.has-dropdown details');
+            allDetails.forEach(function(d) {
+                d.addEventListener('toggle', function() {
+                    if (this.open) {
+                        allDetails.forEach(function(other) {
+                            if (other !== d) { other.open = false; }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
+    {{ region: page-scripts }}
+</body>
+</html>
