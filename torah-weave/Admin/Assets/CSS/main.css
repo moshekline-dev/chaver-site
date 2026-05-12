@@ -3881,40 +3881,50 @@ main.content-wrapper:has(.Mesechet) .Perek {
    children of <li.has-dropdown>. Everything is visible at once;
    no tap-to-expand. Dropdown children are slightly indented
    to show hierarchy.
+
+   !important is used on the layout-critical rules because
+   DWT-attached pages have an inline <style> block that loads
+   AFTER main.css in source order, so equal-specificity rules
+   in the DWT would otherwise win and override us.
    ==================================== */
 
 @media (max-width: 768px) {
-    /* <details> becomes transparent in the layout tree */
+    /* <details> becomes transparent in the layout tree.
+       !important needed: DWT's inline CSS has details { display: inline } */
     .has-dropdown details {
-        display: contents;
+        display: contents !important;
     }
 
-    /* <summary> renders as a section header (just an item) */
+    /* <summary> renders as a section header (not tappable).
+       !important needed: DWT inline CSS has summary { display: block; padding: 1rem } */
     .has-dropdown summary {
-        cursor: default;
-        list-style: none;
-        pointer-events: none; /* Prevents accidental taps; summary is now informational */
+        cursor: default !important;
+        list-style: none !important;
+        pointer-events: none !important;
     }
     .has-dropdown summary::-webkit-details-marker {
-        display: none;
+        display: none !important;
     }
     .has-dropdown summary::after {
-        content: ''; /* Remove the ▾ chevron — there's no dropdown to indicate */
+        content: '' !important;
     }
 
     /* Dropdown <ul> shows all items always, no flyout */
     .has-dropdown .dropdown {
         display: flex !important;
-        flex-direction: column;
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        min-width: 0;
-        padding: 0;
-        background: transparent;
+        flex-direction: column !important;
+        position: static !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        min-width: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
     }
 
-    /* Indent dropdown items to show hierarchy */
+    /* Indent dropdown items to show hierarchy.
+       No !important here — these are visual polish; if anything
+       in the DWT conflicts, the user just sees a slightly different
+       indentation, not a broken layout. */
     .has-dropdown .dropdown li a {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
