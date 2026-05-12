@@ -315,31 +315,27 @@
            <ul id="nav-menu">
     <li><a href="/">Home</a></li>
     <li class="has-dropdown">
-        <details>
-            <summary>Torah</summary>
-            <ul class="dropdown">
-                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                <li><a href="/torah-weave/commentary">Commentary</a></li>
-                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
-            </ul>
-        </details>
+        <a href="#" class="dropdown-toggle">Torah</a>
+        <ul class="dropdown">
+            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+            <li><a href="/torah-weave/commentary">Commentary</a></li>
+            <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+        </ul>
     </li>
     <li class="has-dropdown">
-        <details>
-            <summary>Insights</summary>
-            <ul class="dropdown">
-            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-            </ul>
-        </details>
+        <a href="#" class="dropdown-toggle">Insights</a>
+        <ul class="dropdown">
+            <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+            <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+            <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+            <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+            <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+            <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+            <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+            <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+            <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+            <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+        </ul>
     </li>
     <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
     <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
@@ -423,53 +419,34 @@
 
             if (!menu.contains(event.target) && !toggle.contains(event.target)) {
                 menu.classList.remove('show');
+                // Also close any open dropdowns
+                document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                    li.classList.remove('is-open');
+                });
             }
         });
 
-        // Explicit click handler for nav dropdowns (works reliably on mobile + desktop)
+        // Dropdown toggle handler — class-based, works on mobile and desktop
         document.addEventListener('DOMContentLoaded', function() {
-            var summaries = document.querySelectorAll('.has-dropdown summary');
-            summaries.forEach(function(summary) {
-                summary.addEventListener('click', function(e) {
-                    e.preventDefault();  // Prevent native <details> toggle; we handle it manually
-                    var thisDetails = summary.closest('details');
-                    var wasOpen = thisDetails.hasAttribute('open');
+            var toggles = document.querySelectorAll('.has-dropdown .dropdown-toggle');
+            toggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var parentLi = toggle.closest('.has-dropdown');
+                    var wasOpen = parentLi.classList.contains('is-open');
 
                     // Close all dropdowns
-                    document.querySelectorAll('.has-dropdown details').forEach(function(d) {
-                        d.removeAttribute('open');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
                     });
 
-                    // If the tapped dropdown was closed, open it (otherwise leave all closed)
+                    // Open this one if it wasn't already
                     if (!wasOpen) {
-                        thisDetails.setAttribute('open', '');
+                        parentLi.classList.add('is-open');
                     }
                 });
             });
         });
-
-        // On mobile, force all <details> elements always open.
-        // The flat-list CSS makes them visually inert (no chevron, no tap behavior),
-        // but native <details> hides non-summary children when closed regardless of
-        // CSS. Setting open=true bypasses that hide-when-closed behavior.
-        function forceDetailsOpenOnMobile() {
-            if (window.matchMedia('(max-width: 768px)').matches) {
-                document.querySelectorAll('.has-dropdown details').forEach(function(d) {
-                    d.open = true;
-                });
-            } else {
-                // On desktop, restore default (closed) state so hover CSS can control visibility
-                document.querySelectorAll('.has-dropdown details').forEach(function(d) {
-                    d.open = false;
-                });
-            }
-        }
-
-        // Run on initial load
-        document.addEventListener('DOMContentLoaded', forceDetailsOpenOnMobile);
-
-        // Re-run if viewport changes (e.g., rotation, browser resize crossing 768px)
-        window.addEventListener('resize', forceDetailsOpenOnMobile);
     </script>
     
     {{ region: page-scripts }}

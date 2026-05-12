@@ -3835,101 +3835,67 @@ main.content-wrapper:has(.Mesechet) .Perek {
 }
 
 /* ====================================
-   NAV DROPDOWN HOVER BEHAVIOR
-   Applies to both English and Hebrew templates.
-   Visual rules for .has-dropdown / .dropdown live in each
-   template's inline <style> block (DWT layout styles).
-   This file adds open/close BEHAVIOR only.
+   NAV DROPDOWN — CLASS-TOGGLE PATTERN
+   Replaces the previous <details>/<summary> approach with
+   standard <a>/<ul> markup and JS-controlled .is-open class.
+   This is the pattern used by working mobile navs everywhere
+   (Elementor, Bootstrap, every CMS theme).
+
+   Visibility is controlled by:
+   - .is-open class (toggled by JS on tap/click)
+   - :hover pseudo-class (desktop hover)
+   - Both apply at all viewport sizes; mobile users tap, desktop users hover.
    ==================================== */
 
+/* Dropdown toggle label — styled like a regular nav link */
+.has-dropdown .dropdown-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Show a chevron on the toggle */
+.has-dropdown .dropdown-toggle::after {
+    content: ' \25BE';
+    font-size: 0.7em;
+    margin-inline-start: 0.25em;
+}
+
+/* By default, dropdown is hidden */
+.has-dropdown .dropdown {
+    display: none;
+}
+
+/* Show dropdown when parent <li> has .is-open class (tap/click toggle) */
+.has-dropdown.is-open .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Desktop only: hover-to-open behavior */
 @media (hover: hover) and (pointer: fine) {
-    /* Desktop / pointer-capable devices: hover-to-open */
-
-    .has-dropdown summary {
-        list-style: none;
-        cursor: pointer;
-    }
-    .has-dropdown summary::-webkit-details-marker {
-        display: none;
-    }
-
-    /* Force the dropdown visible on hover, regardless of <details> open state */
     .has-dropdown:hover .dropdown {
-        display: block;
-    }
-
-    /* Hide the dropdown when not hovered, even if <details> was clicked open */
-    .has-dropdown:not(:hover) .dropdown {
-        display: none;
-    }
-
-    .has-dropdown summary {
-        pointer-events: auto;
+        display: flex;
+        flex-direction: column;
     }
 }
 
-@media (hover: none) {
-    /* Touch devices keep the native <details> click-to-open/close behavior. */
-    /* No additional rules needed — browser default. */
-}
-
-/* ====================================
-   MOBILE NAV — FLAT LIST APPROACH
-   On mobile, eliminate dropdown UI entirely.
-   <details> renders as display: contents (passes through),
-   so its children (<summary> + <ul.dropdown>) flow as direct
-   children of <li.has-dropdown>. Everything is visible at once;
-   no tap-to-expand. Dropdown children are slightly indented
-   to show hierarchy.
-
-   !important is used on the layout-critical rules because
-   DWT-attached pages have an inline <style> block that loads
-   AFTER main.css in source order, so equal-specificity rules
-   in the DWT would otherwise win and override us.
-   ==================================== */
-
+/* Mobile-specific layout adjustments */
 @media (max-width: 768px) {
-    /* <details> becomes transparent in the layout tree.
-       !important needed: DWT's inline CSS has details { display: inline } */
-    .has-dropdown details {
-        display: contents !important;
-    }
-
-    /* <summary> renders as a section header (not tappable).
-       !important needed: DWT inline CSS has summary { display: block; padding: 1rem } */
-    .has-dropdown summary {
-        cursor: default !important;
-        list-style: none !important;
-        pointer-events: none !important;
-    }
-    .has-dropdown summary::-webkit-details-marker {
-        display: none !important;
-    }
-    .has-dropdown summary::after {
-        content: '' !important;
-    }
-
-    /* Dropdown <ul> shows all items always, no flyout */
+    /* On mobile, dropdown flows inline below the toggle, full width */
     .has-dropdown .dropdown {
-        display: flex !important;
-        flex-direction: column !important;
-        position: static !important;
-        width: 100% !important;
-        box-shadow: none !important;
-        min-width: 0 !important;
-        padding: 0 !important;
-        background: transparent !important;
+        position: static;
+        box-shadow: none;
+        min-width: 0;
+        padding: 0;
+        width: 100%;
+        background: transparent;
     }
 
-    /* Indent dropdown items to show hierarchy.
-       No !important here — these are visual polish; if anything
-       in the DWT conflicts, the user just sees a slightly different
-       indentation, not a broken layout. */
+    /* Indent dropdown items so the hierarchy is visible */
     .has-dropdown .dropdown li a {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         font-size: 0.95em;
-        opacity: 0.92;
     }
 }
 
