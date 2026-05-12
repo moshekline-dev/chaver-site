@@ -426,15 +426,23 @@
             }
         });
 
-        // Close other nav dropdowns when one is opened (accordion behavior)
+        // Explicit click handler for nav dropdowns (works reliably on mobile + desktop)
         document.addEventListener('DOMContentLoaded', function() {
-            var allDetails = document.querySelectorAll('.has-dropdown details');
-            allDetails.forEach(function(d) {
-                d.addEventListener('toggle', function() {
-                    if (this.open) {
-                        allDetails.forEach(function(other) {
-                            if (other !== d) { other.open = false; }
-                        });
+            var summaries = document.querySelectorAll('.has-dropdown summary');
+            summaries.forEach(function(summary) {
+                summary.addEventListener('click', function(e) {
+                    e.preventDefault();  // Prevent native <details> toggle; we handle it manually
+                    var thisDetails = summary.closest('details');
+                    var wasOpen = thisDetails.hasAttribute('open');
+
+                    // Close all dropdowns
+                    document.querySelectorAll('.has-dropdown details').forEach(function(d) {
+                        d.removeAttribute('open');
+                    });
+
+                    // If the tapped dropdown was closed, open it (otherwise leave all closed)
+                    if (!wasOpen) {
+                        thisDetails.setAttribute('open', '');
                     }
                 });
             });
