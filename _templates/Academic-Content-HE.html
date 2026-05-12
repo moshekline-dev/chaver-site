@@ -444,6 +444,29 @@
                 });
             });
         });
+
+        // On mobile, force all <details> elements always open.
+        // The flat-list CSS makes them visually inert (no chevron, no tap behavior),
+        // but native <details> hides non-summary children when closed regardless of
+        // CSS. Setting open=true bypasses that hide-when-closed behavior.
+        function forceDetailsOpenOnMobile() {
+            if (window.matchMedia('(max-width: 768px)').matches) {
+                document.querySelectorAll('.has-dropdown details').forEach(function(d) {
+                    d.open = true;
+                });
+            } else {
+                // On desktop, restore default (closed) state so hover CSS can control visibility
+                document.querySelectorAll('.has-dropdown details').forEach(function(d) {
+                    d.open = false;
+                });
+            }
+        }
+
+        // Run on initial load
+        document.addEventListener('DOMContentLoaded', forceDetailsOpenOnMobile);
+
+        // Re-run if viewport changes (e.g., rotation, browser resize crossing 768px)
+        window.addEventListener('resize', forceDetailsOpenOnMobile);
     </script>
 
     {{ region: page-scripts }}
