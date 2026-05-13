@@ -3847,7 +3847,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -3984,7 +3984,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     .nav-menu > li > button {
         width: 100%;
         text-align: start;
-        padding: 0.85rem 1.25rem;
+        padding: 0.85rem 0.9rem;
     }
 
     /* Mobile submenu: inline below button, full width, indented */
@@ -3999,8 +3999,17 @@ main.content-wrapper:has(.Mesechet) .Perek {
     }
 
     .submenu li a {
-        padding-inline-start: 2.5rem;
+        padding-inline-start: 2rem;
+        padding-inline-end: 0.9rem;
         white-space: normal;
+        word-break: keep-all;
+        overflow-wrap: normal;
+    }
+
+    /* Use full mobile viewport for the nav row */
+    .nav-row {
+        max-width: none;
+        padding: 0.5rem 0.75rem;
     }
 }
 
