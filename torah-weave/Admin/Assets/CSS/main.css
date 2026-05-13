@@ -3090,15 +3090,24 @@ div.WordSection1 {
         font-size: 1em;
     }
     
-    /* Wide tables (e.g., matrix-table with 8 columns) scroll horizontally
-       inside their own area rather than expanding the page width.
-       Page stays at viewport width — hamburger stays visible. */
+    /* Wide matrix tables: shrink down via font-size + tight cell padding so
+       the whole table fits within the viewport.
+       Tables retain their normal display: table layout so rows align correctly. */
     .matrix-table {
-        display: block;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        white-space: nowrap;
-        max-width: 100%;
+        font-size: 0.65em;
+        line-height: 1.2;
+    }
+
+    .matrix-table th,
+    .matrix-table td {
+        padding: 3px 2px !important;
+        word-break: break-word;
+    }
+
+    .matrix-table thead th small,
+    .matrix-table .cell-label,
+    .matrix-table td small {
+        font-size: 0.85em;
     }
 
     .torah-map-container .matrix-table {
