@@ -3350,6 +3350,19 @@ div.WordSection1 {
     .slideshow-intro p {
         font-size: 0.95rem;
     }
+
+    /* Further shrink matrix-table on very narrow phones — handles the 5+ column
+       matrix tables like the Genesis map without clipping. The 0.65em / 3px 2px
+       rule above (inside @media max-width: 768px) still applies for 481-768px;
+       these rules override for ≤480px. */
+    .matrix-table {
+        font-size: 0.55em;
+        line-height: 1.15;
+    }
+    .matrix-table th,
+    .matrix-table td {
+        padding: 2px 1px !important;
+    }
 }
 
 /* Map Notice on Tablets */
@@ -3841,8 +3854,9 @@ main.content-wrapper:has(.Mesechet) .Perek {
     display: block;
 }
 
-/* MOBILE breakpoint */
-@media (max-width: 768px) {
+/* MOBILE breakpoint — also fires on short viewports (landscape phones) so the
+   hamburger nav appears instead of the full menu eating screen height. */
+@media (max-width: 768px), (max-height: 500px) {
     /* On mobile, let body be full-width so the nav menu can span viewport.
        Desktop body keeps its 1200px centering rule (defined elsewhere). */
     body {
