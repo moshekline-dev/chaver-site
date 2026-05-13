@@ -73,6 +73,40 @@ When HE is forced because of path/DWT but the source has `<html lang="en">`, **l
 | `start` | `{{ region: content }}` ← **name change** |
 | `page-scripts` | `{{ region: page-scripts }}` |
 
+### For `English.dwt`-attached pages
+
+`English.dwt` is a third DWT type identified in the pre-migration survey (37 pages total). The survey found two region variants:
+
+**Variant A — standard 5-region (31 pages):** same region names as `Academic-Content-DWT.dwt`. Use the same direct 1:1 mapping.
+
+**Variant B — `writehere` region (6 pages in `torah-commentary-project/Commentaries/`):** 4 regions; `writehere` is the body content equivalent, with no `meta` region.
+
+| Source region | Target placeholder |
+|---|---|
+| `doctitle` | `{{ region: doctitle }}` |
+| *(no `meta` region in this variant)* | `{{ region: meta }}` ← empty string |
+| `additional-styles` | `{{ region: additional-styles }}` |
+| `writehere` | `{{ region: content }}` ← **name change** |
+| `page-scripts` | `{{ region: page-scripts }}` |
+
+The migration script picks the variant at runtime based on which regions are present:
+
+```python
+def map_english_dwt_regions(raw_regions):
+    if 'writehere' in raw_regions:
+        return {
+            'doctitle': raw_regions.get('doctitle', ''),
+            'meta': '',
+            'additional-styles': raw_regions.get('additional-styles', ''),
+            'content': raw_regions.get('writehere', ''),
+            'page-scripts': raw_regions.get('page-scripts', ''),
+        }
+    # Standard 5-region variant — same mapping as Academic-Content-DWT
+    return {k: raw_regions.get(k, '') for k in ['doctitle', 'meta', 'additional-styles', 'content', 'page-scripts']}
+```
+
+`English.dwt` pages with neither pattern (e.g., missing required regions) should be flagged for manual review, not auto-migrated.
+
 ### For standalone HTML files (per-page judgment)
 
 Used for the pilot's `hebrew index.html`:
@@ -160,6 +194,60 @@ migrated_html = clean_nav_css_from_inline_style(migrated_html)
 
 ---
 
+## 5b. `rendered-from` Provenance Marker (REQUIRED)
+
+After the CSS cleanup, the migration script prepends a single HTML comment immediately after the `<!DOCTYPE html>` line:
+
+```html
+<!DOCTYPE html>
+<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-05-13T10:30:00Z -->
+<html lang="en">
+```
+
+The marker records:
+
+- **Which template the page was rendered from** (relative repo path, e.g., `_templates/Academic-Content-EN.html` or `_templates/Academic-Content-HE.html`)
+- **When the render happened** (ISO 8601 UTC timestamp)
+
+This marker becomes the source of truth for "which template owns this page" — replacing the implicit path/extension/lang inference once the migration is complete. Re-render tasks find re-renderable pages by `grep`'ing for this comment:
+
+```bash
+grep -rl "rendered-from: _templates/" --include="*.htm" --include="*.html" .
+```
+
+### Insertion logic
+
+```python
+from datetime import datetime, timezone
+
+def insert_provenance_marker(html, template_path):
+    ts = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    marker = f'\n<!-- rendered-from: {template_path} @ {ts} -->'
+    # Insert immediately after <!DOCTYPE html> (any whitespace/CR after it is preserved)
+    return re.sub(r'(?i)(<!DOCTYPE html>)', r'\1' + marker, html, count=1)
+```
+
+The insertion uses a case-insensitive single-replace to be robust against different DOCTYPE casings and trailing-whitespace variations.
+
+### Idempotency
+
+If a `<!-- rendered-from: ... -->` comment is already present, the script should **replace** it with a fresh marker rather than appending a second one. Implementation:
+
+```python
+def insert_or_update_provenance(html, template_path):
+    ts = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    marker = f'<!-- rendered-from: {template_path} @ {ts} -->'
+    # If existing marker present, replace it
+    if re.search(r'<!--\s*rendered-from:[^>]*-->', html):
+        return re.sub(r'<!--\s*rendered-from:[^>]*-->', marker, html, count=1)
+    # Otherwise insert after DOCTYPE
+    return re.sub(r'(?i)(<!DOCTYPE html>)', r'\1\n' + marker, html, count=1)
+```
+
+This way a re-render produces a single, fresh marker — no marker pile-up.
+
+---
+
 ## 6. Verification Checks (per file, after cleanup)
 
 ### Baseline checks from the 4-page pilot
@@ -186,6 +274,19 @@ if findings:
 Returns a list of selectors that — inside a `@media (max-width: ≤768px)` block — set `display: none` on a selector that would match the new top-level nav (`.nav-menu`, `nav ul`, `header.site-header`, `header > nav`). Empty list = pass. Non-empty = fail; that file needs manual review.
 
 In the pilot, Woven-Torah-Method had 2 such findings before cleanup and 0 after. The pattern was `nav ul { display: none }` inside `@media (max-width: 768px)` — a leftover from the old hamburger system.
+
+### NEW check 13: `rendered-from` provenance marker present
+
+```python
+def has_provenance_marker(html, template_path):
+    pat = re.compile(
+        r'<!--\s*rendered-from:\s*' + re.escape(template_path) +
+        r'\s*@\s*\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z\s*-->'
+    )
+    return len(pat.findall(html)) == 1
+```
+
+Exactly one `<!-- rendered-from: <template_path> @ <ISO 8601 timestamp> -->` comment must be present in the migrated file, immediately after `<!DOCTYPE html>`. Zero markers or multiple markers ⇒ fail.
 
 ---
 

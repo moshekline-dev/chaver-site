@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-05-13T08:33:13Z -->
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../Dynamic%20Web%20Templates/English.dwt" -->
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KNYXKY3VV1');
-</script>
-<!-- rest of head content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+    <!-- #BeginEditable "doctitle" -->
 	<title>The Decalogue</title><style type="text/css">
 
 
@@ -72,9 +63,9 @@
 }
 </style>
 <meta name="keywords" content="Decalogue, Decalog , Ten Commandments" /><meta name="description" content="Reading the decalogue as a coherent text" />
+    <!-- #EndEditable -->
     
-    
-    
+    <!-- #BeginEditable "meta" -->
     <meta name="description" content="A structural reading of the Decalogue (Ten Commandments) as a coherent text. The 'ten words' were inscribed on two tablets with internal tabular logic — not as a numbered list.">
 
     <!-- Open Graph -->
@@ -111,14 +102,14 @@
       ]
     }
     </script>
-    
+    <!-- #EndEditable -->
     
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
-    
+    <!-- #BeginEditable "additional-styles" -->
     <!-- Page-specific styles can go here -->
-    
+    <!-- #EndEditable -->
     
     <style type="text/css">
 
@@ -135,6 +126,52 @@
     }
     
     /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
        MAIN CONTENT AREA LAYOUT
        ========================================== */
     
@@ -143,6 +180,15 @@
         margin: 0 auto;
         padding: 40px 20px;
         min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
     }
     
     .footer-container {
@@ -172,13 +218,37 @@
        ========================================== */
     
     @media (max-width: 768px) {
-
-        /* Landscape phones - hamburger menu */
-        @media (max-height: 500px) and (orientation: landscape) {
-            
-            main.content-wrapper {
-                padding: 15px 10px;
-            }
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
         }
         
         /* Content adjustments */
@@ -205,7 +275,8 @@
     
     @media print {
         header.site-header,
-        footer.site-footer {
+        footer.site-footer,
+        .menu-toggle {
             display: none;
         }
         
@@ -221,49 +292,23 @@
          SITE HEADER - FIXED ACROSS ALL PAGES
          ========================================== -->
     <header class="site-header">
-        <div class="nav-row">
-            <div class="nav-brand">chaver.com</div>
-            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-            <ul class="nav-menu" id="primary-menu">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
                 <li><a href="/">Home</a></li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Torah</button>
-                    <ul class="submenu">
-                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                        <li><a href="/torah-weave/commentary">Commentary</a></li>
-                        <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Insights</button>
-                    <ul class="submenu">
-                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-                    </ul>
-                </li>
-                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
-                <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-                <li><a href="/torah-weave/data/">Data</a></li>
-                <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
-                <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index">עברית</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <!-- SITE BANNER -->
-<div id="site-banner"></div>
+    
     <!-- ==========================================
          MAIN CONTENT AREA - EDITABLE REGION
          ========================================== -->
     <main class="content-wrapper">
-        
+        <!-- #BeginEditable "content" -->
         
 			<div class=Section1><h1><a name=Top></a>The Decalogue<o:p></o:p></h1><h3><a name=Intro></a>Introduction</h3><p>The Hebrew word, <i>dvarim</i>, is usually translated &quot;commandments&quot; in the context of the Decalogue. The actual meaning is closer to &quot;words,&#8221; as in &quot;These are the words that Moses addressed to all Israel.&quot; (Deut.1.1), as indicated by the Greek <i>logos</i> in Deca-logue. In order to emphasize their special status, I will refer to the ten individual elements as &quot;Words.&quot; This article will deal with reading the ten Words as a coherent text rather than a collection lacking internal integrity. The goal of the analysis is to clarify the set of formal relationships that lie at the heart of the Decalogue. I will refer to this set of relationships as tabular logic.</p><p>The basic aspect of tabular logic is derived from the fact that the Words were written on two tablets. I take this to imply that there is a significant division of some sort between the Words on one tablet and those on the other. Generally, representations of the Decalogue have the first five Words on one tablet and the next five on the second, so that each tablet is in fact like a column in a table. Illustrations usually show the Words ordered on the tablets like this:</p><table class=lefttorightparagraph border=1 cellpadding=0 width=55 style='width:41.4pt;
  ' align="center"><!-- fpstyle: 16,010000000 --><tr><td width="51%" style='width:51.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>1</p></td><td width="49%" style='width:49.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>6</p></td></tr><tr><td width="51%" style='width:51.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>2</p></td><td width="49%" style='width:49.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>7</p></td></tr><tr><td width="51%" style='width:51.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>3</p></td><td width="49%" style='width:49.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>8</p></td></tr><tr><td width="51%" style='width:51.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>4</p></td><td width="49%" style='width:49.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>9</p></td></tr><tr><td width="51%" style='width:51.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>5</p></td><td width="49%" style='width:49.0%;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt' class="ms-grid1-1000-even"><p align=center style='text-align:center'>10</p></td></tr></table><p>(Actually, at best, this is a mirror representation. Since the tablets were written in Hebrew, they should be represented from right to left, that is, the columns should be reversed.) This format is so common that one might assume that it is of biblical origin. In fact, there is no clear evidence as to how the text was written on the tablets. We know only that the revelation at Mt. Sinai was made up of ten units of speech, <i>dvarim</i>, and that they were written on two separate stone tablets. No one but Moses is reported to have seen the writing on the tablets. The first set was destroyed before anyone could see them. Moses kept the second set in a box until it was placed in the ark. It is not recorded that the second set was ever shown to anyone. So it would seem that there is no way to determine definitively how the text appeared on the tablets. In this article I will suggest that literary analysis of the text points to the following arrangement: <span style='font-family:Arial;color:#000066'><o:p></o:p></span></p><table class=lefttorightparagraph border=1 cellpadding=0 width=62 style='width:46.8pt;
@@ -418,7 +463,7 @@ dir=LTR>It corrupts the literary unity of the first Word according to the scroll
   padding:.6pt .6pt .6pt .6pt'><p align=center style='text-align:center'><b>5B <span
   style='font-family:Arial;color:#000066'><o:p></o:p></span></b></p><p class=MsoNormal>You shall not covet your neighbor's wife, or his male or female slave, or his ox, or his ass, or anything that is your neighbor's&nbsp;<span style='font-family:Arial;color:#000066'><o:p></o:p></span></p></td></tr></table><p><b><i>Five Pairs<span style='font-family:Arial;color:#000066'><o:p></o:p></span></i></b></p><p>The last two Words according to the division in the Torah scroll are clearly a pair, beginning with the same words: &quot;You shall not covet&quot;. Also at the beginning of the list, in the other place where the scroll differs from the Mechilta, we can see a clear pair of Words. Both &quot;I the Lord&quot; and &quot;You shall not swear falsely by the name of the Lord your God&quot; refer directly to the Lord. The third and fourth Words according to the scroll are a structural pair. They are similar in several ways:</p><ul><li><p style='margin-left:18.0pt;'>They differ from all the other Words in that they are imperatives, &quot;Remember&quot; and &quot;Honor&quot;, while the other eight Words are injunctions.</p></li><li><p style='margin-left:18.0pt;'>Both imperatives include a temporal component &quot;six days&quot;, &quot;long endure&quot;-lit.: &quot;your <u>days</u> be long&quot;.</p></li><li><p style='margin-left:18.0pt;'>They both state reasons for observing the Words and refer to the Lord in these reasons: &quot;for in six days the Lord made heaven and earth&quot;, &quot;that you may long endure on the land which the Lord your God is giving you&quot;. The two &quot;reasons&quot; have an interesting relationship to each other. The first is historical referring to the creation of the world. The second reason is also within the framework of time, but opposite in direction from the first, pointing to the future rather than the past: enjoying a long life in the future. </p></li></ul><p>There are enough similarities between the third and fourth Words to warrant considering them a pair. Yet, as if the similarities may leave the reader with even the slightest doubt as to whether s/he should see these two Words as a pair, Moses drives the point home with the retelling of the ten Words in the book of Deuteronomy. There he adds the identical addition to both Words: &quot;as the Lord your God commanded you&quot;. This common addition to the third and fourth Words removes any doubt that we are to read these two as a pair. Having now identified the first four and last two Words as three pairs, we are left with four simple injunctions: </p><p class="noindent">3A. You shall not murder.<br>3B. You shall not commit adultery.<br>4A. You shall not steal.<br>4B. You shall not bear false witness against your neighbor </p><p>All four Words refer to social offenses. The first two (3A and 3B) have a bodily component lacking in the next two. Murder and adultery have bodies as their objects while stealing and false witness do not. Although this distinction may not seem to be of great significance at first, it allows us to view the Words as five pairs. Each pair can be spread across both tablets with the first element of the pair appearing on the first tablet and the second element on the second tablet. In other words, one tablet contains the odd numbered Words and the other tablet contains the even numbered Words, thus fulfilling the literal meaning of Exodus 32.15. </p><h3>The flow From Pair to Pair</h3><p>We now have two tests for coherence within this division of the Words: first, the flow from pair to pair; second, the distinction between elements of each pair. The two together provide the key to understanding the logic implied by having the ten Words divided on two tablets. The five pairs are ordered from the Divine to the mundane. The first pair begins with the ultimate Divine revelation. The fifth pair is restricted to human envy. At the beginning is the absolute other who identifies himself by his name, <i>anochi</i> &quot;I myself&quot;, at the end the individual self. Neither of the extremes mentions interpersonal actions. The first pair relates to the Lord as the sole object of worship and guarantor of the social order, while the last pair does not go beyond personal emotion. The fourth pair is inextricably connected to the fifth pair. It provides the domain in which envy can be expressed: &quot;you shall not steal.&quot; Similarly, the second pair is closely linked to the first pair. It refers to time and the Lord's continuing involvement in creation, the domain in which He expresses His will. In the middle, between the upper realm of Divine creation, and the lower realm of private property and desires, stands the interface between two realms: naked corporeal man. Obviously, this is just a general outline of the figure generated by reading the Words as five pairs. Nevertheless, it provides a very clear framework within which to explore the relationships between the Words. </p><p>I am about to argue that meaning can be derived from the arrangement of the Words on the stone tablets. Certainly, from one point of view this can be seen as fantastic, since no one but Moses ever saw the tablets. Nevertheless, the reiteration of the two tablet figure in the Torah, as well as in the three millennia since it appeared, demand a serious analysis. The outline of my argument is as follows: Literary analysis of the ten Words as they are divided in the Torah scroll leads to the visualization of the Words as I laid them out above in five pairs. Once they are arranged in this format, additional meaning becomes available which is not otherwise apparent. My argument rests on the strength and value of the additional meaning. According to the Biblical narrative, the ten Words are the only text ever written by the Lord. As such, I look for an extreme cogency in the text, worthy of its reported origin. Thus I would expect the added meaning to amplify the significance of the tablets as a pact or testimony, as they are described throughout the Torah. If this added meaning significantly increases our understanding of the nature of the ten Words as a whole, and specifically the character of the tablets as evidencing a pact between God and man, then I will feel confident that the arrangement that I have provided was most likely the arrangement on the tablets.</p><p>The most interesting aspect of the figure inscribed on the tablets, according to this arrangement, is its similarity to the event at which the Words were stated, the revelation at Mount Sinai. It is as if the tablets were meant to create a universalized picture or impression of the event. The order of the pairs reflects the picture of God above, and the individual below, with a confrontation between self and another in the middle. At both extremes are subjects, at the top the Lord identified by His personal name, <i>anochi</i>, I My Self, the absolute Other, at the bottom the individual personal self. The repetition of &quot;You shall not covet&quot; emphasizes that the individual is seen in the last pair as desiring to receive something that properly belongs to another. On the other end, in the first pair, the Lord wishes to give that which is properly His, His commandments and His name. The five pairs can be read from either perspective: as they are presented in the Torah according to the Divine perspective, or from the bottom up, according to the human perspective. This is especially revealing in terms of the handing down of the tablets. The perspective of the Lord is from above, handing down. He must descend to the mountain. The perspective of the receiver is from below, from the perspective of the individual. He must climb the mountain. The tablets then, are impressed with a conceptual representation of the meeting of man and God, man rising from below and God coming down from above, the event reported at Mt. Sinai!</p><p>This reading of the tablets implies a relationship that is not an historical event, but rather a description of reality. There are three tiers or ranges of experience between the self and God, each with its own proper element. The closest to the human perspective is the range of things which can be coveted, pair four, the realm of possessions. If they are chattels, they can be stolen. If they are abstract, such as reputation, they can be abrogated through false testimony. This is the day to day world of change, commerce, fame. Its characteristic is attribution- mine, yours; true, false. The level of the second pair of Words, adjacent to the Divine perspective, is the realm of interdependencies, or causality. Its element is time. The middle level is personhood. Its element is life and sex. In the most ancient of kabbalistic books, <i>Sefer Yitzirah</i>, these are the three prime &quot;dimensions&quot;: <i>shanah</i>- time, <i>nefesh</i>- life force, and <i>olam</i>- the physical world. This triad appears in the same order as it appears in <i>Sefer Yitzirah</i> in pairs 2-4 and in the structure of the first Word. </p><p>Let us summarize the overview of the five pairs of Words. The first and last pairs both deal with consciousness. The subject of the first is the universal consciousness, the Lord who speaks in the first person. At the other extreme, the creature, steeped in his own thoughts. Between them is a three dimensional field of action. The dimensions are: time, life and objective attribution.</p><p><a name=catholic10c></a>End Part One</p><p>To Be Continued</p></div><div><br clear=all><hr align="left"></div>
         
-        
+        <!-- #EndEditable -->
     </main>
     
     <!-- ==========================================
@@ -441,19 +486,18 @@ dir=LTR>It corrupts the literary unity of the first Word according to the scroll
                     <h4>Full Texts</h4>
                     <ul>
                         <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah Portal</a></li>
                         <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
-                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">התורה כדרכה</a></li>
                         <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
                         <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
                         <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.facebook.com/woventorah/">Facebook Discussion</a></li>
                         <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
                         <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
                     </ul>
@@ -461,73 +505,38 @@ dir=LTR>It corrupts the literary unity of the first Word according to the scroll
                 <div class="footer-section">
                     <h4>About Moshe Kline</h4>
                     <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
-                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
-                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
             </div>
         </div>
     </footer>
     
     <!-- ==========================================
-         SITE NAV SCRIPT
+         MOBILE MENU SCRIPT
          ========================================== -->
     <script>
-        (function() {
-            var toggle = document.querySelector('.nav-toggle');
-            var menu = document.querySelector('.nav-menu');
-
-            // Hamburger toggle
-            if (toggle && menu) {
-                toggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    menu.classList.toggle('is-open-menu');
-                    toggle.setAttribute('aria-expanded',
-                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
-                });
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
             }
-
-            // Dropdown toggles (via <button>, not <a>)
-            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    var li = btn.parentElement;
-                    var wasOpen = li.classList.contains('is-open');
-
-                    // Close all dropdowns first
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
-                        other.classList.remove('is-open');
-                        var b = other.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-
-                    // Open this one if it wasn't already
-                    if (!wasOpen) {
-                        li.classList.add('is-open');
-                        btn.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            });
-
-            // Click outside closes everything
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.site-header')) {
-                    if (menu) menu.classList.remove('is-open-menu');
-                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                        li.classList.remove('is-open');
-                        var b = li.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-                }
-            });
-        })();
+        });
     </script>
     
-    
+    <!-- #BeginEditable "page-scripts" -->
     <!-- Page-specific scripts can go here -->
-    
+    <!-- #EndEditable -->
 </body>
+<!-- #EndTemplate -->
 </html>

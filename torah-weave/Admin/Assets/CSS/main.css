@@ -3110,6 +3110,25 @@ div.WordSection1 {
         font-size: 0.85em;
     }
 
+    /* Cap any inline-styled absolute width at viewport on mobile.
+       Catches the ~20 pages with style="width: 800/900px" overflow risks. */
+    main [style*="width:"] {
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    /* Scripture tables (99 pages, especially Avot chapter pages with many tables).
+       Same shrink-to-fit approach as .matrix-table. */
+    .scripture-table {
+        font-size: 0.75em;
+        line-height: 1.3;
+    }
+    .scripture-table th,
+    .scripture-table td {
+        padding: 4px 3px !important;
+        word-break: break-word;
+    }
+
     .torah-map-container .matrix-table {
         font-size: 0.75em;
     }
