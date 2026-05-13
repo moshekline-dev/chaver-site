@@ -3960,10 +3960,13 @@ main.content-wrapper:has(.Mesechet) .Perek {
 
     .nav-menu {
         display: none;
-        position: absolute;
+        position: fixed;
         inset-inline-start: 0;
-        inset-inline-end: 0;
-        top: 100%;
+        top: var(--site-header-height, 60px);
+        width: 100vw;
+        max-width: 100vw;
+        max-height: calc(100vh - var(--site-header-height, 60px));
+        overflow-y: auto;
         flex-direction: column;
         background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
         padding: 0.5rem 0;
