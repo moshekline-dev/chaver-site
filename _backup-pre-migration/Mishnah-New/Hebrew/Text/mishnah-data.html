@@ -1,0 +1,642 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Mishnah Dataset (JSON) — Free Download | Structured Mishnah Data | Chaver.com</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <meta name="description" content="The complete Mishnah as a structured JSON dataset — 524 chapters across 63 tractates, encoded as two-dimensional matrices with cell-level position labels, mishnah verse numbers, and 2,276 structural markers. Free download. CC-BY license.">
+
+<meta name="keywords" content="Mishnah JSON, Mishnah dataset, structured Mishnah, Mishnah data, Mishnah API, machine readable Mishnah, Hebrew text dataset, Jewish text computational, Mishnah research data, המשנה כדרכה JSON">
+
+<meta name="author" content="Moshe Kline">
+
+<link rel="canonical" href="https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-data">
+
+<!-- Open Graph -->
+<meta property="og:title" content="The Structured Mishnah Dataset (JSON) — Free Download | Chaver.com">
+<meta property="og:description" content="The complete Mishnah as a structured JSON dataset — 524 chapters with cell-level position labels and 2,276 structural markers. Free, CC-BY licensed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-data">
+<meta property="og:site_name" content="Chaver.com">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="he_IL">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Structured Mishnah Dataset (JSON) — Free Download">
+<meta name="twitter:description" content="524 chapters of the Mishnah as machine-readable JSON, with structural position labels and 2,276 compositional markers. Free, CC-BY.">
+
+<!-- Schema.org Dataset markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "The Structured Mishnah Dataset",
+  "alternateName": "המשנה כדרכה — Machine-Readable Edition",
+  "description": "The complete Hebrew text of the Mishnah encoded as a two-dimensional structured JSON dataset. Includes all 524 chapters across 63 tractates, with cell-level position labels (row, column, subdivision), 2,276 structural markers identifying horizontal parallels, vertical threads, chiastic patterns, internal parallels, and envelope closures, and conceptual column headers for chapters whose author named the columns explicitly. Based on forty years of systematic compositional analysis by Moshe Kline.",
+  "url": "https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-data",
+  "sameAs": "https://chaver.com/Mishnah-New/English/mishnah_db.json",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Person",
+    "name": "Moshe Kline",
+    "url": "https://chaver.com/about-Moshe-Kline.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Chaver.com",
+    "url": "https://chaver.com"
+  },
+  "keywords": ["Mishnah", "Hebrew", "Rabbinic literature", "Structured text", "Compositional analysis", "Two-dimensional matrices", "Literary structure", "Jewish texts"],
+  "inLanguage": ["he", "en"],
+  "encodingFormat": "application/json",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "contentUrl": "https://chaver.com/Mishnah-New/English/mishnah_db.json"
+  },
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "Tractate", "description": "63 tractates of the Mishnah, identified by Hebrew and English names"},
+    {"@type": "PropertyValue", "name": "Chapter", "description": "524 chapters, each encoded as a two-dimensional matrix"},
+    {"@type": "PropertyValue", "name": "Cell position", "description": "Row, column, and subdivision label for every cell"},
+    {"@type": "PropertyValue", "name": "Structural shape", "description": "Row-by-row colspan distribution recording the chapter's compositional fingerprint"},
+    {"@type": "PropertyValue", "name": "Structural markers", "description": "2,276 markers across 7 types (horizontal1/2/3, vertical1, internal_parallel, chiastic1/2, closure)"}
+  ],
+  "citation": "Kline, Moshe. The Structured Mishnah Dataset. Chaver.com."
+}
+</script>
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a> ›
+    <a href="/Mishnah/TheMishnah.htm">Mishnah</a> ›
+    Mishnah Dataset (JSON)
+</nav>
+
+<h1>The Structured Mishnah Dataset (JSON)</h1>
+
+<p class="subtitle">המשנה כדרכה — Machine-Readable Dataset · 524 Chapters · 4,442 Cells · 2,276 Structural Markers · Free</p>
+
+<p><strong>The Structured Mishnah Dataset is the only machine-readable Mishnah edition that encodes compositional structure — cell positions, row/column labels, and 2,276 structural markers across all 524 chapters. Free JSON download, CC-BY license.</strong></p>
+<p>The complete Hebrew text of the Mishnah as a structured JSON dataset. All six orders, sixty-three tractates, and 524 chapters — encoded as two-dimensional matrices with cell-level position labels, mishnah verse numbers, and structural markers identifying parallels, chiastic patterns, and envelope closures across forty years of compositional analysis.</p>
+
+<p>
+    <a href="/Mishnah-New/English/mishnah_db.json" class="cta-link download-button-large" download>Download mishnah_db.json</a>
+</p>
+
+<table class="data-stats-table">
+    <tr><th>Format</th><td>JSON (UTF-8)</td></tr>
+    <tr><th>File size</th><td>~6 MB</td></tr>
+    <tr><th>Records</th><td>524 chapters across 63 tractates</td></tr>
+    <tr><th>Cells</th><td>4,442 with structural position labels</td></tr>
+    <tr><th>Subdivisions</th><td>3,737 within cells</td></tr>
+    <tr><th>Structural markers</th><td>2,276 across 7 marker types</td></tr>
+    <tr><th>Language</th><td>Hebrew text; bilingual metadata</td></tr>
+    <tr><th>License</th><td>CC-BY</td></tr>
+    <tr><th>Price</th><td>Free</td></tr>
+    <tr><th>Registration</th><td>None required</td></tr>
+</table>
+
+<h2>What's in the Dataset</h2>
+
+<p>Every chapter of the Mishnah is encoded as a two-dimensional matrix. The text is laid out as rows and columns, with every cell carrying a structural label that records its position in the chapter's compositional architecture. This is the same data that drives the Structured Mishnah's online presentation and the printed PDF — exposed in a form that machines can read directly.</p>
+
+<p>The dataset preserves three kinds of information that no other digital Mishnah edition publishes:</p>
+
+<p>First, the <strong>row and column shape</strong> of every chapter. A chapter's structural fingerprint is its row-by-row column distribution — for example, Taanit chapter 1 has the shape <code>[[4], [1,2,1], [2,2], [1,2,1], [4]]</code>, which is a palindrome around the central row. These shapes make compositional patterns queryable: chapters with envelope structures, chapters with perfect symmetry, chapters with chiastic centers can be located computationally.</p>
+
+<p>Second, the <strong>structural markers</strong> within cells — horizontal parallels, vertical threads, internal parallels, and envelope closures. These are the literary-architectural features that link cells to one another within and across rows. The dataset includes 2,276 such markers, each tagged by type and carrying its source text.</p>
+
+<p>Third, the <strong>cell subdivisions</strong> — internal A/B/C divisions within cells where a single column position contains multiple discrete units of content. The dataset captures 3,737 subdivisions across 1,569 cells.</p>
+
+<h2>Schema</h2>
+
+<p>The file is a single JSON object. The first key is <code>_meta</code>, which contains dataset-level metadata. Every subsequent key identifies a chapter using the format <code>tractate_chapter</code> (lowercase tractate name with underscores; chapter as integer). For example: <code>berakhot_1</code>, <code>shabbat_6</code>, <code>avot_3</code>.</p>
+
+<p>Each chapter object contains the following fields:</p>
+
+<table class="schema-fields-table">
+    <tr><th>Field</th><th>Type</th><th>Meaning</th></tr>
+    <tr><td><code>tractate_he</code></td><td>string</td><td>Hebrew tractate name (e.g., <code>תענית</code>)</td></tr>
+    <tr><td><code>tractate_en</code></td><td>string</td><td>English transliteration (e.g., <code>Taanit</code>)</td></tr>
+    <tr><td><code>seder_he</code></td><td>string</td><td>Hebrew order name (e.g., <code>מועד</code>)</td></tr>
+    <tr><td><code>seder_en</code></td><td>string</td><td>English order name (e.g., <code>Moed</code>)</td></tr>
+    <tr><td><code>chapter_num</code></td><td>integer</td><td>Chapter number</td></tr>
+    <tr><td><code>chapter_he</code></td><td>string</td><td>Hebrew chapter letter (e.g., <code>א</code>)</td></tr>
+    <tr><td><code>shape</code></td><td>array</td><td>Row-by-row colspan distribution (the chapter's structural fingerprint)</td></tr>
+    <tr><td><code>column_headers</code></td><td>array (optional)</td><td>Conceptual labels for the columns when the author named them</td></tr>
+    <tr><td><code>rows</code></td><td>array</td><td>The chapter's rows; each row contains a <code>row_num</code> and an array of <code>cells</code></td></tr>
+    <tr><td><code>source_url</code></td><td>string</td><td>Canonical URL of the chapter on chaver.com</td></tr>
+</table>
+
+<p>Each cell contains its structural label, a position object recording row and column index plus colspan, the Hebrew mishnah verse number where applicable, the cell text, the original HTML, and an array of structural markers. Cells with internal subdivisions contain a <code>subdivisions</code> array instead of flat text, with each subdivision carrying its own label, mishnah verse number, text, and markers.</p>
+
+<h2>Example: Reading the Dataset</h2>
+
+<p>The following Python snippet loads the dataset and prints all chapters whose shape is a perfect palindrome:</p>
+
+<pre class="code-block"><code>import json
+
+with open('mishnah_db.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+for key, chapter in data.items():
+    if key == '_meta':
+        continue
+    shape = chapter['shape']
+    if shape == shape[::-1]:
+        print(f"{key}: {shape}")</code></pre>
+
+<p>The same approach works for any structural query: chapters with column headers, chapters with envelope closures, chapters whose first and last rows match, chapters with InternalParallel patterns. The structural markers are the queryable surface; forty years of analysis is encoded as data.</p>
+
+<h2>What Makes This Dataset Unique</h2>
+
+<p>Plain Mishnah text is widely available — Sefaria, the Bar-Ilan Responsa Project, Wikisource, and several other digital editions provide it. None of them publish the structural information that distinguishes this dataset.</p>
+
+<p>The position labels (e.g., <code>2א</code>, <code>3בA</code>) record where each cell sits in the chapter's architectural plan — what the cell's row is, what its column is, what subdivision of the column it belongs to. These positions are the result of analyzing every chapter for its internal compositional logic. They are not derivable from the text; they are the analysis of the text.</p>
+
+<p>The structural markers — horizontal parallels, vertical threads, chiastic patterns, internal parallels, envelope closures — record where the author of the Mishnah linked cells to one another through repeated language, parallel construction, or framing devices. These are the literary mechanisms that hold each chapter together as a composition rather than a list.</p>
+
+<p>The column headers — present in chapters where the author named the conceptual axes of the chapter explicitly — record the categories the chapter is organized around. The Sefer Yetzirah triad of <em>nefesh</em>, <em>olam</em>, <em>shanah</em> appears as the columns of Gittin chapter 3. The triad of <em>woman</em>, <em>self-testimony</em>, <em>testimony</em> appears as the columns of Ketubot chapter 2. These are the chapter's own self-description; they have not been published anywhere else.</p>
+
+<h2>Citation</h2>
+
+<p>If you use this dataset in research, teaching, or downstream tools, please cite:</p>
+
+<p style="padding-left: 2rem; border-left: 3px solid #888;">Kline, Moshe. <em>The Structured Mishnah Dataset</em>. Chaver.com.<br>
+&lt;https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-data&gt;</p>
+
+<p>The dataset is released under a Creative Commons Attribution license (CC-BY). Free for personal use, research, teaching, and integration into other tools, including AI and computational systems. Attribution to Moshe Kline and chaver.com is required.</p>
+
+<div class="hebrew-section">
+
+<h2>להורדה חינם: בסיס הנתונים של המשנה כדרכה</h2>
+
+<p>הטקסט המלא של המשנה בעברית כבסיס נתונים מובנה (JSON). כל שישה סדרים, שישים ושלושה מסכתות ו-524 פרקים — מקודדים כמטריצות דו-ממדיות עם תוויות מיקום ברמת התא, מספרי משנה, וסימוני מבנה המזהים מקבילות, תבניות כיאסטיות וסגירות מעטפת מתוך ארבעים שנות ניתוח קומפוזיציוני.</p>
+
+<p>הנתונים מתאימים לשימוש בכלי מחקר ממוחשבים, מערכות בינה מלאכותית, וכל יישום הזקוק לטקסט המשנה במבנה ספרותי שלו. רישיון: CC-BY. ללא צורך ברישום.</p>
+
+<p><a href="/Mishnah-New/English/mishnah_db.json" class="cta-link" download>הורדת mishnah_db.json</a></p>
+
+</div>
+
+<h2>About the Research</h2>
+
+<p>The Structured Mishnah is based on forty years of systematic analysis by Moshe Kline. The methodology was first presented to Professor David Weiss-Halivni in the early 1980s, who indicated that findings would be significant only if they applied to the whole of the Mishnah — a challenge that drove the complete analysis. The Structured Mishnah was accepted for publication by Ben-Gurion University Press following peer review by Professor Daniel Boyarin (UC Berkeley) and Professor Shamma Friedman.</p>
+
+<p>The same structural methodology applied to the Mishnah was subsequently applied to the Torah, producing the Woven Torah hypothesis. Research on the Torah has been published in the <em>Journal of Biblical Literature</em> (2025), <em>SBL Press</em> (2015), and the <em>Journal of Hebrew Scriptures</em> (2008).</p>
+
+<h2>Other Formats</h2>
+
+<p>Three ways to access the Structured Mishnah:</p>
+
+<ul>
+    <li><a href="/Mishnah/TheMishnah.htm"><strong>Read online</strong></a> — Browse the Mishnah Portal, pick a tractate and chapter, and read the structured text in your browser.</li>
+    <li><a href="/Mishnah-New/Hebrew/Text/mishnah-search"><strong>Search</strong> — Find text or structural patterns</a></li>
+    <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf"><strong>Download PDF</strong></a> — The complete Mishnah as a printable, searchable PDF.</li>
+    <li><strong>Download JSON dataset</strong> — This page. Machine-readable for computational research and AI systems.</li>
+</ul>
+
+<h2>Related</h2>
+
+<ul>
+    <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to the Structured Mishnah</a></li>
+    <li><a href="/torah-weave/data/">Torah Units Dataset (JSON & CSV)</a> — companion structural dataset for the Torah</li>
+    <li><a href="/Torah-New/English/Text/Torah-pdf">Download the Structured Torah PDF</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Woven Torah Method</a></li>
+</ul>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

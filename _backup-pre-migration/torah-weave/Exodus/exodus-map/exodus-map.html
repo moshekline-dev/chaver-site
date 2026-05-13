@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>Exodus Book Map Explanation</title>
+
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <meta property="og:title" content="Exodus Book Map: 19 Units in Structural Matrix | Torah Weave">
+    <meta property="og:description" content="The complete structural map of Exodus: 19 literary units revealing the two-dimensional architecture of the second book of the Torah.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Literary Structural Map of Exodus",
+        "author": {
+            "@type": "Person",
+            "name": "Moshe Kline",
+            "url": "https://chaver.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Torah Weave Project",
+            "url": "https://chaver.com"
+        }
+    }
+    </script>
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<div>
+<h2>The Sophisticated Structure of Exodus</h2>
+<p>Closer examination of the Exodus Book Map reveals a remarkable fractal-like pattern where organizational principles operate at multiple levels, creating a text with sophisticated internal relationships that reflect its position within the broader Torah tapestry.</p>
+
+<div>
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#section1">1. The Micro-Macro Pattern</a></li>
+<li><a href="#section2">2. The Chariot Pattern: Exodus and Ezekiel's Vision</a></li>
+<li><a href="#section3">3. The Three Pivot Units: Angelic Mediators and Throne Visions</a></li>
+<li><a href="#section4">4. Exodus and Numbers: Vertical Thread Companions</a></li>
+<li><a href="#section5">5. The Five Concentric Rings Structure</a></li>
+<li><a href="#section6">6. Chiastic Structure Across Quadrants</a></li>
+<li><a href="#section7">7. Internal Quadrant Patterns</a></li>
+<li><a href="#section8">8. Vertical Thread Function</a></li>
+<li><a href="#section9">9. Interpretative Significance</a></li>
+</ul>
+</div>
+<h3>1. The Micro-Macro Pattern</h3>
+<p>The book demonstrates a fractal structure where the organizational principle at the macro level (the entire book) is replicated at the micro level (within each quadrant):</p>
+<ul>
+<li><strong>Quadrant Division:</strong> Just as the entire book is divided into four quadrants around three pivot units, each quadrant contains four units arranged in a 2×2 grid.</li>
+<li><strong>Mirrored Divisions:</strong> The macro structure divides clearly between historical narrative (upper half) and Tabernacle material (lower half). Similarly, each quadrant shows an internal division where the first two units and second two units follow distinct patterns.</li>
+<li><strong>Pivot Relationships:</strong> Each macro-quadrant relates to a special pivot unit that marks a critical transition in the narrative.</li>
+</ul>
+<a href="#">↑ Back to Top</a>
+<h3>2. The Chariot Pattern: Exodus and Ezekiel's Vision</h3>
+<p>The four-quadrant structure of Exodus parallels the four creatures in Ezekiel's vision of the divine chariot (merkabah), which the Torah Weave Map identifies as a key to the Torah's overall organization:</p>
+<ul>
+<li><strong>Quadrant A (Egypt Narrative):</strong> Corresponds to the Ox—symbolizing labor and service. This quadrant describes the Israelites laboring for Pharaoh, making bricks under oppression. The Hebrew term אופנים ("wheels") appears in Unit 5, directly connecting to the wheels of Ezekiel's chariot vision.</li>
+<li><strong>Quadrant B (Sinai Narrative):</strong> Corresponds to the Man—representing human society and moral order. This quadrant focuses on establishing laws for a just human society, mirroring how the human face in Ezekiel's vision represents the rational, civilized dimension of existence.</li>
+<li><strong>Quadrant C (Tabernacle Instructions):</strong> Corresponds to the Eagle—symbolizing heavenly vision and divine perspective. This quadrant contains the heavenly vision of the Tabernacle's perfect pattern, reminiscent of the eagle's association with height and heavenly perspective in Ezekiel's vision.</li>
+<li><strong>Quadrant D (Tabernacle Construction):</strong> Corresponds to the Lion—associated with Judah and divine kingship. This quadrant shows the implementation of God's royal dwelling place, paralleling the lion's royal status as the "king of beasts" in Ezekiel's vision.</li>
+</ul>
+<p>These connections suggest that Exodus itself functions as a literary representation of the divine chariot, with its structure reflecting the fourfold pattern seen in Ezekiel's vision.</p>
+<a href="#">↑ Back to Top</a>
+<h3>3. The Three Pivot Units: Angelic Mediators and Throne Visions</h3>
+<p>The three unique pivot units (5, 10, and 15) serve as critical divisions in the book's structure, and contain direct linguistic parallels to Ezekiel's throne vision:</p>
+<ul>
+<li><strong>Unit 5 (13:17-15:21):</strong> Marks the transition from Egypt to Sinai. The Hebrew term אופנים ("wheels") appears here, directly connecting to the wheels of Ezekiel's chariot. The angel appears as the pillar of cloud and fire: "And the angel of God, who went before the camp of Israel, moved and went behind them; and the pillar of cloud moved from before them and stood behind them" (14:19).</li>
+<li><strong>Unit 10 (23:20-24:18):</strong> Contains a striking parallel to Ezekiel's throne vision when the seventy elders "saw the God of Israel; and there was under His feet the like of a paved work of <em>sapphire</em> stone (ספיר)" (24:10). This directly mirrors Ezekiel's vision where "above the firmament... was the likeness of a throne, as the appearance of a sapphire stone" (Ezekiel 1:26). The angel appears in God's promise: "Behold, I send an angel before you, to keep you in the way, and to bring you into the place which I have prepared" (23:20).</li>
+<li><strong>Unit 15 (31:18-34:35):</strong> Features God extending his hand to Moses to give him the tablets, paralleling how at the end of Ezekiel's vision, a hand extends to him with a scroll (Ezekiel 2:9). After the golden calf incident, God states: "I will send an angel before you... for I will not go up in the midst of you" (33:2-3).</li>
+</ul>
+<p>These linguistic and thematic connections to Ezekiel's vision reinforce the understanding of Exodus as a carefully constructed text that reflects the divine throne chariot in its very structure.</p>
+<a href="#">↑ Back to Top</a>
+<h3>4. Exodus and Numbers: Vertical Thread Companions</h3>
+<p>As part of the Torah's vertical thread, Exodus and Numbers share significant structural similarities:</p>
+<ul>
+<li><strong>Quadrilateral Arrangement:</strong> Both books employ a four-sided arrangement with a sacred center—Exodus with its three pivot units forming a central axis, and Numbers with its camp arrangement around the Tabernacle.</li>
+<li><strong>Orange Color Coding:</strong> Both books share the same color in the Torah Weave Map, indicating their common focus on journey narratives with supernatural elements.</li>
+<li><strong>Surrounding Leviticus:</strong> Together, these books form the outer portions of the vertical thread that passes through Leviticus, with Exodus representing the journey to the sacred center and Numbers depicting the journey from it.</li>
+</ul>
+<p>The arrangement of units in both books mirrors the physical layout described within them—the Israelite camp with the Tabernacle at its center. This spatial organization reflects how these books function together to create a sacred journey narrative that Leviticus interrupts with its ritual instructions.</p>
+<a href="#">↑ Back to Top</a>
+<h3>5. The Five Concentric Rings Structure</h3>
+<p>As depicted in the comprehensive Torah Weave Map, the three central books of the Torah (Exodus, Leviticus, and Numbers) form a remarkable five-ring concentric structure that mirrors the physical arrangement of the Israelite camp in the wilderness:</p>
+<ul>
+<li><strong>Exodus's Dual Contribution to the Rings:</strong> The book's two major divisions each form distinct components of this ring structure:
+                <ul>
+<li><strong>Narrative Section (Units 1-9):</strong> This non-tabernacle material constitutes the outermost ring representing the historical narrative of Israel's journey. This travel narrative parallels the camp of the Israelites, the outer ring of the physical wilderness arrangement. This narrative thread will be picked up again in Numbers Unit 4, creating a continuous historical frame around the more sacred center.</li>
+<li><strong>Tabernacle Section (Units 11-19):</strong> The second half of Exodus, focusing on tabernacle construction and implementation, forms the second ring of the concentric structure. This material parallels the positioning of the Levitical families in the physical camp—those responsible for constructing, transporting, and maintaining the tabernacle. This thread connects directly to similar material in Numbers Units 1-3.</li>
+</ul>
+</li>
+<li><strong>Completion of the Ring Structure:</strong> While Exodus provides the two outer rings, Leviticus contributes the three inner rings of the structure:
+                <ul>
+<li><strong>Outer Ring of Leviticus:</strong> Units focused on "place" (Tent of Meeting and Mount Sinai references)</li>
+<li><strong>Middle Ring of Leviticus:</strong> Units focusing on "time" (containing the "seven days...eighth day" pattern)</li>
+<li><strong>Inner Ring of Leviticus:</strong> Units centered on "person" (characterized by family terminology)</li>
+</ul>
+</li>
+</ul>
+<p>This five-ring structure extends across all three books and directly mirrors the physical organization of the Israelite camp described in Numbers 2:1-3:39, where the Tabernacle stood at the center, surrounded by Levites (second ring), who were in turn surrounded by the twelve tribes (outer ring). The literary structure thus becomes a textual representation of the sacred space described within it, with Exodus providing the two outer rings and Leviticus forming the three inner rings of this spatial/textual organization.</p>
+<p>Unit 10 serves as the critical pivot point in this ring structure, marking the transition from the outer Israelite camp (represented by Units 1-9) to the Levitical zone (Units 11-19). This pivotal unit features the covenant ceremony where Moses, Aaron, Nadab, Abihu, and seventy elders ascend the mountain—effectively crossing from the zone of ordinary Israelites into a more sacred space reserved for priestly leadership. This transition in the text mirrors the physical movement from the outermost camp of Israelites into the more sacred Levitical zone surrounding the Tabernacle in the wilderness arrangement.</p>
+<a href="#">↑ Back to Top</a>
+<h3>6. Chiastic Structure Across Quadrants</h3>
+<p>The four quadrants create a sophisticated chiastic structure that reveals deeper thematic connections:</p>
+<ul>
+<li><strong>Quadrant A ↔ Quadrant D:</strong> A profound chiasm connects the building activity for Pharaoh in Quadrant A (forced labor making bricks in Egypt) with the building activity for God in Quadrant D (voluntary contributions and construction of the Tabernacle). What begins as oppressive labor under the Ox aspect is transformed into sacred service under the Lion aspect.</li>
+<li><strong>Quadrant B ↔ Quadrant C:</strong> The picture of a well-ordered society in the laws of Quadrant B (Man) mirrors the picture of the perfectly ordered heavenly Tabernacle in Quadrant C (Eagle). The social order on earth is meant to reflect the divine order of heaven.</li>
+</ul>
+<p>This chiastic relationship reveals how the book moves from Egypt's oppressive order to the divinely ordained order of both society and sacred space, utilizing the four symbolic creatures from Ezekiel's vision to structure this progression.</p>
+<a href="#">↑ Back to Top</a>
+<h3>7. Internal Quadrant Patterns</h3>
+<p>Each quadrant demonstrates a consistent 2+2 pattern that parallels the macro division:</p>
+<ul>
+<li><strong>Quadrant 1 (Egypt Narrative - Ox):</strong>
+<ul>
+<li>Units 1-2: Focus on Moses' early life, calling, and initial return to Egypt</li>
+<li>Units 3-4: Focus on direct confrontation with Pharaoh and the deliverance</li>
+<li>Division Pattern: Preparation and commission → Action and implementation</li>
+</ul>
+</li>
+<li><strong>Quadrant 2 (Wilderness/Sinai Narrative - Man):</strong>
+<ul>
+<li>Units 6-7: Focus on physical journey and provisions</li>
+<li>Units 8-9: Focus on legal codes and social regulations</li>
+<li>Division Pattern: Physical needs and immediate challenges → Establishing long-term social order</li>
+</ul>
+</li>
+<li><strong>Quadrant 3 (Tabernacle Instructions - Eagle):</strong>
+<ul>
+<li>Units 11-12: Focus on the physical structure and priestly garments</li>
+<li>Units 13-14: Focus on consecration and ongoing service regulations</li>
+<li>Division Pattern: Tangible objects → Ceremonies and processes</li>
+</ul>
+</li>
+<li><strong>Quadrant 4 (Tabernacle Implementation - Lion):</strong>
+<ul>
+<li>Units 16-17: Focus on collecting materials and initial construction</li>
+<li>Units 18-19: Focus on completion, inventory, and culmination</li>
+<li>Division Pattern: Beginning implementation → Completing and consecrating the work</li>
+</ul>
+</li>
+</ul>
+<a href="#">↑ Back to Top</a>
+<h3>8. Vertical Thread Function</h3>
+<p>Within the Torah's overall structure, Exodus serves a crucial function in the vertical thread (Exodus-Leviticus-Numbers):</p>
+<ul>
+<li><strong>Journey Narrative:</strong> Exodus contains the first portion of the concentrated 40-year "close-up" that characterizes the vertical thread.</li>
+<li><strong>Supernatural Elements:</strong> As noted in the Torah Weave Map, the vertical thread contains all the major miracles and divine appearances in clouds, fire, and smoke—elements prominently featured in Exodus.</li>
+<li><strong>Tabernacle Construction:</strong> The second half of Exodus introduces the Tabernacle theme that continues through Leviticus and into the beginning of Numbers, creating a continuous narrative thread despite the different literary structures of each book.</li>
+</ul>
+<a href="#">↑ Back to Top</a>
+<h3>9. Interpretative Significance</h3>
+<p>This multi-layered structure suggests several important insights about Exodus:</p>
+<ul>
+<li><strong>Deliberate Literary Design:</strong> The text appears constructed with mathematical precision, where each unit's placement serves both local and global purposes.</li>
+<li><strong>Process Pattern:</strong> In all four quadrants, there is a movement from preparation/theory to implementation/practice, mirroring the larger movement from narrative to tabernacle in the book as a whole.</li>
+<li><strong>Multiple Reading Paths:</strong> The reader can follow different "paths" through the text - horizontally across quadrants, vertically within quadrants, or diagonally - each revealing different aspects of meaning.</li>
+<li><strong>Progressive Disclosure:</strong> Each quadrant reveals its theme in stages, creating a consistent rhythm throughout the book: Introduce → Develop → Apply → Complete.</li>
+</ul>
+<p>This sophisticated design reveals Exodus not merely as a collection of stories and laws, but as a carefully constructed unified composition with multiple layers of meaning embedded in its very structure—a literary embodiment of the divine chariot that continues into Numbers, creating a complete journey narrative that frames the central legal material in Leviticus.</p>
+<a href="#">↑ Back to Top</a>
+</div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

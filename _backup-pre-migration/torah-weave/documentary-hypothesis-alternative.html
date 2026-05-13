@@ -1,0 +1,809 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Beyond JEDP: A Structural Alternative to the Documentary Hypothesis | Chaver.com</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+   <meta name="description" content="For 150 years the Documentary Hypothesis has explained the Torah's repetitions and divine name shifts as signs of multiple authors. The Woven Torah hypothesis offers a structural alternative: one author, two organizing principles, 86 literary units.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Beyond JEDP: A Structural Alternative to the Documentary Hypothesis">
+    <meta property="og:description" content="The Torah's repetitions and name shifts may not indicate multiple authors. The Woven Torah hypothesis shows how one composer used these features as deliberate structural principles.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chaver.com/torah-weave/documentary-hypothesis-alternative">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Beyond JEDP: A Structural Alternative to the Documentary Hypothesis",
+      "description": "For 150 years the Documentary Hypothesis has explained the Torah's repetitions and divine name shifts as signs of multiple authors. The Woven Torah hypothesis offers a structural alternative.",
+      "author": {
+        "@type": "Person",
+        "name": "Moshe Kline",
+        "url": "https://chaver.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Torah Weave Project",
+        "url": "https://chaver.com"
+      },
+      "mainEntityOfPage": "https://chaver.com/torah-weave/documentary-hypothesis-alternative",
+      "keywords": ["Documentary Hypothesis", "JEDP", "who wrote the Torah", "Bible authorship", "Woven Torah hypothesis", "source criticism alternative", "Torah composition"]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Documentary Hypothesis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Documentary Hypothesis proposes that the Torah was composed by combining four independent source documents (J, E, D, P) written at different times. It explains the Torah's repetitions and divine name shifts as evidence of multiple authors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Woven Torah hypothesis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Woven Torah hypothesis argues that the Torah is a single, architecturally unified composition built from 86 literary units arranged in two-dimensional weaves. The divine name shifts and repetitions are deliberate structural features, not signs of multiple authorship."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there an alternative to the Documentary Hypothesis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Woven Torah hypothesis, developed by Moshe Kline over 40 years of peer-reviewed research (published in the Journal of Biblical Literature and by SBL Press), explains the same textual evidence through literary architecture rather than source division."
+          }
+        }
+      ]
+    }
+    </script>    
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="/">Home</a> &gt;
+    <a href="/torah-weave/">Torah Weave</a> &gt;
+    Beyond JEDP
+</nav>
+
+<article class="commentary-content">
+
+<header>
+    <h1>Beyond JEDP: A Structural Alternative to the Documentary Hypothesis</h1>
+    <p class="unit-meta">Moshe Kline &nbsp;|&nbsp; Based on 40 years of peer-reviewed research published in JBL, SBL Press, and JHS</p>
+</header>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Problem Everyone Recognizes</h2>
+
+<p>Open the book of Genesis and start reading. Within two chapters, you will notice something odd. The creation of the world is told twice. The first account (Genesis 1:1–2:3) is cosmic, orderly, and refers to the deity as "Elohim." The second (Genesis 2:4–4:26) is intimate, earthy, and uses the compound name "YHWH-Elohim" — both names together, as if the two aspects have not yet separated. The style changes. The vocabulary shifts. The order of events differs.</p>
+
+<p>Keep reading and the pattern multiplies. Abraham passes his wife off as his sister — twice (chapters 12 and 20). Isaac does the same thing (chapter 26). Hagar is expelled twice. There are two covenant ceremonies with Abimelech. Two namings of Beer-sheba. Two accounts of how Jacob's name changed to Israel. The Torah repeats itself — sometimes with variations, sometimes with contradictions — and it does so using different names for the deity in different passages.</p>
+
+<p>This is not in dispute. Everyone who reads the Torah carefully notices these patterns. The question is what they mean.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Standard Answer: JEDP</h2>
+
+<p>For over a century, the dominant scholarly explanation has been the Documentary Hypothesis, often called the JEDP theory. The idea is straightforward: the Torah is not the work of a single author. It is a patchwork of four independent documents — the Yahwist (J), the Elohist (E), the Deuteronomist (D), and the Priestly source (P) — composed at different times and later stitched together by a redactor. The repetitions are explained as doublets: two sources telling the same story, both preserved by an editor who didn't want to discard either version. The different divine names mark different sources.</p>
+
+<p>This theory accounts for the observable evidence. It explains the repetitions, the name shifts, and many of the stylistic differences. And it has shaped biblical scholarship for over a century.</p>
+
+<p>But it has a problem. As many scholars have noted — and as the cutting edge of pentateuchal research over the past forty years has increasingly acknowledged — the hypothesis leaves something unexplained. If the Torah is a patchwork, why does it hold together so well? Why do the "seams" between sources form regular patterns rather than random joints? And why does the final text, read as a whole, display levels of literary organization that no mere redactor cutting and pasting could produce?</p>
+
+<p>The evidence the Documentary Hypothesis relies on is real. But the explanation may be wrong. What if the repetitions, the doublets, and the divine name shifts are not scars left by editing — but the visible traces of a deliberate compositional plan?</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>A Different Explanation: Textual Weaving</h2>
+
+<p>Imagine a piece of woven fabric. It has two kinds of thread: the warp, which runs vertically and is largely hidden, and the weft, which runs horizontally and is visible. The pattern of the fabric — its image, its meaning — emerges only from the intersection of both. If you pull out a single thread and follow it end to end, you see only a line. To see the picture, you have to see the weave.</p>
+
+<p>The Torah works the same way.</p>
+
+<p>Over four decades of close literary analysis — published in the <em>Journal of Biblical Literature</em> (2025), the Society of Biblical Literature Press (2015), and the <em>Journal of Hebrew Scriptures</em> (2008) — I have identified eighty-six discrete literary units across the five books of the Torah. Each unit has clear boundary markers, internal structural symmetry, and a defined position within a larger architectural plan. The units are not fragments from different sources. They are the building blocks of a two-dimensional composition — a woven text that creates meaning through the intersection of horizontal narrative flow and vertical thematic threads.</p>
+
+<p>In this reading, repetitions are not doublets from competing sources. They are the same story told from different positions in the weave — different rows, different columns — serving different structural functions. And the divine names are not source markers. They are positional indicators, distributed systematically according to a unit's location in the matrix.</p>
+
+<div class="key-insight">
+<p><strong>The central claim:</strong> The very evidence that the Documentary Hypothesis uses to argue for multiple authors — repetitions, divine name shifts, stylistic variation — is better explained as the architecture of a single, sophisticated compositional plan. The Torah is not a patchwork. It is a tapestry.</p>
+</div>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Torah Tapestry: Five Books, Two Dimensions</h2>
+
+<p>We can begin at the highest level. The five books of the Torah form a cross-shaped arrangement — what I call the Torah Tapestry. Two interlocking sets of three books each create two "threads":</p>
+
+<div class="tapestry-outline">
+    <div class="book tap-exodus">Exodus</div>
+    <div class="book tap-genesis">Genesis</div>
+    <div class="book tap-leviticus">Leviticus</div>
+    <div class="book tap-deuteronomy">Deuteronomy</div>
+    <div class="book tap-numbers">Numbers</div>
+</div>
+
+<p>The <strong>vertical thread</strong> — Exodus, Leviticus, Numbers — tells the visible story: slavery in Egypt, revelation at Sinai, the wilderness journey. These are consecutive books with an obvious narrative connection, like the weft thread of a fabric.</p>
+
+<p>The <strong>horizontal thread</strong> — Genesis, Leviticus, Deuteronomy — is hidden, like the warp. These books are not consecutive, yet they share a deep structural connection: all three are organized into rows of three-unit groups, and a single set of thematic threads (what I call "warp threads") runs through all three books, linking them into a continuous compositional plan.</p>
+
+<p>Leviticus sits at the center of both threads — the intersection point. It belongs to the visible narrative (between Exodus and Numbers) and to the hidden structural thread (between Genesis and Deuteronomy). In weaving terms, it is where warp meets weft.</p>
+
+<p>This is not metaphor. It is observable in the text. The structural evidence is extensive, detailed, and verifiable.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Genesis: The Test Case</h2>
+
+<p>Genesis provides the clearest demonstration. Its fifty chapters contain nineteen literary units — identified through boundary markers including <em>toledot</em> (תולדות, "generations") formulas, death notices, geographic envelopes, and internal structural symmetry. These nineteen units are arranged in a precise three-row, seven-column matrix:</p>
+
+<div class="matrix-wrapper">
+<h3>The Genesis Matrix: 19 Units in 3 Rows × 7 Columns</h3>
+<table class="matrix-table">
+    <thead>
+        <tr>
+            <th>Row</th>
+            <th>A<br><small>Opening</small></th>
+            <th>B</th>
+            <th colspan="2">C–D<br><small>Abraham Cycle</small></th>
+            <th colspan="2">E–F<br><small>Jacob Cycle</small></th>
+            <th>G<br><small>Closing</small></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">1</td>
+            <td>Unit 1<br><span class="cell-label">Creation<br>1:1–2:3</span></td>
+            <td></td>
+            <td class="covenant-cell">Unit 5<br><span class="cell-label">Call<br>11:10–13:4</span></td>
+            <td class="family-cell">Unit 6<br><span class="cell-label">Lot<br>13:5–14:24</span></td>
+            <td class="family-cell">Unit 11<br><span class="cell-label">Twins<br>25:12–34</span></td>
+            <td class="covenant-cell">Unit 12<br><span class="cell-label">Isaac<br>26:1–33</span></td>
+            <td>Unit 17<br><span class="cell-label">Joseph<br>36:1–41:45</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">2</td>
+            <td>Unit 2<br><span class="cell-label">Eden<br>2:4–4:26</span></td>
+            <td>Unit 4<br><span class="cell-label">Babel<br>11:1–9</span></td>
+            <td class="covenant-cell">Unit 7<br><span class="cell-label">Covenants<br>15:1–17:27</span></td>
+            <td class="family-cell">Unit 8<br><span class="cell-label">Sodom<br>18:1–19:38</span></td>
+            <td class="family-cell">Unit 13<br><span class="cell-label">Blessing<br>26:34–28:9</span></td>
+            <td class="covenant-cell">Unit 14<br><span class="cell-label">Laban<br>28:10–32:3</span></td>
+            <td>Unit 18<br><span class="cell-label">Famine<br>41:46–47:26</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">3</td>
+            <td>Unit 3<br><span class="cell-label">Nations<br>5:1–10:32</span></td>
+            <td></td>
+            <td class="covenant-cell">Unit 9<br><span class="cell-label">Isaac Born<br>20:1–22:19</span></td>
+            <td class="family-cell">Unit 10<br><span class="cell-label">Machpelah<br>22:20–25:11</span></td>
+            <td class="family-cell">Unit 15<br><span class="cell-label">Esau<br>32:4–33:16</span></td>
+            <td class="covenant-cell">Unit 16<br><span class="cell-label">Shechem<br>33:17–35:29</span></td>
+            <td>Unit 19<br><span class="cell-label">Blessings<br>47:27–50:26</span></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div class="color-legend">
+<h3>Color Key</h3>
+<ul>
+<li><span class="covenant-cell">Covenant Track</span> — Units 5, 7, 9 &amp; 12, 14, 16</li>
+<li><span class="family-cell">Family Track</span> — Units 6, 8, 10 &amp; 11, 13, 15</li>
+<li>Opening &amp; Closing Triads (A &amp; G) — Universal scope</li>
+<li>Babel Pivot (B) — Transition from universal to particular</li>
+</ul>
+</div>
+
+<p>This is not an imposed grid. It emerges from the text's own markers. The columns form concentric pairs: the outermost pair (A and G) frames the book with universal themes — creation and nations at the beginning, Joseph and empire at the end. The next pair inward (B and F, C and E) alternates between covenant material and family material, forming interwoven sub-threads within the larger weave. The single independent unit — Babel (Unit 4) — sits at the pivot, dividing universal history from the patriarchal narrative.</p>
+
+<p>The same material that the Documentary Hypothesis assigns to different "sources" actually occupies specific, predictable positions in this matrix. The repetitions — far from being editorial seams — are the structural joints of a carefully engineered composition.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Divine Names: Not Sources, but Structural Markers</h2>
+
+<p>Here is where the alternative becomes most pointed. The Documentary Hypothesis was born from the observation that Genesis uses two primary names for the deity — YHWH (יהוה) and Elohim (אלהים) — and that these names cluster in different passages. The explanation: different authors preferred different names.</p>
+
+<p>The structural analysis reveals a different pattern entirely. In the patriarchal units of Genesis — from the call of Abraham onward, after the Babel pivot — the divine names distribute according to <em>row position</em> in the matrix:</p>
+
+<div class="key-insight">
+<p><strong>Row 1:</strong> YHWH appears as the active subject — blessing, promising, speaking from above. YHWH is the transcendent, covenantal deity who reveals.<br>
+<strong>Row 3:</strong> Elohim appears as the active subject — creating, testing, operating through earthly processes. Elohim is the immanent deity who acts through nature and providence.<br>
+<strong>Row 2:</strong> Both names appear, because Row 2 is the interface — the zone where transcendent and earthly intersect. Eden, Babel, the Covenant of the Pieces, Bethel — all Row 2 events where heaven and earth meet.</p>
+</div>
+
+<p>This distribution is systematic across the patriarchal units of Genesis — columns C through G of the matrix. It is not a matter of different authors using preferred names. It is one author placing the names deliberately to mark structural position — the way a weaver uses different colored threads at different positions to create a pattern.</p>
+
+<p>The implication is far-reaching. Take the Akedah — the Binding of Isaac (Genesis 22), one of the Torah's most closely analyzed passages. The standard reading notices that the passage shifts between divine names and attributes this to source combination. But when we track the names precisely, a different picture emerges. The command to sacrifice comes from "haElohim" (הָאֱלֹהִים — with the definite article, marking an undifferentiated divine presence). The rescue comes from "the angel of YHWH" — the transcendent register. Abraham names the place "YHWH yireh" (YHWH reveals). The passage is not a patchwork of sources. It is a carefully constructed education in how to distinguish between modes of divine operation — the earthly test (Elohim) and the transcendent rescue (YHWH). The names carry the meaning.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Three Books Woven Together</h2>
+
+<p>The structural connection extends beyond Genesis. The three "warp" books — Genesis, Leviticus, and Deuteronomy — share a common three-row architecture, and their rows are linked by a continuous set of thematic threads:</p>
+
+<div class="matrix-wrapper">
+<h3>The Warp: How Genesis, Leviticus, and Deuteronomy Interlock</h3>
+<table class="matrix-table">
+    <thead>
+        <tr>
+            <th>Row</th>
+            <th>Genesis<br><small>(6 columns)</small></th>
+            <th>Leviticus<br><small>(7 columns)</small></th>
+            <th>Deuteronomy<br><small>(4 columns)</small></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="row-header">1</td>
+            <td>YHWH dominant<br><span class="cell-label">Transcendent</span></td>
+            <td>First half: Transcendent<br>Second half: Immanent</td>
+            <td>Immanent<br><span class="cell-label">(reversed)</span></td>
+        </tr>
+        <tr>
+            <td class="row-header">2</td>
+            <td>Both names<br><span class="cell-label">Interface</span></td>
+            <td>Interface<br><span class="cell-label">Leviticus 19 = turning point</span></td>
+            <td>Interface</td>
+        </tr>
+        <tr>
+            <td class="row-header">3</td>
+            <td>Elohim dominant<br><span class="cell-label">Immanent</span></td>
+            <td>First half: Immanent<br>Second half: Transcendent</td>
+            <td>Transcendent<br><span class="cell-label">(reversed)</span></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<p>Notice the reversal. In Genesis, the transcendent (YHWH) is above (Row 1) and the immanent (Elohim) is below (Row 3). This orientation continues through the first half of Leviticus. But at Leviticus 19 — the book's structural center, containing both the command "be holy" (קדשים תהיו, the peak of the inward journey to the Ark) and "love your neighbor as yourself" (ואהבת לרעך כמוך, the key to the outward journey back into the world) — the orientation flips. From that point through the rest of Leviticus and all of Deuteronomy, the immanent is above and the transcendent is below.</p>
+
+<p>This is not an accidental feature. It is a deliberate device by which the author locks the three books together into a single extended weave. Leviticus serves as the hinge — its first half connects structurally to Genesis, its second half to Deuteronomy. Three separate books function as one continuous fabric.</p>
+
+<p>No theory of multiple sources and a redactor can explain this level of cross-book architectural planning. It requires a single compositional intelligence.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>The Vertical Triad: Chariots Above and Below</h2>
+
+<p>The other three-book thread — Exodus, Leviticus, Numbers — tells its own structural story. Both Exodus and Numbers are organized into four quadrants. But they differ in a telling way.</p>
+
+<p>Exodus presents what might be called a "heavenly" pattern. Its central unit (Exodus 24) contains the vision of the elders seeing the deity of Israel on "a pavement of sapphire" — recalling Ezekiel's vision of the divine throne above the firmament. Its four quadrants move from slavery to freedom to the heavenly blueprint of the Tabernacle to its earthly construction.</p>
+
+<p>Numbers presents the "earthly" counterpart. Its four quadrants are organized like the Israelite camp itself — four groups of three units each, with legal units at the center of each group (like the flag tribes), and the Korach rebellion at the book's center (like the Tabernacle at the camp's center). The contrast between the two books is vivid: at the center of Exodus, the elders look upward and see the deity on a pavement of sapphire (24:10); at the center of Numbers, the earth opens downward and swallows Korach (16:32). One book looks toward heaven, the other is anchored to the earth.</p>
+
+<p>Between these two — the heavenly chariot of Exodus above and the earthly vehicle of Numbers below — sits Leviticus, the meeting point. The process pictured by this vertical triad is the descent and indwelling of YHWH: from transcendent revelation in Exodus, through the establishment of cultic service in Leviticus, to the earthly camp that carries the divine presence in Numbers. What Ezekiel later saw — "a wheel within a wheel" — the Torah's own structure embodies.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>What This Means for the Documentary Hypothesis</h2>
+
+<p>This structural analysis does not dismiss the Documentary Hypothesis entirely. The repetitions are real. The divine name shifts are real. The stylistic variations are real. The hypothesis was right to take these features seriously.</p>
+
+<p>But it drew the wrong conclusion. The evidence points not to multiple authors whose work was mechanically combined, but to a single compositional plan of extraordinary sophistication — one that used repetition, divine name distribution, and stylistic variation as deliberate structural tools.</p>
+
+<p>Consider an analogy. If you found a complex tapestry and noticed that it used blue thread in some areas and red thread in others, you might hypothesize two different weavers. But if you then discovered that the blue and red threads formed a coherent image — that their distribution followed a precise, repeating pattern across the entire fabric — the two-weaver hypothesis would become less plausible than a single weaver using color deliberately.</p>
+
+<p>That is what the structural analysis reveals. The Torah's "inconsistencies" are not errors or editorial artifacts. They are the warp and weft of a text designed to be read in two dimensions.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="commentary-section">
+<h2>Explore the Evidence</h2>
+
+<p>The analysis summarized here rests on detailed, unit-by-unit evidence that can be examined, tested, and challenged. The full structural analysis is available in several forms:</p>
+
+<div class="section-link">
+<p><a href="/torah-weave/">The Torah Weave Commentary</a> — Unit-by-unit structural commentary on all 86 literary units, with interactive maps and detailed analysis of each book's architecture.</p>
+</div>
+<div class="section-link">
+<p><a href="/torah.pdf">Download the Complete Torah PDF</a> — All five books in the JPS 1917 translation, organized into the 86 literary units with the two-dimensional format visible. Free, 275 pages.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/torah-weave/Genesis/genesis-analysis/units-of-genesis">Part A: The Units of Genesis</a> — Detailed identification of all 19 Genesis units with boundary evidence.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/torah-weave/Genesis/genesis-analysis/the-map-of-genesis">Part B: The Map of Genesis</a> — The 3×7 matrix and how it organizes the book's narrative.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/torah-weave/Genesis/genesis-analysis/the-three-rows">Part C: The Three Rows</a> — How divine names (YHWH and Elohim) distribute by row position.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL Press, 2015)</a> — The peer-reviewed analysis of Leviticus's 22 literary units and concentric architecture.</p>
+</div>
+
+<div class="section-link">
+<p><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a> — Interactive visual map of all 86 units across the five books.</p>
+</div>
+<div class="section-link">
+<p><a href="/torah-weave/ten-commandments-two-tablets">The Ten Commandments Were Not a List: Why Two Tablets?</a> — The Decalogue's 5×2 table is the source code for the Torah's woven architecture.</p>
+
+</div>
+
+<div class="section-link">
+<p><a href="/torah-weave/leviticus-19-ark-at-the-center">Love Your Neighbor Is Not a Standalone Law</a> — The shattered and whole tablets inside Leviticus 19.</p><div class="section-link">
+<p><a href="/torah-weave/ten-plagues-creation-in-reverse">The Ten Plagues Are Creation in Reverse</a> — Each plague undoes a specific day of creation.</p>
+<div class="section-link">
+<p><a href="/torah-weave/six-days-of-creation-picture">The Six Days of Creation Are a Picture</a> — The Torah's first embedded image.</p>
+</div>
+<div class="section-link">
+<p><a href="/torah-weave/book-of-numbers-camp-map">The Book of Numbers Is a Map of the Camp</a> — Israel as a cloak of visibility for the divine presence.</p>
+</div>
+<div class="section-link">
+<p><a href="/torah-weave/yhwh-and-elohim-two-names">Why Does God Have Two Names?</a> — The two names as two dimensions of one deity, not two source documents.</p>
+</div>
+</section>
+
+<!-- Citation -->
+<aside class="commentary-appendix">
+<h3>How to Cite This Article</h3>
+<p>Kline, Moshe. "Beyond JEDP: A Structural Alternative to the Documentary Hypothesis." <em>Torah Weave</em>, Chaver.com, 2026. https://chaver.com/torah-weave/documentary-hypothesis-alternative.html</p>
+
+<h3>Peer-Reviewed Publications</h3>
+<p>Kline, Moshe, and Paul Hocking. "Elohim and YHWH: An Alternative to the Documentary Hypothesis." <em>Journal of Biblical Literature</em>, 2025.</p>
+<p>Kline, Moshe. "Structure is Theology: The Composition of Leviticus." In <em>Current Issues in Priestly and Related Literature</em>, edited by Roy E. Gane and Ada Taggar-Cohen, 225–264. SBL Press, 2015.</p>
+<p>Kline, Moshe. "'The Editor was Nodding': A Reading of Leviticus 19 in Memory of Mary Douglas." <em>Journal of Hebrew Scriptures</em>, 2008.</p>
+</aside>
+
+</article>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

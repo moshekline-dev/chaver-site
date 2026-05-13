@@ -1,6 +1,6 @@
 <!DOCTYPE html>
+<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-05-13T11:17:35Z -->
 <html lang="en">
-<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
@@ -14,11 +14,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- #BeginEditable "doctitle" -->
-    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
-    <!-- #EndEditable -->
     
-    <!-- #BeginEditable "meta" -->
+    <title>Chaver.com - A New Approach to Torah and Mishnah</title>
+    
+    
+    
     <meta name="description" content="Explore the literary patterns and structure of Leviticus Unit 14 in this Torah Weave analysis.">
     <meta property="og:title" content="Leviticus Unit 14 - woven-torah %Title | Torah Weave Study">
     <meta property="og:description" content="Explore the literary patterns and structure of Leviticus Unit 14 in this Torah Weave analysis.">
@@ -43,14 +43,14 @@
         }
     }
     </script>
-    <!-- #EndEditable -->
+    
     
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
-    <!-- #BeginEditable "additional-styles" -->
+    
     <!-- Page-specific style overrides can go here -->
-    <!-- #EndEditable -->
+    
     
     <style type="text/css">
 
@@ -67,108 +67,6 @@
     }
     
     /* ==========================================
-       HEADER LAYOUT STRUCTURE
-       ========================================== */
-    
-    header.site-header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    
-    /* Navigation Container */
-    .main-nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0.3rem 20px;
-    }
-    
-    /* Mobile Menu Toggle */
-    .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-        position: absolute;
-        right: 20px;
-        top: 0.5rem;
-    }
-    
-    /* Navigation List */
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-    }
-    
-    nav a {
-        text-decoration: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    
-    /* ==========================================
-       DROPDOWN MENU - NATIVE details/summary
-       ========================================== */
-    
-    .has-dropdown {
-        position: relative;
-    }
-    
-    .has-dropdown details {
-        display: inline;
-    }
-    
-    .has-dropdown summary {
-        cursor: pointer;
-        list-style: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    
-    .has-dropdown summary::-webkit-details-marker {
-        display: none;
-    }
-    
-    .has-dropdown summary::after {
-        content: ' \25BE';
-        font-size: 0.7em;
-    }
-    
-    .dropdown {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        min-width: 200px;
-        padding: 0.4rem 0;
-        border-radius: 4px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        background: #fff;
-        z-index: 1001;
-        gap: 0;
-    }
-    
-    .dropdown li {
-        width: 100%;
-    }
-    
-    .dropdown a {
-        display: block;
-        padding: 0.5rem 1rem;
-        white-space: nowrap;
-        border-radius: 0;
-    }
-    
-    /* ==========================================
        MAIN CONTENT AREA LAYOUT
        ========================================== */
     
@@ -177,15 +75,6 @@
         margin: 0 auto;
         padding: 40px 20px;
         min-height: 500px;
-    }
-    
-    /* ==========================================
-       FOOTER LAYOUT STRUCTURE
-       ========================================== */
-    
-    footer.site-footer {
-        margin-top: 80px;
-        padding: 40px 20px 20px;
     }
     
     .footer-container {
@@ -215,84 +104,9 @@
        ========================================== */
     
     @media (max-width: 768px) {
-        /* Mobile header adjustments */
-        header.site-header {
-            position: relative;
-        }
-        
-        .menu-toggle {
-            display: block;
-        }
-        
-        nav ul {
-            display: none;
-            flex-direction: column;
-            gap: 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
-        
-        nav ul.show {
-            display: flex;
-        }
-        
-        nav li {
-            width: 100%;
-        }
-        
-        nav a, .has-dropdown summary {
-            display: block;
-            padding: 1rem;
-        }
-        
-        /* Mobile dropdown: no flyout, just indent */
-        .dropdown {
-            position: static;
-            box-shadow: none;
-            min-width: 0;
-            padding: 0;
-        }
-        
-        .dropdown a {
-            padding-left: 2rem;
-            font-size: 0.95em;
-        }
-        
+
         /* Landscape phones - hamburger menu */
         @media (max-height: 500px) and (orientation: landscape) {
-            .menu-toggle {
-                display: block;
-            }
-            
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 0;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                width: 100%;
-                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav li {
-                width: 100%;
-            }
-            
-            nav a, .has-dropdown summary {
-                display: block;
-                padding: 0.75rem 1rem;
-                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
-            }
             
             main.content-wrapper {
                 padding: 15px 10px;
@@ -323,8 +137,7 @@
     
     @media print {
         header.site-header,
-        footer.site-footer,
-        .menu-toggle {
+        footer.site-footer {
             display: none;
         }
         
@@ -340,43 +153,41 @@
          SITE HEADER - FIXED ACROSS ALL PAGES
          ========================================== -->
     <header class="site-header">
-        <nav class="main-nav">
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
-           <ul id="nav-menu">
-    <li><a href="/">Home</a></li>
-    <li class="has-dropdown">
-        <details>
-            <summary>Torah</summary>
-            <ul class="dropdown">
-                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                <li><a href="/torah-weave/commentary">Commentary</a></li>
-                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+        <div class="nav-row">
+            <div class="nav-brand">chaver.com</div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Torah</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/torah-weave/commentary">Commentary</a></li>
+                        <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Insights</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+                <li><a href="/torah-weave/data/">Data</a></li>
+                <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+                <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
             </ul>
-        </details>
-    </li>
-    <li class="has-dropdown">
-        <details>
-            <summary>Insights</summary>
-            <ul class="dropdown">
-            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-            </ul>
-        </details>
-    </li>
-    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
-    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-    <li><a href="/torah-weave/data/">Data</a></li>
-    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
-    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
-</ul>        </nav>
+        </div>
     </header>
     <!-- SITE BANNER -->
 <div id="site-banner"></div>
@@ -384,7 +195,7 @@
          MAIN CONTENT AREA - EDITABLE REGION
          ========================================== -->
     <main class="content-wrapper">
-        <!-- #BeginEditable "content" -->
+        
         
         <div class="content">
 <h1 class="unit-header">Leviticus Unit 14 (20:1-27)</h1>
@@ -435,7 +246,7 @@
   death; they shall stone them with stones; their blood shall be upon them. <span class="HebrewParagraph"><span style="font-weight:normal">{P}</span></span></p></td></tr></table></div>
 </div>
         
-        <!-- #EndEditable -->
+        
     </main>
     
     <!-- ==========================================
@@ -489,28 +300,62 @@
     </footer>
     
     <!-- ==========================================
-         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         SITE NAV SCRIPT
          ========================================== -->
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('nav-menu');
-            menu.classList.toggle('show');
-        }
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            var menu = document.getElementById('nav-menu');
-            var toggle = document.querySelector('.menu-toggle');
-            
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove('show');
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var menu = document.querySelector('.nav-menu');
+
+            // Hamburger toggle
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('is-open-menu');
+                    toggle.setAttribute('aria-expanded',
+                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
+                });
             }
-        });
+
+            // Dropdown toggles (via <button>, not <a>)
+            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var li = btn.parentElement;
+                    var wasOpen = li.classList.contains('is-open');
+
+                    // Close all dropdowns first
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
+                        other.classList.remove('is-open');
+                        var b = other.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open this one if it wasn't already
+                    if (!wasOpen) {
+                        li.classList.add('is-open');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Click outside closes everything
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    if (menu) menu.classList.remove('is-open-menu');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                        var b = li.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
     </script>
     
-    <!-- #BeginEditable "page-scripts" -->
+    
     <!-- Page-specific scripts can go here -->
-    <!-- #EndEditable -->
+    
 </body>
-<!-- #EndTemplate -->
 </html>

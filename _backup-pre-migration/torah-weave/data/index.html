@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Torah Literary Units Dataset — Open Data | Chaver.com</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+     <!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Torah Literary Units Dataset",
+  "alternateName": "The 86 Literary Units of the Pentateuch",
+  "description": "Complete dataset of all 86 literary units of the Torah identified by the Woven Torah hypothesis. Includes verse ranges, column/row structures, unit formats, book assignments, and structural metadata. Every verse is mapped to its cell position in one of 600 structural cells, enabling reconstruction of the woven reading with any Bible translation.",
+  "url": "https://chaver.com/torah-weave/data/",
+  "version": "1.0",
+  "dateCreated": "2026",
+  "dateModified": "2026",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Person",
+    "name": "Moshe Kline",
+    "url": "https://chaver.com/about-Moshe-Kline"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Chaver.com — The Woven Texts Project",
+    "url": "https://chaver.com"
+  },
+  "citation": "Kline, Moshe. Torah Literary Units Dataset, version 1.0. Chaver.com, 2026. https://chaver.com/torah-weave/data/",
+  "keywords": ["Torah", "literary units", "Woven Torah", "Bible structure", "Pentateuch", "open data", "biblical studies dataset", "Hebrew Bible", "Documentary Hypothesis Alternative", "structural analysis"],
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "serial_number", "description": "Unit number from 1 to 86 across the entire Torah"},
+    {"@type": "PropertyValue", "name": "book", "description": "Genesis, Exodus, Leviticus, Numbers, or Deuteronomy"},
+    {"@type": "PropertyValue", "name": "unit_number", "description": "Unit number within its book"},
+    {"@type": "PropertyValue", "name": "title", "description": "Descriptive title of the literary unit"},
+    {"@type": "PropertyValue", "name": "verse_range", "description": "Starting and ending chapter:verse boundaries"},
+    {"@type": "PropertyValue", "name": "format", "description": "Structural format (e.g., 3x2 for regular rectangular; digit string like 12221 for irregular symmetrical units)"},
+    {"@type": "PropertyValue", "name": "type", "description": "F = framework unit; CL = closure unit; U = unique (outside triadic patterns)"},
+    {"@type": "PropertyValue", "name": "cells_detail", "description": "Mapping from each cell label (e.g., 1A, 2Ba) to its specific verse range"}
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://chaver.com/torah-weave/data/torah-units.json",
+      "contentSize": "51KB"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://chaver.com/torah-weave/data/torah-units.csv",
+      "contentSize": "23KB"
+    }
+  ],
+  "sameAs": [
+    "https://chaver.com/torah-weave/Woven-Torah-Method"
+  ]
+}
+</script>
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumb">
+    <a href="/">Home</a> &gt;
+    <a href="/torah-weave/">Torah Weave</a> &gt;
+    Dataset
+</nav>
+
+<article class="commentary-content">
+
+<header>
+    <h1>Torah Literary Units &mdash; Open Dataset</h1>
+    <p class="unit-meta">86 units &middot; 600 cells &middot; Every verse mapped &middot; Use with any translation</p>
+</header>
+
+<section class="commentary-section">
+<h2>What Is This?</h2>
+
+<p>The Woven Torah hypothesis identifies 86 literary units across the five books of Moses. Each unit is a two-dimensional composition &mdash; a table with rows and columns. This dataset maps every cell in every unit to its verse range, so that anyone with any Bible translation can reconstruct the woven reading.</p>
+
+<p>The data is free to use under a <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license. Credit Moshe Kline and link to <a href="https://chaver.com">chaver.com</a>.</p>
+
+<h3>Download</h3>
+<p><a href="/torah-weave/data/torah-units.json"><strong>torah-units.json</strong></a> (51 KB) &mdash; Full dataset with cell-level verse maps, formats, and metadata.</p>
+<p><a href="/torah-weave/data/torah-units.csv"><strong>torah-units.csv</strong></a> (23 KB) &mdash; Spreadsheet-friendly version with the same data.</p>
+
+<h3>What Each Record Contains</h3>
+<p>For each of the 86 units: book, unit number, title, verse range, format (e.g., 3&times;2 or 12221 for irregular units), whether it is irregular or unique, cell count, structural type, and a <code>cells_detail</code> map giving the verse range for every cell position.</p>
+
+<h3>How to Use It</h3>
+<p>Look up any unit. The <code>cells_detail</code> field tells you which verses belong in which cell. For example, Genesis Unit 7 (Covenant Ceremonies, Genesis 15:1&ndash;17:27) is a 2&times;2 unit. Cell 1A contains Genesis 15:1&ndash;21; cell 1B contains Genesis 16:1&ndash;16. Place them side by side, and the horizontal parallels between the two covenant ceremonies become visible. This works with any translation &mdash; English, Hebrew, French, Arabic &mdash; as long as it preserves standard chapter-and-verse numbering.</p>
+</section>
+
+<section class="commentary-section">
+<h2>Convert Any Translation &mdash; Any Language &mdash; to Woven Format</h2>
+
+<p>This tool works with <strong>any Bible translation in any language</strong> &mdash; English, Hebrew, Arabic, French, Spanish, German, Chinese, or any other &mdash; as long as the text uses standard chapter:verse numbering. Paste the text below with <strong>chapter:verse numbers</strong> at the start of each verse (e.g., <code>1:1</code>, <code>15:3</code>), select the book, and the tool arranges it into the two-dimensional literary units.</p>
+
+<p><strong>What works:</strong> <code>1:1 In the beginning God created...</code> or <code>1:1 בְּרֵאשִׁית בָּרָא אֱלֹהִים</code> or <code>Gen 1:1 Au commencement Dieu cr&eacute;a...</code><br>
+<strong>What does not work:</strong> Plain paragraph text without verse numbers.</p>
+
+<p>Where to get text with verse numbers: copy from <a href="https://www.sefaria.org">Sefaria</a> (English, Hebrew), <a href="https://www.biblegateway.com">BibleGateway</a> (60+ languages), <a href="https://mechon-mamre.org">Mechon Mamre</a> (Hebrew, English, French), or any Bible app that includes chapter and verse numbers.</p>
+
+<div id="converter-app">
+    <p>
+        <label for="book-select"><strong>Book:</strong></label>
+        <select id="book-select">
+            <option value="Genesis">Genesis</option>
+            <option value="Exodus">Exodus</option>
+            <option value="Leviticus">Leviticus</option>
+            <option value="Numbers">Numbers</option>
+            <option value="Deuteronomy">Deuteronomy</option>
+        </select>
+    </p>
+    <p>
+        <label for="text-input"><strong>Paste your text:</strong></label><br>
+        <textarea id="text-input" rows="12" placeholder="Paste Bible text here. Each verse must start with chapter:verse, e.g.:&#10;&#10;1:1 In the beginning God created the heaven and the earth.&#10;1:2 Now the earth was unformed and void, and darkness was upon the face of the deep; and the spirit of God hovered over the face of the waters.&#10;1:3 And God said: Let there be light. And there was light.&#10;&#10;Tip: Copy full chapters from Sefaria, BibleGateway, or Mechon Mamre."></textarea>
+    </p>
+    <p><button id="convert-btn" type="button">Convert to Woven Format</button></p>
+    <div id="output"></div>
+</div>
+</section>
+
+<section class="commentary-section">
+<h2>For Developers</h2>
+
+<p>The JSON file can be loaded directly into any application. A minimal example:</p>
+
+<pre><code>fetch('https://chaver.com/torah-weave/data/torah-units.json')
+  .then(r =&gt; r.json())
+  .then(data =&gt; {
+    // data.units is an array of 86 unit objects
+    // each unit.cells_detail maps cell labels to verse ranges
+    const unit = data.units.find(u =&gt; u.serial_number === 7);
+    console.log(unit.title); // "Covenant Ceremonies"
+    console.log(unit.cells_detail); // {"1A":"15:1-15:21", "1B":"16:1-16:16", ...}
+  });</code></pre>
+
+<p>If you build something with this data &mdash; a study app, an API, a visualization &mdash; we would be glad to hear about it. <a href="/General/Contact.htm">Contact us</a>.</p>
+</section>
+
+<aside class="citation-box">
+<h3>About This Research</h3>
+<p>The Woven Torah hypothesis argues that the Torah is a single, architecturally unified composition built from 86 literary units arranged in two-dimensional weaves.</p>
+<p>This research by Moshe Kline has been published in the <em>Journal of Biblical Literature</em> (2025), the <em>Journal of Hebrew Scriptures</em> (2008), and by SBL Press (2015). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman. The methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester).</p>
+
+<h3>How to Cite</h3>
+<p>Kline, Moshe. <em>Torah Literary Units Dataset</em>, version 1.0. Chaver.com, 2026. https://chaver.com/torah-weave/data/</p>
+</aside>
+
+</article>
+
+<script>
+// Torah Units Converter
+(function() {
+    let unitsData = null;
+
+    // Load the JSON dataset
+    fetch('/torah-weave/data/torah-units.json')
+        .then(r => r.json())
+        .then(data => { unitsData = data; })
+        .catch(() => {
+            // Fallback: try relative path
+            fetch('torah-units.json')
+                .then(r => r.json())
+                .then(data => { unitsData = data; })
+                .catch(() => {
+                    document.getElementById('output').innerHTML = '<p><em>Could not load dataset. Please ensure torah-units.json is in the same directory.</em></p>';
+                });
+        });
+
+    function parseVerses(text) {
+        // Parse text into {chapter:verse} -> text map
+        const verses = {};
+        // Match patterns like "1:1 text", "1.1 text", with optional book name prefix
+        const lines = text.split('\n');
+        let currentRef = null;
+        let currentText = '';
+
+        for (const line of lines) {
+            // Try to match verse reference at start of line
+            const m = line.match(/^\s*(?:\S+\s+)?(\d+)[:\.](\d+)\s+(.*)/);
+            if (m) {
+                // Save previous verse
+                if (currentRef) {
+                    verses[currentRef] = currentText.trim();
+                }
+                currentRef = m[1] + ':' + m[2];
+                currentText = m[3];
+            } else if (currentRef) {
+                // Continuation of previous verse
+                currentText += ' ' + line.trim();
+            }
+        }
+        // Save last verse
+        if (currentRef) {
+            verses[currentRef] = currentText.trim();
+        }
+        return verses;
+    }
+
+    function parseRange(rangeStr) {
+        // Parse "15:1-15:21" or "15:1" into array of "chapter:verse" strings
+        const refs = [];
+        const parts = rangeStr.split('-');
+        if (parts.length === 1) {
+            refs.push(parts[0].trim());
+        } else {
+            const start = parts[0].trim();
+            const end = parts[1].trim();
+            const [sc, sv] = start.split(':').map(Number);
+            const [ec, ev] = end.split(':').map(Number);
+            for (let c = sc; c <= ec; c++) {
+                const startV = (c === sc) ? sv : 1;
+                const endV = (c === ec) ? ev : 200; // high number, will skip missing
+                for (let v = startV; v <= endV; v++) {
+                    refs.push(c + ':' + v);
+                }
+            }
+        }
+        return refs;
+    }
+
+    function getCellText(verseMap, rangeStr) {
+        const refs = parseRange(rangeStr);
+        const parts = [];
+        for (const ref of refs) {
+            if (verseMap[ref]) {
+                parts.push('<span class="verse-num">' + ref + '</span> ' + verseMap[ref]);
+            }
+        }
+        return parts.join(' ');
+    }
+
+    function verseToNum(ref) {
+        // Convert "15:3" to sortable number 15003
+        const p = ref.split(':').map(Number);
+        return p[0] * 1000 + (p[1] || 0);
+    }
+
+    function getFirstVerse(rangeStr) {
+        const m = rangeStr.match(/(\d+:\d+)/);
+        return m ? m[1] : '0:0';
+    }
+
+    function parseFormat(fmt) {
+        // "3x2" -> [2,2,2] (three rows of width 2)
+        // "12221" -> [1,2,2,2,1]
+        const m = fmt.match(/^(\d+)[x×](\d+)$/i);
+        if (m) {
+            const rows = parseInt(m[1]);
+            const cols = parseInt(m[2]);
+            return Array(rows).fill(cols);
+        }
+        // Irregular: each digit is a row width
+        return fmt.split('').map(Number).filter(n => n > 0);
+    }
+
+    function buildGrid(cellsDetail, format) {
+        const parsed = [];
+        for (const [label, range] of Object.entries(cellsDetail)) {
+            const m = label.match(/^(\d+)([A-Z]?)([a-z]*)$/);
+            if (!m) continue;
+            parsed.push({
+                label, range,
+                rowNum: m[1],
+                col: m[2] || '',
+                sub: m[3] || '',
+                startVerse: verseToNum(getFirstVerse(range))
+            });
+        }
+
+        const rowNumSet = [...new Set(parsed.map(p => p.rowNum))];
+        rowNumSet.sort((a, b) => {
+            const aMin = Math.min(...parsed.filter(p => p.rowNum === a).map(p => p.startVerse));
+            const bMin = Math.min(...parsed.filter(p => p.rowNum === b).map(p => p.startVerse));
+            return aMin - bMin;
+        });
+
+        // Get max columns and per-row widths from format
+        const rowWidths = parseFormat(format);
+        const maxCols = Math.max(...rowWidths);
+        const allColLetters = 'ABCDE'.slice(0, maxCols).split('');
+
+        // Map each row number to its expected width
+        const rowWidthMap = {};
+        for (let i = 0; i < rowNumSet.length && i < rowWidths.length; i++) {
+            rowWidthMap[rowNumSet[i]] = rowWidths[i];
+        }
+
+        const allRows = [];
+
+        for (const rn of rowNumSet) {
+            const rowCells = parsed.filter(p => p.rowNum === rn);
+            const subs = [...new Set(rowCells.map(p => p.sub))].sort();
+            const hasSubdivisions = subs.length > 1 || (subs.length === 1 && subs[0] !== '');
+            const thisWidth = rowWidthMap[rn] || maxCols;
+            const thisColLetters = allColLetters.slice(0, thisWidth);
+
+            const subLabels = [];
+            for (let i = 0; i < subs.length; i++) {
+                subLabels.push(hasSubdivisions ? String.fromCharCode(97 + i) : '');
+            }
+
+            if (thisWidth === 1) {
+                // Single-column row
+                for (let i = 0; i < subs.length; i++) {
+                    const cell = rowCells.find(p => p.sub === subs[i]);
+                    allRows.push({ rowNum: rn, sub: subLabels[i], type: 'single', cells: [cell || null], width: 1, maxCols });
+                }
+            } else {
+                for (let i = 0; i < subs.length; i++) {
+                    const rowArr = [];
+                    for (const col of thisColLetters) {
+                        const cell = rowCells.find(p => p.col === col && p.sub === subs[i]);
+                        rowArr.push(cell || null);
+                    }
+                    allRows.push({ rowNum: rn, sub: subLabels[i], type: 'multi', cells: rowArr, width: thisWidth, maxCols });
+                }
+            }
+        }
+
+        return { allRows, colLetters: allColLetters, maxCols };
+    }
+
+    function getCellLabel(rowNum, col, sub) {
+        if (sub) return '<b>' + rowNum + (col || '') + sub + '</b>';
+        return '<b>' + rowNum + (col || '') + '</b>';
+    }
+
+    function renderRow(row, numCols, verseMap) {
+        let html = '<tr>';
+        if (row.type === 'single') {
+            const cell = row.cells[0];
+            const lbl = getCellLabel(row.rowNum, '', row.sub);
+            html += '<td dir="auto" colspan="' + numCols + '"><p class="CellLabel">' + lbl + '</p>';
+            if (cell) {
+                html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
+            } else {
+                html += '<em>(empty)</em>';
+            }
+            html += '</td>';
+        } else {
+            for (let c = 0; c < row.cells.length; c++) {
+                const colLetter = 'ABCDE'[c] || '';
+                const cell = row.cells[c];
+                const lbl = getCellLabel(row.rowNum, colLetter, row.sub);
+                html += '<td dir="auto"><p class="CellLabel">' + lbl + '</p>';
+                if (cell) {
+                    html += getCellText(verseMap, cell.range) || '<em>(verses not found)</em>';
+                } else {
+                    html += '<em>(empty)</em>';
+                }
+                html += '</td>';
+            }
+        }
+        html += '</tr>';
+        return html;
+    }
+
+    document.getElementById('convert-btn').addEventListener('click', function() {
+        if (!unitsData) {
+            document.getElementById('output').innerHTML = '<p><em>Dataset not loaded yet. Please wait a moment and try again.</em></p>';
+            return;
+        }
+
+        const book = document.getElementById('book-select').value;
+        const text = document.getElementById('text-input').value;
+
+        if (!text.trim()) {
+            document.getElementById('output').innerHTML = '<p><em>Please paste some text first.</em></p>';
+            return;
+        }
+
+        const verseMap = parseVerses(text);
+        const verseCount = Object.keys(verseMap).length;
+
+        if (verseCount === 0) {
+            document.getElementById('output').innerHTML = '<p><em>No verses found. Make sure your text has chapter:verse numbers (e.g., 1:1, 2:3).</em></p>';
+            return;
+        }
+
+        const bookUnits = unitsData.units.filter(u => u.book === book);
+        let html = '<p>Found ' + verseCount + ' verses. Generating ' + bookUnits.length + ' units for ' + book + '.</p>';
+
+        for (const unit of bookUnits) {
+            const cells = unit.cells_detail;
+            if (!cells || Object.keys(cells).length === 0) continue;
+
+            html += '<h3>' + book + ' Unit ' + unit.unit_number + ': ' + unit.title + '</h3>';
+            html += '<p class="unit-meta">' + unit.verses + ' &middot; Format: ' + unit.format + '</p>';
+
+            const { allRows, colLetters, maxCols } = buildGrid(cells, unit.format);
+            const isIrregular = unit.irregular;
+
+            if (!isIrregular) {
+                // Regular unit: one table
+                html += '<table class="scripture-table"><thead><tr>';
+                for (const col of colLetters) {
+                    html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
+                }
+                html += '</tr></thead><tbody>';
+
+                for (const row of allRows) {
+                    html += renderRow(row, colLetters.length, verseMap);
+                }
+                html += '</tbody></table>';
+            } else {
+                // Irregular unit: separate table per structural row
+                let currentRowNum = null;
+                let currentWidth = 0;
+                let tableOpen = false;
+
+                for (const row of allRows) {
+                    if (row.rowNum !== currentRowNum) {
+                        // Close previous table
+                        if (tableOpen) html += '</tbody></table>';
+                        currentRowNum = row.rowNum;
+                        currentWidth = row.cells.length;
+                        if (row.type === 'single') currentWidth = 1;
+
+                        // Open new table for this row group
+                        html += '<table class="scripture-table"><thead><tr>';
+                        if (row.type === 'single' || currentWidth === 1) {
+                            html += '<th class="col-full"></th>';
+                        } else {
+                            const cols = 'ABCDE'.slice(0, currentWidth).split('');
+                            for (const col of cols) {
+                                html += '<th class="col-' + (col === 'A' ? 'a' : col === 'B' ? 'b' : 'c') + '">' + col + '</th>';
+                            }
+                        }
+                        html += '</tr></thead><tbody>';
+                        tableOpen = true;
+                    }
+                    html += renderRow(row, currentWidth, verseMap);
+                }
+                if (tableOpen) html += '</tbody></table>';
+            }
+        }
+
+        document.getElementById('output').innerHTML = html;
+    });
+})();
+</script>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

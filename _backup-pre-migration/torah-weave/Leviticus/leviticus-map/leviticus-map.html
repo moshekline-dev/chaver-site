@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+    <title>Leviticus Book Map: 22 Units in Concentric Rings | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <meta property="og:title" content="Leviticus Book Map: 22 Units in Concentric Rings | Torah Weave">
+    <meta property="og:description" content="The complete structural map of Leviticus: 22 literary units arranged in concentric rings mirroring the tabernacle, with Leviticus 19 at the center.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Chiastic Structure of Leviticus",
+        "author": {
+            "@type": "Person",
+            "name": "Moshe Kline",
+            "url": "https://chaver.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Torah Weave Project",
+            "url": "https://chaver.com"
+        }
+    }
+    </script>
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+        <div class="torah-map-container leviticus-map">
+<h1 class="torah-map-title">Leviticus Book Map</h1>
+<p class="torah-map-intro">Leviticus, the third book of the Torah, reveals itself as an intricate literary tapestry, with patterns that become visible when we understand its woven structure. The Leviticus Book Map displays these patterns, organizing the book's 22 units into a coherent matrix that highlights thematic and structural relationships.</p>
+<div class="mobile-notice">
+<svg height="16" width="16"><line></line><line></line><line></line><line></line></svg>
+        Swipe left/right to explore the complete map
+    </div>
+<div class="matrix-wrapper">
+<table class="matrix-table">
+<thead>
+<tr>
+<th></th>
+<th>A<br/><span class="theme-label">Outer Ring (O₁)</span></th>
+<th>B<br/><span class="theme-label">Middle Ring (M₁)</span></th>
+<th>C<br/><span class="theme-label">Impurity Units</span></th>
+<th>D<br/><span class="theme-label">Inner Ring (I₁)</span></th>
+<th>E<br/><span class="theme-label">Focal Unit</span></th>
+<th>F<br/><span class="theme-label">Inner Ring (I₂)</span></th>
+<th>G<br/><span class="theme-label">Middle Ring (M₂)</span></th>
+<th>H<br/><span class="theme-label">Outer Ring (O₂)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="row-number">1</div>
+<div>God-oriented</div>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1">
+<div class="unit-title">Unit 1</div>
+<div>1-3</div>
+<div>Three Spontaneously Motivated Private Sacrifices. "For the Lord" appears 21 times.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4">
+<div class="unit-title">Unit 4</div>
+<div>8-10</div>
+<div>Inauguration of the Cult and Aftermath. Deaths of Nadab and Abihu.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-7/leviticus-unit-7">
+<div class="unit-title">Unit 7</div>
+<div>13:1-46</div>
+<div>Scale Disease diagnosis and isolation procedures.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10">
+<div class="unit-title">Unit 10</div>
+<div>16</div>
+<div>Day of Purgation. Contains death warning: "Lest he die."</div>
+</a>
+</td>
+<td></td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-16/leviticus-unit-16">
+<div class="unit-title">Unit 16</div>
+<div>22:1-25</div>
+<div>Sanctified Objects. Contains death warning: "And they die thereby."</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-19/leviticus-unit-19">
+<div class="unit-title">Unit 19</div>
+<div>24</div>
+<div>Tabernacle Oil and Bread. The Case of Blasphemy. Death for blasphemy.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22">
+<div class="unit-title">Unit 22</div>
+<div>27</div>
+<div>Consecrations and their Redemption. "For the Lord" appears 16 times.</div>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<div class="row-number">2</div>
+<div>Between<br/>God and People</div>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2">
+<div class="unit-title">Unit 2</div>
+<div>4-5</div>
+<div>Sacrifices Required for Expiation. Individual guilt and purification offerings.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-5/leviticus-unit-5">
+<div class="unit-title">Unit 5</div>
+<div>11</div>
+<div>Diet Laws. Pure and impure animals for food, ritual impurity from animals.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-8/leviticus-unit-8">
+<div class="unit-title">Unit 8</div>
+<div>13:47-14:57</div>
+<div>Purification procedures for fabrics, people, and buildings.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-11/leviticus-unit-11">
+<div class="unit-title">Unit 11</div>
+<div>17</div>
+<div>The Slaughter and Consumption of Meat. Blood prohibition.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13">
+<div class="unit-title">Unit 13</div>
+<div>19</div>
+<div>Holiness. "You shall be holy for I the Lord your God am holy."</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-15/leviticus-unit-15">
+<div class="unit-title">Unit 15</div>
+<div>21</div>
+<div>Instructions for the Priests. Contains many familial terms.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-18/leviticus-unit-18">
+<div class="unit-title">Unit 18</div>
+<div>23</div>
+<div>The Holiday Calendar. "Seven days...on the eighth day."</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-21/leviticus-unit-21">
+<div class="unit-title">Unit 21</div>
+<div>26</div>
+<div>Blessings, Curses and the Recall of the Covenant. National guilt.</div>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<div class="row-number">3</div>
+<div>People-oriented</div>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3">
+<div class="unit-title">Unit 3</div>
+<div>6-7</div>
+<div>Administrative Order. Priestly prebends, divine gifts to individuals.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-6/leviticus-unit-6">
+<div class="unit-title">Unit 6</div>
+<div>12</div>
+<div>Childbirth. "Seven days...on the eighth day."</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-9/leviticus-unit-9">
+<div class="unit-title">Unit 9</div>
+<div>15</div>
+<div>Genital Discharges. Impurity from male and female genital discharges.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-12/leviticus-unit-12">
+<div class="unit-title">Unit 12</div>
+<div>18</div>
+<div>Illicit Sexual Practices. Contains over 30 familial terms.</div>
+</a>
+</td>
+<td></td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-14/leviticus-unit-14">
+<div class="unit-title">Unit 14</div>
+<div>20</div>
+<div>Penalties for Sexual Offenses. Contains many familial terms.</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-17/leviticus-unit-17">
+<div class="unit-title">Unit 17</div>
+<div>22:26-33</div>
+<div>Animal Birth. "Seven days...from the eighth day."</div>
+</a>
+</td>
+<td>
+<a href="/torah-weave/Leviticus/leviticus-unit-20/leviticus-unit-20">
+<div class="unit-title">Unit 20</div>
+<div>25</div>
+<div>Jubilee. "For the land is mine. For they are my slaves."</div>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="torah-book-description">
+<h2 class="main-heading">The Chiastic Structure of Leviticus</h2>
+<p>The Leviticus Book Map reveals a sophisticated chiastic structure centered around Unit 13 (Chapter 19). This arrangement mirrors the concentric design of the Tabernacle itself.</p>
+<h3>Concentric Rings</h3>
+<p>The 22 units of Leviticus are organized into three concentric rings around the focal Unit 13:</p>
+<ul>
+<li><strong>Outer Ring (Columns A &amp; H):</strong> Units 1-3 and 20-22 emphasize places of divine revelation</li>
+<li><strong>Middle Ring (Columns B &amp; G):</strong> Units 4-6 and 17-19 feature the "seven days...eighth day" pattern</li>
+<li><strong>Inner Ring (Columns D &amp; F):</strong> Units 10-12 and 14-16 contain extensive family terminology</li>
+<li><strong>Impurity Units (Column C):</strong> Units 7-9 stand outside the symmetrical structure, forming a "screen"</li>
+<li><strong>Focal Unit (Column E):</strong> Unit 13 (Chapter 19) contains the core command: "You shall be holy for I the Lord your God am holy"</li>
+</ul>
+<h3>Hierarchical Organization</h3>
+<p>Each row represents a distinctive hierarchical orientation:</p>
+<ul>
+<li><strong>Row 1:</strong> God-oriented units focus on divine requirements</li>
+<li><strong>Row 2:</strong> Mediating units address the relationship between God and people</li>
+<li><strong>Row 3:</strong> People-oriented units deal with human relationships and responsibilities</li>
+</ul>
+<p>This organizational structure reveals that Leviticus is not a random collection of laws but a carefully crafted literary composition. The chiastic pattern functions as a journey into and out of the sacred center, mirroring the High Priest's movement on the Day of Atonement. Unit 13 (Chapter 19) serves as the theological heart, containing the essence of the book: the call to imitate God's holiness.</p>
+<a href="#">↑ Back to Top</a>
+</div>
+</div>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

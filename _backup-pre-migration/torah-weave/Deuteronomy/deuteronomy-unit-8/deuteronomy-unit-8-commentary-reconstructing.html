@@ -1,0 +1,768 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>Reconstructing the Beautiful Weave: The 10×3 Matrix of Deuteronomy's Laws | Torah Weave</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<article class="commentary-content" itemscope itemtype="https://schema.org/ScholarlyArticle">
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb">
+<a href="/torah-weave/">Torah Weave</a> ›
+<a href="/torah-weave/Deuteronomy/">Deuteronomy</a> ›
+<a href="/torah-weave/Deuteronomy/deuteronomy-unit-8/">Unit 8</a> ›
+<strong>Commentary: Part I</strong>
+</nav>
+
+<!-- Series Navigation (Top) -->
+<nav class="unit-navigation">
+<div class="nav-breadcrumb">
+<strong>Deuteronomy Unit 8 Commentary</strong> — Part I
+</div>
+<div class="nav-arrows">
+<a href="deuteronomy-unit-8-commentary-overview">← Overview</a>
+<a href="deuteronomy-unit-8-commentary-five-pairs">Part II: Five Pairs →</a>
+</div>
+</nav>
+
+<!-- Header -->
+<header class="commentary-header">
+<h1 itemprop="headline">Part I: Reconstructing the Beautiful Weave</h1>
+<p class="subtitle" itemprop="alternativeHeadline">From Surface Chaos to Hidden Architecture</p>
+</header>
+
+<!-- Main Content -->
+<main itemprop="articleBody">
+
+<!-- From Surface Chaos to Hidden Architecture -->
+<section class="commentary-section" id="surface-chaos">
+<h2>From Surface Chaos to Hidden Architecture</h2>
+
+<p>When we encounter Deuteronomy 21:10–25:4 in its linear form, we face what appears to be a randomly assembled collection of legal material. A law about captured women is followed by inheritance regulations, then cross-dressing prohibitions, bird nest protections, parapet requirements, mixed species restrictions, divorce procedures, rape cases, exclusion rules, debt regulations, and agricultural prescriptions. No apparent organizing principle connects these diverse topics, and scholars have long struggled to explain why these particular laws were grouped together.</p>
+
+<p>But this apparent chaos is precisely the point. The Beautiful Weave was deliberately linearized to create maximum surface incoherence while preserving maximum structural information. When we reconstruct these fifty laws in their original tabular form, a sophisticated architecture emerges that demonstrates the most advanced compositional technique in the entire Torah.</p>
+</section>
+
+<!-- The Column-wise Linearization Strategy -->
+<section class="commentary-section" id="column-linearization">
+<h2>The Column-wise Linearization Strategy</h2>
+
+<p>The key to understanding the Beautiful Weave lies in recognizing how it was deconstructed. Unlike all other Torah units that were linearized by reading across their horizontal rows (weft threads), this collection was uniquely linearized by reading straight down its vertical columns (warp threads). This creates an entirely different reading experience.</p>
+</section>
+
+<!-- The 10×3 Matrix -->
+<section class="commentary-section" id="matrix">
+<h2>The 10×3 Matrix: Thirty Segments in Perfect Order</h2>
+
+<p>The reconstruction reveals that the Beautiful Weave consists of thirty distinct segments arranged in a 10×3 matrix. The three columns (warp threads) correspond to three conceptual domains:</p>
+
+<ul>
+<li><strong>Left Column (L):</strong> Deuteronomy 21:10–22:12 (Self)</li>
+<li><strong>Middle Column (M):</strong> Deuteronomy 22:13–23:26 (Self and Other)</li>
+<li><strong>Right Column (R):</strong> Deuteronomy 24:1–25:4 (Other)</li>
+</ul>
+
+<p>Notice how each column begins with variations on taking a wife—the beautiful captive "taken to wife" (21:11), the bride whose husband "takes a wife" (22:13), and the woman in "when a man takes a wife" (24:1). These parallel openings mark three distinct columns rather than one continuous sequence.</p>
+
+<p>Each column contains exactly ten segments, creating thirty segments total. These thirty segments are further organized into five pairs of rows, creating a sophisticated dual architecture that operates both horizontally (across the pairs) and vertically (down the columns).</p>
+
+<p>When we arrange the laws in their original tabular form, patterns emerge that are invisible in linear reading. The complete structure reveals the sophisticated architecture:</p>
+
+<!-- Table 1: Complete Beautiful Weave Structure -->
+<h3>Table 1: The Complete Beautiful Weave Structure</h3>
+
+<table class="matrix-table">
+<thead>
+<tr>
+<th>Pair</th>
+<th>Row</th>
+<th class="col-left">L (Left)</th>
+<th class="col-middle">M (Middle)</th>
+<th class="col-right">R (Right)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>1</strong></td>
+<td>1A</td>
+<td>[1] 21:10–14<br>Beautiful captive</td>
+<td>[11] 22:13–21<br>Slandered bride</td>
+<td>[21] 24:1–4<br>Divorce</td>
+</tr>
+<tr>
+<td>1B</td>
+<td>[2] 21:15–17<br>Inheritance</td>
+<td>[12] 22:22–23:1<br>Adultery</td>
+<td>[22] 24:5–6<br>Newlywed</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>2</strong></td>
+<td>2A</td>
+<td>[3] 21:18–21<br>Rebellious son</td>
+<td>[13] 23:2–9<br>Excluded from community</td>
+<td>[23] 24:7<br>Kidnapping</td>
+</tr>
+<tr>
+<td>2B</td>
+<td>[4] 21:22–23<br>Hanging</td>
+<td>[14] 23:10–15<br>Camp purity</td>
+<td>[24] 24:8–9<br>Leprosy</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>3</strong></td>
+<td>3A</td>
+<td>[5] 22:1–3<br>Lost property</td>
+<td>[15] 23:16–17<br>Escaped slave</td>
+<td>[25] 24:10–13<br>Pledges</td>
+</tr>
+<tr>
+<td>3B</td>
+<td>[6] 22:4<br>Fallen animal</td>
+<td>[16] 23:18–19<br>Cult prostitution</td>
+<td>[26] 24:14–15<br>Wages</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>4</strong></td>
+<td>4A</td>
+<td>[7] 22:5<br>Cross-dressing</td>
+<td>[17] 23:20–21<br>Interest</td>
+<td>[27] 24:16<br>Individual responsibility</td>
+</tr>
+<tr>
+<td>4B</td>
+<td>[8] 22:6–7<br>Bird's nest</td>
+<td>[18] 23:22–24<br>Vows</td>
+<td>[28] 24:17–18<br>Stranger/orphan/widow</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>5</strong></td>
+<td>5A</td>
+<td>[9] 22:8–9<br>Parapet/vineyard</td>
+<td>[19] 23:25<br>Neighbor's vineyard</td>
+<td>[29] 24:19<br>Forgotten sheaf</td>
+</tr>
+<tr>
+<td>5B</td>
+<td>[10] 22:10–12<br>Mixing/tassels</td>
+<td>[20] 23:26<br>Neighbor's grain</td>
+<td>[30] 24:20–25:4<br>Gleaning/lashes/ox</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- The 40 Parshiyot -->
+<section class="commentary-section" id="parshiyot">
+<h2>The 40 Parshiyot: Structural Evidence and Visual Architecture</h2>
+
+<h3>Understanding Parshiyot</h3>
+
+<p>In the Torah scroll, divisions between sections are marked by spaces, creating units called parshiyot (singular: parshah). These come in two types: petuchah (open—begins new line) and setumah (closed—space on same line). These divisions are so ancient and sacred that any error invalidates an entire Torah scroll. They represent the oldest layer of textual interpretation we possess.</p>
+
+<p>The Beautiful Weave contains exactly 40 parshiyot—corresponding to the 40 lashes mentioned in segment 5RB. But their distribution creates a stunning visual pattern when mapped onto our 10×3 matrix.</p>
+
+<h3>Distribution Pattern</h3>
+
+<table class="matrix-table">
+<thead>
+<tr>
+<th>Pair</th>
+<th>Row</th>
+<th class="col-left">L (Left)</th>
+<th class="col-middle">M (Middle)</th>
+<th class="col-right">R (Right)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>1</strong></td>
+<td>A</td>
+<td>1 parshah</td>
+<td>2 parshiyot</td>
+<td>1 parshah</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1 parshah</td>
+<td>5 parshiyot</td>
+<td>1 parshah</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>2</strong></td>
+<td>A</td>
+<td>1 parshah</td>
+<td>4 parshiyot</td>
+<td>1 parshah</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>3</strong></td>
+<td>A</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>4</strong></td>
+<td>A</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>5</strong></td>
+<td>A</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+<td>1 parshah</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2 parshiyot</td>
+<td>1 parshah</td>
+<td>2 parshiyot</td>
+</tr>
+</tbody>
+</table>
+
+<h3>The Visual Pattern Revealed</h3>
+
+<h4>Pattern 1: The Concentrated Upper Formation</h4>
+
+<p>The top-center segments (1MA, 1MB, 2MA) contain 11 parshiyot where we'd expect only 3:</p>
+
+<ul>
+<li><strong>1MA (2 parshiyot):</strong> The slandered bride case—virginity verification</li>
+<li><strong>1MB (5 parshiyot):</strong> Multiple sexual transgression scenarios—the densest concentration in the entire weave</li>
+<li><strong>2MA (4 parshiyot):</strong> Categories of exclusion from the assembly, beginning with "He that is crushed or maimed in his privy parts" (<span lang="he">פצוע דכא וכרות שפכה</span>)</li>
+</ul>
+
+<p>This creates an intense vertical concentration in the middle column at the top of the matrix—a pillar of divisions. The explicit reference to damaged male genitals at 2MA—precisely where this concentrated column ends—cannot be coincidental. The Masoretic tradition has marked this concentrated vertical formation at the exact point where the text speaks of the male principle being "cut off."</p>
+
+<h4>Pattern 2: The Distributed Lower Formation</h4>
+
+<p>The bottom corners (5LB, 5RB) contain 4 parshiyot where we'd expect only 2:</p>
+
+<ul>
+<li><strong>5LB (2 parshiyot):</strong> Mixed fabrics prohibition and tassels law</li>
+<li><strong>5RB (2 parshiyot):</strong> Gleaning laws, forty lashes, unmuzzled ox</li>
+</ul>
+
+<p>This creates a receptive, upward-opening pattern at the base of the structure. The distribution to the corners rather than concentration at center represents the feminine principle of reception and dispersion.</p>
+
+<h3>The Complete Architecture</h3>
+
+<p>When visualized on the matrix, the 40 parshiyot create:</p>
+
+<ul>
+<li>A concentrated vertical column at the top center (segments 1M–2M)</li>
+<li>A distributed horizontal spread at the bottom corners (segments 5LB–5RB)</li>
+<li>A regular pattern throughout the middle sections (one parshah per segment)</li>
+<li>The number 40—the number of formation (40 days of flood, 40 years in wilderness, 40 days on Sinai)</li>
+</ul>
+
+<p>The Masoretic guardians who preserved these division points with such fierce exactitude were preserving more than punctuation. They were maintaining a visual architecture that encodes the union of masculine and feminine principles within the very structure of the text.</p>
+
+<p>This is why segment 2MA opens with damaged male genitals—it marks where the masculine pattern is "cut off." This is why the forty lashes appear in 5RB—they correspond to the forty divisions that create this sacred architecture. The parshiyot are not random breaks but deliberate markers creating a three-dimensional structure visible only when the text is restored to its tabular form.</p>
+
+<h3>Confirmation Through Tradition</h3>
+
+<p>The Zohar speaks of Torah as the body of the Divine, with masculine and feminine aspects united. Sefer Yetzirah describes creation through the union of these principles. The Beautiful Weave demonstrates this isn't metaphor but literal structural reality—the Masoretic tradition preserved a visual representation of divine union in the very division points of the text.</p>
+
+<p>The 40 parshiyot thus serve two key functions:</p>
+
+<ul>
+<li>Preserving the original tabular structure through strategic division</li>
+<li>Creating distinctive distribution patterns (concentrated at top center, distributed at bottom corners) that mark specific textual locations</li>
+</ul>
+
+<p>The number 40 itself carries significance in biblical literature (40 days of flood, 40 years in wilderness, 40 days on Sinai), and the 40 lashes law happens to appear in segment 5RB. Whether these are connected or coincidental remains an open question.</p>
+</section>
+
+<!-- Continue Reading -->
+<section class="commentary-section">
+<div class="structural-note">
+<h3>Continue Reading</h3>
+<p>In <a href="deuteronomy-unit-8-commentary-five-pairs"><strong>Part II: The Five Pairs</strong></a>, we analyze each pair in detail, examining the warp (L-M-R column dynamics), weft (A-B row progression), and cascading connections that reveal the weave's thematic architecture.</p>
+</div>
+</section>
+
+</main>
+
+<!-- Series Navigation (Bottom) -->
+<nav class="unit-navigation">
+<div class="nav-breadcrumb">
+<a href="/torah-weave/">Torah Weave</a> ›
+<a href="/torah-weave/Deuteronomy/">Deuteronomy</a> ›
+<a href="/torah-weave/Deuteronomy/deuteronomy-unit-8/">Unit 8</a> ›
+Commentary
+</div>
+<div class="nav-arrows">
+<a href="deuteronomy-unit-8-commentary-overview">← Overview</a>
+<a href="deuteronomy-unit-8-commentary-five-pairs">Part II: Five Pairs →</a>
+</div>
+</nav>
+
+<!-- Citation Box -->
+<aside class="citation-box">
+<h3>How to Cite</h3>
+<p>Kline, Moshe. "The Order of Deuteronomy's Laws: Evidence for Unified Torah Authorship." <em>Torah Weave</em>, https://chaver.com/torah-weave/Deuteronomy/deuteronomy-unit-8/. Accessed [date].</p>
+</aside>
+
+</article>
+        
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>

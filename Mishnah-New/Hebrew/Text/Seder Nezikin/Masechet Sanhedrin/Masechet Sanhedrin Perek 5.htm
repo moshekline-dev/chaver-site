@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- #BeginTemplate "../../../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<!-- rendered-from: _templates/Academic-Content-HE.html @ 2026-05-13T11:17:24Z -->
+<html lang="he" dir="rtl">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
@@ -13,13 +13,13 @@
 <!-- rest of head content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     
-    <!-- #BeginEditable "doctitle" -->
     
     <title>Structured Mishnah: Sanhedrin 5 | מסכת סנהדרין</title>
-    <!-- #EndEditable -->
     
-    <!-- #BeginEditable "meta" -->
+
+    
     <meta name="description" content="משנה מסכת סנהדרין פרק 5 בפריסה מבנית — הטקסט המלא עם הדגשת המבנה הספרותי הדו-ממדי">
 
     <!-- Open Graph -->
@@ -54,291 +54,104 @@
           ]
     }
     </script>
-    <!-- #EndEditable -->
     
+
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+
     
-    <!-- #BeginEditable "additional-styles" -->
     <!-- Page-specific style overrides can go here -->
-    <!-- #EndEditable -->
     
+
     <style type="text/css">
 
     /* ==========================================
        CRITICAL DWT LAYOUT STYLES ONLY
        Everything else comes from main.css
        ========================================== */
-    
+
     /* Reset */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    
-    /* ==========================================
-       HEADER LAYOUT STRUCTURE
-       ========================================== */
-    
-    header.site-header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    
-    /* Navigation Container */
-    .main-nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0.3rem 20px;
-    }
-    
-    /* Mobile Menu Toggle */
-    .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-        position: absolute;
-        right: 20px;
-        top: 0.5rem;
-    }
-    
-    /* Navigation List */
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-    }
-    
-    nav a {
-        text-decoration: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    
-    /* ==========================================
-       DROPDOWN MENU - NATIVE details/summary
-       ========================================== */
-    
-    .has-dropdown {
-        position: relative;
-    }
-    
-    .has-dropdown details {
-        display: inline;
-    }
-    
-    .has-dropdown summary {
-        cursor: pointer;
-        list-style: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    
-    .has-dropdown summary::-webkit-details-marker {
-        display: none;
-    }
-    
-    .has-dropdown summary::after {
-        content: ' \25BE';
-        font-size: 0.7em;
-    }
-    
-    .dropdown {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        min-width: 200px;
-        padding: 0.4rem 0;
-        border-radius: 4px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        background: #fff;
-        z-index: 1001;
-        gap: 0;
-    }
-    
-    .dropdown li {
-        width: 100%;
-    }
-    
-    .dropdown a {
-        display: block;
-        padding: 0.5rem 1rem;
-        white-space: nowrap;
-        border-radius: 0;
-    }
-    
+
     /* ==========================================
        MAIN CONTENT AREA LAYOUT
        ========================================== */
-    
+
     main.content-wrapper {
         max-width: 1200px;
         margin: 0 auto;
         padding: 40px 20px;
         min-height: 500px;
     }
-    
-    /* ==========================================
-       FOOTER LAYOUT STRUCTURE
-       ========================================== */
-    
-    footer.site-footer {
-        margin-top: 80px;
-        padding: 40px 20px 20px;
-    }
-    
+
     .footer-container {
         max-width: 1200px;
         margin: 0 auto;
     }
-    
+
     .footer-content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 40px;
         margin-bottom: 30px;
     }
-    
+
     .footer-section ul {
         list-style: none;
         padding: 0;
     }
-    
+
     .footer-bottom {
         text-align: center;
         padding-top: 20px;
     }
-    
+
     /* ==========================================
        RESPONSIVE LAYOUT BREAKPOINTS
        ========================================== */
-    
+
     @media (max-width: 768px) {
-        /* Mobile header adjustments */
-        header.site-header {
-            position: relative;
-        }
-        
-        .menu-toggle {
-            display: block;
-        }
-        
-        nav ul {
-            display: none;
-            flex-direction: column;
-            gap: 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
-        
-        nav ul.show {
-            display: flex;
-        }
-        
-        nav li {
-            width: 100%;
-        }
-        
-        nav a, .has-dropdown summary {
-            display: block;
-            padding: 1rem;
-        }
-        
-        /* Mobile dropdown: no flyout, just indent */
-        .dropdown {
-            position: static;
-            box-shadow: none;
-            min-width: 0;
-            padding: 0;
-        }
-        
-        .dropdown a {
-            padding-left: 2rem;
-            font-size: 0.95em;
-        }
-        
+
         /* Landscape phones - hamburger menu */
         @media (max-height: 500px) and (orientation: landscape) {
-            .menu-toggle {
-                display: block;
-            }
-            
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 0;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                width: 100%;
-                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav li {
-                width: 100%;
-            }
-            
-            nav a, .has-dropdown summary {
-                display: block;
-                padding: 0.75rem 1rem;
-                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
-            }
-            
+
             main.content-wrapper {
                 padding: 15px 10px;
             }
         }
-        
+
         /* Content adjustments */
         main.content-wrapper {
             padding: 30px 15px;
         }
-        
+
         /* Footer adjustments */
         .footer-content {
             grid-template-columns: 1fr;
             gap: 30px;
         }
     }
-    
+
     @media (max-width: 480px) {
         main.content-wrapper {
             padding: 20px 15px;
         }
     }
-    
+
     /* ==========================================
        PRINT LAYOUT
        ========================================== */
-    
+
     @media print {
         header.site-header,
-        footer.site-footer,
-        .menu-toggle {
+        footer.site-footer {
             display: none;
         }
-        
+
         main.content-wrapper {
             padding: 0;
             max-width: 100%;
@@ -351,43 +164,39 @@
          SITE HEADER - FIXED ACROSS ALL PAGES
          ========================================== -->
     <header class="site-header">
-        <nav class="main-nav">
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
-           <ul id="nav-menu">
-    <li><a href="/">Home</a></li>
-    <li class="has-dropdown">
-        <details>
-            <summary>Torah</summary>
-            <ul class="dropdown">
-                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                <li><a href="/torah-weave/commentary">Commentary</a></li>
-                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+        <div class="nav-row">
+            <div class="nav-brand">&#1495;&#1489;&#1512;</div>
+            <button class="nav-toggle" aria-label="&#1508;&#1514;&#1495;/&#1505;&#1490;&#1493;&#1512; &#1514;&#1508;&#1512;&#1497;&#1496;" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/hebrew%20index">&#1491;&#1507; &#1492;&#1489;&#1497;&#1514;</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1514;&#1493;&#1512;&#1492;</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">&#1513;&#1506;&#1512; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-full-torah-map/">&#1502;&#1508;&#1514; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1502;&#1513;&#1504;&#1492;</button>
+                    <ul class="submenu">
+                        <li><a href="/mishnah/">&#1513;&#1506;&#1512; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Articles/MAVO.htm">&#1502;&#1489;&#1493;&#1488;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">PDF &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">&#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">&#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                    </ul>
+                </li>
+                <li><a href="/General/Contact.htm">&#1510;&#1493;&#1512; &#1511;&#1513;&#1512;</a></li>
+                <li><a href="/">English</a></li>
             </ul>
-        </details>
-    </li>
-    <li class="has-dropdown">
-        <details>
-            <summary>Insights</summary>
-            <ul class="dropdown">
-            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-            </ul>
-        </details>
-    </li>
-    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
-    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-    <li><a href="/torah-weave/data/">Data</a></li>
-    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
-    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
-</ul>        </nav>
+        </div>
     </header>
     <!-- SITE BANNER -->
 <div id="site-banner"></div>
@@ -395,14 +204,14 @@
          MAIN CONTENT AREA - EDITABLE REGION
          ========================================== -->
     <main class="content-wrapper">
-        <!-- #BeginEditable "content" -->
+        
         
 <p style="text-align:center; margin:0.5em 0 1em; font-size:0.9em;"><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">⬇️ Download Complete Structured Mishnah (PDF)</a> · <a href="/Mishnah/TheMishnah.htm">📚 All Chapters</a></p>
 <div align="left" dir="ltr"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="33%"><p class="Perek" dir="rtl">פרק ה<br/></p></td><td valign="top" width="33%"><p class="logo" dir="rtl">המשנה כדרכה</p></td><td valign="top" width="33%"><p class="Mesechet" dir="rtl">מסכת סנהדרין</p></td></tr><tr><td valign="top" width="33%"><p dir="rtl"><span class="Subunit">1ג<br/>A </span>(ג) אחד אומר בשנים בחדש<br/>ואחד אומר בשלשה בחדש<br/>עדותן קימת<br/>שזה יודע בעבורו שלחדש<br/>וזה אינו יודע בעבורו שלחדש<br/>אחד אומר בשלשה ואחד אומר בחמשה<br/>עדותן בטלה<span class="Subunit"><br/>B </span>אחד אומר בשתי שעות<br/>ואחד אומר בשלש שעות<br/>עדותן קימת<br/>אחד אומר בשלש ואחד אומר בחמש<br/>עדותן בטלה<br/>רבי יהודה אומר קימת<br/>אחד אומר בחמש ואחד אומר בשבע<br/>עדותן בטלה<br/>שבחמש חמה במזרח ובשבע חמה במערב</p></td><td valign="top" width="33%"><p dir="rtl"><span class="Subunit">1ב<br/>A </span>ומה בין חקירות לבדיקות<br/>חקירות אחד אומר איני יודע<br/>עדותן בטלה<br/>בדיקות אחד אומר איני יודע<br/>ואפלו שנים אומרים אין אנו יודעין<br/>עדותן קימת<span class="Subunit"><br/>B </span>אחד חקירות ואחד בדיקות<br/>בזמן שמכחישין זה את זה<br/>עדותן בטלה</p></td><td valign="top" width="33%"><p dir="rtl"><span class="Subunit">1א<br/>A </span>(א) היו בודקין אותן בשבע חקירות<br/>באיזה שבוע באיזו שנה<br/>באיזה חדש בכמה בחדש<br/>באיזה יום באיזו שעה<br/>באיזה מקום<br/>רבי יוסי אומר<br/>באיזה יום באיזו שעה<br/>באיזה מקום<br/>מכירין אתם אותו<br/>התריתם בו<br/>העובד עבודה זרה<br/>את מי עבד ובמה עבד<span class="Subunit"><br/>B </span>(ב) כל המרבה בבדיקות<br/>הרי זה משבח<br/>מעשה ובדק בן זכאי בעקצי תאנים</p></td></tr><tr><td valign="top" width="33%"><p dir="rtl"><span class="Subunit">2ג<br/>A </span>שנים עשר מזכין ואחד עשר מחיבין<br/>זכאי<span class="Subunit"><br/>B </span>שנים עשר מחיבין ואחד עשר מזכין<br/>ואפלו אחד עשר מזכין ואחד עשר מחיבין<br/>ואחד אומר איני יודע<br/>ואפלו עשרים ושנים מזכין או מחיבין<br/>ואחד אומר איני יודע<br/>יוסיפו הדינין<span class="Subunit"><br/>C </span>עד כמה מוסיפין<br/>שנים שנים עד שבעים ואחד<span class="Subunit"><br/>D </span>שלשים וששה מזכין<br/>ושלשים וחמשה מחיבין<br/>זכאי<span class="Subunit"><br/>E </span>ושלשים וששה מחיבין<br/>ושלשים וחמשה מזכין<br/>דנין אלו כנגד אלו<br/>עד שיראה אחד מן המחיבין דברי המזכין</p></td><td valign="top" width="33%"><p dir="rtl"><span class="Subunit">2ב<br/>A </span>היו מזדוגין זוגות זוגות<br/>וממעטין במאכל<br/>ולא היו שותין יין כל היום<br/>ונושאין ונותנין כל הלילה<br/>ולמחרת משכימין ובאין לבית דין<span class="Subunit"><br/>B </span>המזכה אומר<br/>אני מזכה ומזכה אני במקומי<br/>והמחיב אומר<br/>אני מחיב ומחיב אני במקומי<span class="Subunit"><br/>C </span>המלמד חובה מלמד זכות<br/>אבל המלמד זכות<br/>אינו יכול לחזור וללמד חובה<span class="Subunit"><br/>D </span>טעו בדבר<br/>שני סופרי הדינין מזכירין אותן<span class="Subunit"><br/>E </span>אם מצאו לו זכות פטרוהו<br/>ואם לאו עומדים למנין</p></td><td valign="top" width="33%"><p dir="rtl"><span class="Subunit">2א<br/>A </span>(ד) ואחר כך מכניסין את השני<br/>ובודקין אותו<br/>אם נמצאו דבריהם מכונין פותחין בזכות<span class="Subunit"><br/>B </span>אמר אחד מן העדים<br/>יש לי ללמד עליו זכות<br/>או אחד מן התלמידים<br/>יש לי ללמד עליו חובה<br/>משתקין אותו<span class="Subunit"><br/>C </span>אמר אחד מן התלמידים<br/>יש לי ללמד עליו זכות<br/>מעלין אותו ומושיבין אותו ביניהן<br/>ולא היה יורד משם כל היום כלו<span class="Subunit"><br/>D </span>אם יש ממש בדבריו שומעין לו<br/>ואפלו הוא אומר<br/>יש לי ללמד על עצמי זכות<br/>שומעין לו<br/>ובלבד שיש ממש בדבריו<span class="Subunit"><br/>E </span>(ה) אם מצאו לו זכות פטרוהו<br/>ואם לאו מעבירין דינו למחר</p></td></tr></table></div>
         
-        <!-- #EndEditable -->
+        
     </main>
-    
+
     <!-- ==========================================
          SITE FOOTER - RICH 4-SECTION VERSION
          ========================================== -->
@@ -410,72 +219,103 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Featured Articles</h4>
+                    <h3>&#1502;&#1508;&#1493;&#1514; &#1514;&#1493;&#1512;&#1492;</h3>
                     <ul>
-                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
-                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
-                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
-                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
-                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-genesis/">&#1489;&#1512;&#1488;&#1513;&#1497;&#1514;</a></li>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-exodus/">&#1513;&#1502;&#1493;&#1514;</a></li>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-leviticus/">&#1493;&#1497;&#1511;&#1512;&#1488;</a></li>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-numbers/">&#1489;&#1502;&#1491;&#1489;&#1512;</a></li>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-deuteronomy/">&#1491;&#1489;&#1512;&#1497;&#1501;</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Full Texts</h4>
+                    <h3>&#1492;&#1502;&#1513;&#1504;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</h3>
                     <ul>
-                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
-                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
-                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                        <li><a href="/mishnah/">&#1508;&#1493;&#1512;&#1496;&#1500; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">PDF &#1513;&#1500; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h3>&#1502;&#1495;&#1511;&#1512;</h3>
                     <ul>
-                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
-                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
-                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
-                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
-                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                        <li><a href="https://independent.academia.edu/MosheKline" target="_blank">Academia.edu</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology</a></li>
+                        <li><a href="/woven-torah/research-articles/">&#1502;&#1488;&#1502;&#1512;&#1497;&#1501;</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>About Moshe Kline</h4>
-                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
-                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
-                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                    <h3>&#1511;&#1513;&#1512;</h3>
+                    <ul>
+                        <li><a href="/General/Contact.htm">&#1510;&#1493;&#1512; &#1511;&#1513;&#1512;</a></li>
+                        <li><a href="https://independent.academia.edu/MosheKline" target="_blank">Academia.edu (top 1%)</a></li>
+                        <li><a href="/">English Site</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+                <p>&copy; 2026 Chaver.com. The Woven Texts Project.</p>
             </div>
         </div>
     </footer>
-    
+
     <!-- ==========================================
-         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         SITE NAV SCRIPT
          ========================================== -->
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('nav-menu');
-            menu.classList.toggle('show');
-        }
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            var menu = document.getElementById('nav-menu');
-            var toggle = document.querySelector('.menu-toggle');
-            
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove('show');
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var menu = document.querySelector('.nav-menu');
+
+            // Hamburger toggle
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('is-open-menu');
+                    toggle.setAttribute('aria-expanded',
+                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
+                });
             }
-        });
+
+            // Dropdown toggles (via <button>, not <a>)
+            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var li = btn.parentElement;
+                    var wasOpen = li.classList.contains('is-open');
+
+                    // Close all dropdowns first
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
+                        other.classList.remove('is-open');
+                        var b = other.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open this one if it wasn't already
+                    if (!wasOpen) {
+                        li.classList.add('is-open');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Click outside closes everything
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    if (menu) menu.classList.remove('is-open-menu');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                        var b = li.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
     </script>
+
     
-    <!-- #BeginEditable "page-scripts" -->
     <!-- Page-specific scripts can go here -->
-    <!-- #EndEditable -->
+    
 </body>
-<!-- #EndTemplate -->
 </html>

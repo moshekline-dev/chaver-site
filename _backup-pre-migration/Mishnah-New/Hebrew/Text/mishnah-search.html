@@ -1,0 +1,1090 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- #BeginEditable "doctitle" -->
+<title>Mishnah Search — Find Text and Structural Patterns | Chaver.com</title>
+    <!-- #EndEditable -->
+    
+    <!-- #BeginEditable "meta" -->
+    <!-- Page-specific meta tags can be added here -->
+    <!-- #EndEditable -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- #BeginEditable "additional-styles" -->
+    <!-- Page-specific style overrides can go here -->
+    <!-- #EndEditable -->
+    
+    <style type="text/css">
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       DROPDOWN MENU - NATIVE details/summary
+       ========================================== */
+    
+    .has-dropdown {
+        position: relative;
+    }
+    
+    .has-dropdown details {
+        display: inline;
+    }
+    
+    .has-dropdown summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .has-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .has-dropdown summary::after {
+        content: ' \25BE';
+        font-size: 0.7em;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        min-width: 200px;
+        padding: 0.4rem 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #fff;
+        z-index: 1001;
+        gap: 0;
+    }
+    
+    .dropdown li {
+        width: 100%;
+    }
+    
+    .dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a, .has-dropdown summary {
+            display: block;
+            padding: 1rem;
+        }
+        
+        /* Mobile dropdown: no flyout, just indent */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+            padding: 0;
+        }
+        
+        .dropdown a {
+            padding-left: 2rem;
+            font-size: 0.95em;
+        }
+        
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a, .has-dropdown summary {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer,
+        .menu-toggle {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+           <ul id="nav-menu">
+    <li><a href="/">Home</a></li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Torah</summary>
+            <ul class="dropdown">
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                <li><a href="/torah-weave/commentary">Commentary</a></li>
+                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+            </ul>
+        </details>
+    </li>
+    <li class="has-dropdown">
+        <details>
+            <summary>Insights</summary>
+            <ul class="dropdown">
+            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+            </ul>
+        </details>
+    </li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+</ul>        </nav>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
+    <main class="content-wrapper">
+        <!-- #BeginEditable "content" -->
+        
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+<a href="/">Home</a> ›
+<a href="/Mishnah/TheMishnah.htm">Mishnah</a> ›
+<span data-i18n="breadcrumb_search">Search</span>
+</nav>
+
+<div class="search-shell">
+
+<div class="lang-toggle">
+<button id="lang-en" class="active" onclick="setLang('en')">English</button>
+<button id="lang-he" onclick="setLang('he')">עברית</button>
+</div>
+
+<h1 data-i18n="page_title">Search the Structured Mishnah</h1>
+<p data-i18n="page_intro">Search the Hebrew text of all 524 chapters, or find chapters by structural pattern. Built on the open Mishnah dataset.</p>
+
+<div class="mode-tabs">
+<button id="mode-text" class="active" onclick="setMode('text')" data-i18n="mode_text">Text Search</button>
+<button id="mode-structure" onclick="setMode('structure')" data-i18n="mode_structure">Structural Pattern</button>
+<button id="mode-similar" onclick="setMode('similar')" data-i18n="mode_similar">Similar Shape</button>
+</div>
+
+<!-- TEXT SEARCH CONTROLS -->
+<div id="controls-text" class="search-controls">
+<label style="display:block;width:100%">
+<span data-i18n="text_input_label">Hebrew text to find:</span>
+<input type="text" id="text-query" placeholder="לדוגמה: משה קבל תורה" oninput="onTextSearch()">
+</label>
+<div class="filter-row">
+<label><span data-i18n="filter_seder">Seder:</span>
+<select id="text-seder" onchange="onTextSearch()">
+<option value="">All</option>
+</select>
+</label>
+<label><span data-i18n="filter_tractate">Tractate:</span>
+<select id="text-tractate" onchange="onTextSearch()">
+<option value="">All</option>
+</select>
+</label>
+</div>
+</div>
+
+<!-- STRUCTURE SEARCH CONTROLS -->
+<div id="controls-structure" class="search-controls" style="display:none">
+<div class="filter-row">
+<label><span data-i18n="filter_shape">Shape pattern:</span>
+<select id="struct-shape" onchange="onStructSearch()">
+<option value="">Any</option>
+<option value="palindrome" data-i18n="shape_palindrome">Palindromic (rows mirror)</option>
+<option value="envelope" data-i18n="shape_envelope">Envelope (first row = last row)</option>
+<option value="uniform" data-i18n="shape_uniform">Uniform grid (all rows same)</option>
+<option value="single_col" data-i18n="shape_single_col">Single column (all full-width)</option>
+<option value="has_full_row" data-i18n="shape_has_full">Contains a full-width row</option>
+</select>
+</label>
+<label>
+<input type="checkbox" id="struct-headers" onchange="onStructSearch()">
+<span data-i18n="filter_has_headers">Has named column headers</span>
+</label>
+</div>
+<div class="filter-row">
+<span data-i18n="filter_markers">Has marker type:</span>
+<span class="marker-checkboxes">
+<label><input type="checkbox" name="marker" value="horizontal1" onchange="onStructSearch()"> horizontal1</label>
+<label><input type="checkbox" name="marker" value="horizontal2" onchange="onStructSearch()"> horizontal2</label>
+<label><input type="checkbox" name="marker" value="horizontal3" onchange="onStructSearch()"> horizontal3</label>
+<label><input type="checkbox" name="marker" value="vertical1" onchange="onStructSearch()"> vertical1</label>
+<label><input type="checkbox" name="marker" value="internal_parallel" onchange="onStructSearch()"> internal_parallel</label>
+<label><input type="checkbox" name="marker" value="closure" onchange="onStructSearch()"> closure</label>
+<label><input type="checkbox" name="marker" value="chiastic1" onchange="onStructSearch()"> chiastic1</label>
+<label><input type="checkbox" name="marker" value="chiastic2" onchange="onStructSearch()"> chiastic2</label>
+</span>
+</div>
+<div class="filter-row">
+<label><span data-i18n="filter_seder">Seder:</span>
+<select id="struct-seder" onchange="onStructSearch()">
+<option value="">All</option>
+</select>
+</label>
+<label><span data-i18n="filter_rows">Rows:</span>
+<select id="struct-rows" onchange="onStructSearch()">
+<option value="">Any</option>
+<option value="1">1</option><option value="2">2</option><option value="3">3</option>
+<option value="4">4</option><option value="5">5</option><option value="6">6</option>
+<option value="7">7</option><option value="8">8</option><option value="9+">9 or more</option>
+</select>
+</label>
+</div>
+</div>
+
+<!-- SIMILAR SHAPE SEARCH CONTROLS -->
+<div id="controls-similar" class="search-controls" style="display:none">
+<label style="display:block;width:100%">
+<span data-i18n="similar_input_label">Pick a chapter; we'll find chapters with the same or similar structural shape:</span>
+<select id="similar-chapter" onchange="onSimilarSearch()">
+<option value="">— Select a chapter —</option>
+</select>
+</label>
+<p class="search-status" id="similar-shape-display"></p>
+</div>
+
+<p class="search-status" id="status">Loading dataset…</p>
+
+<div id="results"></div>
+
+</div>
+
+<script>
+const I18N = {
+    en: {
+        breadcrumb_search: "Search",
+        page_title: "Search the Structured Mishnah",
+        page_intro: "Search the Hebrew text of all 524 chapters, or find chapters by structural pattern. Built on the open Mishnah dataset.",
+        mode_text: "Text Search",
+        mode_structure: "Structural Pattern",
+        mode_similar: "Similar Shape",
+        text_input_label: "Hebrew text to find:",
+        filter_seder: "Seder:",
+        filter_tractate: "Tractate:",
+        filter_shape: "Shape pattern:",
+        shape_palindrome: "Palindromic (rows mirror)",
+        shape_envelope: "Envelope (first row = last row)",
+        shape_uniform: "Uniform grid (all rows same)",
+        shape_single_col: "Single column (all full-width)",
+        shape_has_full: "Contains a full-width row",
+        filter_has_headers: "Has named column headers",
+        filter_markers: "Has marker type:",
+        filter_rows: "Rows:",
+        similar_input_label: "Pick a chapter; we'll find chapters with the same or similar structural shape:",
+        loading: "Loading dataset…",
+        ready: "Dataset ready. Type to search.",
+        no_results: "No matches.",
+        results_count: "results",
+        view_in_portal: "View chapter →",
+        find_similar: "Find similar shapes",
+        shape_label: "Shape:",
+        markers_label: "Markers:",
+        cells_label: "cells",
+        in: "in",
+        chapter: "Chapter",
+    },
+    he: {
+        breadcrumb_search: "חיפוש",
+        page_title: "חיפוש במשנה כדרכה",
+        page_intro: "חיפוש בטקסט המלא של 524 פרקי המשנה, או איתור פרקים על פי תבנית מבנית. מבוסס על בסיס הנתונים הפתוח של המשנה.",
+        mode_text: "חיפוש טקסט",
+        mode_structure: "תבנית מבנית",
+        mode_similar: "מבנה דומה",
+        text_input_label: "טקסט עברי לחיפוש:",
+        filter_seder: "סדר:",
+        filter_tractate: "מסכת:",
+        filter_shape: "תבנית מבנה:",
+        shape_palindrome: "פלינדרום (שורות במראה)",
+        shape_envelope: "מעטפת (שורה ראשונה ואחרונה תואמות)",
+        shape_uniform: "רשת אחידה (כל השורות זהות)",
+        shape_single_col: "טור יחיד (כל השורות ברוחב מלא)",
+        shape_has_full: "מכיל שורה ברוחב מלא",
+        filter_has_headers: "מכיל כותרות עמודה",
+        filter_markers: "מכיל סימון:",
+        filter_rows: "שורות:",
+        similar_input_label: "בחר פרק; נמצא פרקים בעלי מבנה זהה או דומה:",
+        loading: "טוען את בסיס הנתונים…",
+        ready: "מוכן. הקלד לחיפוש.",
+        no_results: "אין תוצאות.",
+        results_count: "תוצאות",
+        view_in_portal: "צפה בפרק →",
+        find_similar: "מצא מבנים דומים",
+        shape_label: "מבנה:",
+        markers_label: "סימונים:",
+        cells_label: "תאים",
+        in: "ב",
+        chapter: "פרק",
+    }
+};
+
+const SEDER_ORDER = ['Zeraim', 'Moed', 'Nashim', 'Nezikin', 'Kodashim', 'Tohorot'];
+let lang = 'en';
+let mode = 'text';
+let dataset = null;
+let chapterKeys = [];
+
+const statusEl = document.getElementById('status');
+const resultsEl = document.getElementById('results');
+
+function t(key) { return I18N[lang][key] || key; }
+
+function setLang(newLang) {
+    lang = newLang;
+    document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    document.getElementById('lang-he').classList.toggle('active', lang === 'he');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const k = el.getAttribute('data-i18n');
+        if (I18N[lang][k]) el.textContent = I18N[lang][k];
+    });
+    if (dataset) populateDropdowns();
+    rerunCurrentMode();
+}
+
+function setMode(newMode) {
+    mode = newMode;
+    ['text', 'structure', 'similar'].forEach(m => {
+        document.getElementById('mode-' + m).classList.toggle('active', m === newMode);
+        document.getElementById('controls-' + m).style.display = (m === newMode) ? 'block' : 'none';
+    });
+    rerunCurrentMode();
+}
+
+function rerunCurrentMode() {
+    if (!dataset) return;
+    if (mode === 'text') onTextSearch();
+    else if (mode === 'structure') onStructSearch();
+    else if (mode === 'similar') onSimilarSearch();
+}
+
+async function loadDataset() {
+    statusEl.textContent = t('loading');
+    statusEl.className = 'search-status loading';
+    try {
+        const resp = await fetch('/Mishnah-New/English/mishnah_db.json');
+        dataset = await resp.json();
+        chapterKeys = Object.keys(dataset).filter(k => k !== '_meta');
+        statusEl.textContent = t('ready');
+        statusEl.className = 'search-status';
+        populateDropdowns();
+    } catch (e) {
+        statusEl.textContent = 'Error loading dataset: ' + e.message;
+        statusEl.className = 'search-status error';
+    }
+}
+
+function populateDropdowns() {
+    // Build canonical Hebrew-name lookups that survive empty fields
+    const sederHebByEn = {};
+    const tractateHebByEn = {};
+    const tractatesBySeder = {};
+    
+    chapterKeys.forEach(k => {
+        const ch = dataset[k];
+        if (ch.seder_he && !sederHebByEn[ch.seder_en]) {
+            sederHebByEn[ch.seder_en] = ch.seder_he.replace(/^סדר\s+/, '');
+        }
+        if (ch.tractate_he && !tractateHebByEn[ch.tractate_en]) {
+            tractateHebByEn[ch.tractate_en] = ch.tractate_he.replace(/^מסכת\s+/, '');
+        }
+        if (!tractatesBySeder[ch.seder_en]) tractatesBySeder[ch.seder_en] = new Set();
+        tractatesBySeder[ch.seder_en].add(ch.tractate_en);
+    });
+    
+    // Stash on window so renderers can use them
+    window._sederHebByEn = sederHebByEn;
+    window._tractateHebByEn = tractateHebByEn;
+    
+    const sederLabel = (en) => lang === 'he'
+        ? ('סדר ' + (sederHebByEn[en] || en))
+        : en;
+    const tractateLabel = (en) => lang === 'he'
+        ? ('מסכת ' + (tractateHebByEn[en] || en))
+        : en;
+    
+    const orderedSedarim = SEDER_ORDER.filter(s => tractatesBySeder[s]);
+    
+    ['text-seder', 'struct-seder'].forEach(id => {
+        const el = document.getElementById(id);
+        const current = el.value;
+        el.innerHTML = '<option value="">' + (lang === 'he' ? 'הכל' : 'All') + '</option>';
+        orderedSedarim.forEach(s => {
+            const opt = document.createElement('option');
+            opt.value = s; opt.textContent = sederLabel(s);
+            el.appendChild(opt);
+        });
+        el.value = current;
+    });
+    
+    // Tractates
+    const allTractates = [...new Set(chapterKeys.map(k => dataset[k].tractate_en))].sort();
+    const tractateEl = document.getElementById('text-tractate');
+    const currentTr = tractateEl.value;
+    tractateEl.innerHTML = '<option value="">' + (lang === 'he' ? 'הכל' : 'All') + '</option>';
+    allTractates.forEach(tr => {
+        const opt = document.createElement('option');
+        opt.value = tr;
+        opt.textContent = tractateLabel(tr);
+        tractateEl.appendChild(opt);
+    });
+    tractateEl.value = currentTr;
+    
+    // Similar-search chapter dropdown
+    const simEl = document.getElementById('similar-chapter');
+    const currentSim = simEl.value;
+    simEl.innerHTML = '<option value="">' + (lang === 'he' ? '— בחר פרק —' : '— Select a chapter —') + '</option>';
+    chapterKeys.sort((a, b) => {
+        const A = dataset[a], B = dataset[b];
+        const sA = SEDER_ORDER.indexOf(A.seder_en), sB = SEDER_ORDER.indexOf(B.seder_en);
+        if (sA !== sB) return sA - sB;
+        if (A.tractate_en !== B.tractate_en) return A.tractate_en.localeCompare(B.tractate_en);
+        return A.chapter_num - B.chapter_num;
+    }).forEach(k => {
+        const ch = dataset[k];
+        const label = lang === 'he'
+            ? `${tractateLabel(ch.tractate_en)} פרק ${ch.chapter_he || ch.chapter_num}`
+            : `${ch.tractate_en} ${ch.chapter_num}`;
+        const opt = document.createElement('option');
+        opt.value = k; opt.textContent = label;
+        simEl.appendChild(opt);
+    });
+    simEl.value = currentSim;
+}
+
+// Helper for renderers to get the same Hebrew labels
+function tractateDisplay(ch) {
+    if (lang === 'he') {
+        const stem = (window._tractateHebByEn && window._tractateHebByEn[ch.tractate_en])
+            || ch.tractate_he.replace(/^מסכת\s+/, '')
+            || ch.tractate_en;
+        return 'מסכת ' + stem;
+    }
+    return ch.tractate_en;
+}
+
+// Append .htm to clean URLs so the server resolves them
+function chapterUrl(ch) {
+    const u = ch.source_url || '';
+    if (!u) return '#';
+    if (/\.html?$/i.test(u)) return u;
+    return u + '.htm';
+}
+
+function getCellsAndSubdivisions(cell) {
+    if (cell.subdivisions && cell.subdivisions.length) {
+        return cell.subdivisions.map(s => ({...s, parentLabel: cell.label, position: cell.position}));
+    }
+    return [{...cell, parentLabel: cell.label}];
+}
+
+function highlightMatch(text, query) {
+    if (!query) return escapeHtml(text);
+    const idx = text.indexOf(query);
+    if (idx === -1) return escapeHtml(text);
+    return escapeHtml(text.slice(0, idx))
+        + '<span class="match-hit">' + escapeHtml(query) + '</span>'
+        + escapeHtml(text.slice(idx + query.length));
+}
+
+function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function onTextSearch() {
+    if (!dataset) return;
+    const q = document.getElementById('text-query').value.trim();
+    const seder = document.getElementById('text-seder').value;
+    const tractate = document.getElementById('text-tractate').value;
+    
+    if (!q) { resultsEl.innerHTML = ''; return; }
+    
+    const matches = {};
+    let matchCount = 0;
+    
+    for (const k of chapterKeys) {
+        const ch = dataset[k];
+        if (seder && ch.seder_en !== seder) continue;
+        if (tractate && ch.tractate_en !== tractate) continue;
+        
+        const chMatches = [];
+        for (const row of ch.rows) {
+            for (const cell of row.cells) {
+                for (const u of getCellsAndSubdivisions(cell)) {
+                    if (u.text && u.text.includes(q)) {
+                        chMatches.push({
+                            row_num: row.row_num,
+                            label: u.parentLabel + (u.label && u.label !== u.parentLabel ? u.label : ''),
+                            text: u.text,
+                            mishnah: u.mishnah_num_he
+                        });
+                        matchCount++;
+                    }
+                }
+            }
+        }
+        if (chMatches.length) {
+            if (!matches[ch.tractate_en]) matches[ch.tractate_en] = [];
+            matches[ch.tractate_en].push({chapter: ch, hits: chMatches});
+        }
+    }
+    
+    renderTextResults(matches, matchCount, q);
+}
+
+function renderTextResults(matches, count, query) {
+    if (count === 0) {
+        resultsEl.innerHTML = '<p class="search-status">' + t('no_results') + '</p>';
+        return;
+    }
+    
+    let html = `<p class="result-count">${count} ${t('results_count')}</p>`;
+    
+    const orderedTractates = Object.keys(matches).sort((a, b) => {
+        const sA = SEDER_ORDER.indexOf(matches[a][0].chapter.seder_en);
+        const sB = SEDER_ORDER.indexOf(matches[b][0].chapter.seder_en);
+        if (sA !== sB) return sA - sB;
+        return a.localeCompare(b);
+    });
+    
+    for (const tr of orderedTractates) {
+        const trData = matches[tr];
+        const trLabel = tractateDisplay(trData[0].chapter);
+        html += `<div class="tractate-group"><h3>${escapeHtml(trLabel)}</h3>`;
+        
+        trData.sort((a, b) => a.chapter.chapter_num - b.chapter.chapter_num);
+        for (const {chapter, hits} of trData) {
+            const chLabel = lang === 'he'
+                ? `פרק ${chapter.chapter_he || chapter.chapter_num}`
+                : `${t('chapter')} ${chapter.chapter_num}`;
+            html += `<div class="chapter-result">`;
+            html += `<div class="chapter-result-header"><strong>${escapeHtml(chLabel)}</strong>`;
+            html += `<a href="${chapterUrl(chapter)}">${t('view_in_portal')}</a></div>`;
+            for (const h of hits) {
+                html += `<div class="cell-result">`;
+                html += `<span class="cell-label">${escapeHtml(h.label)}${h.mishnah ? ' (' + escapeHtml(h.mishnah) + ')' : ''}</span>`;
+                html += `<div class="cell-text">${highlightMatch(h.text, query)}</div>`;
+                html += `</div>`;
+            }
+            html += `</div>`;
+        }
+        html += `</div>`;
+    }
+    resultsEl.innerHTML = html;
+}
+
+function isPalindrome(shape) {
+    if (shape.length < 3) return false;
+    // Must mirror
+    for (let i = 0; i < Math.floor(shape.length / 2); i++) {
+        if (JSON.stringify(shape[i]) !== JSON.stringify(shape[shape.length - 1 - i])) return false;
+    }
+    // And must have at least one inner row that differs from the outer row
+    // (otherwise it's just a uniform grid)
+    const first = JSON.stringify(shape[0]);
+    return shape.some(r => JSON.stringify(r) !== first);
+}
+
+function isEnvelope(shape) {
+    if (shape.length < 3) return false;
+    if (JSON.stringify(shape[0]) !== JSON.stringify(shape[shape.length - 1])) return false;
+    // Must have at least one interior row that differs from the frame
+    const frame = JSON.stringify(shape[0]);
+    for (let i = 1; i < shape.length - 1; i++) {
+        if (JSON.stringify(shape[i]) !== frame) return true;
+    }
+    return false;
+}
+
+function isUniform(shape) {
+    if (shape.length < 2) return false;
+    const first = JSON.stringify(shape[0]);
+    return shape.every(r => JSON.stringify(r) === first);
+}
+
+function isSingleColumn(shape) {
+    return shape.every(r => r.length === 1);
+}
+
+function hasFullRow(shape) {
+    if (shape.length < 2) return false;
+    const cols = Math.max(...shape.map(r => r.reduce((s, c) => s + c, 0)));
+    return shape.some(r => r.length === 1 && r[0] === cols);
+}
+
+function chapterMarkers(ch) {
+    const types = new Set();
+    for (const row of ch.rows) {
+        for (const cell of row.cells) {
+            (cell.markers || []).forEach(m => types.add(m.type));
+            (cell.subdivisions || []).forEach(s => (s.markers || []).forEach(m => types.add(m.type)));
+        }
+    }
+    return types;
+}
+
+function chapterCellCount(ch) {
+    let n = 0;
+    for (const row of ch.rows) {
+        for (const cell of row.cells) {
+            if (cell.subdivisions && cell.subdivisions.length) n += cell.subdivisions.length;
+            else n += 1;
+        }
+    }
+    return n;
+}
+
+function onStructSearch() {
+    if (!dataset) return;
+    const shapeFilter = document.getElementById('struct-shape').value;
+    const headersFilter = document.getElementById('struct-headers').checked;
+    const seder = document.getElementById('struct-seder').value;
+    const rowsFilter = document.getElementById('struct-rows').value;
+    const wantedMarkers = [...document.querySelectorAll('input[name="marker"]:checked')].map(c => c.value);
+    
+    const results = [];
+    for (const k of chapterKeys) {
+        const ch = dataset[k];
+        if (seder && ch.seder_en !== seder) continue;
+        if (headersFilter && !ch.column_headers) continue;
+        
+        const shape = ch.shape;
+        if (shapeFilter === 'palindrome' && !isPalindrome(shape)) continue;
+        if (shapeFilter === 'envelope' && !isEnvelope(shape)) continue;
+        if (shapeFilter === 'uniform' && !isUniform(shape)) continue;
+        if (shapeFilter === 'single_col' && !isSingleColumn(shape)) continue;
+        if (shapeFilter === 'has_full_row' && !hasFullRow(shape)) continue;
+        
+        if (rowsFilter) {
+            if (rowsFilter === '9+') { if (shape.length < 9) continue; }
+            else if (parseInt(rowsFilter, 10) !== shape.length) continue;
+        }
+        
+        if (wantedMarkers.length) {
+            const has = chapterMarkers(ch);
+            if (!wantedMarkers.every(m => has.has(m))) continue;
+        }
+        
+        results.push({key: k, chapter: ch});
+    }
+    
+    renderStructResults(results);
+}
+
+function renderStructResults(results) {
+    if (!results.length) {
+        resultsEl.innerHTML = '<p class="search-status">' + t('no_results') + '</p>';
+        return;
+    }
+    
+    let html = `<p class="result-count">${results.length} ${t('results_count')}</p>`;
+    
+    // Group by tractate
+    const byTractate = {};
+    results.forEach(r => {
+        const tr = r.chapter.tractate_en;
+        if (!byTractate[tr]) byTractate[tr] = [];
+        byTractate[tr].push(r);
+    });
+    const ordered = Object.keys(byTractate).sort((a, b) => {
+        const sA = SEDER_ORDER.indexOf(byTractate[a][0].chapter.seder_en);
+        const sB = SEDER_ORDER.indexOf(byTractate[b][0].chapter.seder_en);
+        if (sA !== sB) return sA - sB;
+        return a.localeCompare(b);
+    });
+    
+    for (const tr of ordered) {
+        const list = byTractate[tr];
+        const trLabel = tractateDisplay(list[0].chapter);
+        html += `<div class="tractate-group"><h3>${escapeHtml(trLabel)}</h3>`;
+        list.sort((a, b) => a.chapter.chapter_num - b.chapter.chapter_num);
+        for (const {chapter} of list) {
+            const chLabel = lang === 'he'
+                ? `פרק ${chapter.chapter_he || chapter.chapter_num}`
+                : `${t('chapter')} ${chapter.chapter_num}`;
+            const markers = [...chapterMarkers(chapter)].sort();
+            html += `<div class="chapter-result">`;
+            html += `<div class="chapter-result-header"><strong>${escapeHtml(chLabel)}</strong>`;
+            html += `<a href="${chapterUrl(chapter)}">${t('view_in_portal')}</a></div>`;
+            html += `<div class="shape-display">${t('shape_label')} ${escapeHtml(JSON.stringify(chapter.shape))} · ${chapterCellCount(chapter)} ${t('cells_label')}</div>`;
+            if (chapter.column_headers) {
+                html += `<div class="cell-result">${chapter.column_headers.map(escapeHtml).join(' / ')}</div>`;
+            }
+            if (markers.length) {
+                html += `<div class="marker-summary">${t('markers_label')} `
+                    + markers.map(m => `<span class="marker-tag">${escapeHtml(m)}</span>`).join('') + `</div>`;
+            }
+            html += `</div>`;
+        }
+        html += `</div>`;
+    }
+    resultsEl.innerHTML = html;
+}
+
+function shapeSimilarity(shapeA, shapeB) {
+    // Score 0..1. 1 = identical. Counts matching rows.
+    if (JSON.stringify(shapeA) === JSON.stringify(shapeB)) return 1;
+    const maxLen = Math.max(shapeA.length, shapeB.length);
+    if (maxLen === 0) return 0;
+    let matches = 0;
+    for (let i = 0; i < Math.min(shapeA.length, shapeB.length); i++) {
+        if (JSON.stringify(shapeA[i]) === JSON.stringify(shapeB[i])) matches++;
+    }
+    return matches / maxLen;
+}
+
+function onSimilarSearch() {
+    if (!dataset) return;
+    const k = document.getElementById('similar-chapter').value;
+    const display = document.getElementById('similar-shape-display');
+    if (!k) { display.textContent = ''; resultsEl.innerHTML = ''; return; }
+    
+    const ch = dataset[k];
+    display.innerHTML = `${t('shape_label')} <span class="shape-display">${escapeHtml(JSON.stringify(ch.shape))}</span>`;
+    
+    const scored = chapterKeys
+        .filter(other => other !== k)
+        .map(other => ({
+            key: other,
+            chapter: dataset[other],
+            score: shapeSimilarity(ch.shape, dataset[other].shape)
+        }))
+        .filter(r => r.score > 0)
+        .sort((a, b) => b.score - a.score);
+    
+    const exact = scored.filter(r => r.score === 1);
+    const partial = scored.filter(r => r.score < 1).slice(0, 30);
+    
+    let html = '';
+    if (exact.length) {
+        html += `<h3>${lang === 'he' ? 'מבנה זהה' : 'Exact match'} (${exact.length})</h3>`;
+        html += renderSimilarList(exact);
+    }
+    if (partial.length) {
+        html += `<h3>${lang === 'he' ? 'מבנים דומים' : 'Similar (top 30)'}</h3>`;
+        html += renderSimilarList(partial);
+    }
+    if (!exact.length && !partial.length) {
+        html = '<p class="search-status">' + t('no_results') + '</p>';
+    }
+    resultsEl.innerHTML = html;
+}
+
+function renderSimilarList(list) {
+    let html = '<ul class="results-list">';
+    for (const {chapter, score} of list) {
+        const chLabel = lang === 'he'
+            ? `${tractateDisplay(chapter)} פרק ${chapter.chapter_he || chapter.chapter_num}`
+            : `${chapter.tractate_en} ${t('chapter')} ${chapter.chapter_num}`;
+        html += `<li class="chapter-result">`;
+        html += `<div class="chapter-result-header"><strong>${escapeHtml(chLabel)}</strong>`;
+        html += `<a href="${chapterUrl(chapter)}">${t('view_in_portal')}</a></div>`;
+        html += `<div class="shape-display">${t('shape_label')} ${escapeHtml(JSON.stringify(chapter.shape))}`;
+        if (score < 1) html += ` · ${Math.round(score * 100)}%`;
+        html += `</div></li>`;
+    }
+    html += '</ul>';
+    return html;
+}
+
+loadDataset();
+</script>
+
+        <!-- #EndEditable -->
+    </main>
+    
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">The Structured Mishnah PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         ========================================== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+    <!-- #BeginEditable "page-scripts" -->
+    <!-- Page-specific scripts can go here -->
+    <!-- #EndEditable -->
+</body>
+<!-- #EndTemplate -->
+</html>
