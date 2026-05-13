@@ -53,19 +53,6 @@
         padding: 0.3rem 20px;
     }
 
-    /* Mobile Menu Toggle */
-    .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-        position: absolute;
-        right: 20px;
-        top: 0.5rem;
-    }
-
     /* Navigation List */
     nav ul {
         list-style: none;
@@ -134,10 +121,6 @@
             position: relative;
         }
 
-        .menu-toggle {
-            display: block;
-        }
-
         nav ul {
             display: none;
             flex-direction: column;
@@ -164,10 +147,6 @@
 
         /* Landscape phones - hamburger menu */
         @media (max-height: 500px) and (orientation: landscape) {
-            .menu-toggle {
-                display: block;
-            }
-
             nav ul {
                 display: none;
                 flex-direction: column;
@@ -224,8 +203,7 @@
 
     @media print {
         header.site-header,
-        footer.site-footer,
-        .menu-toggle {
+        footer.site-footer {
             display: none;
         }
 
@@ -241,37 +219,39 @@
          SITE HEADER - FIXED ACROSS ALL PAGES
          ========================================== -->
     <header class="site-header">
-        <nav class="main-nav">
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="&#1508;&#1514;&#1497;&#1495;&#1514; &#1514;&#1508;&#1512;&#1497;&#1496;">&#9776;</button>
-           <ul id="nav-menu">
-    <li><a href="/hebrew%20index.html">&#1491;&#1507; &#1492;&#1489;&#1497;&#1514;</a></li>
-    <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle">&#1514;&#1493;&#1512;&#1492;</a>
-        <ul class="dropdown">
-            <li><a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">&#1513;&#1506;&#1512; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
-            <li><a href="/torah-weave/hebrew-full-torah-map/">&#1502;&#1508;&#1514; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
-            <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
-        </ul>
-    </li>
-    <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle">&#1502;&#1513;&#1504;&#1492;</a>
-        <ul class="dropdown">
-            <li><a href="/mishnah/">&#1513;&#1506;&#1512; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
-            <li><a href="/Mishnah-New/Hebrew/Articles/MAVO.htm">&#1502;&#1489;&#1493;&#1488;</a></li>
-            <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">PDF &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
-            <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
-        </ul>
-    </li>
-    <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</a>
-        <ul class="dropdown">
-            <li><a href="/torah-weave/data/">&#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
-            <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">&#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
-        </ul>
-    </li>
-    <li><a href="/General/Contact.htm">&#1510;&#1493;&#1512; &#1511;&#1513;&#1512;</a></li>
-    <li><a href="/">English</a></li>
-</ul>        </nav>
+        <div class="nav-row">
+            <div class="nav-brand">&#1495;&#1489;&#1512;</div>
+            <button class="nav-toggle" aria-label="&#1508;&#1514;&#1495;/&#1505;&#1490;&#1493;&#1512; &#1514;&#1508;&#1512;&#1497;&#1496;" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/hebrew%20index">&#1491;&#1507; &#1492;&#1489;&#1497;&#1514;</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1514;&#1493;&#1512;&#1492;</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">&#1513;&#1506;&#1512; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-full-torah-map/">&#1502;&#1508;&#1514; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1502;&#1513;&#1504;&#1492;</button>
+                    <ul class="submenu">
+                        <li><a href="/mishnah/">&#1513;&#1506;&#1512; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Articles/MAVO.htm">&#1502;&#1489;&#1493;&#1488;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">PDF &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">&#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">&#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                    </ul>
+                </li>
+                <li><a href="/General/Contact.htm">&#1510;&#1493;&#1512; &#1511;&#1513;&#1512;</a></li>
+                <li><a href="/">English</a></li>
+            </ul>
+        </div>
     </header>
     <!-- SITE BANNER -->
 <div id="site-banner"></div>
@@ -334,48 +314,58 @@
     </footer>
 
     <!-- ==========================================
-         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         SITE NAV SCRIPT
          ========================================== -->
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('nav-menu');
-            menu.classList.toggle('show');
-        }
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var menu = document.querySelector('.nav-menu');
 
-        // Close mobile menu when clicking outside; also close any open dropdowns
-        document.addEventListener('click', function(event) {
-            var menu = document.getElementById('nav-menu');
-            var toggle = document.querySelector('.menu-toggle');
-
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove('show');
-                document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                    li.classList.remove('is-open');
+            // Hamburger toggle
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('is-open-menu');
+                    toggle.setAttribute('aria-expanded',
+                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
                 });
             }
-        });
 
-        // Dropdown toggle handler — class-based, tap-to-expand on mobile
-        document.addEventListener('DOMContentLoaded', function() {
-            var toggles = document.querySelectorAll('.has-dropdown .dropdown-toggle');
-            toggles.forEach(function(toggle) {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var parentLi = toggle.closest('.has-dropdown');
-                    var wasOpen = parentLi.classList.contains('is-open');
+            // Dropdown toggles (via <button>, not <a>)
+            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var li = btn.parentElement;
+                    var wasOpen = li.classList.contains('is-open');
 
                     // Close all dropdowns first
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                        li.classList.remove('is-open');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
+                        other.classList.remove('is-open');
+                        var b = other.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
                     });
 
                     // Open this one if it wasn't already
                     if (!wasOpen) {
-                        parentLi.classList.add('is-open');
+                        li.classList.add('is-open');
+                        btn.setAttribute('aria-expanded', 'true');
                     }
                 });
             });
-        });
+
+            // Click outside closes everything
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    if (menu) menu.classList.remove('is-open-menu');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                        var b = li.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
     </script>
 
     <!-- no page scripts -->

@@ -3834,69 +3834,173 @@ main.content-wrapper:has(.Mesechet) .Perek {
     color: #3d5770;
 }
 
-/* ====================================
-   NAV DROPDOWN — CLASS-TOGGLE PATTERN
-   Tap-to-expand on mobile, hover-to-open on desktop.
-   Class-based: JS toggles .is-open on the parent <li>;
-   CSS shows the dropdown when .is-open is present.
+/* =====================================================
+   SITE NAV — chaver.com
+   Class-based dropdowns: hover on desktop, tap on mobile.
+   Uses <button> for dropdown toggles (semantically correct, no href).
+   Site colors match the beige/tan header gradient.
+   ===================================================== */
 
-   !important flags ensure these rules win over any
-   leftover inline CSS in DWT-attached pages (where the
-   orphan <details>/<summary> CSS still exists and won't
-   be removed in this task).
-   ==================================== */
+/* The site-header gradient is defined separately above; nav lives inside it. */
 
-/* Dropdown toggle label — clickable in all viewports */
-.has-dropdown .dropdown-toggle {
-    cursor: pointer;
-    user-select: none;
+.nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Chevron on the toggle */
-.has-dropdown .dropdown-toggle::after {
-    content: ' \25BE';
-    font-size: 0.7em;
+.nav-brand {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2c1810;
+}
+
+/* Hamburger toggle — desktop hidden, mobile visible */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #2c1810;
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+}
+
+/* Top-level menu */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu > li > a,
+.nav-menu > li > button {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #2c1810;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.nav-menu > li > a:hover,
+.nav-menu > li > button:hover {
+    background: rgba(44, 24, 16, 0.08);
+    border-radius: 4px;
+}
+
+/* Dropdown chevron */
+.has-dropdown > button::after {
+    content: " \25BE";
+    font-size: 0.75em;
+    opacity: 0.7;
     margin-inline-start: 0.25em;
 }
 
-/* Default: dropdown hidden everywhere */
-.has-dropdown .dropdown {
-    display: none !important;
+/* Submenu — hidden by default, absolute-positioned on desktop */
+.submenu {
+    list-style: none;
+    padding: 0.4rem 0;
+    margin: 0;
+    background: #fff;
+    color: #2c1810;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    min-width: 220px;
+    position: absolute;
+    top: 100%;
+    inset-inline-start: 0;
+    z-index: 1000;
+    display: none;
 }
 
-/* Show dropdown when parent <li> has .is-open class (set by JS on tap) */
-.has-dropdown.is-open .dropdown {
-    display: flex !important;
-    flex-direction: column !important;
+.submenu li a {
+    display: block;
+    padding: 0.5rem 1.25rem;
+    color: #2c1810;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-/* Desktop: also show on hover */
+.submenu li a:hover {
+    background: #f0ebe3;
+}
+
+/* Desktop: hover opens submenu */
 @media (hover: hover) and (pointer: fine) {
-    .has-dropdown:hover .dropdown {
-        display: flex !important;
-        flex-direction: column !important;
+    .has-dropdown:hover .submenu {
+        display: block;
     }
 }
 
-/* Mobile-specific layout: dropdown flows inline, full width */
+/* JS-driven: .is-open class shows submenu (tap on mobile, click on desktop) */
+.has-dropdown.is-open > .submenu {
+    display: block;
+}
+
+/* MOBILE breakpoint */
 @media (max-width: 768px) {
-    .has-dropdown .dropdown {
-        position: static !important;
-        box-shadow: none !important;
-        min-width: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-        background: transparent !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
+    .nav-toggle {
+        display: block;
     }
 
-    /* Indent dropdown items so the hierarchy is visible */
-    .has-dropdown .dropdown li a {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        font-size: 0.95em;
+    .nav-menu {
+        display: none;
+        position: absolute;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        top: 100%;
+        flex-direction: column;
+        background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+        padding: 0.5rem 0;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .nav-menu.is-open-menu {
+        display: flex;
+    }
+
+    .nav-menu > li {
+        position: static;
+        width: 100%;
+    }
+
+    .nav-menu > li > a,
+    .nav-menu > li > button {
+        width: 100%;
+        text-align: start;
+        padding: 0.85rem 1.25rem;
+    }
+
+    /* Mobile submenu: inline below button, full width, indented */
+    .submenu {
+        position: static;
+        background: rgba(44, 24, 16, 0.08);
+        box-shadow: none;
+        border-radius: 0;
+        min-width: 0;
+        padding: 0;
+        color: #2c1810;
+    }
+
+    .submenu li a {
+        padding-inline-start: 2.5rem;
+        white-space: normal;
     }
 }
 

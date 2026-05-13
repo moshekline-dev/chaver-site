@@ -53,19 +53,6 @@
         padding: 0.3rem 20px;
     }
     
-    /* Mobile Menu Toggle */
-    .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-        position: absolute;
-        right: 20px;
-        top: 0.5rem;
-    }
-    
     /* Navigation List */
     nav ul {
         list-style: none;
@@ -133,11 +120,7 @@
         header.site-header {
             position: relative;
         }
-        
-        .menu-toggle {
-            display: block;
-        }
-        
+
         nav ul {
             display: none;
             flex-direction: column;
@@ -164,10 +147,6 @@
 
         /* Landscape phones - hamburger menu */
         @media (max-height: 500px) and (orientation: landscape) {
-            .menu-toggle {
-                display: block;
-            }
-            
             nav ul {
                 display: none;
                 flex-direction: column;
@@ -224,8 +203,7 @@
     
     @media print {
         header.site-header,
-        footer.site-footer,
-        .menu-toggle {
+        footer.site-footer {
             display: none;
         }
         
@@ -241,39 +219,41 @@
          SITE HEADER - FIXED ACROSS ALL PAGES
          ========================================== -->
     <header class="site-header">
-        <nav class="main-nav">
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
-           <ul id="nav-menu">
-    <li><a href="/">Home</a></li>
-    <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle">Torah</a>
-        <ul class="dropdown">
-            <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-            <li><a href="/torah-weave/commentary">Commentary</a></li>
-            <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
-        </ul>
-    </li>
-    <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle">Insights</a>
-        <ul class="dropdown">
-            <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-            <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-            <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-            <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-            <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-            <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-            <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-            <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-            <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-            <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-        </ul>
-    </li>
-    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
-    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-    <li><a href="/torah-weave/data/">Data</a></li>
-    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
-    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
-</ul>        </nav>
+        <div class="nav-row">
+            <div class="nav-brand">chaver.com</div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Torah</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/torah-weave/commentary">Commentary</a></li>
+                        <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Insights</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+                <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+                <li><a href="/torah-weave/data/">Data</a></li>
+                <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+                <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </div>
     </header>
     <!-- SITE BANNER -->
 <div id="site-banner"></div>
@@ -335,48 +315,58 @@
     </footer>
     
     <!-- ==========================================
-         MOBILE MENU SCRIPT - HAMBURGER ONLY
+         SITE NAV SCRIPT
          ========================================== -->
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('nav-menu');
-            menu.classList.toggle('show');
-        }
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var menu = document.querySelector('.nav-menu');
 
-        // Close mobile menu when clicking outside; also close any open dropdowns
-        document.addEventListener('click', function(event) {
-            var menu = document.getElementById('nav-menu');
-            var toggle = document.querySelector('.menu-toggle');
-
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove('show');
-                document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                    li.classList.remove('is-open');
+            // Hamburger toggle
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('is-open-menu');
+                    toggle.setAttribute('aria-expanded',
+                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
                 });
             }
-        });
 
-        // Dropdown toggle handler — class-based, tap-to-expand on mobile
-        document.addEventListener('DOMContentLoaded', function() {
-            var toggles = document.querySelectorAll('.has-dropdown .dropdown-toggle');
-            toggles.forEach(function(toggle) {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var parentLi = toggle.closest('.has-dropdown');
-                    var wasOpen = parentLi.classList.contains('is-open');
+            // Dropdown toggles (via <button>, not <a>)
+            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var li = btn.parentElement;
+                    var wasOpen = li.classList.contains('is-open');
 
                     // Close all dropdowns first
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                        li.classList.remove('is-open');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
+                        other.classList.remove('is-open');
+                        var b = other.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
                     });
 
                     // Open this one if it wasn't already
                     if (!wasOpen) {
-                        parentLi.classList.add('is-open');
+                        li.classList.add('is-open');
+                        btn.setAttribute('aria-expanded', 'true');
                     }
                 });
             });
-        });
+
+            // Click outside closes everything
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    if (menu) menu.classList.remove('is-open-menu');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                        var b = li.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
     </script>
     
     {{ region: page-scripts }}
