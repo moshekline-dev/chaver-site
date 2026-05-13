@@ -204,76 +204,6 @@ header.site-header {
     overflow: visible;
 }
 
-.main-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0.75rem 20px;
-    position: relative;
-    min-height: 44px;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1001;
-    width: 28px;
-    height: 24px;
-    padding: 0;
-    font-size: 0;
-    color: transparent;
-    overflow: hidden;
-}
-
-.menu-toggle::before {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 3px;
-    background: #3d2f1f;
-    border-radius: 2px;
-    position: absolute;
-    top: 3px;
-    left: 0;
-    box-shadow: 0 8px 0 #3d2f1f, 0 16px 0 #3d2f1f;
-}
-
-header.site-header nav ul,
-.main-nav > ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-    margin: 0;
-    padding: 0;
-}
-
-header.site-header nav a,
-.main-nav a {
-    color: #3d2f1f;
-    font-weight: 500;
-    font-size: 1.05rem;
-    border: none;
-    text-decoration: none;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-header.site-header nav a:hover,
-.main-nav a:hover {
-    color: #8b4513;
-    background-color: rgba(61, 47, 31, 0.1);
-}
-
 /* Site Footer */
 footer.site-footer {
     background: linear-gradient(135deg, #b39f7d 0%, #9d8968 100%);
@@ -3109,85 +3039,6 @@ div.WordSection1 {
         overflow: visible;
     }
     
-    .main-nav {
-        padding: 0;
-        min-height: auto;
-    }
-    
-    /* Show hamburger button with background */
-    .menu-toggle {
-        display: block !important;
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: none;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 6px;
-        padding: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        width: 44px;
-        height: 40px;
-    }
-    
-    .menu-toggle::before {
-        top: 10px;
-        left: 8px;
-    }
-    
-    /* Hide nav by default, positioned as dropdown */
-    header.site-header nav ul,
-    .main-nav > ul {
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        flex-direction: column;
-        gap: 0;
-        position: fixed !important;
-        top: 60px;
-        right: 10px;
-        left: auto;
-        width: 200px;
-        background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        border-radius: 8px;
-        z-index: 999;
-        transition: opacity 0.2s ease, visibility 0.2s ease;
-    }
-    
-    /* Show nav when .show class is added */
-    header.site-header nav ul.show,
-    .main-nav > ul.show,
-    #nav-menu.show {
-        visibility: visible !important;
-        opacity: 1 !important;
-        height: auto !important;
-        max-height: 90vh;
-        overflow-y: auto;
-        padding: 0.5rem 0;
-    }
-    
-    /* Navigation items in dropdown */
-    header.site-header nav ul li,
-    .main-nav > ul li {
-        display: block !important;
-        width: 100%;
-        visibility: visible !important;
-    }
-    
-    /* Navigation links in dropdown */
-    header.site-header nav a,
-    .main-nav a {
-        display: block;
-        padding: 1rem;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        border-radius: 0;
-    }
-    
-    header.site-header nav ul li:last-child a,
-    .main-nav > ul li:last-child a {
-        border-bottom: none;
-    }
 }
 
 @media (max-width: 768px) {
@@ -3567,7 +3418,6 @@ main.content-wrapper:has(.Mesechet) .Perek {
     .series-navigation,
     .breadcrumb,
     .mobile-notice,
-    .menu-toggle,
     .hero,
     .demonstration-section,
     .video-section,
@@ -3954,6 +3804,14 @@ main.content-wrapper:has(.Mesechet) .Perek {
 
 /* MOBILE breakpoint */
 @media (max-width: 768px) {
+    /* On mobile, let body be full-width so the nav menu can span viewport.
+       Desktop body keeps its 1200px centering rule (defined elsewhere). */
+    body {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .nav-toggle {
         display: block;
     }
