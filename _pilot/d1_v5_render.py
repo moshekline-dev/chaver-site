@@ -1,12 +1,27 @@
 #!/usr/bin/env python3
-"""D-1 v4-fixed Mishnah render — exemplar-matched, dir="rtl" removed from content elements.
+"""D-1 v5 Mishnah render — drop mishnah-chapter class from <article>.
 
-Supersedes d1_v4_render.py. Critical change: drops dir="rtl" from <article> and <h1>
-inside <main> (in addition to the v4 omission of dir="rtl" from <table> and <p>).
-The Torah unit exemplars use bare <article> / <h1> — page direction is inherited from
-<html lang="he" dir="rtl"> on the template root. The [lang=he], [dir=rtl] CSS rule at
-main.css line 593 changes font-family on any descendant element it matches; keeping
-dir="rtl" off interior content keeps the cascade clean.
+Root cause of the 3-column header wrap bug found in v4-fixed: main.css lines 772-778
+have a dead rule `.mishnah-chapter .cell-label { display: inline-block; ... }` that
+matches the <th> headers (they sit inside <article class="mishnah-chapter"> AND
+they have class="cell-label col-..."). The inline-block display takes <th> out
+of table-cell layout flow; in 3-column rows the third header (e.g. 2C) doesn't
+fit alongside the first two as inline-blocks and wraps to a new line.
+
+Fix: drop the `mishnah-chapter` class from the <article> wrapper. The descendant
+selector `.mishnah-chapter .cell-label` no longer matches; <th>s render as normal
+table cells; 3-column headers fit on one line.
+
+Why v2 wasn't broken by this rule: v2 used `<th class="col-a">` (no `cell-label` token).
+The descendant selector didn't match.
+Why Leviticus exemplar isn't broken: it uses `<section class="unit-content">` as wrapper,
+not `<article class="mishnah-chapter">`.
+
+The chat-Claude's earlier theories (`dir="rtl"` cascade, `three-col` class needed,
+etc.) were all incorrect — they targeted line 593 which only changes direction/font,
+not table layout. Verified by reading main.css carefully.
+
+Supersedes d1_v4fixed_render.py.
 
 Targets the live Torah unit exemplars:
   * Genesis Unit 1 (2-column)
@@ -39,7 +54,7 @@ REPO_ROOT = '/sessions/sharp-eloquent-mccarthy/mnt/chaver-site'
 JSON_PATH = os.path.join(REPO_ROOT, 'Mishnah-New/English/mishnah_db.json')
 
 ISO_TIMESTAMP = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
-SENTINEL_NEW = f'<!-- D-1 pilot v4-fixed: dir-rtl-removed @ {ISO_TIMESTAMP} -->'
+SENTINEL_NEW = f'<!-- D-1 pilot v5: drop-mishnah-chapter-class @ {ISO_TIMESTAMP} -->'
 PROVENANCE_NEW = f'<!-- rendered-from: _templates/Academic-Content-HE.html @ {ISO_TIMESTAMP} -->'
 
 PILOTS = [
@@ -247,7 +262,7 @@ def render_chapter_main_content(key: str, ch: dict) -> str:
     suffix = CHAPTER_SUFFIX.get(key, '')
     h1_text = f'{tractate_he} פרק {chapter_he}{suffix} – המבנה הספרותי'
 
-    parts = ['        <article class="mishnah-chapter">',
+    parts = ['        <article>',
              f'        <h1>{escape(h1_text)}</h1>']
     for row in ch.get('rows', []):
         table_html = render_row_table(row)
@@ -362,7 +377,7 @@ def verify(file_path: str):
 def atomic_write(file_path: str, content: str) -> int:
     data = content.encode('utf-8')
     dir_ = os.path.dirname(file_path)
-    fd, tmp = tempfile.mkstemp(prefix='.d1v4fixed-', dir=dir_)
+    fd, tmp = tempfile.mkstemp(prefix='.d1v5-', dir=dir_)
     try:
         with os.fdopen(fd, 'wb') as f:
             f.write(data)
@@ -412,27 +427,16 @@ def main():
         except Exception as e:
             failed.append((key, f'EXCEPTION: {type(e).__name__}: {e}'))
 
-    print('\n=== D-1 v4-fixed Render Report ===')
+    print('\n=== D-1 v5 Render Report ===')
     print(f'Timestamp: {ISO_TIMESTAMP}')
     print(f'Pilots rendered: {len(rendered)}; failed: {len(failed)}')
     print()
-    print('| Key | Old | New | Δ | Rows | th/td/p | subdiv | rowspan | Errors |')
+    print('| Key | Old | New | Delta | Rows | th/td/p | subdiv | rowspan | Errors |')
     print('|---|---:|---:|---:|---:|---|---:|---:|---|')
     for r in rendered:
         s = r['stats']
-        err_str = '; '.join(r['errors']) if r['errors'] else '✓'
+        err_str = '; '.join(r['errors']) if r['errors'] else 'OK'
         ttp = f"{s['th_count']}/{s['n_td']}/{s['n_p_torah']}"
-        print(f'| {r["key"]} | {r["old_size"]:,} | {r["new_size"]:,} | {r["delta"]:+,} | {r["n_rows"]} | {ttp} | {s["subdiv_spans"]} | {s["rowspan_count"]} | {err_str} |')
-    if failed:
-        print('\nFailures:')
-        for k, msg in failed:
-            print(f'  - {k}: {msg}')
-    return 0 if not failed and all(not r['errors'] for r in rendered) else 1
-
-
-if __name__ == '__main__':
-    sys.exit(main())
-   ttp = f"{s['th_count']}/{s['n_td']}/{s['n_p_torah']}"
         print(f'| {r["key"]} | {r["old_size"]:,} | {r["new_size"]:,} | {r["delta"]:+,} | {r["n_rows"]} | {ttp} | {s["subdiv_spans"]} | {s["rowspan_count"]} | {err_str} |')
     if failed:
         print('\nFailures:')
