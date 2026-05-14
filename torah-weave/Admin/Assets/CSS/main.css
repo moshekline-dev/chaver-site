@@ -734,6 +734,51 @@ strong.element-count {
     color: #666;
 }
 
+/* === Mishnah chapter page — D-1 pilot styling === */
+/* Mirrors .matrix-table styling for visual parity with Torah units */
+/* Adapted for RTL Hebrew, vertical-align top, wider canvas */
+.mishnah-chapter {
+    direction: rtl;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+.mishnah-chapter h1 {
+    text-align: center;
+    margin: 1em 0 1.5em;
+    font-family: 'David', 'SBL Hebrew', 'Ezra SIL', 'Frank Ruehl', serif;
+}
+.mishnah-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: #f8f9fa;
+    font-size: 0.95em;
+    direction: rtl;
+    font-family: 'SBL Hebrew', 'Ezra SIL', 'David', 'Frank Ruehl', serif;
+}
+.mishnah-cell {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    vertical-align: top;
+}
+.mishnah-chapter .cell-content {
+    margin: 0;
+    text-align: center;
+    direction: rtl;
+    line-height: 1.7;
+}
+.mishnah-chapter .cell-label {
+    display: inline-block;
+    font-size: 0.9em;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+/* === /Mishnah chapter page styling === */
+
+
 /* Color Legend */
 .color-legend {
     background-color: #f9f9f9;
