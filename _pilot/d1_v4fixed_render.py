@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
-"""D-1 v4 Mishnah render — exemplar-matched HTML structure.
+"""D-1 v4-fixed Mishnah render — exemplar-matched, dir="rtl" removed from content elements.
 
-Supersedes d1_v3fix_render.py. Targets the live Torah unit exemplars:
+Supersedes d1_v4_render.py. Critical change: drops dir="rtl" from <article> and <h1>
+inside <main> (in addition to the v4 omission of dir="rtl" from <table> and <p>).
+The Torah unit exemplars use bare <article> / <h1> — page direction is inherited from
+<html lang="he" dir="rtl"> on the template root. The [lang=he], [dir=rtl] CSS rule at
+main.css line 593 changes font-family on any descendant element it matches; keeping
+dir="rtl" off interior content keeps the cascade clean.
+
+Targets the live Torah unit exemplars:
   * Genesis Unit 1 (2-column)
   * Leviticus Unit 1 (3-column)
 
@@ -32,7 +39,7 @@ REPO_ROOT = '/sessions/sharp-eloquent-mccarthy/mnt/chaver-site'
 JSON_PATH = os.path.join(REPO_ROOT, 'Mishnah-New/English/mishnah_db.json')
 
 ISO_TIMESTAMP = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
-SENTINEL_NEW = f'<!-- D-1 pilot v4: exemplar-matched @ {ISO_TIMESTAMP} -->'
+SENTINEL_NEW = f'<!-- D-1 pilot v4-fixed: dir-rtl-removed @ {ISO_TIMESTAMP} -->'
 PROVENANCE_NEW = f'<!-- rendered-from: _templates/Academic-Content-HE.html @ {ISO_TIMESTAMP} -->'
 
 PILOTS = [
@@ -240,8 +247,8 @@ def render_chapter_main_content(key: str, ch: dict) -> str:
     suffix = CHAPTER_SUFFIX.get(key, '')
     h1_text = f'{tractate_he} פרק {chapter_he}{suffix} – המבנה הספרותי'
 
-    parts = ['        <article class="mishnah-chapter" dir="rtl">',
-             f'        <h1 dir="rtl">{escape(h1_text)}</h1>']
+    parts = ['        <article class="mishnah-chapter">',
+             f'        <h1>{escape(h1_text)}</h1>']
     for row in ch.get('rows', []):
         table_html = render_row_table(row)
         indented = '\n'.join('        ' + line if line else line
@@ -304,13 +311,10 @@ def verify(file_path: str):
     if re.search(r'<table[^>]*\b(three-col|single-col)\b', main_inner):
         errors.append('three-col or single-col found on table')
 
-    # No dir="rtl" on table elements
-    if re.search(r'<table[^>]*dir="rtl"', main_inner):
-        errors.append('dir="rtl" found on table')
-
-    # No dir="rtl" on p elements
-    if re.search(r'<p[^>]*dir="rtl"', main_inner):
-        errors.append('dir="rtl" found on p')
+    # No dir="rtl" anywhere in <main> (article, h1, table, p — anywhere)
+    rtl_hits = re.findall(r'<[a-z][^>]*\bdir="rtl"[^>]*>', main_inner)
+    if rtl_hits:
+        errors.append(f'dir="rtl" found in <main> on {len(rtl_hits)} element(s): {rtl_hits[:3]}')
 
     # No colspan in thead
     thead_blocks = re.findall(r'<thead>.*?</thead>', main_inner, re.DOTALL)
@@ -358,7 +362,7 @@ def verify(file_path: str):
 def atomic_write(file_path: str, content: str) -> int:
     data = content.encode('utf-8')
     dir_ = os.path.dirname(file_path)
-    fd, tmp = tempfile.mkstemp(prefix='.d1v4-', dir=dir_)
+    fd, tmp = tempfile.mkstemp(prefix='.d1v4fixed-', dir=dir_)
     try:
         with os.fdopen(fd, 'wb') as f:
             f.write(data)
@@ -408,7 +412,7 @@ def main():
         except Exception as e:
             failed.append((key, f'EXCEPTION: {type(e).__name__}: {e}'))
 
-    print('\n=== D-1 v4 Render Report ===')
+    print('\n=== D-1 v4-fixed Render Report ===')
     print(f'Timestamp: {ISO_TIMESTAMP}')
     print(f'Pilots rendered: {len(rendered)}; failed: {len(failed)}')
     print()
@@ -418,6 +422,17 @@ def main():
         s = r['stats']
         err_str = '; '.join(r['errors']) if r['errors'] else '✓'
         ttp = f"{s['th_count']}/{s['n_td']}/{s['n_p_torah']}"
+        print(f'| {r["key"]} | {r["old_size"]:,} | {r["new_size"]:,} | {r["delta"]:+,} | {r["n_rows"]} | {ttp} | {s["subdiv_spans"]} | {s["rowspan_count"]} | {err_str} |')
+    if failed:
+        print('\nFailures:')
+        for k, msg in failed:
+            print(f'  - {k}: {msg}')
+    return 0 if not failed and all(not r['errors'] for r in rendered) else 1
+
+
+if __name__ == '__main__':
+    sys.exit(main())
+   ttp = f"{s['th_count']}/{s['n_td']}/{s['n_p_torah']}"
         print(f'| {r["key"]} | {r["old_size"]:,} | {r["new_size"]:,} | {r["delta"]:+,} | {r["n_rows"]} | {ttp} | {s["subdiv_spans"]} | {s["rowspan_count"]} | {err_str} |')
     if failed:
         print('\nFailures:')
