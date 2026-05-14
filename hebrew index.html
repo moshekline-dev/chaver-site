@@ -64,38 +64,36 @@
     
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Chaver.com - The Woven Texts Project",
-        "url": "https://chaver.com/hebrew%20index",
-        "inLanguage": "he",
-        "description": "Four decades of peer-reviewed research revealing the two-dimensional literary structure of the Torah and Mishnah.",
-        "author": {
-            "@type": "Person",
-            "name": "Moshe Kline",
-            "url": "https://independent.academia.edu/MosheKline"
-        }
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://chaver.com/#website",
+    "name": "Chaver.com - The Woven Texts Project",
+    "url": "https://chaver.com/hebrew%20index",
+    "inLanguage": "he",
+    "description": "Four decades of peer-reviewed research revealing the two-dimensional literary structure of the Torah and Mishnah.",
+    "author": {
+        "@id": "https://chaver.com/#moshe-kline"
     }
+}
     </script>
     
     <!-- Book Schema -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
+{
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Before Chapter and Verse: Reading the Woven Torah",
+    "author": {
+        "@id": "https://chaver.com/#moshe-kline"
+    },
+    "url": "https://chaver.com/Torah-New/English/Text/Torah-pdf.html",
+    "workExample": {
         "@type": "Book",
-        "name": "Before Chapter and Verse: Reading the Woven Torah",
-        "author": {
-            "@type": "Person",
-            "name": "Moshe Kline"
-        },
-        "url": "https://chaver.com/Torah-New/English/Text/Torah-pdf.html",
-        "workExample": {
-            "@type": "Book",
-            "isbn": "9655982718",
-            "bookFormat": "https://schema.org/Paperback"
-        }
+        "isbn": "9655982718",
+        "bookFormat": "https://schema.org/Paperback"
     }
+}
     </script>
     
     <!-- FAQ Schema -->

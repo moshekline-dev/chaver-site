@@ -343,102 +343,59 @@ For each source file:
 3. **Extract** regions per DWT type (Section 3).
 4. **Render** by substituting regions into the appropriate template (Section 4).
 5. **Clean** orphan nav CSS via `clean_nav_css_from_inline_style()` (Section 5).
-6. **Verify** all 9 checks (Section 6).
-7. If all checks pass → **save** in place (overwrites the original).
-8. If any check fails → **leave original alone**, log to skip list with reason.
+6. **Verify** all 9 check
 
 ---
 
-## 11. Known Open Items Before Scaling
+## 11. `is_home` Detector Convention
 
-- **Template orphan CSS.** Both `_templates/Academic-Content-EN.html` and `Academic-Content-HE.html` still contain orphan nav CSS in their inline `<style>` blocks. Running `clean_nav_css_from_inline_style()` on the **templates** themselves before the bulk run would mean each migrated page no longer inherits orphan rules from the template; the per-page cleanup pass becomes a defensive double-check rather than load-bearing.
-- **`Academic-Content-DWT.dwt` and `hebrew.dwt` files** in `Dynamic Web Templates/` — not migrated by this task. They're stale and can be removed once all DWT-attached pages are migrated and the migration is verified.
-- **Stale `.menu-toggle` / `.main-nav` rules in `main.css`** — previously removed in an earlier task; verified gone.
-- **`/mishnah/` 404** — separate content task; the new nav has a placeholder link that resolves once the portal page is built.
+(Added 2026-05-14 after E-2 mid-run anomaly.)
 
----
+A "home page" is one of EXACTLY these two files at the repo root:
 
-## 12. Reference Implementation Snippet
+- `index.html` (English home, canonical URL: `https://chaver.com/`)
+- `hebrew index.html` (Hebrew home, canonical URL: `https://chaver.com/hebrew%20index`)
+
+Sub-directory `index.html` / `index.htm` files (e.g., `Mishnah-New/English/Articles/index.html`,
+`torah-weave/data/index.html`, `torah-weave/introduction/woven-torah-slides/index.html`)
+are **NOT** home pages. They are sub-directory landing pages.
+
+The distinction matters for:
+
+- **hreflang** — only the EN/HE home pair gets `<link rel="alternate" hreflang="en/he">` tags
+- **og:type=website** classification — only home pages should be type=website; sub-dir index
+  pages are type=article or website depending on content
+- **BreadcrumbList skip rule** — home pages skip BreadcrumbList (it's the root); sub-dir
+  index pages SHOULD have BreadcrumbList showing their position
+
+### Correct detector pattern
 
 ```python
-# bulk_migrate.py — outline
-from pathlib import Path
-import sys, re
-sys.path.insert(0, str(Path(__file__).parent))
-from nav_css_cleanup import (
-    clean_nav_css_from_inline_style, check_mobile_nav_not_hidden,
-)
-
-REPO = Path('.')
-BACKUP = REPO / '_backup-pre-migration'
-TPL_EN = (REPO / '_templates' / 'Academic-Content-EN.html').read_text(encoding='utf-8')
-TPL_HE = (REPO / '_templates' / 'Academic-Content-HE.html').read_text(encoding='utf-8')
-
-RE_EDITABLE = re.compile(
-    r'<!--\s*#BeginEditable\s+"([^"]+)"\s*-->(.*?)<!--\s*#EndEditable\s*-->',
-    re.DOTALL
-)
-
-def detect_lang(path: Path, source: str) -> str:
-    if '/Hebrew/' in str(path):           return 'HE'
-    if 'hebrew' in str(path).lower():      return 'HE'
-    if 'hebrew.dwt' in source.lower():     return 'HE'
-    if re.search(r'<html\s[^>]*lang="he"', source): return 'HE'
-    return 'EN'
-
-def detect_dwt(source: str) -> str:
-    m = re.search(r'#BeginTemplate\s+"[^"]*?/([^/"]+)\.dwt"', source)
-    return m.group(1) + '.dwt' if m else 'standalone'
-
-def migrate_one(path: Path) -> dict:
-    source = path.read_text(encoding='utf-8', errors='replace')
-    lang = detect_lang(path, source)
-    dwt = detect_dwt(source)
-    template = TPL_HE if lang == 'HE' else TPL_EN
-    
-    if dwt == 'Academic-Content-DWT.dwt':
-        regions = {m.group(1): m.group(2) for m in RE_EDITABLE.finditer(source)}
-    elif dwt == 'hebrew.dwt':
-        raw = {m.group(1): m.group(2) for m in RE_EDITABLE.finditer(source)}
-        regions = {
-            'doctitle': raw.get('doctitle', ''),
-            'meta': '',  # no meta region in hebrew.dwt
-            'additional-styles': raw.get('additional-styles', ''),
-            'content': raw.get('start', ''),       # rename
-            'page-scripts': raw.get('page-scripts', ''),
-        }
-    else:
-        # standalone — flag for manual review
-        return {'status': 'skip', 'reason': 'standalone — manual review required'}
-    
-    rendered = template
-    for k, v in regions.items():
-        rendered = rendered.replace('{{ region: ' + k + ' }}', v)
-    
-    cleaned = clean_nav_css_from_inline_style(rendered)
-    
-    findings = check_mobile_nav_not_hidden(cleaned)
-    if findings:
-        return {'status': 'skip', 'reason': f'mobile nav hidden: {findings}'}
-    
-    # Backup + save
-    backup_path = BACKUP / path.relative_to(REPO)
-    backup_path.parent.mkdir(parents=True, exist_ok=True)
-    backup_path.write_bytes(path.read_bytes())  # byte-exact
-    path.write_text(cleaned, encoding='utf-8')
-    return {'status': 'ok', 'lang': lang, 'dwt': dwt}
+def is_home(file_path):
+    rel_path = str(file_path.relative_to(REPO_ROOT))
+    return rel_path in ('index.html', 'hebrew index.html')
 ```
 
----
+### Anti-pattern (caused the E-2 mid-run bug)
 
-## Files Referenced
+```python
+def is_home(file_path):
+    return file_path.name == 'index.html'  # WRONG — matches sub-dir index files too
+```
 
-| Path | Role |
-|---|---|
-| `_templates/Academic-Content-EN.html` | English target template |
-| `_templates/Academic-Content-HE.html` | Hebrew target template |
-| `_pilot/nav_css_cleanup.py` | CSS cleanup utility + verification check |
-| `_pilot/migration-test-4pages.md` | Pilot results (4 representative pages, all 8 baseline checks passed) |
-| `_pilot/woven-torah-method-fix.md` | Mid-pilot finding + fix that motivated check #9 |
-| `_pilot/migration-logic.md` | This document |
-| `_backup-pre-migration/` | Rollback path — 1:1 backup before migration |
+### The bug
+
+E-2's `is_home` matched on filename only, so 3 sub-dir `index.html` files were tagged with
+hreflang pairs pointing to the actual home pages — wrong, since those sub-dir pages aren't
+homes and have no language alternate. They also had their BreadcrumbList incorrectly
+skipped.
+
+The mid-run fix surgically removed the 3 wrong hreflang triples and backfilled the missing
+BreadcrumbList. Future per-page schema-injection passes should use the **path-based**
+detector above.
+
+The affected files were:
+
+- `Mishnah-New/English/Articles/index.html` (sub-dir index of EN Mishnah Articles)
+- `torah-weave/data/index.html` (Torah data exports listing)
+- `torah-weave/introduction/woven-torah-slides/index.html` (slideshow landing page)
