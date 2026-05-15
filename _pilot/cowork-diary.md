@@ -504,6 +504,76 @@ Gotcha — verification grep patterns:
   find Mishnah-New/Hebrew/Text -name "*Perek*.htm" -type f -exec grep -l 'cell-label[^"]*"[^>]*>[^<]*</th\|<th[^>]*cell-label' {} \;
   ```
 
+### 2026-05-15 — about-Moshe-Kline: Mishnah Zenodo DOI, ResearchGate sameAs, hasCredential
+
+**What was done:**
+- Added Mishnah dataset (Zenodo DOI `10.5281/zenodo.20179532`) to the about page in three places: Person ItemList JSON-LD as position 16, a new visible `<h3>Datasets</h3>` block in the Books area (which also retro-adds a visible reference to the Torah dataset DOI `10.5281/zenodo.19625073`, previously only present in JSON-LD), and the footer Resources `<ul>` next to the Torah dataset link.
+- Added `https://www.researchgate.net/profile/Moshe-Kline` to Person `sameAs` (now 7 URLs, was 6). Inserted between the Academia.edu and Amazon entries.
+- Added `hasCredential` array to Person JSON-LD with two `EducationalOccupationalCredential` entries: St. John's College (`credentialCategory: "degree"`, `educationalLevel: "Bachelor's"`) and Yeshiva University (`credentialCategory: "degree"`, no `educationalLevel`). Inserted directly after `alumniOf`.
+
+**Files modified:**
+- `about-Moshe-Kline.html` (57,200 -> 59,396 bytes; 897 -> 938 lines; sha256 `aac0340a053b33c2d1a8149d70b14a4a75da402af4ee578faa41d5da3edeceff`)
+
+**Decisions locked:**
+- Yeshiva University `hasCredential` left without `educationalLevel`. Task spec said "corresponding entry" but did not specify the level; rather than guess, the credential is asserted as `degree` only. Moshe should confirm and add `educationalLevel` (e.g., `"Bachelor's"`, `"Master's"`) if desired -- single-line JSON-LD edit.
+- Visible Torah DOI surfaced. The original visible body referenced `/torah-weave/data/` for the Torah dataset but never the Zenodo DOI itself; the new `<h3>Datasets</h3>` block surfaces both DOIs together for symmetry. Reverse this if Moshe prefers the body to keep only the relative `/torah-weave/data/` link.
+- ResearchGate URL not independently verified. RG returns 403 to bot probes (their normal anti-scraping behavior); a `404` would mean "wrong URL" but `403` is silence. Trusted the URL Moshe provided. **Action item: open the URL in a browser to confirm it loads the right profile.**
+
+**Proven patterns:**
+- Atomic write pattern saved this task. Initial round of in-place `Edit` calls succeeded individually but the resulting file was truncated 54 lines (lost script body + closing tags), almost certainly due to OneDrive sync interference mid-write -- same family of issue as the `.git/index.lock` "Operation not permitted" warning. Recovered by: `git show HEAD:<file>` -> in-memory string replacements in Python with `assert count == 1` per anchor -> JSON-LD re-parse all 5 blocks -> tail-anchor `</html>` check -> write to `*.tmp.cowork` in same dir -> `fsync` -> re-read to verify identity -> `os.replace` over target -> re-check sha after a `sleep 4` to detect post-write sync regression. Encode this as the default pattern for any future about-page or template edit on the OneDrive-mounted repo.
+- The same truncation hit this diary file when first appended via in-place `Edit` (530 -> 512 lines, ended mid-word). Recovered with the same atomic-write pattern. **Conclusion: do not use in-place `Edit` on files in this OneDrive-mounted repo. Use the atomic write pattern for every change.**
+
+**What failed and why:**
+- Sequential `Edit` calls on `about-Moshe-Kline.html` silently truncated the file at the end. Diff stat reported 42 insertions / 54 deletions -- but the 54 deletions were never requested; they were the JS body of the nav-toggle script and the closing `</script></body></html>`. The intermediate state never produced an error from the Edit tool. If this had been pushed without verification it would have broken the page.
+- A second in-place `Edit` on `_pilot/cowork-diary.md` truncated it 18 lines (530 -> 512), ending mid-word. Same root cause.
+- The `.git/index.lock` "Operation not permitted" warning that surfaced during `git status` is a related symptom -- file locks on this OneDrive-mounted repo are unreliable.
+
+**Current state:**
+- All four spec requirements satisfied. Working tree shows `M about-Moshe-Kline.html` and `M _pilot/cowork-diary.md`. JSON-LD reparses cleanly (5 blocks: `@graph`, `Person`, `ProfilePage`, `ItemList`, `BreadcrumbList`). `sameAs` has 7 URLs. ItemList has 16 items. `hasCredential` present with 2 entries. DOI `20179532` appears 4x in the about file (visible body, JSON-LD `identifier`, JSON-LD `url`, footer `<a href>`). Pending Moshe's review in GitHub Desktop and push.
+
+**Next step:**
+- Moshe: open `about-Moshe-Kline.html` diff in GitHub Desktop, confirm the Yeshiva `hasCredential` entry is acceptable as-is or add `educationalLevel`, open the new ResearchGate URL in a browser to confirm the profile, commit + push, purge Cloudflare cache. After deploy, validate the page in Google's Rich Results Test to confirm all five JSON-LD blocks register cleanly.
+- Future Cowork edits to OneDrive-mounted files: use the atomic-write pattern documented above, not sequential in-place `Edit` calls.
+
+### 2026-05-15 — Mishnah chapter <title> tag fix (D-3)
+
+**What was done:**
+- Updated `<title>`, `<meta name="twitter:title">`, `<meta property="og:title">` (when transliterated), and ALL Article JSON-LD `headline` fields on every Mishnah chapter page.
+- New `<title>` derives from the (already-correct) `<h1>`: `{h1_text} | Chaver.com`. New `headline` matches the title without the ` | Chaver.com` suffix.
+- og:title was updated only when its current value contained `[A-Za-z]` (per spec: leave as-is unless it carries English transliteration); in practice every chapter file's og:title was English, so all 519 newly-modified files had og:title updated.
+- 525 Mishnah chapter pages now have correct titles. 519 were modified this run; the other 6 (Berakhot 1, Megillah 1, Eduyot 1, Kinnim 1, Sotah 9 A, Shabbat 22 — the D-1 pilots) were already correct from the original D-1/D-2 work and skipped by the idempotency check.
+- All five verification greps from the task spec returned the expected results: 0 chapter files with old format, 0 with English transliteration in `<title>`, 0 with `Structured Mishnah` prefix, 0 missing `</html>`, 0 leftover `.tmp.cowork` files.
+
+**Files modified:**
+- 519 `.htm` files under `Mishnah-New/Hebrew/Text/Seder */<tractate>/*.htm`
+- Diff stats: 2,579 insertions / 2,579 deletions across 519 files. Lines balanced because every change is a 1-for-1 line replacement (no insertions or deletions).
+- Diff scope verification: every changed line is `<title>`, `twitter:title`, `og:title`, or `"headline"` — no other content touched. Confirmed by piping `git diff -U0` through a negative grep.
+
+**Decisions locked:**
+- Spec said "files matching `Mishnah-New/Hebrew/Text/Seder */Masechet */*.htm`" but the corpus has 5 variant tractate-directory spellings beyond `Masechet *`: `Maschet Shekalim`, `Mashechet Shviit`, `Mesechet Trumot`, `Baba Metzia` (no Masechet prefix), `Seder Baba Batra` (Seder prefix instead of Masechet). The first script run filtered by `Masechet *` and silently missed 49 files (all Shekalim plus a few others). Final script removes the directory-name filter entirely and uses the in-file provenance marker (`rendered-from: _templates/Academic-Content-HE.html`) as the canonical scope check, which is also what the spec actually says ("Only files that have the provenance marker"). **Lesson: when a spec gives both a path glob and an in-file marker as scope filters, prefer the marker — directory naming is unreliable in this corpus.**
+- Sotah 9a/9b special split handled correctly. The h1s already carry the disambiguating `(חלק א)` / `(חלק ב)` suffix from D-1 v2, so the title and headline inherit it automatically: `מסכת סוטה פרק ט (חלק ב) – המבנה הספרותי | Chaver.com`.
+- Both Article JSON-LD `headline` fields per file were updated. Each chapter page has two Article blocks (one E-2-injected with `mainEntityOfPage`, one legacy per-page block from earlier renders); both had stale headlines and both now match the new title.
+
+**Proven patterns:**
+- Atomic-write per file: `path.with_suffix(path.suffix + ".tmp.cowork")`, write bytes, read-back compare against in-memory bytes, raise on mismatch, `os.replace(tmp, path)`. Skipped `fsync` this round (OneDrive made it slow without adding safety the read-back doesn't already provide). Idempotent — if the script is killed mid-run, re-running picks up the partially-written `.tmp.cowork` (overwritten by next `open(tmp, "wb")`) and processes only the files still needing changes. **Confirmed in this task: first run was killed at the 45s bash timeout after 469 files; re-run finished the rest cleanly.**
+- Skip-condition idempotency: a single `in` check (`"המבנה הספרותי | Chaver.com</title>" in text`) is sufficient and cheap. After this task, every chapter page satisfies it.
+- Scope filter via in-file marker beats glob filter for this corpus. The 525 chapter pages all have `rendered-from: _templates/Academic-Content-HE.html`; the 63 non-chapter pages (`Pirkei Masechet *` tractate indices, `Seder X.html` portal pages, etc.) don't and are skipped automatically.
+
+**What failed and why:**
+- First script run timed out after 45s having processed 469/519 files. Reasonable — OneDrive-backed filesystem is slow, and 519 atomic writes takes more than 45s. Idempotent re-run handled it; not a defect, just a budget thing. Future bulk-edit scripts should expect this and not assume single-call completion.
+- The Edit tool truncated the d3_title_fix.py script in `outputs/` (NOT OneDrive — this is `AppData\Roaming\Claude\...`) when used to rewrite the `find_candidate_files` function — lost ~10 lines from the bottom of the file. **This confirms the truncation is not exclusive to OneDrive: the Edit tool itself is unreliable for non-trivial edits in this Cowork session.** Recovered by rewriting the entire script via `cat > file <<'PYEOF' ... PYEOF` heredoc in bash. **Updated guidance: avoid the Edit tool entirely for this session. Use Write for new files, and bash heredoc or atomic-write Python for any change to existing files.**
+- The diary file was previously truncated by Edit too (last task). This entry is being appended via the same bash-heredoc + atomic-write pattern.
+
+**Current state:**
+- 525 Mishnah chapter pages have correct `<title>`, `<meta name="twitter:title">`, `<meta property="og:title">`, and Article `headline` fields. All point at the Hebrew chapter title with the ` | Chaver.com` suffix on the title and og:title and twitter:title, no suffix on JSON-LD headline.
+- Working tree shows 519 `M` entries under `Mishnah-New/Hebrew/Text/`. All other site sections untouched.
+- Pending Moshe's review in GitHub Desktop and push, followed by Cloudflare cache purge.
+
+**Next step:**
+- Moshe: review the GitHub Desktop diff (sample any 2–3 files; the diff is line-symmetric so the eyeball check is fast), commit + push, purge Cloudflare cache, spot-check 2–3 chapter pages in a browser to confirm the tab title shows Hebrew.
+- Future Cowork tasks on this repo: keep using the atomic-write pattern. Avoid the Edit tool entirely. Bulk operations exceed 45s budget — design scripts to be idempotent and re-runnable.
+- Optional cleanup: the `Maschet Shekalim` (typo) and `Mashechet Shviit` (typo) and `Mesechet Trumot` (variant) directory names work fine for the URL routing now (Cloudflare Pages handles the URL-encoded space and the canonical link in each file points at the actual on-disk path), but they will surprise any future glob-based bulk operation. A rename pass would normalize them — out of scope for this task; flagging only.
+
 ## Standing reference
 
 ### CSS class quick-reference (from main.css)
