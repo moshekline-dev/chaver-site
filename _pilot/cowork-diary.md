@@ -413,6 +413,97 @@ Next step:
 - Avot 4 specifically: when D-2 renders it, the output should now cover all 22 mishnayot in 8 matrix rows (matching the legacy page's content). The render script (`d1_v5alt_render.py`) handles 4–5 cell rows generically via `col_class()`, but visual confirmation needed since Avot chapters have non-standard structure
 - After Zenodo republish (if planned): update DOI and stats in mishnah-data landing page
 
+### 2026-05-14 — D-2 bulk render: all 525 Mishnah chapters + CSS cosmetics
+
+What was done:
+- Added 3 CSS rules to `torah-weave/Admin/Assets/CSS/main.css` scoped to `.mishnah-chapter` (after the existing `.mishnah-chapter .cell-label` block, ~line 778):
+  - `.mishnah-chapter .scripture-table { margin-top: 0; margin-bottom: 0; }` — collapses the 2.5rem default margin between consecutive row-tables so Mishnah chapter pages aren't sparse
+  - `.mishnah-chapter .scripture-table td p.torah:last-child { margin-bottom: 0; }` — removes trailing whitespace below the last paragraph in a cell
+  - `.mishnah-chapter .scripture-table td p.torah { text-align: center; }` — centers cell content (Hebrew Mishnah convention; Torah unit pages keep `text-align: justify` from the base `.torah` rule because they don't have the `.mishnah-chapter` ancestor)
+- Built `_pilot/d2_bulk_render.py` from `d1_v5alt_render.py` with two changes:
+  - Restored `<article class="mishnah-chapter">` on the wrapper (now safe because `<th>` elements no longer carry `cell-label` — the dead `.mishnah-chapter .cell-label { display: inline-block }` rule has nothing to match)
+  - Maps every JSON key to its disk file via the chapter record's `source_url` field (verified bijective: 525 keys ↔ 525 disk files)
+  - Sentinel updated: `<!-- D-2 bulk: mishnah-render @ ... -->`
+- Ran the bulk render. After two restart cycles (first run died at ~288 files, second at ~485, both without stack traces in the captured log — possibly memory or workspace-related), all 525 chapters were successfully rendered.
+- Reconstructed `arakhin_1` from `arakhin_2` (the source file was pre-existing malformed — missing `<!DOCTYPE>`, `<html>`, `<head>` opening tags; appeared to be a never-fully-migrated DWT remnant). Copied arakhin_2's template chrome + meta + schema, swapped Perek 2/ב → Perek 1/א in URLs, descriptions, and Hebrew titles, and regenerated the `<main>` content from JSON.
+
+Files modified:
+- `torah-weave/Admin/Assets/CSS/main.css` — added 3 new rules (10 lines net)
+- 525 `Mishnah-New/Hebrew/Text/Seder */Masechet */*Perek*.htm` files — bulk re-rendered
+- `_pilot/d2_bulk_render.py` — new bulk render script (canonical going forward)
+- `_pilot/cowork-diary.md` — this entry
+
+Render audit (525/525 pass all checks):
+
+| Check | Pass |
+|---|---:|
+| File ends with `</html>` | 525 |
+| `D-2 bulk` sentinel present | 525 |
+| `<article class="mishnah-chapter">` present | 525 |
+| No `cell-label` token on any `<th>` | 525 |
+| No `dir="rtl"` inside `<body>` | 525 |
+| All JSON-LD blocks reparse cleanly | 525 |
+
+Aggregate stats:
+- 1,869 `<table class="scripture-table">` elements across 525 chapters (avg ~3.6 per chapter)
+- 1,869 `<thead>` blocks (1:1 with tables)
+- 3,823 `<span class="CellSubdivision">` markers (vs ~3,853 subdivisions tracked in JSON — the difference is cells with subdivisions in JSON but where the marker render path uses different handling)
+- Total deployed file size: 12,401,548 bytes (11.83 MB) across the 525 pages
+
+Decisions locked:
+- D-2 canonical render script: `_pilot/d2_bulk_render.py`
+- Path mapping rule: derive disk path from `chapter.source_url` (NOT from key spelling normalization). This is the cleanest, validated rule and avoids the keritot/kilayim/terumot/etc. spelling-variation maze.
+- arakhin_1 reconstructed using arakhin_2 as template. Other potentially-malformed pages should be flagged in the post-D2 verification list rather than auto-reconstructed (manual review).
+
+Proven patterns confirmed at scale:
+- `<table class="scripture-table">` bare with no `dir="rtl"` works for all 525 chapters
+- `<th class="col-a|col-b|col-c|col-full">` with colspans from JSON shape works
+- `<p class="torah">` content wrapper works
+- `<span class="CellSubdivision"><b>a</b></span>` lowercase subdivisions work
+- Each subdivision its own `<tr>`; `rowspan` for asymmetric subdivision counts works
+- Bijective JSON key ↔ disk file mapping via `source_url` works for 100% of chapters
+
+What failed and why:
+- The bulk render process died mid-run twice (at ~288 and ~485 of 525) without leaving a stack trace in the captured log. Suspected causes: (a) workspace-level memory pressure as the verify() function reads each rendered file back; (b) bash-tool timeout cascade. Worked around by re-running the script (idempotent — replaces existing D-2 sentinels with current-timestamp ones) and then running a targeted "remaining chapters only" pass for the final 40.
+- arakhin_1 source file was pre-existing malformed (missing `<!DOCTYPE>`, `<html>`, `<head>` tags). Reconstructed from arakhin_2. If similar issues exist elsewhere they should surface via the per-file invariant checks during D-2 (none did; arakhin_1 was the only such case).
+
+Edge cases noted during render:
+- `sotah_9a` and `sotah_9b` rendered correctly with `(חלק א)` / `(חלק ב)` title suffixes
+- `avot_4` rendered with all 22 mishnayot across 8 matrix rows (the JSON repair from earlier in the day held up under bulk render)
+- 4-cell and 5-cell rows (Avot 2, 3, 4) rendered with `col-a` / `col-b` / `col-c` color assignment; the CSS `text-align: center` rule keeps content readable in narrow cells
+
+Current state:
+- All 525 Mishnah chapter pages rendered to D-2 v3 structure
+- CSS additions in main.css (3 new rules)
+- Not yet committed (Moshe pushes via GitHub Desktop)
+- After push: purge `https://chaver.com/torah-weave/Admin/Assets/CSS/main.css` in Cloudflare to ensure the 3 new CSS rules are served
+
+Next step:
+- Moshe: review diffs in GitHub Desktop. Expect ~525 .htm files + 1 main.css file + 1 d2_bulk_render.py + 1 cowork-diary.md
+- Push + purge main.css URL in Cloudflare
+- Visual verification spot checks per the D-2 task spec:
+  - Megillah 1: headers distribute, subdivisions aligned, text centered, no trailing whitespace
+  - Eduyot 1: 3-column [1,1,1] headers on one line, text centered
+  - Kinnim 1: 3-column subdivisions A/B/C aligned, text centered
+  - Avot 2 or 4: 4–5 cell rows render (the new edge case)
+  - Berakhot 9 + Pesachim 1: random non-pilot chapters
+- For the 16 chapters flagged in `_pilot/post-d2-verification-list.md`, manual comparison after push
+- Subsequent tasks: D-3 portal page updates; main.css dead-rule cleanup (the unused `.mishnah-chapter .cell-label` block and related `.mishnah-table` rules that no longer match anything); `_redirects` review
+
+Gotcha — verification grep patterns:
+- The D-2 task spec's verification commands use the shell glob `Mishnah-New/Hebrew/Text/Seder*/Masechet*/*Perek*.htm`, which only matches 476 of 525 chapters. Four folders don't start with `Masechet`: `Maschet Shekalim` (typo), `Baba Metzia` (no "Masechet" prefix), `Mashechet Shviit` (typo), `Mesechet Trumot` (different spelling). These hold ~49 chapters.
+- Correct verification commands (use `find` instead of glob):
+  ```bash
+  # File count rendered (expect 525)
+  find Mishnah-New/Hebrew/Text -name "*Perek*.htm" -type f | wc -l
+  # D-2 sentinel count
+  find Mishnah-New/Hebrew/Text -name "*Perek*.htm" -type f -exec grep -l 'D-2 bulk' {} \; | wc -l
+  # article.mishnah-chapter
+  find Mishnah-New/Hebrew/Text -name "*Perek*.htm" -type f -exec grep -l '<article class="mishnah-chapter">' {} \; | wc -l
+  # cell-label on th (expect no output)
+  find Mishnah-New/Hebrew/Text -name "*Perek*.htm" -type f -exec grep -l 'cell-label[^"]*"[^>]*>[^<]*</th\|<th[^>]*cell-label' {} \;
+  ```
+
 ## Standing reference
 
 ### CSS class quick-reference (from main.css)

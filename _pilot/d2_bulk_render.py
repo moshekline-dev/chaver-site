@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-"""D-1 v5-alt — chat-Claude's proposed fix, applied to megillah_1 ONLY for A/B comparison.
+"""D-2 bulk render — all 525 Mishnah chapters using the D-1 v5-alt proven pattern.
 
-Difference vs my d1_v5_render.py:
-  * Drops `cell-label` from <th> classes — uses only `col-a` / `col-b` / `col-c` / `col-full`.
-  * Restores colspan attribute on <th> AND <td> from JSON `position.colspan`.
-  * Keeps the bare <article> wrapper that my v5 already produced.
+Extends d1_v5alt_render.py with two changes:
+  1. Restores `<article class="mishnah-chapter">` on the wrapper (safe now that <th>
+     elements no longer carry `cell-label` — the .mishnah-chapter .cell-label rule
+     has nothing to match). This activates the new CSS rules at main.css ~line 778:
+       .mishnah-chapter .scripture-table { margin: 0; }
+       .mishnah-chapter .scripture-table td p.torah:last-child { margin-bottom: 0; }
+       .mishnah-chapter .scripture-table td p.torah { text-align: center; }
+  2. Iterates ALL 525 chapter keys (excluding `_meta`), using `source_url` from each
+     chapter record to derive the disk path (avoids brittle name-normalization).
 
-Sentinel: `<!-- D-1 pilot v5-alt: drop-cell-label-restore-colspans @ ... -->`
+Strategy: surgical in-place replacement of <main> inner content + sentinel + provenance.
+Defensive verification per file. Continues on per-file errors (logs and proceeds).
 
-This is a single-chapter experiment to compare the two fixes visually on the live site:
-  - megillah_1  → chat-Claude's variant (this script)
-  - berakhot_1, eduyot_1, kinnim_1, sotah_9a, shabbat_22  → my v5 (unchanged)
-
-Strategy: surgical in-place — find <article>...</article>, replace the tables between the
-first <table and the last </table>, swap the D-1 sentinel.
+Sentinel: `<!-- D-2 bulk: mishnah-render @ {ISO_TIMESTAMP} -->`
 """
 import json
 import os
@@ -21,28 +22,25 @@ import re
 import sys
 import tempfile
 import time
+import urllib.parse
 from html import escape
 
 REPO_ROOT = '/sessions/sharp-eloquent-mccarthy/mnt/chaver-site'
 JSON_PATH = os.path.join(REPO_ROOT, 'Mishnah-New/English/mishnah_db.json')
 
 ISO_TIMESTAMP = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
-SENTINEL_NEW = f'<!-- D-1 pilot v5-alt: drop-cell-label-restore-colspans @ {ISO_TIMESTAMP} -->'
+SENTINEL_NEW = f'<!-- D-2 bulk: mishnah-render @ {ISO_TIMESTAMP} -->'
 PROVENANCE_NEW = f'<!-- rendered-from: _templates/Academic-Content-HE.html @ {ISO_TIMESTAMP} -->'
 
-PILOTS = [
-    ('berakhot_1', 'Mishnah-New/Hebrew/Text/Seder Zeraim/Masechet Brachot/Mesechet Brachot Perek 1.htm'),
-    ('megillah_1', 'Mishnah-New/Hebrew/Text/Seder Moed/Masechet Megillah/Masechet Megillah Perek 1.htm'),
-    ('eduyot_1',   'Mishnah-New/Hebrew/Text/Seder Nezikin/Masechet Eduyot/Masechet Eduyot Perek 1.htm'),
-    ('kinnim_1',   'Mishnah-New/Hebrew/Text/Seder Kodashim/Masechet Kinnim/Masechet Kinnim Perek 1.htm'),
-    ('sotah_9a',   'Mishnah-New/Hebrew/Text/Seder Nashim/Masechet Sotah/Masechet Sotah Perek 9 A.htm'),
-    ('shabbat_22', 'Mishnah-New/Hebrew/Text/Seder Moed/Masechet Shabbat/Masechet Shabbat Perek 22.htm'),
-]
+URL_PREFIX = 'https://chaver.com/'
 
 HE_TO_LATIN = {'א': 'A', 'ב': 'B', 'ג': 'C', 'ד': 'D', 'ה': 'E'}
 SUBDIVISION_LETTERS = {'A', 'B', 'C', 'D', 'E'}
 
+CHAPTER_SUFFIX = {'sotah_9a': ' (חלק א)', 'sotah_9b': ' (חלק ב)'}
 
+
+# ===== Helpers (identical to v5alt) =====
 def normalize_label(raw):
     if not raw:
         return ''
@@ -103,7 +101,6 @@ def split_into_subdivisions(body_runs):
                         if is_subdivision_marker_run(r)]
     if not marker_positions:
         return [(None, body_runs)]
-
     segments = []
     first_idx = marker_positions[0][0]
     if first_idx > 0:
@@ -137,7 +134,7 @@ def render_runs_html(runs):
 
 
 def color_class(n_cells, idx):
-    """Use the v2/chat-Claude naming: col-a / col-b / col-c / col-full."""
+    """v5-alt convention: col-a / col-b / col-c / col-full."""
     if n_cells == 1:
         return 'col-full'
     if n_cells == 2:
@@ -183,7 +180,6 @@ def render_row_table(row):
 
     lines = ['<table class="scripture-table">']
 
-    # THEAD — colspan from JSON shape, color class only (no `cell-label`)
     thead_cells = []
     for i, d in enumerate(cell_data):
         cls = color_class(n_cells, i)
@@ -193,7 +189,6 @@ def render_row_table(row):
     lines.append('        <tr>' + ''.join(thead_cells) + '</tr>')
     lines.append('    </thead>')
 
-    # TBODY — colspan from JSON shape, rowspan for asymmetric subdivisions
     lines.append('    <tbody>')
     if max_subdivs == 0:
         tds = []
@@ -235,15 +230,14 @@ def render_row_table(row):
     return '\n'.join(lines)
 
 
-CHAPTER_SUFFIX = {'sotah_9a': ' (חלק א)', 'sotah_9b': ' (חלק ב)'}
-
 def render_chapter_main_content(key, ch):
     tractate_he = ch.get('tractate_he', '')
     chapter_he = ch.get('chapter_he', '')
     suffix = CHAPTER_SUFFIX.get(key, '')
     h1_text = f'{tractate_he} פרק {chapter_he}{suffix} – המבנה הספרותי'
 
-    parts = ['        <article>',
+    # KEY CHANGE FROM v5alt: restore mishnah-chapter class on <article>
+    parts = ['        <article class="mishnah-chapter">',
              f'        <h1>{escape(h1_text)}</h1>']
     for row in ch.get('rows', []):
         table_html = render_row_table(row)
@@ -254,8 +248,21 @@ def render_chapter_main_content(key, ch):
     return '\n'.join(parts)
 
 
+# ===== Path mapping =====
+def derive_disk_path(source_url):
+    """source_url → relative disk path under REPO_ROOT."""
+    if not source_url.startswith(URL_PREFIX):
+        raise ValueError(f'URL prefix mismatch: {source_url!r}')
+    path_part = source_url[len(URL_PREFIX):]
+    decoded = urllib.parse.unquote(path_part)
+    if not decoded.endswith('.htm'):
+        decoded += '.htm'
+    return decoded
+
+
+# ===== In-place transform =====
 MAIN_RE = re.compile(r'(<main class="content-wrapper">)(.*?)(</main>)', re.DOTALL)
-SENTINEL_ANY_RE = re.compile(r'<!--\s*D-1 pilot v[0-9][0-9a-z\-]*:[^>]*-->')
+SENTINEL_ANY_RE = re.compile(r'<!--\s*D-[12](?:\s+bulk)?\s+pilot[^>]*-->|<!--\s*D-[12][^>]*-->')
 PROVENANCE_RE = re.compile(r'<!-- rendered-from: _templates/Academic-Content-HE\.html @ [^>]+-->')
 
 
@@ -265,19 +272,76 @@ def transform_file(file_text, new_main_inner):
     new_text, n_main = MAIN_RE.subn(main_repl, file_text, count=1)
     if n_main != 1:
         raise RuntimeError(f'Expected 1 <main> match, got {n_main}')
+
     new_text, n_sent = SENTINEL_ANY_RE.subn(SENTINEL_NEW, new_text, count=1)
     if n_sent != 1:
-        raise RuntimeError(f'Expected 1 D-1 sentinel match, got {n_sent}')
+        # Some files may not have any D-1 sentinel yet (never went through pilot).
+        # In that case, prepend the sentinel inside <head> after the opening tag.
+        if '<head>' in new_text and SENTINEL_NEW not in new_text:
+            new_text = new_text.replace('<head>', f'<head>\n    {SENTINEL_NEW}', 1)
+            n_sent = 1
+        else:
+            raise RuntimeError(f'Could not place sentinel; existing sentinels: {n_sent}')
+
     new_text, n_prov = PROVENANCE_RE.subn(PROVENANCE_NEW, new_text, count=1)
     if n_prov != 1:
-        raise RuntimeError(f'Expected 1 provenance match, got {n_prov}')
+        # Some files may not have a provenance marker; inject after <!DOCTYPE html>
+        if '<!DOCTYPE html>' in new_text and PROVENANCE_NEW not in new_text:
+            new_text = new_text.replace('<!DOCTYPE html>',
+                                        f'<!DOCTYPE html>\n{PROVENANCE_NEW}', 1)
+            n_prov = 1
+        else:
+            raise RuntimeError(f'Could not place provenance; existing: {n_prov}')
+
     return new_text
+
+
+JSON_LD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
+
+
+def verify(file_path):
+    errors = []
+    with open(file_path, 'rb') as f:
+        data = f.read()
+    size = len(data)
+    if size < 5000:
+        errors.append(f'too small ({size}B)')
+    if not data.rstrip().endswith(b'</html>'):
+        errors.append('no </html>')
+    text = data.decode('utf-8')
+    for blk in JSON_LD_RE.findall(text):
+        try:
+            json.loads(blk)
+        except Exception as e:
+            errors.append(f'JSON-LD: {e}')
+            break
+    if text.count(SENTINEL_NEW) != 1:
+        errors.append(f'sentinel_count={text.count(SENTINEL_NEW)}')
+
+    main_match = re.search(r'<main class="content-wrapper">(.*?)</main>', text, re.DOTALL)
+    main_inner = main_match.group(1) if main_match else ''
+
+    if re.search(r'<th[^>]*\bcell-label\b', main_inner):
+        errors.append('cell-label in <th>')
+    if re.search(r'<[a-z][^>]*\bdir="rtl"', main_inner):
+        errors.append('dir="rtl" in <main>')
+    body_match = re.search(r'<body[^>]*>(.*?)</body>', text, re.DOTALL)
+    if body_match:
+        body_inner = body_match.group(1)
+        # `dir="rtl"` is allowed on <html>, not inside body
+        body_rtl = re.findall(r'<[a-z][^>]*\bdir="rtl"', body_inner)
+        if body_rtl:
+            errors.append(f'dir="rtl" in body ({len(body_rtl)})')
+
+    if '<article class="mishnah-chapter">' not in main_inner:
+        errors.append('article.mishnah-chapter missing')
+    return size, errors
 
 
 def atomic_write(file_path, content):
     data = content.encode('utf-8')
     dir_ = os.path.dirname(file_path)
-    fd, tmp = tempfile.mkstemp(prefix='.d1v5alt-', dir=dir_)
+    fd, tmp = tempfile.mkstemp(prefix='.d2-', dir=dir_)
     try:
         with os.fdopen(fd, 'wb') as f:
             f.write(data)
@@ -292,41 +356,92 @@ def atomic_write(file_path, content):
 
 
 def main():
+    print(f'Loading JSON: {JSON_PATH}')
     with open(JSON_PATH, encoding='utf-8') as f:
         db = json.load(f)
+    chapter_keys = [k for k in db if not k.startswith('_')]
+    print(f'Chapters to render: {len(chapter_keys)}')
 
-    print('| Key | Old | New | Δ | th/td | colspan | subdiv | no_cell_label_th | sentinel_count |')
-    print('|---|---:|---:|---:|---|---:|---:|---|---:|')
+    # Pre-flight: validate every key maps to an existing disk file
+    missing_files = []
+    for k in chapter_keys:
+        url = db[k].get('source_url', '')
+        try:
+            rel = derive_disk_path(url)
+            full = os.path.join(REPO_ROOT, rel)
+            if not os.path.exists(full):
+                missing_files.append((k, rel))
+        except Exception as e:
+            missing_files.append((k, str(e)))
+    if missing_files:
+        print(f'PRE-FLIGHT FAILED: {len(missing_files)} chapters cannot be mapped to disk files')
+        for k, info in missing_files[:10]:
+            print(f'  {k}: {info}')
+        return 1
+    print(f'Pre-flight pass: all {len(chapter_keys)} chapters map to existing disk files.')
 
-    overall_ok = True
-    for key, rel in PILOTS:
-        path = os.path.join(REPO_ROOT, rel)
-        with open(path, encoding='utf-8') as f:
-            old_text = f.read()
-        old_size = len(old_text.encode('utf-8'))
+    rendered = []
+    failed = []
+
+    for i, key in enumerate(chapter_keys, 1):
         ch = db[key]
-        inner = render_chapter_main_content(key, ch)
-        new_text = transform_file(old_text, inner)
-        new_size = atomic_write(path, new_text)
+        try:
+            rel = derive_disk_path(ch['source_url'])
+            full = os.path.join(REPO_ROOT, rel)
+            with open(full, encoding='utf-8') as f:
+                old_text = f.read()
+            old_size = len(old_text.encode('utf-8'))
+            inner = render_chapter_main_content(key, ch)
+            new_text = transform_file(old_text, inner)
+            new_size = atomic_write(full, new_text)
+            actual_size, errs = verify(full)
+            if errs:
+                failed.append((key, rel, '; '.join(errs)))
+            rendered.append({'key': key, 'path': rel,
+                             'old': old_size, 'new': actual_size, 'errs': errs})
+        except Exception as e:
+            failed.append((key, ch.get('source_url', ''),
+                           f'EXCEPTION: {type(e).__name__}: {e}'))
+        if i % 50 == 0:
+            print(f'  rendered {i}/{len(chapter_keys)}...')
 
-        with open(path, encoding='utf-8') as f:
-            text = f.read()
-        main_inner = re.search(r'<main class="content-wrapper">(.*?)</main>', text, re.DOTALL).group(1)
+    # Summary
+    print(f'\n=== D-2 Bulk Render Report ===')
+    print(f'Timestamp: {ISO_TIMESTAMP}')
+    print(f'Rendered OK: {len(rendered)} / {len(chapter_keys)}')
+    n_with_errs = sum(1 for r in rendered if r['errs'])
+    print(f'With per-file errors: {n_with_errs}')
+    print(f'Failed (exception or unrecoverable): {len(failed)}')
+    if failed:
+        print(f'\nFailures:')
+        for k, p, msg in failed[:30]:
+            print(f'  {k} [{p}]: {msg}')
+        if len(failed) > 30:
+            print(f'  ...and {len(failed)-30} more')
 
-        no_cell_label_th = not bool(re.search(r'<th[^>]*\bcell-label\b', main_inner))
-        sentinel_count = text.count(SENTINEL_NEW)
-        th_count = len(re.findall(r'<th\b', main_inner))
-        td_count = len(re.findall(r'<td\b', main_inner))
-        colspan_count = len(re.findall(r'\scolspan=', main_inner))
-        subdiv_count = main_inner.count('class="CellSubdivision"')
+    # Aggregate stats
+    total_tables = 0
+    total_subdivs = 0
+    total_thead = 0
+    for r in rendered:
+        full = os.path.join(REPO_ROOT, r['path'])
+        with open(full, encoding='utf-8') as f:
+            t = f.read()
+        m = re.search(r'<main class="content-wrapper">(.*?)</main>', t, re.DOTALL)
+        if m:
+            m_inner = m.group(1)
+            total_tables += m_inner.count('<table class="scripture-table">')
+            total_subdivs += m_inner.count('class="CellSubdivision"')
+            total_thead += m_inner.count('<thead>')
+    print(f'\nAggregate (rendered files):')
+    print(f'  total <table class="scripture-table"> elements: {total_tables:,}')
+    print(f'  total <thead> elements: {total_thead:,}')
+    print(f'  total CellSubdivision spans: {total_subdivs:,}')
 
-        ends_html = text.rstrip().endswith('</html>')
-        if not (ends_html and sentinel_count == 1 and no_cell_label_th):
-            overall_ok = False
+    total_delta = sum(r['new'] - r['old'] for r in rendered)
+    print(f'  net byte delta: {total_delta:+,}')
 
-        print(f'| {key} | {old_size:,} | {new_size:,} | {new_size - old_size:+,} | {th_count}/{td_count} | {colspan_count} | {subdiv_count} | {no_cell_label_th} | {sentinel_count} |')
-
-    return 0 if overall_ok else 1
+    return 0 if not failed and n_with_errs == 0 else 1
 
 
 if __name__ == '__main__':
