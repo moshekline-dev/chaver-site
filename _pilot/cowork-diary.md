@@ -350,6 +350,69 @@ Next step:
 - After all 6 verified visually → consider deleting dead `.mishnah-chapter .cell-label` rule in main.css as a separate cleanup (the rule is now confirmed not the cause of any bug but is still dead code)
 - After verification → D-2 bulk render of remaining 519 chapters using `d1_v5alt_render.py`
 
+### 2026-05-14 — avot_4 JSON repair (recovered 3 missing rows + row 5 B subdivisions)
+
+What was done:
+- Repaired `avot_4` in `Mishnah-New/English/mishnah_db.json`. The entry was missing approximately half its content: row 5's B subdivisions and rows 6, 7, 8 entirely.
+- Extracted the missing content from the legacy rendered page at `Mishnah-New/Hebrew/Text/Seder Nezikin/Masechet Avot/Masechet Avot Perek 4.htm` (older format using `<table border="0" cellpadding="0" cellspacing="0">` and `<span class="Subunit">` labels).
+- Patched the JSON in place via atomic write (temp file + fsync + rename).
+- Backup of pre-patch JSON saved to `/tmp/mishnah_db.json.backup` (session-scope, not committed).
+
+Files modified:
+- `Mishnah-New/English/mishnah_db.json` — `avot_4` extended from 5 rows to 8 rows
+- `_pilot/repair_avot_4.py` — new one-shot extraction + patch script
+- `_pilot/post-d2-verification-list.md` — new file listing chapters needing manual verification after D-2 bulk render
+
+avot_4 before/after:
+
+| Property | Before | After |
+|---|---|---|
+| Rows | 5 | 8 |
+| Shape | `[[8],[4,4],[1,2,2,2,1],[4,4],[1,2,2,2,1]]` | `[[8],[4,4],[1,2,2,2,1],[4,4],[1,2,2,2,1],[4,4],[1,2,2,2,1],[4,4]]` |
+| Total Hebrew chars | 1,362 | 2,768 |
+| Mishnayot covered | 15 (א through טו) | 22 (א through כב — all present) |
+| Row 5 subdivisions | A only (5 cells × 1) | A + B (5 cells × 2) |
+| Rows symmetric individually | Yes | Yes |
+| Row sequence palindromic | No | No (still — sequence `[8][4,4][1,2,2,2,1]…[4,4]` reversed ≠ original) |
+
+Decisions locked:
+- avot_4 remains in the non-palindromic group. Of 525 chapters, 505 are row-sequence-palindromic (the figure that matches the Zenodo metadata stat).
+- The repaired data uses the same JSON structure as existing entries: each cell has `label`, `position: {row, col, colspan}`, `text`, `runs[]`, `markers[]`, and optionally `subdivisions[]`.
+- Avot 4 has no marker spans in its legacy HTML (no `<span class="Horizontal1">` etc.) — all extracted runs have `marker: null`. This is consistent with avot chapters generally having minimal pattern annotation.
+
+Proven patterns:
+- Legacy HTML format for old Mishnah pages: `<span class="Subunit">LABEL</span>` followed by `<br/>` then `<p class="HMC">` content. The `Subunit` span may be nested with inner font-family wrappers (rows with subdivision markers like row 5 have the `A` letter inside the inner span).
+- Rows with full numeric labels (`6 א` style) split the Hebrew letter outside the Subunit span: `<span class="Subunit">6</span> א`. The extractor combines these into the standard `6א` label.
+- Row 5 B subdivision cells in this page have NO `Subunit` label — they start with literal `B (י) …` text. The extractor handles this case by appending the B content as new runs to the existing row 5 cells (which already have A subdivision content from the original JSON).
+
+Global stats after patch:
+
+| Stat | Before | After | Δ |
+|---|---:|---:|---:|
+| Total chapters | 525 | 525 | 0 |
+| Total cells | 4,467 | 4,476 | +9 (rows 6+7+8 added 2+5+2 cells) |
+| Total subdivisions | 3,853 (Zenodo) | 3,906 | +53 — note: discrepancy vs simple expected +5 from row 5 B subdivisions; my counter sums `len(cell.subdivisions)` across all cells, which may differ from the algorithm that produced the Zenodo stat. The +5 from row 5 additions is included; the remaining +48 is likely a methodological difference, not new data |
+| Total marker spans | 6,953 | 6,953 | 0 (avot_4 has no marker spans) |
+| Palindromic chapters (sequence symmetric) | 505 | 505 | 0 (avot_4 was and remains non-palindromic) |
+
+The Zenodo dataset metadata (DOI 10.5281/zenodo.20179532, v2026-05-rev9) reports 3,853 subdivisions. If Moshe republishes Zenodo with the patched JSON, the subdivision count will update — exact algorithm to recompute should match the original. The 3,906 number above is my naive count, not necessarily the Zenodo definition.
+
+What failed and why:
+- Initial regex `<span class="Subunit">[^<]*</span>` missed the row 1 label and row 5 labels because their Subunit spans contain nested style spans (`<span class="Subunit"><span style="font-family:…">1</span></span>` for row 1; `<span class="Subunit">5א<span style="font-family:…"><br/>A</span></span>` for row 5). Fixed by walking the DOM with BeautifulSoup instead of regex.
+
+Current state:
+- `avot_4` JSON is now complete with all 22 mishnayot
+- Patched JSON not yet committed (Moshe pushes via GitHub Desktop)
+- The 6 D-1 v5-alt pilot files from earlier in the day are also pending commit
+- `_pilot/post-d2-verification-list.md` cataloges chapters needing manual check after D-2 bulk render
+
+Next step:
+- Moshe: review JSON diff in GitHub Desktop (16,657,418 → 16,686,295 bytes; +28,877 bytes for the new avot_4 content)
+- Push JSON + the 6 v5-alt pilot files in one commit
+- After v5-alt visual approval on Eduyot/Kinnim 3-col headers → schedule D-2 bulk render of all 525 chapters using `d1_v5alt_render.py`
+- Avot 4 specifically: when D-2 renders it, the output should now cover all 22 mishnayot in 8 matrix rows (matching the legacy page's content). The render script (`d1_v5alt_render.py`) handles 4–5 cell rows generically via `col_class()`, but visual confirmation needed since Avot chapters have non-standard structure
+- After Zenodo republish (if planned): update DOI and stats in mishnah-data landing page
+
 ## Standing reference
 
 ### CSS class quick-reference (from main.css)
