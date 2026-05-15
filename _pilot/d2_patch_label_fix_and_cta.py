@@ -1,23 +1,39 @@
 #!/usr/bin/env python3
 """D-2 patch: label-fix + PDF CTA.
 
-Two changes across the 525 rendered Mishnah chapters:
-  1. Fix two render bugs in 6 specific chapters
-     - Bug 1 (normalize_label): only convert standalone Hebrew column letters
-       (digit + optional space + א-ה at end). Don't strip internal spaces.
-     - Bug 2 (extract_label_and_body):
-         a. If first run is a single Latin subdivision marker (A-E), use it
-            as the label.
-         b. For single-cell rows where no run contains a newline, treat the
-            cell as content with no label.
-  2. Inject a PDF download CTA into <article class="mishnah-chapter"> on
-     every chapter page (idempotent).
+Two passes:
+  Patch 1 (2026-05-15T04:49:49Z) — 6 chapters re-rendered, all 525 got
+  CTA + sentinel.
+  Patch 2 (same timestamp, same script) — 16 additional chapters re-rendered
+  after two function tightenings (skip leading whitespace before subdivision
+  marker; bare Hebrew letter conversion) plus Tightening 3 (long recovered
+  label + multi-line cell → content with no label).
 
-Re-renders only the 6 chapters listed in PATCH_RENDER_KEYS. The other 519
-get only the CTA injection + sentinel update (their existing <main> content
-is preserved verbatim).
+Function rules (final state):
+
+  normalize_label:
+    - '^(\\d+)\\s*([אבגדה])$'  → digit + Latin (e.g. '1א' → '1A', '2 ב' → '2B')
+    - '^([אבגדה])$'             → bare Hebrew letter → Latin (e.g. 'ב' → 'B')
+    - otherwise unchanged. Internal spaces preserved.
+
+  extract_label_and_body:
+    - Empty runs → fall back to cell.label / cell.text split.
+    - Skip leading whitespace-only runs.
+    - Case 1: first non-ws run is A-E (Latin) → use as label, body = rest.
+    - Case 2: 1-cell row with no \\n anywhere → content, no label.
+    - Case 3: standard accumulate-until-\\n. Then if the recovered label is
+      longer than 10 chars AND the runs contain \\n, treat the whole cell as
+      content with json_label as the (typically empty) label.
+
+  render_chapter_main_content:
+    - Always embeds the CTA inside <article class="mishnah-chapter">.
 
 Sentinel: <!-- D-2 patch: label-fix-plus-cta @ {ISO_TIMESTAMP} -->
+
+Run-once: this script is idempotent. On re-run it replaces <main> for every
+key in PATCH_RENDER_KEYS using the current function logic; for keys NOT in
+PATCH_RENDER_KEYS, it leaves <main> alone and only refreshes the sentinel +
+ensures the CTA is present.
 """
 import json
 import os
@@ -31,23 +47,27 @@ from html import escape
 REPO_ROOT = '/sessions/youthful-busy-hamilton/mnt/chaver-site'
 JSON_PATH = os.path.join(REPO_ROOT, 'Mishnah-New/English/mishnah_db.json')
 
-ISO_TIMESTAMP = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
+# To preserve the original patch timestamp across re-runs, set this env var:
+#   D2_PATCH_TIMESTAMP=2026-05-15T04:49:49Z python3 d2_patch_label_fix_and_cta.py
+ISO_TIMESTAMP = os.environ.get('D2_PATCH_TIMESTAMP') or time.strftime(
+    '%Y-%m-%dT%H:%M:%SZ', time.gmtime())
 SENTINEL_NEW = f'<!-- D-2 patch: label-fix-plus-cta @ {ISO_TIMESTAMP} -->'
 
 URL_PREFIX = 'https://chaver.com/'
 
 HE_TO_LATIN = {'א': 'A', 'ב': 'B', 'ג': 'C', 'ד': 'D', 'ה': 'E'}
 SUBDIVISION_LETTERS = {'A', 'B', 'C', 'D', 'E'}
-
 CHAPTER_SUFFIX = {'sotah_9a': ' (חלק א)', 'sotah_9b': ' (חלק ב)'}
 
+# 22 chapters total: 6 from the first patch + 16 from the follow-up.
 PATCH_RENDER_KEYS = {
-    'bavametzia_2',  # Bug 2: row 0 single-cell full mishnah as <th>
-    'avot_2',        # Bug 2: row 4 single-cell full mishnah as <th>
-    'gittin_3',      # Bug 1: שנה → שנE
-    'ketubot_2',     # Bug 1: אשה → אשE; spaces collapsed in 'עדות עצמית'
-    'chagigah_2',    # Bug 1: במרכבה → במרכבE; spaces collapsed
-    'eduyot_7',      # Bug 2: rows 1-4 subdivision-marker B/C/D/E swallowed content
+    # --- First patch (6) ---
+    'bavametzia_2', 'avot_2', 'gittin_3', 'ketubot_2', 'chagigah_2', 'eduyot_7',
+    # --- Follow-up patch (16) ---
+    'bavabatra_3', 'makkot_3', 'shabbat_7', 'avodazara_5', 'beitzah_3',
+    'ketubot_4', 'ketubot_5', 'ketubot_8', 'pesachim_9', 'sanhedrin_1',
+    'shabbat_12', 'shabbat_15', 'shabbat_16', 'shabbat_6', 'shekalim_2',
+    'zevachim_6',
 }
 
 CTA_HTML = (
@@ -59,23 +79,18 @@ CTA_HTML = (
     '                    להורדת המשנה כדרכה (PDF)\n'
     '                </a>\n'
     '            </p>\n'
-    '        </div>\n'
+    '        </div>'
 )
 CTA_SENTINEL_COMMENT = '<!-- PDF CTA — added by D-2 patch -->'
 
 
-# ===== FIXED label/body extraction =====
+# ============================ Label / body extraction ============================
 
 DIGIT_HE_RE = re.compile(r'^(\d+)\s*([אבגדה])$')
+BARE_HE_RE = re.compile(r'^([אבגדה])$')
 
 
 def normalize_label(raw):
-    """FIXED: only convert standalone Hebrew column letters after a digit.
-
-    Preserves internal spaces (e.g. 'עדות עצמית', 'במעשה בראשית' stay intact).
-    Bare Hebrew words (e.g. 'שנה', 'אשה', 'במרכבה') stay unchanged.
-    Digit+Hebrew-letter patterns ('1א', '2 ב', '10ה') convert to digit+Latin.
-    """
     if not raw:
         return ''
     s = raw.strip()
@@ -84,20 +99,15 @@ def normalize_label(raw):
     m = DIGIT_HE_RE.match(s)
     if m:
         return m.group(1) + HE_TO_LATIN[m.group(2)]
+    m = BARE_HE_RE.match(s)
+    if m:
+        return HE_TO_LATIN[m.group(1)]
     return s
 
 
 def extract_label_and_body(cell, n_cells_in_row):
-    """FIXED: handle subdivision-marker-first cells and single-cell content rows.
-
-    Case 1: First run is a single Latin subdivision marker (A-E) → use it as label.
-    Case 2: Single-cell row with no \n in any run → treat entire cell as content
-            (label from cell.label field, body = all runs).
-    Case 3: Otherwise, existing accumulate-until-\n logic.
-    """
     runs = cell.get('runs', [])
     json_label = (cell.get('label') or '').strip()
-
     if not runs:
         text = cell.get('text', '') or ''
         lines = text.split('\n', 1)
@@ -107,28 +117,33 @@ def extract_label_and_body(cell, n_cells_in_row):
             body_runs.append({'text': lines[1], 'marker': None})
         return label_raw, body_runs
 
-    # Case 1: First run is a single subdivision marker (A-E)
-    if (runs[0].get('marker') is None and
-            runs[0].get('text', '').strip() in SUBDIVISION_LETTERS):
-        label = runs[0]['text'].strip()
-        body_start = 1
-        # Skip leading whitespace-only runs after the marker
+    # Skip leading whitespace-only runs
+    start = 0
+    while (start < len(runs) and
+           runs[start].get('marker') is None and
+           runs[start].get('text', '').strip() == ''):
+        start += 1
+
+    # Case 1: first non-ws run is a single Latin subdivision marker (A-E)
+    if (start < len(runs) and
+            runs[start].get('marker') is None and
+            runs[start].get('text', '').strip() in SUBDIVISION_LETTERS):
+        label = runs[start]['text'].strip()
+        body_start = start + 1
         while (body_start < len(runs) and
                runs[body_start].get('marker') is None and
                runs[body_start].get('text', '').strip() == ''):
             body_start += 1
         return label, runs[body_start:]
 
-    # Case 2: Single-cell row, no \n anywhere → content, no label
+    # Case 2: single-cell row with no \n anywhere → content, no label
     if n_cells_in_row == 1:
-        has_newline = any('\n' in r.get('text', '') for r in runs)
-        if not has_newline:
+        has_nl = any('\n' in r.get('text', '') for r in runs)
+        if not has_nl:
             return json_label, list(runs)
 
-    # Case 3: Standard accumulation until \n (existing behavior)
-    label_parts = []
-    body_runs = []
-    consumed = False
+    # Case 3: standard accumulation
+    label_parts, body_runs, consumed = [], [], False
     for run in runs:
         if consumed:
             body_runs.append(run)
@@ -137,8 +152,7 @@ def extract_label_and_body(cell, n_cells_in_row):
         marker = run.get('marker')
         if '\n' in rt and marker is None:
             nl_pos = rt.index('\n')
-            before = rt[:nl_pos]
-            after = rt[nl_pos + 1:]
+            before, after = rt[:nl_pos], rt[nl_pos + 1:]
             if before:
                 label_parts.append(before)
             if after:
@@ -149,7 +163,15 @@ def extract_label_and_body(cell, n_cells_in_row):
             consumed = True
         else:
             label_parts.append(rt)
-    return ''.join(label_parts).strip(), body_runs
+    candidate_label = ''.join(label_parts).strip()
+
+    # Tightening 3: long recovered label + multi-line cell → content
+    if len(candidate_label) > 10:
+        has_nl_in_runs = any('\n' in r.get('text', '') for r in runs)
+        if has_nl_in_runs:
+            return json_label, list(runs)
+
+    return candidate_label, body_runs
 
 
 def is_subdivision_marker_run(run):
@@ -171,12 +193,12 @@ def split_into_subdivisions(body_runs):
             segments.append((None, preamble))
     for j, (mi, letter) in enumerate(marker_positions):
         end = marker_positions[j + 1][0] if j + 1 < len(marker_positions) else len(body_runs)
-        start = mi + 1
-        while (start < end and
-               body_runs[start].get('marker') is None and
-               body_runs[start].get('text', '').strip() == ''):
-            start += 1
-        segments.append((letter, body_runs[start:end]))
+        s = mi + 1
+        while (s < end and
+               body_runs[s].get('marker') is None and
+               body_runs[s].get('text', '').strip() == ''):
+            s += 1
+        segments.append((letter, body_runs[s:end]))
     return segments
 
 
@@ -212,18 +234,15 @@ def render_row_table(row):
     n_cells = len(cells)
     if n_cells == 0:
         return ''
-
     cell_data = []
     for cell in cells:
         label_raw, body_runs = extract_label_and_body(cell, n_cells)
         label = normalize_label(label_raw)
         segments = split_into_subdivisions(body_runs)
         colspan = (cell.get('position', {}) or {}).get('colspan', 1) or 1
-
         subdivs_with_letter = [(letter.lower(), render_runs_html(runs))
                                for letter, runs in segments if letter is not None]
         preambles = [render_runs_html(runs) for letter, runs in segments if letter is None]
-
         if not subdivs_with_letter:
             html = render_runs_html(body_runs)
             cell_data.append({'label': label, 'colspan': colspan,
@@ -236,11 +255,8 @@ def render_row_table(row):
                 subdivs_with_letter[0] = (first_letter, joined)
             cell_data.append({'label': label, 'colspan': colspan,
                               'subdivisions': subdivs_with_letter, 'single_html': ''})
-
     max_subdivs = max((len(d['subdivisions']) for d in cell_data), default=0)
-
     lines = ['<table class="scripture-table">']
-
     thead_cells = []
     for i, d in enumerate(cell_data):
         cls = color_class(n_cells, i)
@@ -249,7 +265,6 @@ def render_row_table(row):
     lines.append('    <thead>')
     lines.append('        <tr>' + ''.join(thead_cells) + '</tr>')
     lines.append('    </thead>')
-
     lines.append('    <tbody>')
     if max_subdivs == 0:
         tds = []
@@ -269,22 +284,16 @@ def render_row_table(row):
                         tds.append(f'<td{cs}{rs}><p class="torah">{d["single_html"]}</p></td>')
                 elif n == max_subdivs:
                     letter, content = d['subdivisions'][r_idx]
-                    tds.append(
-                        f'<td{cs}><p class="torah"><span class="CellSubdivision"><b>{letter}</b></span> {content}</p></td>'
-                    )
+                    tds.append(f'<td{cs}><p class="torah"><span class="CellSubdivision"><b>{letter}</b></span> {content}</p></td>')
                 else:
                     if r_idx < n - 1:
                         letter, content = d['subdivisions'][r_idx]
-                        tds.append(
-                            f'<td{cs}><p class="torah"><span class="CellSubdivision"><b>{letter}</b></span> {content}</p></td>'
-                        )
+                        tds.append(f'<td{cs}><p class="torah"><span class="CellSubdivision"><b>{letter}</b></span> {content}</p></td>')
                     elif r_idx == n - 1:
                         letter, content = d['subdivisions'][r_idx]
                         span = max_subdivs - n + 1
                         rs = f' rowspan="{span}"' if span > 1 else ''
-                        tds.append(
-                            f'<td{cs}{rs}><p class="torah"><span class="CellSubdivision"><b>{letter}</b></span> {content}</p></td>'
-                        )
+                        tds.append(f'<td{cs}{rs}><p class="torah"><span class="CellSubdivision"><b>{letter}</b></span> {content}</p></td>')
             lines.append('        <tr>' + ''.join(tds) + '</tr>')
     lines.append('    </tbody>')
     lines.append('</table>')
@@ -296,7 +305,6 @@ def render_chapter_main_content(key, ch):
     chapter_he = ch.get('chapter_he', '')
     suffix = CHAPTER_SUFFIX.get(key, '')
     h1_text = f'{tractate_he} פרק {chapter_he}{suffix} – המבנה הספרותי'
-
     parts = ['        <article class="mishnah-chapter">',
              f'        <h1>{escape(h1_text)}</h1>']
     for row in ch.get('rows', []):
@@ -304,11 +312,13 @@ def render_chapter_main_content(key, ch):
         indented = '\n'.join('        ' + line if line else line
                              for line in table_html.split('\n'))
         parts.append(indented)
+    parts.append(CTA_HTML)
     parts.append('        </article>')
     return '\n'.join(parts)
 
 
-# ===== Path mapping =====
+# =================================== Transforms ===================================
+
 def derive_disk_path(source_url):
     if not source_url.startswith(URL_PREFIX):
         raise ValueError(f'URL prefix mismatch: {source_url!r}')
@@ -319,19 +329,12 @@ def derive_disk_path(source_url):
     return decoded
 
 
-# ===== Transforms =====
 MAIN_RE = re.compile(r'(<main class="content-wrapper">)(.*?)(</main>)', re.DOTALL)
-# Match any prior D-2 sentinel form (bulk or patch)
+ARTICLE_RE = re.compile(r'(<article class="mishnah-chapter">.*?)(\n\s*</article>)', re.DOTALL)
 D2_SENTINEL_RE = re.compile(r'<!--\s*D-2[^>]*-->')
-# Find </article> inside <article class="mishnah-chapter">...</article>
-ARTICLE_RE = re.compile(
-    r'(<article class="mishnah-chapter">.*?)(\n\s*</article>)',
-    re.DOTALL,
-)
 
 
 def replace_main(file_text, new_main_inner):
-    """Substitute <main> inner content (used only for re-render targets)."""
     def repl(m):
         return f'{m.group(1)}\n{new_main_inner}\n    {m.group(3)}'
     new_text, n = MAIN_RE.subn(repl, file_text, count=1)
@@ -340,34 +343,31 @@ def replace_main(file_text, new_main_inner):
     return new_text
 
 
-def inject_cta(file_text):
-    """Insert PDF CTA inside <article class='mishnah-chapter'> before </article>.
-
-    Idempotent: skip if CTA_SENTINEL_COMMENT already present.
-    """
+def ensure_cta(file_text):
+    """Inject CTA inside <article> if missing. Idempotent."""
     if CTA_SENTINEL_COMMENT in file_text:
         return file_text, False
     def repl(m):
-        return f'{m.group(1)}\n{CTA_HTML.rstrip()}{m.group(2)}'
+        return f'{m.group(1)}\n{CTA_HTML}{m.group(2)}'
     new_text, n = ARTICLE_RE.subn(repl, file_text, count=1)
     if n != 1:
-        raise RuntimeError(f'Could not find <article class="mishnah-chapter">...</article> wrapper')
+        raise RuntimeError('article wrapper not found for CTA injection')
     return new_text, True
 
 
 def update_sentinel(file_text):
-    """Replace any existing D-2 sentinel with SENTINEL_NEW."""
     new_text, n = D2_SENTINEL_RE.subn(SENTINEL_NEW, file_text, count=1)
     if n != 1:
+        if '<head>' in file_text and SENTINEL_NEW not in file_text:
+            return file_text.replace('<head>', f'<head>\n    {SENTINEL_NEW}', 1)
         raise RuntimeError(f'Expected 1 D-2 sentinel match, got {n}')
     return new_text
 
 
-# ===== Verify =====
 JSON_LD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
 
 
-def verify(file_path, expect_cta=True):
+def verify_file(file_path):
     errors = []
     with open(file_path, 'rb') as f:
         data = f.read()
@@ -385,11 +385,12 @@ def verify(file_path, expect_cta=True):
             break
     if text.count(SENTINEL_NEW) != 1:
         errors.append(f'sentinel_count={text.count(SENTINEL_NEW)}')
-    if expect_cta:
-        if 'The%20Structured%20Mishnah.pdf' not in text:
-            errors.append('CTA missing')
-        if text.count(CTA_SENTINEL_COMMENT) != 1:
-            errors.append(f'cta_sentinel_count={text.count(CTA_SENTINEL_COMMENT)}')
+    if CTA_SENTINEL_COMMENT not in text:
+        errors.append('CTA missing')
+    if 'The%20Structured%20Mishnah.pdf' not in text:
+        errors.append('PDF link missing')
+    if text.count('<article class="mishnah-chapter">') != 1:
+        errors.append('article wrapper count != 1')
     return size, errors
 
 
@@ -411,41 +412,30 @@ def atomic_write(file_path, content):
 
 
 def main():
-    print(f'Loading JSON: {JSON_PATH}')
     with open(JSON_PATH, encoding='utf-8') as f:
         db = json.load(f)
     chapter_keys = [k for k in db if not k.startswith('_')]
+    print(f'Sentinel: {SENTINEL_NEW}')
     print(f'Chapters to process: {len(chapter_keys)}')
-    print(f'Re-render targets: {sorted(PATCH_RENDER_KEYS)}')
+    print(f'Re-render targets: {len(PATCH_RENDER_KEYS)}')
 
-    # Pre-flight
     missing = []
     for k in chapter_keys:
         try:
             rel = derive_disk_path(db[k]['source_url'])
-            full = os.path.join(REPO_ROOT, rel)
-            if not os.path.exists(full):
+            if not os.path.exists(os.path.join(REPO_ROOT, rel)):
                 missing.append((k, rel))
         except Exception as e:
             missing.append((k, str(e)))
     if missing:
         print(f'PRE-FLIGHT FAILED: {len(missing)} chapters cannot be mapped')
-        for k, info in missing[:10]:
-            print(f'  {k}: {info}')
         return 1
-    print(f'Pre-flight pass: all {len(chapter_keys)} chapters map to disk files.')
-
-    # Verify all keys in PATCH_RENDER_KEYS exist in JSON
     for k in PATCH_RENDER_KEYS:
         if k not in db:
             print(f'ERROR: re-render key {k!r} not in JSON')
             return 1
 
-    rendered = []
-    cta_added = []
-    cta_skipped = []
-    failed = []
-
+    rendered, failed = [], []
     for i, key in enumerate(chapter_keys, 1):
         ch = db[key]
         try:
@@ -454,66 +444,34 @@ def main():
             with open(full, encoding='utf-8') as f:
                 old_text = f.read()
             old_size = len(old_text.encode('utf-8'))
-
             new_text = old_text
-
-            # Re-render <main> ONLY for the 6 target chapters
             if key in PATCH_RENDER_KEYS:
                 inner = render_chapter_main_content(key, ch)
                 new_text = replace_main(new_text, inner)
-
-            # Inject CTA (idempotent)
-            new_text, cta_was_added = inject_cta(new_text)
-
-            # Update sentinel
+            new_text, _ = ensure_cta(new_text)
             new_text = update_sentinel(new_text)
-
             new_size = atomic_write(full, new_text)
-            actual_size, errs = verify(full, expect_cta=True)
+            size, errs = verify_file(full)
+            rendered.append({'key': key, 'old': old_size, 'new': size, 'errs': errs,
+                             'rendered': key in PATCH_RENDER_KEYS})
             if errs:
                 failed.append((key, rel, '; '.join(errs)))
-
-            entry = {'key': key, 'path': rel,
-                     'old': old_size, 'new': actual_size,
-                     'rendered': key in PATCH_RENDER_KEYS,
-                     'cta_added': cta_was_added,
-                     'errs': errs}
-            rendered.append(entry)
-            if cta_was_added:
-                cta_added.append(key)
-            else:
-                cta_skipped.append(key)
         except Exception as e:
             failed.append((key, ch.get('source_url', ''),
                            f'EXCEPTION: {type(e).__name__}: {e}'))
         if i % 50 == 0:
             print(f'  processed {i}/{len(chapter_keys)}...')
 
-    # Summary
     print(f'\n=== D-2 Patch Report ===')
-    print(f'Timestamp: {ISO_TIMESTAMP}')
     print(f'Processed: {len(rendered)} / {len(chapter_keys)}')
-    n_rendered = sum(1 for r in rendered if r['rendered'])
-    print(f'Re-rendered (full <main>): {n_rendered}')
-    print(f'CTA injected: {len(cta_added)}')
-    print(f'CTA skipped (already present): {len(cta_skipped)}')
-    print(f'Failed: {len(failed)}')
+    print(f'Re-rendered: {sum(1 for r in rendered if r["rendered"])}')
+    n_errs = sum(1 for r in rendered if r['errs'])
+    print(f'Verify errors: {n_errs}')
+    print(f'Failures: {len(failed)}')
     if failed:
-        print('\nFailures:')
-        for k, p, msg in failed[:30]:
-            print(f'  {k} [{p}]: {msg}')
-
-    n_with_errs = sum(1 for r in rendered if r['errs'])
-    print(f'\nFiles with verify errors: {n_with_errs}')
-    if n_with_errs:
-        for r in rendered[:30]:
-            if r['errs']:
-                print(f'  {r["key"]}: {r["errs"]}')
-
-    total_delta = sum(r['new'] - r['old'] for r in rendered)
-    print(f'Net byte delta: {total_delta:+,}')
-
-    return 0 if not failed and n_with_errs == 0 else 1
+        for k, p_, msg in failed[:30]:
+            print(f'  {k}: {msg}')
+    return 0 if not failed and n_errs == 0 else 1
 
 
 if __name__ == '__main__':

@@ -628,3 +628,133 @@ A follow-up patch could either (a) extend `PATCH_RENDER_KEYS` once the user conf
 ### Next step
 
 Moshe: review the diff in GitHub Desktop. Expect 525 .htm files, 1 `main.css` change (one new rule), and 2 new files in `_pilot/` (`d2_patch_label_fix_and_cta.py`, this diary entry). After push, purge the CSS URL in Cloudflare so the scoped `.mishnah-chapter .citation-box` rule is served.
+
+---
+
+## 2026-05-15 (follow-up) — D-2 patch: 16 additional chapters re-rendered
+
+Same script (`_pilot/d2_patch_label_fix_and_cta.py`), same sentinel timestamp (`2026-05-15T04:49:49Z`). Three function tightenings applied; `PATCH_RENDER_KEYS` expanded from 6 to 22 (the original 6 plus 16 follow-ups). Total chapters re-rendered across both passes: **22**.
+
+### Function tightenings
+
+**Tightening 1 — skip leading whitespace before Case 1.**
+The Case 1 check (first run is a single Latin subdivision marker) previously only looked at `runs[0]`. If `runs[0]` was a whitespace-only run with `marker=None`, the check missed the actual subdivision letter at `runs[1]` and fell through to standard accumulation, producing labels like `' Bהבנות הקטנות …'`. Fix: advance past any leading whitespace-only runs (`marker is None`, `text.strip() == ''`) before evaluating Case 1.
+
+```python
+start = 0
+while (start < len(runs) and
+       runs[start].get('marker') is None and
+       runs[start].get('text', '').strip() == ''):
+    start += 1
+if (start < len(runs) and runs[start].get('marker') is None and
+        runs[start].get('text', '').strip() in SUBDIVISION_LETTERS):
+    label = runs[start]['text'].strip()
+    ...
+```
+
+Fixes `shabbat_6` row 3 cell 0 (and similar). No effect on cells without leading whitespace.
+
+**Tightening 2 — bare single Hebrew letter conversion.**
+The first patch's `normalize_label` only converted the digit+Hebrew-letter pattern (`^(\d+)\s*([אבגדה])$`). A bare single Hebrew letter (no digit prefix) — e.g. cell label `'ב'` in `shekalim_2` row 0 cell 1 — was left untouched, regressing from the original bulk render which would convert `ב → B`. Fix: add a second regex `^([אבגדה])$` that converts a bare Hebrew letter to its Latin equivalent.
+
+```python
+DIGIT_HE_RE = re.compile(r'^(\d+)\s*([אבגדה])$')
+BARE_HE_RE = re.compile(r'^([אבגדה])$')
+
+def normalize_label(raw):
+    s = raw.strip()
+    if not s: return ''
+    m = DIGIT_HE_RE.match(s)
+    if m: return m.group(1) + HE_TO_LATIN[m.group(2)]
+    m = BARE_HE_RE.match(s)
+    if m: return HE_TO_LATIN[m.group(1)]
+    return s
+```
+
+Fixes `shekalim_2` row 0 cell 1 (`'ב' → 'B'`). Multi-character Hebrew words still pass through unchanged (`שנה`, `אשה`, `במרכבה`, `במעשה בראשית`, etc.).
+
+**Tightening 3 — long recovered label + multi-line cell → content.**
+*Added during the follow-up run, not in the original spec.*
+
+After standard accumulation, if the recovered label exceeds 10 characters **and** any run in the cell contains `\n`, the cell has multi-line structure and the accumulated "label" is really the cell's first sentence. Treat the whole cell as content (label = `cell.label` from JSON, body = full runs list).
+
+```python
+if len(candidate_label) > 10:
+    if any('\n' in r.get('text', '') for r in runs):
+        return json_label, list(runs)
+```
+
+This catches `avodazara_5` row 1 cells 0–2 — multi-cell row, multi-run cells with `\n` separators, first run is a 14–25-char Hebrew sentence. Without this tightening, that first sentence becomes the header. With it, the `<th>` is empty and the full mishnah text appears in the `<td>`. Verified safe for `chagigah_2` row 0 (label `'במעשה בראשית'` is 12 chars but cell has **no `\n`**, so tightening doesn't fire).
+
+### Chapters re-rendered (16)
+
+All 16 received a full `<main>` re-render with the tightened functions and embedded CTA. None had verify errors.
+
+| Chapter | Before (selected) | After |
+|---|---|---|
+| `bavabatra_3` row 2 cell 0 | `'(ה)אלודבריםשישלהםחזקהואלודבריםשאיןלהםחזקE'` | `''` |
+| `makkot_3` row 0 cell 0 | `'(א)ואלוהןהלוקין'` | `''` |
+| `shabbat_7` row 2 cell 0 | `'הריאלואבותמלאכותארבעיםחסראחת'` | `''` |
+| `avodazara_5` row 1 cells 0–2 | first-sentence headers | `''` × 3 |
+| `avodazara_5` rows 3 & 5 | `'B(ד)המניחיינו…'` etc. | `'B'` × 6 |
+| `beitzah_3` row 1 cells 0–2 | `'B(ב)מצודות…'` etc. | `'B'` × 3 |
+| `ketubot_4` row 1 cells 0–2 | `'E(ב)המארס…'` etc. | `'E'` × 3 |
+| `ketubot_5` rows 1, 3, 4 | `'B…'`, `'C…'` content | `'B'` × 5, `'C'` × 3 |
+| `ketubot_8` rows 1, 2 | `'B…'`, `'C…'` content | `'B'` × 3, `'C'` × 3 |
+| `pesachim_9` row 3 | `'B…'` content × 3 | `'B'` × 3 |
+| `sanhedrin_1` rows 3, 4 | `'B…'`, `'C…'` content | `'B'` × 3, `'C'` × 3 |
+| `shabbat_12` row 2 | `'B…'` content × 3 | `'B'` × 3 |
+| `shabbat_15` row 1 | `'B…'` content × 2 | `'B'` × 2 |
+| `shabbat_16` rows 1, 2, 5, 6 | `'B…'`, `'C…'` content | `'B'` × 4, `'C'` × 4 |
+| `shabbat_6` row 3 cell 0 | `'Bהבנותהקטנות…'` (leading-ws case) | `'B'` |
+| `shabbat_6` row 4 | `'C…'` content × 2 | `'C'` × 2 |
+| `shekalim_2` row 0 cell 1 | `'B'` (regression fixed) | `'B'` |
+| `zevachim_6` row 0 cell 1 | `''` | `'A'` |
+
+Across the 16 chapters: **185** `<th>` cells, **0** with >10 Hebrew chars, **0** stray-`E`-after-Hebrew matches.
+
+### Spot-checks (per spec verification list)
+
+- ✓ `shekalim_2` row 0 cell 1 renders as `B` (bare-Hebrew conversion)
+- ✓ `shabbat_6` row 3 first `<th>` renders as `B` (leading-ws skip)
+- ✓ `zevachim_6` row 0 cell 1 renders as `A` (Case 1 catches `'\nA'` run after the `\n` is stripped by `.strip()`)
+- ✓ CTA present on all 16 (the re-render embeds CTA inside `<article>` so the `<main>` replacement preserves it atomically)
+
+### Global invariants (all 525)
+
+- 525 / 525 contain sentinel `<!-- D-2 patch: label-fix-plus-cta @ 2026-05-15T04:49:49Z -->`
+- 525 / 525 contain `<!-- PDF CTA — added by D-2 patch -->`
+- 525 / 525 end with `</html>`
+- 525 / 525 have exactly one `<article class="mishnah-chapter">` wrapper, one `.citation-box`, one D-2 sentinel
+- 0 JSON-LD reparse failures
+
+### Operational note — first attempt had a CTA-loss bug
+
+The first run of the follow-up render replaced `<main>` content with a freshly-rendered version that did **not** include the CTA — because the original `render_chapter_main_content` only built the table elements inside `<article>`, not the CTA. Replacing `<main>` therefore wiped the CTA that the earlier patch had injected. Caught by verify (`CTA missing` errors on all 16). Fix: `render_chapter_main_content` now embeds `CTA_HTML` inside the `<article>` it produces, so any future `<main>` replacement preserves the CTA atomically. The canonical script (`_pilot/d2_patch_label_fix_and_cta.py`) reflects this. A second run with the corrected renderer succeeded with 0 verify errors.
+
+### Canonical script — final state
+
+`_pilot/d2_patch_label_fix_and_cta.py` (rewritten) now reflects:
+
+1. All three tightenings in `normalize_label` and `extract_label_and_body`.
+2. `render_chapter_main_content` embeds the CTA inside `<article>`.
+3. `PATCH_RENDER_KEYS` = the 22 chapters (6 + 16).
+4. `ISO_TIMESTAMP` defaults to "now" but is overridden via the `D2_PATCH_TIMESTAMP` env var if you need to re-run with a specific timestamp (e.g. preserving the existing `2026-05-15T04:49:49Z`).
+
+### Tally
+
+| Pass | Re-rendered | Total touched | Sentinel timestamp |
+|---|---|---|---|
+| First | 6 | 525 (CTA + sentinel) | `2026-05-15T04:49:49Z` |
+| Follow-up | 16 | 16 (re-render only) | same |
+| **Cumulative** | **22** | **525** | one timestamp |
+
+### Next step
+
+Moshe: review GitHub Desktop diff. Expect:
+
+- 22 `.htm` files changed since the first commit (the 16 follow-up re-renders; the first patch's 525 changes are already in your prior diff if not yet pushed)
+- Updated `_pilot/d2_patch_label_fix_and_cta.py` (the rewrite reflecting all 3 tightenings)
+- This diary entry
+
+Push + (already noted) purge the CSS URL in Cloudflare.
