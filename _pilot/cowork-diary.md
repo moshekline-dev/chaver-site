@@ -528,3 +528,103 @@ Marker spans: `horizontal1`, `horizontal2`, `horizontal3`, `vertical1`, `interna
 - Torah units: `/torah-weave/[Book]/[book]-unit-X/[book]-unit-X.html`
 - Mishnah chapters: `/Mishnah-New/Hebrew/Text/Seder X/Masechet Y/Masechet Y Perek N.htm`
 - `.html` stripped by Cloudflare Pages; `.htm` kept
+
+---
+
+## 2026-05-15 — D-2 patch: label-fix + PDF CTA
+
+Two changes applied across all 525 Mishnah chapter pages.
+
+### Bug fixes (6 chapters re-rendered)
+
+Script: `_pilot/d2_patch_label_fix_and_cta.py`. Sentinel: `<!-- D-2 patch: label-fix-plus-cta @ 2026-05-15T04:49:49Z -->`.
+
+**Bug 1 — `normalize_label` over-converted Hebrew letters.**
+Old logic: `s.strip().replace(' ', '')` then convert the *last* char if it was in `{א,ב,ג,ד,ה}`. This (a) silently dropped internal spaces from multi-word Hebrew labels and (b) Latinized the final letter of any Hebrew word ending in א–ה.
+
+New logic: regex `^(\d+)\s*([אבגדה])$` — only convert when the label is a digit (or digits) followed by optional whitespace and a single Hebrew column letter at end. Internal spaces preserved. Bare Hebrew words pass through unchanged.
+
+- `שנה` → `שנה` (was `שנE`)
+- `אשה` → `אשה` (was `אשE`)
+- `במרכבה` → `במרכבה` (was `במרכבE`)
+- `במעשה בראשית` → `במעשה בראשית` (was `במעשהבראשית`)
+- `עדות עצמית` → `עדות עצמית` (was `עדותעצמית`)
+- `1א`, `2 ב`, `10ה` still convert to `1A`, `2B`, `10E`
+
+**Bug 2 — `extract_label_and_body` swallowed full mishnah text into `<th>`.**
+The old function accumulated every run into `label_parts` until it hit a `\n` separator. For cells without a `\n`, the entire mishnah text became the header. For cells whose first run was a single Latin subdivision marker (`B`/`C`/`D`/`E`) followed by content without `\n`, the marker plus content became the header.
+
+Two new cases added before the standard accumulation:
+
+- *Case 1.* If `runs[0]` is `marker=None` and its stripped text is in `{A,B,C,D,E}`, use it as the label and treat everything after (skipping whitespace-only runs) as body. Fixes `eduyot_7` rows 1–4.
+- *Case 2.* If the row has exactly one cell and no run in that cell contains `\n`, treat the entire cell as content (no label). Fixes `bavametzia_2` row 0 and `avot_2` row 4.
+
+Otherwise the existing accumulation logic is unchanged.
+
+### Verification of the 6 fixed chapters (post-render)
+
+| Chapter | `<th>` cells corrected |
+|---|---|
+| `bavametzia_2` | row 0 first `<th>`: was `'(א)אלומציאותשלוואלוחיבלהכריז'` → now `''` |
+| `avot_2` | row 4 `<th>`: was `'(י)הםאמרושלשהדברים'` → now `''` |
+| `gittin_3` | `שנה` (was `שנE`) |
+| `ketubot_2` | `אשה` (was `אשE`); `עדות עצמית` (space restored) |
+| `chagigah_2` | `במרכבה` (was `במרכבE`); `במעשה בראשית` (space restored) |
+| `eduyot_7` | rows 1–4: `B`,`B` / `C`,`C` / `D`,`D` / `E`,`E` (was content) |
+
+### PDF download CTA (525 chapters)
+
+Inserted inside `<article class="mishnah-chapter">` after the last `<table>` and before `</article>`:
+
+```html
+<!-- PDF CTA — added by D-2 patch -->
+<div class="citation-box">
+    <p><strong>📖 המשנה כדרכה — PDF</strong></p>
+    <p>
+        <a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">
+            להורדת המשנה כדרכה (PDF)
+        </a>
+    </p>
+</div>
+```
+
+Idempotency: the leading HTML comment serves as the sentinel; re-running skips files that already contain it.
+
+CSS rule added in `main.css` alongside the other `.mishnah-chapter` cosmetics block:
+
+```css
+.mishnah-chapter .citation-box {
+    text-align: center;
+}
+```
+
+No inline styles, no hardcoded colors. Existing `.citation-box` styling (lines 1084+) supplies background/border/padding; the scoped rule only overrides text-align.
+
+### Final invariants (post-patch)
+
+- 525 / 525 files end with `</html>`
+- 525 / 525 contain `<!-- D-2 patch: label-fix-plus-cta @ 2026-05-15T04:49:49Z -->` (exactly once each)
+- 0 / 525 retain the prior `<!-- D-2 bulk: mishnah-render @ … -->` sentinel
+- 525 / 525 contain `<!-- PDF CTA — added by D-2 patch -->` (exactly once each)
+- 525 / 525 contain the PDF link
+- 525 / 525 contain exactly one `<article class="mishnah-chapter">` wrapper, one `.citation-box`, one D-2 sentinel
+- 0 JSON-LD reparse failures across all 525
+
+### Operational note — bash timeout
+
+The full-script run timed out at the 45 s bash limit after processing 519 of 525 chapters (every-50-chapter progress prints + verify-by-reread is the bottleneck). The remaining 6 (`zevachim_4`–`zevachim_9`) were finished by a follow-up call that imported the patch module and reused the same `ISO_TIMESTAMP` discovered from one of the already-processed files, so all 525 sentinels share a single timestamp.
+
+### Flagged for separate decision (out of scope)
+
+The dry-run of the new functions surfaced 16 other chapters with the same bug patterns the spec targets. They were **not** re-rendered (per spec: "the other 519 chapters are correct"). Listed here for review:
+
+- *Bug 2 — full-mishnah-as-header on single-cell rows:* `bavabatra_3` row 2, `makkot_3` row 0, `shabbat_7` row 2
+- *Bug 2 — `B`/`C`/`D`/`E` subdivision marker followed by content:* `avodazara_5` rows 3,5; `beitzah_3` row 1; `ketubot_4` row 1; `ketubot_5` rows 1,3,4; `ketubot_8` rows 1,2; `pesachim_9` row 3; `sanhedrin_1` rows 3,4; `shabbat_6` rows 3,4; `shabbat_12` row 2; `shabbat_15` row 1; `shabbat_16` rows 1,2,5,6
+- *Bug 1 — Hebrew word labels truncated:* `avodazara_5` row 1 (`שכרהלישבעליE`)
+- *Edge cases the new logic would behave differently on:* `shabbat_6` row 3 cell 0 (leading whitespace run before `B`), `shekalim_2` row 0 cell 1 (bare Hebrew `ב` — current `B`, new logic gives `ב`), `zevachim_6` row 0 cell 1 (leading `\nA` run — current empty, new logic gives `A`)
+
+A follow-up patch could either (a) extend `PATCH_RENDER_KEYS` once the user confirms intent, or (b) tighten Case 1 to require an exact-match single-letter run (no surrounding whitespace) and add a Case 4 for `ב` alone.
+
+### Next step
+
+Moshe: review the diff in GitHub Desktop. Expect 525 .htm files, 1 `main.css` change (one new rule), and 2 new files in `_pilot/` (`d2_patch_label_fix_and_cta.py`, this diary entry). After push, purge the CSS URL in Cloudflare so the scoped `.mishnah-chapter .citation-box` rule is served.
