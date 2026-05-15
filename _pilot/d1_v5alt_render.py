@@ -30,8 +30,14 @@ ISO_TIMESTAMP = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
 SENTINEL_NEW = f'<!-- D-1 pilot v5-alt: drop-cell-label-restore-colspans @ {ISO_TIMESTAMP} -->'
 PROVENANCE_NEW = f'<!-- rendered-from: _templates/Academic-Content-HE.html @ {ISO_TIMESTAMP} -->'
 
-PILOT_KEY = 'megillah_1'
-PILOT_PATH = 'Mishnah-New/Hebrew/Text/Seder Moed/Masechet Megillah/Masechet Megillah Perek 1.htm'
+PILOTS = [
+    ('berakhot_1', 'Mishnah-New/Hebrew/Text/Seder Zeraim/Masechet Brachot/Mesechet Brachot Perek 1.htm'),
+    ('megillah_1', 'Mishnah-New/Hebrew/Text/Seder Moed/Masechet Megillah/Masechet Megillah Perek 1.htm'),
+    ('eduyot_1',   'Mishnah-New/Hebrew/Text/Seder Nezikin/Masechet Eduyot/Masechet Eduyot Perek 1.htm'),
+    ('kinnim_1',   'Mishnah-New/Hebrew/Text/Seder Kodashim/Masechet Kinnim/Masechet Kinnim Perek 1.htm'),
+    ('sotah_9a',   'Mishnah-New/Hebrew/Text/Seder Nashim/Masechet Sotah/Masechet Sotah Perek 9 A.htm'),
+    ('shabbat_22', 'Mishnah-New/Hebrew/Text/Seder Moed/Masechet Shabbat/Masechet Shabbat Perek 22.htm'),
+]
 
 HE_TO_LATIN = {'א': 'A', 'ב': 'B', 'ג': 'C', 'ד': 'D', 'ה': 'E'}
 SUBDIVISION_LETTERS = {'A', 'B', 'C', 'D', 'E'}
@@ -288,43 +294,39 @@ def atomic_write(file_path, content):
 def main():
     with open(JSON_PATH, encoding='utf-8') as f:
         db = json.load(f)
-    ch = db[PILOT_KEY]
-    path = os.path.join(REPO_ROOT, PILOT_PATH)
-    with open(path, encoding='utf-8') as f:
-        old_text = f.read()
-    old_size = len(old_text.encode('utf-8'))
-    inner = render_chapter_main_content(PILOT_KEY, ch)
-    new_text = transform_file(old_text, inner)
-    new_size = atomic_write(path, new_text)
 
-    # Verify
-    with open(path, encoding='utf-8') as f:
-        text = f.read()
-    main_inner = re.search(r'<main class="content-wrapper">(.*?)</main>', text, re.DOTALL).group(1)
+    print('| Key | Old | New | Δ | th/td | colspan | subdiv | no_cell_label_th | sentinel_count |')
+    print('|---|---:|---:|---:|---|---:|---:|---|---:|')
 
-    checks = {
-        'ends_with_html': text.rstrip().endswith('</html>'),
-        'sentinel_count_1': text.count(SENTINEL_NEW) == 1,
-        'no_cell_label_in_th': not bool(re.search(r'<th[^>]*\bcell-label\b', main_inner)),
-        'no_mishnah_chapter_class': '<article class="mishnah-chapter"' not in text,
-        'th_count': len(re.findall(r'<th\b', main_inner)),
-        'td_count': len(re.findall(r'<td\b', main_inner)),
-        'colspan_count_in_main': len(re.findall(r'\scolspan=', main_inner)),
-        'subdiv_count': main_inner.count('class="CellSubdivision"'),
-        'col_a_count': main_inner.count('class="col-a"') + main_inner.count('class="col-a "'),
-    }
+    overall_ok = True
+    for key, rel in PILOTS:
+        path = os.path.join(REPO_ROOT, rel)
+        with open(path, encoding='utf-8') as f:
+            old_text = f.read()
+        old_size = len(old_text.encode('utf-8'))
+        ch = db[key]
+        inner = render_chapter_main_content(key, ch)
+        new_text = transform_file(old_text, inner)
+        new_size = atomic_write(path, new_text)
 
-    print(f'megillah_1 v5-alt rendered')
-    print(f'  old: {old_size:,} bytes  →  new: {new_size:,} bytes  ({new_size - old_size:+,})')
-    for k, v in checks.items():
-        print(f'  {k}: {v}')
+        with open(path, encoding='utf-8') as f:
+            text = f.read()
+        main_inner = re.search(r'<main class="content-wrapper">(.*?)</main>', text, re.DOTALL).group(1)
 
-    # Spot-print row 2 table HTML so we can eyeball
-    print('\n--- Row 2 rendered HTML (extract) ---')
-    match = re.search(r'<table class="scripture-table">[^<]*<thead>[^<]*<tr>[^<]*<th[^>]*>2A</th>.*?</table>', text, re.DOTALL)
-    if match:
-        print(match.group(0))
-    return 0
+        no_cell_label_th = not bool(re.search(r'<th[^>]*\bcell-label\b', main_inner))
+        sentinel_count = text.count(SENTINEL_NEW)
+        th_count = len(re.findall(r'<th\b', main_inner))
+        td_count = len(re.findall(r'<td\b', main_inner))
+        colspan_count = len(re.findall(r'\scolspan=', main_inner))
+        subdiv_count = main_inner.count('class="CellSubdivision"')
+
+        ends_html = text.rstrip().endswith('</html>')
+        if not (ends_html and sentinel_count == 1 and no_cell_label_th):
+            overall_ok = False
+
+        print(f'| {key} | {old_size:,} | {new_size:,} | {new_size - old_size:+,} | {th_count}/{td_count} | {colspan_count} | {subdiv_count} | {no_cell_label_th} | {sentinel_count} |')
+
+    return 0 if overall_ok else 1
 
 
 if __name__ == '__main__':

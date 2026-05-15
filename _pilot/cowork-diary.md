@@ -289,6 +289,67 @@ Next step:
 - After visual approval → consider a small main.css cleanup task to delete the dead `.mishnah-chapter .cell-label` rule (and the other 4 dead `.mishnah-*` rules flagged in the v3-fix report §7.4)
 - After visual approval → D-2 bulk render of remaining 519 chapters (incl. `sotah_9b`) using `d1_v5_render.py`
 
+### 2026-05-14 — D-1 v5-alt (chat-Claude's variant; my v5 inline-block theory was wrong)
+
+What was done:
+- After my v5 (drop `mishnah-chapter` class from `<article>`) was pushed and Moshe confirmed the wrap bug persisted in Megillah Perek 1 Row 2, applied chat-Claude's alternate fix as a single-chapter test on `megillah_1`, confirmed visually that it works, then rolled out to all 6 pilots.
+- Render changes vs my v5:
+  - Dropped `cell-label` from `<th>` classes — uses only color class (`col-a` / `col-b` / `col-c` / `col-full`)
+  - Restored `colspan` attribute on `<th>` AND `<td>` from JSON `position.colspan`
+  - Switched naming from `col-left/middle/right` back to `col-a/b/c` (both map to the same gradient rules in main.css)
+- Single-chapter test on megillah_1 confirmed Row 2 (`2A`/`2B`/`2C`) now renders all three headers on one line on the live site.
+
+Why my v5 theory was wrong:
+- Verified main.css has only 3 references to `.cell-label`:
+  - Line 732: `.matrix-table .cell-label { font-size, color }` — no `display`
+  - Line 772: `.mishnah-chapter .cell-label { display: inline-block, ... }` — descendant selector
+  - Line 3153: `.matrix-table .cell-label` mobile breakpoint — no `display`
+- After my v5 dropped `mishnah-chapter` from `<article>`, the `.mishnah-chapter .cell-label` descendant selector had no matching ancestor anywhere (verified by grep). The rule was already not firing in my v5 — so dropping `mishnah-chapter` couldn't have helped, and chat-Claude's v5-alt dropping `cell-label` couldn't be helping for that reason either.
+- The actual cause of the megillah fix must be the restored `colspan` attributes on `<th>`/`<td>`, not the `cell-label` drop. The chat-Claude correctly observed that v2 (which had colspans) worked, but the explanation given (`display: inline-block` from `.mishnah-chapter .cell-label`) is wrong on the mechanism.
+
+Mechanical hypothesis (unverified, needs browser dev-tools to confirm):
+- `.scripture-table thead th { width: 50% }` at main.css line 376 sets 50% on every `<th>`.
+- For a row with 3 `<th>` and no colspan: sum of specified widths = 150%. Under `table-layout: fixed`, RTL Hebrew context, the browser appears to over-fit and wrap the third cell to a new line.
+- For a row with 3 `<th>` AND colspans 1+2+1 (4 effective columns): the same 150% specified width gets distributed across 4 columns proportionally, and the resulting per-cell visual widths total 100% with no wrap.
+- The `[1,1,1]` shape rows (Eduyot, Kinnim) have no colspans even in v5-alt, so they may still exhibit the wrap unless `cell-label` drop is also acting as a contributing factor — visual verification needed.
+
+Files modified:
+- 6 pilot `.htm` files: re-rendered in place with v5-alt sentinel
+- `_pilot/d1_v5alt_render.py` — new canonical render script (was `d1_v5alt_megillah_only.py`, generalized to all 6)
+
+Verification table from render run:
+
+| Key | Old | New | Δ | th/td | colspans | subdivs |
+|---|---:|---:|---:|---|---:|---:|
+| berakhot_1 | 22,882 | 22,943 | +61 | 5/5 | 10 | 0 |
+| megillah_1 | 27,681 | 27,681 | 0 | 12/19 | 21 | 14 |
+| eduyot_1 | 29,022 | 28,852 | -170 | 12/15 | 0 | 6 |
+| kinnim_1 | 22,509 | 22,429 | -80 | 6/14 | 0 | 12 |
+| sotah_9a | 25,148 | 25,330 | +182 | 8/16 | 24 | 12 |
+| shabbat_22 | 22,846 | 22,985 | +139 | 6/12 | 18 | 8 |
+
+Note: Eduyot and Kinnim have 0 colspans because their shapes are `[1,1,1]` (every cell colspan=1). They are the empirical test for whether `cell-label`-drop alone fixes the wrap.
+
+What failed and why:
+- My v5 theory (drop `mishnah-chapter` from `<article>` to break the inline-block rule) — was based on a wrong CSS reading. The descendant selector required `mishnah-chapter` ancestor; removing the class did remove that, but the rule wasn't the actual cause of the wrap. Spent an iteration on a wrong fix that visually didn't change anything.
+- Chat-Claude's theory (`.mishnah-chapter .cell-label` was the cause; drop `cell-label`) — same wrong root cause as mine. The fix happens to work on chapters with colspan>1 cells (Megillah Row 2 etc.) for unrelated reasons (the colspan restoration). For chapters with all colspan=1 cells (Eduyot, Kinnim), the fix may not work.
+
+Current state:
+- All 6 pilots re-rendered with v5-alt; not yet committed (as of this entry)
+- Awaiting visual verification of Eduyot and Kinnim 3-col header rows in particular
+
+Next step:
+- Push v5-alt; check live site for ALL of:
+  1. Megillah Row 2: `2A` `2B` `2C` on one line (already confirmed working)
+  2. Megillah Row 4: `4A` `4B` `4C` on one line
+  3. Eduyot all 4 rows: `NA` `NB` `NC` on one line (`[1,1,1]` shape — diagnostic)
+  4. Kinnim both rows: `NA` `NB` `NC` on one line (`[1,1,1]` shape — diagnostic)
+  5. Shabbat 22, Sotah 9a, Berakhot 1 — 2-cell rows, expected fine
+- If Eduyot/Kinnim still wrap → fix is purely from colspans, and `[1,1,1]` shapes need a different fix (probably inject explicit width on `<th>` or add a `.scripture-table thead th` width override)
+- If Eduyot/Kinnim render correctly → `cell-label` drop alone is sufficient and chat-Claude's fix is complete
+- After all 6 verified visually → consider deleting dead `.mishnah-chapter .cell-label` rule in main.css as a separate cleanup (the rule is now confirmed not the cause of any bug but is still dead code)
+- After verification → D-2 bulk render of remaining 519 chapters using `d1_v5alt_render.py`
+
 ## Standing reference
 
 ### CSS class quick-reference (from main.css)
