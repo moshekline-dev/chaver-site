@@ -952,3 +952,61 @@ Moshe: review GitHub Desktop diff. Expect:
 - This diary entry
 
 Push + (already noted) purge the CSS URL in Cloudflare.
+
+---
+
+### 2026-05-15 — Mishnah PDF page: author link, RTL fix, rebuild from English template
+
+**What was done:**
+- Added `<p><a href="/about-Moshe-Kline">Full publication list and academic credentials →</a></p>` to citation box in `Mishnah-New/Hebrew/Text/mishnah-pdf.html`
+- Discovered page was built from `_templates/Academic-Content-HE.html` (Hebrew template) despite being an English-language page
+- Initial fix (`lang="en"`, `dir` removal, nav/footer swap) was insufficient — Hebrew chrome was too deeply embedded
+- **Final fix: full rebuild from `_templates/Academic-Content-EN.html`** — extracted doctitle, meta, additional-styles, and content regions from the existing file and substituted them into the English template
+
+**Files modified:**
+- `Mishnah-New/Hebrew/Text/mishnah-pdf.html` (rebuilt from English template)
+- `Mishnah-New/Hebrew/Text/mishnah-pdf.html` (author link added to citation box, same session)
+
+**Decisions locked:**
+- **Every English-language page must be built from `_templates/Academic-Content-EN.html`**, not the Hebrew template, even if the page's subject matter is Hebrew (e.g. the Mishnah PDF). Template identity = chrome language, not content language.
+- This is not cosmetic — it is a **global-change propagation requirement**: when the English template is updated (nav links, footer content, scripts, CSS references), all English pages must be re-renderable from it. A page built from the wrong template is permanently cut off from those global updates.
+- The Hebrew content inside the page body (the download table, Hebrew description paragraph, `inLanguage: "he"` in schema) is correct and untouched. Template choice governs chrome only.
+
+**What failed and why:**
+- Simply swapping `lang="he" dir="rtl"` → `lang="en"` did not fix the nav — the nav HTML itself was Hebrew-language text
+- Swapping header/footer blocks via regex left residual Hebrew-template artifacts in `<head>` (wrong `og:locale`, wrong E-1 boilerplate)
+- **Only a full template rebuild produces a clean result**
+
+**Proven pattern — correct rebuild workflow:**
+1. Read the page's existing regions (doctitle, meta, additional-styles, content from inside `<main>`)
+2. Load `_templates/Academic-Content-EN.html`
+3. Substitute all 5 `{{ region: X }}` placeholders
+4. Atomic write (tmp → fsync → rename)
+5. Verify: `lang=en`, English nav, correct `og:locale`, no `dir=rtl` in chrome, ends with `</html>`
+
+**Current state:**
+- `mishnah-pdf.html` rebuilt, pending push
+- `og:locale` now `en_US` (was `he_IL`)
+- All E-1 boilerplate from English template now present
+
+**Next step:**
+- Moshe: commit and push via GitHub Desktop, purge Cloudflare cache
+- Audit: check whether any other pages in the repo are built from the wrong template (English content in Hebrew template or vice versa)
+
+---
+
+### 2026-05-15 — Standing rule: woven-torah/ is off-limits
+
+**Decision locked:**
+- `woven-torah/` is a WordPress export. **Never modify any file under it.** Any change would break the WordPress site.
+- All Cowork tasks, SEO audits, schema injections, template rebuilds, and bulk operations must explicitly exclude `woven-torah/` from their scope.
+- When scoping file globs or find commands, always add: `--exclude-dir=woven-torah` or `find ... -not -path "*/woven-torah/*"`
+
+**Context:**
+- The `woven-torah/` directory contains ~250 HTML files generated and managed by WordPress
+- It has its own `hebrew_pages/`, `language/he/`, map pages, and article pages that look similar to hand-built content but are not
+- Discovered during SEO audit (2026-05-15) when Moshe confirmed the directory should have been excluded from scope
+- The hand-built `hebrew-*` pages flagged in the audit are in `torah-weave/Deuteronomy/` — those are safe to edit
+
+**Next step:**
+- Re-run any future audits with this exclusion applied
