@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-05-13T11:17:30Z -->
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -13,10 +12,6 @@
 <!-- rest of head content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- E-2: Per-page metadata injected -->
-    <meta name="twitter:title" content="Chaver.com - A New Approach to Torah and Mishnah">
-    <meta name="twitter:description" content="The literary structure of Leviticus: 22 units organized in three concentric rings around Leviticus 19, mirroring the architecture of the Tabernacle. Peer-reviewed analysis published in the Journal of Hebrew Scriptures (2008) and validated by Jacob Milgrom.">
-    <!-- /E-2 -->
     <!-- E-1: Site-wide SEO/AEO boilerplate (canonical entity references) -->
     <!-- Per-page canonical, og:url, og:title, og:description, og:type are E-2-injected just above this block -->
     <meta property="og:site_name" content="Chaver.com">
@@ -41,38 +36,9 @@
     }
     </script>
     <!-- /E-1 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Chaver.com - A New Approach to Torah and Mishnah",
-      "url": "https://chaver.com/Torah-New/English/Articles/The%20Literary%20Structure%20of%20Leviticus.htm",
-      "mainEntityOfPage": "https://chaver.com/Torah-New/English/Articles/The%20Literary%20Structure%20of%20Leviticus.htm",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg",
-        "width": 1200,
-        "height": 630
-      },
-      "author": {
-        "@id": "https://chaver.com/#moshe-kline"
-      },
-      "publisher": {
-        "@id": "https://chaver.com/#organization"
-      },
-      "isPartOf": {
-        "@id": "https://chaver.com/#website"
-      },
-      "inLanguage": "en",
-      "description": "The literary structure of Leviticus: 22 units organized in three concentric rings around Leviticus 19, mirroring the architecture of the Tabernacle. Peer-reviewed analysis published in the Journal of Hebrew Scriptures (2008) and validated by Jacob Milgrom."
-    }
-    </script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    
+
     <title>Chaver.com - A New Approach to Torah and Mishnah</title>
-    
-    
     
     <link rel="canonical" href="https://chaver.com/Torah-New/English/Articles/The%20Literary%20Structure%20of%20Leviticus.htm">
     <meta name="description" content="The literary structure of Leviticus: 22 units organized in three concentric rings around Leviticus 19, mirroring the architecture of the Tabernacle. Peer-reviewed analysis published in the Journal of Hebrew Scriptures (2008) and validated by Jacob Milgrom.">
@@ -130,6 +96,8 @@
     
     <!-- Page-specific style overrides can go here -->
     
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
     <style type="text/css">
 
@@ -226,6 +194,198 @@
         }
     }
     </style>
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
 </head>
 <body>
     <!-- ==========================================
@@ -269,7 +429,13 @@
                     </ul>
                 </li>
                 <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-                <li><a href="/torah-weave/data/">Data</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
+                    </ul>
+                </li>
                 <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
                 <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
             </ul>
@@ -281,9 +447,7 @@
          MAIN CONTENT AREA - EDITABLE REGION
          ========================================== -->
     <main class="content-wrapper">
-        
-        
-    <main class="content-wrapper">
+        <main class="content-wrapper">
         
 			<h1>The Literary Structure of Leviticus</h1><h2>Introduction<o:p></o:p></h2><p align="left">&nbsp;</p><p class="style11">Another possibility again [for explaining the source of Leviticus] is suggested by the studied elegance and powerfully contrived structure. A literary composition that is so impressive could suggest that writing a theological treatise was the full achievement. The skeptical likelihood that the book is a beautiful fantasy, a vision of a life that never was, hangs heavily over the interpretation.<a name="_ednref1"></a><a title="" style="text-underline: single;" href="#_edn1" class="style12"><span style="mso-bookmark:_ednref1"><span class="style13"><b>[1]</b></span></span></a></p><p class="style11">&nbsp;</p><p>Like an anthropologist cutting through the bush to discover a lost civilization, Mary Douglas has opened up a new path for Biblical research, through the jungle of source criticism. In the first four chapters of <i>Leviticus as Literature</i> she demonstrates that &quot;Bible students have to choose between accepting the muddle made by imposing a Western linear reading upon an archaic text, or trying to read the book through its own literary conventions.” <a name="_ednref2"></a><a title="" href="#_edn2"><b>[2]</b></a> She argues for an &quot;analogical&quot; reading of Leviticus most convincingly, displaying an extraordinarily far-reaching scholarship. Doubtless, such a reading will lead to places yet to be explored and theories that will conflict with the currently accepted &quot;muddle&quot;. </p><p>In the last three chapters of Leviticus as Literature (10-12), Douglas offers her own analogical overview of the whole of Leviticus, comparing it to the structure of the Tabernacle. Intuitively, the imagery fits. The redactor of Leviticus could not have found a more appropriate structural analogy than the Tabernacle. This compelling analogy invites further exploration of the structure of Leviticus. Douglas herself has stated the ground rule for structural analysis: &quot;Everything depends on how clearly the units of structure are identified.&quot;<a name="_ednref3"></a><a title="" href="#_edn3"><b>[3]</b></a> She explains the importance of clearly defined units in her book on Numbers: &quot;If the analyst can manage not to take responsibility either for selecting the units of structure, or for the principles of relationship between the units of the text, the analysis of the structure will be more secure. The safeguard is to have some principle of selection that makes the interpretation a work of discovery, not of creation.&quot;<a name="_ednref4"></a><a title="" href="#_edn4"><b>[4]</b></a> In this paper, I will attempt to expand Douglas&#39; argument with a clear definition of the units of structure that make the interpretation of Leviticus a work of discovery. Based on these units, I will offer a modification of her analogical reading.</p><h3><a name="_Toc66439036">The Literary Units</a><o:p></o:p></h3><p>Leviticus contains twenty-two well-defined literary units, whereas printed Bibles divide the book into twenty-seven chapters. To avoid confusion, I will refer to my units as Units and mark them with Roman numerals. Nearly all of the discrepancies are found in the first ten chapters, which reduce to four Units. Unit I includes chapters 1-3, II includes 4-5, III spans 6-7, and IV covers 8-10. The first three Units describe different aspects of the sacrificial system. The fourth contains an extended narrative described by Milgrom as &quot;the inauguration of the cult.”<a name="_ednref5"></a><a title="" href="#_edn5"><b>[5]</b></a> Another place where the division by chapters must be modified is chapter 22. I read this chapter as two Units, consisting of verses 1-25 and 26-33, respectively. This division is based on the subject matter of the two Units. Once we have identified 22:26-33 as a separate Unit, its similarity to chapter 12 becomes apparent. Both consist of just eight verses, containing birth, seven days after birth, the eighth day, and sacrifice. The similarity between these two Units will play an important role in identifying the overall structure. A minor adjustment has to be made between chapters 13 and 14. While they remain two literary Units, the end of chapter 13, verses 47-59 are properly part of the Unit that includes chapter 14. </p><p>As recommended by Douglas, the identification of the literary Units is based upon “some principle of selection that makes the interpretation a work of discovery, not of creation.” The principle of selection that I have employed to identify the Units is itself a discovery. Each of the Units has its own well-defined structure. I have defined each Unit as such, only after first identifying its internal structure. At this point, it may sound as if we are looking at a potential <i>regressio ad infinitum</i>. I have proposed identifying the structure of Leviticus by identifying its Units. Now I claim that each of these Units has its own structure. Moreover, I will further state that the structure of each Unit is defined in turn by the structure of its components! In order to avoid the regression, I will introduce a form of “literary calculus.”</p><p>Leviticus displays level upon level of organization in a “powerfully contrived structure.”<a name="_ednref6"></a><a title="" href="#_edn6"><b>[6]</b></a> Therefore, it is not composed of a single set of units, but rather a set of sets. Each level of organization is based upon its own set of units. In order to speak about “the structure of Leviticus,” we must have an understanding of several levels of order and the set of units associated with each level. Once we have established the levels of organization, we can apply the “literary calculus” to define the most useful set of parameters for describing the overall structure of Leviticus.</p><p>As I have mentioned, on one level Leviticus divides into twenty-two structurally similar Units. I will refer to the internal organization of these Units as the microstructures of Leviticus, and the arrangement of the Units together as the macrostructure. The key to applying Douglas’ “discovery” method to Leviticus appeared when I discovered that the macrostructure employs the same rules of organization as the microstructures. The development of a common set of rules for these two levels of structure is the result of an analytic process that I have playfully termed “literary calculus.” The similarity to the true calculus is found in the need to postulate a smallest quantum, or in textual terms, “the prime pericope.” This is the smallest block of text which is structurally significant. Like a prime number, it can not be divided into factors. I will explain now in basic outline just how these prime pericopes are organized in six levels of ascending complexity. For consistency with later sections of this article, I will refer to some groups of textual elements as “rows” and “tables”. I will explain the significance of these terms after I present all six levels of order.</p><h3><a name="_Toc66439037">The Levels of Order</a><o:p></o:p></h3><h4 align="left" style="page-break-after: avoid">a. Prime Pericope</h4><div align="center"><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0in 0in 0in 0in"><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes"><td valign="top" style="border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt"><p align="left">1</p></td></tr></table></div><h4 align="left" style="page-break-after: avoid">b. Row of Prime Pericopes (dyads or triads) </h4><div align="center"><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0in 0in 0in 0in"><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes"><td valign="top" style="border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt"><p align="left">1</p></td><td style="border:solid windowtext 1.0pt;border-left:none;padding:0in 5.4pt 0in 5.4pt"><p align="left">2</p></td></tr></table></div><p align="center" class="style18">or</p><div align="center"><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0in 0in 0in 0in"><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes"><td valign="top" style="border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt"><p align="left">1</p></td><td valign="top" style="border:solid windowtext 1.0pt;border-left:none;
   padding:0in 5.4pt 0in 5.4pt"><p align="left">2</p></td><td valign="top" style="border:solid windowtext 1.0pt;border-left:none;
@@ -757,10 +921,6 @@ EN-US;mso-fareast-language:EN-US;mso-bidi-language:HE"><br clear="all" style="pa
 color:#333333"><br clear="all" style="mso-special-character:line-break" /><o:p></o:p></span></p><div align="left" class="style18"><span style="font-size:
 13.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
 color:#333333"><hr size="1" width="33%" align="left" /></span></div><p class="style32"><a name="_edn1"></a><a title="" style="text-underline: single;" href="#_ednref1" class="style12"><span style="mso-bookmark:_edn1"><span class="style13"><b>[1]</b></span></span></a> Mary Douglas, <i>Leviticus as Literature</i>, (Oxford: OUP, 1999), 7.</p><p class="style32"><a name="_edn2"></a><a title="" style="text-underline: single;" href="#_ednref2" class="style12"><span style="mso-bookmark:_edn2"><span class="style13"><b>[2]</b></span></span></a> ibid., 51.</p><p class="style32"><a name="_edn3"></a><a title="" style="text-underline: single;" href="#_ednref3" class="style12"><span style="mso-bookmark:_edn3"><span class="style13"><b>[3]</b></span></span></a> Mary Douglas, <i>In The Wilderness</i> (Oxford, OUP, 2001), Preface to the Paperback Edition, xxiii</p><p class="style32"><a name="_edn4"></a><a title="" style="text-underline: single;" href="#_ednref4" class="style12"><span style="mso-bookmark:_edn4"><span class="style13"><b>[4]</b></span></span></a> ibid, 94</p><p class="style32"><a name="_edn5"></a><a title="" style="text-underline: single;" href="#_ednref5" class="style12"><span style="mso-bookmark:_edn5"><span class="style13"><b>[5]</b></span></span></a> Jacob Milgrom, <i>Leviticus 1-16</i> (New York, The Anchor Bible, 1991), 491</p><p class="style32"><a name="_edn6"></a><a title="" style="text-underline: single;" href="#_ednref6" class="style12"><span style="mso-bookmark:_edn6"><span class="style13"><b>[6]</b></span></span></a> Douglas, <i>Leviticus</i>, 7</p><p class="style32"><a name="_edn7"></a><a title="" style="text-underline: single;" href="#_ednref7" class="style12"><span style="mso-bookmark:_edn7"><span class="style13"><b>[7]</b></span></span></a> Douglas, <i>Leviticus</i>, 7</p><p class="style32"><a name="_edn8"></a><a title="" style="text-underline: single;" href="#_ednref8" class="style12"><span style="mso-bookmark:_edn8"><span class="style13"><b>[8]</b></span></span></a> Jacob Milgrom, <i>Leviticus 23-27</i> (New York, The Anchor Bible, 2000), 2409</p><p class="style32"><a name="_edn9"></a><a title="" style="text-underline: single;" href="#_ednref9" class="style12"><span style="mso-bookmark:_edn9"><span class="style13"><b>[9]</b></span></span></a> Milgrom makes the point that “in the Wilderness of Sinai” refers to the Tent of Meeting, creating closure with 1:1. See Milgrom, <i>Leviticus 1-16</i>, 438<span style="color:red">.</span> </p><p class="style32"><a name="_edn10"></a><a title="" style="text-underline: single;" href="#_ednref10" class="style12"><span style="mso-bookmark:_edn10"><span class="style13"><b>[10]</b></span></span></a> Douglas, <i>Leviticus,</i> 219; Milgrom <i>Leviticus 23-27</i>, 2409<span style="color:red">.</span> </p><p class="style32"><a name="_edn11"></a><a title="" style="text-underline: single;" href="#_ednref11" class="style12"><span style="mso-bookmark:_edn11"><span class="style13"><b>[11]</b></span></span></a> Douglas, <i>Leviticus</i>, 218</p><p class="style6">&nbsp;</p>
-        
-    </main>
-    
-        
     </main>
     
     <!-- ==========================================
@@ -867,9 +1027,7 @@ color:#333333"><hr size="1" width="33%" align="left" /></span></div><p class="st
             });
         })();
     </script>
-    
-    
-    <!-- Page-specific scripts can go here -->
+
     
 </body>
 </html>

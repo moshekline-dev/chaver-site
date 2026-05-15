@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-05-13T13:00:00Z -->
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -37,72 +36,9 @@
     }
     </script>
     <!-- /E-1 -->
-    <!-- E-2: Per-page metadata injected -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://chaver.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Torah",
-          "item": "https://chaver.com/Torah-New/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "English",
-          "item": "https://chaver.com/Torah-New/English/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Torah PDF",
-          "item": "https://chaver.com/Torah-New/English/Text/Torah-pdf"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Torah PDF - Free Download | Complete Five Books of Moses",
-      "url": "https://chaver.com/Torah-New/English/Text/Torah-pdf",
-      "mainEntityOfPage": "https://chaver.com/Torah-New/English/Text/Torah-pdf",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg",
-        "width": 1200,
-        "height": 630
-      },
-      "author": {
-        "@id": "https://chaver.com/#moshe-kline"
-      },
-      "publisher": {
-        "@id": "https://chaver.com/#organization"
-      },
-      "isPartOf": {
-        "@id": "https://chaver.com/#website"
-      },
-      "inLanguage": "en",
-      "description": "Download the complete Torah PDF free. All five books of Moses (Genesis–Deuteronomy) in JPS 1917 translation with 40 years of literary analysis. 275 pages."
-    }
-    </script>
-    <!-- /E-2 -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-    
     <title>Torah PDF - Free Download | Complete Five Books of Moses | Chaver.com</title>
-    
-    
     
     <meta name="description" content="Download the complete Torah PDF free. All five books of Moses (Genesis–Deuteronomy) in JPS 1917 translation with 40 years of literary analysis. 275 pages.">
     <meta name="keywords" content="Torah PDF, Chumash PDF, Pentateuch download, Five Books of Moses PDF, Hebrew Bible text, Torah study PDF, free Torah download, Genesis Exodus Leviticus Numbers Deuteronomy PDF, JPS Torah, structured Torah">
@@ -229,6 +165,8 @@
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
     <style type="text/css">
 
@@ -277,7 +215,6 @@
     }
     </style>
     
-    
     <style type="text/css">
 
     /* ==========================================
@@ -293,6 +230,39 @@
     }
     
     /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
        MAIN CONTENT AREA LAYOUT
        ========================================== */
     
@@ -301,6 +271,15 @@
         margin: 0 auto;
         padding: 40px 20px;
         min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
     }
     
     .footer-container {
@@ -330,9 +309,63 @@
        ========================================== */
     
     @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
 
         /* Landscape phones - hamburger menu */
         @media (max-height: 500px) and (orientation: landscape) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
             
             main.content-wrapper {
                 padding: 15px 10px;
@@ -416,7 +449,13 @@
                     </ul>
                 </li>
                 <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-                <li><a href="/torah-weave/data/">Data</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
+                    </ul>
+                </li>
                 <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
                 <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
             </ul>
@@ -428,9 +467,7 @@
          MAIN CONTENT AREA - EDITABLE REGION
          ========================================== -->
     <main class="content-wrapper">
-        
-        
-<section class="hero-section">
+        <section class="hero-section">
     <h1>Complete Torah PDF — Free Download</h1>
     <p class="subtitle">All Five Books of Moses · Chumash · Pentateuch · JPS 1917 Translation</p>
     <p><strong>Before Chapter and Verse is a free 275-page Torah PDF containing the complete text of all five books of Moses (JPS 1917 translation) plus 40 years of peer-reviewed literary analysis revealing 86 discrete literary units arranged as two-dimensional woven matrices. No other Torah edition makes this architecture visible.</strong></p>
@@ -627,8 +664,6 @@
 <p><strong><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></strong> — Machine-readable dataset with 4,442 cells and 2,276 structural markers.</p>
 
 <p><strong><a href="/Mishnah-New/Hebrew/Text/mishnah-search">Search the Mishnah</a></strong> — Full-text Hebrew search and structural pattern queries across all 524 chapters.</p>
-
-        
     </main>
     
     <!-- ==========================================
@@ -735,8 +770,7 @@
             });
         })();
     </script>
-    
-    
+
     
 </body>
 </html>

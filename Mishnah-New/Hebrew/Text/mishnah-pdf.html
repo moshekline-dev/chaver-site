@@ -215,6 +215,9 @@
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
     <style type="text/css">
 
     /* ==========================================
@@ -545,7 +548,13 @@
                     </ul>
                 </li>
                 <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-                <li><a href="/torah-weave/data/">Data</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
+                    </ul>
+                </li>
                 <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
                 <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
             </ul>
@@ -1008,7 +1017,7 @@
             });
         })();
     </script>
-    
+
     
 </body>
 </html>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-05-13T13:06:34Z -->
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -39,10 +38,7 @@
     <!-- /E-1 -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-    
     <title> The Torah's Woven Literary Architecture | 40 Years of Research</title>
-    
-    
     
     <meta name="title" content="Chaver.com | Torah's Woven Literary Architecture | 40 Years of Research">
     <meta name="description" content="Discover the Torah's hidden two-dimensional literary structure. 40 years of peer-reviewed research. Free PDF. Published in Journal of Biblical Literature.">
@@ -114,7 +110,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <style>
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <style type="text/css">
 
 
     /* ============================================
@@ -513,7 +512,6 @@
     }
     </style>
     
-    
     <style type="text/css">
 
     /* ==========================================
@@ -529,6 +527,39 @@
     }
     
     /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
        MAIN CONTENT AREA LAYOUT
        ========================================== */
     
@@ -537,6 +568,15 @@
         margin: 0 auto;
         padding: 40px 20px;
         min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
     }
     
     .footer-container {
@@ -566,9 +606,63 @@
        ========================================== */
     
     @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
 
         /* Landscape phones - hamburger menu */
         @media (max-height: 500px) and (orientation: landscape) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
             
             main.content-wrapper {
                 padding: 15px 10px;
@@ -652,7 +746,13 @@
                     </ul>
                 </li>
                 <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-                <li><a href="/torah-weave/data/">Data</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
+                    </ul>
+                </li>
                 <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
                 <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
             </ul>
@@ -664,8 +764,6 @@
          MAIN CONTENT AREA - EDITABLE REGION
          ========================================== -->
     <main class="content-wrapper">
-        
-        
         <!-- HERO -->
         <section class="hero">
             <div class="container">
@@ -1092,8 +1190,6 @@
             <strong>How to cite this site:</strong> Kline, Moshe. "Chaver.com: The Woven Texts Project." 
             <em>Chaver.com</em>, https://chaver.com/. Accessed [date].
         </div>
-        
-        
     </main>
     
     <!-- ==========================================
@@ -1200,410 +1296,7 @@
             });
         })();
     </script>
-    
-    
-    <script>
-        /* Toggle Linear/Woven View */
-        function toggleView() {
-            const linearView = document.getElementById('linearView');
-            const wovenView = document.getElementById('wovenView');
-            const btnText = document.getElementById('btnText');
-            const btnIcon = document.getElementById('btnIcon');
-            const label = document.getElementById('viewLabel');
-            
-            if (linearView.style.display !== 'none') {
-                linearView.style.display = 'none';
-                wovenView.style.display = 'block';
-                btnText.textContent = 'Return to Linear View';
-                btnIcon.textContent = '☰';
-                label.textContent = 'Woven Structure';
-            } else {
-                linearView.style.display = 'block';
-                wovenView.style.display = 'none';
-                btnText.textContent = 'Reveal Woven Structure';
-                btnIcon.textContent = '☷';
-                label.textContent = 'Linear Mode';
-            }
-        }
-        
-        /* Slideshow */
-        let currentSlide = 1;
-        const totalSlides = 15;
-        let slideshowInView = false;
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const dotsContainer = document.getElementById('slideDots');
-            for (let i = 1; i <= totalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = 'slide-dot' + (i === 1 ? ' active' : '');
-                dot.setAttribute('aria-label', 'Go to slide ' + i);
-                dot.addEventListener('click', function() { goToSlide(i); });
-                dotsContainer.appendChild(dot);
-            }
-            
-            const slideshow = document.querySelector('.slideshow-section');
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) { slideshowInView = entry.isIntersecting; });
-            }, { threshold: 0.1 });
-            observer.observe(slideshow);
-        });
-        
-        function changeSlide(direction) {
-            const newSlide = currentSlide + direction;
-            if (newSlide >= 1 && newSlide <= totalSlides) { goToSlide(newSlide); }
-        }
-        
-        function goToSlide(slideNum) {
-            document.querySelector('.slide.active').classList.remove('active');
-            document.querySelector('[data-slide="' + slideNum + '"]').classList.add('active');
-            currentSlide = slideNum;
-            document.getElementById('currentSlide').textContent = slideNum;
-            const dots = document.querySelectorAll('.slide-dot');
-            dots.forEach(function(dot, index) { dot.classList.toggle('active', index + 1 === slideNum); });
-            document.getElementById('prevSlide').disabled = (slideNum === 1);
-            document.getElementById('nextSlide').disabled = (slideNum === totalSlides);
-        }
-        
-        document.addEventListener('keydown', function(e) {
-            if (slideshowInView) {
-                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { changeSlide(1); }
-                else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { changeSlide(-1); }
-            }
-        });
-        
-        let touchStartX = 0;
-        let touchEndX = 0;
-        const slideshowWrapper = document.querySelector('.slideshow-wrapper');
-        if (slideshowWrapper) {
-            slideshowWrapper.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, false);
-            slideshowWrapper.addEventListener('touchend', function(e) { touchEndX = e.changedTouches[0].screenX; handleSwipe(); }, false);
-        }
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) { changeSlide(1); } else { changeSlide(-1); }
-            }
-        }
-    </script>
-    
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://chaver.com/#website",
-          "url": "https://chaver.com/",
-          "name": "Chaver.com",
-          "alternateName": "The Woven Texts Project",
-          "description": "Four decades of academic research revealing the Torah and Mishnah as two-dimensional literary matrices. Peer-reviewed scholarship published in the Journal of Biblical Literature.",
-          "inLanguage": ["en", "he"],
-          "publisher": {
-            "@id": "https://chaver.com/#organization"
-          }
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://chaver.com/#organization",
-          "name": "The Woven Texts Project",
-          "alternateName": "Chaver.com",
-          "url": "https://chaver.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://chaver.com/torah-weave/Admin/Assets/Images/two-ways-of-reading-800.webp"
-          },
-          "description": "Academic research project presenting the Torah and Mishnah as sophisticated two-dimensional literary compositions, with peer-reviewed publications in biblical studies journals.",
-          "founder": {
-            "@id": "https://chaver.com/#moshe-kline"
-          },
-          "sameAs": [
-            "https://independent.academia.edu/MosheKline"
-          ]
-        },
-        {
-          "@type": "ResearchProject",
-          "@id": "https://chaver.com/#research-project",
-          "name": "The Woven Texts Project",
-          "alternateName": ["Torah Weave Project", "Woven Torah Research"],
-          "description": "A 40-year academic research initiative revealing the Torah and Mishnah as two-dimensional literary matrices. The project has produced peer-reviewed publications in the Journal of Biblical Literature and Journal of Hebrew Scriptures, challenging the Documentary Hypothesis by demonstrating sophisticated structural patterns that indicate unified authorship.",
-          "url": "https://chaver.com/",
-          "startDate": "1985",
-          "founder": {
-            "@id": "https://chaver.com/#moshe-kline"
-          },
-          "result": [
-            {"@id": "https://chaver.com/#book"},
-            {"@id": "https://chaver.com/#jbl-article"},
-            {"@id": "https://chaver.com/#jhs-article"},
-            {"@id": "https://chaver.com/#sbl-chapter"},
-            {"@id": "https://chaver.com/#torah-units"},
-            {"@id": "https://chaver.com/#mishnah-project"}
-          ]
-        },
-        {
-          "@type": "Person",
-          "@id": "https://chaver.com/#moshe-kline",
-          "name": "Moshe Kline",
-          "givenName": "Moshe",
-          "familyName": "Kline",
-          "url": "https://chaver.com/",
-          "sameAs": [
-            "https://independent.academia.edu/MosheKline",
-            "https://orcid.org/0009-0003-7469-5167",
-            "https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718",
-            "https://www.nli.org.il/he/books/NNL_ALEPH990038961820205171/NLI",
-            "https://he.wikisource.org/wiki/%D7%91%D7%99%D7%90%D7%95%D7%A8:%D7%9E%D7%A9%D7%A0%D7%94",
-            "https://kavvanah.blog/2010/01/18/moshe-kline-and-the-structured-mishnah/"
-          ],
-          "alumniOf": [
-            {
-              "@type": "CollegeOrUniversity",
-              "name": "St. John's College"
-            },
-            {
-              "@type": "CollegeOrUniversity",
-              "name": "Yeshiva University"
-            }
-          ],
-          "knowsAbout": [
-            "Torah",
-            "Biblical Literature",
-            "Mishnah",
-            "Hebrew Bible",
-            "Literary Structure",
-            "Two-Dimensional Text Analysis",
-            "Documentary Hypothesis",
-            "Pentateuch"
-          ],
-          "description": "Biblical scholar with 40 years of research into the literary architecture of the Torah and Mishnah. Graduate of St. John's College and Yeshiva University. Published in the Journal of Biblical Literature and Journal of Hebrew Scriptures.",
-          "jobTitle": "Biblical Scholar and Researcher",
-          "affiliation": {
-            "@id": "https://chaver.com/#organization"
-          }
-        },
-        {
-          "@type": "Book",
-          "@id": "https://chaver.com/#book",
-          "name": "Before Chapter and Verse: Reading the Woven Torah",
-          "alternateName": "Before Chapter and Verse",
-          "author": {
-            "@id": "https://chaver.com/#moshe-kline"
-          },
-          "url": "https://chaver.com/Torah-New/English/Text/Torah-pdf",
-          "workExample": [
-            {
-              "@type": "Book",
-              "bookFormat": "https://schema.org/EBook",
-              "url": "https://chaver.com/Torah-New/English/Text/Torah-pdf"
-            },
-            {
-              "@type": "Book",
-              "bookFormat": "https://schema.org/Hardcover",
-              "url": "https://www.amazon.com/dp/9655982718",
-              "isbn": "9655982718"
-            }
-          ],
-          "about": [
-            {"@type": "Thing", "name": "Torah", "description": "The Five Books of Moses"},
-            {"@type": "Thing", "name": "Biblical Literary Structure"},
-            {"@type": "Thing", "name": "Two-Dimensional Text Analysis"}
-          ],
-          "description": "Scholarly work revealing all 86 literary units of the Torah in woven format, demonstrating sophisticated two-dimensional structures that emerge when the text is laid out in tabular format. Presents 40 years of peer-reviewed research.",
-          "inLanguage": "en",
-          "numberOfPages": "400",
-          "genre": "Biblical Studies",
-          "keywords": "Torah, Pentateuch, Biblical Literature, Literary Structure, Woven Text, Hebrew Bible, Documentary Hypothesis, Two-Dimensional Reading"
-        },
-        {
-          "@type": "ScholarlyArticle",
-          "@id": "https://chaver.com/#jbl-article",
-          "headline": "The Covenant Code: A New Way of Reading the Writing",
-          "name": "The Covenant Code: A New Way of Reading the Writing",
-          "author": [
-            {
-              "@type": "Person",
-              "name": "Paul Hocking"
-            },
-            {
-              "@id": "https://chaver.com/#moshe-kline"
-            }
-          ],
-          "datePublished": "2025",
-          "doi": "10.15699/jbl.144.2.2025.2",
-          "sameAs": "https://doi.org/10.15699/jbl.144.2.2025.2",
-          "url": "https://doi.org/10.15699/jbl.144.2.2025.2",
-          "pageStart": "217",
-          "pageEnd": "239",
-          "pagination": "217-239",
-          "isPartOf": {
-            "@type": "PublicationIssue",
-            "issueNumber": "2",
-            "isPartOf": {
-              "@type": "PublicationVolume",
-              "volumeNumber": "144",
-              "isPartOf": {
-                "@type": "Periodical",
-                "name": "Journal of Biblical Literature",
-                "issn": "0021-9231",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Society of Biblical Literature"
-                }
-              }
-            }
-          },
-          "description": "Peer-reviewed analysis demonstrating that the Covenant Code in Exodus exhibits sophisticated two-dimensional literary structure, supporting the Woven Torah methodology.",
-          "about": ["Covenant Code", "Exodus", "Biblical Law", "Literary Structure"],
-          "citation": "Hocking, Paul, and Moshe Kline. 'The Covenant Code: A New Way of Reading the Writing.' Journal of Biblical Literature 144, no. 2 (2025): 217-239. https://doi.org/10.15699/jbl.144.2.2025.2"
-        },
-        {
-          "@type": "ScholarlyArticle",
-          "@id": "https://chaver.com/#jhs-article",
-          "headline": "The Editor Was Nodding: A Reading of Leviticus 19 in Memory of Mary Douglas",
-          "name": "The Editor Was Nodding: A Reading of Leviticus 19 in Memory of Mary Douglas",
-          "author": {
-            "@id": "https://chaver.com/#moshe-kline"
-          },
-          "datePublished": "2008",
-          "doi": "10.5508/jhs.2008.v8.a17",
-          "sameAs": "https://doi.org/10.5508/jhs.2008.v8.a17",
-          "url": "https://doi.org/10.5508/jhs.2008.v8.a17",
-          "isPartOf": {
-            "@type": "PublicationVolume",
-            "volumeNumber": "8",
-            "isPartOf": {
-              "@type": "Periodical",
-              "name": "Journal of Hebrew Scriptures",
-              "issn": "1203-1542"
-            }
-          },
-          "description": "Analysis demonstrating that Leviticus 19 functions as a 'broken Ten Commandments' with sophisticated two-dimensional literary architecture. Dedicated to anthropologist Mary Douglas.",
-          "about": ["Leviticus 19", "Ten Commandments", "Holiness Code", "Mary Douglas", "Literary Structure"],
-          "citation": "Kline, Moshe. 'The Editor Was Nodding: A Reading of Leviticus 19 in Memory of Mary Douglas.' Journal of Hebrew Scriptures 8 (2008). https://doi.org/10.5508/jhs.2008.v8.a17"
-        },
-        {
-          "@type": "Chapter",
-          "@id": "https://chaver.com/#sbl-chapter",
-          "name": "Structure Is Theology: The Composition of Leviticus",
-          "headline": "Structure Is Theology: The Composition of Leviticus",
-          "author": {
-            "@id": "https://chaver.com/#moshe-kline"
-          },
-          "datePublished": "2015",
-          "url": "https://chaver.com/Torah/Structure%20is%20Theology%20Published%20Version.pdf",
-          "pageStart": "225",
-          "pageEnd": "264",
-          "pagination": "225-264",
-          "isPartOf": {
-            "@type": "Book",
-            "name": "Current Issues in Priestly and Related Literature: The Legacy of Jacob Milgrom and Beyond",
-            "editor": [
-              {
-                "@type": "Person",
-                "name": "Roy E. Gane"
-              },
-              {
-                "@type": "Person",
-                "name": "Ada Taggar-Cohen"
-              }
-            ],
-            "publisher": {
-              "@type": "Organization",
-              "name": "SBL Press",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Atlanta"
-              }
-            },
-            "isbn": "978-1-62837-120-8",
-            "datePublished": "2015"
-          },
-          "description": "Chapter demonstrating that literary structure in biblical texts carries meaning, with detailed analysis of Leviticus's 22-unit structure. Published in a volume honoring Jacob Milgrom.",
-          "about": ["Leviticus", "Literary Structure", "Jacob Milgrom"],
-          "citation": "Kline, Moshe. 'Structure Is Theology: The Composition of Leviticus.' In Current Issues in Priestly and Related Literature: The Legacy of Jacob Milgrom and Beyond, edited by Roy E. Gane and Ada Taggar-Cohen, 225-264. Atlanta: SBL Press, 2015."
-        },
-        {
-          "@type": "VideoObject",
-          "@id": "https://chaver.com/#video",
-          "name": "The Woven Torah: A Deeper Look",
-          "description": "Audio dialogue exploring the concept of reading the Torah as an intentional literary tapestry.",
-          "contentUrl": "https://chaver.com/torah-weave/Commentary/Woven_Torah.mp4",
-          "embedUrl": "https://chaver.com/torah-weave/Commentary/Woven_Torah.mp4",
-          "uploadDate": "2024-01-01",
-          "duration": "PT15M",
-          "thumbnailUrl": "https://chaver.com/torah-weave/Admin/Assets/Images/two-ways-of-reading-800.webp",
-          "inLanguage": "en",
-          "creator": {
-            "@type": "Organization",
-            "name": "NotebookLM",
-            "description": "AI-generated dialogue based on research by Moshe Kline"
-          }
-        },
-        {
-          "@type": "Dataset",
-          "@id": "https://chaver.com/#torah-units",
-          "name": "Torah Literary Units Database",
-          "description": "Complete database of 86 literary units across the Five Books of Moses (76 regular units and 10 irregular units), with structural analysis, boundary markers, and two-dimensional mappings.",
-          "creator": {
-            "@id": "https://chaver.com/#moshe-kline"
-          },
-          "keywords": ["Torah", "Pentateuch", "Literary Units", "Biblical Structure", "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"],
-          "distribution": {
-            "@type": "DataDownload",
-            "encodingFormat": "text/html",
-            "contentUrl": "https://chaver.com/woven-torah/"
-          }
-        },
-        {
-          "@type": "DefinedTerm",
-          "@id": "https://chaver.com/#woven-torah",
-          "name": "Woven Torah",
-          "description": "A methodology for reading the Torah as a two-dimensional literary matrix rather than a purely linear narrative. The approach reveals 86 discrete literary units with sophisticated structural patterns including horizontal (row) and vertical (column) relationships.",
-          "inDefinedTermSet": {
-            "@type": "DefinedTermSet",
-            "name": "Biblical Literary Analysis Terms"
-          }
-        },
-        {
-          "@type": "DefinedTerm",
-          "@id": "https://chaver.com/#torah-weave",
-          "name": "Torah Weave",
-          "alternateName": ["Woven Text", "Two-Dimensional Torah"],
-          "description": "The literary architecture of the Torah revealed through two-dimensional structural analysis. Torah units display interlocking patterns across rows and columns.",
-          "inDefinedTermSet": {
-            "@type": "DefinedTermSet",
-            "name": "Biblical Literary Analysis Terms"
-          }
-        },
-        {
-          "@type": "CreativeWork",
-          "@id": "https://chaver.com/#mishnah-project",
-          "name": "The Structured Mishnah",
-          "alternateName": "המשנה כדרכה",
-          "url": "https://chaver.com/Mishnah-New/English/Mishnah%20Portal.htm",
-          "author": {
-            "@id": "https://chaver.com/#moshe-kline"
-          },
-          "description": "Complete Hebrew text of all 525 Mishnah chapters presented in their original two-dimensional literary structure, demonstrating the same woven text methodology applied to rabbinic literature.",
-          "inLanguage": ["he", "en"]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://chaver.com/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://chaver.com/"
-            }
-          ]
-        }
-      ]
-    }
-    </script>
+
     
 </body>
 </html>
