@@ -57,19 +57,13 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "General",
-          "item": "https://chaver.com/General/"
+          "name": "Torah Weave",
+          "item": "https://chaver.com/torah-weave/"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Color Codes",
-          "item": "https://chaver.com/General/Color%20Codes/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Hebrew Color Code",
+          "name": "מדריך קוד הצבעים",
           "item": "https://chaver.com/torah-weave/hebrew-color-code-guide"
         }
       ]
@@ -173,13 +167,14 @@
     }
     
     /* Force all lists to display as block (override any flexbox from main.css) */
-    ul, ol {
+    /* Scoped to main content only — nav-menu / submenu must keep their flexbox layout */
+    main ul, main ol {
         display: block !important;
         flex-direction: unset !important;
         flex-wrap: unset !important;
     }
-    
-    li {
+
+    main li {
         display: list-item !important;
     }
     
