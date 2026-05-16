@@ -1010,3 +1010,36 @@ Push + (already noted) purge the CSS URL in Cloudflare.
 
 **Next step:**
 - Re-run any future audits with this exclusion applied
+
+---
+
+### 2026-05-15 — Mishnah PDF landing page: full overhaul + template re-render of 173 pages
+
+**What was done:**
+- Rebuilt `Mishnah-New/Hebrew/Text/mishnah-pdf.html` from `_templates/Academic-Content-EN.html` (was incorrectly built from Hebrew template)
+- Fixed circular download links — all "Download" CTAs now point to `The%20Structured%20Mishnah.pdf`, not back to the landing page
+- Updated meta description and Book schema description with Gemini's vocabulary: "two-dimensional matrices (שתי וערב)," "woven-text architecture," "structural anchors," "chiastic parallelisms," "color-coded semantic links (horizontal, vertical, closure)"
+- Added `keywords` array to Book schema with full Gemini vocabulary
+- Added Dataset JSON-LD block for the Mishnah JSON dataset (DOI: 10.5281/zenodo.20179532), linking to `/Mishnah-New/Hebrew/Text/mishnah-data`
+- Updated English template nav: "Data" flat link → dropdown with "Torah Units Dataset" + "Mishnah Dataset (JSON)"
+- Re-rendered all 173 English template pages to propagate the nav change
+
+**Files modified:**
+- `Mishnah-New/Hebrew/Text/mishnah-pdf.html` (rebuilt + all above changes)
+- `_templates/Academic-Content-EN.html` (Data nav dropdown added; template tail restored after corruption)
+- 173 pages re-rendered from updated template
+
+**Decisions locked:**
+- When the template nav changes, re-render ALL pages from the template immediately — not just the page being worked on
+- Gemini's vocabulary for the Mishnah (שתי וערב, two-dimensional matrix, woven text, structural anchors, chiastic parallelisms, color-coded semantic links) is now canonical for schema, meta descriptions, and SEO copy
+
+**Pending — Hebrew landing page:**
+- Plan: create a Hebrew-language landing page for the Mishnah PDF, built from `_templates/Academic-Content-HE.html`
+- Proposed URL: `/Mishnah-New/Hebrew/Text/mishnah-pdf-he` (keep English URL as-is to preserve inbound links)
+- English and Hebrew pages to be linked via `hreflang`
+- Content drafting to be done in Opus; Cowork handles the build
+- Starting point: the Hebrew paragraph already on the English page + Gemini's framing translated into Hebrew scholarly vocabulary
+
+**Next step:**
+- Moshe: commit and push all 173+ changed files, purge Cloudflare cache
+- Hebrew landing page: draft content in Opus, then return to Cowork to build from Hebrew template
