@@ -1206,3 +1206,25 @@ These files were updated in a second pass without Moshe's explicit agreement. Mu
 **Verified:** spot-checks genesis-unit-1 (Group-5 title, correctly skipped here), exodus-unit-5, leviticus-unit-7, numbers-unit-3, deuteronomy-unit-9, leviticus-unit-1 — all correct. NOT committed, NOT pushed.
 
 **Next step:** Moshe review diff + commit/push + purge cache. Decide on the 3 oddball titles, the 2 truncated files, and the NUL-corrupted leviticus-unit-1 body.
+
+---
+
+### 2026-05-25 — File integrity sweep (READ-ONLY) + 27 long-title fixes
+
+**MAJOR FINDING — the bash integrity sweep is INVALID in Cowork's Linux sandbox.**
+The repo is on OneDrive Files-On-Demand. Non-resident files read through the Linux mount (bash/Python/ripgrep) come back as TRUNCATED and/or NUL-padded placeholders, while the real Windows file is intact. The Read tool forces hydration and reads true content.
+- Proof: `hebrew-deuteronomy-unit-1.html` flagged truncated+435 NUL lines by bash, but Read tool shows a complete, intact file (full head/nav/body/Hebrew tables). Same false-positive confirmed for all 4 map pages, `data/index.html`, `mishnah-search.html`.
+- Raw scan (UNRELIABLE): 2152 files; 66 "truncated" (34 are `_vti_cnf` FrontPage metadata = not real HTML; rest mostly placeholder artifacts; `_backup-pre-migration` 0 truncated); 2 "NUL" (both read clean/with </html> after hydration).
+- Full report saved to project folder: `integrity-sweep-2026-05-25.md` (plan folder), includes a PowerShell script for Moshe to run a RELIABLE sweep on Windows.
+
+**Correction to prior diary claims:** earlier "deuteronomy-unit-2 / numbers-unit-1 truncated" and "leviticus-unit-1 has 763 NULs" were measured via the same unreliable path and are UNCONFIRMED. `leviticus-unit-1` reads intact with valid </html>. DO NOT run backup-overwrite repairs based on the bash sweep — would destroy current post-migration/SEO content.
+
+**Only credible real damage found:** `Mishnah/Mesechet Parah.htm` is EMPTY (≈0 bytes; verified via Read; never edited by me). Verify/restore on Windows. A few intentional tiny stubs (google verification 98B, wp uploads index 1B) are normal.
+
+**Long-title fixes (Group 14) — 27 of 28 applied (uncommitted):**
+- 15 Genesis commentary pages, 4 genesis-analysis pages, 6 "other" (Woven-Torah-Method, documentary-hypothesis-alternative, leviticus-19-ark-at-the-center, genesis-complete-commentary, mishnah-data) — title-only replacement, exact current-title match (normalized for quote/dash variants).
+- 3 oddballs set from H1: deuteronomy-unit-10 -> "Deuteronomy Unit 10 (28:1-68) | Torah Weave"; deuteronomy-unit-11 -> "Deuteronomy Unit 11 (28:69-30:20) | Torah Weave"; numbers-unit-2 -> "Numbers Unit 2 | Torah Weave" (verse range stripped).
+- SKIPPED 1: `woven-torah/full-torah-map-2/index.html` (sweep-flagged truncated; per instruction, deferred until verified on Windows).
+- Method: guarded bash script — only writes a file if the bytes read are verifiably complete (</html> present, 0 NUL); post-write re-verify (new title + </html> + 0 NUL). All 27 passed post-write verification, so writes preserved full content. H1/body/meta untouched. Spot-checked genesis-unit-7-commentary, the-three-rows, documentary-hypothesis-alternative, deuteronomy-unit-10.
+
+**Next step:** Moshe review diff + commit/push + purge cache. Run the Windows PowerShell integrity sweep to get the true damaged-file list. Restore `Mishnah/Mesechet Parah.htm`. Then handle `woven-torah/full-torah-map-2/index.html` title.
