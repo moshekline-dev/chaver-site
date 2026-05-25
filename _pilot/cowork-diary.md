@@ -1327,3 +1327,48 @@ Reason: English unit-TEXT pages site-wide have NO E-2 (verified canonical=0/brea
 **⚠️ .git/index reads as CORRUPT in the sandbox** (object store healthy; git show/log/ls-tree/cat-file all work). Almost certainly OneDrive Files-On-Demand serving the binary index as a placeholder. Moshe: verify in GitHub Desktop on Windows; if Windows git also reports corruption, `git read-tree HEAD` rebuilds it (working-tree changes preserved). Do not rebuild from the sandbox.
 
 **WINDOWS-ONLY remaining:** (1) `git checkout 333feb1 -- "Mishnah-New/Hebrew/Text/mishnah-pdf.html"`; (2) verify/fix .git/index if needed; (3) review the LARGE uncommitted diff (271 nav + 86 E-2 + 11 Hebrew E-2 + 13 re-renders + maps + sitemap + _redirects + Parah + deletions), commit/push; (4) purge Cloudflare cache.
+
+---
+
+### 2026-05-25 — Primary documents + Hebrew article citations (mishnah-pdf.html + about-Moshe-Kline.html)
+
+**What was done:**
+- Verified all 5 referenced documents exist in repo (all uploaded today, May 25): `Mishnah-New/Hebrew/Letter of Aceptance of Mishnah at Ben Gurion Univ_0001.pdf`, `Recomendation from Rabbi Adin Steinsalz_0001.pdf`, `Articles/kol_helkei_hbayit.pdf`, `Articles/Shmaatin_Mishnah_Shviit.pdf`, `Articles/Ein Bein Bikurim.pdf`. (Also noticed but did NOT use: `Mishnah-New/Hebrew/Bikurim Cover_0001.pdf`, `Articles/The_Literary_Structure_of_the_Mishnah_Er.pdf`.)
+- **mishnah-pdf.html** (Scholarly Recognition section): inserted 2 primary-document paragraphs (BGU acceptance letter + Steinsaltz recommendation) after the Boyarin/Friedman para, and an `<h2>Hebrew Academic Articles</h2>` block (Bikurim 1984 / Alei Sefer 1987 / Shmaatin 1987) before the "freely available since 1997" para. Indented to match the section's 12-space markup.
+- **about-Moshe-Kline.html**: inserted 1 primary-documents para after the chaver.com/100,000-downloads para (line ~944), and 3 Hebrew journal-article paras (`<strong>Moshe Kline</strong>` format) before the HaMishnah k'Darka book entry (line ~1017).
+
+**Files modified:** `Mishnah-New/Hebrew/Text/mishnah-pdf.html`, `about-Moshe-Kline.html` (both uncommitted).
+
+**Verification:** Both files end with `</html>` (mishnah-pdf 1040, about 1234). All 6 inserted blocks confirmed present via host-side grep. All 5 PDF link targets confirmed on disk. Eruvin internal link target (`literary-structure-mishnah-eruvin.html`) confirmed present. Host-side reads returned clean UTF-8 (no NUL/placeholder artifacts). Used Read/Edit/Grep host-side throughout — NOT bash for content — per OneDrive placeholder rule.
+
+**⚠️ FLAG for Moshe — duplicate citations on about-Moshe-Kline.html:** all three Hebrew articles were ALREADY cited on this page (lines ~997–1001, "Additional Essays" area, Hebrew `משה קליין` byline + Academia.edu links). The task's new block adds a SECOND citation of each in the Books section, with the new local-PDF links. They also carry DIFFERENT descriptions: existing Bikurim entry = "encoding of Lurianic Kabbalistic categories"; new = "Mishnah Megillah Chapter 1 as the methodological key." Existing Shmaatin = "third chapter of Mishnah Shevi'it"; new = "the chapters of Tractate Shvi'it." Inserted as specified (task said no content decisions), but Moshe should decide whether to merge/dedupe or keep both.
+
+**✅ RESOLVED — mishnah-pdf.html truncation:** Moshe confirmed (2026-05-25) he already ran `git checkout 333feb1` earlier today, fixed the nav link in Notepad, and committed it separately. The complete working-tree copy Cowork found IS the restored file. **Do NOT run the checkout again — it would overwrite today's edits.** Prior "WINDOWS-ONLY remaining: git checkout 333feb1" notes are now stale/done.
+
+**Next:** Moshe review diff in GitHub Desktop; decide on the about-page duplication; commit/push; purge cache. Did NOT commit or push (per task). → Superseded by the merge task below.
+
+---
+
+### 2026-05-25 — Merge Hebrew article citations + fix 2 description errors (follow-up)
+
+**Context:** The previous task's about-page insert duplicated three articles already cited in the existing "In Hebrew" block (lines ~995–1003, Hebrew `משה קליין` byline). Moshe reviewed the existing block and directed: keep the existing (richer) citations, add the new local-PDF links into them, fix two description/title errors, and delete the duplicate Books-section block.
+
+**What was done — about-Moshe-Kline.html:**
+- Bikurim entry (line 997): replaced the inaccurate "encoding of Lurianic Kabbalistic categories" description with "Structural analysis of Mishnah Megillah Chapter 1 and the Ein Bein sequence…"; added local-PDF link (`Ein%20Bein%20Bikurim.pdf`) after the Academia.edu link.
+- Shmaatin entry (line 999): fixed malformed title — was `"שמעתין: משנת שביעית,"` (journal name as title) → `"משנת שביעית — מבנה פרק ג',"`; added local-PDF link (`Shmaatin_Mishnah_Shviit.pdf`). (Description "third chapter of Mishnah Shevi'it" was already correct, left as-is.)
+- Alei Sefer entry (line 1001): added local-PDF link (`kol_helkei_hbayit.pdf`) after the existing JSTOR + Academia.edu links.
+- All three local links use ` &middot; <a …>PDF (local)</a>` matching the block's existing separator convention.
+- Deleted the duplicate 3-paragraph block (Ein Bein / Eruvin / Shmaatin, English `Moshe Kline` byline) that the prior task inserted before the HaMishnah k'Darka entry. Books section now reads BC&V → HaMishnah k'Darka with clean single-blank-line join.
+
+**What was done — mishnah-pdf.html:**
+- Shmaatin entry description: "the chapters of Tractate Shvi'it" → "the third chapter of Tractate Shvi'it" (line 788). (Note: the Hebrew title there is still `משנת שביעית — מבנה פרקיה`; task only asked to fix the English description here.)
+
+**Files modified:** `about-Moshe-Kline.html`, `Mishnah-New/Hebrew/Text/mishnah-pdf.html` (both uncommitted, on top of prior task's edits).
+
+**Verification (host-side, not bash):** about ends `</html>` @1228, mishnah-pdf ends `</html>` @1040. Existing "In Hebrew" block now has 3 "PDF (local)" links. "Lurianic" gone. Shmaatin prose title now `משנת שביעית — מבנה פרק ג'`. Duplicate English-byline block gone (no `Moshe Kline</strong>, <a href="/Mishnah-New/Hebrew/Articles…` remains; duplicate title `מבנה פרקיה` no longer on about page). mishnah-pdf reads "the third chapter". Clean UTF-8, no NUL/placeholder artifacts.
+
+**⚠️ FLAG for Moshe — JSON-LD schema still carries old titles/values:** the page's schema block has `alternateName` entries for these articles that were NOT touched (out of task scope): line ~339 still `"alternateName": "שמעתין: משנת שביעית"` (the old malformed Shmaatin title). Lines ~320 (Eruvin) and ~358 (Ein Bein) alternateNames also exist. If you want the schema metadata to match the corrected prose, that's a separate small edit — flag if wanted.
+
+**⚠️ Minor — cross-page title inconsistency:** about page Shmaatin title is now `מבנה פרק ג'` (chapter 3); mishnah-pdf keeps `מבנה פרקיה` (its chapters). Per task instructions (only about-page title was changed). Harmonize later if desired.
+
+**Next:** Moshe review full diff in GitHub Desktop (this merge + prior inserts), commit/push, purge cache. Did NOT commit or push (per task).
