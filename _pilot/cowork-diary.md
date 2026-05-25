@@ -1148,3 +1148,61 @@ These files were updated in a second pass without Moshe's explicit agreement. Mu
 **Next step:**
 - Moshe: revert 9 `.htm` files in GitHub Desktop, then commit and push all remaining changes
 - Post-deploy: purge Cloudflare cache, spot-check nav on live site, test Torah PDF redirect, validate schema at Google Rich Results Test
+
+---
+
+### 2026-05-25 — SEO audit fixes (SEMrush) — 7 groups
+
+**What was done (all uncommitted; review in GitHub Desktop before pushing):**
+
+- **Group 1 — `_redirects`:** Inserted SEO-audit block at lines 7–40 (within first-100 safe zone, after top header, before the Mishnah clean-URL block). 21 redirect rules added (note: spec said "20" but its literal block contains 21: 14 Zevachim `.html`→`.htm` + 1 Nedarim + 2 Torah-PDF + 3 directory + 1 `/torah-weave/`). No existing rules removed (file 364 lines on host). NOTE: the 14 Zevachim + 1 Nedarim extensionless rules already existed (added 2026-05-14); the new ones target the explicit `.html` variants — distinct source URLs, no collision.
+- **Group 2 — Hebrew unit pages:** 86 files modified (spec estimated 92; true count is 86 = one Hebrew file per Torah unit). Each: generic `<title>` replaced with `{H1 text} | chaver.com`; Hebrew `<meta name="description">` injected after `</title>`. 0 skipped. Outlier: `hebrew-exodus-unit-3` H1 includes a verse range `(ו:כט-יא:י)`, so its title/desc include it (used H1 verbatim per spec).
+- **Group 3 — Book maps:** Exodus + Numbers maps: new title, description, and `<h1>` added above first heading. Leviticus + Deuteronomy maps: description injected only (title/H1 already correct). All 4 now have exactly 1 description + 1 H1.
+- **Group 4 — Isolated pages:** `Mishnah-New/Hebrew/Text/mishnah-search.html` and `torah-weave/data/index.html` — both `.html` (no `.htm` touched); description injected (each desc count now 1).
+- **Group 5 — Long unit-text titles:** 38 English unit-text pages had `(Book verse-range) | Torah Weave` titles; verse range stripped from `<title>` only (H1 untouched). 1 SKIPPED per ≤65-char safety rule: `Leviticus/leviticus-unit-1` would be 68 chars — needs manual subtitle shortening. (More than spec's ~15-20 estimate because all 18 Exodus unit titles also carried the pattern; spec authorizes "each matching file".)
+- **Group 6 — The Decalogue article:** `Torah-New/English/Articles/The Decalogue.html` — removed blank `<h1>`, demoted `Introduction` H1→H2. Now exactly 1 H1 ("The Exoteric Decalogue"). (The `_vti_cnf/` copy was NOT touched.)
+- **Group 7 — genesis-complete-commentary:** Kept first H1 ("Complete Genesis Commentary"); demoted other 25 H1→H2 with matching closing tags, attributes preserved. Now 1 H1, +25 H2 (250→275, balanced).
+
+**Discrepancies flagged for Moshe:**
+- Group 1 rule count is 21, not 20 (spec block miscount).
+- Group 2 is 86 files, not 92.
+- Group 5 modified 38 files (incl. all Exodus units), not ~15-20; `leviticus-unit-1` skipped (title still >65 after strip).
+- Many English unit-text pages (most Numbers/Leviticus/Deuteronomy) still carry the generic `<title>Chaver.com - A New Approach...` — OUT OF SCOPE for this task (only Hebrew pages were in Group 2). Candidate for a future task.
+
+**Operational note (IMPORTANT for future Cowork runs on this repo):**
+- The repo is on OneDrive. The **bash mount lags**: after a host-side Edit, `mcp__workspace__bash` reads can return STALE/partial/truncated content (observed `_redirects` reading 305 lines + truncated final line while the host file was correctly 364 lines). **Host tools (Read/Edit/Write/Grep) are authoritative and synchronous.** Bash *writes* DO propagate to host reliably (verified). Verify via host tools, not the bash mount, right after host edits. Bulk Python scripts run via bash that read+write the same files within one bash layer are self-consistent.
+- `rm` on the mount fails with "Operation not permitted" until `allow_cowork_file_delete` is granted.
+
+**Verification performed:** per-group counts + host-side spot-checks (hebrew-genesis-unit-1, hebrew-leviticus-unit-10, hebrew-deuteronomy-unit-7, genesis-unit-8, the 4 maps, Decalogue, genesis-complete-commentary). All passed. NOT committed, NOT pushed.
+
+**Next step:**
+- Moshe: review diff in GitHub Desktop, commit + push, purge Cloudflare cache.
+- Then verify live: Zevachim `.html`→`.htm` 301, `/torah-weave/Genesis/` 301, `/torah-weave/` 301, hebrew unit `<title>`.
+- Decide on `leviticus-unit-1` title (still >65) and the generic-title English unit-text pages (future task).
+
+---
+
+### 2026-05-25 — Follow-up: generic titles on English unit-text pages
+
+**What was done (uncommitted):**
+- Set `<title>{H1 text} | Torah Weave}` on **44** English unit-text pages whose title was exactly the generic `Chaver.com - A New Approach to Torah and Mishnah`. H1 text used verbatim (these H1s are `[Book] Unit N (verse:range)`, no subtitle). All resulting titles ≤47 chars. Title only — no description, no H1/body changes.
+  - Breakdown: Exodus 1; Leviticus 3-22 (20); Numbers 1,3-13 (12); Deuteronomy 1-9,12,13 (11).
+- Single-file: `Leviticus/leviticus-unit-1` title set to `Leviticus Unit 1: Spontaneous Offerings | Torah Weave` (53 chars), replacing the 88-char title Group 5 had skipped.
+- 0 generic titles remain among English unit-text pages.
+
+**Skipped (non-generic, per strict trigger) — 42 files:**
+- 38 already titled by Group 5 (all 19 Genesis units, Exodus 2-19, Leviticus 2) + leviticus-unit-1 (handled above) — expected.
+- 3 oddball titles NOT matching the generic trigger, flagged as cleanup candidates (left untouched):
+  - `Deuteronomy/deuteronomy-unit-10` :: title `Deuteronomy_Unit_10` (underscores, no " | Torah Weave")
+  - `Deuteronomy/deuteronomy-unit-11` :: title `Deuteronomy_Unit_11`
+  - `Numbers/numbers-unit-2` :: title `Numbers Unit 2 (5:1-6:21)` (no " | Torah Weave" suffix)
+
+**⚠️ Pre-existing file-integrity issues found (NOT caused by this task; title edits applied correctly):**
+- `Deuteronomy/deuteronomy-unit-2` — TRUNCATED: file ends mid-sentence, no `</body>`/`</html>`.
+- `Numbers/numbers-unit-1` — TRUNCATED: same (ends mid-verse, no closing tags).
+- `Leviticus/leviticus-unit-1` — contains 763 NUL bytes (~byte 37,736+); grep flags it binary. Title edit is correct, but body is corrupted.
+- (Compare: SEO-task diary noted `mishnah-pdf.html` also truncated. Worth a repo-wide integrity sweep for files missing `</html>` / containing NULs — future task.)
+
+**Verified:** spot-checks genesis-unit-1 (Group-5 title, correctly skipped here), exodus-unit-5, leviticus-unit-7, numbers-unit-3, deuteronomy-unit-9, leviticus-unit-1 — all correct. NOT committed, NOT pushed.
+
+**Next step:** Moshe review diff + commit/push + purge cache. Decide on the 3 oddball titles, the 2 truncated files, and the NUL-corrupted leviticus-unit-1 body.
