@@ -1255,3 +1255,35 @@ Couldn't run PowerShell (Cowork = Linux sandbox; pwsh there would read the same 
 **Repair guidance (for Moshe, on Windows / via render pipeline):** per file, `git log --oneline -- "<path>"` to find a complete earlier commit → `git checkout <goodcommit> -- "<path>"`; else re-render from source (mishnah_db.json / unit source + current template); restore Mesechet Parah from backup. Re-verify with `git grep -L -i -F '</html>' HEAD -- '*.html' '*.htm' | grep -v _vti_cnf/`.
 
 Report: `integrity-sweep-2026-05-25.md` (plan folder), revised with git-based results.
+
+---
+
+### 2026-05-25 — Recoverability + pre-repair checks (read-only)
+
+**Git-history recoverability (most-recent commit with </html>):**
+- 11 hebrew-deuteronomy units (1,2,4,5,7,8,9,10,11,12,13): complete @ `644bb50` (2026-05-08 "dwt added") — but that version is **pre-migration DWT** (`#BeginTemplate ...Academic-Content-DWT.dwt`). Content-source only; re-render, don't checkout.
+- deuteronomy-unit-2, numbers-unit-1: complete @ `f6b5bc5` (2026-05-08 "from WP") — also pre-migration. Re-render.
+- mishnah-pdf.html: complete @ `333feb1` (2026-05-16 "mish pdf") — **post-migration, modern self-contained chrome** (no DWT, gtag, site-header/site-footer, clean </body></html>). Only diff vs intact mishnah-data.html: missing `rendered-from` provenance comment. → `git checkout 333feb1 -- "Mishnah-New/Hebrew/Text/mishnah-pdf.html"` is a clean fix (eyeball nav once post-checkout).
+- Mishnah/Mesechet Parah.htm: NOT recoverable from git (1 commit, "Initial site upload" 2026-03-17, 0 bytes — uploaded empty). NO backup (`_backup-pre-migration/Mishnah/` has only TheMishnah.htm).
+
+**Mesechet Parah — NOT a content-loss emergency:** the real Parah tractate is fully present & intact at `Mishnah-New/Hebrew/Text/Seder Tohorot/Masechet Parah/` (12 perek files + `Pirkei Masechet Parah.htm`, tracked + backed up). The empty `Mishnah/Mesechet Parah.htm` is a dead **legacy `/Mishnah/` stub**. Recommend redirect to the Mishnah-New Parah index (or delete if nothing links to it) — not reconstruction.
+
+**Truncated content analysis (HEAD):** truncated units hold PARTIAL text then cut mid-body — e.g. hebrew-deut-unit-1: 6 torah-text blocks, last verse ב:יד (2:14), cuts mid-sentence in section 3B; complete @644bb50 = 11 blocks ending ג:כט (3:29). So NOT head-only, but real Torah text after the cut is missing → cannot fix by appending a tail; must source full content from 644bb50/f6b5bc5 and render through current Academic-Content-HE/EN template. Intact controls: unit-3 (522 lines, 18 blocks, </html>), unit-6 (448 lines, 6 blocks, </html>).
+
+---
+
+### 2026-05-25 — Parah cleanup + re-render of 13 truncated files (Option A)
+
+**Sub-task A — Mesechet Parah:** only reference repo-wide was `Mishnah/TheMishnah old changed Jan 26 2008.htm` (orphan 2008 archive) linking `href="Mesechet%20Parah.htm"`. Per rule (>=1 match): added 301 in `_redirects` line 41 (`/Mishnah/Mesechet%20Parah.htm -> /Mishnah-New/Hebrew/Text/Seder%20Tohorot/Masechet%20Parah/Pirkei%20Masechet%20Parah.htm`), then deleted the empty `Mishnah/Mesechet Parah.htm`. (Real Parah content already lives intact in Mishnah-New.)
+
+**Sub-task B — re-rendered 13 files (uncommitted):**
+Finding: these 13 were NEVER migrated — committed as DWT-attached, `<html lang="en">`, old menu-toggle nav, truncated, missing E-2 schema (canonical/og). They DID carry committed Group-2/9 titles+meta. (Confirms Moshe already committed Groups 1-14.)
+Method (per `_pilot/migration-logic.md`): head regions (doctitle+meta+additional-styles) from `HEAD` (preserves committed title/meta), body (`content`+`page-scripts`) from source commit `644bb50` (HE, 11 files) / `f6b5bc5` (EN, 2 files), rendered into `_templates/Academic-Content-HE.html` / `-EN.html`, `clean_nav_css_from_inline_style()`, provenance marker. All region reads via `git show` (object-store, no OneDrive placeholder risk). Guarded write: 10 checks each (</html>, no NUL, no DWT, correct lang, nav-toggle=1, title preserved, 1 provenance marker, mobile-nav ok, full source body tail present) + post-write re-verify.
+Result: 13/13 OK. Content complete (e.g. hebrew-deut-1 ends ג:כט/3:29, unit-7 ends כא:ט/21:9, deut-unit-2 ends 4:49, numbers-1 ends 4:49). Lang corrected en->he for the 11 HE files. DWT removed, modern nav, provenance added.
+Spot-check vs intact unit-3/unit-6: structural match (template, nav, footer, lang, provenance) — only diff is the deferred E-2 schema (rendered canonical=0/ld+json=2 vs intact canonical=1/ld+json=4).
+
+**⚠️ REQUIRED FOLLOW-UP:** Re-run the E-2 per-page schema pass on these 13 files to restore canonical / og:url / og:title / BreadcrumbList / Article@id JSON-LD (they currently carry only the older auto-generated og + inline Article schema preserved from HEAD). Until then they're functionally complete but SEO-schema-light vs the rest of the site.
+
+**mishnah-pdf.html — NOT done here (Moshe, on Windows):** `git checkout 333feb1 -- "Mishnah-New/Hebrew/Text/mishnah-pdf.html"` (post-migration complete version, chrome confirmed matching). Do NOT checkout via Cowork sandbox (OneDrive placeholder risk).
+
+**Next:** Moshe review diff (13 re-rendered + Parah redirect + stub deletion) in GitHub Desktop, commit/push, purge cache; then run E-2 on the 13; then the mishnah-pdf checkout on Windows.

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/Academic-Content-DWT.dwt" -->
+<!-- rendered-from: _templates/Academic-Content-HE.html @ 2026-05-25T05:46:18Z -->
+<html lang="he" dir="rtl">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
@@ -13,13 +13,38 @@
 <!-- rest of head content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- E-1: Site-wide SEO/AEO boilerplate (canonical entity references) -->
+    <!-- Per-page canonical, og:url, og:title, og:description, og:type are E-2-injected just above this block -->
+    <meta property="og:site_name" content="Chaver.com">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:secure_url" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="The Woven Texts Project — Moshe Kline — chaver.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta name="author" content="Moshe Kline">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {"@type": "WebSite", "@id": "https://chaver.com/#website"},
+        {"@type": "Organization", "@id": "https://chaver.com/#organization"},
+        {"@type": "Person", "@id": "https://chaver.com/#moshe-kline"}
+      ]
+    }
+    </script>
+    <!-- /E-1 -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
     
-    <!-- #BeginEditable "doctitle" -->
     <title>ספר דברים יחידה 7 | chaver.com</title>
     <meta name="description" content="ספר דברים יחידה 7 — מבנה ספרותי דו-ממדי בקריאה הסרוגה. הטקסט עם סימון קווים אופקיים ואנכיים.">
-    <!-- #EndEditable -->
     
-    <!-- #BeginEditable "meta" -->
+
+    
     <meta property="og:title" content="Deuteronomy Unit 7 - woven-torah">
     <meta property="og:description" content="ספר דברים יחידה 7 (יב:א-כא:ט) 1א A יב:א אלה החקים והמשפטים אשר תשמרון לעשות בארץ אשר נתן יהוה אלהי אבתיך לך לרשתה כל הימים אשר אתם חיים על האדמה יב:ב אבד תאבדון את כל המקמות אשר עבדו שם הגוים אשר אתם ירשים אתם את אלהיהם על ההרים הרמים ועל הגבעות ותחת כל עץ רענן יב:ג [...]">
     <meta property="og:type" content="article">
@@ -43,291 +68,104 @@
         }
     }
     </script>
-    <!-- #EndEditable -->
     
+
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+
     
-    <!-- #BeginEditable "additional-styles" -->
     <!-- Page-specific style overrides can go here -->
-    <!-- #EndEditable -->
     
+
     <style type="text/css">
 
     /* ==========================================
        CRITICAL DWT LAYOUT STYLES ONLY
        Everything else comes from main.css
        ========================================== */
-    
+
     /* Reset */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    
-    /* ==========================================
-       HEADER LAYOUT STRUCTURE
-       ========================================== */
-    
-    header.site-header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    
-    /* Navigation Container */
-    .main-nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0.3rem 20px;
-    }
-    
-    /* Mobile Menu Toggle */
-    .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-        position: absolute;
-        right: 20px;
-        top: 0.5rem;
-    }
-    
-    /* Navigation List */
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-    }
-    
-    nav a {
-        text-decoration: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    
-    /* ==========================================
-       DROPDOWN MENU - NATIVE details/summary
-       ========================================== */
-    
-    .has-dropdown {
-        position: relative;
-    }
-    
-    .has-dropdown details {
-        display: inline;
-    }
-    
-    .has-dropdown summary {
-        cursor: pointer;
-        list-style: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    
-    .has-dropdown summary::-webkit-details-marker {
-        display: none;
-    }
-    
-    .has-dropdown summary::after {
-        content: ' \25BE';
-        font-size: 0.7em;
-    }
-    
-    .dropdown {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        min-width: 200px;
-        padding: 0.4rem 0;
-        border-radius: 4px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        background: #fff;
-        z-index: 1001;
-        gap: 0;
-    }
-    
-    .dropdown li {
-        width: 100%;
-    }
-    
-    .dropdown a {
-        display: block;
-        padding: 0.5rem 1rem;
-        white-space: nowrap;
-        border-radius: 0;
-    }
-    
+
     /* ==========================================
        MAIN CONTENT AREA LAYOUT
        ========================================== */
-    
+
     main.content-wrapper {
         max-width: 1200px;
         margin: 0 auto;
         padding: 40px 20px;
         min-height: 500px;
     }
-    
-    /* ==========================================
-       FOOTER LAYOUT STRUCTURE
-       ========================================== */
-    
-    footer.site-footer {
-        margin-top: 80px;
-        padding: 40px 20px 20px;
-    }
-    
+
     .footer-container {
         max-width: 1200px;
         margin: 0 auto;
     }
-    
+
     .footer-content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 40px;
         margin-bottom: 30px;
     }
-    
+
     .footer-section ul {
         list-style: none;
         padding: 0;
     }
-    
+
     .footer-bottom {
         text-align: center;
         padding-top: 20px;
     }
-    
+
     /* ==========================================
        RESPONSIVE LAYOUT BREAKPOINTS
        ========================================== */
-    
+
     @media (max-width: 768px) {
-        /* Mobile header adjustments */
-        header.site-header {
-            position: relative;
-        }
-        
-        .menu-toggle {
-            display: block;
-        }
-        
-        nav ul {
-            display: none;
-            flex-direction: column;
-            gap: 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
-        
-        nav ul.show {
-            display: flex;
-        }
-        
-        nav li {
-            width: 100%;
-        }
-        
-        nav a, .has-dropdown summary {
-            display: block;
-            padding: 1rem;
-        }
-        
-        /* Mobile dropdown: no flyout, just indent */
-        .dropdown {
-            position: static;
-            box-shadow: none;
-            min-width: 0;
-            padding: 0;
-        }
-        
-        .dropdown a {
-            padding-left: 2rem;
-            font-size: 0.95em;
-        }
-        
+
         /* Landscape phones - hamburger menu */
         @media (max-height: 500px) and (orientation: landscape) {
-            .menu-toggle {
-                display: block;
-            }
-            
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 0;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                width: 100%;
-                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav li {
-                width: 100%;
-            }
-            
-            nav a, .has-dropdown summary {
-                display: block;
-                padding: 0.75rem 1rem;
-                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
-            }
-            
+
             main.content-wrapper {
                 padding: 15px 10px;
             }
         }
-        
+
         /* Content adjustments */
         main.content-wrapper {
             padding: 30px 15px;
         }
-        
+
         /* Footer adjustments */
         .footer-content {
             grid-template-columns: 1fr;
             gap: 30px;
         }
     }
-    
+
     @media (max-width: 480px) {
         main.content-wrapper {
             padding: 20px 15px;
         }
     }
-    
+
     /* ==========================================
        PRINT LAYOUT
        ========================================== */
-    
+
     @media print {
         header.site-header,
-        footer.site-footer,
-        .menu-toggle {
+        footer.site-footer {
             display: none;
         }
-        
+
         main.content-wrapper {
             padding: 0;
             max-width: 100%;
@@ -340,43 +178,39 @@
          SITE HEADER - FIXED ACROSS ALL PAGES
          ========================================== -->
     <header class="site-header">
-        <nav class="main-nav">
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
-           <ul id="nav-menu">
-    <li><a href="/">Home</a></li>
-    <li class="has-dropdown">
-        <details>
-            <summary>Torah</summary>
-            <ul class="dropdown">
-                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                <li><a href="/torah-weave/commentary">Commentary</a></li>
-                <li><a href="/woven-torah/full-torah-map-2/">Full Torah Map</a></li>
+        <div class="nav-row">
+            <div class="nav-brand">chaver.com</div>
+            <button class="nav-toggle" aria-label="&#1508;&#1514;&#1495;/&#1505;&#1490;&#1493;&#1512; &#1514;&#1508;&#1512;&#1497;&#1496;" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/hebrew%20index">&#1491;&#1507; &#1492;&#1489;&#1497;&#1514;</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1514;&#1493;&#1512;&#1492;</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">&#1513;&#1506;&#1512; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-full-torah-map/">&#1502;&#1508;&#1514; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1502;&#1513;&#1504;&#1492;</button>
+                    <ul class="submenu">
+                        <li><a href="/Mishnah-New/Hebrew/Text/Shishah%20Sidrei%20Mishnah.htm">&#1513;&#1506;&#1512; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Articles/MAVO.htm">&#1502;&#1489;&#1493;&#1488;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">PDF &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">&#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">&#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                    </ul>
+                </li>
+                <li><a href="/General/Contact.htm">&#1510;&#1493;&#1512; &#1511;&#1513;&#1512;</a></li>
+                <li><a href="/">English</a></li>
             </ul>
-        </details>
-    </li>
-    <li class="has-dropdown">
-        <details>
-            <summary>Insights</summary>
-            <ul class="dropdown">
-            	<li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-            	<li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-            </ul>
-        </details>
-    </li>
-    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
-    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-    <li><a href="/torah-weave/data/">Data</a></li>
-    <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
-    <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
-</ul>        </nav>
+        </div>
     </header>
     <!-- SITE BANNER -->
 <div id="site-banner"></div>
@@ -384,7 +218,7 @@
          MAIN CONTENT AREA - EDITABLE REGION
          ========================================== -->
     <main class="content-wrapper">
-        <!-- #BeginEditable "content" -->
+        
         
         <div dir="rtl" lang="he">
 <div class="hebrew-torah-unit-wrapper" dir="rtl">
@@ -396,27 +230,27 @@
 <table class="torah-table" style="direction: rtl" dir="rtl">
 <tr>
 <td class="torah-column">
-<h3 class="section-header">1A</h3>
+<h3 class="section-header">1א</h3>
 <div class="torah-text">
-<span class="section-label">a</span> <span class="verse-number">יב:א</span> <span class="horizontal1">אלה</span> החקים והמשפטים <span class="horizontal1">אשר תשמרון</span> לעשות בארץ אשר נתן <span class="a">יהוה</span> אלהי אבתיך לך לרשתה כל הימים אשר אתם חיים על האדמה <span class="verse-number">יב:ב</span> <span class="horizontal1">אבד תאבדון את כל המקמות אשר עבדו שם הגוים אשר אתם ירשים אתם את אלהיהם על ההרים הרמים ועל הגבעות ותחת כל עץ רענן</span> <span class="verse-number">יב:ג</span> ונתצתם את מזבחתם ושברתם את מצבתם ואשריהם <span class="horizontal1">תשרפון באש </span>ופסילי אלהיהם תגדעון ואבדתם את שמם מן המקום ההוא <span class="verse-number">יב:ד</span> <span class="horizontal1">לא תעשון כן ל</span><span class="a">יהוה</span><span class="horizontal1"> אלהיכם</span>
+<span class="section-label">A</span> <span class="verse-number">יב:א</span> <span class="horizontal1">אלה</span> החקים והמשפטים <span class="horizontal1">אשר תשמרון</span> לעשות בארץ אשר נתן <span class="a">יהוה</span> אלהי אבתיך לך לרשתה כל הימים אשר אתם חיים על האדמה <span class="verse-number">יב:ב</span> <span class="horizontal1">אבד תאבדון את כל המקמות אשר עבדו שם הגוים אשר אתם ירשים אתם את אלהיהם על ההרים הרמים ועל הגבעות ותחת כל עץ רענן</span> <span class="verse-number">יב:ג</span> ונתצתם את מזבחתם ושברתם את מצבתם ואשריהם <span class="horizontal1">תשרפון באש </span>ופסילי אלהיהם תגדעון ואבדתם את שמם מן המקום ההוא <span class="verse-number">יב:ד</span> <span class="horizontal1">לא תעשון כן ל</span><span class="a">יהוה</span><span class="horizontal1"> אלהיכם</span>
 </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">1B</h3>
+<h3 class="section-header">1ב</h3>
 <div class="torah-text">
-<span class="section-label">a</span> <span class="verse-number">יב:כח</span> <span class="horizontal1">שמר</span> ושמעת את כל הדברים <span class="horizontal1">האלה אשר</span> אנכי מצוך למען ייטב לך ולבניך אחריך עד עולם כי תעשה הטוב והישר בעיני <span class="a">יהוה</span> אלהיך {ס} <span class="verse-number">יב:כט</span> כי יכרית <span class="a">יהוה</span> אלהיך את הגוים אשר אתה בא שמה לרשת אותם מפניך וירשת אתם וישבת בארצם <span class="verse-number">יב:ל</span> השמר לך פן תנקש אחריהם <span class="horizontal1">אחרי השמדם מפניך ופן תדרש לאלהיהם לאמר איכה יעבדו הגוים האלה את אלהיהם ואעשה כן גם אני</span> <span class="verse-number">יב:לא</span> <span class="horizontal1">לא תעשה כן ל</span><span class="a">יהוה</span><span class="horizontal1"> אלהיך </span>כי כל תועבת <span class="a">יהוה</span> אשר שנא עשו לאלהיהם כי גם את בניהם ואת בנתיהם <span class="horizontal1">ישרפו באש</span> לאלהיהם <span class="verse-number">יג:א</span> את כל הדבר אשר אנכי מצוה אתכם אתו תשמרו לעשות לא תסף עליו ולא תגרע ממנו {פ}
+<span class="section-label">A</span> <span class="verse-number">יב:כח</span> <span class="horizontal1">שמר</span> ושמעת את כל הדברים <span class="horizontal1">האלה אשר</span> אנכי מצוך למען ייטב לך ולבניך אחריך עד עולם כי תעשה הטוב והישר בעיני <span class="a">יהוה</span> אלהיך {ס} <span class="verse-number">יב:כט</span> כי יכרית <span class="a">יהוה</span> אלהיך את הגוים אשר אתה בא שמה לרשת אותם מפניך וירשת אתם וישבת בארצם <span class="verse-number">יב:ל</span> השמר לך פן תנקש אחריהם <span class="horizontal1">אחרי השמדם מפניך ופן תדרש לאלהיהם לאמר איכה יעבדו הגוים האלה את אלהיהם ואעשה כן גם אני</span> <span class="verse-number">יב:לא</span> <span class="horizontal1">לא תעשה כן ל</span><span class="a">יהוה</span><span class="horizontal1"> אלהיך </span>כי כל תועבת <span class="a">יהוה</span> אשר שנא עשו לאלהיהם כי גם את בניהם ואת בנתיהם <span class="horizontal1">ישרפו באש</span> לאלהיהם <span class="verse-number">יג:א</span> את כל הדבר אשר אנכי מצוה אתכם אתו תשמרו לעשות לא תסף עליו ולא תגרע ממנו {פ}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">i b</span> <span class="verse-number">יב:ה</span> <span class="internalparallel">כי אם אל המקום אשר יבחר </span><span class="a">יהוה</span><span class="internalparallel"> אלהיכם מכל שבטיכם לשום את שמו שם לשכנו תדרשו ובאת שמה</span> <span class="verse-number">יב:ו</span> <span class="internalparallel">והבאתם שמה עלתיכם וזבחיכם ואת מעשרתיכם ואת תרומת ידכם ונדריכם ונדבתיכם ובכרת בקרכם וצאנכם</span> <span class="verse-number">יב:ז</span> <span class="internalparallel">ואכלתם שם לפני </span><span class="a">יהוה</span><span class="internalparallel"> אלהיכם ושמחתם בכל משלח ידכם אתם ובתיכם אשר ברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך</span> <span class="verse-number">יב:ח</span> לא תעשון ככל אשר אנחנו עשים פה היום איש כל הישר בעיניו <span class="verse-number">יב:ט</span> כי לא באתם עד עתה אל המנוחה ואל הנחלה אשר <span class="a">יהוה</span> אלהיך נתן לך
+<span class="section-label">i B</span> <span class="verse-number">יב:ה</span> <span class="internalparallel">כי אם אל המקום אשר יבחר </span><span class="a">יהוה</span><span class="internalparallel"> אלהיכם מכל שבטיכם לשום את שמו שם לשכנו תדרשו ובאת שמה</span> <span class="verse-number">יב:ו</span> <span class="internalparallel">והבאתם שמה עלתיכם וזבחיכם ואת מעשרתיכם ואת תרומת ידכם ונדריכם ונדבתיכם ובכרת בקרכם וצאנכם</span> <span class="verse-number">יב:ז</span> <span class="internalparallel">ואכלתם שם לפני </span><span class="a">יהוה</span><span class="internalparallel"> אלהיכם ושמחתם בכל משלח ידכם אתם ובתיכם אשר ברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך</span> <span class="verse-number">יב:ח</span> לא תעשון ככל אשר אנחנו עשים פה היום איש כל הישר בעיניו <span class="verse-number">יב:ט</span> כי לא באתם עד עתה אל המנוחה ואל הנחלה אשר <span class="a">יהוה</span> אלהיך נתן לך
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">i b</span> <span class="verse-number">יג:ב</span> כי יקום בקרבך נביא או חלם חלום ונתן אליך אות או מופת <span class="verse-number">יג:ג</span> ובא האות והמופת אשר דבר אליך לאמר <span class="internalparallel">נלכה אחרי </span>אלהים<span class="internalparallel"> אחרים אשר לא ידעתם ונעבדם</span> <span class="verse-number">יג:ד</span> לא תשמע אל דברי הנביא ההוא או אל חולם החלום ההוא כי מנסה <span class="a">יהוה</span> אלהיכם אתכם לדעת הישכם אהבים את <span class="a">יהוה</span> אלהיכם בכל לבבכם ובכל נפשכם <span class="verse-number">יג:ה</span> אחרי <span class="a">יהוה</span> אלהיכם תלכו ואתו תיראו ואת מצותיו תשמרו ובקלו תשמעו ואתו תעבדו ובו תדבקון <span class="verse-number">יג:ו</span> והנביא ההוא או חלם החלום ההוא יומת כי דבר סרה על <span class="a">יהוה</span> אלהיכם המוציא אתכם מארץ מצרים והפדך מבית עבדים להדיחך מן הדרך אשר צוך <span class="a">יהוה</span> אלהיך ללכת בה ובערת הרע מקרבך {ס}
+<span class="section-label">i B</span> <span class="verse-number">יג:ב</span> כי יקום בקרבך נביא או חלם חלום ונתן אליך אות או מופת <span class="verse-number">יג:ג</span> ובא האות והמופת אשר דבר אליך לאמר <span class="internalparallel">נלכה אחרי </span>אלהים<span class="internalparallel"> אחרים אשר לא ידעתם ונעבדם</span> <span class="verse-number">יג:ד</span> לא תשמע אל דברי הנביא ההוא או אל חולם החלום ההוא כי מנסה <span class="a">יהוה</span> אלהיכם אתכם לדעת הישכם אהבים את <span class="a">יהוה</span> אלהיכם בכל לבבכם ובכל נפשכם <span class="verse-number">יג:ה</span> אחרי <span class="a">יהוה</span> אלהיכם תלכו ואתו תיראו ואת מצותיו תשמרו ובקלו תשמעו ואתו תעבדו ובו תדבקון <span class="verse-number">יג:ו</span> והנביא ההוא או חלם החלום ההוא יומת כי דבר סרה על <span class="a">יהוה</span> אלהיכם המוציא אתכם מארץ מצרים והפדך מבית עבדים להדיחך מן הדרך אשר צוך <span class="a">יהוה</span> אלהיך ללכת בה ובערת הרע מקרבך {ס}
           </div>
 </td>
 </tr>
@@ -447,24 +281,24 @@
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">c</span> <span class="verse-number">יב:טו</span> רק בכל אות נפשך תזבח ואכלת בשר כברכת <span class="a">יהוה</span> אלהיך אשר נתן לך בכל שעריך <span class="internalparallel">הטמא והטהור יאכלנו כצבי וכאיל</span> <span class="verse-number">יב:טז</span> <span class="internalparallel">רק הדם לא תאכלו על הארץ תשפכנו כמים </span>
+<span class="section-label">C</span> <span class="verse-number">יב:טו</span> רק בכל אות נפשך תזבח ואכלת בשר כברכת <span class="a">יהוה</span> אלהיך אשר נתן לך בכל שעריך <span class="internalparallel">הטמא והטהור יאכלנו כצבי וכאיל</span> <span class="verse-number">יב:טז</span> <span class="internalparallel">רק הדם לא תאכלו על הארץ תשפכנו כמים </span>
 </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">c</span> <span class="verse-number">יד:א</span> בנים אתם ל<span class="a">יהוה</span> אלהיכם לא תתגדדו ולא תשימו קרחה בין עיניכם למת <span class="verse-number">יד:ב</span> כי עם קדוש אתה ל<span class="a">יהוה</span> אלהיך ובך בחר <span class="a">יהוה</span> להיות לו לעם סגלה מכל העמים אשר על פני האדמה {ס} <span class="verse-number">יד:ג</span> לא תאכל כל תועבה <span class="verse-number">יד:ד</span> זאת הבהמה אשר תאכלו שור שה כשבים ושה עזים <span class="verse-number">יד:ה</span> איל וצבי ויחמור ואקו ודישן ותאו וזמר <span class="verse-number">יד:ו</span> וכל בהמה מפרסת פרסה ושסעת שסע שתי פרסות מעלת גרה בבהמה אתה תאכלו <span class="verse-number">יד:ז</span> אך את זה לא תאכלו ממעלי הגרה וממפריסי הפרסה השסועה את הגמל ואת הארנבת ואת השפן כי מעלה גרה המה ופרסה לא הפריסו טמאים הם לכם <span class="verse-number">יד:ח</span> ואת החזיר כי מפריס פרסה הוא ולא גרה טמא הוא לכם מבשרם לא תאכלו ובנבלתם לא תגעו {ס} <span class="verse-number">יד:ט</span> את זה תאכלו מכל אשר במים כל אשר לו סנפיר וקשקשת תאכלו <span class="verse-number">יד:י</span> וכל אשר אין לו סנפיר וקשקשת לא תאכלו טמא הוא לכם {ס} <span class="verse-number">יד:יא</span> כל צפור טהרה תאכלו <span class="verse-number">יד:יב</span> וזה אשר לא תאכלו מהם הנשר והפרס והעזניה <span class="verse-number">יד:יג</span> והראה ואת האיה והדיה למינה <span class="verse-number">יד:יד</span> ואת כל ערב למינו <span class="verse-number">יד:טו</span> ואת בת היענה ואת התחמס ואת השחף ואת הנץ למינהו <span class="verse-number">יד:טז</span> את הכוס ואת הינשוף והתנשמת <span class="verse-number">יד:יז</span> והקאת ואת הרחמה ואת השלך <span class="verse-number">יד:יח</span> והחסידה והאנפה למינה והדוכיפת והעטלף <span class="verse-number">יד:יט</span> וכל שרץ העוף טמא הוא לכם לא יאכלו <span class="verse-number">יד:כ</span> כל עוף טהור תאכלו <span class="verse-number">יד:כא</span> לא תאכלו כל נבלה לגר אשר בשעריך תתננה ואכלה או מכר לנכרי כי עם קדוש אתה ל<span class="a">יהוה</span> אלהיך לא תבשל גדי בחלב אמו {פ}
+<span class="section-label">C</span> <span class="verse-number">יד:א</span> בנים אתם ל<span class="a">יהוה</span> אלהיכם לא תתגדדו ולא תשימו קרחה בין עיניכם למת <span class="verse-number">יד:ב</span> כי עם קדוש אתה ל<span class="a">יהוה</span> אלהיך ובך בחר <span class="a">יהוה</span> להיות לו לעם סגלה מכל העמים אשר על פני האדמה {ס} <span class="verse-number">יד:ג</span> לא תאכל כל תועבה <span class="verse-number">יד:ד</span> זאת הבהמה אשר תאכלו שור שה כשבים ושה עזים <span class="verse-number">יד:ה</span> איל וצבי ויחמור ואקו ודישן ותאו וזמר <span class="verse-number">יד:ו</span> וכל בהמה מפרסת פרסה ושסעת שסע שתי פרסות מעלת גרה בבהמה אתה תאכלו <span class="verse-number">יד:ז</span> אך את זה לא תאכלו ממעלי הגרה וממפריסי הפרסה השסועה את הגמל ואת הארנבת ואת השפן כי מעלה גרה המה ופרסה לא הפריסו טמאים הם לכם <span class="verse-number">יד:ח</span> ואת החזיר כי מפריס פרסה הוא ולא גרה טמא הוא לכם מבשרם לא תאכלו ובנבלתם לא תגעו {ס} <span class="verse-number">יד:ט</span> את זה תאכלו מכל אשר במים כל אשר לו סנפיר וקשקשת תאכלו <span class="verse-number">יד:י</span> וכל אשר אין לו סנפיר וקשקשת לא תאכלו טמא הוא לכם {ס} <span class="verse-number">יד:יא</span> כל צפור טהרה תאכלו <span class="verse-number">יד:יב</span> וזה אשר לא תאכלו מהם הנשר והפרס והעזניה <span class="verse-number">יד:יג</span> והראה ואת האיה והדיה למינה <span class="verse-number">יד:יד</span> ואת כל ערב למינו <span class="verse-number">יד:טו</span> ואת בת היענה ואת התחמס ואת השחף ואת הנץ למינהו <span class="verse-number">יד:טז</span> את הכוס ואת הינשוף והתנשמת <span class="verse-number">יד:יז</span> והקאת ואת הרחמה ואת השלך <span class="verse-number">יד:יח</span> והחסידה והאנפה למינה והדוכיפת והעטלף <span class="verse-number">יד:יט</span> וכל שרץ העוף טמא הוא לכם לא יאכלו <span class="verse-number">יד:כ</span> כל עוף טהור תאכלו <span class="verse-number">יד:כא</span> לא תאכלו כל נבלה לגר אשר בשעריך תתננה ואכלה או מכר לנכרי כי עם קדוש אתה ל<span class="a">יהוה</span> אלהיך לא תבשל גדי בחלב אמו {פ}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">i d</span> <span class="verse-number">יב:יז</span> לא תוכל לאכל בשעריך <span class="horizontal1">מעשר דגנך ותירשך ויצהרך ובכרת בקרך וצאנך</span> וכל נדריך אשר תדר ונדבתיך ותרומת ידך <span class="verse-number">יב:יח</span> <span class="internalparallel">כי אם לפני </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך תאכלנו במקום אשר יבחר </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בו אתה ובנך ובתך ועבדך ואמתך והלוי אשר בשעריך ושמחת לפני </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בכל משלח ידך</span> <span class="verse-number">יב:יט</span> השמר לך פן תעזב את הלוי כל ימיך על אדמתך {ס}
+<span class="section-label">i D</span> <span class="verse-number">יב:יז</span> לא תוכל לאכל בשעריך <span class="horizontal1">מעשר דגנך ותירשך ויצהרך ובכרת בקרך וצאנך</span> וכל נדריך אשר תדר ונדבתיך ותרומת ידך <span class="verse-number">יב:יח</span> <span class="internalparallel">כי אם לפני </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך תאכלנו במקום אשר יבחר </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בו אתה ובנך ובתך ועבדך ואמתך והלוי אשר בשעריך ושמחת לפני </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בכל משלח ידך</span> <span class="verse-number">יב:יט</span> השמר לך פן תעזב את הלוי כל ימיך על אדמתך {ס}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">i d</span> <span class="verse-number">יד:כב</span> עשר תעשר את כל תבואת זרעך היצא השדה שנה שנה <span class="verse-number">יד:כג</span> ואכלת לפני <span class="a">יהוה</span> אלהיך במקום אשר יבחר לשכן שמו שם <span class="horizontal1">מעשר דגנך תירשך ויצהרך ובכרת בקרך וצאנך </span>למען תלמד ליראה את <span class="a">יהוה</span> אלהיך כל הימים
+<span class="section-label">i D</span> <span class="verse-number">יד:כב</span> עשר תעשר את כל תבואת זרעך היצא השדה שנה שנה <span class="verse-number">יד:כג</span> ואכלת לפני <span class="a">יהוה</span> אלהיך במקום אשר יבחר לשכן שמו שם <span class="horizontal1">מעשר דגנך תירשך ויצהרך ובכרת בקרך וצאנך </span>למען תלמד ליראה את <span class="a">יהוה</span> אלהיך כל הימים
           </div>
 </td>
 </tr>
@@ -482,51 +316,51 @@
 </tr>
 <tr>
 <td class="torah-column">
-<h3 class="section-header">2A</h3>
+<h3 class="section-header">2א</h3>
 <div class="torah-text">
-<span class="section-label">a</span> <span class="verse-number">יד:כח</span> מקצה שלש שנים תוציא את כל מעשר תבואתך בשנה ההוא והנחת בשעריך <span class="verse-number">יד:כט</span> ובא הלוי כי אין לו חלק ונחלה עמך והגר והיתום והאלמנה אשר בשעריך ואכלו ושבעו למען <span class="internalparallel">יברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בכל מעשה ידך אשר תעשה</span> {ס}
+<span class="section-label">A</span> <span class="verse-number">יד:כח</span> מקצה שלש שנים תוציא את כל מעשר תבואתך בשנה ההוא והנחת בשעריך <span class="verse-number">יד:כט</span> ובא הלוי כי אין לו חלק ונחלה עמך והגר והיתום והאלמנה אשר בשעריך ואכלו ושבעו למען <span class="internalparallel">יברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בכל מעשה ידך אשר תעשה</span> {ס}
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">2B</h3>
+<h3 class="section-header">2ב</h3>
 <div class="torah-text">
-<span class="section-label">a</span> <span class="verse-number">טו:יט</span> כל הבכור אשר יולד בבקרך ובצאנך הזכר תקדיש ל<span class="a">יהוה</span> אלהיך לא תעבד בבכר שורך ולא תגז בכור צאנך <span class="verse-number">טו:כ</span> לפני <span class="a">יהוה</span> אלהיך תאכלנו שנה בשנה <span class="internalparallel">במקום אשר יבחר </span><span class="a">יהוה</span> אתה וביתך <span class="verse-number">טו:כא</span> וכי יהיה בו מום פסח או עור כל מום רע לא תזבחנו ל<span class="a">יהוה</span> אלהיך <span class="verse-number">טו:כב</span> בשעריך תאכלנו הטמא והטהור יחדו כצבי וכאיל <span class="verse-number">טו:כג</span> רק את דמו לא תאכל על הארץ תשפכנו כמים {פ}
-          </div>
-</td>
-</tr>
-<tr>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">b</span> <span class="verse-number">טו:א</span> מקץ שבע שנים תעשה שמטה <span class="verse-number">טו:ב</span> וזה דבר השמטה שמוט כל בעל משה ידו אשר ישה ברעהו לא יגש את רעהו ואת אחיו כי קרא שמטה ל<span class="a">יהוה</span> <span class="verse-number">טו:ג</span> את הנכרי תגש ואשר יהיה לך את אחיך תשמט ידך <span class="verse-number">טו:ד</span> אפס כי לא יהיה בך אביון <span class="internalparallel">כי ברך יברכך </span><span class="a">יהוה</span> בארץ אשר <span class="a">יהוה</span> אלהיך נתן לך נחלה לרשתה <span class="verse-number">טו:ה</span> רק אם שמוע תשמע בקול <span class="a">יהוה</span> אלהיך לשמר לעשות את כל המצוה הזאת אשר אנכי מצוך היום <span class="verse-number">טו:ו</span> כי <span class="a">יהוה</span><span class="internalparallel"> אלהיך ברכך </span>כאשר דבר לך והעבטת גוים רבים ואתה לא תעבט ומשלת בגוים רבים ובך לא ימשלו {ס}
-          </div>
-</td>
-<td class="torah-column">
-<div class="torah-text">
-<span class="section-label">b</span> <span class="verse-number">טז:א</span> שמור את חדש האביב ועשית פסח ל<span class="a">יהוה</span> אלהיך כי בחדש האביב הוציאך <span class="a">יהוה</span> אלהיך ממצרים לילה <span class="verse-number">טז:ב</span> וזבחת פסח ל<span class="a">יהוה</span> אלהיך צאן ובקר <span class="internalparallel">במקום אשר יבחר </span><span class="a">יהוה</span> לשכן שמו שם <span class="verse-number">טז:ג</span> לא תאכל עליו חמץ שבעת ימים תאכל עליו מצות לחם עני כי בחפזון יצאת מארץ מצרים למען תזכר את יום צאתך מארץ מצרים כל ימי חייך <span class="verse-number">טז:ד</span> ולא יראה לך שאר בכל גבלך שבעת ימים ולא ילין מן הבשר אשר תזבח בערב ביום הראשון לבקר <span class="verse-number">טז:ה</span> לא תוכל לזבח את הפסח באחד שעריך אשר <span class="a">יהוה</span> אלהיך נתן לך <span class="verse-number">טז:ו</span> כי אם אל <span class="internalparallel">המקום אשר יבחר </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך </span>לשכן שמו שם תזבח את הפסח בערב כבוא השמש מועד צאתך ממצרים <span class="verse-number">טז:ז</span> ובשלת ואכלת במקום אשר יבחר <span class="a">יהוה</span> אלהיך בו ופנית בבקר והלכת לאהליך <span class="verse-number">טז:ח</span> ששת ימים תאכל מצות וביום השביעי עצרת ל<span class="a">יהוה</span> אלהיך לא תעשה מלאכה {ס}
+<span class="section-label">A</span> <span class="verse-number">טו:יט</span> כל הבכור אשר יולד בבקרך ובצאנך הזכר תקדיש ל<span class="a">יהוה</span> אלהיך לא תעבד בבכר שורך ולא תגז בכור צאנך <span class="verse-number">טו:כ</span> לפני <span class="a">יהוה</span> אלהיך תאכלנו שנה בשנה <span class="internalparallel">במקום אשר יבחר </span><span class="a">יהוה</span> אתה וביתך <span class="verse-number">טו:כא</span> וכי יהיה בו מום פסח או עור כל מום רע לא תזבחנו ל<span class="a">יהוה</span> אלהיך <span class="verse-number">טו:כב</span> בשעריך תאכלנו הטמא והטהור יחדו כצבי וכאיל <span class="verse-number">טו:כג</span> רק את דמו לא תאכל על הארץ תשפכנו כמים {פ}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">c</span> <span class="verse-number">טו:ז</span> כי יהיה בך אביון מאחד אחיך באחד שעריך בארצך אשר <span class="a">יהוה</span> אלהיך נתן לך לא תאמץ את לבבך ולא תקפץ את ידך מאחיך האביון <span class="verse-number">טו:ח</span> כי פתח תפתח את ידך לו והעבט תעביטנו די מחסרו אשר יחסר לו <span class="verse-number">טו:ט</span> השמר לך פן יהיה דבר עם לבבך בליעל לאמר קרבה שנת השבע שנת השמטה ורעה עינך באחיך האביון ולא תתן לו וקרא עליך אל <span class="a">יהוה</span> והיה בך חטא <span class="verse-number">טו:י</span> נתון תתן לו ולא ירע לבבך בתתך לו כי בגלל הדבר הזה <span class="internalparallel">יברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בכל מעשך ובכל משלח ידך</span> <span class="verse-number">טו:יא</span> כי לא יחדל אביון מקרב הארץ על כן אנכי מצוך לאמר פתח תפתח את ידך לאחיך לעניך ולאבינך בארצך {ס}
+<span class="section-label">B</span> <span class="verse-number">טו:א</span> מקץ שבע שנים תעשה שמטה <span class="verse-number">טו:ב</span> וזה דבר השמטה שמוט כל בעל משה ידו אשר ישה ברעהו לא יגש את רעהו ואת אחיו כי קרא שמטה ל<span class="a">יהוה</span> <span class="verse-number">טו:ג</span> את הנכרי תגש ואשר יהיה לך את אחיך תשמט ידך <span class="verse-number">טו:ד</span> אפס כי לא יהיה בך אביון <span class="internalparallel">כי ברך יברכך </span><span class="a">יהוה</span> בארץ אשר <span class="a">יהוה</span> אלהיך נתן לך נחלה לרשתה <span class="verse-number">טו:ה</span> רק אם שמוע תשמע בקול <span class="a">יהוה</span> אלהיך לשמר לעשות את כל המצוה הזאת אשר אנכי מצוך היום <span class="verse-number">טו:ו</span> כי <span class="a">יהוה</span><span class="internalparallel"> אלהיך ברכך </span>כאשר דבר לך והעבטת גוים רבים ואתה לא תעבט ומשלת בגוים רבים ובך לא ימשלו {ס}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">c</span> <span class="verse-number">טז:ט</span> שבעה שבעת תספר לך מהחל חרמש בקמה תחל לספר שבעה שבעות <span class="verse-number">טז:י</span> ועשית חג שבעות ל<span class="a">יהוה</span> אלהיך מסת נדבת ידך אשר תתן כאשר יברכך <span class="a">יהוה</span> אלהיך <span class="verse-number">טז:יא</span> ושמחת לפני <span class="a">יהוה</span> אלהיך אתה ובנך ובתך ועבדך ואמתך והלוי אשר בשעריך והגר והיתום והאלמנה אשר בקרבך <span class="internalparallel">במקום אשר יבחר </span><span class="a">יהוה</span> אלהיך לשכן שמו שם <span class="verse-number">טז:יב</span> וזכרת כי עבד היית במצרים ושמרת ועשית את החקים האלה {פ}
+<span class="section-label">B</span> <span class="verse-number">טז:א</span> שמור את חדש האביב ועשית פסח ל<span class="a">יהוה</span> אלהיך כי בחדש האביב הוציאך <span class="a">יהוה</span> אלהיך ממצרים לילה <span class="verse-number">טז:ב</span> וזבחת פסח ל<span class="a">יהוה</span> אלהיך צאן ובקר <span class="internalparallel">במקום אשר יבחר </span><span class="a">יהוה</span> לשכן שמו שם <span class="verse-number">טז:ג</span> לא תאכל עליו חמץ שבעת ימים תאכל עליו מצות לחם עני כי בחפזון יצאת מארץ מצרים למען תזכר את יום צאתך מארץ מצרים כל ימי חייך <span class="verse-number">טז:ד</span> ולא יראה לך שאר בכל גבלך שבעת ימים ולא ילין מן הבשר אשר תזבח בערב ביום הראשון לבקר <span class="verse-number">טז:ה</span> לא תוכל לזבח את הפסח באחד שעריך אשר <span class="a">יהוה</span> אלהיך נתן לך <span class="verse-number">טז:ו</span> כי אם אל <span class="internalparallel">המקום אשר יבחר </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך </span>לשכן שמו שם תזבח את הפסח בערב כבוא השמש מועד צאתך ממצרים <span class="verse-number">טז:ז</span> ובשלת ואכלת במקום אשר יבחר <span class="a">יהוה</span> אלהיך בו ופנית בבקר והלכת לאהליך <span class="verse-number">טז:ח</span> ששת ימים תאכל מצות וביום השביעי עצרת ל<span class="a">יהוה</span> אלהיך לא תעשה מלאכה {ס}
           </div>
 </td>
 </tr>
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">d</span> <span class="verse-number">טו:יב</span> כי ימכר לך אחיך העברי או העבריה ועבדך שש שנים ובשנה השביעת תשלחנו חפשי מעמך <span class="verse-number">טו:יג</span> וכי תשלחנו חפשי מעמך <span class="horizontal1">לא תשלחנו ריקם</span> <span class="verse-number">טו:יד</span> העניק תעניק לו מצאנך <span class="horizontal1">ומגרנך ומיקבך</span> <span class="internalparallel">אשר ברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך </span>תתן לו <span class="verse-number">טו:טו</span> וזכרת כי עבד היית בארץ מצרים ויפדך <span class="a">יהוה</span> אלהיך על כן אנכי מצוך את הדבר הזה היום <span class="verse-number">טו:טז</span> והיה כי יאמר אליך לא אצא מעמך כי אהבך ואת ביתך כי טוב לו עמך <span class="verse-number">טו:יז</span> ולקחת את המרצע ונתתה באזנו ובדלת והיה לך עבד עולם ואף לאמתך תעשה כן <span class="verse-number">טו:יח</span> לא יקשה בעינך בשלחך אתו חפשי מעמך כי משנה שכר שכיר עבדך שש שנים <span class="internalparallel">וברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בכל אשר תעשה</span> {פ}
+<span class="section-label">C</span> <span class="verse-number">טו:ז</span> כי יהיה בך אביון מאחד אחיך באחד שעריך בארצך אשר <span class="a">יהוה</span> אלהיך נתן לך לא תאמץ את לבבך ולא תקפץ את ידך מאחיך האביון <span class="verse-number">טו:ח</span> כי פתח תפתח את ידך לו והעבט תעביטנו די מחסרו אשר יחסר לו <span class="verse-number">טו:ט</span> השמר לך פן יהיה דבר עם לבבך בליעל לאמר קרבה שנת השבע שנת השמטה ורעה עינך באחיך האביון ולא תתן לו וקרא עליך אל <span class="a">יהוה</span> והיה בך חטא <span class="verse-number">טו:י</span> נתון תתן לו ולא ירע לבבך בתתך לו כי בגלל הדבר הזה <span class="internalparallel">יברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בכל מעשך ובכל משלח ידך</span> <span class="verse-number">טו:יא</span> כי לא יחדל אביון מקרב הארץ על כן אנכי מצוך לאמר פתח תפתח את ידך לאחיך לעניך ולאבינך בארצך {ס}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">d</span> <span class="verse-number">טז:יג</span> חג הסכת תעשה לך שבעת ימים באספך <span class="horizontal1">מגרנך ומיקבך</span> <span class="verse-number">טז:יד</span> ושמחת בחגך אתה ובנך ובתך ועבדך ואמתך והלוי והגר והיתום והאלמנה אשר בשעריך <span class="verse-number">טז:טו</span> שבעת ימים תחג ל<span class="a">יהוה</span> אלהיך <span class="internalparallel">במקום אשר יבחר </span><span class="a">יהוה</span> כי יברכך <span class="a">יהוה</span> אלהיך בכל תבואתך ובכל מעשה ידיך והיית אך שמח <span class="verse-number">טז:טז</span> שלוש פעמים בשנה יראה כל זכורך את פני <span class="a">יהוה</span><span class="internalparallel"> אלהיך במקום אשר יבחר</span> בחג המצות ובחג השבעות ובחג הסכות <span class="horizontal1">ולא יראה את פני </span><span class="a">יהוה</span><span class="horizontal1"> ריקם</span> <span class="verse-number">טז:יז</span> איש כמתנת ידו כברכת <span class="a">יהוה</span> אלהיך אשר נתן לך {ס}
+<span class="section-label">C</span> <span class="verse-number">טז:ט</span> שבעה שבעת תספר לך מהחל חרמש בקמה תחל לספר שבעה שבעות <span class="verse-number">טז:י</span> ועשית חג שבעות ל<span class="a">יהוה</span> אלהיך מסת נדבת ידך אשר תתן כאשר יברכך <span class="a">יהוה</span> אלהיך <span class="verse-number">טז:יא</span> ושמחת לפני <span class="a">יהוה</span> אלהיך אתה ובנך ובתך ועבדך ואמתך והלוי אשר בשעריך והגר והיתום והאלמנה אשר בקרבך <span class="internalparallel">במקום אשר יבחר </span><span class="a">יהוה</span> אלהיך לשכן שמו שם <span class="verse-number">טז:יב</span> וזכרת כי עבד היית במצרים ושמרת ועשית את החקים האלה {פ}
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">D</span> <span class="verse-number">טו:יב</span> כי ימכר לך אחיך העברי או העבריה ועבדך שש שנים ובשנה השביעת תשלחנו חפשי מעמך <span class="verse-number">טו:יג</span> וכי תשלחנו חפשי מעמך <span class="horizontal1">לא תשלחנו ריקם</span> <span class="verse-number">טו:יד</span> העניק תעניק לו מצאנך <span class="horizontal1">ומגרנך ומיקבך</span> <span class="internalparallel">אשר ברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך </span>תתן לו <span class="verse-number">טו:טו</span> וזכרת כי עבד היית בארץ מצרים ויפדך <span class="a">יהוה</span> אלהיך על כן אנכי מצוך את הדבר הזה היום <span class="verse-number">טו:טז</span> והיה כי יאמר אליך לא אצא מעמך כי אהבך ואת ביתך כי טוב לו עמך <span class="verse-number">טו:יז</span> ולקחת את המרצע ונתתה באזנו ובדלת והיה לך עבד עולם ואף לאמתך תעשה כן <span class="verse-number">טו:יח</span> לא יקשה בעינך בשלחך אתו חפשי מעמך כי משנה שכר שכיר עבדך שש שנים <span class="internalparallel">וברכך </span><span class="a">יהוה</span><span class="internalparallel"> אלהיך בכל אשר תעשה</span> {פ}
+          </div>
+</td>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">D</span> <span class="verse-number">טז:יג</span> חג הסכת תעשה לך שבעת ימים באספך <span class="horizontal1">מגרנך ומיקבך</span> <span class="verse-number">טז:יד</span> ושמחת בחגך אתה ובנך ובתך ועבדך ואמתך והלוי והגר והיתום והאלמנה אשר בשעריך <span class="verse-number">טז:טו</span> שבעת ימים תחג ל<span class="a">יהוה</span> אלהיך <span class="internalparallel">במקום אשר יבחר </span><span class="a">יהוה</span> כי יברכך <span class="a">יהוה</span> אלהיך בכל תבואתך ובכל מעשה ידיך והיית אך שמח <span class="verse-number">טז:טז</span> שלוש פעמים בשנה יראה כל זכורך את פני <span class="a">יהוה</span><span class="internalparallel"> אלהיך במקום אשר יבחר</span> בחג המצות ובחג השבעות ובחג הסכות <span class="horizontal1">ולא יראה את פני </span><span class="a">יהוה</span><span class="horizontal1"> ריקם</span> <span class="verse-number">טז:יז</span> איש כמתנת ידו כברכת <span class="a">יהוה</span> אלהיך אשר נתן לך {ס}
           </div>
 </td>
 </tr>
@@ -535,15 +369,15 @@
 <table class="torah-table" style="direction: rtl" dir="rtl">
 <tr>
 <td class="torah-column">
-<h3 class="section-header">3A</h3>
+<h3 class="section-header">3א</h3>
 <div class="torah-text">
-<span class="section-label">i a</span> <span class="verse-number">טז:יח</span> <span class="horizontal1">שפטים ושטרים תתן לך</span> <span class="internalparallel">בכל שעריך</span> <span class="horizontal1">אשר </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך נתן לך </span>לשבטיך ושפטו את העם משפט צדק
+<span class="section-label">i A</span> <span class="verse-number">טז:יח</span> <span class="horizontal1">שפטים ושטרים תתן לך</span> <span class="internalparallel">בכל שעריך</span> <span class="horizontal1">אשר </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך נתן לך </span>לשבטיך ושפטו את העם משפט צדק
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">3B</h3>
+<h3 class="section-header">3ב</h3>
 <div class="torah-text">
-<span class="section-label">i a</span> <span class="verse-number">יז:יד</span> <span class="internalparallel">כי תבא אל הארץ</span> <span class="horizontal1">אשר </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך נתן לך</span> וירשתה וישבתה בה ואמרת <span class="horizontal1">אשימה עלי מלך </span>ככל הגוים אשר סביבתי <span class="verse-number">יז:טו</span> שום תשים עליך מלך אשר יבחר <span class="a">יהוה</span> אלהיך בו מקרב אחיך תשים עליך מלך לא תוכל <span class="horizontal1">לתת עליך</span> איש נכרי אשר לא אחיך הוא <span class="verse-number">יז:טז</span> רק לא ירבה לו סוסים ולא ישיב את העם מצרימה למען הרבות סוס ו<span class="a">יהוה</span> אמר לכם לא תספון לשוב בדרך הזה עוד <span class="verse-number">יז:יז</span> ולא ירבה לו נשים ולא יסור לבבו וכסף וזהב לא ירבה לו מאד
+<span class="section-label">i A</span> <span class="verse-number">יז:יד</span> <span class="internalparallel">כי תבא אל הארץ</span> <span class="horizontal1">אשר </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך נתן לך</span> וירשתה וישבתה בה ואמרת <span class="horizontal1">אשימה עלי מלך </span>ככל הגוים אשר סביבתי <span class="verse-number">יז:טו</span> שום תשים עליך מלך אשר יבחר <span class="a">יהוה</span> אלהיך בו מקרב אחיך תשים עליך מלך לא תוכל <span class="horizontal1">לתת עליך</span> איש נכרי אשר לא אחיך הוא <span class="verse-number">יז:טז</span> רק לא ירבה לו סוסים ולא ישיב את העם מצרימה למען הרבות סוס ו<span class="a">יהוה</span> אמר לכם לא תספון לשוב בדרך הזה עוד <span class="verse-number">יז:יז</span> ולא ירבה לו נשים ולא יסור לבבו וכסף וזהב לא ירבה לו מאד
           </div>
 </td>
 </tr>
@@ -562,12 +396,12 @@
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">i b</span> <span class="verse-number">טז:כא</span> לא תטע לך אשרה כל עץ אצל מזבח <span class="a">יהוה</span> אלהיך אשר תעשה לך
+<span class="section-label">i B</span> <span class="verse-number">טז:כא</span> לא תטע לך אשרה כל עץ אצל מזבח <span class="a">יהוה</span> אלהיך אשר תעשה לך
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">i b</span> <span class="verse-number">יח:א</span> לא יהיה לכהנים הלוים כל שבט לוי חלק ונחלה עם ישראל אשי <span class="a">יהוה</span> ונחלתו יאכלון <span class="verse-number">יח:ב</span> ונחלה לא יהיה לו בקרב אחיו <span class="a">יהוה</span> הוא נחלתו כאשר דבר לו {ס}
+<span class="section-label">i B</span> <span class="verse-number">יח:א</span> לא יהיה לכהנים הלוים כל שבט לוי חלק ונחלה עם ישראל אשי <span class="a">יהוה</span> ונחלתו יאכלון <span class="verse-number">יח:ב</span> ונחלה לא יהיה לו בקרב אחיו <span class="a">יהוה</span> הוא נחלתו כאשר דבר לו {ס}
           </div>
 </td>
 </tr>
@@ -598,12 +432,12 @@
 <tr>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">i c</span> <span class="verse-number">יז:ב</span> כי ימצא בקרבך <span class="internalparallel">באחד שעריך</span> <span class="horizontal1">אשר </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך נתן לך </span>איש או אשה אשר יעשה את הרע בעיני <span class="a">יהוה</span> אלהיך לעבר בריתו <span class="verse-number">יז:ג</span> וילך ויעבד אלהים אחרים וישתחו להם ולשמש או לירח או לכל צבא השמים אשר לא צויתי <span class="verse-number">יז:ד</span> והגד לך ושמעת ודרשת היטב והנה אמת נכון הדבר <span class="horizontal1">נעשתה התועבה הזאת בישראל</span> <span class="verse-number">יז:ה</span> והוצאת את האיש ההוא או את האשה ההוא אשר עשו את הדבר הרע הזה אל <span class="internalparallel">שעריך</span> את האיש או את האשה וסקלתם באבנים ומתו <span class="verse-number">יז:ו</span> על פי שנים עדים או שלשה עדים יומת המת לא יומת על פי עד אחד <span class="verse-number">יז:ז</span> יד העדים תהיה בו בראשנה להמיתו ויד כל העם באחרנה ובערת הרע מקרבך {פ}
+<span class="section-label">i C</span> <span class="verse-number">יז:ב</span> כי ימצא בקרבך <span class="internalparallel">באחד שעריך</span> <span class="horizontal1">אשר </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך נתן לך </span>איש או אשה אשר יעשה את הרע בעיני <span class="a">יהוה</span> אלהיך לעבר בריתו <span class="verse-number">יז:ג</span> וילך ויעבד אלהים אחרים וישתחו להם ולשמש או לירח או לכל צבא השמים אשר לא צויתי <span class="verse-number">יז:ד</span> והגד לך ושמעת ודרשת היטב והנה אמת נכון הדבר <span class="horizontal1">נעשתה התועבה הזאת בישראל</span> <span class="verse-number">יז:ה</span> והוצאת את האיש ההוא או את האשה ההוא אשר עשו את הדבר הרע הזה אל <span class="internalparallel">שעריך</span> את האיש או את האשה וסקלתם באבנים ומתו <span class="verse-number">יז:ו</span> על פי שנים עדים או שלשה עדים יומת המת לא יומת על פי עד אחד <span class="verse-number">יז:ז</span> יד העדים תהיה בו בראשנה להמיתו ויד כל העם באחרנה ובערת הרע מקרבך {פ}
           </div>
 </td>
 <td class="torah-column">
 <div class="torah-text">
-<span class="section-label">i c</span> <span class="verse-number">יח:ט</span> <span class="internalparallel">כי אתה בא אל הארץ</span> <span class="horizontal1">אשר </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך נתן לך לא תלמד לעשות כתועבת הגוים ההם</span> <span class="verse-number">יח:י</span> לא ימצא בך מעביר בנו ובתו באש קסם קסמים מעונן ומנחש ומכשף <span class="verse-number">יח:יא</span> וחבר חבר ושאל אוב וידעני ודרש אל המתים <span class="verse-number">יח:יב</span> כי תועבת <span class="a">יהוה</span> כל עשה אלה ובגלל התועבת האלה <span class="a">יהוה</span> אלהיך מוריש אותם מפניך <span class="verse-number">יח:יג</span> תמים תהיה עם <span class="a">יהוה</span> אלהיך <span class="verse-number">יח:יד</span> כי הגוים האלה אשר אתה יורש אותם אל מעננים ואל קסמים ישמעו ואתה לא כן נתן לך <span class="a">יהוה</span> אלהיך
+<span class="section-label">i C</span> <span class="verse-number">יח:ט</span> <span class="internalparallel">כי אתה בא אל הארץ</span> <span class="horizontal1">אשר </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך נתן לך לא תלמד לעשות כתועבת הגוים ההם</span> <span class="verse-number">יח:י</span> לא ימצא בך מעביר בנו ובתו באש קסם קסמים מעונן ומנחש ומכשף <span class="verse-number">יח:יא</span> וחבר חבר ושאל אוב וידעני ודרש אל המתים <span class="verse-number">יח:יב</span> כי תועבת <span class="a">יהוה</span> כל עשה אלה ובגלל התועבת האלה <span class="a">יהוה</span> אלהיך מוריש אותם מפניך <span class="verse-number">יח:יג</span> תמים תהיה עם <span class="a">יהוה</span> אלהיך <span class="verse-number">יח:יד</span> כי הגוים האלה אשר אתה יורש אותם אל מעננים ואל קסמים ישמעו ואתה לא כן נתן לך <span class="a">יהוה</span> אלהיך
           </div>
 </td>
 </tr>
@@ -636,12 +470,190 @@
 <table class="torah-table" style="direction: rtl" dir="rtl">
 <tr>
 <td class="torah-column">
-<h3 class="section-header">4A</h3>
+<h3 class="section-header">4א</h3>
 <div class="torah-text">
-<span class="section-label">i a</span> <span class="verse-number">יט:א</span> כי יכרית <span class="a">יהוה</span> אלהיך את הגוים אשר <span class="a">יהוה</span> אלהיך נתן לך את ארצם וירשתם וישבת <span class="ciasm1">בעריהם</span> ובבתיהם <span class="verse-number">יט:ב</span> שלוש <span class="ciasm1">ערים</span> תבדיל לך בתוך ארצך אשר <span class="a">יהוה</span> אלהיך נתן לך לרשתה <span class="verse-number">יט:ג</span> תכין לך הדרך ושלשת את גבול ארצך אשר ינחילך <span class="a">יהוה</span> אלהיך והיה <span class="internalparallel">לנוס שמה</span> כל רצח
+<span class="section-label">i A</span> <span class="verse-number">יט:א</span> כי יכרית <span class="a">יהוה</span> אלהיך את הגוים אשר <span class="a">יהוה</span> אלהיך נתן לך את ארצם וירשתם וישבת <span class="ciasm1">בעריהם</span> ובבתיהם <span class="verse-number">יט:ב</span> שלוש <span class="ciasm1">ערים</span> תבדיל לך בתוך ארצך אשר <span class="a">יהוה</span> אלהיך נתן לך לרשתה <span class="verse-number">יט:ג</span> תכין לך הדרך ושלשת את גבול ארצך אשר ינחילך <span class="a">יהוה</span> אלהיך והיה <span class="internalparallel">לנוס שמה</span> כל רצח
           </div>
 </td>
 <td class="torah-column">
-<h3 class="section-header">4B</h3>
+<h3 class="section-header">4ב</h3>
 <div class="torah-text">
-<span class="section-label">i a</span> <span class="verse-number">כ:א</span> כי תצא למלחמה על איבך וראית סוס ורכב עם רב ממך <span class="ciasm2">לא תירא</span> מהם כי <span class="a">יהוה</span> אלהיך עמך המעלך מארץ מצרים <span class="verse-number">כ:ב</span> והיה כקרבכם אל המלחמה ונגש הכהן ודבר אל העם <span class="verse-number">כ:ג</span> ואמר אלהם<span class="ciasm2"> שמע ישראל </span>אתם קרב
+<span class="section-label">i A</span> <span class="verse-number">כ:א</span> כי תצא למלחמה על איבך וראית סוס ורכב עם רב ממך <span class="ciasm2">לא תירא</span> מהם כי <span class="a">יהוה</span> אלהיך עמך המעלך מארץ מצרים <span class="verse-number">כ:ב</span> והיה כקרבכם אל המלחמה ונגש הכהן ודבר אל העם <span class="verse-number">כ:ג</span> ואמר אלהם<span class="ciasm2"> שמע ישראל </span>אתם קרבים היום למלחמה על איביכם אל <span class="ciasm2">ירך לבבכם אל תיראו</span> ואל תחפזו ואל תערצו מפניהם <span class="verse-number">כ:ד</span> כי <span class="a">יהוה</span> אלהיכם ההלך עמכם להלחם לכם עם איביכם להושיע אתכם
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">ii</span> <span class="verse-number">יט:ד</span> וזה דבר הרצח אשר <span class="internalparallel">ינוס שמה וחי </span>אשר יכה את רעהו בבלי דעת והוא לא שנא לו מתמל שלשם <span class="verse-number">יט:ה</span> ואשר יבא את רעהו ביער לחטב עצים <span class="ciasm1">ונדחה ידו בגרזן לכרת העץ</span> ונשל הברזל מן העץ ומצא את רעהו ומת הוא <span class="internalparallel">ינוס אל אחת </span><span class="ciasm1">הערים</span><span class="internalparallel"> האלה וחי</span> <span class="verse-number">יט:ו</span> פן ירדף גאל הדם אחרי הרצח כי יחם לבבו והשיגו כי ירבה הדרך והכהו נפש ולו אין משפט מות כי לא שנא הוא לו מתמול שלשום <span class="verse-number">יט:ז</span> על כן אנכי מצוך לאמר שלש <span class="ciasm1">ערים</span> תבדיל לך
+          </div>
+</td>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">ii</span> <span class="verse-number">כ:ה</span> ודברו השטרים אל העם לאמר מי האיש אשר בנה בית חדש ולא חנכו <span class="internalparallel">ילך וישב לביתו פן ימות במלחמה</span> ואיש אחר יחנכנו <span class="verse-number">כ:ו</span> ומי האיש אשר נטע כרם ולא חללו ילך <span class="internalparallel">וישב לביתו פן ימות במלחמה</span> ואיש אחר יחללנו <span class="verse-number">כ:ז</span> ומי האיש אשר ארש אשה ולא לקחה ילך <span class="internalparallel">וישב לביתו פן ימות במלחמה</span> ואיש אחר יקחנה <span class="verse-number">כ:ח</span> ויספו השטרים לדבר אל העם ואמרו מי האיש הירא ורך הלבב ילך <span class="internalparallel">וישב לביתו </span>ולא ימס את לבב אחיו כלבבו <span class="verse-number">כ:ט</span> והיה ככלת השטרים לדבר אל העם ופקדו שרי צבאות בראש העם {ס}
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">iii</span> <span class="verse-number">יט:ח</span> <span class="horizontal1">ואם ירחיב </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך את גבלך כאשר נשבע לאבתיך ונתן לך את כל הארץ</span> אשר דבר לתת לאבתיך <span class="verse-number">יט:ט</span> כי תשמר את כל המצוה הזאת לעשתה אשר אנכי מצוך היום לאהבה את <span class="a">יהוה</span> אלהיך וללכת בדרכיו כל הימים ויספת לך עוד שלש <span class="ciasm1">ערים</span> על השלש האלה <span class="verse-number">יט:י</span> ולא ישפך דם נקי בקרב ארצך אשר <span class="a">יהוה</span> אלהיך נתן לך נחלה והיה עליך דמים {פ}
+          </div>
+</td>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">iii</span> <span class="verse-number">כ:י</span> כי תקרב אל <span class="ciasm1">עיר</span> להלחם עליה וקראת אליה לשלום <span class="verse-number">כ:יא</span> והיה אם שלום תענך ופתחה לך והיה כל העם הנמצא בה יהיו לך למס ועבדוך <span class="verse-number">כ:יב</span> ואם לא תשלים עמך ועשתה עמך מלחמה וצרת עליה <span class="verse-number">כ:יג</span> ונתנה <span class="a">יהוה</span> אלהיך בידך והכית את כל זכורה לפי חרב <span class="verse-number">כ:יד</span> רק הנשים והטף והבהמה וכל אשר יהיה <span class="ciasm1">בעיר</span> כל שללה תבז לך ואכלת את שלל איביך אשר נתן <span class="a">יהוה</span> אלהיך לך <span class="verse-number">כ:טו</span> כן תעשה <span class="horizontal1">לכל</span><span class="ciasm1"> הערים</span><span class="horizontal1"> הרחקת ממך מאד אשר לא </span><span class="ciasm1">מערי</span><span class="horizontal1"> הגוים האלה הנה </span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">iv</span> <span class="verse-number">יט:יא</span> וכי יהיה איש שנא לרעהו וארב לו וקם עליו והכהו נפש ומת <span class="internalparallel">ונס אל אחת</span> <span class="ciasm1">הערים</span> האל <span class="verse-number">יט:יב</span> ושלחו זקני <span class="ciasm1">עירו</span> ולקחו אתו משם ונתנו אתו ביד גאל הדם ומת <span class="verse-number">יט:יג</span> <span class="horizontal1">לא תחוס עינך עליו</span> ובערת דם הנקי מישראל וטוב לך {ס}
+          </div>
+</td>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">iv</span> <span class="verse-number">כ:טז</span> רק <span class="ciasm1">מערי</span> העמים האלה אשר <span class="a">יהוה</span> אלהיך נתן לך נחלה <span class="horizontal1">לא תחיה כל נשמה</span> <span class="verse-number">כ:יז</span> כי החרם תחרימם החתי והאמרי הכנעני והפרזי החוי והיבוסי כאשר צוך <span class="a">יהוה</span> אלהיך <span class="verse-number">כ:יח</span> למען אשר לא ילמדו אתכם לעשות ככל תועבתם אשר עשו לאלהיהם וחטאתם ל<span class="a">יהוה</span> אלהיכם {ס}
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">B</span> <span class="verse-number">יט:יד</span> לא תסיג גבול רעך אשר גבלו ראשנים בנחלתך אשר תנחל בארץ אשר <span class="a">יהוה</span> אלהיך נתן לך לרשתה {ס}
+          </div>
+</td>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">B</span> <span class="verse-number">כ:יט</span> כי תצור אל <span class="ciasm1">עיר </span>ימים רבים להלחם עליה לתפשה <span class="ciasm1">לא תשחית את עצה לנדח עליו גרזן </span>כי ממנו תאכל ואתו לא תכרת כי האדם עץ השדה לבא מפניך במצור <span class="verse-number">כ:כ</span> רק עץ אשר תדע כי לא עץ מאכל הוא אתו תשחית וכרת ובנית מצור על <span class="ciasm1">העיר</span> אשר הוא עשה עמך מלחמה עד רדתה {פ}
+          </div>
+</td>
+</tr>
+<tr>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">C</span> <span class="verse-number">יט:טו</span> לא יקום עד אחד באיש לכל עון ולכל חטאת בכל חטא אשר יחטא על פי שני עדים או על פי שלשה עדים יקום דבר <span class="verse-number">יט:טז</span> כי יקום עד חמס באיש לענות בו סרה <span class="verse-number">יט:יז</span> ועמדו שני האנשים אשר להם <span class="horizontal1">הריב לפני </span><span class="a">יהוה</span><span class="horizontal1"> לפני הכהנים והשפטים אשר יהיו בימים ההם</span> <span class="verse-number">יט:יח</span> ודרשו השפטים היטב והנה עד שקר העד שקר ענה באחיו <span class="verse-number">יט:יט</span> ועשיתם לו כאשר זמם לעשות לאחיו <span class="horizontal1">ובערת הרע מקרבך</span> <span class="verse-number">יט:כ</span> <span class="ciasm2">והנשארים ישמעו ויראו</span> ולא יספו לעשות עוד כדבר הרע הזה בקרבך <span class="verse-number">יט:כא</span> <span class="ciasm2">ולא תחוס עינך</span> נפש בנפש עין בעין שן בשן יד ביד רגל ברגל {ס}
+          </div>
+</td>
+<td class="torah-column">
+<div class="torah-text">
+<span class="section-label">C</span> <span class="verse-number">כא:א</span> כי ימצא חלל באדמה אשר <span class="a">יהוה</span> אלהיך נתן לך לרשתה נפל בשדה לא נודע מי הכהו <span class="verse-number">כא:ב</span> ויצאו זקניך ושפטיך ומדדו אל <span class="ciasm1">הערים </span>אשר סביבת החלל <span class="verse-number">כא:ג</span> והיה <span class="ciasm1">העיר</span> הקרבה אל החלל ולקחו זקני <span class="ciasm1">העיר</span> ההוא עגלת בקר אשר לא עבד בה אשר לא משכה בעל <span class="verse-number">כא:ד</span> והורדו זקני <span class="ciasm1">העיר</span> ההוא את העגלה אל נחל איתן אשר לא יעבד בו ולא יזרע וערפו שם את העגלה בנחל <span class="verse-number">כא:ה</span> <span class="horizontal1">ונגשו הכהנים בני לוי כי בם בחר </span><span class="a">יהוה</span><span class="horizontal1"> אלהיך לשרתו ולברך בשם </span><span class="a">יהוה</span><span class="horizontal1"> ועל פיהם יהיה כל ריב</span> וכל נגע <span class="verse-number">כא:ו</span> וכל זקני <span class="ciasm1">העיר</span> ההוא הקרבים אל החלל ירחצו את ידיהם על העגלה הערופה בנחל <span class="verse-number">כא:ז</span> וענו ואמרו ידינו לא שפכה (שפכו) את הדם הזה ועינינו לא ראו <span class="verse-number">כא:ח</span> כפר לעמך ישראל אשר פדית <span class="a">יהוה</span> ואל תתן דם נקי בקרב עמך ישראל ונכפר להם הדם <span class="verse-number">כא:ט</span> ואתה <span class="horizontal1">תבער הדם הנקי מקרבך</span> כי תעשה הישר בעיני <span class="a">יהוה</span> {ס}
+          </div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+        
+        
+    </main>
+
+    <!-- ==========================================
+         SITE FOOTER - RICH 4-SECTION VERSION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>&#1502;&#1508;&#1493;&#1514; &#1514;&#1493;&#1512;&#1492;</h3>
+                    <ul>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-genesis/">&#1489;&#1512;&#1488;&#1513;&#1497;&#1514;</a></li>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-exodus/">&#1513;&#1502;&#1493;&#1514;</a></li>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-leviticus/">&#1493;&#1497;&#1511;&#1512;&#1488;</a></li>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-numbers/">&#1489;&#1502;&#1491;&#1489;&#1512;</a></li>
+                        <li><a href="/woven-torah/language/he/hebrew_pages/hebrew-map-of-deuteronomy/">&#1491;&#1489;&#1512;&#1497;&#1501;</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>&#1492;&#1502;&#1513;&#1504;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</h3>
+                    <ul>
+                        <li><a href="/Mishnah-New/Hebrew/Text/Shishah%20Sidrei%20Mishnah.htm">&#1508;&#1493;&#1512;&#1496;&#1500; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">PDF &#1513;&#1500; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>&#1502;&#1495;&#1511;&#1512;</h3>
+                    <ul>
+                        <li><a href="https://independent.academia.edu/MosheKline" target="_blank">Academia.edu</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology</a></li>
+                        <li><a href="/woven-torah/research-articles/">&#1502;&#1488;&#1502;&#1512;&#1497;&#1501;</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>&#1511;&#1513;&#1512;</h3>
+                    <ul>
+                        <li><a href="/General/Contact.htm">&#1510;&#1493;&#1512; &#1511;&#1513;&#1512;</a></li>
+                        <li><a href="https://independent.academia.edu/MosheKline" target="_blank">Academia.edu (top 1%)</a></li>
+                        <li><a href="/">English Site</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         SITE NAV SCRIPT
+         ========================================== -->
+    <script>
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var menu = document.querySelector('.nav-menu');
+
+            // Hamburger toggle
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('is-open-menu');
+                    toggle.setAttribute('aria-expanded',
+                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
+                });
+            }
+
+            // Dropdown toggles (via <button>, not <a>)
+            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var li = btn.parentElement;
+                    var wasOpen = li.classList.contains('is-open');
+
+                    // Close all dropdowns first
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
+                        other.classList.remove('is-open');
+                        var b = other.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open this one if it wasn't already
+                    if (!wasOpen) {
+                        li.classList.add('is-open');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Click outside closes everything
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    if (menu) menu.classList.remove('is-open-menu');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                        var b = li.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
+    </script>
+
+    
+    <!-- Page-specific scripts can go here -->
+    
+</body>
+</html>
