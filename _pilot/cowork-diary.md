@@ -1228,3 +1228,30 @@ The repo is on OneDrive Files-On-Demand. Non-resident files read through the Lin
 - Method: guarded bash script — only writes a file if the bytes read are verifiably complete (</html> present, 0 NUL); post-write re-verify (new title + </html> + 0 NUL). All 27 passed post-write verification, so writes preserved full content. H1/body/meta untouched. Spot-checked genesis-unit-7-commentary, the-three-rows, documentary-hypothesis-alternative, deuteronomy-unit-10.
 
 **Next step:** Moshe review diff + commit/push + purge cache. Run the Windows PowerShell integrity sweep to get the true damaged-file list. Restore `Mishnah/Mesechet Parah.htm`. Then handle `woven-torah/full-torah-map-2/index.html` title.
+
+---
+
+### 2026-05-25 — Integrity sweep RESOLVED via git (supersedes the "unconfirmed" note above)
+
+Couldn't run PowerShell (Cowork = Linux sandbox; pwsh there would read the same OneDrive placeholder mount). Solved it with **git**: `git grep`/`git show` against HEAD read committed blobs from `.git`, bypassing OneDrive Files-On-Demand. This is the reliable sweep method for this repo.
+
+**Reliable findings (committed repo, HEAD):**
+- **NUL corruption: NONE.** The Decalogue.html and leviticus-unit-1.html both have 0 NUL + valid </html> in git. Earlier "763 NULs / 41 NULs" were OneDrive-placeholder artifacts. Fully retract those.
+- **Truncated (missing </html>): 26 tracked files.** `_vti_cnf` not tracked (0); `_backup-pre-migration` clean (0).
+  - 5 benign: 3 slideshow *fragments* (meant to be embedded in index.html — correctly have no </html>), 1-byte WP uploads index stub, 5-line Google verification file.
+  - **21 genuinely truncated — ALL PRE-EXISTING (committed truncated; NOT caused by my edits).** Proven: e.g. deuteronomy-unit-2 is 401 lines/no-</html> at HEAD; my Group-9 edit only added the title (working tree 402 = +1). Intact control hebrew-genesis-unit-1 has </html> at HEAD.
+
+**The 21 genuine truncations:**
+- 11 hebrew-deuteronomy units: 1,2,4,5,7,8,9,10,11,12,13 (units 3 & 6 are INTACT).
+- 2 English unit pages: deuteronomy-unit-2, numbers-unit-1.
+- mishnah-pdf.html (also flagged in SEO task).
+- Mishnah/Mesechet Parah.htm — EMPTY (0 lines), most severe.
+- Legacy: Beautiful Weave complete_monograph.html + pair5.html; 4 woven-torah WP static exports (full-torah-map-2, genesis-map, language-he, research-articles indexes).
+
+**Confirmed INTACT (Linux-scan false positives):** all 4 maps, data/index.html, mishnah-search.html, The Decalogue.html, leviticus-unit-1.html.
+
+**Correction to my prior message/diary:** I initially called the truncations "likely placeholder artifacts." That was right for the maps/data/mishnah-search/NUL files but WRONG for the hebrew-deut units / english units / mishnah-pdf — those are genuinely truncated (pre-existing). Git settled it.
+
+**Repair guidance (for Moshe, on Windows / via render pipeline):** per file, `git log --oneline -- "<path>"` to find a complete earlier commit → `git checkout <goodcommit> -- "<path>"`; else re-render from source (mishnah_db.json / unit source + current template); restore Mesechet Parah from backup. Re-verify with `git grep -L -i -F '</html>' HEAD -- '*.html' '*.htm' | grep -v _vti_cnf/`.
+
+Report: `integrity-sweep-2026-05-25.md` (plan folder), revised with git-based results.
