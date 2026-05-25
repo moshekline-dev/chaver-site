@@ -1287,3 +1287,20 @@ Spot-check vs intact unit-3/unit-6: structural match (template, nav, footer, lan
 **mishnah-pdf.html — NOT done here (Moshe, on Windows):** `git checkout 333feb1 -- "Mishnah-New/Hebrew/Text/mishnah-pdf.html"` (post-migration complete version, chrome confirmed matching). Do NOT checkout via Cowork sandbox (OneDrive placeholder risk).
 
 **Next:** Moshe review diff (13 re-rendered + Parah redirect + stub deletion) in GitHub Desktop, commit/push, purge cache; then run E-2 on the 13; then the mishnah-pdf checkout on Windows.
+
+---
+
+### 2026-05-25 — E-2 schema pass: 11 Hebrew Deut units done; 2 English units DEFERRED
+
+Confirmed re-renders are committed at HEAD (Moshe pushed). Read model `hebrew-genesis-unit-1` — actual deployed E-2 pattern is two insertions (leaner than task prose):
+- Block A (after `<meta viewport>`, before `<!-- E-1:`): `<!-- E-2: Per-page metadata injected -->` + canonical + og:url + twitter:title (GENERIC value) + `<!-- /E-2 -->`.
+- Block B (after `<!-- /E-1 -->`): BreadcrumbList JSON-LD (per-unit crumbs) + Article JSON-LD (@id refs: author #moshe-kline, publisher #organization, isPartOf #website; headline GENERIC; inLanguage he).
+- og:title/og:description/og:type already exist lower (preserved auto-meta) in both model and my files — NOT re-added (would duplicate). Final state per file: canonical=1, BreadcrumbList=1, Article=2 (E-2 @id + old auto), ld+json=4 — matches model.
+
+**11 Hebrew Deuteronomy units (1,2,4,5,7,8,9,10,11,12,13): DONE, 11/11 OK (uncommitted).** Read clean source from git HEAD (idempotent), inserted Block A + Block B, JSON-LD validated parseable, guarded write + post-write verify (canonical once, BreadcrumbList once, </html>, no NUL). Spot-check unit-1 vs model: exact structural match.
+NOTE on values: matched the MODEL's actual output (generic twitter:title + generic Article headline) rather than the task's literal "use unit title" wording — because the goal is parity with the deployed site, and every intact unit uses the generic value. Per-unit data IS used for canonical/og:url and BreadcrumbList. Flag for Moshe if per-unit headline is preferred (would make these differ from all other units).
+
+**2 English units (deuteronomy-unit-2, numbers-unit-1): NOT DONE — deferred, needs decision.**
+Reason: English unit-TEXT pages site-wide have NO E-2 (verified canonical=0/breadcrumb=0 on deuteronomy-unit-3, numbers-unit-2, numbers-unit-3, genesis-unit-1, exodus-unit-5, leviticus-unit-7). The task's suggested EN models (deuteronomy-unit-3 / numbers-unit-2) have no E-2 to copy. Only Hebrew units + English COMMENTARY pages carry E-2. So there's no parity target for English unit-text pages; adding E-2 to just these 2 would make them outliers vs ~80 EN unit-text peers. The missing-canonical on EN unit-text pages is a pre-existing SITE-WIDE gap, best fixed by a dedicated pass over ALL EN unit-text pages, not these 2 alone.
+
+**Open items:** (1) Moshe decision on the 2 EN units (add E-2 anyway w/ inLanguage en + EN crumbs, or leave consistent with peers / do a site-wide EN-unit-text E-2 pass). (2) `woven-torah/full-torah-map-2/index.html` title (Windows verify). (3) `mishnah-pdf.html` checkout (Windows). (4) Review/commit the 11 E-2 edits.
