@@ -1304,3 +1304,26 @@ NOTE on values: matched the MODEL's actual output (generic twitter:title + gener
 Reason: English unit-TEXT pages site-wide have NO E-2 (verified canonical=0/breadcrumb=0 on deuteronomy-unit-3, numbers-unit-2, numbers-unit-3, genesis-unit-1, exodus-unit-5, leviticus-unit-7). The task's suggested EN models (deuteronomy-unit-3 / numbers-unit-2) have no E-2 to copy. Only Hebrew units + English COMMENTARY pages carry E-2. So there's no parity target for English unit-text pages; adding E-2 to just these 2 would make them outliers vs ~80 EN unit-text peers. The missing-canonical on EN unit-text pages is a pre-existing SITE-WIDE gap, best fixed by a dedicated pass over ALL EN unit-text pages, not these 2 alone.
 
 **Open items:** (1) Moshe decision on the 2 EN units (add E-2 anyway w/ inLanguage en + EN crumbs, or leave consistent with peers / do a site-wide EN-unit-text E-2 pass). (2) `woven-torah/full-torah-map-2/index.html` title (Windows verify). (3) `mishnah-pdf.html` checkout (Windows). (4) Review/commit the 11 E-2 edits.
+
+---
+
+### 2026-05-25 — Tasks 1-3 executed (all uncommitted; large diff)
+
+**Task 1 — meta title:** `torah-weave/full-torah-map-2/index.html` — both `<title>` (prior) and `<meta name="title">` now `Torah Weave: Interactive Map of the Five Books | Chaver.com`.
+
+**Task 2 — EN E-2 schema pass (all 86 EN unit-text pages):** All 86 confirmed migrated (anchors present), 0 DWT. Two pre-existing schema variants found:
+- 47 BARE pages (Deuteronomy 13, Numbers 13, Leviticus 20, Exodus 1): got FULL E-2 — Block A (canonical + og:url + generic twitter:title) + Block B (BreadcrumbList + Article@id, inLanguage en).
+- 39 RICH pages (Genesis 19, Exodus 18, Leviticus 2): already had real per-page OG + Article(mainEntityOfPage) but lacked canonical+breadcrumb → MINIMAL top-up: canonical + BreadcrumbList only (no og:url/Article dup, preserving their richer OG).
+- Final: all 86 have canonical==1 + BreadcrumbList==1 + </html> + 0 NUL (verified). NOTE residual style diff: 47 carry generic E-2 Article + twitter:title; 39 keep their richer OG + own Article. Audit's missing-canonical resolved for all 86. (Optional future harmonization if uniform OG desired.)
+
+**Task 3 — EN nav repoint + retire broken export:**
+- `_templates/Academic-Content-EN.html`: nav href `/woven-torah/full-torah-map-2/` → `/torah-weave/full-torah-map-2/`.
+- Propagated to **271 rendered pages** carrying the baked nav (guarded git-cat-file batch read + atomic writes; old-absent/new-present/</html>/no-NUL verified per file; 0 failures). Did NOT touch legacy relative `./../…index.html` links or `/woven/` wrong-path links inside woven-torah/ (separate cleanup).
+- `sitemap.xml` line 683: loc → torah-weave; lastmod 2026-05-25.
+- `_redirects` (within first 100): added `/woven-torah/full-torah-map-2/[index.html] → /torah-weave/full-torah-map-2/ 301` transition rules.
+- `_redirects` line ~158: repointed `/woven-torah/hebrew-torah-map/index.html` → `/torah-weave/full-torah-map-2/` (was pointing at the deleted export; also note it's past pos-100 so likely inactive — move up or remove if hebrew-torah-map is dead).
+- Deleted `woven-torah/full-torah-map-2/index.html` (broken export); the transition redirect now resolves its URL.
+
+**⚠️ .git/index reads as CORRUPT in the sandbox** (object store healthy; git show/log/ls-tree/cat-file all work). Almost certainly OneDrive Files-On-Demand serving the binary index as a placeholder. Moshe: verify in GitHub Desktop on Windows; if Windows git also reports corruption, `git read-tree HEAD` rebuilds it (working-tree changes preserved). Do not rebuild from the sandbox.
+
+**WINDOWS-ONLY remaining:** (1) `git checkout 333feb1 -- "Mishnah-New/Hebrew/Text/mishnah-pdf.html"`; (2) verify/fix .git/index if needed; (3) review the LARGE uncommitted diff (271 nav + 86 E-2 + 11 Hebrew E-2 + 13 re-renders + maps + sitemap + _redirects + Parah + deletions), commit/push; (4) purge Cloudflare cache.
