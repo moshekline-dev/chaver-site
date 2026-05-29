@@ -1372,3 +1372,354 @@ Reason: English unit-TEXT pages site-wide have NO E-2 (verified canonical=0/brea
 **⚠️ Minor — cross-page title inconsistency:** about page Shmaatin title is now `מבנה פרק ג'` (chapter 3); mishnah-pdf keeps `מבנה פרקיה` (its chapters). Per task instructions (only about-page title was changed). Harmonize later if desired.
 
 **Next:** Moshe review full diff in GitHub Desktop (this merge + prior inserts), commit/push, purge cache. Did NOT commit or push (per task).
+
+
+### 2026-05-27 — Genesis Complete Commentary: Book Edition (genesis-complete-commentary-book.html)
+
+**What was done:**
+- Built a print-ready book edition from `genesis-complete-commentary.html` as a NEW file `genesis-complete-commentary-book.html` (deployed page left untouched — per Moshe's instruction to not overwrite live files in place).
+- Inserted front matter (half-title, title page, copyright page with JBL/JHS/SBL citations) immediately after `<main class="content-wrapper">`.
+- Inserted the 19 Genesis unit TEXTS (the woven scripture-table matrices) before each `id="genesis-unit-N-commentary"` div, wrapped in `<div class="book-section book-unit-text" id="genesis-unit-N-text">` + trailing `<hr class="section-divider">`.
+- Source for unit texts: LOCAL repo files `torah-weave/Genesis/genesis-unit-N/genesis-unit-N.html` (article inner content), not live fetch — Moshe's choice. Each unit's `<h1>` was used for its TOC "— Text" entry.
+- Added 19 new TOC `<li>` "… — Text" entries, each immediately before its commentary `<li>`.
+- Added a `<style id="print-styles">` `@media print` block after the main.css `<link>`: 8.5x11 @page, KDP inside/outside margins, running headers (Moshe Kline / The Structure of Genesis), page breaks per section/unit-text, front-matter centering, print-color-adjust: exact.
+
+**Files modified:**
+- NEW: `torah-weave/Genesis/genesis-complete-commentary-book.html` (1,260,719 bytes)
+- `_pilot/cowork-diary.md` (this entry)
+- NOT modified: `genesis-complete-commentary.html`, `main.css`, all 19 unit files, any Exodus/Leviticus/Numbers/Deuteronomy files.
+
+**Decisions locked:**
+- Book edition is a separate file; the live web commentary page is unchanged.
+- Unit-file `<h1>` titles drive the "— Text" TOC entries; these differ from the commentary TOC labels (e.g. unit 1 text = "The Creation Account" vs commentary "The Creation Paradigm"). Left as-is intentionally.
+
+**Proven patterns:**
+- Assembly via Python with `assert html.count(anchor)==1` on every insertion anchor, CSS+front-matter inserted before per-unit blocks, then atomic write (temp + fsync + read-back compare + os.replace). No Edit tool used.
+- Article inner extracted with `<article\b[^>]*>(.*)</article>` DOTALL (exactly one article per unit file).
+
+**What failed / flagged:**
+- Spec Step-4 check #7 "byte count must exceed 1.5MB" does NOT pass: actual file is 1.26MB. This is an overestimate in the spec, not missing content — the +379KB delta over the base exactly equals the sum of the 19 extracted unit-text bodies. All other Step-4 checks pass: ends with </html>; 19 `-text` divs; 19 `-commentary` divs; front-matter block present; print-styles present; TOC = 38 unit list items. Structure verified balanced (div/section/table/article all balanced; html.parser accepts; 0 NUL bytes).
+- The front matter / print CSS introduce new class names (book-front-matter, page-half-title, title-main, etc.) defined only inside the print @media block — these are page-specific and unstyled on screen (acceptable for a print artifact; they are NOT in main.css and main.css was not modified).
+
+**Current state:**
+- Book file written to repo working tree, NOT committed/pushed (per task). Deployed page and main.css unchanged.
+
+**Next step:**
+- Moshe: review `genesis-complete-commentary-book.html` (print preview in browser to check KDP layout, page breaks, running headers). If the screen rendering of front matter needs styling outside print, decide whether to add screen CSS. Then commit/push if it should live on the site, or keep local for KDP PDF generation.
+
+
+### 2026-05-27 — Genesis book REDO: real typeset PDF + DOCX (superseding the HTML "book")
+
+**What was done:**
+- Moshe rejected the earlier `genesis-complete-commentary-book.html` ("instead of making a book, you made a collection of web files"). Rebuilt as an actual typeset book in two real formats.
+- Pipeline (`outputs/build_realbook.py`, BeautifulSoup): for each of 19 units, pulled the commentary block from `genesis-complete-commentary.html` and the woven matrices from `genesis-unit-N/genesis-unit-N.html`; STRIPPED web cruft (schema itemscope/itemprop, `.citation-box`, `.commentary-link`, all `<a href>`, stray ids); demoted commentary h2→h3 / h3→h4; assembled book HTML with front matter, auto-generated TOC, and 19 interleaved chapters (chapter title = commentary header with verse range; "The Woven Text" then "Commentary").
+- Book CSS uses CSS Paged Media: 8.5x11 @page, KDP inside-larger margins, running head from `string-set: runhead` (chapter title), bottom-center page numbers (suppressed on front matter), TOC leader dots + `target-counter(attr(href url), page)`. Matrix/marker colors taken VERBATIM from main.css (col-left #7a6650 / col-middle #c0ad8b / col-right #fdebd0; markers #2563eb/#d97706/#db2777/#7c3aed/#c026d3/#16a34a). main.css NOT modified.
+- Rendered PDF via WeasyPrint 68.1 → 226 pages, working TOC page numbers (5,16,29…213), running heads, colored woven tables. Verified by rendering pages to PNG and viewing.
+- Produced editable DOCX via LibreOffice headless (genesis-book.html → docx): 1,505 paragraphs, 93 tables, headings preserved, inline marker colors preserved (92 colored runs in tables, e.g. DB2777 closure, 7C3AED ciasm). Commentary matrix-table shading preserved; the woven-table HEADER gradient backgrounds did NOT survive LO import (cosmetic only — labels 1A/1B intact). PDF carries full color fidelity.
+
+**Files delivered (repo working tree, NOT committed):**
+- `torah-weave/Genesis/The-Structure-of-Genesis-book.pdf` (226pp, ~994 KB) — print-ready KDP interior
+- `torah-weave/Genesis/The-Structure-of-Genesis-book.docx` (~280 KB) — editable manuscript
+- `torah-weave/Genesis/The-Structure-of-Genesis-book-source.html` — the cleaned book HTML the PDF was rendered from
+
+**Decisions locked:**
+- A "book" deliverable = real typeset PDF/DOCX from a proper engine (WeasyPrint for paged PDF; LibreOffice for editable DOCX), NEVER HTML-with-@media-print. See memory feedback `book-means-real-typeset-document`.
+- Strip web chrome from site source before placing into a book.
+
+**Superseded:**
+- `genesis-complete-commentary-book.html` (the 2026-05-27 first attempt) is obsolete — left in place, not deleted without permission. Candidate for removal.
+
+**Current state:**
+- PDF + DOCX in working tree, not committed. Deployed page + main.css unchanged.
+
+**Next step:**
+- Moshe: open the PDF (print preview) and DOCX. Decide: KDP front-matter roman numbering, half-title/title recto placement, and whether the DOCX woven-table header colors need restoring (would require a python-docx shading pass). Then file as KDP source.
+
+
+### 2026-05-27 — Genesis book PDF v2: four print fixes
+
+**What was done (from a Cowork task spec):**
+- FIX 1 (blank pages): removed table break-before; set `table{break-before:avoid;break-inside:auto}`, `tr{break-inside:avoid}`. Diagnosed real cause: tall woven rows with break-inside:avoid stranded chapter titles on near-blank pages (units 7,9,10). Added `.scripture-table tr/td{break-inside:auto}` + `thead{display:table-header-group}` so tall woven rows split (headers repeat) and fill the opening page. Result: 0 blank content pages (only half-title, title, intentional blank-verso are sparse).
+- FIX 2 (3-col overflow): detected all 9 tables containing `th.col-middle` (ch-4 x2, ch-18 x5 [6-col], ch-19 x2), wrapped each in `.three-col-table-wrapper` with `@page landscape-page` (11x8.5). They now fit. Side effect: ch-4/18/19 open on a title-only portrait page before the landscape table.
+- FIX 3 (roman front / arabic body): WeasyPrint does NOT honor mid-document `counter-reset:page` in @page margin boxes (body footers kept counting from front matter). Solved by rendering TWO documents and merging with pypdf: front matter (roman i-v) + body (arabic, counter naturally starts at 1). TOC page numbers injected as literals from the body doc's anchor pages (two-pass) so TOC matches footers exactly (Unit1=1, Unit2=12 ... Unit19=203).
+- FIX 4 (blank verso): `.blank-verso-page` div between copyright and TOC (merged page 4, empty, unnumbered).
+
+**Verification (all spec checks pass):** no table has break-before:always; 9 col-middle tables wrapped; front uses page:front (roman); blank-verso present; renders without error; 1,128,266 bytes (>900KB); 222 pages (>200). Footers verified: copyright iii, TOC v, Unit1 page 1, Unit2 page 12.
+
+**Files (repo working tree, NOT committed):**
+- `torah-weave/Genesis/The-Structure-of-Genesis-book-v2.pdf` (222pp, ~1.13 MB)
+
+**Open item:** units 4,18,19 have a sparse title-only page before their landscape woven table (consequence of the landscape requirement). The 3-column tables (ch-4, ch-19) could instead fit PORTRAIT at 33% column width (no landscape, no title-only page); only ch-18's 6-column tables truly need landscape. Offered to Moshe as a one-line alternative.
+
+**Tooling proven:** WeasyPrint 68.1 two-document + pypdf merge is the reliable pattern for roman-front/arabic-body in this environment.
+
+
+### 2026-05-27 — Genesis book PDF v2b: landscape chapter OPENERS for 3-col units
+
+**What was done:** Per Moshe, units whose woven text is wide (col-middle: 4, 18, 19) now OPEN in landscape — the chapter title + "The Woven Text" label + the woven tables all sit on the landscape page together, so there is no near-empty portrait title page before the table. Commentary reverts to portrait via an inner `.commentary-portrait { page: body }` wrapper. Implemented by tagging those chapters `landscape-chapter` with `.chapter.landscape-chapter { page: landscape-page }` (replaced the earlier per-table `.three-col-table-wrapper`).
+
+**Result:** 215 pages (was 222). Near-blank CONTENT pages = 0 (only half-title, title, intentional blank-verso are sparse). Units 4/18/19 openers now carry 1378/4420/3523 chars. Numbering still consistent: copyright iii, TOC v, Unit1=1 ... Unit19=200; TOC matches footers. File ~1.12 MB.
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-book-v2.pdf` (overwritten, NOT committed).
+
+
+### 2026-05-27 — Genesis book PDF v2c: strip link indicators + column-count landscape rule
+
+**Two fixes from Moshe ("link indicators left in"; "unit 4 still breaks"):**
+1. STRIPPED ALL `<a>` from the body — the commentary carried 283 cross-reference links (e.g. "Unit 7" -> /torah-weave/...). Now `a.replace_with(get_text())` on every commentary + text link, plus CSS `a{color:inherit;text-decoration:none}`. Body now has 0 `<a>`; cross-refs are plain text. (A book, not a web page.)
+2. LANDSCAPE now decided by ACTUAL column count (th count), not the unreliable `col-middle` class. Per-unit max cols: most=2; unit4=3, unit19=3; unit3=4, unit15=4, unit18=6. Rule: cols>=4 -> landscape chapter (3,15,18); cols<=3 -> portrait. 3-col tables get `cols-3` width 33.33% so they fit portrait without overflow. This fixed unit 4 (was a half-empty landscape page) — it now flows fully in portrait (title+tables+commentary on one page). It ALSO caught units 3 & 15, whose 4-col tables had been silently OVERFLOWING the right margin in portrait the whole time.
+
+**Result:** 213 pages, ~1.02 MB. Near-blank CONTENT pages = 0 (only half-title, title, blank-verso). Landscape openers (3,15,18) are full (3921/4433/4420 chars). Numbering consistent: copyright iii, TOC v, Unit1=1 ... Unit19=199; TOC matches footers.
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-book-v2.pdf` (overwritten, NOT committed).
+
+
+### 2026-05-27 — Genesis book PDF v2d: fix column counter (units 3 & 15 were wrongly landscape)
+
+**Bug Moshe caught ("why is unit 3 landscape"):** my landscape rule counted columns as total `<thead> <th>` — but units 3 and 15 have a multi-row thead (e.g. row0=1A/1B, row1=2A/2B for a 6x2 / stacked matrix), so 2+2 read as "4 columns" and they were wrongly sent to landscape. They are 2-column units.
+
+**Fix:** count columns as MAX `<th|td>` in a SINGLE row (`max(len(tr.cells) for tr in table.tr)`). Verified per-unit single-row max: all units are 2-col except unit4=3, unit19=3, unit18=4. So ONLY unit 18 (4-col) is landscape; everything else portrait (3-col tables sit at 33% width). Units 3, 4, 15, 19 now portrait and full; only unit 18 landscape.
+
+**Result:** 213 pages. Landscape pages = unit 18 only (188-194). Near-blank content pages = 0. Numbering consistent (copyright iii, TOC v, Unit1=1...). 0 `<a>` in body. TOC injected (no @@), matches footers (1,12,25,47,...).
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-book-v2.pdf` (overwritten, NOT committed).
+
+
+### 2026-05-27 — Genesis book PDF v2e: unit 18 header-mislabel + unit 19 landscape
+
+**Two fixes from Moshe:**
+1. "Unit 18 continuation of row 2 mislabeled 1": unit 18's first table packs two matrix rows with two `<thead>` groups (1A/1B/1C then 2A/2B/2C). CSS `thead{display:table-header-group}` made the FIRST header REPEAT on every continuation page, so a page showing row-2 content carried a "1" header. Fixed: `.scripture-table thead{display:table-row-group}` — headers no longer repeat; each label stays inline with its row. Verified landscape label order now 1A/1B/1C,2A.. then 3A..6A with no stray repeat.
+2. "Unit 19 text should be landscape": added 19 to the explicit landscape set. Landscape = {18,19}; all other units portrait (unit 4 stays portrait per earlier). Decision is now an EXPLICIT per-unit set, not column-count auto.
+3. Also stripped malformed all-empty table rows (unit 18 had 1 phantom 4-cell empty row — the thing that had wrongly inflated its column count to 4).
+
+**Result:** 210 pages, ~1.02 MB. Landscape pages = unit 18 (185-190 abs) + unit 19 (200-203 abs). Near-blank content pages = 0. Numbering consistent (copyright iii, TOC v, Unit1=1...). 0 `<a>` in body. Openers full (u18 4420, u19 3523 chars).
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-book-v2.pdf` (overwritten, NOT committed).
+
+
+### 2026-05-27 — Genesis COMPLETE edition PDF (intro sections + 19 units)
+
+**What:** Built The-Structure-of-Genesis-complete.pdf from the v2 workflow + 6 introductory sections pulled from the LOCAL genesis-complete-commentary.html (ids overview, units-of-genesis, the-map-of-genesis, the-three-rows, architecture-and-meaning-in-genesis, Akedah-divine-names-essay). Each intro section -> a chapter (first h2 becomes chapter-title; inner h2->h3 etc.). Stripped 885 `<a>` links from intro + all from units. Front matter = Complete Edition title (added .title-edition) + TWO blank versos (after title, after copyright). Flat 25-entry TOC: 6 intro labels (exact spec text) + 19 units WITHOUT verse range. Two-document merge (roman front / arabic body) with generic @@anchor@@ TOC injection.
+
+**Wide tables:** intro sections carry wide structural matrices (overview 8-col master grid, Part A 7-col, Part B map 5-col, Part D 5-col, Akedah 4-col). 14 tables with >=4 cols wrapped in `.wide-wrap{page:landscape-page}` so each sits on its own landscape page while surrounding prose stays portrait. Verified the 8-col grid and the 5-col map fit within landscape margins. Units 18,19 stay landscape-chapter; others portrait.
+
+**Verification:** 317 pages (>300 OK); valid %%EOF trailer; TOC=25 entries; 6/6 intro + 19/19 units present; numbering roman front (TOC=vi) + arabic body from 1 (TOC page nums match); near-blank pages = only half-title + 2 intentional blank versos; 0 `<a>` in body. ONE miss vs spec: file = 1.375 MB, under the spec's >1.5 MB estimate (same overestimate pattern as v1/v2; content is complete). Intro sections use break-before:page (spec allowed "or page-break-before:always") rather than recto, to avoid blank pages per Moshe's standing preference.
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-complete.pdf` (NOT committed). Builder: outputs/build_complete.py + render_complete.py.
+
+
+### 2026-05-27 — Complete edition v2: intro grids shrunk to PORTRAIT (no landscape)
+
+**Moshe:** intro structural grids should be portrait-squeezed, not landscape; the landscape attempt (a) orphaned the overview "Color Key" onto the next page, and (b) `table-layout:fixed;width:100%` collapsed the colspan tables (esp. the 19-units/50-chapters "final-table") into a vertical list of numbers.
+
+**Fix:** dropped the `.wide-wrap` landscape treatment for intro tables entirely. Wide (>=4 col) structural tables now get class `.wide-table` = `table-layout:auto; width:auto; max-width:100%; font-size:6.5pt; padding:2pt 3pt; break-inside:avoid`. Auto layout sizes columns to content (cells are short -> plenty of slack) so they fit portrait, render correctly (colspans intact), and each table keeps its key/caption in normal flow. Verified: overview 8-col master grid + Color Key on one portrait page; Part B 3x7 map; the 19-units chapter table all render as proper grids. Woven UNIT text tables (units 18,19) remain landscape (text-heavy) — unchanged.
+
+**Result:** 298 pages (down from 316 — the shrink removed the dedicated landscape table pages; now UNDER the spec's >300 estimate, but all 6 intro + 19 units present and complete). Numbering consistent (copyright iv, TOC vi, body 1). Landscape pages = units 18,19 only. Near-blank = half-title + 2 blank versos only. 0 `<a>` in body. ~1.36 MB.
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-complete.pdf` (overwritten, NOT committed).
+
+
+### 2026-05-27 — Complete edition v3: 50-chapter discovery grids restored
+
+**Moshe:** "the 50 chapter grids are still empty and they are very important." Cause: Part A has 4 `.chapter-grid` divs (50 `.chapter-box` cells each: ch-identified/ch-unknown/ch-marker) built as CSS `display:grid` + `padding-bottom:100%` squares + absolutely-positioned number spans — WeasyPrint rendered them blank.
+
+**Fix:** in the builder, convert each `.chapter-grid` div into a real 10x5 `<table class="chapter-grid-table">`, carrying each box's state classes + number. Book CSS (colors verbatim from main.css): ch-identified #4CAF50 green, ch-unknown #FFB74D orange, ch-marker dark-blue #1a237e thick border + a "↓" toledot marker via ::before (literal glyph in DejaVu Sans — a `\2193` CSS escape had rendered as stray "93"). All 4 grids now show the orange->green discovery progression with toledot markers. Excluded chapter-grid-tables from the generic wide-table shrink.
+
+**Result:** 295 pages, ~1.39 MB. All grids render; numbering consistent (copyright iv, TOC vi, body 1); landscape = units 18,19 only; near-blank = half-title + 2 blank versos.
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-complete.pdf` (overwritten, NOT committed).
+
+
+### 2026-05-27 — Complete edition v4: figures (full-width/centered) + List of Figures
+
+**Moshe:** intro tables were over-squeezed (6.5pt); make them full width unless that wastes space, center non-full-width ones, don't shrink fonts; number all analytical tables as running Figures with short captions; add a List of Figures to front matter.
+
+**Done:**
+- `.wide-table` (>=4 col) now `width:100%; font-size:9pt` (full width, normal font, no shrink) — auto layout so colspan grids render correctly. Narrow tables (<4 col) stay auto width and are centered (`figure.fig{text-align:center} figure.fig table{margin:auto}`).
+- Wrapped all 53 non-woven analytical tables (intro structural tables + chapter-grids + every per-unit commentary matrix) in `<figure class="fig" id="fig-N">` with `<figcaption>Figure N. {caption}</figcaption>`. Captions derived from each table's title line or nearest heading (came out clean: "Figure 1. Genesis: 3-Row x 7-Column Structure", "Figure 2. 50-CHAPTER GRID — Stage 1: Explicit Markers", etc.). Woven scripture-tables excluded (primary text).
+- Added a **List of Figures** to front matter (after the TOC) — 53 entries with leader dots + page numbers via the existing two-pass @@fig-N@@ anchor injection. Front matter now 8 roman pages (i–viii); LoF spans vii–viii.
+
+**Result:** 301 pages, ~1.41 MB. Numbering consistent (copyright iv, TOC vi, LoF vii, body 1). Figures render full-width (e.g. Fig 1 master grid) or centered (e.g. Fig 30) with captions. 0 `<a>` in body. Landscape = units 18,19 only.
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-complete.pdf` (overwritten, NOT committed). Builder: outputs/build_complete.py + render_complete.py.
+
+
+### 2026-05-27 — Complete edition v5: Hebrew check + KDP mirrored margins
+
+**Hebrew verification (Moshe asked "is all hebrew translated"):** Hebrew RENDERS correctly in the PDF (Liberation Serif covers Hebrew incl. nikkud/RTL — confirmed via isolated font test; DejaVu Serif does NOT, but it's the fallback). Of 248 Hebrew-bearing blocks, 239 are glossed/transliterated inline (e.g. "bara (בָּרָא, created)", "YHWH (יְהוָה)"). ~5 instances are UNTRANSLATED block Hebrew: the recurring phrase התורה כדרכה (×4, in Parts A/B/C/D), and three block scripture verses — Gen 46:2 + Gen 47:27 + Gen 49:18 (לִישׁוּעָתְךָ קִוִּיתִי יְהוָה) in Part C "The Three Rows" and Unit 19. Awaiting Moshe's go-ahead to add English for these (his content).
+
+**KDP margins (Moshe asked re facing pages):** Previously fixed L/R (NOT mirrored). Now mirrored for an 8.5x11 paperback: inside/gutter 0.875in (KDP 301-500pp band), outside 0.5in, top/bottom 0.85in, via @page name:left/:right. Verified body recto inside-left=0.875/outside-right=0.5, verso mirrored. Front matter = 8 pages (even) so recto/verso parity survives the front+body PDF merge.
+
+**KDP BLOCKER flagged:** units 18 & 19 are rendered as 11x8.5 LANDSCAPE pages — a different trim than the 8.5x11 body. KDP requires a single uniform trim for the whole interior, so these will be rejected. Resolution needed: rotate those wide woven tables 90 within 8.5x11 portrait pages, or shrink them to portrait. Pending Moshe's decision.
+
+**Result:** 297 pages, ~1.41 MB. File overwritten, NOT committed.
+
+
+### 2026-05-27 — Complete edition v6: strip website footers + re-paginate TOC/Figures
+
+**Moshe:** "you left website footer material in the commentary sections" + "after you remove that redo the pagination for TOC and Figures." Found: a `<footer>` block ("© 2026 Chaver.com. The Woven Texts Project.") at the end of intro Parts A,B,C,D — pulled in when extracting full intro-section inner HTML. (The unit "→ Read the structured text of Unit N" nav links were already excluded — they sit outside the commentary-section elements I extract; 0 in body.)
+
+**Fix:** in intro extraction, `el.find_all(["footer","nav"]) -> decompose()` + remove stray short site-footer paragraphs. Body now has 0 footer/nav. Re-ran the two-pass render, which automatically recomputed TOC and List-of-Figures page numbers from the new layout. Verified: TOC matches actual (Unit1=84,5=139,10=186,15=230,19=278); LoF matches actual (Fig1=2,8=17,30=142,53=283). Numbering consistent (copyright iv, TOC vi, LoF vii, body 1).
+
+**Result:** 296 pages, ~1.40 MB. Mirrored KDP margins retained. Still-open KDP item: units 18,19 landscape pages are 11x8.5 (non-uniform trim) — awaiting Moshe's rotate-vs-shrink decision. Untranslated Hebrew (5 spots) still awaiting go-ahead.
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-complete.pdf` (overwritten, NOT committed).
+
+
+### 2026-05-27 — Complete edition v7: uniform portrait trim + Hebrew translations
+
+**Moshe:** "shrink landscape to fit portrait cut; התורה כדרכה is The Woven Torah; translate the others."
+- Units 18 & 19 now render PORTRAIT (removed the landscape-chapter special case). Their 3-col woven tables fit via the cols-3 33% width rule. Result: ZERO landscape pages — single uniform 8.5x11 trim (KDP-compliant; resolves the trim blocker).
+- התורה כדרכה: discovered it was a link in a leftover website NAV MENU (siblings: Torah Portal, Mishnah Portal, Structured Torah PDF, ...). It had already been removed with the footer/nav strip in v6 (0 occurrences). So it's cut as chrome rather than translated; if Moshe wants "The Woven Torah" as actual text somewhere, add on request.
+- Translated the 3 untranslated scripture block-quotes by appending an italic English gloss (.vtr) under the Hebrew: Gen 46:2-4, Gen 47:27 (Part C), Gen 49:18 (Part C + Unit 19). Matching is nikkud-insensitive (strip U+0591-05C7, match base consonants) and block-based, so it's robust to vowel-point variants. Translations follow Moshe's conventions (Elohim/El, YHWH, "deliverance" not "salvation"). 4 glosses inserted; the already-glossed inline Gen 47:27 in Unit 19 was left as-is.
+
+**Result:** 295 pages, ~1.40 MB, uniform 8.5x11, mirrored KDP margins. Two-pass re-paginated TOC + List of Figures. Numbering consistent (copyright iv, TOC vi, LoF vii, body 1). No website chrome, no untranslated Hebrew remaining.
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-complete.pdf` (overwritten, NOT committed).
+
+
+### 2026-05-27 — Complete edition v8: fix table edge-overflow (cut safety) + orphaned headers
+
+**Landscape pages:** there are none — units 18/19 were converted to portrait (v7), so the whole book is uniform 8.5x11. No bleed is needed (no edge-to-edge/full-bleed elements; standard no-bleed interior).
+
+**Cut/bleed bug found & fixed:** the units-18/19 woven 3-col tables were rendering ~0.7in WIDER than the content box, putting ink within 0.01-0.10in of the right trim (would be cut). Cause: `.scripture-table.cols-3 td{width:33.33%}` with default content-box sizing — padding added on top of the 33.33%, so the fixed-layout table exceeded 100%. Fix: `.scripture-table th,td{box-sizing:border-box}`. After fix, measured side margins ≥0.58in across master grid, 50-chapter grids, and unit pages (KDP safety is 0.25in). 
+
+**Orphaned headers (Moshe):** table header rows could strand at a page bottom (thead is display:table-row-group to avoid the unit-18 mislabel, so it didn't auto-stay with its body). Fix: `break-after:avoid; page-break-after:avoid` on `thead`/header rows for scripture-table and matrix-table (and generic `table thead`). Scan for orphaned header rows now returns 0.
+
+**Result:** 300 pages, ~1.41 MB, uniform 8.5x11, mirrored KDP margins (gutter 0.875/outside 0.5), all content ≥0.5in from trim, no orphaned headers, TOC+LoF re-paginated, numbering consistent (copyright iv/TOC vi/LoF vii/body 1).
+
+**File:** `torah-weave/Genesis/The-Structure-of-Genesis-complete.pdf` (overwritten, NOT committed).
+
+
+### 2026-05-27 — title text: drop "Complete"
+
+Per Moshe: subtitle "A Complete Literary Commentary" -> "A Literary Commentary" (title page + copyright page); removed the "Complete Edition" line from the title page. Verified 0 "Complete" on title/copyright pages. 300 pages, pagination unchanged. File overwritten, NOT committed. (Filename still ...-complete.pdf; not renamed unless asked.)
+
+
+### 2026-05-27 — fix unit 19 overflow ("a mess") + TOC verse ranges + safe orphan-header fix
+
+**Unit 19 "mess":** its woven cells carried hardcoded inline style="width:337px/300px" from the source site HTML, which overrode cols-3 33% and pushed the table ~0.4in past the right trim (3rd column cut). Fix: strip ALL inline style from woven-table elements during extraction -> cols-N controls width. Unit 19 opener now L=0.59 R=1.12in (was R=0.01). Applied to all woven tables.
+
+**TOC:** restored chapter/verse range on unit entries (use full title incl. "(Genesis X:Y–A:B)") per Moshe; intro sections unchanged.
+
+**Orphaned headers (WeasyPrint-safe):** break-after/​before:avoid on table headers crashed WeasyPrint (assert page_is_empty) once tables were relaid out. Replaced with header REPEAT: `.scripture-table thead{display:table-header-group}`. To avoid the old multi-thead repeat-mislabel, SPLIT the 5 tables that had >1 <thead> (ch-3 x3, ch-15, ch-18) into single-thead tables (split_multi_thead). Result: 0 orphaned headers, no mislabel, renders clean.
+
+**Result:** 302 pages, ~1.42 MB, uniform 8.5x11, mirrored KDP margins, all content ≥0.5in from trim, TOC+LoF re-paginated, numbering consistent. File overwritten, NOT committed.
+
+
+### 2026-05-27 — fix Unit 9 range typo (22:24 -> 22:19)
+
+Moshe: Unit 9 heading/TOC showed "(Genesis 20:1–22:24)" but Unit 10 begins at 22:20, so Unit 9 ends at 22:19. Source commentary title (and unit-text meta) had 22:24, though the woven text actually ends at 22:19 ("…Abraham dwelt at Beer-sheba", 22:19) and the units table already read 20:1-22:19. Build-level correction: title.replace("22:24","22:19") for n==9 (fixes both chapter heading and TOC; deployed repo source untouched). Verified TOC now "(Genesis 20:1–22:19)"; no 22:24 on heading/TOC. Unit 10's 22:24 left intact (Nahor genealogy 22:20-24 correctly belongs to Unit 10). 302 pages. File overwritten, NOT committed.
+
+
+### 2026-05-27 — KDP layout draft: passed with no comments
+
+Moshe ran the v8 PDF (`torah-weave/Genesis/The-Structure-of-Genesis-complete.pdf`, 302 pp, uniform 8.5x11, mirrored gutter 0.875/outside 0.5, top/bottom 0.85, no-bleed interior) through KDP's layout preview. **No comments returned** — the setup passed KDP's automated trim/gutter/safe-area checks. Book is print-ready as-is.
+
+
+### 2026-05-29 — Add asitwaswritten.org link (EN footer site-wide + Torah-pdf inline callout)
+
+**What was done:**
+1. **EN template** — added `<li><a href="https://asitwaswritten.org/">As It Was Written &mdash; a primer</a></li>` as the last item in the footer's "Full Texts" `<ul>` (line 339 of `_templates/Academic-Content-EN.html`). HE template untouched (0 occurrences in `_templates/Academic-Content-HE.html`).
+2. **Bulk propagation** — added the same `<li>` to every rendered file carrying the baked EN footer. Scope = 304 live files (matched anchor: `<li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah PDF</a></li>`). `_backup-pre-migration/` excluded. Each file edited via atomic write (temp + fsync + os.replace), post-write verify (`</html>` end, no NUL, asitwaswritten.org present). Idempotent: skip if asitwaswritten.org already present (0 skips — none had it).
+3. **Torah-pdf callout** — inserted the `<!-- aiww-callout v1 -->` block immediately after the hero `</section>` (line 483, inside `<main class="content-wrapper">`) in `Torah-New/English/Text/Torah-pdf.html`. Uses existing local class `.feature-card` (defined in that page's inline `<style>` block) — no new CSS, no inline styles, no color tokens. Body text intentionally says "Bible" (lay-facing doorway), not "Torah".
+
+**Two multi-footer files (special-case):** `torah-weave/Genesis/genesis-complete-commentary.html` and `...-book.html` each contain 5 copies of `<footer class="site-footer">` (constructed by concatenating multiple page bodies). Edited ALL 5 occurrences per file, preserving each occurrence's leading whitespace — keeps the page internally consistent.
+
+**Files modified (uncommitted, working tree):**
+- `_templates/Academic-Content-EN.html` (1 file)
+- 304 rendered live `.html`/`.htm` files (includes `Torah-New/English/Text/Torah-pdf.html` with BOTH the footer link AND the callout). Distribution by tree:
+  - root-level (`/index.html`, `/404.html`, `/about-Moshe-Kline.html`, `/hebrew index.html`) and `/General/*`
+  - `/torah-weave/**`
+  - `/Torah-New/English/**`
+  - `/Mishnah-New/English/**`
+  - `/Mishnah-New/Hebrew/**` — 78 files that are EN-template pages living inside the Hebrew tree (`<html lang="en">`, English `<h4>Full Texts</h4>` footer). Examples: `mishnah-pdf.html`, `mishnah-data.html`, `mishnah-search.html`, every `Pirkei Masechet *.htm` tractate-cover page. Hebrew-template chapter pages (`Masechet Y Perek N.htm`, ~525 files) NOT touched — they use the HE template.
+- `_pilot/cowork-diary.md` — this entry
+
+**NOT modified:** `_templates/Academic-Content-HE.html`, all Hebrew-template chapter pages, `main.css`, `_redirects`, `sitemap.xml`. No new CSS, no inline styles, no color tokens, no JS — both links are static HTML in source.
+
+**Verification (post-write, all 304 live + 2 backups untouched):**
+- Total live files with `asitwaswritten.org`: 304 (expected 304)
+- `_backup-pre-migration/` files with the string: 0 (2 backup files accidentally touched mid-run were restored from `git show HEAD:` and re-written via atomic write; verified absent)
+- All 304 end with `</html>`: yes
+- All 304 contain no NUL bytes: yes
+- HE template untouched: confirmed (0 matches)
+- Torah-pdf.html: both the footer `<li>` (line 705) AND the callout (lines 484-486) present; callout sits immediately after hero `</section>` at line 483, before the `download-hero` div
+- `feature-card` reused from Torah-pdf's existing inline `<style>` (lines 197-199); not added to `main.css`
+
+**Decisions locked:**
+- Backup directory exclusion: any future bulk edit MUST exclude `_backup-pre-migration/` (a `find . -path './_backup-pre-migration/*' -prune -o ... -print` pattern, or post-filter on `./_backup-pre-migration/` prefix). The first run missed this — 2 backup files were touched and had to be restored from HEAD.
+- Multi-footer files (`genesis-complete-commentary*.html`): edit ALL footer-anchor occurrences (5 each), preserving per-line indentation, not just the last visible one. Keeps embedded page bodies consistent with their outer-page footer.
+- Footer `<li>` order: the new link sits as the LAST item in "Full Texts" (after "The Structured Mishnah PDF"), matching the spec's "last `<li>`" instruction.
+- Callout placement: outside the hero `<section>` but inside `<main class="content-wrapper">`, before `download-hero` — keeps the hero visually clean and gives the callout its own block.
+
+**What failed and why:**
+- First run reported "errors: 775" — these were `_backup-pre-migration/` files where the strict footer anchor matched 0 or 5 times. The 0-count backups skipped harmlessly, but 2 backups (`_backup-pre-migration/index.html` and `_backup-pre-migration/Torah-New/English/Text/Torah-pdf.html`) had the exact 1-match anchor and were edited along with their live siblings. Restored from `git show HEAD:` blob (couldn't `git checkout` because `.git/index.lock` is the recurring OneDrive permission issue and the sandbox cannot remove it).
+- `.git/index.lock` "Operation not permitted" surfaced again during `git checkout` — same OneDrive Files-On-Demand pattern noted in the 2026-05-25 entry. Worked around with `git show` (object-store read) + atomic write.
+
+**Current state:**
+- All edits in working tree, NOT committed. Moshe to review in GitHub Desktop, commit + push, purge Cloudflare cache.
+- `.git/index.lock` still present from the failed checkout — Windows GitHub Desktop should be able to clear it (or simply delete the file in Explorer); not blocking the edits, but blocks further git operations from the sandbox.
+
+**Next step:**
+- Moshe: review diff in GitHub Desktop. Expected: ~306 modified files (304 live + EN template + this diary entry), zero new files. Spot-check a few — root `/index.html`, `/about-Moshe-Kline.html`, `/Torah-New/English/Text/Torah-pdf.html` (both edits), one tractate cover page (e.g. `Mishnah-New/Hebrew/Text/Seder Kodashim/Masechet Kinnim/Pirkei Masechet Kinnim.htm`).
+- Confirm `_backup-pre-migration/` shows zero modifications (the `git show HEAD:` + atomic write should leave them byte-identical to HEAD).
+- Clear `.git/index.lock` (delete in Explorer) before next push.
+- Commit + push + purge Cloudflare cache.
+
+
+### 2026-05-29 — Strip 4 embedded footers from genesis-complete-commentary.html
+
+**Context:** Earlier today's bulk footer-link insertion added the new `<li>` to all 5 `<footer class="site-footer">` blocks in `torah-weave/Genesis/genesis-complete-commentary.html` (4 were stale embedded footers from intro sections that were concatenated in when the combined commentary page was originally built; 1 was the real outer page footer). Moshe asked for the 4 stale embedded footers to be removed.
+
+**What was done:**
+- Removed the 4 embedded `<footer class="site-footer">...</footer>` blocks at the end of each intro-part body (was at lines 1302, 1632, 1911, 2264). Each block was ~2,686 bytes; total removed ~10,800 bytes including preceding newlines.
+- Kept the outer page footer (now at line ~6087, was line ~6275). This is the visible site footer with the new `https://asitwaswritten.org/` link.
+- Atomic write (temp + fsync + os.replace), post-write reverify.
+
+**Files modified:**
+- `torah-weave/Genesis/genesis-complete-commentary.html` (881,767 -> 870,967 bytes; -10,800 bytes)
+- `_pilot/cowork-diary.md` (this entry)
+
+**Verification:**
+- `<footer class="site-footer">` count: 5 -> 1
+- `</footer>` count: 5 -> 1
+- `asitwaswritten.org` count: 5 -> 1 (only the outer-footer link remains, which is what users actually see)
+- Ends with `</html>`: yes
+- No NUL bytes
+- Outer `<header class="site-header">` count: 1 (unchanged)
+- Outer `<main class="content-wrapper">` count: 1 (unchanged)
+
+**NOT modified (left intentionally per literal request 'footer sections'):**
+- The 4 embedded `<header class="site-header">` chrome blocks that came symmetric with the embedded footers — STILL PRESENT. Flag for Moshe: if the embedded nav chrome should also be stripped (matching what the 2026-05-27 PDF builder did), open a follow-up. Current state has 25 `</header>` total (1 outer + 4 embedded site-header + 20 internal `<header>` elements that scope individual commentary sections — those are valid HTML5).
+- The 4 embedded `<main itemprop="articleBody">...</main>` wrappers — STILL PRESENT. Removing the surrounding chrome left these orphan; they're semantically odd (nested `<main>` inside `<main class="content-wrapper">`) but render harmlessly.
+- `torah-weave/Genesis/genesis-complete-commentary-book.html` — NOT touched (the obsolete book version, slated for removal per 2026-05-27 entry; still carries 5 footers including 5 asitwaswritten links). If/when this file is kept for some reason, mirror the cleanup.
+
+**Current state:**
+- `genesis-complete-commentary.html` cleaned + uncommitted alongside the morning's 304-file footer-link batch.
+- `.git/index.lock` still present (sandbox cannot remove; Windows GitHub Desktop or Explorer can).
+
+**Next step:**
+- Moshe: view the live commentary page after deploy to confirm only one footer renders. Spot-check that the intro-section transitions (overview -> units-of-genesis, units-of-genesis -> the-map-of-genesis, etc.) still read cleanly with the embedded footers gone.
+- If embedded `<header class="site-header">` nav chrome should also go (symmetric cleanup), follow up — it's the same byte-range structure, mirror-image of the footer strip.
+- Commit + push + purge Cloudflare cache.
+
+
+### 2026-05-29 — Correction: no embedded site-headers in genesis-complete-commentary.html
+
+**Context:** Today's earlier "strip 4 embedded footers" entry incorrectly described the file as having "4 embedded `<header class=\"site-header\">` chrome blocks" symmetric with the 4 footers I stripped. That was a mis-read.
+
+**Actual structure (verified by enumerating all 25 `<header>` openings):**
+- 1 outer `<header class="site-header">` (line 475) — the real site nav.
+- 24 `<header class="unit-header-section">` — semantic section titles, NOT chrome:
+  - Parts A, B, C, D (lines 738, 1362, 1645, 1877)
+  - Akedah essay (line 3818)
+  - Genesis Units 1-19 (one each)
+
+Each `<header class="unit-header-section">...</header>` holds an `<h2>` headline and intro `<div>` for that section. These are legitimate HTML5 sectioning content and DO NOT need stripping.
+
+The 4 footers I stripped earlier were truly orphan — they had no matching embedded site-header. They were just dangling `<footer class="site-footer">` blocks after each intro part's `<main itemprop="articleBody">`.
+
+**No file changes in this entry — just correcting the prior note.** `torah-weave/Genesis/genesis-complete-commentary.html` state is unchanged from the earlier 870,967-byte strip output.
+
+**Confirmed by Moshe:** the unit-header-section blocks stay.
