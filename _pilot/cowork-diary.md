@@ -1723,3 +1723,18 @@ The 4 footers I stripped earlier were truly orphan — they had no matching embe
 **No file changes in this entry — just correcting the prior note.** `torah-weave/Genesis/genesis-complete-commentary.html` state is unchanged from the earlier 870,967-byte strip output.
 
 **Confirmed by Moshe:** the unit-header-section blocks stay.
+
+
+### 2026-05-29 — appendix-color-code injected into genesis-complete-commentary
+
+**Source change:** added a new `<div id="appendix-color-code">` to `torah-weave/Genesis/genesis-complete-commentary.html`, inserted between the closing `</div>` of Unit 19's commentary block + the existing `<hr class="section-divider">` and the `</main>` close. File size 870,967 → 878,568 bytes (+7,601). Anchor pattern `<hr class="section-divider">\n    </main>` matched exactly once (post-Unit-19, pre-footer). Atomic write via temp file + fsync + os.replace. Verified via Read tool (NOT bash — OneDrive caveat): appendix present, file ends `</html>`, sha256 1d3dcb19...
+
+**Content:** Moshe-authored appendix on the seven highlight markers (horizontal1/2/3, vertical1, internalparallel, closure, ciasm1, ciasm2). Structure: opening framing, "Seven Markers at a Glance" 8-row matrix-table (each marker name span-wrapped in its own color class, with one Genesis example per marker drawn from Units 3, 8, 17, 18), "Five Types of Connection" prose, "Visual Logic and the Triadic Center" prose. No DWT markers, no head/meta, no scripts, no footer. Uses literal UTF-8 em-dashes (matches the file's existing 1,649 em-dashes).
+
+**Live site impact:** on next push, the appendix renders inline at chaver.com/torah-weave/Genesis/genesis-complete-commentary (after Unit 19, before site footer). Site styling — main.css already defines all eight marker classes (#2563eb / #008080 / #800000 / #d97706 / #16a34a / #db2777 / #7c3aed / #c026d3), and `.matrix-table` is already in the stylesheet, so no CSS work needed.
+
+**Book PDF impact (PENDING):** `build_complete.py` extracts intro sections by id (overview, units-of-genesis, the-map-of-genesis, the-three-rows, architecture-and-meaning-in-genesis, Akedah-divine-names-essay). For the appendix to appear in the next PDF rebuild, that script's extracted-ids list must include `"appendix-color-code"` — placed AFTER the 19 unit chapters in the build order, since the appendix references units 3/8/17/18 by example. Build script is ephemeral (outputs/) and gets reconstructed each rebuild; next rebuild task spec should call this out.
+
+**Working-folder counterpart:** `plan/appendix-color-code.html` carries the same content but with `&mdash;` entities (for fragment-encoding stability when opened standalone). Either form renders identically inside a UTF-8 document.
+
+**Idempotency:** the inject script checks for `id="appendix-color-code"` and aborts if present.
