@@ -1,47 +1,11 @@
-<!DOCTYPE html>
-<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-05-30T18:37:07Z -->
-<!-- nav-updates-2026 -->
-<!-- nav-genesis-link-added-2026 -->
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "../../../Dynamic%20Web%20Templates/English.dwt" -->
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KNYXKY3VV1');
-</script>
-<!-- rest of head content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- E-1: Site-wide SEO/AEO boilerplate (canonical entity references) -->
-    <!-- Per-page canonical, og:url, og:title, og:description, og:type are E-2-injected just above this block -->
-    <meta property="og:site_name" content="Chaver.com">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
-    <meta property="og:image:secure_url" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:alt" content="The Woven Texts Project — Moshe Kline — chaver.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
-    <meta name="author" content="Moshe Kline">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {"@type": "WebSite", "@id": "https://chaver.com/#website"},
-        {"@type": "Organization", "@id": "https://chaver.com/#organization"},
-        {"@type": "Person", "@id": "https://chaver.com/#moshe-kline"}
-      ]
-    }
-    </script>
-    <!-- /E-1 -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
     
+    <!-- #BeginEditable "doctitle" -->
 	<title>The Art of Writing the Oral Tradition</title><meta name="keywords" content="Avot, Pirke Avot, Pirkei Avot, Perek, The Pairs, Wisdom of the fathers, Oral tradition, the art of writing" /><meta name="description" content="The Art of Writing the Oral Tradition in Pirke Avot" />
 	<style type="text/css">
 
@@ -111,9 +75,9 @@
 	text-decoration: underline;
 }
 </style>
+    <!-- #EndEditable -->
     
-    
-    
+    <!-- #BeginEditable "meta" -->
     <!-- Page-specific meta tags can be added here -->
 
     <!-- Open Graph -->
@@ -121,14 +85,14 @@
     <meta property="og:description" content="The Art of Writing the Oral Tradition in Pirke Avot">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://chaver.com/Mishnah-New/English/Articles/TheArt-H">
-    
+    <!-- #EndEditable -->
     
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
-    
+    <!-- #BeginEditable "additional-styles" -->
     <!-- Page-specific styles can go here -->
-    
+    <!-- #EndEditable -->
     
     <style type="text/css">
 
@@ -145,6 +109,52 @@
     }
     
     /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+        top: 0.5rem;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
        MAIN CONTENT AREA LAYOUT
        ========================================== */
     
@@ -153,6 +163,15 @@
         margin: 0 auto;
         padding: 40px 20px;
         min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
     }
     
     .footer-container {
@@ -182,13 +201,37 @@
        ========================================== */
     
     @media (max-width: 768px) {
-
-        /* Landscape phones - hamburger menu */
-        @media (max-height: 500px) and (orientation: landscape) {
-            
-            main.content-wrapper {
-                padding: 15px 10px;
-            }
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
         }
         
         /* Content adjustments */
@@ -215,7 +258,8 @@
     
     @media print {
         header.site-header,
-        footer.site-footer {
+        footer.site-footer,
+        .menu-toggle {
             display: none;
         }
         
@@ -231,70 +275,23 @@
          SITE HEADER - FIXED ACROSS ALL PAGES
          ========================================== -->
     <header class="site-header">
-        <div class="nav-row">
-            <div class="nav-brand">chaver.com</div>
-            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-            <ul class="nav-menu" id="primary-menu">
+        <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
                 <li><a href="/">Home</a></li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Torah</button>
-                    <ul class="submenu">
-                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                        <li><a href="/torah-weave/commentary">Commentary</a></li>
-                        <li><a href="/torah-weave/Genesis/genesis-complete-commentary">Genesis: Complete Commentary</a></li>
-                        <li><a href="/torah-weave/full-torah-map-2/">Full Torah Map</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Insights</button>
-                    <ul class="submenu">
-                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Mishnah</button>
-                    <ul class="submenu">
-                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
-                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to the Structured Mishnah</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">Download the Complete Mishnah (Hebrew)</a></li>
-                    </ul>
-                </li>
-                <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
-                    <ul class="submenu">
-                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Free Books</button>
-                    <ul class="submenu">
-                        <li><a href="/Torah-New/English/Text/Torah-pdf">The Structured Torah (English PDF)</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah (Hebrew PDF)</a></li>
-                    </ul>
-                </li>
-                <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
-                <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+                <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+                <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah</a></li>
+                <li><a href="/General/Contact.htm">Contact</a></li>
+                <li><a href="/hebrew%20index">עברית</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <!-- SITE BANNER -->
-<div id="site-banner"></div>
+    
     <!-- ==========================================
          MAIN CONTENT AREA - EDITABLE REGION
          ========================================== -->
     <main class="content-wrapper">
-        
+        <!-- #BeginEditable "content" -->
         
 			<h1 align="center">An&nbsp; Expanded Version of this article can be 
 			found
@@ -346,7 +343,7 @@
 mso-margin-bottom-alt:auto;margin-left:36.0pt">In Plato's Banquet, Alcibiades-that outspoken son of outspoken Athens-compares Socrates and his speeches to certain sculptures which are very ugly from the outside, but within have most beautiful images of things divine. The works of the great writers of the past are very beautiful even from without. And yet their visible beauty is sheer ugliness, compared with the beauty of those hidden treasures which disclose themselves only after very long, never easy, but always pleasant work. This always difficult but always pleasant work is, I believe, what philosophers had in mind when they recommended education.<span style="font-family:Arial;
 color:#000066"><o:p> </o:p></span></p><p>No doubt the author of the Mishnah was one of the &quot;great writers of the past.&quot;</p>
         
-        
+        <!-- #EndEditable -->
     </main>
     
     <!-- ==========================================
@@ -369,9 +366,9 @@ color:#000066"><o:p> </o:p></span></p><p>No doubt the author of the Mishnah was 
                     <h4>Full Texts</h4>
                     <ul>
                         <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Mishnah-New/English/Mishnah%20Portal.htm">Mishnah Portal</a></li>
                         <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
-                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Five%20Books%20of%20the%20Torah.htm">התורה כדרכה</a></li>
                         <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah PDF</a></li>
                         <li><a href="https://asitwaswritten.org/">As It Was Written &mdash; a primer</a></li>
                     </ul>
@@ -379,10 +376,9 @@ color:#000066"><o:p> </o:p></span></p><p>No doubt the author of the Mishnah was 
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
                         <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
                         <li><a href="/Torah-New/English/Articles/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="http://www.facebook.com/woventorah/">Facebook Discussion</a></li>
                         <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
                         <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
                     </ul>
@@ -390,73 +386,38 @@ color:#000066"><o:p> </o:p></span></p><p>No doubt the author of the Mishnah was 
                 <div class="footer-section">
                     <h4>About Moshe Kline</h4>
                     <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
-                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
-                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                    <p><a href="/General/Contact.htm">Contact</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+                <p>&copy; 2025 Chaver.com. The Woven Texts Project.</p>
             </div>
         </div>
     </footer>
     
     <!-- ==========================================
-         SITE NAV SCRIPT
+         MOBILE MENU SCRIPT
          ========================================== -->
     <script>
-        (function() {
-            var toggle = document.querySelector('.nav-toggle');
-            var menu = document.querySelector('.nav-menu');
-
-            // Hamburger toggle
-            if (toggle && menu) {
-                toggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    menu.classList.toggle('is-open-menu');
-                    toggle.setAttribute('aria-expanded',
-                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
-                });
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('nav-menu');
+            var toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('show');
             }
-
-            // Dropdown toggles (via <button>, not <a>)
-            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    var li = btn.parentElement;
-                    var wasOpen = li.classList.contains('is-open');
-
-                    // Close all dropdowns first
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
-                        other.classList.remove('is-open');
-                        var b = other.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-
-                    // Open this one if it wasn't already
-                    if (!wasOpen) {
-                        li.classList.add('is-open');
-                        btn.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            });
-
-            // Click outside closes everything
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.site-header')) {
-                    if (menu) menu.classList.remove('is-open-menu');
-                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                        li.classList.remove('is-open');
-                        var b = li.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-                }
-            });
-        })();
+        });
     </script>
-
     
+    <!-- #BeginEditable "page-scripts" -->
     <!-- Page-specific scripts can go here -->
-    
+    <!-- #EndEditable -->
 </body>
+<!-- #EndTemplate -->
 </html>

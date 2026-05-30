@@ -1738,3 +1738,71 @@ The 4 footers I stripped earlier were truly orphan — they had no matching embe
 **Working-folder counterpart:** `plan/appendix-color-code.html` carries the same content but with `&mdash;` entities (for fragment-encoding stability when opened standalone). Either form renders identically inside a UTF-8 document.
 
 **Idempotency:** the inject script checks for `id="appendix-color-code"` and aborts if present.
+
+
+### 2026-05-30 — Migrate 8 stale DWT pages to Pattern B (old 5-item nav -> new 9-item dropdown)
+
+**Context:** Moshe flagged `Mishnah-New/English/Articles/TheArt-H.htm` as having the old 5-item nav (Home / Torah / Mishnah / Contact / עברית). Survey across the repo (`grep -rl 'BeginTemplate' --exclude-dir=_backup-pre-migration`) found 143 files still carrying DWT markers. Of those, the article-style pages with the same old-nav pattern were:
+- 1 English article: `Mishnah-New/English/Articles/TheArt-H.htm`
+- 2 Hebrew articles: `Mishnah-New/Hebrew/Articles/CfrHnnia.htm`, `Mishnah-New/Hebrew/Articles/TheWholeStructure.htm`
+- 5 General/* pages: `Leviathan.htm`, `Nonlinear Texts.htm`, `The Torah and Mishnah are Visual texts.htm`, `Catalog.htm`, `Contact.htm`
+
+(143 - 8 = 135 remaining DWT-marker files are legacy `/Mishnah/` portal tractate-listings, `Mishnah-New/Hebrew/Text/Seder*/.../Pirkei Masechet*.htm` tractate-cover pages, `Mishnah-New/Hebrew/Text/Seder*/Seder*.html`, `Mishnah-New/English/mishnah-viewer.html`, and `404.html` — left unmigrated for now.)
+
+**What was done:** Built `outputs/migrate_old_nav.py` from `_pilot/migration-logic.md` (sections 3-7): extract `#BeginEditable` regions, map `hebrew.dwt` `start` -> `content`, substitute into `Academic-Content-{EN,HE}.html`, run `clean_nav_css_from_inline_style()` from `_pilot/nav_css_cleanup.py`, inject fresh `<!-- rendered-from: ... @ TS -->` provenance marker, back up original to `_backup-pre-migration/<rel>`, atomic-write (temp + fsync + os.replace) + post-write reread. All 8 files completed with status OK on the first run.
+
+**Files modified (8 deployed pages):**
+- `Mishnah-New/English/Articles/TheArt-H.htm` (75,823 -> 81,278 B, +5,455)
+- `Mishnah-New/Hebrew/Articles/CfrHnnia.htm` (146,202 -> 142,413 B, -3,789)
+- `Mishnah-New/Hebrew/Articles/TheWholeStructure.htm` (56,316 -> 52,378 B, -3,938)
+- `General/Leviathan.htm` (11,991 -> 17,362 B, +5,371)
+- `General/Nonlinear Texts.htm` (13,279 -> 18,740 B, +5,461)
+- `General/The Torah and Mishnah are Visual texts.htm` (12,145 -> 17,606 B, +5,461)
+- `General/Catalog.htm` (26,073 -> 26,536 B, +463)
+- `General/Contact.htm` (11,431 -> 16,892 B, +5,461)
+
+(EN files grow because the new dropdown nav + 4-section footer + `asitwaswritten.org` link + site-banner add markup; HE files shrink because the old Hebrew DWT page chrome was heavier than the new HE template's nav.)
+
+**Files created:** 8 byte-identical backups under `_backup-pre-migration/` (none of these 8 had prior backups).
+
+**Per-file verification (all pass):**
+
+| File | DWT markers | nav-toggle | nav-menu | old toggleMenu | rendered-from | ends </html> | content word-count |
+|---|---:|---:|---:|---:|---:|---:|---|
+| TheArt-H.htm | 0 | 1 | 1 | 0 | 1 | yes | 7,872 -> 7,872 |
+| CfrHnnia.htm | 0 | 1 | 1 | 0 | 1 | yes | 6,724 -> 6,724 |
+| TheWholeStructure.htm | 0 | 1 | 1 | 0 | 1 | yes | 2,375 -> 2,375 |
+| Leviathan.htm | 0 | 1 | 1 | 0 | 1 | yes | 9 -> 9 |
+| Nonlinear Texts.htm | 0 | 1 | 1 | 0 | 1 | yes | 283 -> 283 |
+| Visual texts.htm | 0 | 1 | 1 | 0 | 1 | yes | 148 -> 148 |
+| Catalog.htm | 0 | 1 | 1 | 0 | 1 | yes | 966 -> 966 |
+| Contact.htm | 0 | 1 | 1 | 0 | 1 | yes | 20 -> 20 |
+
+Word counts measured on `<main>` inner text (tags + scripts + styles + comments stripped). Exact parity across all 8 files indicates clean region extraction and substitution.
+
+EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/Data/Free Books) + footer `asitwaswritten.org` link + `id="site-banner"`. HE files: 3 `.has-dropdown` items + `id="site-banner"`. Both match the current `_templates/Academic-Content-{EN,HE}.html` baseline.
+
+**Decisions locked:**
+- DWT type detection: by source `#BeginTemplate` path string. `English.dwt` + `Academic-Content-DWT.dwt` both use the standard 5-region direct mapping (Variant A). `hebrew.dwt` uses the 4-region mapping (`start` -> `content`, empty `meta`).
+- Language assignment by path: `/Hebrew/Articles/` -> HE template; `/English/Articles/`, `/General/` -> EN template. Path-based overrides any `<html lang="en">` in source.
+- Backup discipline: copy original to `_backup-pre-migration/<rel>` BEFORE writing migrated output. Verify size match. If `_backup-pre-migration/<rel>` already exists with identical content, leave it (idempotent re-runs).
+- Provenance marker placement: immediately after `<!DOCTYPE html>`. If a prior `<!-- rendered-from: ... -->` is already in the file, replace it (single marker only).
+
+**Proven patterns:**
+- `extract_regions(text)` via `re.compile(r'<!--\s*#BeginEditable\s+"([^"]+)"\s*-->(.*?)<!--\s*#EndEditable\s*-->', re.DOTALL)` — single regex captures all editable regions in one pass.
+- Atomic write pattern (from 2026-05-15 about-Moshe-Kline entry) holds: temp file in same dir with `.cowork.tmp` suffix, write bytes, `flush()`, `os.fsync(fd)`, `os.replace(tmp, dest)`, then re-read and compare to detect OneDrive sync regression. All 8 files passed the post-write reread.
+- `clean_nav_css_from_inline_style()` from `_pilot/nav_css_cleanup.py` is the canonical CSS scrubber. Confirmed it strips orphan `header.site-header`, `nav ul`, `.main-nav`, `.menu-toggle`, `.has-dropdown`, `.dropdown`, `.site-banner` rules outside `@media print`, while preserving `* { ... }` reset, `main.content-wrapper`, footer-container/section rules, and the `@media print` block verbatim.
+
+**What failed and why:** Nothing. Migration ran clean on the first attempt.
+
+**Current state:**
+- All 8 deployed files migrated and uncommitted in the working tree.
+- 8 new backups under `_backup-pre-migration/`.
+- `outputs/migrate_old_nav.py` is the migration script (lives in Claude's scratch, not in the repo).
+- `.git/index.lock` status not checked this session; if it's still present from prior runs Moshe can delete it via Windows Explorer before committing.
+
+**Next step:**
+- Moshe: review the 8 diffs in GitHub Desktop. Expected diff shape per file: head replaced with full E-1 SEO/AEO boilerplate + canonical entity JSON-LD; old 5-item `<header class="site-header">` nav swapped for 9-item dropdown nav; old footer (where present) swapped for the 4-section footer with `asitwaswritten.org`; body content (inside `<main class="content-wrapper">`) unchanged; trailing nav script swapped for the template's dropdown/hamburger script. The `<!-- rendered-from: ... -->` marker is the smoking gun that the file went through the Pattern B render path.
+- Commit + push + purge Cloudflare cache (purge each affected URL; or full-zone purge if simpler).
+- Spot-check live: `chaver.com/Mishnah-New/English/Articles/TheArt-H` should now show the same dropdown nav as the rest of the site, with no visual jump in chrome between this page and (e.g.) `five-pairs-avot-1`.
+- Remaining 135 DWT-marker files (legacy `/Mishnah/` portal, `Pirkei Masechet*` tractate covers, `Seder*.html` covers, `mishnah-viewer.html`, `404.html`) are out of scope here; if a future task wants to migrate them, the same script handles the standard mapping but the legacy `/Mishnah/` portal is intentionally still-served per project knowledge and likely shouldn't be touched.
