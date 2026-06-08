@@ -3991,39 +3991,42 @@ main.content-wrapper:has(.Mesechet) .Perek {
 }
 
 /* ==========================================
-   TORAH WEAVE MAP (full-torah-map-2)
+   TORAH WEAVE MAP — cruciform five-book map
+   (full-torah-map-2)
+   Uses tmap- prefix to avoid conflict with
+   .unit (table-based book maps)
    ========================================== */
-.map-outer {
+.tmap-outer {
     width: 100%;
     overflow-x: auto;
     padding: 20px 0;
 }
-.map-container {
+.tmap-container {
     width: 1170px;
     height: 920px;
     position: relative;
     margin: 0 auto;
 }
-.map-container .book {
+.tmap-book {
     position: absolute;
     z-index: 1;
     box-sizing: border-box;
 }
-.map-container .book-genesis,
-.map-container .book-deuteronomy {
+.tmap-book.gen,
+.tmap-book.deu {
     border: 3px solid #7ab0f7;
     background: rgba(122, 176, 247, 0.1);
 }
-.map-container .book-exodus,
-.map-container .book-numbers {
+.tmap-book.exo,
+.tmap-book.num {
     border: 3px solid #f0b070;
     background: rgba(240, 176, 112, 0.1);
 }
-.map-container .book-leviticus {
+.tmap-book.lev {
     border: 3px solid #80d0a0;
     background: rgba(128, 208, 160, 0.1);
 }
-.map-container .book-title {
+.tmap-title {
     position: absolute;
     padding: 5px 0;
     text-align: center;
@@ -4035,21 +4038,22 @@ main.content-wrapper:has(.Mesechet) .Perek {
     display: block;
     border-bottom: none;
 }
-.map-container .book-title:hover {
+.tmap-title:hover {
     opacity: 0.9;
+    border-bottom: none;
 }
-.map-container .title-genesis,
-.map-container .title-deuteronomy {
+.tmap-title.gen,
+.tmap-title.deu {
     background: #7ab0f7;
 }
-.map-container .title-exodus,
-.map-container .title-numbers {
+.tmap-title.exo,
+.tmap-title.num {
     background: #f0b070;
 }
-.map-container .title-leviticus {
+.tmap-title.lev {
     background: #80d0a0;
 }
-.map-container .unit {
+.tmap-unit {
     position: absolute;
     width: 27px;
     height: 27px;
@@ -4065,12 +4069,16 @@ main.content-wrapper:has(.Mesechet) .Perek {
     color: #000;
     cursor: pointer;
     border-bottom: none;
+    padding: 0;
+    min-height: 0;
+    background: white;
 }
-.map-container .unit:hover {
+.tmap-unit:hover {
     transform: scale(1.3);
     z-index: 4;
+    border-bottom: none;
 }
-.map-container .unit.special {
+.tmap-unit.special {
     border: 2px solid #CC0066;
 }
 
