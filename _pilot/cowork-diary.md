@@ -698,30 +698,6 @@ The same atomic-write string-replace script that fixed the Mishnah chapter pages
 - Moshe: review combined diff in GitHub Desktop (or use `git diff --stat HEAD | tail -30` to get just the per-file change counts). Push, then purge Cloudflare cache (whole-site purge would be cleanest given the breadth). Spot-check 3 different page types in a browser: a Mishnah chapter, a Torah-weave commentary, and an English article — confirm each shows `chaver.com` brand and the PDF CTA / footer link goes to the landing page rather than the .pdf file.
 - Out of scope but discoverable later: 70 non-UTF-8 legacy files were skipped. If any are still deployed (rather than superseded by Pattern-B versions), they'll need an encoding-aware pass to receive the same fix. Worth a future "legacy-encoding sweep" task.
 
-### 2026-06-08 — Audit and Fix All 86 Unit Pages to Genesis Standard
-
-**What:** Audited and fixed all 86 Torah unit text pages (Genesis 19, Exodus 19, Leviticus 22, Numbers 13, Deuteronomy 13) to match the structural exemplar `genesis-unit-7.html`.
-
-**Data source:** `torah-weave/data/torah-units.json` (single source of truth for titles and verse ranges).
-
-**Two processing paths:**
-- **47 OLD files** (Exodus unit 1, Leviticus 3–22, Numbers 1–13, Deuteronomy 1–13): Full restructure — added `unit-navigation`, `unit-header-section`, `unit-content` wrapper, `citation-box`; converted `<p class="cell-label">` in `<td>` to `<th class="cell-label col-*">` in `<thead>`.
-- **39 NEW files** (Genesis 1–19, Exodus 2–19, Leviticus 1–2): Targeted fixes — h1/unit-meta text from JSON, cell-label classes on `<th>`, citation-box content, title/og:title/JSON-LD metadata.
-
-**All 86 files updated:**
-- Title: `{Book} Unit {N}: {Title} ({verse_range}) | Torah Weave`
-- og:title: `{Book} Unit {N}: {Title} ({Book} {verse_range})`
-- JSON-LD headline synced
-- Commentary-link aside added only where commentary file exists (23 units)
-
-**Verification:** 86/86 pass all structural checks. Content integrity confirmed (marker span counts, torah paragraph counts, table counts preserved). Idempotent (second run: all 86 "already correct").
-
-**Script:** `audit_fix_units.py` (BeautifulSoup + regex, atomic writes, --dry-run support).
-
-**Files modified:** 86 unit HTML files across all five books. No other files touched.
-
-**What NOT changed:** Scripture text content, marker classes, site chrome (header/nav/footer), Hebrew unit pages.
-
 ## Standing reference
 
 ### CSS class quick-reference (from main.css)
