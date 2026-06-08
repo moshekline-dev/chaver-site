@@ -1,247 +1,126 @@
 <!DOCTYPE html>
-<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-06-08T13:50:47Z -->
-<!-- nav-updates-2026 -->
+<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-06-08T14:30:00Z -->
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KNYXKY3VV1');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="Chaver.com">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta name="author" content="Moshe Kline">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://chaver.com/#website"},{"@type":"Organization","@id":"https://chaver.com/#organization"},{"@type":"Person","@id":"https://chaver.com/#moshe-kline"}]}</script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
     <title>Torah Weave Map &amp; Commentary | Chaver.com</title>
-    
     <link rel="canonical" href="https://chaver.com/torah-weave/full-torah-map-2/">
     <meta name="description" content="Interactive Torah Weave Map showing 86 literary units across five books, plus a comprehensive guide to the horizontal and vertical threads, concentric rings, and creation paradigm.">
     <meta property="og:title" content="Torah Weave Map &amp; Commentary">
-    <meta property="og:description" content="Interactive map of the Torah's woven literary structure with a comprehensive guide.">
+    <meta property="og:description" content="Interactive map of the Torah woven literary structure with a comprehensive guide.">
     <meta property="og:url" content="https://chaver.com/torah-weave/full-torah-map-2/">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Chaver.com">
-    <meta name="author" content="Moshe Kline">
-
-    <!-- Site-wide CSS -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Understanding the Torah Weave Map","author":{"@type":"Person","name":"Moshe Kline","@id":"https://chaver.com/#moshe-kline"},"publisher":{"@type":"Organization","name":"The Woven Texts Project","@id":"https://chaver.com/#organization"},"mainEntityOfPage":"https://chaver.com/torah-weave/full-torah-map-2/"}</script>
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
-
-    <style>
-    /* === OVERRIDE main.css body constraints for this page === */
-    body {
-        max-width: none;
-        padding: 0;
-        overflow-x: auto;
-    }
-
-    /* === MAP-SPECIFIC STYLES (from original standalone page) === */
+    <style type="text/css">
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
     
-        /* Override any body constraints */
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            max-width: none;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background: #fdfcf8;
-        }
-        
-        /* Breadcrumb */
-        nav[aria-label=Breadcrumb] {
-            padding: 10px 20px;
-            font-size: 14px;
-            color: #666;
-        }
-        
-        nav[aria-label=Breadcrumb] a {
-            color: #5d87a1;
-            text-decoration: none;
-        }
-        
-        nav[aria-label=Breadcrumb] a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Page header - match Genesis map style */
-        h1 {
-            font-size: 2.5em;
-            color: #1a1a1a;
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #8b7355;
-            padding-bottom: 15px;
-            margin-top: 30px;
-        }
-        
-        .page-intro {
-            font-size: 1.1em;
-            line-height: 1.8;
-            text-align: center;
-            max-width: 900px;
-            margin: 20px auto 40px;
-            padding: 0 20px;
-            color: #2c3e50;
-        }
-        
-        .page-intro a {
-            color: #5d87a1;
-            text-decoration: none;
-            border-bottom: 1px dotted #5d87a1;
-        }
-        
-        .page-intro a:hover {
-            color: #3d5770;
-            border-bottom: 1px solid #3d5770;
-        }
-        
-        /* Citation box */
-        .citation-box {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 0.9em;
-            text-align: center;
-        }
-        
-        /* Map container - needs specific sizing */
-        .map-outer {
-            width: 100%;
-            background: white;
-            padding: 20px 0;
-        }
-        
-        /* Only add scrolling on smaller screens */
-        @media (max-width: 1250px) {
-            .map-outer {
-                overflow-x: auto;
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            
+            main.content-wrapper {
+                padding: 15px 10px;
             }
         }
         
-        .map-container {
-            width: 1170px;
-            height: 900px;
-            position: relative;
-            margin: 0 auto;
-            background-color: white;
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
         }
         
-        .book {
-            position: absolute;
-            z-index: 1;
-            box-sizing: border-box;
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
-        
-        .book-title {
-            position: absolute;
-            padding: 5px 0;
-            text-align: center;
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
-            z-index: 2;
-            text-decoration: none;
-            display: block;
-        }
-        
-        .book-title:hover {
-            opacity: 0.9;
-        }
-        
-        .unit {
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            border: 1px solid rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 12px;
-            z-index: 3;
-            border-radius: 5px;
-            text-decoration: none;
-            color: black;
-        }
-        
-        .unit:hover {
-            transform: scale(1.2);
-            cursor: pointer;
-        }
-        
-        .unit.special {
-            border: 2px solid #CC0066;
-            width: 23px;
-            height: 23px;
-        }
-        
-        /* Color classes */
-        .color-d4f2ff { background-color: #D4F2FF; }
-        .color-ffe6e6 { background-color: #FFE6E6; }
-        .color-e6ffee { background-color: #E6FFEE; }
-        .color-d4d4ff { background-color: #D4D4FF; }
-        .color-ffccaa { background-color: #FFCCAA; }
-        .color-c8e6d2 { background-color: #C8E6D2; }
-        .color-f0f0f0 { background-color: #F0F0F0; }
-        
-        .page-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 20px auto;
-            line-height: 1.6;
-            color: #2c3e50;
-        }
+    }
     
-
-    /* === COMMENTARY STYLES === */
-    .commentary-wrapper {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 20px 40px;
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
     }
-    .toc-list {
-        margin: 1em 0 2em 1.5em;
-    }
-    .toc-list li {
-        margin-bottom: 0.4em;
-    }
-    .toc-list ul {
-        margin-top: 0.4em;
-        margin-left: 1.5em;
-    }
-    .back-to-top {
-        font-size: 0.9em;
-        margin: 1.5em 0;
-    }
-    .back-to-top a {
-        text-decoration: none;
-    }
-    .orientation-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1.5em 0;
-        font-size: 0.95em;
-    }
-    .orientation-table th,
-    .orientation-table td {
-        border: 1px solid #ccc;
-        padding: 0.5em 0.8em;
-        text-align: left;
-    }
-    .orientation-table th {
-        background-color: #f5f5f5;
-        font-weight: 600;
-    }
-    .thread-diagram {
-        margin: 1.5em 0;
-        font-size: 0.95em;
-        line-height: 1.8;
-    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
+
     <header class="site-header">
         <div class="nav-row">
             <div class="nav-brand">chaver.com</div>
@@ -300,507 +179,165 @@
             </ul>
         </div>
     </header>
-<!-- SITE BANNER -->
+    <!-- SITE BANNER -->
 <div id="site-banner"></div>
+    <!-- ==========================================
+         MAIN CONTENT AREA - EDITABLE REGION
+         ========================================== -->
 
-<article itemscope itemtype="https://schema.org/WebPage">
-    <nav aria-label="Breadcrumb">
-        <a href="/" rel="home">Home</a> → <span itemprop="name">Torah Weave</span>
-    </nav>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+    <main class="content-wrapper">
+        <div class="content">
 
-    <h1>Torah Weave Map</h1>
-    
-    <div class="page-intro">
-        <p>The Torah's five books revealed as a woven literary structure. Click on any book title to view its detailed map, or click individual units to explore their two-dimensional architecture.</p>
-        <p><a href="#comprehensive-guide" rel="related" style="font-weight: 600; font-size: 1.05em;">Read the full Torah commentary ↓</a></p>
-    </div>
+<div class="elementor-element elementor-element-57a18e5 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-element_type="container" data-id="57a18e5" style="box-sizing: border-box; --flex-direction: column; --flex-wrap: initial; --justify-content: initial; --align-items: initial; --align-content: initial; --gap: 20px 20px; --flex-basis: auto; --flex-grow: 0; --flex-shrink: 1; --order: initial; --align-self: initial; align-self: auto; flex: 0 1 auto; order: 0; --border-radius: 0; --border-top-width: 0px; --border-right-width: 0px; --border-bottom-width: 0px; --border-left-width: 0px; --border-style: initial; --border-color: initial; --container-widget-width: 100%; --container-widget-height: initial; --container-widget-flex-grow: 0; --container-widget-align-self: initial; --content-width: min(100%,1140px); --width: 100%; --min-height: initial; --height: auto; --text-align: initial; --margin-top: 0px; --margin-right: auto; --margin-bottom: 0px; --margin-left: auto; --padding-top: 10px; --padding-right: 10px; --padding-bottom: 10px; --padding-left: 10px; --position: relative; --z-index: revert; --overflow: visible; --row-gap: 20px; --column-gap: 20px; --overlay-mix-blend-mode: initial; --overlay-opacity: 1; --overlay-transition: 0.3s; --e-con-grid-template-columns: repeat(3,1fr); --e-con-grid-template-rows: repeat(2,1fr); border-radius: 0px; height: auto; min-height: auto; min-width: 0px; overflow: visible; position: relative; width: 100%; z-index: auto; --flex-wrap-mobile: wrap; margin-block: 0px; margin-inline: auto; padding-inline: 10px; --margin-block-start: 0px; --margin-block-end: 0px; --margin-inline-start: auto; --margin-inline-end: auto; --padding-inline-start: 10px; --padding-inline-end: 10px; --padding-block-start: 10px; --padding-block-end: 10px; --border-block-start-width: 0px; --border-block-end-width: 0px; --border-inline-start-width: 0px; --border-inline-end-width: 0px; display: flex; gap: initial; text-align: start; --container-max-width: 1140px; --widgets-spacing: 20px 20px; --widgets-spacing-row: 20px; --widgets-spacing-column: 20px; transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s; place-content: normal; align-items: normal; flex-flow: column; max-width: 100%; --display: flex; color: rgb(1, 33, 4); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 17px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+	<div class="e-con-inner" style="box-sizing: border-box; padding-block: 10px; text-align: start; display: flex; gap: 20px; height: 1176.08px; margin: 0px auto; max-width: min(100%, 1140px); padding-inline: 0px; width: 1140px; flex-flow: column; place-content: normal; align-items: normal; align-self: auto; flex: 1 1 auto;">
+		<div class="elementor-element elementor-element-6a3810f elementor-widget elementor-widget-heading" data-element_type="widget" data-id="6a3810f" data-widget_type="heading.default" style="box-sizing: border-box; --flex-direction: initial; --flex-wrap: initial; --justify-content: initial; --align-items: initial; --align-content: initial; --gap: initial; --flex-basis: initial; --flex-grow: initial; --flex-shrink: initial; --order: initial; --align-self: initial; align-self: auto; flex: 0 1 auto; order: 0; place-content: normal; align-items: normal; flex-flow: row; gap: 20px; position: relative; --widgets-spacing: 20px 20px; --widgets-spacing-row: 20px; --widgets-spacing-column: 20px; margin-bottom: 0px; min-width: 0px; --kit-widget-spacing: 0px; margin-block-end: 0px; transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s; text-align: center; max-width: 100%;">
+			<h2 class="elementor-heading-title elementor-size-default" style="box-sizing: border-box; border: 0px; font-size: 2.35294rem; font-style: inherit; font-weight: normal; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; clear: both; color: rgb(21, 23, 22); line-height: 1.2em; font-family: Poppins, sans-serif; -webkit-text-stroke-color: rgb(0, 0, 0); stroke: rgb(0, 0, 0); text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px;">
+			Torah Weave Map</h2>
+		</div>
+		<div class="elementor-element elementor-element-f5e390f elementor-widget elementor-widget-html" data-element_type="widget" data-id="f5e390f" data-widget_type="html.default" style="box-sizing: border-box; --flex-direction: initial; --flex-wrap: initial; --justify-content: initial; --align-items: initial; --align-content: initial; --gap: initial; --flex-basis: initial; --flex-grow: initial; --flex-shrink: initial; --order: initial; --align-self: initial; align-self: auto; flex: 0 1 auto; order: 0; place-content: normal; align-items: normal; flex-flow: row; gap: 20px; position: relative; --widgets-spacing: 20px 20px; --widgets-spacing-row: 20px; --widgets-spacing-column: 20px; margin-bottom: 0px; min-width: 0px; --kit-widget-spacing: 0px; margin-block-end: 0px; transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s; max-width: 100%;">
+			<div class="map-container" style="box-sizing: border-box; width: 1140px; max-width: 1170px; height: 900px; position: relative; margin: 0px auto; background-color: white;">
+				<div class="map-inner" style="box-sizing: border-box;">
+					<div class="book genesis" style="box-sizing: border-box; border: 3px solid rgb(122, 176, 247); background-color: rgba(122, 176, 247, 0.1); position: absolute; z-index: 1; left: 0px; top: 351px; width: 351px; height: 216px;">
+					</div>
+					<a class="book-title genesis-title" href="/torah-weave/Genesis/genesis-map/genesis-map" style="box-sizing: border-box; background-color: rgb(122, 176, 247); text-decoration: underline; color: white; transition: background-color 0.3s; position: absolute; padding: 5px 0px; width: 351px; text-align: center; font-weight: bold; font-size: 18px; z-index: 2; display: block; left: 0px; top: 351px; box-shadow: none;">
+					GENESIS</a><div class="book exodus" style="box-sizing: border-box; border: 3px solid rgb(240, 176, 112); background-color: rgba(240, 176, 112, 0.1); position: absolute; z-index: 1; left: 486px; top: 27px; width: 297px; height: 297px;">
+					</div>
+					<a class="book-title exodus-title" href="/torah-weave/Exodus/exodus-map/exodus-map" style="box-sizing: border-box; background-color: rgb(240, 176, 112); text-decoration: underline; color: white; transition: background-color 0.3s; position: absolute; padding: 5px 0px; width: 297px; text-align: center; font-weight: bold; font-size: 18px; z-index: 2; display: block; left: 486px; top: 0px; box-shadow: none;">
+					EXODUS</a><div class="book leviticus" style="box-sizing: border-box; border: 3px solid rgb(128, 208, 160); background-color: rgba(128, 208, 160, 0.1); position: absolute; z-index: 1; left: 378px; top: 351px; width: 459px; height: 216px;">
+					</div>
+					<a class="book-title leviticus-title" href="/torah-weave/Leviticus/leviticus-map/leviticus-map" style="box-sizing: border-box; background-color: rgb(128, 208, 160); text-decoration: underline; color: white; transition: background-color 0.3s; position: absolute; padding: 5px 0px; width: 459px; text-align: center; font-weight: bold; font-size: 18px; z-index: 2; display: block; left: 378px; top: 351px; box-shadow: none;">
+					LEVITICUS</a><div class="book numbers" style="box-sizing: border-box; border: 3px solid rgb(240, 176, 112); background-color: rgba(240, 176, 112, 0.1); position: absolute; z-index: 1; left: 486px; top: 621px; width: 297px; height: 297px;">
+					</div>
+					<a class="book-title numbers-title" href="/torah-weave/Numbers/numbers-map/numbers-map" style="box-sizing: border-box; background-color: rgb(240, 176, 112); text-decoration: underline; color: white; transition: background-color 0.3s; position: absolute; padding: 5px 0px; width: 297px; text-align: center; font-weight: bold; font-size: 18px; z-index: 2; display: block; left: 486px; top: 594px; box-shadow: none;">
+					NUMBERS</a><div class="book deuteronomy" style="box-sizing: border-box; border: 3px solid rgb(122, 176, 247); background-color: rgba(122, 176, 247, 0.1); position: absolute; z-index: 1; left: 864px; top: 351px; width: 270px; height: 216px;">
+					</div>
+					<a class="book-title deuteronomy-title" href="/torah-weave/Deuteronomy/deuteronomy-map/deuteronomy-map" style="box-sizing: border-box; background-color: rgb(122, 176, 247); text-decoration: underline; color: white; transition: background-color 0.3s; position: absolute; padding: 5px 0px; width: 270px; text-align: center; font-weight: bold; font-size: 18px; z-index: 2; display: block; left: 864px; top: 351px; box-shadow: none;">
+					DEUTERONOMY</a><a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 27px; top: 405px;">U1</a><a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 27px; top: 459px;">U2</a><a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 27px; top: 513px;">U3</a><a class="unit color-ffe6e6 special" href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4" style="box-sizing: border-box; background-color: rgb(255, 230, 230); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 23px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 2px solid rgb(204, 0, 102); position: absolute; width: 23px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 81px; top: 459px;">U4</a><a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 135px; top: 405px;">U5</a><a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 162px; top: 405px;">U6</a><a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 135px; top: 459px;">U7</a><a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 162px; top: 459px;">U8</a><a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 135px; top: 513px;">U9</a><a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 162px; top: 513px;">U10</a><a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 216px; top: 405px;">U11</a><a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 243px; top: 405px;">U12</a><a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 216px; top: 459px;">U13</a><a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 243px; top: 459px;">U14</a><a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 216px; top: 513px;">U15</a><a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 243px; top: 513px;">U16</a><a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 297px; top: 405px;">U17</a><a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 297px; top: 459px;">U18</a><a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 297px; top: 513px;">U19</a><a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-1/exodus-unit-1" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 54px;">U1</a><a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-3/exodus-unit-3" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 108px;">U3</a><a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-2/exodus-unit-2" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 567px; top: 54px;">U2</a><a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-4/exodus-unit-4" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 567px; top: 108px;">U4</a><a class="unit color-ffe6e6 special" href="/torah-weave/Exodus/exodus-unit-5/exodus-unit-5" style="box-sizing: border-box; background-color: rgb(255, 230, 230); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 23px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 2px solid rgb(204, 0, 102); position: absolute; width: 23px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 621px; top: 81px;">U5</a><a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-6/exodus-unit-6" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 675px; top: 54px;">U6</a><a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-8/exodus-unit-8" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 675px; top: 108px;">U8</a><a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-7/exodus-unit-7" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 54px;">U7</a><a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-9/exodus-unit-9" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 108px;">U9</a><a class="unit color-ffe6e6 special" href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10" style="box-sizing: border-box; background-color: rgb(255, 230, 230); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 23px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 2px solid rgb(204, 0, 102); position: absolute; width: 23px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 621px; top: 162px;">U10</a><a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-11/exodus-unit-11" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 216px;">U11</a><a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-13/exodus-unit-13" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 270px;">U13</a><a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-12/exodus-unit-12" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 567px; top: 216px;">U12</a><a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-14/exodus-unit-14" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 567px; top: 270px;">U14</a><a class="unit color-ffe6e6 special" href="/torah-weave/Exodus/exodus-unit-15/exodus-unit-15" style="box-sizing: border-box; background-color: rgb(255, 230, 230); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 23px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 2px solid rgb(204, 0, 102); position: absolute; width: 23px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 621px; top: 243px;">U15</a><a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-16/exodus-unit-16" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 675px; top: 216px;">U16</a><a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-17/exodus-unit-17" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 216px;">U17</a><a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-18/exodus-unit-18" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 675px; top: 270px;">U18</a><a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-19/exodus-unit-19" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 270px;">U19</a><a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 405px; top: 405px;">U1</a><a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 405px; top: 459px;">U2</a><a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 405px; top: 513px;">U3</a><a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 459px; top: 405px;">U4</a><a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-5/leviticus-unit-5" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 459px; top: 459px;">U5</a><a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-6/leviticus-unit-6" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 459px; top: 513px;">U6</a><a class="unit color-f0f0f0" href="/torah-weave/Leviticus/leviticus-unit-7/leviticus-unit-7" style="box-sizing: border-box; background-color: rgb(240, 240, 240); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 405px;">U7</a><a class="unit color-f0f0f0" href="/torah-weave/Leviticus/leviticus-unit-8/leviticus-unit-8" style="box-sizing: border-box; background-color: rgb(240, 240, 240); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 459px;">U8</a><a class="unit color-f0f0f0" href="/torah-weave/Leviticus/leviticus-unit-9/leviticus-unit-9" style="box-sizing: border-box; background-color: rgb(240, 240, 240); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 513px;">U9</a><a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 567px; top: 405px;">U10</a><a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-11/leviticus-unit-11" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 567px; top: 459px;">U11</a><a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-12/leviticus-unit-12" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 567px; top: 513px;">U12</a><a class="unit color-ffe6e6 special" href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13" style="box-sizing: border-box; background-color: rgb(255, 230, 230); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 23px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 2px solid rgb(204, 0, 102); position: absolute; width: 23px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 621px; top: 459px;">U13</a><a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-14/leviticus-unit-14" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 675px; top: 405px;">U14</a><a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-15/leviticus-unit-15" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 675px; top: 459px;">U15</a><a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-16/leviticus-unit-16" style="box-sizing: border-box; background-color: rgb(212, 212, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 675px; top: 513px;">U16</a><a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-17/leviticus-unit-17" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 405px;">U17</a><a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-18/leviticus-unit-18" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 459px;">U18</a><a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-19/leviticus-unit-19" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 513px;">U19</a><a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-20/leviticus-unit-20" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 783px; top: 405px;">U20</a><a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-21/leviticus-unit-21" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 783px; top: 459px;">U21</a><a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 783px; top: 513px;">U22</a><a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-1/numbers-unit-1" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 702px;">U1</a><a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-2/numbers-unit-2" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 756px;">U2</a><a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-3/numbers-unit-3" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 513px; top: 810px;">U3</a><a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-4/numbers-unit-4" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 567px; top: 648px;">U4</a><a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-5/numbers-unit-5" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 567px; top: 864px;">U5</a><a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-6/numbers-unit-6" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 621px; top: 648px;">U6</a><a class="unit color-ffe6e6 special" href="/torah-weave/Numbers/numbers-unit-7/numbers-unit-7" style="box-sizing: border-box; background-color: rgb(255, 230, 230); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 23px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 2px solid rgb(204, 0, 102); position: absolute; width: 23px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 621px; top: 756px;">U7</a><a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-8/numbers-unit-8" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 621px; top: 864px;">U8</a><a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-9/numbers-unit-9" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 675px; top: 648px;">U9</a><a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-10/numbers-unit-10" style="box-sizing: border-box; background-color: rgb(200, 230, 210); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 675px; top: 864px;">U10</a><a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-11/numbers-unit-11" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 702px;">U11</a><a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-12/numbers-unit-12" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 756px;">U12</a><a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-13/numbers-unit-13" style="box-sizing: border-box; background-color: rgb(255, 204, 170); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 729px; top: 810px;">U13</a><a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-1/deuteronomy-unit-1" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 891px; top: 405px;">U1</a><a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-2/deuteronomy-unit-2" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 918px; top: 405px;">U2</a><a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-3/deuteronomy-unit-3" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 891px; top: 459px;">U3</a><a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-4/deuteronomy-unit-4" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 918px; top: 459px;">U4</a><a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-5/deuteronomy-unit-5" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 891px; top: 513px;">U5</a><a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-6/deuteronomy-unit-6" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 918px; top: 513px;">U6</a><a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-7/deuteronomy-unit-7" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 972px; top: 405px;">U7</a><a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-8/deuteronomy-unit-8" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 972px; top: 459px;">U8</a><a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-9/deuteronomy-unit-9" style="box-sizing: border-box; background-color: rgb(230, 255, 238); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 972px; top: 513px;">U9</a><a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-10/deuteronomy-unit-10" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 1026px; top: 405px;">U10</a><a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-11/deuteronomy-unit-11" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 1026px; top: 459px;">U11</a><a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-12/deuteronomy-unit-12" style="box-sizing: border-box; background-color: rgb(212, 242, 255); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 25px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 1px solid rgba(0, 0, 0, 0.2); position: absolute; width: 25px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 1026px; top: 513px;">U12</a><a class="unit color-ffe6e6 special" href="/torah-weave/Deuteronomy/deuteronomy-unit-13/deuteronomy-unit-13" style="box-sizing: border-box; background-color: rgb(255, 230, 230); text-decoration: underline; color: rgb(0, 0, 0); transition: transform 0.2s; display: flex; height: 23px; padding: 10px; border-radius: 5px; text-align: left; margin-bottom: 0px; border: 2px solid rgb(204, 0, 102); position: absolute; width: 23px; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; z-index: 3; cursor: pointer; box-shadow: none; left: 1080px; top: 459px;">U13</a></div>
+			</div>
+		</div>
+		<div class="elementor-element elementor-element-db97476 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="db97476" data-widget_type="text-editor.default" style="box-sizing: border-box; --flex-direction: initial; --flex-wrap: initial; --justify-content: initial; --align-items: initial; --align-content: initial; --gap: initial; --flex-basis: initial; --flex-grow: initial; --flex-shrink: initial; --order: initial; --align-self: initial; align-self: auto; flex: 0 1 auto; order: 0; place-content: normal; align-items: normal; flex-flow: row; gap: 20px; position: relative; --widgets-spacing: 20px 20px; --widgets-spacing-row: 20px; --widgets-spacing-column: 20px; min-width: 0px; margin-block-end: 0px; transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s; max-width: 100%;">
+			<div class="color-legend" style="box-sizing: border-box; background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); border-radius: 4px; padding: 15px; margin-bottom: 20px;">
+				<h3 style="box-sizing: border-box; border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: rgb(221, 221, 221); border-left-color: initial; border-image: initial; font-size: 1.41176rem; font-style: inherit; font-weight: normal; margin: 0px 0px 12px; outline: 0px; padding: 0px 0px 8px; vertical-align: baseline; clear: both; color: rgb(21, 23, 22); line-height: 36px; font-family: Poppins, sans-serif;">
+				Torah Weave Map Key</h3>
+				<p style="box-sizing: border-box; border: 0px; font-size: 18px !important; font-style: inherit; font-weight: inherit; margin: 0px 0px 1.6em; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 1.7 !important; font-family: Garamond, Georgia, serif !important;">
+				<span style="box-sizing: border-box; font-size: 16px;">Click on 
+				a unit to see it. Click on a book title to see a detailed book 
+				map.</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="elementor-element elementor-element-0fde20f e-flex e-con-boxed e-con e-parent e-lazyloaded" data-element_type="container" data-id="0fde20f" style="box-sizing: border-box; --flex-direction: column; --flex-wrap: initial; --justify-content: initial; --align-items: initial; --align-content: initial; --gap: 20px 20px; --flex-basis: auto; --flex-grow: 0; --flex-shrink: 1; --order: initial; --align-self: initial; align-self: auto; flex: 0 1 auto; order: 0; --border-radius: 0; --border-top-width: 0px; --border-right-width: 0px; --border-bottom-width: 0px; --border-left-width: 0px; --border-style: initial; --border-color: initial; --container-widget-width: 100%; --container-widget-height: initial; --container-widget-flex-grow: 0; --container-widget-align-self: initial; --content-width: min(100%,1140px); --width: 100%; --min-height: initial; --height: auto; --text-align: initial; --margin-top: 0px; --margin-right: auto; --margin-bottom: 0px; --margin-left: auto; --padding-top: 10px; --padding-right: 10px; --padding-bottom: 10px; --padding-left: 10px; --position: relative; --z-index: revert; --overflow: visible; --row-gap: 20px; --column-gap: 20px; --overlay-mix-blend-mode: initial; --overlay-opacity: 1; --overlay-transition: 0.3s; --e-con-grid-template-columns: repeat(3,1fr); --e-con-grid-template-rows: repeat(2,1fr); border-radius: 0px; height: auto; min-height: auto; min-width: 0px; overflow: visible; position: relative; width: 100%; z-index: auto; --flex-wrap-mobile: wrap; margin-block: 0px; margin-inline: auto; padding-inline: 10px; --margin-block-start: 0px; --margin-block-end: 0px; --margin-inline-start: auto; --margin-inline-end: auto; --padding-inline-start: 10px; --padding-inline-end: 10px; --padding-block-start: 10px; --padding-block-end: 10px; --border-block-start-width: 0px; --border-block-end-width: 0px; --border-inline-start-width: 0px; --border-inline-end-width: 0px; display: flex; gap: initial; text-align: start; --container-max-width: 1140px; --widgets-spacing: 20px 20px; --widgets-spacing-row: 20px; --widgets-spacing-column: 20px; transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s; place-content: normal; align-items: normal; flex-flow: column; max-width: 100%; --display: flex; color: rgb(1, 33, 4); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 17px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+	<div class="e-con-inner" style="box-sizing: border-box; padding-block: 10px; text-align: start; display: flex; gap: 20px; height: 11633.5px; margin: 0px auto; max-width: min(100%, 1140px); padding-inline: 0px; width: 1140px; flex-flow: column; place-content: normal; align-items: normal; align-self: auto; flex: 1 1 auto;">
+		<div class="elementor-element elementor-element-8f4e5f8 elementor-widget elementor-widget-html" data-element_type="widget" data-id="8f4e5f8" data-widget_type="html.default" style="box-sizing: border-box; --flex-direction: initial; --flex-wrap: initial; --justify-content: initial; --align-items: initial; --align-content: initial; --gap: initial; --flex-basis: initial; --flex-grow: initial; --flex-shrink: initial; --order: initial; --align-self: initial; align-self: auto; flex: 0 1 auto; order: 0; place-content: normal; align-items: normal; flex-flow: row; gap: 20px; position: relative; --widgets-spacing: 20px 20px; --widgets-spacing-row: 20px; --widgets-spacing-column: 20px; min-width: 0px; margin-block-end: 0px; transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s; max-width: 100%;">
+			
 
-    <div class="map-outer">
-    <div class="map-container">
-        
-        <!-- Genesis - Left side -->
-        <div class="book" style="left: 0px; top: 351px; width: 351px; height: 216px; border: 3px solid #7ab0f7; background-color: rgba(122, 176, 247, 0.1);"></div>
-        <a class="book-title" href="/torah-weave/Genesis/genesis-map/genesis-map" style="left: 0px; top: 351px; width: 351px; background-color: #7ab0f7;">GENESIS</a>
-        
-        <!-- Genesis Units -->
-        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-1/genesis-unit-1" style="left: 27px; top: 405px;">U1</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-2/genesis-unit-2" style="left: 27px; top: 459px;">U2</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-3/genesis-unit-3" style="left: 27px; top: 513px;">U3</a>
-        <a class="unit color-ffe6e6 special" href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4" style="left: 81px; top: 459px;">U4</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-5/genesis-unit-5" style="left: 135px; top: 405px;">U5</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-6/genesis-unit-6" style="left: 162px; top: 405px;">U6</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-7/genesis-unit-7" style="left: 135px; top: 459px;">U7</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-8/genesis-unit-8" style="left: 162px; top: 459px;">U8</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-9/genesis-unit-9" style="left: 135px; top: 513px;">U9</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-10/genesis-unit-10" style="left: 162px; top: 513px;">U10</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-11/genesis-unit-11" style="left: 216px; top: 405px;">U11</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-12/genesis-unit-12" style="left: 243px; top: 405px;">U12</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-13/genesis-unit-13" style="left: 216px; top: 459px;">U13</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-14/genesis-unit-14" style="left: 243px; top: 459px;">U14</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Genesis/genesis-unit-15/genesis-unit-15" style="left: 216px; top: 513px;">U15</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Genesis/genesis-unit-16/genesis-unit-16" style="left: 243px; top: 513px;">U16</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-17/genesis-unit-17" style="left: 297px; top: 405px;">U17</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-18/genesis-unit-18" style="left: 297px; top: 459px;">U18</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Genesis/genesis-unit-19/genesis-unit-19" style="left: 297px; top: 513px;">U19</a>
-        
-        <!-- Exodus - Top center -->
-        <div class="book" style="left: 486px; top: 27px; width: 297px; height: 297px; border: 3px solid #f0b070; background-color: rgba(240, 176, 112, 0.1);"></div>
-        <a class="book-title" href="/torah-weave/Exodus/exodus-map/exodus-map" style="left: 486px; top: 0px; width: 297px; background-color: #f0b070;">EXODUS</a>
-        
-        <!-- Exodus Units -->
-        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-1/exodus-unit-1" style="left: 513px; top: 54px;">U1</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-2/exodus-unit-2" style="left: 567px; top: 54px;">U2</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-3/exodus-unit-3" style="left: 513px; top: 108px;">U3</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-4/exodus-unit-4" style="left: 567px; top: 108px;">U4</a>
-        <a class="unit color-ffe6e6 special" href="/torah-weave/Exodus/exodus-unit-5/exodus-unit-5" style="left: 621px; top: 81px;">U5</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-6/exodus-unit-6" style="left: 675px; top: 54px;">U6</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-7/exodus-unit-7" style="left: 729px; top: 54px;">U7</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-8/exodus-unit-8" style="left: 675px; top: 108px;">U8</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Exodus/exodus-unit-9/exodus-unit-9" style="left: 729px; top: 108px;">U9</a>
-        <a class="unit color-ffe6e6 special" href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10" style="left: 621px; top: 162px;">U10</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-11/exodus-unit-11" style="left: 513px; top: 216px;">U11</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-12/exodus-unit-12" style="left: 567px; top: 216px;">U12</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-13/exodus-unit-13" style="left: 513px; top: 270px;">U13</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-14/exodus-unit-14" style="left: 567px; top: 270px;">U14</a>
-        <a class="unit color-ffe6e6 special" href="/torah-weave/Exodus/exodus-unit-15/exodus-unit-15" style="left: 621px; top: 243px;">U15</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-16/exodus-unit-16" style="left: 675px; top: 216px;">U16</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-17/exodus-unit-17" style="left: 729px; top: 216px;">U17</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-18/exodus-unit-18" style="left: 675px; top: 270px;">U18</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Exodus/exodus-unit-19/exodus-unit-19" style="left: 729px; top: 270px;">U19</a>
-        
-        <!-- Leviticus - Center -->
-        <div class="book" style="left: 378px; top: 351px; width: 459px; height: 216px; border: 3px solid #80d0a0; background-color: rgba(128, 208, 160, 0.1);"></div>
-        <a class="book-title" href="/torah-weave/Leviticus/leviticus-map/leviticus-map" style="left: 378px; top: 351px; width: 459px; background-color: #80d0a0;">LEVITICUS</a>
-        
-        <!-- Leviticus Units -->
-        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1" style="left: 405px; top: 405px;">U1</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2" style="left: 405px; top: 459px;">U2</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3" style="left: 405px; top: 513px;">U3</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4" style="left: 459px; top: 405px;">U4</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-5/leviticus-unit-5" style="left: 459px; top: 459px;">U5</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-6/leviticus-unit-6" style="left: 459px; top: 513px;">U6</a>
-        <a class="unit color-f0f0f0" href="/torah-weave/Leviticus/leviticus-unit-7/leviticus-unit-7" style="left: 513px; top: 405px;">U7</a>
-        <a class="unit color-f0f0f0" href="/torah-weave/Leviticus/leviticus-unit-8/leviticus-unit-8" style="left: 513px; top: 459px;">U8</a>
-        <a class="unit color-f0f0f0" href="/torah-weave/Leviticus/leviticus-unit-9/leviticus-unit-9" style="left: 513px; top: 513px;">U9</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10" style="left: 567px; top: 405px;">U10</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-11/leviticus-unit-11" style="left: 567px; top: 459px;">U11</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-12/leviticus-unit-12" style="left: 567px; top: 513px;">U12</a>
-        <a class="unit color-ffe6e6 special" href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13" style="left: 621px; top: 459px;">U13</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-14/leviticus-unit-14" style="left: 675px; top: 405px;">U14</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-15/leviticus-unit-15" style="left: 675px; top: 459px;">U15</a>
-        <a class="unit color-d4d4ff" href="/torah-weave/Leviticus/leviticus-unit-16/leviticus-unit-16" style="left: 675px; top: 513px;">U16</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-17/leviticus-unit-17" style="left: 729px; top: 405px;">U17</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-18/leviticus-unit-18" style="left: 729px; top: 459px;">U18</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Leviticus/leviticus-unit-19/leviticus-unit-19" style="left: 729px; top: 513px;">U19</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-20/leviticus-unit-20" style="left: 783px; top: 405px;">U20</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-21/leviticus-unit-21" style="left: 783px; top: 459px;">U21</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22" style="left: 783px; top: 513px;">U22</a>
-        
-        <!-- Numbers - Bottom center -->
-        <div class="book" style="left: 486px; top: 621px; width: 297px; height: 297px; border: 3px solid #f0b070; background-color: rgba(240, 176, 112, 0.1);"></div>
-        <a class="book-title" href="/torah-weave/Numbers/numbers-map/numbers-map" style="left: 486px; top: 594px; width: 297px; background-color: #f0b070;">NUMBERS</a>
-        
-        <!-- Numbers Units -->
-        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-1/numbers-unit-1" style="left: 513px; top: 702px;">U1</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-2/numbers-unit-2" style="left: 513px; top: 756px;">U2</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-3/numbers-unit-3" style="left: 513px; top: 810px;">U3</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-4/numbers-unit-4" style="left: 567px; top: 648px;">U4</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-5/numbers-unit-5" style="left: 567px; top: 864px;">U5</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-6/numbers-unit-6" style="left: 621px; top: 648px;">U6</a>
-        <a class="unit color-ffe6e6 special" href="/torah-weave/Numbers/numbers-unit-7/numbers-unit-7" style="left: 621px; top: 756px;">U7</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-8/numbers-unit-8" style="left: 621px; top: 864px;">U8</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-9/numbers-unit-9" style="left: 675px; top: 648px;">U9</a>
-        <a class="unit color-c8e6d2" href="/torah-weave/Numbers/numbers-unit-10/numbers-unit-10" style="left: 675px; top: 864px;">U10</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-11/numbers-unit-11" style="left: 729px; top: 702px;">U11</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-12/numbers-unit-12" style="left: 729px; top: 756px;">U12</a>
-        <a class="unit color-ffccaa" href="/torah-weave/Numbers/numbers-unit-13/numbers-unit-13" style="left: 729px; top: 810px;">U13</a>
-        
-        <!-- Deuteronomy - Right side -->
-        <div class="book" style="left: 864px; top: 351px; width: 270px; height: 216px; border: 3px solid #7ab0f7; background-color: rgba(122, 176, 247, 0.1);"></div>
-        <a class="book-title" href="/torah-weave/Deuteronomy/deuteronomy-map/deuteronomy-map" style="left: 864px; top: 351px; width: 270px; background-color: #7ab0f7;">DEUTERONOMY</a>
-        
-        <!-- Deuteronomy Units -->
-        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-1/deuteronomy-unit-1" style="left: 891px; top: 405px;">U1</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-2/deuteronomy-unit-2" style="left: 918px; top: 405px;">U2</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-3/deuteronomy-unit-3" style="left: 891px; top: 459px;">U3</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-4/deuteronomy-unit-4" style="left: 918px; top: 459px;">U4</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-5/deuteronomy-unit-5" style="left: 891px; top: 513px;">U5</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-6/deuteronomy-unit-6" style="left: 918px; top: 513px;">U6</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-7/deuteronomy-unit-7" style="left: 972px; top: 405px;">U7</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-8/deuteronomy-unit-8" style="left: 972px; top: 459px;">U8</a>
-        <a class="unit color-e6ffee" href="/torah-weave/Deuteronomy/deuteronomy-unit-9/deuteronomy-unit-9" style="left: 972px; top: 513px;">U9</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-10/deuteronomy-unit-10" style="left: 1026px; top: 405px;">U10</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-11/deuteronomy-unit-11" style="left: 1026px; top: 459px;">U11</a>
-        <a class="unit color-d4f2ff" href="/torah-weave/Deuteronomy/deuteronomy-unit-12/deuteronomy-unit-12" style="left: 1026px; top: 513px;">U12</a>
-        <a class="unit color-ffe6e6 special" href="/torah-weave/Deuteronomy/deuteronomy-unit-13/deuteronomy-unit-13" style="left: 1080px; top: 459px;">U13</a>
-    </div>
-    </div>
 
-    <aside class="citation-box" style="max-width: 800px; margin: 30px auto;">
-        <strong>How to cite this map:</strong> Torah Weave Project. "Torah Weave Map." <em>Torah Weave</em>, https://chaver.com/torah-weave/. Accessed [date].
-    </aside>
-
-</article>
-
-    <hr style="max-width: 800px; margin: 60px auto 40px; border: none; border-top: 2px solid #ccc;">
-
-    <div class="commentary-wrapper" id="comprehensive-guide">
 <h1>Understanding the Torah Weave Map: A Comprehensive Guide</h1>
-
 <p>This guide introduces the Torah Weave approach to understanding the structure of the five books of the Torah. Rather than viewing the Torah as merely a sequential collection of narratives and laws, the Torah Weave perspective reveals an intentionally designed literary framework with meaningful patterns that can be recognized visually.</p>
-
-<p>By examining the intricate connections between the books and their constituent units, we'll explore how the Torah functions like a woven tapestry with both horizontal and vertical threads creating a sophisticated structure. This guide will help you navigate the <a href="/torah-weave/">Torah Weave Map</a> and understand its implications for interpretation.</p>
+<p>By examining the intricate connections between the books and their constituent units, we explore how the Torah functions like a woven tapestry with both horizontal and vertical threads creating a sophisticated structure.</p>
 
 <h2>Table of Contents</h2>
+<ol><li><a href="#basic-structure">The Basic Structure: Five Books, 86 Units</a></li>
+<li><a href="#color-coding">Color Coding in the Torah Map</a></li>
+<li><a href="#understanding-models">Two Models of Understanding</a></li>
+<li><a href="#thread-significance">The Significance of the Threads</a></li>
+<li><a href="#complete-tapestry">The Complete Torah Tapestry</a></li>
+<li><a href="#independent-units">Independent Units: Integration Points</a></li>
+<li><a href="#leviticus-structure">The Concentric Structure of Leviticus</a></li>
+<li><a href="#concentric-circles">The Five Concentric Circles</a></li>
+<li><a href="#creation-paradigm">The Creation Paradigm in Torah Structure</a></li>
+<li><a href="#contexts">Multiple Contexts of Interpretation</a></li>
+<li><a href="#experiential-journey">The Experiential Journey</a></li>
+<li><a href="#integrated-whole">The Torah as Integrated Whole</a></li></ol>
 
-<ol class="toc-list">
-    <li><a href="#basic-structure">The Basic Structure: Five Books, 86 Units</a></li>
-    <li><a href="#color-coding">Color Coding in the Torah Map</a></li>
-    <li><a href="#understanding-models">Two Models of Understanding</a>
-        <ul>
-            <li><a href="#weave-model">The Weave Arrangement: Vertical and Horizontal Threads</a></li>
-            <li><a href="#chariot-model">The Chariot Arrangement: Based on Ezekiel's Vision</a></li>
-        </ul>
-    </li>
-    <li><a href="#thread-significance">The Significance of the Threads</a>
-        <ul>
-            <li><a href="#horizontal-thread">Horizontal Thread (Genesis-Leviticus-Deuteronomy)</a></li>
-            <li><a href="#vertical-thread">Vertical Thread (Exodus-Leviticus-Numbers)</a></li>
-        </ul>
-    </li>
-    <li><a href="#complete-tapestry">The Complete Torah Tapestry</a></li>
-    <li><a href="#independent-units">Independent Units: Integration Points</a></li>
-    <li><a href="#leviticus-structure">The Concentric Structure of Leviticus</a></li>
-    <li><a href="#concentric-circles">The Five Concentric Circles</a></li>
-    <li><a href="#creation-paradigm">The Creation Paradigm in Torah Structure</a></li>
-    <li><a href="#contexts">Multiple Contexts of Interpretation</a></li>
-    <li><a href="#experiential-journey">The Experiential Journey</a></li>
-    <li><a href="#integrated-whole">The Torah as Integrated Whole</a></li>
-</ol>
-
-
-<!-- SECTION 1 -->
 <h2 id="basic-structure">1. The Basic Structure: Five Books, 86 Units</h2>
+<p>The Torah consists of five books (Genesis, Exodus, Leviticus, Numbers, and Deuteronomy), which are divided into a total of 86 units:</p>
+<ul><li>Genesis: 19 units</li><li>Exodus: 19 units</li><li>Leviticus: 22 units</li><li>Numbers: 13 units</li><li>Deuteronomy: 13 units</li></ul>
+<p>These units are non-linear, two-dimensional constructs best understood as tables or weaves. Each unit contains internal structures with rows and columns that create a coordinate system of meaning.</p>
+<p>There is a numerical symmetry in this distribution. The outer books of the horizontal thread (Genesis and Deuteronomy) together contain exactly 32 units (19 + 13), and the outer books of the vertical thread (Exodus and Numbers) also contain exactly 32 units (19 + 13), with Leviticus and its 22 units forming the central hub where both threads intersect.</p>
 
-<p>The Torah consists of five books (Genesis, Exodus, Leviticus, Numbers, and Deuteronomy), which are divided into a total of 86 units. These units represent coherent textual segments that form the building blocks of the Torah's structure:</p>
-
-<ul>
-    <li>Genesis: 19 units</li>
-    <li>Exodus: 19 units</li>
-    <li>Leviticus: 22 units</li>
-    <li>Numbers: 13 units</li>
-    <li>Deuteronomy: 13 units</li>
-</ul>
-
-<p>These units aren't merely sequential blocks of text but are non-linear, two-dimensional constructs best understood as tables or weaves. Each unit contains internal structures with rows and columns that create a coordinate system of meaning. This tabular format creates multiple levels of context within which any given passage must be interpreted.</p>
-
-<p>There is a numerical symmetry in this distribution. The outer books of the horizontal thread (Genesis and Deuteronomy) together contain exactly 32 units (19 + 13), and the outer books of the vertical thread (Exodus and Numbers) also contain exactly 32 units (19 + 13). This balance emphasizes the deliberate design of the Torah structure, with Leviticus and its 22 units forming the central hub where both threads intersect.</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 2 -->
 <h2 id="color-coding">2. Color Coding in the Torah Map</h2>
+<p><strong>Genesis &amp; Deuteronomy</strong> &mdash; cosmic and political order as the bookends of the Torah.</p>
+<p><strong>Exodus &amp; Numbers</strong> &mdash; journey narratives with supernatural elements.</p>
+<p><strong>Leviticus</strong> &mdash; holiness and the divine presence at the center.</p>
 
-<p>The colors in the <a href="/torah-weave/">Torah Map</a> visually represent key connections and relationships:</p>
-
-<p><strong>Genesis &amp; Deuteronomy</strong> &mdash; These books establish cosmic and political order as the bookends of the Torah.</p>
-
-<p><strong>Exodus &amp; Numbers</strong> &mdash; These books contain journey narratives with supernatural elements.</p>
-
-<p><strong>Leviticus</strong> &mdash; This central book focuses on holiness and the divine presence.</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 3 -->
 <h2 id="understanding-models">3. Two Models of Understanding</h2>
+<h3>3.1. The Weave Arrangement</h3>
+<p><strong>Horizontal Thread (Warp):</strong> Genesis &rarr; Leviticus &rarr; Deuteronomy</p>
+<p><strong>Vertical Thread (Weft):</strong> Exodus &rarr; Leviticus &rarr; Numbers</p>
+<p>Leviticus stands at the intersection, belonging to both threads and binding the entire structure together.</p>
+<h3>3.2. The Chariot Arrangement</h3>
+<p>The structure parallels Ezekiel's vision of the divine chariot (Ezekiel 1:10). This arrangement presents the Torah as a literary embodiment of the divine chariot, with Leviticus at the center.</p>
+<p>This motif extends within individual books: <strong>Exodus</strong> has a "wheel within a wheel" structure. <a href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10">Unit 10</a> contains the elders seeing the deity on a sapphire pavement. <strong>Numbers</strong> reflects the camp arrangement. <a href="/torah-weave/Numbers/numbers-unit-7/numbers-unit-7">Unit 7</a> (Korach rebellion) serves as the holy center.</p>
 
-<p>The Torah Map can be understood through two complementary models:</p>
-
-<h3 id="weave-model">3.1. The Weave Arrangement: Vertical and Horizontal Threads</h3>
-
-<p>The Torah Weave Map presents the five books as a woven tapestry with both warp (horizontal) and weft (vertical) threads that intersect and create a unified whole:</p>
-
-<div class="thread-diagram">
-    <p><strong>Horizontal Thread (Warp):</strong> Genesis &rarr; Leviticus &rarr; Deuteronomy</p>
-    <p><strong>Vertical Thread (Weft):</strong> Exodus &rarr; Leviticus &rarr; Numbers</p>
-</div>
-
-<p>Leviticus stands at the intersection point, belonging to both threads and binding the entire structure together.</p>
-
-<h3 id="chariot-model">3.2. The Chariot Arrangement: Based on Ezekiel's Vision</h3>
-
-<p>The structure parallels Ezekiel's vision of the divine chariot with four creatures supporting a throne, as described in Ezekiel 1:10: "As for the likeness of their faces, they four had the face of a man, and the face of a lion, on the right side: and they four had the face of an ox on the left side; they four also had the face of an eagle."</p>
-
-<p>This arrangement presents the Torah as a literary embodiment of the divine chariot, with Leviticus representing the divine presence at the center.</p>
-
-<p>This chariot motif extends within individual books as well:</p>
-
-<ul>
-    <li><strong>Exodus itself</strong> has a "wheel within a wheel" structure, divided into four quadrants (sets A&ndash;D) that mirror the overall chariot design. <a href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10">Unit 10 in Exodus</a> contains the narrative of the elders seeing the deity on a sapphire pavement &mdash; echoing Ezekiel's throne vision.</li>
-    <li><strong>Numbers</strong> is structured to reflect the arrangement of Israel's desert camp, with the tribes positioned in groups of three around the tabernacle. As Ibn Ezra comments on Numbers 2:2, "The Israelites encamp around the Tent of Meeting in the same pattern as the four creatures that Ezekiel saw in his vision." <a href="/torah-weave/Numbers/numbers-unit-7/numbers-unit-7">Unit 7</a> (containing the Korach rebellion) serves as the holy center, focusing on the question of who should approach the sacred space.</li>
-</ul>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 4 -->
 <h2 id="thread-significance">4. The Significance of the Threads</h2>
+<h3>4.1. Horizontal Thread (Genesis-Leviticus-Deuteronomy)</h3>
+<p>Functions as a vast timeline from creation to Israel's distant future. Spans thousands of years. Establishes natural foundations. Contains fewer supernatural elements.</p>
+<h3>4.2. Vertical Thread (Exodus-Leviticus-Numbers)</h3>
+<p>Connected through content continuity &mdash; Israel's journey from Egypt through the wilderness. Strongly linked through the Tabernacle theme. Focuses on just 40 years. Contains all major miracles.</p>
+<p>This contrast in timescales creates a unique literary effect where the vertical thread serves as a magnifying lens within the broader panorama of the horizontal thread.</p>
 
-<p>The horizontal and vertical threads represent fundamentally different aspects of the divine-human relationship and operate on contrasting timescales:</p>
+<h2 id="complete-tapestry">5. The Complete Torah Tapestry</h2>
+<h3>Horizontal Thread Books</h3>
+<p>Linked through triads. In Genesis each row represents a conceptual movement:</p>
+<ul><li><strong>Row 1 (Birth/Creation):</strong> YHWH &mdash; transcendence, beginnings, blessing</li>
+<li><strong>Row 2 (Development):</strong> Both YHWH and Elohim &mdash; interface</li>
+<li><strong>Row 3 (Death/Closure):</strong> Elohim &mdash; immanence, limitation, death</li></ul>
+<p>In Genesis the orientation goes above-to-below. In Deuteronomy it inverts: below-to-above. Leviticus pivots at Unit 13, serving as the locking mechanism between these oppositely oriented books.</p>
+<h3>Vertical Thread Books</h3>
+<p>Connected through content continuity and the Tabernacle theme, creating the foundation for the five concentric rings.</p>
 
-<h3 id="horizontal-thread">4.1. Horizontal Thread (Genesis-Leviticus-Deuteronomy)</h3>
-
-<ul>
-    <li>Functions as a vast timeline from creation to Israel's distant future after dispersion</li>
-    <li>Spans thousands of years of history and prophecy</li>
-    <li>Establishes the natural foundations of creation</li>
-    <li>Contains fewer supernatural elements</li>
-    <li>Represents the created order and natural world</li>
-</ul>
-
-<p>The timeline aspect of this horizontal thread is particularly noteworthy as it frames the entire Torah narrative within cosmic history, from the creation of the world to prophecies of Israel's future beyond the immediate narrative.</p>
-
-<h3 id="vertical-thread">4.2. Vertical Thread (Exodus-Leviticus-Numbers)</h3>
-
-<p>While the horizontal books are linked primarily through structural similarities (as we see below in section 5), the vertical books are connected through content continuity. They form the central narrative of Israel's journey from Egypt through the wilderness, containing supernatural elements.</p>
-
-<p>These books are strongly linked through the Tabernacle theme that begins in the second half of Exodus, continues through all of Leviticus, and extends into the beginning of Numbers. This Tabernacle connection creates the foundation for the five concentric rings theme that mirrors the physical arrangement of the Israelite camp in the wilderness.</p>
-
-<p>Key characteristics of the vertical thread:</p>
-
-<ul>
-    <li>Focuses intensely on just 40 years of Israel's journey</li>
-    <li>Provides a concentrated "close-up" of the wilderness period</li>
-    <li>Contains all major miracles and wonders</li>
-    <li>Features divine appearances in clouds, fire, and smoke</li>
-    <li>Represents the supernatural breaking into the natural world</li>
-</ul>
-
-<p>This contrast in timescales &mdash; millennia versus decades &mdash; creates a unique literary effect where the vertical thread serves as a magnifying lens examining a period within the broader historical panorama of the horizontal thread.</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 5 -->
-<h2 id="complete-tapestry">5. The Complete Torah Tapestry: Horizontal and Vertical Connections</h2>
-
-<p>The Torah's design becomes fully apparent when you examine how the five books interlock through both structural and thematic connections, creating an integrated whole that resembles a woven tapestry.</p>
-
-<h3>Horizontal Thread Books (Genesis-Leviticus-Deuteronomy)</h3>
-
-<p>These three books are linked through their shared structural framework based on triads. All three books utilize the same triadic organization principle to form their unit groupings. This creates three "warp threads" that stretch horizontally across these books, providing structural continuity.</p>
-
-<p>In Genesis, each row represents a clear conceptual movement:</p>
-
-<ul>
-    <li><strong>Row 1 (Birth/Creation):</strong> Units addressing beginnings, creation, and origins across all narrative cycles</li>
-    <li><strong>Row 2 (Development):</strong> Units depicting complex development, testing, and growth</li>
-    <li><strong>Row 3 (Death/Closure):</strong> Units bringing resolution, closure, and fulfillment</li>
-</ul>
-
-<p>Most notably, divine names follow a consistent pattern that clarifies the "above" and "below" orientation in Genesis:</p>
-
-<ul>
-    <li><strong>"Above" (Row 1):</strong> Units in this row (5, 6, 11, 12, 17) use predominantly the divine name YHWH, associated with transcendence, beginnings, generations, and expansive blessing</li>
-    <li><strong>"Below" (Row 3):</strong> Units in this row (9, 10, 15, 16, 19) use almost exclusively the divine name Elohim, associated with immanence, limitation, fear, and death</li>
-    <li><strong>"Middle" (Row 2):</strong> Units in this row (7, 8, 13, 14, 18) use both YHWH and Elohim, creating an interface between transcendent and immanent aspects of divinity</li>
-</ul>
-
-<p>A key insight into the Torah's structure is the orientation within these triads. In Genesis and the first half of Leviticus, the first unit of each triad is oriented "above" (associated with transcendence) and the third unit "below" (associated with immanence). After Leviticus Unit 13, this orientation reverses. In Deuteronomy, the first unit of each triad is oriented "below" and the third unit "above" &mdash; the opposite of Genesis.</p>
-
-<h3>Triad Orientations Across the Torah</h3>
-
-<table class="orientation-table">
-    <thead>
-        <tr>
-            <th>Genesis</th>
-            <th>Leviticus (First Half)</th>
-            <th></th>
-            <th>Leviticus (Second Half)</th>
-            <th>Deuteronomy</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>First Unit: Above (YHWH)</td>
-            <td>First Unit: Above</td>
-            <td rowspan="3" style="text-align:center; font-weight:bold;">Unit 13<br>(Pivot)</td>
-            <td>First Unit: Below</td>
-            <td>First Unit: Below</td>
-        </tr>
-        <tr>
-            <td>Second Unit: Middle (YHWH+Elohim)</td>
-            <td>Second Unit: Middle</td>
-            <td>Second Unit: Middle</td>
-            <td>Second Unit: Middle</td>
-        </tr>
-        <tr>
-            <td>Third Unit: Below (Elohim)</td>
-            <td>Third Unit: Below</td>
-            <td>Third Unit: Above</td>
-            <td>Third Unit: Above</td>
-        </tr>
-    </tbody>
-</table>
-
-<p>Leviticus serves as a structural locking mechanism between these oppositely oriented books. The first half of Leviticus (before Unit 13) has its triads oriented like those in Genesis, while the second half has triads oriented like those in Deuteronomy. This creates a transition between the two books, allowing Leviticus to function as both the conclusion of the Genesis pattern and the beginning of the Deuteronomy pattern.</p>
-
-<h3>Vertical Thread Books (Exodus-Leviticus-Numbers)</h3>
-
-<p>While the horizontal books are linked primarily through structural similarities, the vertical books are connected through content continuity. They form the central narrative of Israel's journey from Egypt through the wilderness, containing supernatural elements.</p>
-
-<p>These books are strongly linked through the Tabernacle theme that begins in the second half of Exodus, continues through all of Leviticus, and extends into the beginning of Numbers. This Tabernacle connection creates the foundation for the five concentric rings theme that mirrors the physical arrangement of the Israelite camp in the wilderness (see <a href="#concentric-circles">section 8</a>).</p>
-
-<p>This "weft thread" creates a concentrated narrative lens that examines a 40-year period within the broader historical panorama of the horizontal thread.</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 6 -->
 <h2 id="independent-units">6. Independent Units: The Key to Integration</h2>
+<h3>Horizontal Thread</h3>
+<ul><li><a href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4">Genesis Unit 4</a> (Tower of Babel): beginning</li>
+<li><a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13">Leviticus Unit 13</a>: center of the Torah</li>
+<li><a href="/torah-weave/Deuteronomy/deuteronomy-unit-13/deuteronomy-unit-13">Deuteronomy Unit 13</a>: end</li></ul>
+<h3>Vertical Thread</h3>
+<ul><li>Exodus Units <a href="/torah-weave/Exodus/exodus-unit-5/exodus-unit-5">5</a>, <a href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10">10</a>, <a href="/torah-weave/Exodus/exodus-unit-15/exodus-unit-15">15</a>: centers dividing the book</li>
+<li><a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13">Leviticus Unit 13</a>: center of Torah</li>
+<li><a href="/torah-weave/Numbers/numbers-unit-7/numbers-unit-7">Numbers Unit 7</a>: center, holiness of the camp</li></ul>
+<p>These mark the progressive descent of the divine presence: Mount Sinai &rarr; Tabernacle &rarr; the camp itself.</p>
 
-<p>Each book contains specially designated "independent units" that don't belong to the regular pattern of triads. These independent units serve important functions and show meaningful placement patterns that differ between the horizontal and vertical threads:</p>
-
-<h3>In the Horizontal Thread (Genesis-Leviticus-Deuteronomy)</h3>
-
-<ul>
-    <li><strong><a href="/torah-weave/Genesis/genesis-unit-4/genesis-unit-4">Genesis Unit 4</a> (Tower of Babel):</strong> Near the beginning, marking the transition from universal to particular history</li>
-    <li><strong><a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13">Leviticus Unit 13</a>:</strong> At the exact center of the Torah</li>
-    <li><strong><a href="/torah-weave/Deuteronomy/deuteronomy-unit-13/deuteronomy-unit-13">Deuteronomy Unit 13</a>:</strong> At the very end, concluding the Torah with blessings and Moses' farewell</li>
-</ul>
-
-<p>This beginning-middle-end distribution in the horizontal thread follows the logic of a linear narrative that spans vast periods of time.</p>
-
-<h3>In the Vertical Thread (Exodus-Leviticus-Numbers)</h3>
-
-<ul>
-    <li><strong>Exodus Units <a href="/torah-weave/Exodus/exodus-unit-5/exodus-unit-5">5</a>, <a href="/torah-weave/Exodus/exodus-unit-10/exodus-unit-10">10</a>, and <a href="/torah-weave/Exodus/exodus-unit-15/exodus-unit-15">15</a>:</strong> All serve as centers that divide the book into equal segments</li>
-    <li><strong><a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13">Leviticus Unit 13</a>:</strong> The central unit of the entire Torah</li>
-    <li><strong><a href="/torah-weave/Numbers/numbers-unit-7/numbers-unit-7">Numbers Unit 7</a>:</strong> At the center of the book, focusing on the holiness of the camp</li>
-</ul>
-
-<p>The vertical thread's centering of its independent units reflects a different spatial logic &mdash; they can be seen as marking the progressive descent of the divine presence: first up on Mount Sinai (Exodus), then in the Tabernacle (Leviticus), and finally into the camp itself where the earth opens (Numbers).</p>
-
-<p>These independent units lock together the vertical and horizontal threads, creating integration points throughout the structure. Their strategic placement serves as a mechanism for unifying the entire tapestry of the Torah.</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 7 -->
 <h2 id="leviticus-structure">7. The Concentric Structure of Leviticus</h2>
+<p>Three concentric rings centered on Chapter 19 (<a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13">Unit 13</a>): "You shall be holy for I YHWH your Elohim am holy."</p>
+<p>Each ring's first unit matches a Tabernacle entry point: <a href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1">Unit 1</a> = Courtyard altar; <a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4">Unit 4</a> = Holy Place; <a href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10">Unit 10</a> = Holy of Holies.</p>
+<ol><li><strong>Outer Ring</strong> (Units 1&ndash;3, 20&ndash;22): <em>place</em> &mdash; Courtyard</li>
+<li><strong>Middle Ring</strong> (Units 4&ndash;6, 17&ndash;19): <em>time</em> &mdash; Holy Place</li>
+<li><strong>Inner Ring</strong> (Units 10&ndash;12, 14&ndash;16): <em>person</em> &mdash; Holy of Holies</li></ol>
 
-<p>Leviticus demonstrates structural ingenuity as the central book where the horizontal and vertical threads intersect. The book is organized into three concentric rings centered around Chapter 19 (<a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13">Unit 13</a>), which contains the command "You shall be holy for I YHWH your Elohim am holy."</p>
+<h2 id="concentric-circles">8. The Five Concentric Circles</h2>
+<p>The vertical thread creates five concentric circles:</p>
+<ol><li>Historical narrative (Exodus 1&ndash;10, Numbers 4&ndash;13)</li>
+<li>Tabernacle narrative (Exodus 11&ndash;19, Numbers 1&ndash;3)</li>
+<li>Outer ring of Leviticus (Courtyard)</li>
+<li>Middle ring of Leviticus (Holy Place)</li>
+<li>Inner ring of Leviticus (Holy of Holies)</li></ol>
+<p>This mirrors the Israelite camp in the wilderness.</p>
 
-<p>The first unit of each ring corresponds precisely with the actual entry points into the respective sections of the Tabernacle. <a href="/torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1">Unit 1</a> (burnt offering) is positioned at the altar in the Courtyard where worshippers first entered the sacred space. <a href="/torah-weave/Leviticus/leviticus-unit-4/leviticus-unit-4">Unit 4</a> (priestly ordination) marks the transition into the Holy Place, where only priests could enter. <a href="/torah-weave/Leviticus/leviticus-unit-10/leviticus-unit-10">Unit 10</a> (Day of Atonement) describes the High Priest's entry into the Holy of Holies, the innermost sacred space. This spatial progression reinforces the architectural parallel and creates a path for the reader to symbolically move deeper into the divine presence through the text itself.</p>
-
-<p>These concentric rings directly mirror the physical structure of the Tabernacle itself, creating an architectural parallel that reinforces the experiential journey through the text:</p>
-
-<ol>
-    <li><strong>Outer Ring:</strong> Corresponds to the Courtyard of the Tabernacle. This ring is focused on <em>place</em> &mdash; containing references to locations where the deity revealed himself (Tent of Meeting and Mount Sinai). Just as the Courtyard was the accessible space for ordinary Israelites, these units (1&ndash;3 and 20&ndash;22) address more public and communal concerns.</li>
-    <li><strong>Middle Ring:</strong> Corresponds to the Holy Place (Sanctum). This ring is focused on <em>time</em> &mdash; containing the pattern "seven days&hellip;on the eighth day" which reflects ritual timing and cycles. Like the Holy Place with its ongoing rituals (lampstand, incense, bread), these units (4&ndash;6 and 17&ndash;19) address cyclical and continual aspects of sacred service.</li>
-    <li><strong>Inner Ring:</strong> Corresponds to the Holy of Holies. This ring is focused on <em>person</em> &mdash; characterized by numerous family relationship terms. Just as the Holy of Holies contained the most intimate divine presence, these units (10&ndash;12 and 14&ndash;16) address the closest and most intimate human relationships.</li>
-</ol>
-
-<p>At the very center stands Unit 13 (Chapter 19), which is analogous to the Ark of the Covenant containing the tablets. Just as the Ark held the essence of the covenant at the innermost point of the Tabernacle, Unit 13 contains a central principle of the entire Torah: "You shall be holy for I YHWH your Elohim am holy." This command to imitate divine holiness forms the central axis around which the entire structure revolves.</p>
-
-<p>This architectural correspondence creates an experiential dimension to reading Leviticus. The reader symbolically journeys from the outer courtyard (concerned with public sacrifices and community boundaries), through the Holy Place (focused on the rhythms and cycles of sacred time), and into the Holy of Holies (addressing the most intimate personal and familial relationships). At the center, they encounter the divine imperative to imitate holiness, before returning outward with this transformative principle.</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 8 -->
-<h2 id="concentric-circles">8. The Five Concentric Circles of the Vertical Thread</h2>
-
-<p>While the horizontal thread (Genesis-Leviticus-Deuteronomy) creates a dynamic chronological pattern spanning vast periods of time, the vertical thread (Exodus-Leviticus-Numbers) establishes a spatial, concentric arrangement that mirrors the Israelite camp structure.</p>
-
-<p>This vertical thread creates five concentric circles centered around the divine presence:</p>
-
-<ol>
-    <li><strong>The outermost circle:</strong> The historical narrative (<a href="/torah-weave/Exodus/exodus-map/exodus-map">Exodus</a> Units 1&ndash;10 and <a href="/torah-weave/Numbers/numbers-map/numbers-map">Numbers</a> Units 4&ndash;13) describing Israel's journey</li>
-    <li><strong>The second circle:</strong> The Tabernacle narrative (Exodus Units 11&ndash;19 and Numbers Units 1&ndash;3) containing construction and arrangement instructions</li>
-    <li><strong>The third circle:</strong> The outer ring of <a href="/torah-weave/Leviticus/leviticus-map/leviticus-map">Leviticus</a> (Units 1&ndash;3, 20&ndash;22) corresponding to the Courtyard</li>
-    <li><strong>The fourth circle:</strong> The middle ring of Leviticus (Units 4&ndash;6, 17&ndash;19) corresponding to the Holy Place</li>
-    <li><strong>The innermost circle:</strong> The inner ring of Leviticus (Units 10&ndash;12, 14&ndash;16) corresponding to the Holy of Holies</li>
-</ol>
-
-<p>This five-circle structure directly mirrors the physical arrangement of the Israelite camp in the wilderness. The outer Israelite tribes (described in Numbers) encircle the Levites, who in turn surround the Tabernacle with its outer court, Holy Place, and Holy of Holies. This creates a static, spatial pattern that complements the dynamic, chronological pattern of the horizontal thread.</p>
-
-<p>The vertical thread's concentric arrangement emphasizes sacred space rather than sacred time. While the horizontal books span millennia of history from creation to Israel's prophesied future, the vertical books create a spatial map centered on the divine presence. This spatial arrangement reinforces the concept that approaching the deity involves moving from periphery to center through increasingly sacred spaces.</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 9 -->
 <h2 id="creation-paradigm">9. The Creation Paradigm in Torah Structure</h2>
+<p>The six-day creation account provides a template: two triads (days 1&ndash;3 and 4&ndash;6) forming conceptual pairs. Genesis goes above-to-below; Deuteronomy inverts; Leviticus pivots at Unit 13.</p>
 
-<p>The six-day creation account provides a fundamental template for understanding the structure of Torah books. The days of creation form two triads (days 1&ndash;3 and days 4&ndash;6) that reflect conceptual pairs: one/many, immobile/mobile, named/unnamed.</p>
-
-<p>This pattern is expressed through the consistent arrangement of triads in Genesis, where there is a hierarchical "above" to "below" orientation in each triad. The first unit of each triad relates to concepts of heaven, transcendence, or divine action, while the third unit relates to earth, immanence, or human action. The middle unit typically mediates between these poles.</p>
-
-<p>Deuteronomy inverts this orientation, with its triads going from "below" to "above." Leviticus accommodates both orientations by pivoting at its center, <a href="/torah-weave/Leviticus/leviticus-unit-13/leviticus-unit-13">Unit 13</a> (Chapter 19). The three-tiered hierarchy (celestial/middle/terrestrial) seen in creation is reflected throughout the Torah in each unit-triad's organization, though with different directional alignments in Genesis versus Deuteronomy.</p>
-
-<p>All triads throughout the Torah are paired like the creation triads, forming complementary sets that mirror and balance each other. The only exception is the impurities triad in Leviticus, which stands outside this paired structure, reinforcing its function as a distinct category.</p>
-
-<p>In Leviticus, these pairs are expressed through the unit-triads, with the first triad of each ring focusing on individuals or singular concepts and the second triad focusing on communal or multiple aspects. The same triadic structure appears in Genesis, where the book contains six unit-triads plus an independent unit (the Tower of Babel). These triads demonstrate deliberate and consistent structural design across the Torah.</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 10 -->
 <h2 id="contexts">10. Multiple Contexts of Interpretation</h2>
+<p>Every passage must be read within: its unit, its book, its thread, and the entire Torah. The Day of Atonement laws function within both threads and multiple rings simultaneously.</p>
 
-<p>The Torah Weave structure reveals that any given passage must be interpreted within multiple overlapping contexts:</p>
-
-<ul>
-    <li><strong>Within its unit:</strong> The immediate literary context</li>
-    <li><strong>Within its book:</strong> The book-level structural pattern</li>
-    <li><strong>Within its thread:</strong> Either the horizontal or vertical thread context</li>
-    <li><strong>Within the entire Torah:</strong> The complete tapestry</li>
-</ul>
-
-<p>This multi-contextual approach enriches our understanding by revealing connections and meanings that aren't visible when passages are read in isolation. The <a href="/torah-weave/">Torah Weave Map</a> helps visualize these multiple contexts and their interconnections.</p>
-
-<p>For example, the laws in Leviticus concerning the Day of Atonement (chapter 16) must be understood both within their immediate context and as part of the inner ring of Leviticus focused on person/family relationships. They also function within both the vertical thread (connected to the tabernacle instructions in Exodus) and the horizontal thread (connected conceptually to covenant ceremonies in Genesis and Deuteronomy).</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 11 -->
 <h2 id="experiential-journey">11. The Experiential Journey</h2>
+<p>Reading Leviticus follows the High Priest's journey on the Day of Atonement &mdash; outer court through sanctum to Holy of Holies and back. The focal point: Leviticus 19 with its call to <em>imitatio dei</em>.</p>
 
-<p>The Torah Weave Map illustrates how the text was designed not just for intellectual comprehension but for experiential transformation. The physical journey through the Tabernacle serves as a spatial metaphor for the reader's movement through the text.</p>
-
-<p>Reading Leviticus, in particular, follows the High Priest's journey on the Day of Atonement, progressing from the outer court (focused on individual concerns) through the sanctum and to the Holy of Holies (encountering the divine presence), and then returning to the community with a reorientation toward social concerns.</p>
-
-<p>This journey begins in the outer ring (Units 1&ndash;3) with private sacrifices and individual concerns, moves through the middle ring (Units 4&ndash;6) with its focus on temporal cycles, and reaches the inner ring (Units 10&ndash;12) with its exploration of family relationships. The journey then reaches its apex at Unit 13 (Chapter 19) with its central command to imitate divine holiness, before returning through the symmetric units on the other side.</p>
-
-<p>The focal point of this journey is Leviticus 19 (Unit 13) with its call to <em>imitatio dei</em>: "You shall be holy for I YHWH your Elohim am holy." This central command, positioned at the heart of the book's structure, suggests that the purpose of the journey is transformation &mdash; turning from self-concern toward community responsibility.</p>
-
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- SECTION 12 -->
 <h2 id="integrated-whole">12. The Torah as Integrated Whole</h2>
-
-<p>The <a href="/torah-weave/">Torah Weave Map</a> reveals that the Torah was designed as a single, integrated composition with symmetry and purpose. The weaving together of the horizontal thread and the vertical thread creates a unified tapestry that presents a complete vision.</p>
-
-<p>The contrasting orientations in Genesis and Deuteronomy &mdash; with Leviticus serving as the pivoting mechanism between them &mdash; suggests a deliberate progression. Genesis begins with an orientation from above to below (first to third unit in each triad), while Deuteronomy inverts this pattern with an orientation from below to above. This spatial reversal illustrates the Torah's overarching narrative movement.</p>
-
-<p>This map enables you to read beyond the linear sequence of stories and laws to discover a text that uses its very structure to communicate. As Jacob Milgrom noted, "structure is theology." The book's concentric ring format communicates through its very arrangement.</p>
-
+<p>The Torah was designed as a single, integrated composition. As Jacob Milgrom noted, "structure is theology."</p>
 <p><em>"Perhaps the study of the Torah as a tapestry is meant to present the student with a path that leads to the Edenic integration of YHWH Elohim."</em></p>
 
-<p class="back-to-top"><a href="#basic-structure">&uarr; Back to Top</a></p>
-
-
-<!-- CITATION BOX -->
 <div class="citation-box" style="border:1px solid #ccc; padding:1.2em; margin:2em 0; background:#fafafa;">
-    <p><strong>How to cite this guide:</strong> Kline, Moshe. "Understanding the Torah Weave Map: A Comprehensive Guide." <em>Torah Weave</em>, <a href="https://chaver.com/torah-weave/full-torah-map-2/">https://chaver.com/torah-weave/full-torah-map-2/</a>. Accessed [date].</p>
-    <p style="margin-top:0.8em;"><strong>About this project:</strong> The Woven Torah hypothesis proposes that the Torah's 86 literary units are composed as spatial grids &mdash; two-dimensional tables where row-and-column intersections generate meaning unavailable from linear reading. This approach has been published in the <em>Journal of Biblical Literature</em> (2025), the <em>Journal of Hebrew Scriptures</em> (2008), and in the SBL Press volume <em>Current Issues in Priestly and Related Literature</em> (2015). The methodology was independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021).</p>
+<p><strong>How to cite:</strong> Kline, Moshe. "Understanding the Torah Weave Map." <em>Torah Weave</em>, <a href="https://chaver.com/torah-weave/full-torah-map-2/">chaver.com/torah-weave/full-torah-map-2/</a>.</p>
+<p><strong>About:</strong> The Woven Torah hypothesis proposes that the Torah's 86 literary units are composed as spatial grids. Published in <em>JBL</em> (2025), <em>JHS</em> (2008), SBL Press (2015). Validated by Paul Hocking (University of Chester, 2021).</p>
 </div>
-    </div>
+
+
+        </div>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-container">
@@ -833,8 +370,8 @@
                         <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
                         <li><a href="/Torah-New/English/Articles/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
                         <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
-                        <li><a href="http://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
-                        <li><a href="http://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -849,7 +386,10 @@
             </div>
         </div>
     </footer>
-
+    
+    <!-- ==========================================
+         SITE NAV SCRIPT
+         ========================================== -->
     <script>
         (function() {
             var toggle = document.querySelector('.nav-toggle');
@@ -901,5 +441,8 @@
             });
         })();
     </script>
+
+    
 </body>
+</html>
 </html>
