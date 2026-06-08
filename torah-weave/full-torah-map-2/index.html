@@ -1,46 +1,15 @@
 <!DOCTYPE html>
-<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-06-08T13:47:37Z -->
+<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-06-08T13:50:47Z -->
 <!-- nav-updates-2026 -->
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KNYXKY3VV1');
-</script>
-<!-- rest of head content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- E-1: Site-wide SEO/AEO boilerplate (canonical entity references) -->
-    <!-- Per-page canonical, og:url, og:title, og:description, og:type are E-2-injected just above this block -->
-    <meta property="og:site_name" content="Chaver.com">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
-    <meta property="og:image:secure_url" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:alt" content="The Woven Texts Project — Moshe Kline — chaver.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
-    <meta name="author" content="Moshe Kline">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {"@type": "WebSite", "@id": "https://chaver.com/#website"},
-        {"@type": "Organization", "@id": "https://chaver.com/#organization"},
-        {"@type": "Person", "@id": "https://chaver.com/#moshe-kline"}
-      ]
-    }
-    </script>
-    <!-- /E-1 -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-    <title>Torah Weave Map &amp; Commentary: A Comprehensive Guide | Chaver.com</title>
+    <title>Torah Weave Map &amp; Commentary | Chaver.com</title>
     
     <link rel="canonical" href="https://chaver.com/torah-weave/full-torah-map-2/">
     <meta name="description" content="Interactive Torah Weave Map showing 86 literary units across five books, plus a comprehensive guide to the horizontal and vertical threads, concentric rings, and creation paradigm.">
@@ -48,11 +17,22 @@
     <meta property="og:description" content="Interactive map of the Torah's woven literary structure with a comprehensive guide.">
     <meta property="og:url" content="https://chaver.com/torah-weave/full-torah-map-2/">
     <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Chaver.com">
+    <meta name="author" content="Moshe Kline">
 
-    <!-- Link to site-wide CSS -->
+    <!-- Site-wide CSS -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+
+    <style>
+    /* === OVERRIDE main.css body constraints for this page === */
+    body {
+        max-width: none;
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    /* === MAP-SPECIFIC STYLES (from original standalone page) === */
     
-<style>
         /* Override any body constraints */
         html, body {
             margin: 0;
@@ -213,57 +193,9 @@
             line-height: 1.6;
             color: #2c3e50;
         }
-    </style>
+    
 
-    <style>
-    /* Template chrome layout */
-    header.site-header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    .main-nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0.3rem 20px;
-    }
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-    }
-    nav a {
-        text-decoration: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    footer.site-footer {
-        margin-top: 80px;
-        padding: 40px 20px 20px;
-    }
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
-        margin-bottom: 30px;
-    }
-    .footer-section ul {
-        list-style: none;
-        padding: 0;
-    }
-    .footer-bottom {
-        text-align: center;
-        padding-top: 20px;
-    }
-
-    /* Commentary section */
+    /* === COMMENTARY STYLES === */
     .commentary-wrapper {
         max-width: 900px;
         margin: 0 auto;
@@ -306,43 +238,6 @@
         margin: 1.5em 0;
         font-size: 0.95em;
         line-height: 1.8;
-    }
-
-    @media (max-width: 768px) {
-        header.site-header {
-            position: relative;
-        }
-        nav ul {
-            display: none;
-            flex-direction: column;
-            gap: 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
-        nav ul.show {
-            display: flex;
-        }
-        nav li {
-            width: 100%;
-        }
-        nav a {
-            display: block;
-            padding: 1rem;
-        }
-        .footer-content {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-    }
-
-    @media print {
-        header.site-header,
-        footer.site-footer {
-            display: none;
-        }
     }
     </style>
 </head>
