@@ -3990,6 +3990,90 @@ main.content-wrapper:has(.Mesechet) .Perek {
     }
 }
 
+/* ==========================================
+   TORAH WEAVE MAP (full-torah-map-2)
+   ========================================== */
+.map-outer {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+.map-container {
+    width: 1170px;
+    height: 920px;
+    position: relative;
+    margin: 0 auto;
+}
+.map-container .book {
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.map-container .book-genesis,
+.map-container .book-deuteronomy {
+    border: 3px solid #7ab0f7;
+    background: rgba(122, 176, 247, 0.1);
+}
+.map-container .book-exodus,
+.map-container .book-numbers {
+    border: 3px solid #f0b070;
+    background: rgba(240, 176, 112, 0.1);
+}
+.map-container .book-leviticus {
+    border: 3px solid #80d0a0;
+    background: rgba(128, 208, 160, 0.1);
+}
+.map-container .book-title {
+    position: absolute;
+    padding: 5px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    z-index: 2;
+    text-decoration: none;
+    display: block;
+    border-bottom: none;
+}
+.map-container .book-title:hover {
+    opacity: 0.9;
+}
+.map-container .title-genesis,
+.map-container .title-deuteronomy {
+    background: #7ab0f7;
+}
+.map-container .title-exodus,
+.map-container .title-numbers {
+    background: #f0b070;
+}
+.map-container .title-leviticus {
+    background: #80d0a0;
+}
+.map-container .unit {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 11px;
+    z-index: 3;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    border-bottom: none;
+}
+.map-container .unit:hover {
+    transform: scale(1.3);
+    z-index: 4;
+}
+.map-container .unit.special {
+    border: 2px solid #CC0066;
+}
+
 /* ====================================
    END OF MAIN.CSS
    ==================================== */
