@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-06-08T13:43:14Z -->
+<!-- rendered-from: _templates/Academic-Content-EN.html @ 2026-06-08T13:47:37Z -->
 <!-- nav-updates-2026 -->
-<!-- nav-genesis-link-added-2026 -->
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -44,232 +43,190 @@
     <title>Torah Weave Map &amp; Commentary: A Comprehensive Guide | Chaver.com</title>
     
     <link rel="canonical" href="https://chaver.com/torah-weave/full-torah-map-2/">
-<meta name="description" content="Interactive Torah Weave Map showing 86 literary units across five books, plus a comprehensive guide to the horizontal and vertical threads, concentric rings, and creation paradigm.">
-<meta property="og:title" content="Torah Weave Map &amp; Commentary">
-<meta property="og:description" content="Interactive map of the Torah's woven literary structure with a comprehensive guide to its horizontal and vertical threads.">
-<meta property="og:url" content="https://chaver.com/torah-weave/full-torah-map-2/">
-<meta property="og:type" content="article">
-<meta name="twitter:title" content="Torah Weave Map &amp; Commentary">
-<meta name="twitter:description" content="Interactive map and guide to the Torah's woven literary structure.">
+    <meta name="description" content="Interactive Torah Weave Map showing 86 literary units across five books, plus a comprehensive guide to the horizontal and vertical threads, concentric rings, and creation paradigm.">
+    <meta property="og:title" content="Torah Weave Map &amp; Commentary">
+    <meta property="og:description" content="Interactive map of the Torah's woven literary structure with a comprehensive guide.">
+    <meta property="og:url" content="https://chaver.com/torah-weave/full-torah-map-2/">
+    <meta property="og:type" content="article">
 
-<!-- Article schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Torah Weave Map & Commentary: A Comprehensive Guide",
-  "description": "Interactive Torah Weave Map and comprehensive guide explaining how the Torah's five books interlock through horizontal and vertical threads, concentric rings centered on Leviticus, and the creation paradigm.",
-  "author": {
-    "@type": "Person",
-    "name": "Moshe Kline",
-    "@id": "https://chaver.com/#moshe-kline"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "The Woven Texts Project",
-    "@id": "https://chaver.com/#organization"
-  },
-  "mainEntityOfPage": "https://chaver.com/torah-weave/full-torah-map-2/"
-}
-</script>
-
-<!-- BreadcrumbList -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://chaver.com/"},
-    {"@type": "ListItem", "position": 2, "name": "Torah Weave", "item": "https://chaver.com/torah-weave/"},
-    {"@type": "ListItem", "position": 3, "name": "Torah Weave Map & Commentary"}
-  ]
-}
-</script>
-    
-    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <!-- Link to site-wide CSS -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
+<style>
+        /* Override any body constraints */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: none;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdfcf8;
+        }
+        
+        /* Breadcrumb */
+        nav[aria-label=Breadcrumb] {
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        nav[aria-label=Breadcrumb] a {
+            color: #5d87a1;
+            text-decoration: none;
+        }
+        
+        nav[aria-label=Breadcrumb] a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Page header - match Genesis map style */
+        h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #8b7355;
+            padding-bottom: 15px;
+            margin-top: 30px;
+        }
+        
+        .page-intro {
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin: 20px auto 40px;
+            padding: 0 20px;
+            color: #2c3e50;
+        }
+        
+        .page-intro a {
+            color: #5d87a1;
+            text-decoration: none;
+            border-bottom: 1px dotted #5d87a1;
+        }
+        
+        .page-intro a:hover {
+            color: #3d5770;
+            border-bottom: 1px solid #3d5770;
+        }
+        
+        /* Citation box */
+        .citation-box {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        
+        /* Map container - needs specific sizing */
+        .map-outer {
+            width: 100%;
+            background: white;
+            padding: 20px 0;
+        }
+        
+        /* Only add scrolling on smaller screens */
+        @media (max-width: 1250px) {
+            .map-outer {
+                overflow-x: auto;
+            }
+        }
+        
+        .map-container {
+            width: 1170px;
+            height: 900px;
+            position: relative;
+            margin: 0 auto;
+            background-color: white;
+        }
+        
+        .book {
+            position: absolute;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        
+        .book-title {
+            position: absolute;
+            padding: 5px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            z-index: 2;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .book-title:hover {
+            opacity: 0.9;
+        }
+        
+        .unit {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 1px solid rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            z-index: 3;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .unit:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        
+        .unit.special {
+            border: 2px solid #CC0066;
+            width: 23px;
+            height: 23px;
+        }
+        
+        /* Color classes */
+        .color-d4f2ff { background-color: #D4F2FF; }
+        .color-ffe6e6 { background-color: #FFE6E6; }
+        .color-e6ffee { background-color: #E6FFEE; }
+        .color-d4d4ff { background-color: #D4D4FF; }
+        .color-ffccaa { background-color: #FFCCAA; }
+        .color-c8e6d2 { background-color: #C8E6D2; }
+        .color-f0f0f0 { background-color: #F0F0F0; }
+        
+        .page-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+    </style>
+
     <style>
-/* === MAP STYLES === */
-.map-page h1 {
-    font-size: 2.5em;
-    color: #1a1a1a;
-    text-align: center;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #8b7355;
-    padding-bottom: 15px;
-    margin-top: 30px;
-}
-.page-intro {
-    font-size: 1.1em;
-    line-height: 1.8;
-    text-align: center;
-    max-width: 900px;
-    margin: 20px auto 40px;
-    padding: 0 20px;
-    color: #2c3e50;
-}
-.page-intro a {
-    color: #5d87a1;
-    text-decoration: none;
-    border-bottom: 1px dotted #5d87a1;
-}
-.page-intro a:hover {
-    color: #3d5770;
-    border-bottom: 1px solid #3d5770;
-}
-.citation-box {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 0.9em;
-    text-align: center;
-}
-.map-outer {
-    width: 100%;
-    background: white;
-    padding: 20px 0;
-}
-@media (max-width: 1250px) {
-    .map-outer {
-        overflow-x: auto;
-    }
-}
-.map-container {
-    width: 1170px;
-    height: 900px;
-    position: relative;
-    margin: 0 auto;
-    background-color: white;
-}
-.book {
-    position: absolute;
-    z-index: 1;
-    box-sizing: border-box;
-}
-.book-title {
-    position: absolute;
-    padding: 5px 0;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    color: white;
-    z-index: 2;
-    text-decoration: none;
-    display: block;
-}
-.book-title:hover {
-    opacity: 0.9;
-}
-.unit {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border: 1px solid rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 12px;
-    z-index: 3;
-    border-radius: 5px;
-    text-decoration: none;
-    color: black;
-}
-.unit:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-.unit.special {
-    border: 2px solid #CC0066;
-    width: 23px;
-    height: 23px;
-}
-/* Color classes */
-.color-d4f2ff { background-color: #D4F2FF; }
-.color-ffe6e6 { background-color: #FFE6E6; }
-.color-e6ffee { background-color: #E6FFEE; }
-.color-d4d4ff { background-color: #D4D4FF; }
-.color-ffccaa { background-color: #FFCCAA; }
-.color-c8e6d2 { background-color: #C8E6D2; }
-.color-f0f0f0 { background-color: #F0F0F0; }
-
-/* === COMMENTARY STYLES === */
-.toc-list {
-    margin: 1em 0 2em 1.5em;
-}
-.toc-list li {
-    margin-bottom: 0.4em;
-}
-.toc-list ul {
-    margin-top: 0.4em;
-    margin-left: 1.5em;
-}
-.back-to-top {
-    font-size: 0.9em;
-    margin: 1.5em 0;
-}
-.back-to-top a {
-    text-decoration: none;
-}
-.orientation-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5em 0;
-    font-size: 0.95em;
-}
-.orientation-table th,
-.orientation-table td {
-    border: 1px solid #ccc;
-    padding: 0.5em 0.8em;
-    text-align: left;
-}
-.orientation-table th {
-    background-color: #f5f5f5;
-    font-weight: 600;
-}
-.thread-diagram {
-    margin: 1.5em 0;
-    font-size: 0.95em;
-    line-height: 1.8;
-}
-</style>
-    
-    <style type="text/css">
-
-    /* ==========================================
-       CRITICAL DWT LAYOUT STYLES ONLY
-       Everything else comes from main.css
-       ========================================== */
-    
-    /* Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    /* ==========================================
-       HEADER LAYOUT STRUCTURE
-       ========================================== */
-    
+    /* Template chrome layout */
     header.site-header {
         position: sticky;
         top: 0;
         z-index: 1000;
     }
-    
-    /* Navigation Container */
     .main-nav {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0.3rem 20px;
     }
-    
-    /* Navigation List */
     nav ul {
         list-style: none;
         display: flex;
@@ -277,66 +234,84 @@
         align-items: center;
         gap: 2.5rem;
     }
-    
     nav a {
         text-decoration: none;
         padding: 0.25rem 0.75rem;
         border-radius: 4px;
         transition: all 0.3s ease;
     }
-    
-    /* ==========================================
-       MAIN CONTENT AREA LAYOUT
-       ========================================== */
-    
-    main.content-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        min-height: 500px;
-    }
-    
-    /* ==========================================
-       FOOTER LAYOUT STRUCTURE
-       ========================================== */
-    
     footer.site-footer {
         margin-top: 80px;
         padding: 40px 20px 20px;
     }
-    
     .footer-container {
         max-width: 1200px;
         margin: 0 auto;
     }
-    
     .footer-content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 40px;
         margin-bottom: 30px;
     }
-    
     .footer-section ul {
         list-style: none;
         padding: 0;
     }
-    
     .footer-bottom {
         text-align: center;
         padding-top: 20px;
     }
-    
-    /* ==========================================
-       RESPONSIVE LAYOUT BREAKPOINTS
-       ========================================== */
-    
+
+    /* Commentary section */
+    .commentary-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px 40px;
+    }
+    .toc-list {
+        margin: 1em 0 2em 1.5em;
+    }
+    .toc-list li {
+        margin-bottom: 0.4em;
+    }
+    .toc-list ul {
+        margin-top: 0.4em;
+        margin-left: 1.5em;
+    }
+    .back-to-top {
+        font-size: 0.9em;
+        margin: 1.5em 0;
+    }
+    .back-to-top a {
+        text-decoration: none;
+    }
+    .orientation-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5em 0;
+        font-size: 0.95em;
+    }
+    .orientation-table th,
+    .orientation-table td {
+        border: 1px solid #ccc;
+        padding: 0.5em 0.8em;
+        text-align: left;
+    }
+    .orientation-table th {
+        background-color: #f5f5f5;
+        font-weight: 600;
+    }
+    .thread-diagram {
+        margin: 1.5em 0;
+        font-size: 0.95em;
+        line-height: 1.8;
+    }
+
     @media (max-width: 768px) {
-        /* Mobile header adjustments */
         header.site-header {
             position: relative;
         }
-
         nav ul {
             display: none;
             flex-direction: column;
@@ -347,93 +322,31 @@
             right: 0;
             width: 100%;
         }
-        
         nav ul.show {
             display: flex;
         }
-        
         nav li {
             width: 100%;
         }
-        
         nav a {
             display: block;
             padding: 1rem;
         }
-
-        /* Landscape phones - hamburger menu */
-        @media (max-height: 500px) and (orientation: landscape) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 0;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                width: 100%;
-                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav li {
-                width: 100%;
-            }
-            
-            nav a {
-                display: block;
-                padding: 0.75rem 1rem;
-                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
-            }
-            
-            main.content-wrapper {
-                padding: 15px 10px;
-            }
-        }
-        
-        /* Content adjustments */
-        main.content-wrapper {
-            padding: 30px 15px;
-        }
-        
-        /* Footer adjustments */
         .footer-content {
             grid-template-columns: 1fr;
             gap: 30px;
         }
     }
-    
-    @media (max-width: 480px) {
-        main.content-wrapper {
-            padding: 20px 15px;
-        }
-    }
-    
-    /* ==========================================
-       PRINT LAYOUT
-       ========================================== */
-    
+
     @media print {
         header.site-header,
         footer.site-footer {
             display: none;
         }
-        
-        main.content-wrapper {
-            padding: 0;
-            max-width: 100%;
-        }
     }
     </style>
 </head>
 <body>
-    <!-- ==========================================
-         SITE HEADER - FIXED ACROSS ALL PAGES
-         ========================================== -->
     <header class="site-header">
         <div class="nav-row">
             <div class="nav-brand">chaver.com</div>
@@ -492,19 +405,9 @@
             </ul>
         </div>
     </header>
-    <!-- SITE BANNER -->
+<!-- SITE BANNER -->
 <div id="site-banner"></div>
-    <!-- ==========================================
-         MAIN CONTENT AREA - EDITABLE REGION
-         ========================================== -->
-    <main class="content-wrapper">
-        <nav class="breadcrumb">
-    <a href="/">Home</a> &gt;
-    <a href="/torah-weave/">Torah Weave</a> &gt;
-    Torah Weave Map &amp; Commentary
-</nav>
 
-<div class="map-page">
 <article itemscope itemtype="https://schema.org/WebPage">
     <nav aria-label="Breadcrumb">
         <a href="/" rel="home">Home</a> → <span itemprop="name">Torah Weave</span>
@@ -642,12 +545,11 @@
         <strong>How to cite this map:</strong> Torah Weave Project. "Torah Weave Map." <em>Torah Weave</em>, https://chaver.com/torah-weave/. Accessed [date].
     </aside>
 
+</article>
 
-</div>
+    <hr style="max-width: 800px; margin: 60px auto 40px; border: none; border-top: 2px solid #ccc;">
 
-<hr style="max-width: 800px; margin: 40px auto; border: none; border-top: 2px solid #ccc;">
-
-<div id="comprehensive-guide">
+    <div class="commentary-wrapper" id="comprehensive-guide">
 <h1>Understanding the Torah Weave Map: A Comprehensive Guide</h1>
 
 <p>This guide introduces the Torah Weave approach to understanding the structure of the five books of the Torah. Rather than viewing the Torah as merely a sequential collection of narratives and laws, the Torah Weave perspective reveals an intentionally designed literary framework with meaningful patterns that can be recognized visually.</p>
@@ -1003,12 +905,8 @@
     <p><strong>How to cite this guide:</strong> Kline, Moshe. "Understanding the Torah Weave Map: A Comprehensive Guide." <em>Torah Weave</em>, <a href="https://chaver.com/torah-weave/Commentary/Torah%20Map%20Commentary">https://chaver.com/torah-weave/Commentary/Torah%20Map%20Commentary</a>. Accessed [date].</p>
     <p style="margin-top:0.8em;"><strong>About this project:</strong> The Woven Torah hypothesis proposes that the Torah's 86 literary units are composed as spatial grids &mdash; two-dimensional tables where row-and-column intersections generate meaning unavailable from linear reading. This approach has been published in the <em>Journal of Biblical Literature</em> (2025), the <em>Journal of Hebrew Scriptures</em> (2008), and in the SBL Press volume <em>Current Issues in Priestly and Related Literature</em> (2015). The methodology was independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021).</p>
 </div>
-</div>
-    </main>
-    
-    <!-- ==========================================
-         SITE FOOTER - RICH 4-SECTION VERSION
-         ========================================== -->
+    </div>
+
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-content">
@@ -1056,10 +954,7 @@
             </div>
         </div>
     </footer>
-    
-    <!-- ==========================================
-         SITE NAV SCRIPT
-         ========================================== -->
+
     <script>
         (function() {
             var toggle = document.querySelector('.nav-toggle');
@@ -1111,7 +1006,5 @@
             });
         })();
     </script>
-
-    <!-- no page-specific scripts -->
 </body>
 </html>
