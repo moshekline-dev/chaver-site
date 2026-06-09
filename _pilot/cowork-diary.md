@@ -1806,3 +1806,40 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 - Commit + push + purge Cloudflare cache (purge each affected URL; or full-zone purge if simpler).
 - Spot-check live: `chaver.com/Mishnah-New/English/Articles/TheArt-H` should now show the same dropdown nav as the rest of the site, with no visual jump in chrome between this page and (e.g.) `five-pairs-avot-1`.
 - Remaining 135 DWT-marker files (legacy `/Mishnah/` portal, `Pirkei Masechet*` tractate covers, `Seder*.html` covers, `mishnah-viewer.html`, `404.html`) are out of scope here; if a future task wants to migrate them, the same script handles the standard mapping but the legacy `/Mishnah/` portal is intentionally still-served per project knowledge and likely shouldn't be touched.
+
+---
+
+### 2026-06-09 — Torah unit pages: replace plain-text verse insertions with styled (highlighted) content
+
+**What was done:**
+- Replaced plain-text verse insertions (from an earlier session's subagent that incorrectly stripped Word character styles) with properly styled HTML extracted from "The Structured Torah (JPS 1917).docx". The docx has Word character styles (`horizontal1`, `vertical1`, `closure`, `ciasm1`, `ciasm2`, `internalparallel`) that map directly to CSS classes.
+- 6 highlight markers recovered across 5 files: 4 `horizontal1` + 2 `vertical1`.
+- 3 extracts (Num1 4:17-20, Num4 11:23, Deut4 8:19-20) turned out to have no highlight markers in the source either — existing plain text was already correct for those cells.
+
+**Files modified:**
+- `torah-weave/Exodus/exodus-unit-3/exodus-unit-3.html` — verses 7:1-3: added 1 `horizontal1` ("and multiply My signs and My wonders")
+- `torah-weave/Numbers/numbers-unit-1/numbers-unit-1.html` — verses 3:44-51: added 1 `horizontal1` ("Take the Levites instead of all the first-born…")
+- `torah-weave/Numbers/numbers-unit-3/numbers-unit-3.html` — verses 7:18-89: formatting cleanup (no markers in this passage); verses 9:9-14: added 1 `horizontal1` ("so shall he do")
+- `torah-weave/Numbers/numbers-unit-9/numbers-unit-9.html` — verses 20:7-13: added 1 `vertical1` ("the waters of Meribah")
+- `torah-weave/Deuteronomy/deuteronomy-unit-4/deuteronomy-unit-4.html` — verses 7:12-16: added 1 `vertical1` ("multiply thee") + 1 `horizontal1` ("And thou shalt consume all the peoples…")
+
+**Not modified (extract matched existing content):**
+- numbers-unit-1 (4:17-20), numbers-unit-4 (11:23), deuteronomy-unit-4 (8:19-20) — no markers in source docx for these ranges
+
+**Context — earlier in this multi-session audit:**
+- 86 unit pages audited and converted to genesis standard (navigation, labels, structure)
+- Missing verse content recovered from April 5 backup (Lev 14, Lev 18, Deut 1) WITH full highlight markers
+- Never-transcribed cells extracted from docx WITH character styles preserved
+- This entry covers the final step: replacing the plain-text insertions from an earlier subagent that had incorrectly stripped the styles
+
+**Decisions locked:**
+- The docx "The Structured Torah (JPS 1917)" is the authoritative source for verse text + highlight markers for cells not recoverable from backup. NEVER insert plain text from it — always extract with style mapping via `extract_styled.py`.
+- Style map: `{'Verse Number': 'VerseNumber', 'Hebrew Paragraph': 'HebrewParagraph', 'ciasm1': 'ciasm1', 'ciasm2': 'ciasm2', 'closure': 'closure', 'horizontal1': 'horizontal1', 'horizontal2': 'horizontal2', 'horizontal3': 'horizontal3', 'internalparallel': 'internalparallel', 'vertical1': 'vertical1', 'Cell Subdivision': 'CellSubdivision'}`
+
+**Current state:**
+- All 86 Torah unit pages now at genesis standard: correct navigation, labels, structure, and verse content with highlight markers
+- Uncommitted; pending Moshe's review in GitHub Desktop and push
+
+**Next step:**
+- Moshe: review diffs in GitHub Desktop, commit + push, purge Cloudflare cache
+- Spot-check: exodus-unit-3 (7:3 should show blue `horizontal1` on "and multiply My signs and My wonders"), numbers-unit-9 (20:13 should show `vertical1` on "the waters of Meribah")
