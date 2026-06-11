@@ -1,7 +1,7 @@
 # The Torah on the Egyptian Canonical Grid
 ## The Five Books as a Single Compositional Field
 
-**Moshe Kline** Working draft — Part I of IV — revised June 11, 2026 Status: for review; not for circulation
+**Moshe Kline** Working draft — Parts I–III of IV — revised June 11, 2026 Status: for review; not for circulation
 
 ---
 
@@ -152,4 +152,98 @@ What is a 19 × 19 square in compositional terms? Is there a known paradigm in w
 
 ---
 
-*End of Part II draft (2026-06-11). Parts III–IV to follow.*
+*End of Part II (2026-06-11).*
+
+---
+
+## PART III — THE EGYPTIAN PARADIGM
+
+### 11. The Canon of Proportions
+
+The 19 × 19 square is not an arbitrary number. In Egyptian compositional practice, the 18-unit grid — eighteen squares from the soles of the feet to the hairline, nineteen to the crown of the head — was the fundamental module on which every human figure was drawn, carved, or painted. The grid was the first thing marked on any compositional surface: a network of horizontal and vertical lines defining the proportional field, with each body landmark falling at a predetermined intersection. The system was codified no later than the Old Kingdom and remained in use through the end of the New Kingdom (c. 3100–1077 BCE) — more than two thousand years of continuous scribal training on the same proportional module (Iversen, Canon and Proportions in Egyptian Art, 1961; Robins, Proportion and Style in Ancient Egyptian Art, 1994).
+
+The canonical number is eighteen to the hairline — the boundary of the proportioned figure — and nineteen to the crown, the boundary of the compositional field. The distinction matters: eighteen defines the proportioned body; nineteen defines the space within which the body is composed. The Torah's matrix, at 19 × 19, fills the compositional field — the space on which the work is set.
+
+The grid changed exactly once. In the 25th/26th Dynasty (c. 664 BCE), the canon was reformed from eighteen to twenty-one squares. The Torah's grid uses the traditional module, not the reformed one — an observation to which Part IV will return.
+
+An Egyptian-trained scribe, encountering a composition built on a nineteen-unit square, would recognize the module immediately. It was not a number among others; it was the number — the first thing learned, the grid on which every compositional surface began.
+
+> FIGURE 12. The Egyptian canon of proportions: eighteen squares to the hairline, nineteen to the crown.
+
+### 12. The Amduat: How Egypt Composed Cosmic Narratives
+
+The canonical grid defines the module. What defines the paradigm — the way a cosmic narrative was composed on that grid?
+
+The answer is attested most fully in the Amduat ("That Which Is in the Underworld"), the oldest and most complete of the Egyptian books of the afterlife. First appearing in the tomb of Thutmose I (c. 1470 BCE), the Amduat describes Ra's nocturnal journey through twelve hours of the night — from the western horizon through the underworld to rebirth at dawn. The composition exists in two formats: a narrative version (continuous text with illustrations) and a tabular version (the twelve hours arranged as a grid). Both formats present the same content. The grid is not an abstract of the narrative; the narrative is a linearization of the grid.
+
+The compositional structure has four features that define the paradigm.
+
+First, sequential units forming a grid. The twelve hours proceed in order, each a self-contained scene with its own cast, landscape, and action, but each also occupying a fixed position in a larger compositional field.
+
+Second, three semantically assigned registers. Each hour is divided vertically into three bands separated by register dividers — horizontal lines, often rendered as the waters of the Duat. The upper register carries the celestial backdrop: stars, protective deities, the sky above the journey. The middle register carries the divine barque: Ra moving through the underworld, the protagonist of the narrative. The lower register carries the chthonic forces: enemies, the dead, the earth's own action. The three registers are not three stories but three simultaneous aspects of a single hour — what the cosmos looks like above, at center, and below at each point in the journey.
+
+Third, a central pivot. At Hour 6, the midpoint, Ra descends to the deepest chamber of the underworld and unites with Osiris — the solar deity meeting the chthonic deity, the living joining the dead. This union produces the regeneration that enables Ra's ascent through the second half of the journey. The pivot is the structural and narrative center of the composition.
+
+Fourth, the composition maps onto sacred architecture. The Amduat was inscribed on the walls of royal tombs; the physical space of the burial chamber embodied the compositional space of the text. The tomb was the grid made habitable.
+
+This was not one scribe's invention. It was how Egyptian scribes composed cosmic narratives — the standard paradigm, attested and copied for centuries, for representing a divine journey through a structured cosmos. A scribe trained in this tradition, composing a text about the relationship between the divine and the human — a journey from creation through revelation to settlement — would have this paradigm at hand.
+
+> FIGURE 13. The Amduat: twelve hours across three registers, with the Ra-Osiris union at Hour 6.
+
+### 13. The Torah Follows the Paradigm
+
+The structural correspondences between the Amduat paradigm and the Torah's grid run along both axes.
+
+The horizontal thread (Genesis–Leviticus–Deuteronomy) follows the journey pattern. Sequential units move through a timeline, read from right to left — from creation at the east to ending at the west, with Leviticus at the center. The orientation reverses at the midpoint: the cosmic order that placed heaven above through the first half of the band places it below through the second (Section 8). At the center, Unit 13 carries the declaration in which the two divine names held apart across the rows of Genesis — YHWH above, Elohim below — appear together: "You shall be holy, for I, YHWH your Elohim, am holy." This is not their union; it is the revelation of the means by which the separated aspects are to be reconciled — Israel becoming holy, representing YHWH in the reality of Elohim's world. Compositionally, this center occupies the same structural position as Ra's union with Osiris at Hour 6. The paradigm is the same; the content transforms it. In the Amduat, the union is cosmic and automatic — Ra and Osiris meet because the cycle requires it. In the Torah, the reunion is commanded and depends on human action.
+
+The vertical thread (Exodus–Leviticus–Numbers) follows the three-register pattern:
+
+| Register | Amduat | Torah | Center |
+|----------|--------|-------|--------|
+| Upper | Celestial backdrop | Exodus: theophany, Sinai, divine instructions | Sapphire pavement of heaven (Unit 10) |
+| Middle | The divine barque | Leviticus: Tabernacle, priestly mediation | "I YHWH your Elohim am holy" (Unit 13) |
+| Lower | Chthonic forces | Numbers: rebellions, earthly tests | Earth opens for Korach (Unit 7) |
+
+The three books are set at Horeb — not three journeys but three registers of a single encounter, just as the Amduat's three registers present three simultaneous aspects of a single hour. The register dividers separating the zones correspond to the boundaries between books within the Horeb experience — the same structural device that has separated registers in Egyptian multi-register composition from the Narmer Palette onward.
+
+And the impurities column — the sole unpaired triad whose removal yields the nineteen-column dimension (Section 8) — finds its place in the paradigm. The canonical grid is the idealized proportional field. The Torah includes one column whose content is specifically "that which must be removed," and its removal yields the canonical form. The grid contains its own instruction for achieving canonical status.
+
+The whole composition sits on a 19 × 19 square — the Egyptian canonical module applied in both dimensions to a cosmic narrative composed on three registers with a central pivot.
+
+> FIGURE 14. Torah grid and Amduat paradigm: structural correspondence.
+
+> FIGURE 15. Torah and Amduat side by side.
+
+### 13a. The Signature Unit: Process Evidence
+
+The correspondences presented above show that the Torah's grid follows the Egyptian paradigm. But structural correspondence alone does not prove compositional method — a pattern can be observed after the fact without having been intended during composition. This section presents process evidence: features of the Torah's own construction that make sense only if the author held a complete two-dimensional original before converting it to linear text.
+
+The evidence comes from a single unit: Deuteronomy Unit 8 (21:10–25:4), analyzed in full in The Beautiful Captive Speaks: Revealing the Composition of the Torah (Kline, 2025; academia.edu/143629453). The unit contains approximately fifty laws arranged as a 10 × 3 matrix — five pairs of rows crossed by three columns designated L (Self), M (Self-and-Other), and R (Other), thirty segments in all. Each column opens with a variation on taking a wife (21:11, 22:13, 24:1). The monograph calls it the "Beautiful Weave."
+
+(i) Serialization direction. Of the Torah's eighty-six units, eighty-five were converted from their two-dimensional form to linear text by reading across the rows — the standard direction, which the Covenant Code (Exodus 22:17–23:19; JBL 2025) also follows. The Beautiful Weave is the sole exception: it was serialized by reading down the columns. Direction of serialization is invisible while uniform; one column-wise exception makes the act of serialization itself visible — and only an author holding a complete two-dimensional original can choose which axis to unroll. The choice presupposes the grid. The analogy is the unfinished Egyptian burial chamber, whose value lies precisely in preserving the working grid that the finished wall erases. יוצא מן הכלל להורות על הכלל — the exception that teaches about the rule.
+
+(ii) The double constraint. The same six segments of Pair 5 satisfy two independent ordering systems at once. Read by column, the agricultural cycle is intact: planting (L), ripening (M), harvest (R) — a sequence scrambled across Deuteronomy 22–25 in the linear text and recoverable only in the two-dimensional reconstruction. Read by row, each column carries an abstract legal principle: Column L limits expansion (parapet, mixed seed, mixed yoke, mixed fabric, tassels at the edges); Column R limits contraction, ordered by ascending intentionality (forgotten sheaf, unbeaten boughs, ungleaned vines, counted lashes, unmuzzled ox); Column M synthesizes (eat but do not vessel; pluck but do not sickle). Two orthogonal ordering systems whose directions coincide on a single axis: position carries meaning before content does. Accretion can mimic one pattern; it cannot place two independent patterns on the same words.
+
+(iii) What the overlay legislates. The abstract overlay — limiting expansion, limiting contraction — is the corpus's own published dyad between the divine characters, converted from narrative portrayal into legal principle. In the narrative, YHWH blesses expansively (land as far as the eye can see, seed as the dust of the earth); Elohim blesses within limits (Canaan only, one act of circumcision). In the Beautiful Weave, each column applies the opposite principle to its own force, and the harvest laws legislate the remainder: completeness is forbidden. This is the precise point of self-differentiation from the Egyptian paradigm. The agricultural cycle and the grid suit the Egyptian scribal world, but in the Amduat the cosmic union recurs automatically — Ra and Osiris meet because the cycle requires it. Here the union is commanded, requires human restraint, and depends on a remainder. The author borrows the compositional technology and writes his own governing idea onto it.
+
+(iv) The center-signature link. The beautiful captive who opens the unit — the woman taken from among the enemy, shorn, stripped of her captive garments, given a month to mourn before entering the household — is the Torah's one realized case of a designated-but-unfree woman. The law at the structural center of the entire composition, Leviticus 19:20–22 (cell 2B of Unit 13 — middle column, middle row, focal unit), legislates exactly this figure: the שפחה נחרפת, the designated bondmaid. A single legal figure connects the centermost cell of the weave to the one unit serialized by its warp. The connection is published in the monograph.
+
+(v) A reusable paradigm. The Covenant Code (Exodus 22:17–23:19; JBL 2025) shares the identical L-M-R column architecture at a 15:30 segment ratio, with more than twenty laws held in common and systematically transformed — the same compositional instrument at two scales, serialized by opposite axes. What the Beautiful Weave does by columns, the Covenant Code does by rows. The paradigm is not a one-off; it is a compositional tool deployed repeatedly.
+
+The unit is the composition's forgotten sheaf. Column R's law at the unintentional pole — the forgotten sheaf left standing in the field for the one who comes after — describes what the unit itself does. Egyptian tombs preserve the craftsman's working marks; what was not cleared away is how we know the work was made. The one unit not gathered into the uniform serialization is left standing in the field, and the finder is fed by what it preserves: the evidence of the maker's hand. In the law, the forgetting is unintentional by definition; in the composition, it is the most deliberate act in the Torah. The author legislated his own remainder. Form enacts content.
+
+> FIGURE 16. The Beautiful Weave: 10 × 3 matrix (wife-openings marked; Pair 5 agricultural and abstract currents indicated).
+
+### 14. Egyptian Grid Texts: The Technology Existed
+
+The preceding sections have identified the paradigm and presented process evidence that the Torah was composed within it. One question remains for Part III: did the compositional technology exist? Could an Egyptian scribe compose a text on a grid for multi-directional reading?
+
+The answer is attested directly. In the tomb of Kheruef (TT192, Thebes, c. 1353 BCE), a 14 × 13 rectangular grid of hieroglyphic text appears above the offering scenes, composed to be read "across and down" — a text designed for multi-directional reading on a grid, from exactly the period relevant to the Torah's composition (The Epigraphic Survey, The Tomb of Kheruef: Theban Tomb 192, OIP 102, Chicago, 1980).
+
+A more elaborate example survives on the Paser Crossword Stela (British Museum, BM 194, c. 1150 BCE): a grid of hieroglyphs composed to be read "three times" — horizontally, vertically, and around the perimeter. The stela's own inscription claims that "its like has not been seen before" — a boast that presupposes the technology was known while asserting the execution was unprecedented in complexity (Stewart, "A Crossword Hymn to Mut," Journal of Egyptian Archaeology 57, 1971, 87–104).
+
+The compositional technology the Torah would require — a text composed on a grid, readable in two dimensions — is attested in Egyptian scribal practice of exactly the relevant period.
+
+---
+
+*End of Part III draft (2026-06-11). Part IV to follow.*
