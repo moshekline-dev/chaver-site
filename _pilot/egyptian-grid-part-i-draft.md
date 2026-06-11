@@ -1,7 +1,7 @@
 # The Torah on the Egyptian Canonical Grid
 ## The Five Books as a Single Compositional Field
 
-**Moshe Kline** Working draft — Parts I–III of IV — revised June 11, 2026 Status: for review; not for circulation
+**Moshe Kline** Working draft — Parts I–IV — revised June 11, 2026 Status: for review; not for circulation
 
 ---
 
@@ -246,4 +246,58 @@ The compositional technology the Torah would require — a text composed on a gr
 
 ---
 
-*End of Part III draft (2026-06-11). Part IV to follow.*
+*End of Part III (2026-06-11).*
+
+---
+
+## PART IV — IMPLICATIONS AND QUESTIONS
+
+### 15. An Alternative to JEPD
+
+The Documentary Hypothesis explained the Torah's complexity by positing multiple sources. The doublets, the alternating divine names, the interleaving of law and narrative — all were read as seams between documents, evidence that what we have was assembled from what once existed separately. The hypothesis was not unreasonable; it was the best available explanation for features that no known compositional model could account for.
+
+This paper has presented such a model. The Torah's two-dimensional structure — eighty-six units across five books, each book a published matrix, the five books forming a 19 × 19 grid on the Egyptian canonical module — accounts for the features that source criticism attributed to compilation. The alternating divine names are row assignments (Section 4). The doubled narratives are column correspondences. The interleaving of law and story is the intersection of horizontal and vertical threads. The apparent seams are the markers of a two-dimensional weave.
+
+The form of the Torah does not require J, E, P, and D. It requires a scribe who knew how to compose on a canonical grid — the way every Egyptian scribe was trained to compose.
+
+### 16. Questions for Further Research
+
+Each of the following opens a line of investigation that extends beyond this paper.
+
+1. **The Amduat's internal pairings.** Do the twelve hours of the Amduat show concentric pairing patterns — hour 1 with 12, hour 2 with 11, and so on — that correspond to the Torah's concentric rings?
+
+2. **Column continuities in Exodus.** The treasure-to-Tabernacle and Sabbath-to-Sabbath connections (Section 6) suggest the nine-row vertical layout was compositionally intended. What other column continuities emerge when the units are stacked?
+
+3. **Trial pairs in Exodus and Numbers.** The trials approaching Horeb (plagues, sea, wilderness complaints) appear to correspond to the trials departing it (spies, Korach, serpents). Does a systematic mapping hold across the Leviticus center?
+
+4. **The Heliopolis connection.** Joseph marries into the priesthood of On (Heliopolis) — the cult center of Ra, described by Herodotus as housing "the most learned in records of the Egyptians" (*Histories* II.3). Is this narrative detail a preserved memory of the institutional pathway through which Egyptian scribal tradition entered the composition?
+
+5. **Moses' Egyptian education.** Philo preserves a tradition that Moses learned "the hieroglyphics" and "the Assyrian language" — bilingual scribal training. Does this reflect authentic memory of dual competence in Egyptian and Mesopotamian literary traditions?
+
+6. **Semitic content on an Egyptian grid.** The Torah's content parallels — flood, creation, patriarchal narratives — point to Mesopotamian literary traditions; its compositional form has no Mesopotamian parallel. Abraham from Ur, Jacob's twenty years in Paddan-aram, Rachel carrying the teraphim — these trace the Semitic literary inheritance entering the family. The compositional technology enters through the Egyptian institutional connections: the priesthood of On, the royal court. Does this dual inheritance explain why biblical scholarship found content parallels pointing east while the compositional model points south?
+
+7. **Deuteronomy 23:7–8.** "You shall not abhor an Egyptian, because you were a sojourner in his land. Children of the third generation may enter the assembly." The Torah provides a legal framework for Egyptian integration into Israel. Is this the legal mechanism for the cultural transfer the composition itself embodies?
+
+8. **The Akhenaten question.** Akhenaten rejected the Amduat and suppressed the underworld literature. The Torah's composition maintains YHWH and Elohim as structurally distinct names distributed across its rows (Section 4) rather than reducing them to a single designation, and its grid uses the traditional eighteen-to-nineteen module, not the Amarna twenty-square variant (Robins 1994). Does this align the Torah with the traditional Egyptian compositional tradition — the one Akhenaten tried to destroy and that was restored after him — rather than the Amarna alternative?
+
+9. **The grid reform as terminus ante quem.** The canonical grid changed from eighteen to twenty-one squares in the 25th/26th Dynasty (c. 664 BCE). The Torah uses the traditional module. Does this provide a terminus ante quem for the composition?
+
+10. **The eastern circuit.** Genesis 13:10 describes the Jordan valley as "like the garden of YHWH, like the land of Egypt." The horizontal thread begins in the east; it ends with Israel at the east bank of the Jordan, entering the land from the direction of Eden (Genesis 2:8). Does the horizontal thread trace a circuit — and does this parallel features of the Amduat's circular journey from the western horizon through the underworld and back?
+
+11. **The divine names and the compositional center.** YHWH Elohim appears as a unity in the Garden. The names separate outside it. At the center of the grid, YHWH reveals the means for reunion — Israel becoming holy, representing the transcendent in the world of the immanent. Does the compositional structure carry a coherent account of the divine names that the linear reading obscures?
+
+12. **Ptolemaic temple inscriptions.** The grid-text tradition continued at Esna, Dendera, and Edfu into the Ptolemaic period. Does a comprehensive survey of two-dimensional Egyptian composition from the Amduat through the Ptolemaic temples establish a continuous scribal lineage for the technology the Torah employs?
+
+13. **The square compositional field.** The Paser stela may have been originally 80 × 80 — a square grid. The Torah's grid is 19 × 19 — also a square. Is the square compositional field a convention of the Egyptian grid-text tradition?
+
+14. **Kabbalistic reception.** The three-row system (above, middle, below) maps onto kabbalistic categories. Was the later mystical tradition preserving structural knowledge about the text's two-dimensional composition that mainstream reading had lost?
+
+### 17. Conclusion
+
+The Torah's two-dimensional structure — established through four decades of research, published in peer-reviewed venues, and independently verified — produces a 19 × 19 square grid when the five books are placed on a single compositional field. That grid follows the Egyptian paradigm for cosmic narrative composition: the canonical proportional module, three semantically assigned registers with dividers, a central pivot where orientation reverses, and a compositional surface that maps onto sacred architecture. The paradigm is attested in the Amduat, the grid technology in the tomb of Kheruef and the Paser stela, and the process evidence in the Torah's own signature unit — whose exceptional serialization and double constraint demonstrate that the two-dimensional original preceded its linear form.
+
+The Torah was not compiled from sources. It was composed by a scribe using the tools of his day.
+
+---
+
+*End of draft (2026-06-11).*
