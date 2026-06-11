@@ -196,27 +196,29 @@ This was not one scribe's invention. It was how Egyptian scribes composed cosmic
 
 ### 13. The Torah Follows the Paradigm
 
-The structural correspondences between the Amduat paradigm and the Torah's grid run along both axes.
+The structural correspondences between the Amduat paradigm and the Torah's grid run along both axes and at two scales.
 
 The horizontal thread (Genesis–Leviticus–Deuteronomy) follows the journey pattern. Sequential units move through a timeline, read from right to left — from creation at the east to ending at the west, with Leviticus at the center. The orientation reverses at the midpoint: the cosmic order that placed heaven above through the first half of the band places it below through the second (Section 8). At the center, Unit 13 carries the declaration in which the two divine names held apart across the rows of Genesis — YHWH above, Elohim below — appear together: "You shall be holy, for I, YHWH your Elohim, am holy." This is not their union; it is the revelation of the means by which the separated aspects are to be reconciled — Israel becoming holy, representing YHWH in the reality of Elohim's world. Compositionally, this center occupies the same structural position as Ra's union with Osiris at Hour 6. The paradigm is the same; the content transforms it. In the Amduat, the union is cosmic and automatic — Ra and Osiris meet because the cycle requires it. In the Torah, the reunion is commanded and depends on human action.
 
-The vertical thread (Exodus–Leviticus–Numbers) follows the three-register pattern:
+The horizontal thread carries the three-register pattern as well. Each column of the horizontal thread — each unit-triad — has three rows, and the rows carry the same semantic assignments as the Amduat's three registers within each hour: Row 1 is the transcendent register (in Genesis, the YHWH row), Row 2 the interface (where both names operate), Row 3 the earthly register (in Genesis, the Elohim row). Three rows per column, three registers per hour — the horizontal thread's internal anatomy matches the Amduat's.
 
-| Register | Amduat | Torah | Center |
-|----------|--------|-------|--------|
-| Upper | Celestial backdrop | Exodus: theophany, Sinai, divine instructions | Sapphire pavement of heaven (Unit 10) |
-| Middle | The divine barque | Leviticus: Tabernacle, priestly mediation | "I YHWH your Elohim am holy" (Unit 13) |
-| Lower | Chthonic forces | Numbers: rebellions, earthly tests | Earth opens for Korach (Unit 7) |
+The paradigm extends from the pictorial to the architectural. In the royal tombs where the Amduat was inscribed, the journey did not occupy the chamber alone. In the tomb of Seti I (KV17, c. 1279 BCE), the vaulted ceiling carries astronomical scenes — constellations and decans in indigo and gold, the firmament itself — while the corridor and chamber walls carry the Amduat and Book of Gates: the journey beneath the sky (Hornung, *The Ancient Egyptian Books of the Afterlife*, 1999). In the tomb of Ramesses VI (KV9, c. 1136 BCE), the three-surface program is fully explicit: the ceiling bears a double image of the sky goddess Nut framing the Books of Day and Night; the burial chamber walls carry the Book of the Earth — fully developed here for the first time in a royal tomb, depicting the subterranean regions of the dead (Roberson, *The Ancient Egyptian Books of the Earth*, 2012); and the corridors carry the Amduat. Sky on the ceiling, earth at the deepest point, the journey between them — the tomb is a three-level cosmos rendered as habitable architecture.
 
-The three books are set at Horeb — not three journeys but three registers of a single encounter, just as the Amduat's three registers present three simultaneous aspects of a single hour. The register dividers separating the zones correspond to the boundaries between books within the Horeb experience — the same structural device that has separated registers in Egyptian multi-register composition from the Narmer Palette onward.
+The Torah's vertical thread follows the same spatial logic. The horizontal journey (Genesis–Leviticus–Deuteronomy) sits on the compositional surface — the walls. Above it sits Exodus, carrying the celestial register: "I spoke to you from heaven" (Exodus 20:19), the Tabernacle as a copy of the heavenly pattern shown on the mountain (Exodus 25:40). Below it sits Numbers, carrying the terrestrial register: the camp on the ground, the serpents from the earth (Numbers 21:6), the division of land. The centers of the three vertical-thread books confirm the assignment:
 
-The register structure was not confined to the pictorial surface. In the royal tombs where the Amduat was inscribed, the entire burial chamber was a three-level composition. In the tomb of Seti I (KV17, c. 1279 BCE), the vaulted ceiling carries astronomical scenes — constellations and decans in indigo and gold, the firmament itself — while the corridor and chamber walls carry the Amduat and Book of Gates: the journey beneath the sky (Hornung, *The Ancient Egyptian Books of the Afterlife*, 1999). In the tomb of Ramesses VI (KV9, c. 1136 BCE), the three-level program is fully explicit: the ceiling bears a double image of the sky goddess Nut framing the Books of Day and Night; the burial chamber walls carry the Book of the Earth — fully developed here for the first time in a royal tomb, depicting the subterranean regions of the dead (Roberson, *The Ancient Egyptian Books of the Earth*, 2012); and the corridors carry the Amduat. Sky on the ceiling, earth at the deepest point, the journey between them — the tomb is a three-register cosmos rendered as habitable architecture. The Torah's vertical thread follows the same spatial logic: Exodus above the horizontal journey, carrying the celestial register — "I spoke to you from heaven" (Exodus 20:19), the sapphire pavement at Unit 10; Numbers below it, carrying the terrestrial — the earth opening at Unit 7, the serpents from the ground (Numbers 21:6), the division of land; and the journey of Genesis–Leviticus–Deuteronomy between them, on the compositional surface where the Amduat sits.
+| Surface | Tomb | Torah | Center |
+|---------|------|-------|--------|
+| Ceiling | Astronomical scenes (Nut, stars) | Exodus (above the journey) | Sapphire pavement of heaven (Unit 10) |
+| Walls | Amduat (the journey) | Gen–Lev–Deut (horizontal thread) | "I YHWH your Elohim am holy" (Unit 13) |
+| Floor | Book of the Earth | Numbers (below the journey) | Earth opens for Korach (Unit 7) |
+
+The three books of the vertical thread are set at Horeb — not three journeys but three levels of a single encounter, just as the tomb's three surfaces are not three separate compositions but three aspects of a single architectural cosmos. The register dividers separating them correspond to the boundaries between the surfaces.
 
 And the impurities column — the sole unpaired triad whose removal yields the nineteen-column dimension (Section 8) — finds its place in the paradigm. The canonical grid is the idealized proportional field. The Torah includes one column whose content is specifically "that which must be removed," and its removal yields the canonical form. The grid contains its own instruction for achieving canonical status.
 
-The whole composition sits on a 19 × 19 square — the Egyptian canonical module applied in both dimensions to a cosmic narrative composed on three registers with a central pivot.
+The whole composition sits on a 19 × 19 square — the Egyptian canonical module applied in both dimensions to a cosmic narrative composed on three registers within the journey and three architectural levels around it, with a central pivot where orientation reverses.
 
-> FIGURE 14. Torah grid and Amduat paradigm: structural correspondence.
+> FIGURE 14. Torah grid and Amduat paradigm: structural correspondence at two scales.
 
 > FIGURE 15. Torah and Amduat side by side.
 

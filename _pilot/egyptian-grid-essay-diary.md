@@ -120,3 +120,57 @@ Governance: canonical diary in repo via Cowork (Option B); Claude maintains the 
 
 ### 2026-06-10 — Addendum at close (Moshe)
 The forgotten sheaf as the governing image of the signature unit — like tools left in a tomb testifying to the craftsman's skill, what remains ungathered is what testifies. The unit not gathered into the uniform serialization is the composition's forgotten sheaf; the finder is fed by the evidence of the maker's hand. In the law the forgetting is unintentional; in the composition it is the most deliberate act in the Torah — the author legislated his own remainder. Image ADDED as the closing of S13a; v3 APPROVED in full. Sentinel: filed and closed.
+
+### 2026-06-11 — Complete draft assembled; all brackets resolved (Claude, Opus session)
+
+**Part I reviewed and edited.** Ling Roth Fig 16A citation corrected (one painting, Nefer-ronpet, Superintendent of Weavers, c. 1200 BCE; H. Ling Roth, *Ancient Egyptian and Greek Looms*, 1913). "Cereal" → "meal" offering. S5 Deuteronomy source resolved (published analysis at chaver.com): A–D column opposition added, Row 2 cross-book pattern added (all three horizontal books place independent unit in Row 2). "Chiastically" → "pair across the center" throughout. Eden-Egypt paragraph dropped from S8 per Moshe's correction: the horizontal thread ends with Moses' blessings at the east bank, not with a curse.
+
+**Part II drafted (S8–S10).** S8 key addition: 8 concentric pairs across 3 horizontal books (16 of 17 triadic columns paired; impurities triad the sole unpaired column) — structural motivation for removal established before the arithmetic.
+
+**Part III drafted (S11–S14 + S13a).** New finding in S13: three-surface decorative program of royal burial chambers as architectural evidence for the vertical thread. Ceiling = celestial (astronomical scenes, Seti I KV17; Nut + Books of Day/Night, Ramesses VI KV9). Walls = journey (Amduat). Lower walls = earth (Book of the Earth, first in KV9; Roberson 2012). Torah maps: Exodus = ceiling, Gen-Lev-Deut = walls, Numbers = floor. Sources: Hornung 1999, Roberson 2012.
+
+**Part IV drafted (S15–S17).** 15 research questions. New question 10: three-surface program as dating evidence — terminus post quem late 19th Dynasty (Book of the Earth), terminus ante quem 25th Dynasty (grid reform); implies royal scribal access.
+
+**All open questions resolved:**
+- (a) Softened to "most naturally explained by planned tabular composition"
+- (b) "Day of Atonement" throughout
+- (d) Unit 10 divides Tabernacle from non-Tabernacle material (nine before, nine after)
+- (e) Ladder: not for this essay
+- (f) Current wording fine (primordial name progression)
+- S6 second chiastic pairing: dropped, kept brick-making/building only
+- Douglas citation: *In the Wilderness* (1993), per Moshe's own "Literary Structure of Leviticus" article
+- "Divine duality" caught → "structurally distinct names distributed across its rows"
+
+**Fable 5 review edits applied:** divider asymmetry paragraph in S9; "fills" → "spans" in S11; Iversen date corrected to 2nd ed. 1975 + Robins disagreement noted; module vs. wall-layout clarification in S11; Amduat attestation hedged ("early Eighteenth Dynasty"); Book of the Earth hedged ("fully developed"); Paser perimeter hedged; Exodus 20:19 MT numbering; JEDP broadened to all compilation models; "prime pericopes" analogy tightened; central-unit alignment principle added to S10.
+
+**S13 two-scale correction identified:** Amduat three registers = three ROWS of horizontal thread (within the journey). Three vertical-thread books = three SURFACES of the tomb (ceiling/walls/floor — around the journey). Corrected text drafted; awaiting Cowork application.
+
+**Canon-body overlay (Moshe observation):** Square 19 of the canon (crown) maps to the top of the Exodus vertical arrangement (Units 1 and 6 — deity's first engagements with Moses and the people). Reproductive zone (buttocks to navel) maps to Leviticus (union, presence). Feet to knee maps to Numbers (firmly on earth). Fig 12 created as canon-vertical overlay showing this correspondence.
+
+**Figures created (9 of 16):**
+| Fig | Title | Status |
+|-----|-------|--------|
+| 2 | Leviticus rings | Done |
+| 8 | Numbers camp | Layout needs Moshe's correction |
+| 9 | Horizontal thread (19 cols, row-colored, mid-Lev inversion) | Done |
+| 10 | Vertical thread (19 rows) | Done (minor: bullet glyph) |
+| 11 | Complete 19×19 grid | Done |
+| 12 | Canon + vertical overlay | Done |
+| 13 | Amduat schematic | Done |
+| 14 | Torah-Amduat correspondence | Needs redo for two-scale mapping |
+| 16 | Beautiful Weave | Done |
+
+**Figures remaining (7):** 1 (Covenant Code), 3 (Leviticus columns), 4 (Genesis matrix — wider cells), 5 (Deuteronomy matrix — wider cells), 6 (Exodus two arrangements), 7 (Exodus vertical with continuities), 15 (Torah and Amduat side by side).
+
+**Numbers camp layout:** Moshe corrected the arrangement. East (1, 2=flag, 3) parallel to West (11, 12=flag, 13). Top and bottom are alternating triads, not parallel. Exact unit placement on top/bottom needs confirmation.
+
+**Design philosophy:** Written in `grid-figures-philosophy.md`. Unified palette (warm=horizontal, cool=vertical, gold=center), 10pt minimum text, Instrument Sans + Crimson Pro fonts.
+
+**Draft status:** ~9,200 words, 17 sections, 16 figures referenced, zero editorial brackets. Complete text in `_pilot/egyptian-grid-part-i-draft.md`.
+
+**Pre-submission factual verifications (flagged by Fable 5):**
+- Iversen: confirm 2nd ed. 1975 is correct (1st ed. may be 1955)
+- Amduat: verify "early Eighteenth Dynasty" vs. naming Thutmose I
+- Book of the Earth: confirm precursor material predates Ramesses VI per Roberson
+- Paser stela: confirm perimeter reading is a proposal, not established
+- BCV Fig 40 caption: verify loom description matches S2 text
