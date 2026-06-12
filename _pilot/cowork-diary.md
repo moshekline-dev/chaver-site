@@ -1843,34 +1843,39 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 **Next step:**
 - Moshe: review diffs in GitHub Desktop, commit + push, purge Cloudflare cache
 - Spot-check: exodus-unit-3 (7:3 should show blue `horizontal1` on "and multiply My signs and My wonders"), numbers-unit-9 (20:13 should show `vertical1` on "the waters of Meribah")
-
----
-
-### 2026-06-11 — Egyptian Grid article: S13 two-scale correction, diary entry, orientation convention Q16
+### 2026-06-12 — Egyptian Grid article: Major revision complete
 
 **What was done:**
-- Replaced S13 ("The Torah Follows the Paradigm") in `_pilot/egyptian-grid-part-i-draft.md` with corrected two-scale mapping text. Old version conflated Amduat registers with vertical-thread books. New version distinguishes: (1) three rows per column = three registers per hour (within the journey), (2) three vertical-thread books = three tomb surfaces (around the journey). Table changed from Upper/Middle/Lower registers to Ceiling/Walls/Floor surfaces.
-- Appended full 2026-06-11 diary entry to `_pilot/egyptian-grid-essay-diary.md` documenting the prior Opus session (Part I–IV drafting, all brackets resolved, 9 figures created, pre-submission verifications flagged).
-- Added research question 16 (Orientation convention) to S16: Torah grid follows Egyptian compositional convention (body/architecture: sky above, earth below) rather than Israelite cartographic convention (east at top) or Egyptian cartographic convention (south at top). Independent evidence of Egyptian scribal training.
-- Added orientation convention finding to the essay diary entry.
-- Attempted Fig 14 redo for two-scale mapping — rejected by Moshe; needs another pass.
+- Complete editorial revision of the Egyptian Grid article (18 sections, 4 parts, ~12,000 words). Two rounds of review (Claude editorial pass, then Gemini review) flagged three structural vulnerabilities; all three strengthened.
+- Section 13a promoted to full Section 14 ("Process Evidence: The Signature Unit") — the article's strongest original contribution now carries full-section weight.
+- Dual Exodus arrangements grounded in the nature of grid composition itself (dual-axis reading is a property of 2D composition, not an analytical choice).
+- Register-divider defense: asymmetry explained by qualitative difference in boundary type (within register band vs. between cosmic domains; groundline as physical mark on scribal surface).
+- Serialization mechanics defined in Section 2, fully unpacked in Section 14 with row-wise vs. column-wise contrast.
+- 18 vs. 19 distinction sharpened throughout (compositional field, not proportioned body).
+- Two scales of correspondence distinguished at top of Section 13 (registers within journey ≠ surfaces around it).
+- Archaism argument and dating-window argument moved from Questions into body (Sections 11 and 13).
+- 2D/3D layering fixed: Section 9 stays in register convention language; Section 13 delivers tomb-surface mapping.
+- Loom vocabulary made explicit: horizontal thread = narrative timeline, vertical thread = cosmic tiers of Horeb.
+- Bibliography added.
 
 **Files modified:**
-- `_pilot/egyptian-grid-part-i-draft.md` — S13 replaced; Q16 added to S16
-- `_pilot/egyptian-grid-essay-diary.md` — full session entry appended; orientation finding added
+- `_pilot/egyptian-grid-article/egyptian-grid-final.md` — markdown source (65,421 → 66,586 bytes)
+- `_pilot/egyptian-grid-article/egyptian-grid-final.html` — standalone HTML with academic stylesheet (3,811,951 → 3,815,961 bytes)
+- `_pilot/egyptian-grid-article/egyptian-grid-final.pdf` — 19-page PDF via xelatex, figures as placeholders (2,843,065 → 2,760,633 bytes)
 
 **Decisions locked:**
-- S13 two-scale distinction is final: rows = registers (within), books = surfaces (around)
-- 16 research questions now in S16 (was 15)
-- Fig 14 arrangement still needs Moshe's direction on visual layout
+- Article now has 18 sections (was 17), 4 parts, 13 research questions in S17 (was 16 in S16)
+- Section 14 (Process Evidence: The Signature Unit) is a full section, not a subsection of S13
+- Two-scale distinction in S13 is final: rows = registers (within journey), books = surfaces (around journey)
 
 **Current state:**
-- Draft at ~9,400 words, 17 sections, 16 research questions, zero editorial brackets
-- S13 correction deployed (pushed + Cloudflare purged)
-- Q16 and diary updates uncommitted; pending Moshe's review
-- Fig 14 v2 rejected; original figure also incorrect for current text
+- Working draft ready for circulation among trusted colleagues. Not for public distribution.
+- 15 figures still placeholders (Figures 1–15)
+- Draft in repo at `_pilot/egyptian-grid-article/`
 
 **Next step:**
-- Moshe: review diffs for Q16 + diary updates, commit + push
-- Fig 14: Moshe to specify desired visual arrangement for two-scale correspondence
-- Remaining figures: 1, 3, 4, 5, 6, 7, 8, 15 still to create
+- Create the 15 figures (Figures 1–15)
+- Circulate to Roy Gane, Doug Van Dorn, trusted colleagues
+- Goldwasser follow-up due ~June 18
+- Send Polis, Ragazzoli, Vymazalová emails with live Academia.edu link
+- Decide whether this article absorbs or supplements the Academia.edu paper
