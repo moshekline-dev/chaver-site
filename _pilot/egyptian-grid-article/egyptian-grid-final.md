@@ -1,7 +1,8 @@
 # The Torah on the Egyptian Canonical Grid
 ## The Five Books as a Single Compositional Field
 
-**Moshe Kline** Working draft — Parts I–IV — revised June 11, 2026 Status: for review; not for circulation
+**Moshe Kline** — Working draft, Parts I–IV — revised June 12, 2026
+Status: for review; not for circulation
 
 ---
 
@@ -23,13 +24,17 @@ The structures presented below were not produced by the thesis of this paper. Th
 
 The research program — conducted in its later stages under the mentorship of Jacob Milgrom — set out to determine the principles of organization employed in the construction of the Torah. A single discovery opened the structures of all five books: the Torah is composed of well-defined literary units that share one characteristic. Each unit is built as a table — a two-dimensional, nonlinear weave, in which the smallest structurally indivisible blocks of text — the prime pericopes — combine into rows of two or three, and consecutive rows combine into a table whose columns are as coherent as its rows. The discovery of this unit-form is what made it possible to identify all eighty-six units of the five books. And the same rules of organization repeat one level up: whole units combine into rows of units, and rows of units into larger tables, so that the macrostructure of a book reflects the microstructure of its units. A single formatting technique, operating identically at both levels across all five books, points to a single hand — "the author."
 
-The weave vocabulary, it should be said, is not a modern metaphor imposed on the material. The published presentation grounds the architecture in the weaver's actual instrument: the Egyptian loom, attested from the Middle Kingdom tomb of Khnumhotep at Beni Hasan (c. 2000 BCE) through the New Kingdom. *Before Chapter and Verse* (Fig. 40) reproduces a Ramesside painting from the tomb of Nefer-ronpet, Superintendent of Weavers, at Thebes (c. 1200 BCE; after H. Ling Roth, *Ancient Egyptian and Greek Looms*, 1913, Fig. 16A), showing both loom types in use — the vertical loom on which individual pieces are composed and the horizontal loom on which the larger work is assembled. Warp and weft are, in this research, technical terms for the two axes of the composition — and the instrument they invoke was Egyptian. The imagery was pointing south in print before anyone counted the grid.
+The weave vocabulary, it should be said, is not a modern metaphor imposed on the material. The published presentation grounds the architecture in the weaver's actual instrument: the Egyptian loom, attested from the Middle Kingdom tomb of Khnumhotep at Beni Hasan (c. 2000 BCE) through the New Kingdom. *Before Chapter and Verse* (Fig. 40) reproduces a Ramesside painting from the tomb of Nefer-ronpet, Superintendent of Weavers, at Thebes (c. 1200 BCE; after H. Ling Roth, *Ancient Egyptian and Greek Looms*, 1913, Fig. 16A), showing both loom types in use — the vertical loom on which individual pieces are composed and the horizontal loom on which the larger work is assembled. Warp and weft are, in this research, technical terms for the two axes of the composition — and the instrument they invoke was Egyptian. The vocabulary aligns with the two-thread structure Part II will identify: the **horizontal thread** (Genesis–Leviticus–Deuteronomy) runs along one loom direction, the **vertical thread** (Exodus–Leviticus–Numbers) along the other, and Leviticus sits at the intersection where they cross.
 
 The methodological standard is the one Mary Douglas set for structural analysis: everything depends on how clearly the units of structure are identified, and the analysis is secure only when the analyst takes responsibility neither for selecting the units nor for the principles that relate them. The safeguard, she wrote, is a principle of selection that makes the interpretation a work of discovery rather than creation (Douglas, *In the Wilderness*, 1993). The principle of selection employed here is itself a discovery — the unit-form. The units are not delimited by content classification or by the analyst's judgment; they are identified by the recurring architecture the text displays. Douglas added the evidentiary requirement: a proposed structure convinces only when supported by verbal evidence — the exact repetitions that had led earlier students to suppose "the editor was nodding." Those repetitions — doubled formulas, repeated openings and closings, phrases a linear reading registers as redundancies or editorial lapses — turn out to be the markers by which the units and their tables are identified. The apparent flaws are the devices.
 
 The published record demonstrates the method at every scale. "The Editor Was Nodding" (Journal of Hebrew Scriptures 8/1, 2008) works through a single unit, Leviticus 19, showing that its formula-marked elements form two parallel columns and, simultaneously, five consecutive pairs — two independent organizations of the same text elements, a duality most naturally explained by planned tabular composition: each element is the intersection of a column-idea and a row-idea. Kline and Hocking (Journal of Biblical Literature 144/2, 2025) apply the method at fine grain to the Covenant Code, presenting Exodus 22:17–23:19 as a 5 × 3 grid. "Structure is Theology" (SBL Press, 2015) presents the whole of Leviticus, the subject of the next section. The method has also been examined from outside: Paul Hocking's doctoral research at the University of Chester tested the procedure and found it valid and reliable. Finally, the form is not confined to the Torah. The same tabular composition was identified first in the chapters of the Mishnah — the research program began there, in 1982 — demonstrating both that the form was known and employed at least into the third century CE, and that the method predates by decades any question about Egypt.
 
-> FIGURE 1. The Covenant Code (Exodus 22:17–23:19) as a 5 × 3 grid (Kline & Hocking, JBL 2025).
+The three-segment scheme — L mundane, M conceptual middle, R divine — will recur throughout this study at every scale: in the row semantics of Genesis, in the interior architecture of Leviticus, in the registers of the Amduat, in the surfaces of the royal tomb.
+
+![Figure 1](fig-01-covenant-code-grid.png)
+
+*Figure 1. The Covenant Code (Exodus 22:17–23:19) as a 5 × 3 grid (Kline & Hocking, JBL 2025).*
 
 What follows in Sections 3–7 is a book-by-book summary of the published structures. Readers familiar with the prior publications may move directly to Part II; the summaries are included so that the paper is self-contained, and so that the dimensions that matter for the grid — the row and column counts of each book — are established from the published record before they are combined.
 
@@ -45,9 +50,9 @@ At the center of the rings, Unit 13 corresponds to the ark of the covenant. It c
 
 One element of the published structure must be flagged now, because Part II depends on it. Six unit-triads form the rings; the seventh does not. Unit-triad C — the impurities triad (Leviticus 13–15: scale disease, its purification, genital discharges) — stands entirely outside the introversion. The symmetry of the rings appears only when it is removed. The 2015 essay reads this asymmetry as deliberate: the three units deal exclusively with impurities, and their presence makes the structure itself impure; the reader, like the priest, must remove the impure from the camp in order to maintain its purity — the impurities triad is the screen that must be moved aside before the inner sanctum. Note what this means for everything that follows: the removal of the impurities column is not a device of the present paper. It has been in print since 2015, a decade before anyone counted the columns of the horizontal thread. Counting them is Part II's task: seven triads plus the central unit yield eight column positions; with the impurities column removed, seven.
 
-> FIGURE 2. Leviticus: three concentric rings around Unit 13, with the impurities triad outside the introversion.
+![Figure 2](fig-02-leviticus-columns.png)
 
-> FIGURE 3. Leviticus column structure: eight columns, with the impurities column identified.
+*Figure 2. Leviticus: eight columns — six paired across three concentric rings, one removed (the impurities triad), with the central focal unit (Unit 13).*
 
 ### 4. Genesis
 
@@ -61,7 +66,9 @@ The reader will notice what this does to the central datum of source criticism. 
 
 The outline of the Genesis structure appears in the 2015 SBL essay; the full presentation is in Before Chapter and Verse: Reading the Woven Torah (2022), and the complete unit texts, with their structural markers, are published at chaver.com and in the Torah Literary Units Dataset (Zenodo, DOI 10.5281/zenodo.19625073).
 
-> FIGURE 4. Genesis: 19 units as a 3 × 7 matrix (six triads plus the independent Babel unit).
+![Figure 3](fig-03-genesis-matrix.png)
+
+*Figure 3. Genesis: 19 units as a 3 × 7 matrix (six triads plus the independent Babel unit). Row 1 transcendent, Row 2 interface, Row 3 earthly.*
 
 ### 5. Deuteronomy
 
@@ -69,7 +76,9 @@ Deuteronomy contains 13 literary units: four triads plus one independent unit (U
 
 One further feature of Deuteronomy is registered here because Part II depends on it: its triads run in the opposite vertical direction from those of Genesis. In Genesis, the first unit of each triad is oriented above and the third below; in Deuteronomy, the first is oriented below and the third above. The two outer books of the horizontal thread are mirror-oriented bookends — Genesis moving from above to below, Deuteronomy from below to above. The hinge between the two orientations is itself part of the published record: the first half of Leviticus is oriented like Genesis, the second half like Deuteronomy, and the reversal occurs at Unit 13 (Before Chapter and Verse, Fig. 49; chaver.com, Leviticus Part D and "Beyond JEDP"). What Part II adds is not the hinge but what the hinge does when the three books are laid on a single compositional field.
 
-> FIGURE 5. Deuteronomy: 13 units as a 3 × 5 matrix.
+![Figure 4](fig-04-deuteronomy-matrix.png)
+
+*Figure 4. Deuteronomy: 13 units as a 3 × 5 matrix. Row orientation inverted relative to Genesis: Row 1 earthly, Row 2 interface, Row 3 transcendent.*
 
 ### 6. Exodus: Two Arrangements
 
@@ -77,20 +86,19 @@ Exodus contains 19 literary units, and unlike Genesis, Leviticus, and Deuteronom
 
 The published arrangement sets the four quads as 2 × 2 blocks around the three independents: a five-row layout that mirrors the five-row camp arrangement of Numbers (Section 7). In the published reading, Exodus presents the heavenly pattern — its central unit recalls Ezekiel's vision of the divine throne above the firmament — and Numbers presents the earthly counterpart: the heavenly chariot above, the earthly vehicle below. The quads pair across the central axis: the brick-making for Pharaoh in the Egypt quad answers the building for YHWH in the construction quad. That arrangement stands; nothing in this paper revises it.
 
-But the same 19 units admit a second arrangement, and the second arrangement is the one this paper explores. Stack the four units of each quad vertically instead of in a square. Each half of the book then forms two parallel columns of four units, with the three independents in a center row between the halves: nine rows, three columns at the widest point.
+But the same nineteen units carry features the quad layout cannot accommodate. Two features in particular: Unit 4 ends with the Israelites taking the treasure of Egypt, and Unit 11 begins with that same treasure given for the building of the Tabernacle — a single material arc whose two halves are presented in succession only when Units 4 and 11 are placed in the same column. Unit 9 ends with the Sabbath, and Unit 16 begins with the Sabbath — a temporal bracket whose two ends meet only when Units 9 and 16 share a column. These continuities are not features the quad layout suppresses; they are features for which the quad layout has no room. The published material arc and the published Sabbath bracket each presuppose a stacking that the quad arrangement does not provide.
 
-Two pieces of internal evidence suggest the vertical arrangement is not merely possible but compositionally intended, because it brings adjacent what the quad layout holds apart:
-
-- The left column. Unit 4 ends with the Israelites taking the treasure of Egypt. Directly beneath it in the vertical layout, Unit 11 begins with that treasure given for the building of the Tabernacle. Read down the column, a single material arc emerges — the published chiasm between forced building for Pharaoh and willing building for YHWH, here realized as a literal continuity of material: Egyptian wealth taken, Egyptian wealth reworked into sacred architecture.
-- The right column. Unit 9 ends with the Sabbath. Directly beneath it, Unit 16 begins with the Sabbath. The parallel column brackets its content within the temporal frame: Sabbath to Sabbath.
-
-The left column traces a material continuity; the right column traces a temporal one. Neither continuity is visible in the quad layout. Column continuities that appear only when the units are stacked are evidence that the stacking belongs to the composition.
+The stacking they presuppose is the second arrangement this paper explores. Each half of Exodus forms two parallel columns of four units, with the three independents (Units 5, 10, 15) running down the center between the halves. Nine rows, three columns at the widest point. The arrangement is not an alternative to the quad layout; it is the orthogonal projection of the same data, the layout that the column continuities require. The quad layout displays the cross-axis pairings (brick-making to building, Egypt quad to construction quad); the vertical arrangement displays the column continuities (treasure to Tabernacle, Sabbath to Sabbath). Both are present in the text; both are compositionally active. Part II will use the vertical arrangement because it is the form in which Exodus contributes nine rows to the vertical thread.
 
 One more feature of the arrangement deserves note here. At the center of Exodus — Unit 10, the middle of the central band of independents — the elders ascend the mountain and see beneath the feet of the deity "the likeness of a pavement of sapphire, like the very heavens for purity" (Exodus 24:10). The vision of the heavenly floor sits at the structural center of the book; the published reading already marks this unit as the pivot at which the book passes from narrative to Tabernacle: the nine units before it carry no Tabernacle material; the nine units after it are entirely Tabernacle. When Part II places Exodus at the top of the vertical thread, the position of this vision — the cosmic ceiling seen at the center of the upper zone — will take on compositional weight.
 
-> FIGURE 6. Exodus: the two arrangements side by side — quad layout and vertical layout.
+![Figure 5](fig-05-exodus-two-arrangements.png)
 
-> FIGURE 7. Exodus vertical arrangement, with the treasure-to-Tabernacle and Sabbath-to-Sabbath column continuities marked.
+*Figure 5. Exodus: the two arrangements side by side — quad layout (published merkavah arrangement) and vertical layout (nine rows).*
+
+![Figure 6](fig-06-exodus-vertical.png)
+
+*Figure 6. Exodus vertical arrangement, with the treasure-to-Tabernacle and Sabbath-to-Sabbath column continuities marked.*
 
 ### 7. Numbers
 
@@ -100,11 +108,13 @@ At the center stands Unit 7: the Sabbath violator, the command of the tassels, a
 
 Note, finally, the relation between the centers of the three vertical-thread books, because Part II will build on it. At the center of Exodus, the divine presence is above: the elders look up from below the sapphire pavement at Sinai. At the center of Leviticus, the presence is in the midst: "I, YHWH your Elohim, am holy," spoken from the position of the ark. At the center of Numbers, the presence reaches the ground itself: the earth opens. The published reading describes this as the progressive descent of the divine presence — mountain, Tabernacle, camp. Three books, three centers, three levels: above, between, below.
 
-> FIGURE 8. Numbers: 13 units in the 5 × 5 camp layout.
+![Figure 7](fig-07-numbers-camp.png)
+
+*Figure 7. Numbers: 13 units in the 5 × 5 camp layout, with Unit 7 (Korach) at the center.*
 
 ---
 
-*End of Part I (revised 2026-06-11).*
+*End of Part I.*
 
 ---
 
@@ -120,25 +130,31 @@ The seventeen triadic columns are not a miscellaneous collection. They are paire
 
 What makes the column's role double is the coincidence of content and form: the column whose subject matter is "that which the priest must remove" is also the column whose removal produces the canonical dimension. The removal has been in print since 2015. The dimension it yields is the new observation.
 
-The horizontal band reads from right to left, as Hebrew does. Genesis stands at the right — the east, the direction of the beginning. Deuteronomy stands at the left — the west, the direction of ending. Leviticus occupies the center.
+Through the first half of the horizontal band — Genesis and the first half of Leviticus — the triadic orientation places heaven above: Row 1 carries the transcendent register, Row 3 the earthly. At Leviticus Unit 13, the center of the band, the orientation reverses. Through the second half of Leviticus and into Deuteronomy, the order inverts: Row 1 carries the earthly, Row 3 the transcendent (Section 5; *Before Chapter and Verse*, Fig. 49). What Part I registered as a published feature of the individual books — the mirror between Genesis and Deuteronomy, the hinge at the center of Leviticus — now takes on a compositional function: it structures the nineteen-column band as a single field with a pivot at its center, and the pivot is the same unit that stands at the center of the Tabernacle architecture described in Section 3. Leviticus is oriented like Genesis up to Unit 13, then like Deuteronomy from Unit 13 onward.
 
-Through the first half of the horizontal band — Genesis and the first half of Leviticus — the triadic orientation places heaven above: Row 1 carries the transcendent register, Row 3 the earthly. At Leviticus Unit 13, the center of the band, the orientation reverses. Through the second half of Leviticus and into Deuteronomy, the order inverts: Row 1 carries the earthly, Row 3 the transcendent (Section 5; *Before Chapter and Verse*, Fig. 49). What Part I registered as a published feature of the individual books — the mirror between Genesis and Deuteronomy, the hinge at the center of Leviticus — now takes on a compositional function: it structures the nineteen-column band as a single field with a pivot at its center, and the pivot is the same unit that stands at the center of the Tabernacle architecture described in Section 3.
+![Figure 8](fig-08-horizontal-thread.png)
 
-> FIGURE 9. The horizontal thread: 19 columns, read right to left (Genesis — Leviticus — Deuteronomy).
+*Figure 8. The horizontal thread: 19 columns (Genesis — Leviticus — Deuteronomy), with the pivot at Leviticus Unit 13 and the register orientation reversing at the pivot.*
 
 ### 9. The Vertical Thread
 
-Turn now to the second axis. Exodus, Leviticus, and Numbers share a different common feature: all three are set primarily at Horeb. They are not three sequential subjects — Egypt, then law, then wilderness — but three aspects of a single sustained encounter at the sacred mountain. What the cosmos looks like above, at the center, and below during the Horeb revelation is distributed across three books.
+Turn now to the second thread. Exodus, Leviticus, and Numbers share a different common feature: all three are set primarily at Horeb. They are not three sequential subjects — Egypt, then law, then wilderness — but three aspects of a single sustained encounter at the sacred mountain. What the cosmos looks like above, at the center, and below during the Horeb revelation is distributed across three books.
 
 Using the vertical arrangement of Exodus established in Section 6, the row count proceeds as follows. Exodus contributes nine rows. A register divider separates it from Leviticus. Leviticus contributes three rows. A second register divider separates it from Numbers. Numbers contributes five rows. The total: nine, one, three, one, five — nineteen rows.
 
-A note on why dividers enter the count on the vertical axis when the boundaries between books on the horizontal thread counted for nothing. The horizontal thread is a single register — three rows of triads running continuously from Genesis through Leviticus to Deuteronomy. The transitions between books are transitions within that register, and transitions within a register occupy no compositional space. The vertical thread crosses between registers — from the upper zone through the middle to the lower — and the dividers separating registers are physical features of the field. In multi-register composition, register dividers occupy space; scene transitions within a register do not.
+A note on why dividers enter the count on the vertical thread when the boundaries between books on the horizontal thread counted for nothing. The horizontal thread is a single register — three rows of triads running continuously from Genesis through Leviticus to Deuteronomy. The transitions between books are transitions within that register, and transitions within a register occupy no compositional space.
+
+The vertical thread crosses between registers — from the upper zone through the middle to the lower — and in the compositional convention this paper identifies, the boundaries between registers are physical features of the field. On Egyptian stelae and tomb walls, registers are separated by drawn groundlines — distinct horizontal bands that occupy compositional space and that the scribe must lay down before the figural content of either register can be placed. Within a register, scenes succeed one another by adjacency, with no physical line between them; between registers, the groundline is itself a marked element of the surface. (Robins, *The Art of Ancient Egypt*, rev. ed., 2008, on register conventions; Schäfer, *Principles of Egyptian Art*, ed. Brunner-Traut, trans. Baines, 1974, on the groundline as a structural feature.) Vertical transitions occupy space because the convention requires them to; horizontal transitions do not, because the convention does not call for them.
+
+The vertical thread observes the convention exactly. Exodus contributes its nine rows; a register divider separates it from Leviticus; Leviticus contributes its three rows; a second register divider separates it from Numbers; Numbers contributes its five rows. The dividers are not added to make the arithmetic work. They are features of the compositional surface the convention requires, and counting them is what counting on this surface means.
 
 The three books occupy three vertical zones, and the centers of the three books — already noted in Section 7 — mark those zones. At the center of Exodus (Unit 10), the elders ascend and see the sapphire pavement of heaven: the cosmic ceiling. At the center of Leviticus (Unit 13), YHWH speaks from the position of the ark: the divine presence in the midst, neither above nor below. At the center of Numbers (Unit 7), the earth opens to swallow Korach: the terrestrial surface acts. Upper zone, middle zone, lower zone — and the register dividers that separate them correspond to the transitions between books within the Horeb experience, as visible on the compositional field as the horizontal lines that separate registers in any multi-register composition.
 
 The word "register" is deliberate. Three semantically assigned vertical levels, separated by dividers, with each level carrying its own orientation — this is a standard structure in ancient compositional practice, and it has a name. Part III will identify the paradigm and show where it comes from.
 
-> FIGURE 10. The vertical thread: 19 rows (Exodus — Leviticus — Numbers), with register dividers.
+![Figure 9](fig-09-vertical-thread.png)
+
+*Figure 9. The vertical thread: 19 rows (Exodus — Leviticus — Numbers), with register dividers.*
 
 ### 10. The Complete 19 × 19 Grid
 
@@ -146,17 +162,19 @@ When the horizontal and vertical threads are placed on a single compositional fi
 
 The grid was not imposed on the structures. Each book's arrangement was established independently through internal structural analysis, published and verified before anyone counted the aggregate dimensions. The 19 × 19 matrix is what those published structures produce when they are set side by side and stacked — a consequence of the structures, not a premise of the analysis.
 
-The variable widths of the vertical-thread books — Exodus three columns, Leviticus seven, Numbers five — are positioned on the nineteen-column field by the alignment of their central units: Unit 10 (Exodus), Unit 13 (Leviticus), and Unit 7 (Numbers) share the same column position, the compositional center. Together with the independent units at the extremes of the horizontal thread — Babel near the eastern edge, Deuteronomy Unit 13 at the western — these form the organizational spine of the grid (Figure 11).
+The variable widths of the vertical-thread books — Exodus three columns, Leviticus seven, Numbers five — are positioned on the nineteen-column field by the alignment of their central units: Unit 10 (Exodus), Unit 13 (Leviticus), and Unit 7 (Numbers) share the same column position, the compositional center. Together with the independent units at the extremes of the horizontal thread — Babel near one edge, Deuteronomy Unit 13 at the other — these form the organizational spine of the grid (Figure 10).
 
-Several symmetries within the grid deserve attention. On the horizontal thread, the three books contribute 19, 22, and 13 units respectively (Genesis, Leviticus, Deuteronomy). On the vertical thread, the same sequence: 19, 22, and 13 (Exodus, Leviticus, Numbers). The entry book on each axis carries 19 units; the exit book carries 13. The flanking pair on each axis sums to 32 — Genesis plus Deuteronomy, Exodus plus Numbers — and Leviticus, with 22 units, sits at the intersection of both. Eighty-six units across five books, arranged on a 19 × 19 field, balanced around a center that serves both axes at once.
+Several symmetries within the grid deserve attention. On the horizontal thread, the three books contribute 19, 22, and 13 units respectively (Genesis, Leviticus, Deuteronomy). On the vertical thread, the same sequence: 19, 22, and 13 (Exodus, Leviticus, Numbers). The entry book on each thread carries 19 units; the exit book carries 13. The flanking pair on each thread sums to 32 — Genesis plus Deuteronomy, Exodus plus Numbers — and Leviticus, with 22 units, sits at the intersection of both. Eighty-six units across five books, arranged on a 19 × 19 field, balanced around a center that serves both threads at once.
 
 What is a 19 × 19 square in compositional terms? Is there a known paradigm in which nineteen is the canonical unit of a grid — and in which cosmic narratives are composed on three registers separated by dividers, with a central pivot where orientation reverses? There is. Part III identifies it.
 
-> FIGURE 11. The complete 19 × 19 Torah grid.
+![Figure 10](fig-10-torah-grid-19x19.png)
+
+*Figure 10. The complete 19 × 19 Torah grid.*
 
 ---
 
-*End of Part II (2026-06-11).*
+*End of Part II.*
 
 ---
 
@@ -172,9 +190,15 @@ The grid changed exactly once. In the 25th/26th Dynasty (c. 664 BCE), the canon 
 
 An Egyptian-trained scribe, encountering a composition built on a nineteen-unit square, would recognize the module immediately. It was not a number among others; it was the number — the first thing learned, the grid on which every compositional surface began.
 
-> FIGURE 12. The Egyptian canon of proportions: eighteen squares to the hairline, nineteen to the crown.
+![Figure 11](fig-11-canon-of-proportions.png)
+
+*Figure 11. The Egyptian canon of proportions: eighteen squares to the hairline, nineteen to the crown.*
 
 ### 12. The Amduat: How Egypt Composed Cosmic Narratives
+
+![Figure 12](fig-12-amduat-papyrus.png)
+
+*Figure 12. The Twelfth Hour of the Amduat. Note the vertical register of text to the left, as well as the solar barque on the middle register. (Cat. 1776, Museo Egizio, Turin. CC0 via Wikimedia Commons.)*
 
 The canonical grid defines the module. What defines the paradigm — the way a cosmic narrative was composed on that grid?
 
@@ -192,13 +216,15 @@ Fourth, the composition maps onto sacred architecture. The Amduat was inscribed 
 
 This was not one scribe's invention. It was how Egyptian scribes composed cosmic narratives — the standard paradigm, attested and copied for centuries, for representing a divine journey through a structured cosmos. A scribe trained in this tradition, composing a text about the relationship between the divine and the human — a journey from creation through revelation to settlement — would have this paradigm at hand.
 
-> FIGURE 13. The Amduat: twelve hours across three registers, with the Ra-Osiris union at Hour 6.
+![Figure 13](fig-13-amduat-schematic.png)
+
+*Figure 13. The Amduat: twelve hours across three registers, with the Ra-Osiris union at Hour 6.*
 
 ### 13. The Torah Follows the Paradigm
 
-The structural correspondences between the Amduat paradigm and the Torah's grid run along both axes and at two scales.
+The structural correspondences between the Amduat paradigm and the Torah's grid run along both threads and at two scales.
 
-The horizontal thread (Genesis–Leviticus–Deuteronomy) follows the journey pattern. Sequential units move through a timeline, read from right to left — from creation at the east to ending at the west, with Leviticus at the center. The orientation reverses at the midpoint: the cosmic order that placed heaven above through the first half of the band places it below through the second (Section 8). At the center, Unit 13 carries the declaration in which the two divine names held apart across the rows of Genesis — YHWH above, Elohim below — appear together: "You shall be holy, for I, YHWH your Elohim, am holy." This is not their union; it is the revelation of the means by which the separated aspects are to be reconciled — Israel becoming holy, representing YHWH in the reality of Elohim's world. Compositionally, this center occupies the same structural position as Ra's union with Osiris at Hour 6. The paradigm is the same; the content transforms it. In the Amduat, the union is cosmic and automatic — Ra and Osiris meet because the cycle requires it. In the Torah, the reunion is commanded and depends on human action.
+The horizontal thread (Genesis–Leviticus–Deuteronomy) follows the journey pattern. Sequential units move through a timeline. In Hebrew reading direction (right to left), Genesis stands at the right — the east, the direction of the beginning — and Deuteronomy stands at the left, the west, the direction of ending; Leviticus occupies the center. (Hebrew reading direction places east at the right, where Semitic map convention places east at the top; the figures in this section use the standard left-to-right print orientation, with the directional sense supplied here.) The orientation reverses at the midpoint: the cosmic order that placed heaven above through the first half of the band places it below through the second (Section 8). At the center, Unit 13 carries the declaration in which the two divine names held apart across the rows of Genesis — YHWH above, Elohim below — appear together: "You shall be holy, for I, YHWH your Elohim, am holy." This is not their union; it is the revelation of the means by which the separated aspects are to be reconciled — Israel becoming holy, representing YHWH in the reality of Elohim's world. Compositionally, this center occupies the same structural position as Ra's union with Osiris at Hour 6. The paradigm is the same; the content transforms it. In the Amduat, the union is cosmic and automatic — Ra and Osiris meet because the cycle requires it. In the Torah, the reunion is commanded and depends on human action.
 
 The horizontal thread carries the three-register pattern as well. Each column of the horizontal thread — each unit-triad — has three rows, and the rows carry the same semantic assignments as the Amduat's three registers within each hour: Row 1 is the transcendent register (in Genesis, the YHWH row), Row 2 the interface (where both names operate), Row 3 the earthly register (in Genesis, the Elohim row). Three rows per column, three registers per hour — the horizontal thread's internal anatomy matches the Amduat's.
 
@@ -216,23 +242,23 @@ The three books of the vertical thread are set at Horeb — not three journeys b
 
 And the impurities column — the sole unpaired triad whose removal yields the nineteen-column dimension (Section 8) — finds its place in the paradigm. The canonical grid is the idealized proportional field. The Torah includes one column whose content is specifically "that which must be removed," and its removal yields the canonical form. The grid contains its own instruction for achieving canonical status.
 
-The whole composition sits on a 19 × 19 square — the Egyptian canonical module applied in both dimensions to a cosmic narrative composed on three registers within the journey and three architectural levels around it, with a central pivot where orientation reverses.
+The whole composition sits on a 19 × 19 square — the Egyptian canonical module applied in both dimensions to a cosmic narrative composed on three registers within the journey and two architectural levels around it, with a central pivot where orientation reverses.
 
-> FIGURE 14. Torah grid and Amduat paradigm: structural correspondence at two scales.
+![Figure 14](fig-14-torah-amduat-correspondence.png)
 
-> FIGURE 15. Torah and Amduat side by side.
+*Figure 14. Torah and Amduat: architecture at two scales. Two levels around the journey (ceiling, floor); three registers within it.*
 
 ### 13a. The Signature Unit: Process Evidence
 
 The correspondences presented above show that the Torah's grid follows the Egyptian paradigm. But structural correspondence alone does not prove compositional method — a pattern can be observed after the fact without having been intended during composition. This section presents process evidence: features of the Torah's own construction that make sense only if the author held a complete two-dimensional original before converting it to linear text.
 
-The evidence comes from a single unit: Deuteronomy Unit 8 (21:10–25:4), analyzed in full in *The Beautiful Captive Speaks: Revealing the Composition of the Torah* (Kline, 2025; academia.edu/143629453). The unit contains approximately fifty laws arranged as a 10 × 3 matrix — five pairs of rows crossed by three columns designated L (Self), M (Self-and-Other), and R (Other), thirty segments in all. Each column opens with a variation on taking a wife (21:11, 22:13, 24:1). The monograph calls it the "Beautiful Weave."
+The evidence comes from a single unit: Deuteronomy Unit 8 (21:10–25:4), analyzed in full in *The Beautiful Captive Speaks: Revealing the Composition of the Torah* (Kline, 2025; academia.edu/143629453). The unit contains approximately fifty laws arranged across five pairs of rows and three columns designated L (Self), M (Self-and-Other), and R (Other). Each column opens with a variation on taking a wife (21:11, 22:13, 24:1). The monograph calls it the "Beautiful Weave."
 
 **(i) Serialization direction.** Of the Torah's eighty-six units, eighty-five were converted from their two-dimensional form to linear text by reading across the rows — the standard direction, which the Covenant Code (Exodus 22:17–23:19; JBL 2025) also follows. The Beautiful Weave is the sole exception: it was serialized by reading down the columns. Direction of serialization is invisible while uniform; one column-wise exception makes the act of serialization itself visible — and only an author holding a complete two-dimensional original can choose which axis to unroll. The choice presupposes the grid. The analogy is the unfinished Egyptian burial chamber, whose value lies precisely in preserving the working grid that the finished wall erases. יוצא מן הכלל להורות על הכלל — the exception that teaches about the rule.
 
 **(ii) The double constraint.** The same six segments of Pair 5 satisfy two independent ordering systems at once. Read by column, the agricultural cycle is intact: planting (L), ripening (M), harvest (R) — a sequence scrambled across Deuteronomy 22–25 in the linear text and recoverable only in the two-dimensional reconstruction. Read by row, each column carries an abstract legal principle: Column L limits expansion (parapet, mixed seed, mixed yoke, mixed fabric, tassels at the edges); Column R limits contraction, ordered by ascending intentionality (forgotten sheaf, unbeaten boughs, ungleaned vines, counted lashes, unmuzzled ox); Column M synthesizes (eat but do not vessel; pluck but do not sickle). Two orthogonal ordering systems whose directions coincide on a single axis: position carries meaning before content does. Accretion can mimic one pattern; it cannot place two independent patterns on the same words.
 
-**(iii) What the overlay legislates.** The abstract overlay — limiting expansion, limiting contraction — is the corpus's own published dyad between the divine characters, converted from narrative portrayal into legal principle. In the narrative, YHWH blesses expansively (land as far as the eye can see, seed as the dust of the earth); Elohim blesses within limits (Canaan only, one act of circumcision). In the Beautiful Weave, each column applies the opposite principle to its own force, and the harvest laws legislate the remainder: completeness is forbidden. This is the precise point of self-differentiation from the Egyptian paradigm. The agricultural cycle and the grid suit the Egyptian scribal world, but in the Amduat the cosmic union recurs automatically — Ra and Osiris meet because the cycle requires it. Here the union is commanded, requires human restraint, and depends on a remainder. The author borrows the compositional technology and writes his own governing idea onto it.
+**(iii) What the overlay legislates.** The abstract overlay — limiting expansion, limiting contraction — is the corpus's own published dyad between the divine characters, converted from narrative portrayal into legal principle. In the narrative, YHWH blesses expansively (land as far as the eye can see, seed as the dust of the earth); Elohim blesses within limits (Canaan only, one act of circumcision). In the Beautiful Weave, each column applies the opposite principle to its own force, and the harvest laws legislate the remainder: completeness is forbidden. This is the precise point of self-differentiation from the Egyptian paradigm. The agricultural cycle and the grid reflect the Egyptian scribal world, but in the Amduat the cosmic union recurs automatically — Ra and Osiris meet because the cycle requires it. Here the union is commanded, requires human restraint, and depends on a remainder. The author borrows the compositional technology and writes his own governing idea onto it.
 
 **(iv) The center-signature link.** The beautiful captive who opens the unit — the woman taken from among the enemy, shorn, stripped of her captive garments, given a month to mourn before entering the household — is the Torah's one realized case of a designated-but-unfree woman. The law at the structural center of the entire composition, Leviticus 19:20–22 (cell 2B of Unit 13 — middle column, middle row, focal unit), legislates exactly this figure: the שפחה נחרפת, the designated bondmaid. A single legal figure connects the centermost cell of the weave to the one unit serialized by its warp. The connection is published in the monograph.
 
@@ -240,7 +266,9 @@ The evidence comes from a single unit: Deuteronomy Unit 8 (21:10–25:4), analyz
 
 The unit is the composition's forgotten sheaf. Column R's law at the unintentional pole — the forgotten sheaf left standing in the field for the one who comes after — describes what the unit itself does. Egyptian tombs preserve the craftsman's working marks; what was not cleared away is how we know the work was made. The one unit not gathered into the uniform serialization is left standing in the field, and the finder is fed by what it preserves: the evidence of the maker's hand. In the law, the forgetting is unintentional by definition; in the composition, it is the most deliberate act in the Torah. The author legislated his own remainder. Form enacts content.
 
-> FIGURE 16. The Beautiful Weave: 10 × 3 matrix (wife-openings marked; Pair 5 agricultural and abstract currents indicated).
+![Figure 15](fig-15-beautiful-weave.png)
+
+*Figure 15. The Beautiful Weave: five pairs × three columns (Deuteronomy Unit 8, 21:10–25:4). Each cell shows the opening verse of its segment.*
 
 ### 14. Egyptian Grid Texts: The Technology Existed
 
@@ -254,7 +282,7 @@ The compositional technology the Torah would require — a text composed on a gr
 
 ---
 
-*End of Part III (2026-06-11).*
+*End of Part III.*
 
 ---
 
@@ -264,7 +292,7 @@ The compositional technology the Torah would require — a text composed on a gr
 
 The Documentary Hypothesis explained the Torah's complexity by positing multiple sources. The doublets, the alternating divine names, the interleaving of law and narrative — all were read as seams between documents, evidence that what we have was assembled from what once existed separately. The hypothesis was not unreasonable; it was the best available explanation for features that no known compositional model could account for. The point holds regardless of which form of the hypothesis one prefers — classic source division, neo-documentary refinement, fragmentary and supplementary models all begin from the same observed features and differ only in how the compilation is reconstructed. The argument here addresses the shared premise: that the features require compilation at all.
 
-This paper has presented such a model. The Torah's two-dimensional structure — eighty-six units across five books, each book a published matrix, the five books forming a 19 × 19 grid on the Egyptian canonical module — accounts for the features that source criticism attributed to compilation. The alternating divine names are row assignments (Section 4). The doubled narratives are column correspondences. The interleaving of law and story is the intersection of horizontal and vertical threads. The apparent seams are the markers of a two-dimensional weave.
+This paper has presented such a model. The Torah's two-dimensional structure — eighty-six units across five books, each book a published matrix, the five books forming a 19 × 19 grid on the Egyptian canonical module — accounts for the features that source criticism attributed to compilation, without the additional machinery of multiple sources. The alternating divine names are row assignments (Section 4). The doubled narratives are column correspondences. The interleaving of law and story is the intersection of horizontal and vertical threads. The apparent seams are the markers of a two-dimensional weave. Each feature follows from the structure; none requires a separate document of origin. What source criticism reconstructs as the residue of compilation is, on this account, the trace of two-dimensional composition flattened into linear text.
 
 The form of the Torah does not require J, E, P, and D. It requires a scribe who knew how to compose on a canonical grid — the way every Egyptian scribe was trained to compose.
 
@@ -288,7 +316,7 @@ Each of the following opens a line of investigation that extends beyond this pap
 
 8. **The Akhenaten question.** Akhenaten rejected the Amduat and suppressed the underworld literature. The Torah's composition maintains YHWH and Elohim as structurally distinct names distributed across its rows (Section 4) rather than reducing them to a single designation, and its grid uses the traditional eighteen-to-nineteen module, not the Amarna twenty-square variant (Robins 1994). Does this align the Torah with the traditional Egyptian compositional tradition — the one Akhenaten tried to destroy and that was restored after him — rather than the Amarna alternative?
 
-9. **The grid reform as terminus ante quem.** The canonical grid changed from eighteen to twenty-one squares in the 25th/26th Dynasty (c. 664 BCE). The Torah uses the traditional module. Does this provide a terminus ante quem for the composition?
+9. **The grid reform as terminus ante quem.** The canonical grid changed from eighteen to twenty-one squares in the 25th/26th Dynasty (c. 664 BCE). The Torah uses the traditional module. Does this provide a terminus ante quem for the composition? Archaism in late Egyptian art is well-attested — antiquarian copying of older styles is a known phenomenon of the Saite period — but archaism produces stylistic imitation of finished surfaces, not the operational deployment of a compositional module as the live structural armature of a literary work of this scale. The Torah's use of the eighteen-to-nineteen module is structural and load-bearing, not decorative. The distinction matters: a post-reform scribe could imitate the look of older figures, but could not build a five-book composition on the older module without active scribal fluency in that module's compositional grammar.
 
 10. **The three-surface program and the author's access.** The Torah's vertical thread presupposes not merely the three-register Amduat but the full three-surface decorative program of the royal burial chamber: celestial content above the journey (the astronomical ceilings attested from Seti I, c. 1279 BCE), earth content below it (the Book of the Earth, first appearing in the late 19th Dynasty and fully developed under Ramesses VI, c. 1136 BCE). This program was a royal prerogative — only the king's burial chamber carried it. If the Torah's composition requires knowledge of the developed three-surface model, this narrows the dating window (no earlier than the late 19th Dynasty, no later than the 25th Dynasty grid reform) and implies an author with access to the royal scribal tradition. Does the vertical thread's architecture point to the specific institutional context of composition?
 
@@ -302,8 +330,6 @@ Each of the following opens a line of investigation that extends beyond this pap
 
 15. **Kabbalistic reception.** The three-row system (above, middle, below) maps onto kabbalistic categories. Was the later mystical tradition preserving structural knowledge about the text's two-dimensional composition that mainstream reading had lost?
 
-16. **Orientation convention.** The Torah's compositional field is oriented by the body and by architecture — sky above, earth below, the journey horizontal — following the convention of the Egyptian canonical grid and the royal tomb. It does not follow Israelite cartographic convention, which places east (*kedem*, "front") at the top. The Egyptian cartographic convention places south at the top (the source of the Nile, Upper Egypt); the Israelite convention places east at the top. The Torah's grid follows neither cartographic system — it follows the Egyptian compositional convention of the canonical body (head above, feet below) and the tomb architecture (ceiling above, earth below). An Israelite author composing within Israelite spatial norms would orient east above; the Torah's grid orients the way an Egyptian scribe would orient a compositional surface. Does the orientation of the grid constitute independent evidence of Egyptian scribal training?
-
 ### 17. Conclusion
 
 The Torah's two-dimensional structure — established through four decades of research, published in peer-reviewed venues, and independently verified — produces a 19 × 19 square grid when the five books are placed on a single compositional field. That grid follows the Egyptian paradigm for cosmic narrative composition: the canonical proportional module, three semantically assigned registers with dividers, a central pivot where orientation reverses, and a compositional surface that maps onto sacred architecture. The paradigm is attested in the Amduat, the grid technology in the tomb of Kheruef and the Paser stela, and the process evidence in the Torah's own signature unit — whose exceptional serialization and double constraint demonstrate that the two-dimensional original preceded its linear form.
@@ -312,4 +338,4 @@ The Torah was not compiled from sources. It was composed by a scribe using the t
 
 ---
 
-*End of draft (2026-06-11).*
+*End of draft (2026-06-12).*

@@ -120,55 +120,69 @@ Governance: canonical diary in repo via Cowork (Option B); Claude maintains the 
 
 ### 2026-06-10 — Addendum at close (Moshe)
 The forgotten sheaf as the governing image of the signature unit — like tools left in a tomb testifying to the craftsman's skill, what remains ungathered is what testifies. The unit not gathered into the uniform serialization is the composition's forgotten sheaf; the finder is fed by the evidence of the maker's hand. In the law the forgetting is unintentional; in the composition it is the most deliberate act in the Torah — the author legislated his own remainder. Image ADDED as the closing of S13a; v3 APPROVED in full. Sentinel: filed and closed.
+---
 
-### 2026-06-11 — Complete draft assembled; all brackets resolved (Claude, Opus session)
+## 2026-06-12 — Article complete with figures
 
-**Part I reviewed and edited.** Ling Roth Fig 16A citation corrected (one painting, Nefer-ronpet, Superintendent of Weavers, c. 1200 BCE; H. Ling Roth, *Ancient Egyptian and Greek Looms*, 1913). "Cereal" → "meal" offering. S5 Deuteronomy source resolved (published analysis at chaver.com): A–D column opposition added, Row 2 cross-book pattern added (all three horizontal books place independent unit in Row 2). "Chiastically" → "pair across the center" throughout. Eden-Egypt paragraph dropped from S8 per Moshe's correction: the horizontal thread ends with Moses' blessings at the east bank, not with a curse.
+Article integrated end-to-end with figures and saved to `_pilot/egyptian-grid-article/`. This entry records what's in the folder, how it was built, and what state it's in.
 
-**Part II drafted (S8–S10).** S8 key addition: 8 concentric pairs across 3 horizontal books (16 of 17 triadic columns paired; impurities triad the sole unpaired column) — structural motivation for removal established before the arithmetic.
+### Folder contents
 
-**Part III drafted (S11–S14 + S13a).** New finding in S13: three-surface decorative program of royal burial chambers as architectural evidence for the vertical thread. Ceiling = celestial (astronomical scenes, Seti I KV17; Nut + Books of Day/Night, Ramesses VI KV9). Walls = journey (Amduat). Lower walls = earth (Book of the Earth, first in KV9; Roberson 2012). Torah maps: Exodus = ceiling, Gen-Lev-Deut = walls, Numbers = floor. Sources: Hornung 1999, Roberson 2012.
+`_pilot/egyptian-grid-article/`:
 
-**Part IV drafted (S15–S17).** 15 research questions. New question 10: three-surface program as dating evidence — terminus post quem late 19th Dynasty (Book of the Earth), terminus ante quem 25th Dynasty (grid reform); implies royal scribal access.
+**Article (3 formats, same content):**
+- `egyptian-grid-final.md` — markdown source, 341 lines, ~17,000 words
+- `egyptian-grid-final.pdf` — A4 print PDF, page numbers in footer, 2.8 MB
+- `egyptian-grid-final.html` — self-contained HTML with all images embedded as base64, 3.8 MB; opens in any browser, works offline
 
-**All open questions resolved:**
-- (a) Softened to "most naturally explained by planned tabular composition"
-- (b) "Day of Atonement" throughout
-- (d) Unit 10 divides Tabernacle from non-Tabernacle material (nine before, nine after)
-- (e) Ladder: not for this essay
-- (f) Current wording fine (primordial name progression)
-- S6 second chiastic pairing: dropped, kept brick-making/building only
-- Douglas citation: *In the Wilderness* (1993), per Moshe's own "Literary Structure of Leviticus" article
-- "Divine duality" caught → "structurally distinct names distributed across its rows"
+**Synopsis (2 formats):**
+- `synopsis.md` — markdown, ~1,070 words
+- `synopsis.pdf` — 2-page A4 PDF for fast circulation
 
-**Fable 5 review edits applied:** divider asymmetry paragraph in S9; "fills" → "spans" in S11; Iversen date corrected to 2nd ed. 1975 + Robins disagreement noted; module vs. wall-layout clarification in S11; Amduat attestation hedged ("early Eighteenth Dynasty"); Book of the Earth hedged ("fully developed"); Paser perimeter hedged; Exodus 20:19 MT numbering; JEDP broadened to all compilation models; "prime pericopes" analogy tightened; central-unit alignment principle added to S10.
+**15 figures (PDFs for publication, PNGs for proofing):**
+- Fig 1 Covenant Code 5×3 (after Kline & Hocking, JBL 2025)
+- Fig 2 Leviticus 8 columns (six paired, one removed)
+- Fig 3 Genesis 3×7
+- Fig 4 Deuteronomy 3×5 (row orientation inverted from Genesis)
+- Fig 5 Exodus two arrangements (quad + vertical)
+- Fig 6 Exodus vertical with treasure-to-Tabernacle and Sabbath-to-Sabbath continuities
+- Fig 7 Numbers 5×5 camp
+- Fig 8 Horizontal thread (Gen-Lev-Deut, 19 columns)
+- Fig 9 Vertical thread (Ex-Lev-Num, 19 rows)
+- Fig 10 Complete 19×19 Torah grid
+- Fig 11 Egyptian canon of proportions (18 to hairline, 19 to crown)
+- Fig 12 Amduat papyrus (Cat. 1776, Museo Egizio; CC0 via Wikimedia) — photograph, PNG only
+- Fig 13 Amduat schematic (12 hours × 3 registers, Hour 6 pivot)
+- Fig 14 Torah/Amduat architecture at two scales (5-level integrated diagram)
+- Fig 15 Beautiful Weave (Deuteronomy Unit 8, 5 pairs × 3 columns)
 
-**S13 two-scale correction identified:** Amduat three registers = three ROWS of horizontal thread (within the journey). Three vertical-thread books = three SURFACES of the tomb (ceiling/walls/floor — around the journey). Corrected text drafted; awaiting Cowork application.
+**Render scripts (in `render-scripts/` subfolder):**
+- `fig_utils.py` — palette, fonts, helper drawing functions (v3 of the palette, derived from Full Torah Map cell colors and main.css)
+- `render_set1.py` — produces Figs 1–7
+- `render_set2.py` and `render_set2_v2.py` — produce Figs 8–10 (v2 supersedes v1; v1 kept for history)
+- `render_set3.py` — produces Figs 11, 13, 14, 15 (Fig 12 is the papyrus photograph, not rendered)
 
-**Canon-body overlay (Moshe observation):** Square 19 of the canon (crown) maps to the top of the Exodus vertical arrangement (Units 1 and 6 — deity's first engagements with Moses and the people). Reproductive zone (buttocks to navel) maps to Leviticus (union, presence). Feet to knee maps to Numbers (firmly on earth). Fig 12 created as canon-vertical overlay showing this correspondence.
+Render dependencies: matplotlib, numpy. The scripts read no external data — all structural facts are hardcoded against the published unit layouts. Re-running any script in an environment with matplotlib produces the figure PDFs in the current directory.
 
-**Figures created (9 of 16):**
-| Fig | Title | Status |
-|-----|-------|--------|
-| 2 | Leviticus rings | Done |
-| 8 | Numbers camp | Layout needs Moshe's correction |
-| 9 | Horizontal thread (19 cols, row-colored, mid-Lev inversion) | Done |
-| 10 | Vertical thread (19 rows) | Done (minor: bullet glyph) |
-| 11 | Complete 19×19 grid | Done |
-| 12 | Canon + vertical overlay | Done |
-| 13 | Amduat schematic | Done |
-| 14 | Torah-Amduat correspondence | Needs redo for two-scale mapping |
-| 16 | Beautiful Weave | Done |
+### Build summary
 
-**Figures remaining (7):** 1 (Covenant Code), 3 (Leviticus columns), 4 (Genesis matrix — wider cells), 5 (Deuteronomy matrix — wider cells), 6 (Exodus two arrangements), 7 (Exodus vertical with continuities), 15 (Torah and Amduat side by side).
+- **Sets 1–3 of figures** built iteratively over multiple sessions, each set verified against deployed chaver.com pages (Full Torah Map, main.css, deployed Deuteronomy Unit 8) before rendering. Palette derived directly from CSS to keep the article visually consistent with the site.
+- **Article assembled** from the prior Part I draft + the article-outline-v3 + the new Part II/III/IV material developed in chat. The integration applied the figure renumbering, the Section 8 reading-direction removal (moved to Section 13), the Section 2 mundane/middle/divine flag, and the Amduat papyrus image at the head of Section 12.
+- **First peer-review-style critique** applied (file in chat history): reviewer praised structure, process evidence, symmetrical aesthetics, and clear disclaimers; recommended standardizing visual terminology (axis vs. thread), strengthening art-historical justification for register dividers, reframing Exodus stacking as an orthogonal projection, and addressing the archaizing counterargument to the terminus ante quem. All recommendations applied in the current draft.
 
-**Numbers camp layout:** Moshe corrected the arrangement. East (1, 2=flag, 3) parallel to West (11, 12=flag, 13). Top and bottom are alternating triads, not parallel. Exact unit placement on top/bottom needs confirmation.
+### Current state
 
-**Design philosophy:** Written in `grid-figures-philosophy.md`. Unified palette (warm=horizontal, cool=vertical, gold=center), 10pt minimum text, Instrument Sans + Crimson Pro fonts.
+- **Ready for circulation:** PDF and synopsis can go directly to readers.
+- **Outreach plan:** When emails go to Polis, Ragazzoli, Vymazalová (per the Egyptologist outreach diary), the synopsis PDF is the first attachment and the full article is offered on request.
+- **Site deployment:** The article is not yet deployed to chaver.com. A separate task will convert the markdown to the site's `Academic-Content-EN.html` template, place it under `/torah-weave/articles/egyptian-grid/` (or wherever decided), and add it to relevant index pages.
+- **Print-quality PDF:** The current PDF is proofing quality (weasyprint, A4). For academic submission the typography may need a journal-specific template; the markdown source is the canonical form for re-rendering.
 
-**Draft status:** ~9,200 words, 17 sections, 16 figures referenced, zero editorial brackets. Complete text in `_pilot/egyptian-grid-part-i-draft.md`.
+### Known issues / open items
 
-**Pre-submission factual verifications (flagged by Fable 5):**
+- **Museo Egizio image license:** Currently attributed "CC0 via Wikimedia Commons" per the Wikimedia page. For print-journal publication, license terms should be confirmed directly with the Museo Egizio rather than relying on the Wikimedia attribution alone.
+- **References to Robins/Schäfer in Section 9:** Cited from general knowledge in the revision pass; should be verified against the actual texts before submission.
+- **The Beautiful Weave dataset:** Fig 15 cell values came from the deployed Deuteronomy Unit 8 page on chaver.com. If that page's verse-range assignments change in the future, Fig 15 should be re-rendered from the updated source.
+ convention places east at the top (*kedem* = "east" = "front"). The Torah's grid follows neither — it follows Egyptian *compositional* convention (body-oriented: head/sky above, feet/earth below; tomb-oriented: ceiling/walls/floor). This is independent evidence the author was trained in Egyptian scribal practice, not merely borrowing a number. Added as research question 16. Consider strengthening S13 or S15 with this observation.
 - Iversen: confirm 2nd ed. 1975 is correct (1st ed. may be 1955)
 - Amduat: verify "early Eighteenth Dynasty" vs. naming Thutmose I
 - Book of the Earth: confirm precursor material predates Ramesses VI per Roberson

@@ -1843,3 +1843,34 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 **Next step:**
 - Moshe: review diffs in GitHub Desktop, commit + push, purge Cloudflare cache
 - Spot-check: exodus-unit-3 (7:3 should show blue `horizontal1` on "and multiply My signs and My wonders"), numbers-unit-9 (20:13 should show `vertical1` on "the waters of Meribah")
+
+---
+
+### 2026-06-11 — Egyptian Grid article: S13 two-scale correction, diary entry, orientation convention Q16
+
+**What was done:**
+- Replaced S13 ("The Torah Follows the Paradigm") in `_pilot/egyptian-grid-part-i-draft.md` with corrected two-scale mapping text. Old version conflated Amduat registers with vertical-thread books. New version distinguishes: (1) three rows per column = three registers per hour (within the journey), (2) three vertical-thread books = three tomb surfaces (around the journey). Table changed from Upper/Middle/Lower registers to Ceiling/Walls/Floor surfaces.
+- Appended full 2026-06-11 diary entry to `_pilot/egyptian-grid-essay-diary.md` documenting the prior Opus session (Part I–IV drafting, all brackets resolved, 9 figures created, pre-submission verifications flagged).
+- Added research question 16 (Orientation convention) to S16: Torah grid follows Egyptian compositional convention (body/architecture: sky above, earth below) rather than Israelite cartographic convention (east at top) or Egyptian cartographic convention (south at top). Independent evidence of Egyptian scribal training.
+- Added orientation convention finding to the essay diary entry.
+- Attempted Fig 14 redo for two-scale mapping — rejected by Moshe; needs another pass.
+
+**Files modified:**
+- `_pilot/egyptian-grid-part-i-draft.md` — S13 replaced; Q16 added to S16
+- `_pilot/egyptian-grid-essay-diary.md` — full session entry appended; orientation finding added
+
+**Decisions locked:**
+- S13 two-scale distinction is final: rows = registers (within), books = surfaces (around)
+- 16 research questions now in S16 (was 15)
+- Fig 14 arrangement still needs Moshe's direction on visual layout
+
+**Current state:**
+- Draft at ~9,400 words, 17 sections, 16 research questions, zero editorial brackets
+- S13 correction deployed (pushed + Cloudflare purged)
+- Q16 and diary updates uncommitted; pending Moshe's review
+- Fig 14 v2 rejected; original figure also incorrect for current text
+
+**Next step:**
+- Moshe: review diffs for Q16 + diary updates, commit + push
+- Fig 14: Moshe to specify desired visual arrangement for two-scale correspondence
+- Remaining figures: 1, 3, 4, 5, 6, 7, 8, 15 still to create
