@@ -1879,3 +1879,33 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 - Goldwasser follow-up due ~June 18
 - Send Polis, Ragazzoli, Vymazalová emails with live Academia.edu link
 - Decide whether this article absorbs or supplements the Academia.edu paper
+
+### 2026-06-14 — Deploy Exodus Diamond Rotation Session Package
+
+**What was done:**
+- Placed 3 files from the diamond rotation discovery session into `_pilot/egyptian-grid-article/`
+- Appended session summary to `_pilot/egyptian-grid-essay-diary.md`
+
+**Files modified:**
+- `_pilot/egyptian-grid-article/exodus-diamond-rotation-diary.md` — NEW (17,685 bytes). Full session diary: diamond quad rotation, perimeter ordinal alignment, epicycle geometry, bipartite/quadripartite ceiling correspondence, Ra–YHWH parallel, Profile of M, evidence needed
+- `_pilot/egyptian-grid-article/exodus-diamond-arrangement.svg` — NEW (7,366 bytes). Diamond quad layout of all 19 Exodus units with merkavah-face labels and pivot axis
+- `_pilot/egyptian-grid-article/exodus-diamond-perimeter-sides.svg` — NEW (9,252 bytes). Same layout highlighting perimeter ordinal alignment (1st=left, 2nd=top, 3rd=right, 4th=bottom)
+- `_pilot/egyptian-grid-essay-diary.md` — appended 2026-06-14 entry
+
+**Decisions locked:**
+- None; these are raw discovery notes pending verification and integration
+
+**Proven patterns:**
+- None new
+
+**What failed and why:**
+- Initial bash mkdir+cp timed out (stream closed). Re-ran copy commands successfully on retry.
+
+**Current state:**
+- Session materials archived in repo alongside the article draft
+- Integration into article outline v2 (S6, S12, S13, new S13b) not yet done
+
+**Next step:**
+- Integrate diamond rotation findings into article sections per diary §8 (S6, S12, S13, S13b)
+- Deep content comparison on perimeter pairs (evidence line 2)
+- Babylonian compound periodicity research (evidence line 3)

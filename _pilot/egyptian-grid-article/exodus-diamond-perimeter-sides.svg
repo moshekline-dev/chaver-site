@@ -1,0 +1,187 @@
+<svg width="680" viewBox="0 0 680 650" xmlns="http://www.w3.org/2000/svg" style="background:transparent">
+<style>
+  text { font-family: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif; }
+  .th { font-size: 14px; font-weight: 500; }
+  .ts { font-size: 12px; font-weight: 400; }
+  /* Outer perimeter: 1st units (left side) = blue */
+  .pos-1st rect { fill: #E6F1FB; stroke: #185FA5; stroke-width: 1; }
+  .pos-1st text { fill: #0C447C; }
+  /* Outer perimeter: 2nd units (top side) = teal */
+  .pos-2nd rect { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 1; }
+  .pos-2nd text { fill: #085041; }
+  /* Outer perimeter: 3rd units (right side) = purple */
+  .pos-3rd rect { fill: #EEEDFE; stroke: #534AB7; stroke-width: 1; }
+  .pos-3rd text { fill: #3C3489; }
+  /* Outer perimeter: 4th units (bottom side) = coral */
+  .pos-4th rect { fill: #FAECE7; stroke: #993C1D; stroke-width: 1; }
+  .pos-4th text { fill: #712B13; }
+  /* Inner-facing units = gray */
+  .inner rect { fill: #F1EFE8; stroke: #B4B2A9; stroke-width: 0.5; }
+  .inner text { fill: #5F5E5A; }
+  /* Pivots = amber */
+  .pivot rect { fill: #FAEEDA; stroke: #854F0B; stroke-width: 0.5; }
+  .pivot text.th { fill: #633806; }
+  .pivot text.ts { fill: #854F0B; }
+  .leader { stroke: #B4B2A9; stroke-width: 0.5; stroke-dasharray: 3 4; fill: none; }
+  .diamond { stroke: #B4B2A9; stroke-width: 0.5; stroke-dasharray: 4 3; fill: none; }
+  .label { fill: #888780; }
+  .side-label { font-size: 12px; font-weight: 500; }
+</style>
+
+<!-- Side labels on perimeter -->
+<text class="side-label" x="24" y="310" text-anchor="middle" dominant-baseline="central" transform="rotate(-90 24 310)" fill="#185FA5" opacity="0.7">1st units</text>
+<text class="side-label" x="340" y="46" text-anchor="middle" dominant-baseline="central" fill="#0F6E56" opacity="0.7">2nd units</text>
+<text class="side-label" x="656" y="310" text-anchor="middle" dominant-baseline="central" transform="rotate(90 656 310)" fill="#534AB7" opacity="0.7">3rd units</text>
+<text class="side-label" x="340" y="582" text-anchor="middle" dominant-baseline="central" fill="#993C1D" opacity="0.7">4th units</text>
+
+<!-- Perimeter highlight lines -->
+<line x1="52" y1="175" x2="52" y2="470" stroke="#185FA5" stroke-width="2" opacity="0.3" stroke-dasharray="6 4"/>
+<line x1="150" y1="74" x2="530" y2="74" stroke="#0F6E56" stroke-width="2" opacity="0.3" stroke-dasharray="6 4"/>
+<line x1="628" y1="175" x2="628" y2="470" stroke="#534AB7" stroke-width="2" opacity="0.3" stroke-dasharray="6 4"/>
+<line x1="150" y1="556" x2="530" y2="556" stroke="#993C1D" stroke-width="2" opacity="0.3" stroke-dasharray="6 4"/>
+
+<!-- QUAD A diamond outline -->
+<path class="diamond" d="M80,175 L150,105 L220,175 L150,245 Z"/>
+<text class="ts label" x="150" y="168" text-anchor="middle" dominant-baseline="central" opacity="0.4">A</text>
+<text class="ts label" x="150" y="183" text-anchor="middle" dominant-baseline="central" opacity="0.3">Ox</text>
+
+<!-- Unit 1 (left) — OUTER LEFT / 1st -->
+<g class="pos-1st">
+  <rect x="52" y="159" width="56" height="32" rx="6"/>
+  <text class="th" x="80" y="175" text-anchor="middle" dominant-baseline="central">1</text>
+</g>
+<!-- Unit 2 (top) — OUTER TOP / 2nd -->
+<g class="pos-2nd">
+  <rect x="122" y="89" width="56" height="32" rx="6"/>
+  <text class="th" x="150" y="105" text-anchor="middle" dominant-baseline="central">2</text>
+</g>
+<!-- Unit 3 (right) — inner -->
+<g class="inner">
+  <rect x="192" y="159" width="56" height="32" rx="6"/>
+  <text class="th" x="220" y="175" text-anchor="middle" dominant-baseline="central">3</text>
+</g>
+<!-- Unit 4 (bottom) — inner -->
+<g class="inner">
+  <rect x="122" y="229" width="56" height="32" rx="6"/>
+  <text class="th" x="150" y="245" text-anchor="middle" dominant-baseline="central">4</text>
+</g>
+
+<!-- UNIT 5 pivot -->
+<g class="pivot">
+  <rect x="312" y="159" width="56" height="32" rx="6"/>
+  <text class="th" x="340" y="171" text-anchor="middle" dominant-baseline="central">5</text>
+  <text class="ts" x="340" y="185" text-anchor="middle" dominant-baseline="central">pivot</text>
+</g>
+
+<!-- QUAD B diamond outline -->
+<path class="diamond" d="M460,175 L530,105 L600,175 L530,245 Z"/>
+<text class="ts label" x="530" y="168" text-anchor="middle" dominant-baseline="central" opacity="0.4">B</text>
+<text class="ts label" x="530" y="183" text-anchor="middle" dominant-baseline="central" opacity="0.3">Man</text>
+
+<!-- Unit 6 (left) — inner -->
+<g class="inner">
+  <rect x="432" y="159" width="56" height="32" rx="6"/>
+  <text class="th" x="460" y="175" text-anchor="middle" dominant-baseline="central">6</text>
+</g>
+<!-- Unit 7 (top) — OUTER TOP / 2nd -->
+<g class="pos-2nd">
+  <rect x="502" y="89" width="56" height="32" rx="6"/>
+  <text class="th" x="530" y="105" text-anchor="middle" dominant-baseline="central">7</text>
+</g>
+<!-- Unit 8 (right) — OUTER RIGHT / 3rd -->
+<g class="pos-3rd">
+  <rect x="572" y="159" width="56" height="32" rx="6"/>
+  <text class="th" x="600" y="175" text-anchor="middle" dominant-baseline="central">8</text>
+</g>
+<!-- Unit 9 (bottom) — inner -->
+<g class="inner">
+  <rect x="502" y="229" width="56" height="32" rx="6"/>
+  <text class="th" x="530" y="245" text-anchor="middle" dominant-baseline="central">9</text>
+</g>
+
+<!-- UNIT 10 center pivot -->
+<g class="pivot">
+  <rect x="312" y="294" width="56" height="32" rx="6"/>
+  <text class="th" x="340" y="306" text-anchor="middle" dominant-baseline="central">10</text>
+  <text class="ts" x="340" y="320" text-anchor="middle" dominant-baseline="central">pivot</text>
+</g>
+
+<!-- QUAD C diamond outline -->
+<path class="diamond" d="M80,475 L150,405 L220,475 L150,545 Z"/>
+<text class="ts label" x="150" y="468" text-anchor="middle" dominant-baseline="central" opacity="0.4">C</text>
+<text class="ts label" x="150" y="483" text-anchor="middle" dominant-baseline="central" opacity="0.3">Eagle</text>
+
+<!-- Unit 11 (left) — OUTER LEFT / 1st -->
+<g class="pos-1st">
+  <rect x="52" y="459" width="56" height="32" rx="6"/>
+  <text class="th" x="80" y="475" text-anchor="middle" dominant-baseline="central">11</text>
+</g>
+<!-- Unit 12 (top) — inner -->
+<g class="inner">
+  <rect x="122" y="389" width="56" height="32" rx="6"/>
+  <text class="th" x="150" y="405" text-anchor="middle" dominant-baseline="central">12</text>
+</g>
+<!-- Unit 13 (right) — inner -->
+<g class="inner">
+  <rect x="192" y="459" width="56" height="32" rx="6"/>
+  <text class="th" x="220" y="475" text-anchor="middle" dominant-baseline="central">13</text>
+</g>
+<!-- Unit 14 (bottom) — OUTER BOTTOM / 4th -->
+<g class="pos-4th">
+  <rect x="122" y="529" width="56" height="32" rx="6"/>
+  <text class="th" x="150" y="545" text-anchor="middle" dominant-baseline="central">14</text>
+</g>
+
+<!-- UNIT 15 pivot -->
+<g class="pivot">
+  <rect x="312" y="459" width="56" height="32" rx="6"/>
+  <text class="th" x="340" y="471" text-anchor="middle" dominant-baseline="central">15</text>
+  <text class="ts" x="340" y="485" text-anchor="middle" dominant-baseline="central">pivot</text>
+</g>
+
+<!-- QUAD D diamond outline -->
+<path class="diamond" d="M460,475 L530,405 L600,475 L530,545 Z"/>
+<text class="ts label" x="530" y="468" text-anchor="middle" dominant-baseline="central" opacity="0.4">D</text>
+<text class="ts label" x="530" y="483" text-anchor="middle" dominant-baseline="central" opacity="0.3">Lion</text>
+
+<!-- Unit 16 (left) — inner -->
+<g class="inner">
+  <rect x="432" y="459" width="56" height="32" rx="6"/>
+  <text class="th" x="460" y="475" text-anchor="middle" dominant-baseline="central">16</text>
+</g>
+<!-- Unit 17 (top) — inner -->
+<g class="inner">
+  <rect x="502" y="389" width="56" height="32" rx="6"/>
+  <text class="th" x="530" y="405" text-anchor="middle" dominant-baseline="central">17</text>
+</g>
+<!-- Unit 18 (right) — OUTER RIGHT / 3rd -->
+<g class="pos-3rd">
+  <rect x="572" y="459" width="56" height="32" rx="6"/>
+  <text class="th" x="600" y="475" text-anchor="middle" dominant-baseline="central">18</text>
+</g>
+<!-- Unit 19 (bottom) — OUTER BOTTOM / 4th -->
+<g class="pos-4th">
+  <rect x="502" y="529" width="56" height="32" rx="6"/>
+  <text class="th" x="530" y="545" text-anchor="middle" dominant-baseline="central">19</text>
+</g>
+
+<!-- Connecting lines from pivots -->
+<line class="leader" x1="248" y1="175" x2="312" y2="175"/>
+<line class="leader" x1="368" y1="175" x2="432" y2="175"/>
+<line class="leader" x1="340" y1="261" x2="340" y2="294"/>
+<line class="leader" x1="340" y1="326" x2="340" y2="389"/>
+<line class="leader" x1="248" y1="475" x2="312" y2="475"/>
+<line class="leader" x1="368" y1="475" x2="432" y2="475"/>
+<line class="leader" x1="150" y1="261" x2="150" y2="389"/>
+<line class="leader" x1="530" y1="261" x2="530" y2="389"/>
+
+<!-- Legend -->
+<text class="ts" x="40" y="602" dominant-baseline="central" fill="#5F5E5A">Outer sides collect same ordinal positions:</text>
+<text class="ts" x="40" y="618" dominant-baseline="central">
+  <tspan fill="#185FA5">left = 1st</tspan>
+  <tspan dx="12" fill="#0F6E56">top = 2nd</tspan>
+  <tspan dx="12" fill="#534AB7">right = 3rd</tspan>
+  <tspan dx="12" fill="#993C1D">bottom = 4th</tspan>
+</text>
+<text class="ts" x="40" y="634" dominant-baseline="central" fill="#888780">Gray = inner-facing units (toward pivots)</text>
+</svg>

@@ -182,8 +182,10 @@ Render dependencies: matplotlib, numpy. The scripts read no external data — al
 - **Museo Egizio image license:** Currently attributed "CC0 via Wikimedia Commons" per the Wikimedia page. For print-journal publication, license terms should be confirmed directly with the Museo Egizio rather than relying on the Wikimedia attribution alone.
 - **References to Robins/Schäfer in Section 9:** Cited from general knowledge in the revision pass; should be verified against the actual texts before submission.
 - **The Beautiful Weave dataset:** Fig 15 cell values came from the deployed Deuteronomy Unit 8 page on chaver.com. If that page's verse-range assignments change in the future, Fig 15 should be re-rendered from the updated source.
- convention places east at the top (*kedem* = "east" = "front"). The Torah's grid follows neither — it follows Egyptian *compositional* convention (body-oriented: head/sky above, feet/earth below; tomb-oriented: ceiling/walls/floor). This is independent evidence the author was trained in Egyptian scribal practice, not merely borrowing a number. Added as research question 16. Consider strengthening S13 or S15 with this observation.
-- Iversen: confirm 2nd ed. 1975 is correct (1st ed. may be 1955)
+
+### 2026-06-14 — Exodus Diamond Rotation Session
+New structural findings: diamond quad rotation reveals perimeter ordinal alignment, epicycle geometry, and bipartite/quadripartite correspondence with Egyptian astronomical ceiling architecture. Full session diary at `exodus-diamond-rotation-diary.md` with two SVG figures. Profile of M developed from compositional competencies. See `_pilot/egyptian-grid-article/exodus-diamond-rotation-diary.md`.
+firm 2nd ed. 1975 is correct (1st ed. may be 1955)
 - Amduat: verify "early Eighteenth Dynasty" vs. naming Thutmose I
 - Book of the Earth: confirm precursor material predates Ramesses VI per Roberson
 - Paser stela: confirm perimeter reading is a proposal, not established
