@@ -46,6 +46,12 @@
 
 # --- end SEO audit fixes 2026-05-25 ---
 
+# --- WP probe blockers (bots hit these constantly) ---
+/wp-*.php / 301
+/wp-admin/* / 301
+/wp-content/* / 301
+/wp-content/uploads/* / 301
+
 # --- Mishnah chapter clean URLs (add .htm) ---
 # (Originally from GSC 404 cleanups. Extended 2026-05-14 with 15 Zevachim/Nedarim rules
 #  after they were renamed .html → .htm. Static rules placed here, BEFORE dynamic/splat
@@ -93,7 +99,6 @@
 /General/Color%20Codes/Hebrew-Color-Code  /torah-weave/hebrew-color-code-guide  301
 /Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf  /Torah-New/English/Articles/The%20Compositional%20Hypothesis%20Links.pdf  301
 
-# --- Old /Mishnah/ paths ---
 
 # --- Old /Torah/ paths ---
 /Torah/Dvarim%20Code.htm /Torah-New/English/Torah%20Portal 301
@@ -116,8 +121,7 @@
 
 # --- torah-weave commentary fixes ---
 /torah-weave/Admin/Assets/Slide-Shows/decalogue/The_Decalogue.pdf /torah-weave/commentary.html 301
-/torah-weave/Deuteronomy/deuteronomy-unit-8/deuteronomy-unit-8-commentary-pairs.html / 301
-/torah-weave/Genesis/genesis-analysis/Part-C-The-Three-Rows.html / 301
+/torah-weave/Genesis/genesis-analysis/Part-C-The-Three-Rows.html /torah-weave/Genesis/genesis-analysis/the-three-rows 301
 /torah-weave/Genesis/genesis-unit-10/commentary.html /torah-weave/Genesis/genesis-unit-10/genesis-unit-10-commentary.html 301
 /torah-weave/Genesis/genesis-unit-11/commentary.html /torah-weave/Genesis/genesis-unit-11/genesis-unit-11-commentary.html 301
 /torah-weave/Genesis/genesis-unit-12/commentary.html /torah-weave/Genesis/genesis-unit-12/genesis-unit-12-commentary.html 301
@@ -139,6 +143,12 @@
 /torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22-commentary.html /torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22-leviticus-unit-22-commentary.html 301
 /torah-weave/who%20wrote%20the%20bible%20theories%20compared /torah-weave/who-wrote-the-bible-theories-compared.html 301
 /torah-weave/Torah-pdf/torah-pdf  /Torah-New/English/Text/Torah-pdf  301
+
+# Leviticus commentaries: legacy double-dash URLs redirect to single-dash
+/torah-weave/Leviticus/leviticus-unit-1/leviticus--unit-1-commentary /torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1-commentary 301
+/torah-weave/Leviticus/leviticus-unit-2/leviticus--unit-2-commentary /torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2-commentary 301
+/torah-weave/Leviticus/leviticus-unit-3/leviticus--unit-3-commentary /torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3-commentary 301
+/torah-weave/Leviticus/leviticus-unit-22/leviticus--unit-22-commentary /torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22-commentary 301
 # --- Legacy .htm → clean URL redirects (renamed 2026-05-17) ---
 /General/Color%20Codes/English%20Color%20Code.htm  /General/Color%20Codes/English%20Color%20Code  301
 /General/Woven%20Text.htm  /General/Woven%20Text  301
@@ -207,17 +217,7 @@
 /Before%20Chapter%20and%20Verse.htm /Torah-New/English/Text/Torah-pdf 301
 /Before%20Chapter%20and%20Verse/Part%203%20PDF.pdf /Torah-New/English/Text/Torah-pdf 301
 /Elohim%20and%20YHWH%20as%20Organizing%20Principles%20in%20Genesis%20Intro%20and%20Part%20One.pdf /torah-weave/yhwh-and-elohim-two-names.html 301
-/Genesis/genesis-unit-1/commentary.html / 301
-/Genesis/genesis-unit-1/genesis-unit-1.html / 301
-/Genesis/genesis-unit-2/commentary.html / 301
-/Genesis/genesis-unit-2/genesis-unit-2.html / 301
-/Genesis/genesis-unit-3/genesis-unit-3.html / 301
-/Genesis/genesis-unit-5/genesis-unit-5.html / 301
-/Genesis/genesis-unit-6/genesis-unit-6.html / 301
-/Mishna/TheMishna.htm / 301
-/Mishnah / 301
 /Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.pdf /Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah 301
-/Mishnah-New/English/Articles/woven-table-series-overview.html / 301
 /Mishnah-New/Hebrew/Articles/TheWholeStructure.pdf / 301
 /Mishnah-New/Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20Perek%2010.htm /Mishnah/TheMishnah 301
 /Mishnah-New/Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20Perek%202.htm /Mishnah/TheMishnah 301
@@ -250,120 +250,50 @@
 /Mishnah-New/Hebrew/Text/Seder%20Zeraim/Mesechet%20Trumot/Masechet%20Terumot%20Perek%209.htm /Mishnah/TheMishnah 301
 /Mishnah-New/index.html /Mishnah/TheMishnah 301
 /Torah-New/English/Articles/Leviticus%20The%20Ways%20of%20Holiness/The%20Ways%20of%20Holiness%20Prologue.htm / 301
-/Torah-New/English/Articles/The_Literary_Structure_of_Leviti- / 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20I.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20II.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20IV.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20IX.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20V.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20VI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20VII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20VIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20X.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20XI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20XII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Deuteronomy/Deuteronomy%20Unit%20XIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20I.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20II.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20III.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20IV.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20IX.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20V.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20VI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20VII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20VIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20X.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20XI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20XII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20XIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20XIV.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20XIX.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20XV.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20XVI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20XVII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Exodus/Exodus%20Unit%20XVIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20I.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20II.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20III.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20IV.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20IX.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20V.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20VI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20VII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20VIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20X.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20XI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20XII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20XIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20XIV.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20XIX.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20XV.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20XVI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20XVII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Genesis/Genesis%20Unit%20XVIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Leviticus/Leviticus%20Unit%20II.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Leviticus/Leviticus%20Unit%20VI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Leviticus/Leviticus%20Unit%20VIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Leviticus/Leviticus%20Unit%20XX.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20I.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20II.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20III.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20IV.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20IX.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20V.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20VI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20VII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20VIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20X.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20XI.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20XII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/Numbers/Numbers%20Unit%20XIII.htm /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/The%20Structured%20To- /Torah-New/English/Torah%20Portal 301
-/Torah-New/English/Text/The%20Structured%20Torah /Torah-New/English/Torah%20Portal 301
-/Torah-New/Hebrew/Articles/The%20Editor%20was%20Nodding.pdf / 301
-/Torah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf /Torah-New/English/Torah%20Portal 301
-/articles/ / 301
-/cdn-cgi/l/email-protection / 301
-/contact/ / 301
-/genesis-map/ / 301
+
+# --- Restored from previously-dropped range (2026-06-21) ---
+
+# Hebrew shortcuts and portals
 /hebrew /hebrew%20index.html 301
 /hebrew-portal.html /hebrew%20index.html 301
-/introduction-to-torah-maps/ / 301
+
+# Hebrew language legacy paths
 /language/he/hebrew_pages/hebrew-map-of-deuteronomy/ / 301
 /language/he/hebrew_pages/hebrew-map-of-exodus/ / 301
 /language/he/hebrew_pages/hebrew-map-of-numbers/ / 301
-/leviticus-map/ / 301
-/mishnah/ / 301
-/mishnah/structure/ / 301
-/numbers-map/ / 301
-/research-articles/ / 301
-/services/ / 301
-/the-principle-of-woven-texts-understanding-the-literary-paradigm/ / 301
-/the-sophisticated-literary-structure-of-leviticus-19-part-1/ / 301
-/the-voice-is-the-voice-of-yhwh-but-the-hands-are-the-hands-of-elohim/ / 301
+
+# Academic PDF legacy paths
+/Torah-New/Hebrew/Articles/The%20Editor%20was%20Nodding.pdf / 301
+/Torah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf /Torah-New/English/Torah%20Portal 301
+/Before%20Chapter%20and%20Verse.pdf /torah.pdf 301
+
+# Old torah-commentary-project paths
 /torah-commentary-project/ /torah-weave/commentary.html 301
 /torah-commentary-project/Commentaries/Genesis/genesis-unit-1.html /torah-weave/commentary.html 301
 /torah-commentary-project/Commentaries/exodus-unit-3.html /torah-weave/commentary.html 301
 /torah-commentary-project/Commentaries/genesis-unit-3.html /torah-weave/commentary.html 301
 /torah-commentary-project/commentaries/exodus-unit-3.html /torah-weave/commentary.html 301
-/torah-new/english/articles/The_literary_structure_of_leviti- / 301
-/wp-*.php / 301
-/wp-admin/* / 301
-/wp-content/* / 301
-/wp-content/uploads/* / 301
-https://tjq.qeb.temporary.site.chaver.com/Mishnah-New/Hebrew/Text/Seder%20Moed/Masechet%20Eruvin/Masechet%20Eruvin%20Perek%205.htm /Mishnah/TheMishnah 301
-https://tjq.qeb.temporary.site.chaver.com/Mishnah-New/index.html /Mishnah/TheMishnah 301
-https://tjq.qeb.temporary.site.chaver.com/mishnah/about/ / 301
 
-# Old WP-export folder structures redirected to canonical
+# Old WP article slugs
+/the-principle-of-woven-texts-understanding-the-literary-paradigm/ / 301
+/the-sophisticated-literary-structure-of-leviticus-19-part-1/ / 301
+/the-voice-is-the-voice-of-yhwh-but-the-hands-are-the-hands-of-elohim/ / 301
+
+# Old WP-export long slug
 /torah-weave/Genesis/genesis-unit-12-261-33-revealing-isaacs-independence/ /torah-weave/Genesis/genesis-unit-12/genesis-unit-12 301
 /torah-weave/Genesis/genesis-unit-12-261-33-revealing-isaacs-independence /torah-weave/Genesis/genesis-unit-12/genesis-unit-12 301
 
-# Before Chapter and Verse.pdf — consolidated to primary torah.pdf
-/Before%20Chapter%20and%20Verse.pdf /torah.pdf 301
+# --- Roman-numeral unit redirects (consolidated 2026-06-21) ---
+# 63 static rules replaced by 4 directory splats; 4 Leviticus statics kept
 
-# Leviticus commentaries: legacy double-dash URLs redirect to single-dash
-/torah-weave/Leviticus/leviticus-unit-1/leviticus--unit-1-commentary /torah-weave/Leviticus/leviticus-unit-1/leviticus-unit-1-commentary 301
-/torah-weave/Leviticus/leviticus-unit-2/leviticus--unit-2-commentary /torah-weave/Leviticus/leviticus-unit-2/leviticus-unit-2-commentary 301
-/torah-weave/Leviticus/leviticus-unit-3/leviticus--unit-3-commentary /torah-weave/Leviticus/leviticus-unit-3/leviticus-unit-3-commentary 301
-/torah-weave/Leviticus/leviticus-unit-22/leviticus--unit-22-commentary /torah-weave/Leviticus/leviticus-unit-22/leviticus-unit-22-commentary 301
+# Leviticus: 4 static rules (directory has 15 live files, cannot splat)
+/Torah-New/English/Text/Leviticus/Leviticus%20Unit%20II.htm /Torah-New/English/Torah%20Portal 301
+/Torah-New/English/Text/Leviticus/Leviticus%20Unit%20VI.htm /Torah-New/English/Torah%20Portal 301
+/Torah-New/English/Text/Leviticus/Leviticus%20Unit%20VIII.htm /Torah-New/English/Torah%20Portal 301
+/Torah-New/English/Text/Leviticus/Leviticus%20Unit%20XX.htm /Torah-New/English/Torah%20Portal 301
+
+# Genesis, Exodus, Numbers, Deuteronomy: directory splats
+/Torah-New/English/Text/Genesis/*       /Torah-New/English/Torah%20Portal  301
+/Torah-New/English/Text/Exodus/*        /Torah-New/English/Torah%20Portal  301
+/Torah-New/English/Text/Numbers/*       /Torah-New/English/Torah%20Portal  301
+/Torah-New/English/Text/Deuteronomy/*   /Torah-New/English/Torah%20Portal  301
