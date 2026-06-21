@@ -1956,3 +1956,34 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 - Moshe: review diff in GitHub Desktop. Expect ~303 modified files (1 template + 301 pages + this diary). Spot-check Torah-pdf (body "Short Studies" + footer "Key Insights"), homepage (footer only), one Insights page.
 - After push: purge Cloudflare cache.
 - Follow-up: hydrate `about-Moshe-Kline.html` and `torah-weave/commentary.html` on Windows and apply the footer change manually or via re-run.
+
+
+### 2026-06-21 — Torah-pdf truncation repair
+
+**What was done:**
+- Repaired `Torah-New/English/Text/Torah-pdf.html` which was truncated mid-nav-script at line 781 (`btn.add` — mid-word). Missing: rest of dropdown handler, click-outside handler, IIFE close, `</script>`, `</body>`, `</html>`.
+- Repair path A: sourced the tail verbatim from `_templates/Academic-Content-EN.html` (the forEach handler onward through `</html>`), minus the `{{ region: page-scripts }}` placeholder (this page has no page-scripts). Cut the dangling partial `btn.add` line and spliced in the template's complete version.
+- Body content above the cut point is byte-identical to the truncated original — zero content changes.
+
+**Files modified:**
+- `Torah-New/English/Text/Torah-pdf.html` (45,048 → 46,580 bytes; +1,532 bytes = the restored tail)
+- `_pilot/cowork-diary.md` (this entry)
+
+**Verification:**
+- Ends with `</html>` ✓
+- Exactly 1 `</body>` and 1 `</html>` ✓
+- Nav IIFE opens and closes (balanced `(function(){...})();`) ✓
+- All JSON-LD blocks reparse ✓
+- No NUL bytes ✓
+- Body "Key Insights": 0; body "Short Studies": 1; footer "Key Insights": 1 (Batch 5 changes intact) ✓
+- Backup at `_backup-pre-migration/` exists but is pre-migration DWT — not used (body content differs)
+
+**Decisions locked:**
+- Truncation was pre-existing (noted in diary entries from 2026-05-25 integrity sweep and 2026-06-21 Batch 5). Not caused by any Cowork edit.
+- Template tail is the canonical source for restoring any similarly truncated page's closing boilerplate.
+
+**Current state:**
+- File repaired, in working tree, NOT committed.
+
+**Next step:**
+- Moshe: review diff in GitHub Desktop (the diff will show the restored script handlers + closing tags as additions), commit + push, purge Cloudflare cache. After deploy: confirm nav dropdowns work on the live Torah-pdf page.
