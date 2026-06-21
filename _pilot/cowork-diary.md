@@ -1909,3 +1909,50 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 - Integrate diamond rotation findings into article sections per diary §8 (S6, S12, S13, S13b)
 - Deep content comparison on perimeter pairs (evidence line 2)
 - Babylonian compound periodicity research (evidence line 3)
+
+
+### 2026-06-21 — Batch 5: Key Insights footer section added to EN template + propagated
+
+**What was done:**
+- Inserted a new "Key Insights" footer section (10 extensionless Insights links) into `_templates/Academic-Content-EN.html`, immediately before the existing "Featured Articles" section. Footer now has 5 sections: Key Insights, Featured Articles, Full Texts, Resources, About Moshe Kline. Uses `<h4>` (EN convention).
+- Renamed the in-body `<h3>Key Insights</h3>` heading on `Torah-New/English/Text/Torah-pdf.html` to `<h3>Short Studies</h3>` to avoid a duplicate heading on that page. The 6 glossed links and the two sibling sub-blocks ("Related Resources" intro, "The Structured Mishnah") left untouched.
+- Propagated the footer change to 301 English-rendered pages. Hebrew template and Hebrew pages untouched.
+
+**Files modified:**
+- `_templates/Academic-Content-EN.html` (+1308 bytes; Key Insights footer block inserted)
+- `Torah-New/English/Text/Torah-pdf.html` (+1 byte net; heading rename + footer insertion)
+- 300 additional rendered `.html`/`.htm` files carrying the baked EN footer (each +1324 bytes for the new footer section)
+- `_pilot/cowork-diary.md` (this entry)
+
+**NOT modified:**
+- `_templates/Academic-Content-HE.html` and all Hebrew-template pages
+- `about-Moshe-Kline.html` and `torah-weave/commentary.html` (skipped: OneDrive NUL placeholders — need host-side hydration before editing)
+- `main.css`, `_redirects`, `sitemap.xml`
+- Homepage body content (its in-body Insights links untouched; only the footer gained the new section)
+
+**Verification (post-apply):**
+- Idempotency confirmed: re-running produces 0 modifications, 303 skips, 0 errors
+- 301/303 EN pages have Key Insights in footer (`has_ki_footer: 301`)
+- 2/303 missing (`missing_ki: 2`) — the 2 NUL-placeholder files skipped above
+- 0 duplicate Key Insights headings in any single footer block (`double_ki_in_single_footer: 0`)
+- Torah-pdf: body has 0 "Key Insights", 1 "Short Studies"; footer has exactly 1 "Key Insights"
+- `genesis-complete-commentary.html`: 1 occurrence of "Key Insights" (the single outer footer; 4 embedded footers were already stripped in 2026-05-29)
+- All JSON-LD blocks reparse cleanly
+- 288/303 end with `</html>`; 15 pre-existing truncated (not caused by this task)
+
+**Decisions locked:**
+- In-body sub-heading renamed to "Short Studies" (Moshe's task spec said "[HEADING — your choice]")
+- Footer order: Key Insights first, then Featured Articles, Full Texts, Resources, About — matches task spec
+
+**What failed and why:**
+- First script run had a `bytes.endswith(str)` type error — fixed immediately
+- Torah-pdf is pre-existing truncated (no `</html>`, cuts mid-script at line 766) — relaxed verification for this known-truncated file; edit is correct (only touches content above the truncation point)
+
+**Current state:**
+- All edits in working tree, NOT committed. Moshe to review in GitHub Desktop, commit + push, purge Cloudflare cache.
+- 2 files skipped (NUL placeholders) — these need host-side hydration + re-run, or manual edit on Windows
+
+**Next step:**
+- Moshe: review diff in GitHub Desktop. Expect ~303 modified files (1 template + 301 pages + this diary). Spot-check Torah-pdf (body "Short Studies" + footer "Key Insights"), homepage (footer only), one Insights page.
+- After push: purge Cloudflare cache.
+- Follow-up: hydrate `about-Moshe-Kline.html` and `torah-weave/commentary.html` on Windows and apply the footer change manually or via re-run.
