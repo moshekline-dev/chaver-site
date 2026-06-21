@@ -531,7 +531,7 @@
     </div>
     <div class="feature-card">
         <h3>Two-Dimensional Format</h3>
-        <p>Units displayed as tables revealing both horizontal and vertical relationships—the "warp and weft" of biblical composition. This format is unique to the Woven Torah approach.</p>
+        <p>Units displayed as tables revealing both horizontal and vertical relationships—the "warp and weft" of biblical composition. This format is unique to the Woven Torah approach. <a href="/torah-weave/six-days-of-creation-picture">See Genesis 1 displayed as a woven unit</a>.</p>
     </div>
     <div class="feature-card">
         <h3>Peer-Reviewed Research</h3>
@@ -547,7 +547,7 @@
 
 <p>Most Torah PDFs and Chumash downloads give you just the text. <em>Before Chapter and Verse</em> gives you the text plus understanding. This is the result of four decades of research into the Torah's literary structure, published in top academic journals and recognized by scholars across denominations.</p>
 
-<p>The central discovery is that the Torah's linear text conceals a two-dimensional literary architecture. The five books contain 86 discrete literary units organized in "woven" patterns—rows and columns that create meaning through their spatial relationships, much like warp and weft threads in a fabric. This is not a commentary imposed on the text; it is a structure visible in the text itself, confirmed by patterns of vocabulary, divine names, and narrative design.</p>
+<p>The central discovery is that the Torah's linear text conceals a two-dimensional literary architecture. The five books contain 86 discrete literary units organized in "woven" patterns—rows and columns that create meaning through their spatial relationships, much like warp and weft threads in a fabric. This is not a commentary imposed on the text; it is a structure visible in the text itself, confirmed by patterns of vocabulary, divine names, and narrative design. <a href="/torah-weave/yhwh-and-elohim-two-names">Why does the Torah use two names for God?</a> <a href="/torah-weave/bible-contradictions-explained">Are Bible contradictions evidence of multiple authors?</a></p>
 
 <p>Whether you are a student, scholar, rabbi, pastor, teacher, or simply someone curious about the Hebrew Bible, this PDF provides both the complete Torah text you need and the tools to understand its composition.</p>
 
@@ -667,6 +667,20 @@
 
 <p><strong><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></strong> — Access individual Torah books and units online, with highlighted literary patterns.</p>
 
+<h3>Key Insights</h3>
+
+<p><strong><a href="/torah-weave/ten-commandments-two-tablets">The Ten Commandments on Two Tablets</a></strong> — How the Decalogue's two-column structure reveals the Torah's compositional method.</p>
+
+<p><strong><a href="/torah-weave/leviticus-19-ark-at-the-center">Leviticus 19: The Ark at the Center</a></strong> — The chapter at the heart of Leviticus, structured around the Ark of the Covenant.</p>
+
+<p><strong><a href="/torah-weave/ten-plagues-creation-in-reverse">The Ten Plagues as Creation in Reverse</a></strong> — How the plagues systematically deconstruct the six days of creation.</p>
+
+<p><strong><a href="/torah-weave/book-of-numbers-camp-map">The Camp of Israel: Numbers as a Map</a></strong> — The Book of Numbers arranged as a spatial diagram of the Israelite camp.</p>
+
+<p><strong><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible? Theories Compared</a></strong> — Four theories of Torah authorship evaluated side by side.</p>
+
+<p><strong><a href="/torah-weave/documentary-hypothesis-alternative">An Alternative to the Documentary Hypothesis</a></strong> — How woven structure offers a new framework for understanding the Torah's composition.</p>
+
 <h3>The Structured Mishnah</h3>
 
 <p><strong><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></strong> — Read all 524 chapters online in structured format.</p>
@@ -749,41 +763,4 @@
 
             // Dropdown toggles (via <button>, not <a>)
             document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    var li = btn.parentElement;
-                    var wasOpen = li.classList.contains('is-open');
-
-                    // Close all dropdowns first
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
-                        other.classList.remove('is-open');
-                        var b = other.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-
-                    // Open this one if it wasn't already
-                    if (!wasOpen) {
-                        li.classList.add('is-open');
-                        btn.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            });
-
-            // Click outside closes everything
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.site-header')) {
-                    if (menu) menu.classList.remove('is-open-menu');
-                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                        li.classList.remove('is-open');
-                        var b = li.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-                }
-            });
-        })();
-    </script>
-
-    
-</body>
-</html>
+                btn.add
