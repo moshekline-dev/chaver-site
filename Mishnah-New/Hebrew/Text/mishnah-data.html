@@ -116,6 +116,7 @@
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "datePublished": "2026-05-14",
       "version": "2026-05-rev9",
+      "isAccessibleForFree": true,
       "inLanguage": [
         "he",
         "en"
@@ -129,7 +130,14 @@
         "digital humanities",
         "Hebrew text",
         "JSON",
-        "computational analysis"
+        "computational analysis",
+        "Oral Torah",
+        "Talmud",
+        "two-dimensional text",
+        "chiastic structure",
+        "compositional analysis",
+        "Moshe Kline",
+        "המשנה כדרכה"
       ],
       "creator": {
         "@id": "https://chaver.com/#moshe-kline"
@@ -451,6 +459,87 @@ for key, chapter in data.items():
         print(f"{key}: {shape}")</code></pre>
 
 <p>The same approach works for any structural query: chapters with column headers, chapters with envelope closures, chapters whose first and last rows match, chapters with InternalParallel patterns. The structural markers are the queryable surface; forty years of analysis is encoded as data.</p>
+
+<!-- analyze-with-ai v1 -->
+<section id="analyze-with-ai" dir="ltr">
+<h2>Analyze with AI</h2>
+
+<p>Copy any of these prompts into an AI assistant that can fetch web data (such as Claude, ChatGPT, or Gemini). Each prompt loads the dataset directly and guides the AI through a structural analysis.</p>
+
+<h3>Prompt 1 &mdash; Find palindromic chapters</h3>
+<div class="ai-prompt-block">
+    <button type="button" class="ai-prompt-copy" aria-label="Copy prompt to clipboard">Copy</button>
+    <pre class="ai-prompt-text">Fetch the Mishnah dataset from https://chaver.com/Mishnah-New/English/mishnah_db.json. Find all chapters whose "shape" field is a palindrome (the array reads the same forwards and backwards). For each palindromic chapter, display the tractate name, chapter number, and shape. What proportion of all 525 chapters are palindromes? What does this imply about the compositional intent of the Mishnah's editors?</pre>
+</div>
+
+<h3>Prompt 2 &mdash; Explore structural markers</h3>
+<div class="ai-prompt-block">
+    <button type="button" class="ai-prompt-copy" aria-label="Copy prompt to clipboard">Copy</button>
+    <pre class="ai-prompt-text">Load https://chaver.com/Mishnah-New/English/mishnah_db.json and examine the structural markers across the dataset. Count how many markers of each type (HorizontalParallel, VerticalThread, InternalParallel, EnvelopeClosure, etc.) appear across all 525 chapters. Which tractates have the highest density of structural markers per cell? Display the top 10.</pre>
+</div>
+
+<h3>Prompt 3 &mdash; Read a chapter as a matrix</h3>
+<div class="ai-prompt-block">
+    <button type="button" class="ai-prompt-copy" aria-label="Copy prompt to clipboard">Copy</button>
+    <pre class="ai-prompt-text">Fetch https://chaver.com/Mishnah-New/English/mishnah_db.json and load the chapter "berakhot_1". Display it as a table matching its shape field, with each cell showing its structural label and Hebrew text. Highlight any cells that contain structural markers. Then explain what the horizontal parallels between cells in the same row reveal about the chapter's compositional logic.</pre>
+</div>
+</section>
+
+<style>
+.ai-prompt-block {
+    position: relative;
+    margin: 0.75em 0 1.5em;
+}
+.ai-prompt-block pre.ai-prompt-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 1em;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 6px;
+    background: rgba(0,0,0,0.04);
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+.ai-prompt-copy {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 2px 10px;
+    font-size: 0.8em;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+.ai-prompt-copy:hover { background: #f0ead9; }
+</style>
+
+<script>
+(function() {
+    document.querySelectorAll('.ai-prompt-copy').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var pre = btn.parentElement.querySelector('.ai-prompt-text');
+            var text = pre.textContent.trim();
+            function done() {
+                btn.textContent = 'Copied!';
+                setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(done);
+            } else {
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                done();
+            }
+        });
+    });
+})();
+</script>
+<!-- /analyze-with-ai v1 -->
 
 <h2>What Makes This Dataset Unique</h2>
 

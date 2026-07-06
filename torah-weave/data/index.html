@@ -50,8 +50,10 @@
   "alternateName": "The 86 Literary Units of the Pentateuch",
   "description": "Complete dataset of all 86 literary units of the Torah identified by the Woven Torah hypothesis. Includes verse ranges, column/row structures, unit formats, book assignments, and structural metadata. Every verse is mapped to its cell position in one of 600 structural cells, enabling reconstruction of the woven reading with any Bible translation.",
   "url": "https://chaver.com/torah-weave/data/",
+  "identifier": "https://chaver.com/torah-weave/data/torah-units.json",
   "version": "1.0",
   "dateCreated": "2026",
+  "datePublished": "2026",
   "dateModified": "2026",
   "inLanguage": "en",
   "isAccessibleForFree": true,
@@ -59,7 +61,12 @@
   "creator": {
     "@type": "Person",
     "name": "Moshe Kline",
-    "url": "https://chaver.com/about-Moshe-Kline"
+    "url": "https://chaver.com/about-Moshe-Kline",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "The Woven Texts Project",
+      "url": "https://chaver.com"
+    }
   },
   "publisher": {
     "@type": "Organization",
@@ -67,7 +74,7 @@
     "url": "https://chaver.com"
   },
   "citation": "Kline, Moshe. Torah Literary Units Dataset, version 1.0. Chaver.com, 2026. https://chaver.com/torah-weave/data/",
-  "keywords": ["Torah", "literary units", "Woven Torah", "Bible structure", "Pentateuch", "open data", "biblical studies dataset", "Hebrew Bible", "Documentary Hypothesis Alternative", "structural analysis"],
+  "keywords": ["Torah", "literary units", "Woven Torah", "Bible structure", "Pentateuch", "open data", "biblical studies dataset", "Hebrew Bible", "Documentary Hypothesis Alternative", "structural analysis", "literary structure", "biblical scholarship", "woven texts", "two-dimensional text", "chiastic structure", "compositional analysis", "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Moshe Kline"],
   "variableMeasured": [
     {"@type": "PropertyValue", "name": "serial_number", "description": "Unit number from 1 to 86 across the entire Torah"},
     {"@type": "PropertyValue", "name": "book", "description": "Genesis, Exodus, Leviticus, Numbers, or Deuteronomy"},
@@ -83,12 +90,14 @@
       "@type": "DataDownload",
       "encodingFormat": "application/json",
       "contentUrl": "https://chaver.com/torah-weave/data/torah-units.json",
+      "name": "torah-units.json",
       "contentSize": "51KB"
     },
     {
       "@type": "DataDownload",
       "encodingFormat": "text/csv",
       "contentUrl": "https://chaver.com/torah-weave/data/torah-units.csv",
+      "name": "torah-units.csv",
       "contentSize": "23KB"
     }
   ],
@@ -638,6 +647,87 @@
 
 <p>If you build something with this data &mdash; a study app, an API, a visualization &mdash; we would be glad to hear about it. <a href="/General/Contact.htm">Contact us</a>.</p>
 </section>
+
+<!-- analyze-with-ai v1 -->
+<section class="commentary-section" id="analyze-with-ai">
+<h2>Analyze with AI</h2>
+
+<p>Copy any of these prompts into an AI assistant that can fetch web data (such as Claude, ChatGPT, or Gemini). Each prompt loads the dataset directly and guides the AI through a structural analysis.</p>
+
+<h3>Prompt 1 &mdash; Explore a specific unit</h3>
+<div class="ai-prompt-block">
+    <button type="button" class="ai-prompt-copy" aria-label="Copy prompt to clipboard">Copy</button>
+    <pre class="ai-prompt-text">Fetch the Torah literary units dataset from https://chaver.com/torah-weave/data/torah-units.json and find Genesis Unit 1 (Creation, Genesis 1:1&ndash;2:3). It is a 3&times;2 matrix. Using the cells_detail field, lay out the six cells in a 3-row, 2-column table. Then look up each cell's verses in any English Bible translation and display the full text in the table. What patterns do you see between the left column (Days 1&ndash;3) and the right column (Days 4&ndash;6)?</pre>
+</div>
+
+<h3>Prompt 2 &mdash; Compare two parallel units</h3>
+<div class="ai-prompt-block">
+    <button type="button" class="ai-prompt-copy" aria-label="Copy prompt to clipboard">Copy</button>
+    <pre class="ai-prompt-text">Load the dataset at https://chaver.com/torah-weave/data/torah-units.json. Compare Genesis Unit 7 (Covenant Ceremonies, Gen 15&ndash;17) with Genesis Unit 8 (Sodom and Lot, Gen 18&ndash;19). Both are 2&times;2 matrices. Lay out each unit as a table, fill in the verse text, and identify the horizontal parallels between cells in the same row. What do the structural parallels reveal about the relationship between Abraham's two covenant ceremonies and the Sodom narrative?</pre>
+</div>
+
+<h3>Prompt 3 &mdash; Survey the full architecture</h3>
+<div class="ai-prompt-block">
+    <button type="button" class="ai-prompt-copy" aria-label="Copy prompt to clipboard">Copy</button>
+    <pre class="ai-prompt-text">Fetch https://chaver.com/torah-weave/data/torah-units.json and analyze the distribution of matrix formats across the five books. How many units use 2&times;2, 3&times;2, 4&times;2, and other formats? Are irregular units clustered in particular books? What does the overall pattern suggest about compositional technique? For background on the methodology, see https://chaver.com/torah-weave/Woven-Torah-Method</pre>
+</div>
+</section>
+
+<style>
+.ai-prompt-block {
+    position: relative;
+    margin: 0.75em 0 1.5em;
+}
+.ai-prompt-block pre.ai-prompt-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 1em 1em 1em;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 6px;
+    background: rgba(0,0,0,0.04);
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+.ai-prompt-copy {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 2px 10px;
+    font-size: 0.8em;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+.ai-prompt-copy:hover { background: #f0ead9; }
+</style>
+
+<script>
+(function() {
+    document.querySelectorAll('.ai-prompt-copy').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var pre = btn.parentElement.querySelector('.ai-prompt-text');
+            var text = pre.textContent.trim();
+            function done() {
+                btn.textContent = 'Copied!';
+                setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(done);
+            } else {
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                done();
+            }
+        });
+    });
+})();
+</script>
+<!-- /analyze-with-ai v1 -->
 
 <aside class="citation-box">
 <h3>About This Research</h3>

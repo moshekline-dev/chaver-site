@@ -48,7 +48,18 @@
     <link rel="alternate" hreflang="en" href="https://chaver.com/">
     <link rel="alternate" hreflang="he" href="https://chaver.com/hebrew%20index">
     <link rel="alternate" hreflang="x-default" href="https://chaver.com/">
-    
+
+    <!-- Machine-readable dataset alternates -->
+    <link rel="alternate" type="application/json"
+          href="https://chaver.com/torah-weave/data/torah-units.json"
+          title="Torah Literary Units Dataset — 86 units, JSON" />
+    <link rel="alternate" type="text/csv"
+          href="https://chaver.com/torah-weave/data/torah-units.csv"
+          title="Torah Literary Units Dataset — 86 units, CSV" />
+    <link rel="alternate" type="application/json"
+          href="https://chaver.com/Mishnah-New/English/mishnah_db.json"
+          title="Structured Mishnah Dataset — 525 chapters, JSON" />
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chaver.com/">
     <meta property="og:title" content="Chaver.com | Torah's Woven Literary Architecture">
@@ -100,8 +111,37 @@
         ]
     }
     </script>
-    
-    
+
+    <!-- WebSite schema with dataset references -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://chaver.com/#website",
+      "name": "Chaver.com — The Woven Texts Project",
+      "url": "https://chaver.com",
+      "description": "Four decades of peer-reviewed research demonstrating that the Torah and Mishnah are composed as two-dimensional literary matrices.",
+      "author": {
+        "@type": "Person",
+        "@id": "https://chaver.com/#moshe-kline",
+        "name": "Moshe Kline",
+        "url": "https://chaver.com/about-Moshe-Kline"
+      },
+      "dataset": [
+        {
+          "@type": "Dataset",
+          "name": "Torah Literary Units Dataset",
+          "url": "https://chaver.com/torah-weave/data/"
+        },
+        {
+          "@type": "Dataset",
+          "name": "The Structured Mishnah Dataset",
+          "url": "https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-data"
+        }
+      ]
+    }
+    </script>
+
     <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
     <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
     
