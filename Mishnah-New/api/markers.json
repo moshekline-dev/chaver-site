@@ -10,11 +10,12 @@
   "schema": "https://chaver.com/Mishnah-New/api/schema.json",
   "canonical": "https://chaver.com/Mishnah-New/api/markers.json"
  },
- "about": "Marker types used in this dataset. A marker records a span of text inside a cell that is highlighted in the source edition. Each marker has a type and the exact text of the span. The definitions below are the author's own, taken from the Color Code guide published on chaver.com; the colour named with each type is the colour that highlight carries in the printed and web editions.",
+ "about": "Marker types used in this dataset. A marker records a span of text inside a cell that is highlighted in the source edition. Each marker has a type and the exact text of the span. The definitions below are the author's own, taken from the Color Code guide published on chaver.com; the colour named with each type is the colour that highlight carries in the printed and web editions. The hex value with each type is the colour that class carries in the site's own stylesheet, where markers are rendered as coloured text rather than as a background highlight.",
  "types": [
   {
    "type": "horizontal1",
    "color": "Blue",
+   "hex": "#2563eb",
    "group": "Horizontal links",
    "definition": "Direct parallels between all segments of a horizontal thread.",
    "instances": 3602,
@@ -23,6 +24,7 @@
   {
    "type": "horizontal2",
    "color": "Teal",
+   "hex": "#008080",
    "group": "Horizontal links",
    "definition": "Key words that appear in both the first and second segments of a three-part horizontal thread.",
    "instances": 414,
@@ -31,6 +33,7 @@
   {
    "type": "horizontal3",
    "color": "Maroon",
+   "hex": "#800000",
    "group": "Horizontal links",
    "definition": "Key words that appear in both the second and third segments of a three-part horizontal thread.",
    "instances": 400,
@@ -39,6 +42,7 @@
   {
    "type": "vertical1",
    "color": "Gold",
+   "hex": "#d97706",
    "group": "Vertical links",
    "definition": "Repeating words or phrases within multiple segments of a warp thread.",
    "instances": 1010,
@@ -47,6 +51,7 @@
   {
    "type": "internalparallel",
    "color": "Green",
+   "hex": "#16a34a",
    "group": "Vertical links",
    "definition": "Parallels between parts of a single segment.",
    "instances": 1298,
@@ -55,6 +60,7 @@
   {
    "type": "closure",
    "color": "Rose",
+   "hex": "#db2777",
    "group": "Boundary links",
    "definition": "Linguistic connections between the first weft thread and the last, creating an envelope.",
    "instances": 128,
@@ -63,6 +69,7 @@
   {
    "type": "ciasm1",
    "color": "Violet",
+   "hex": "#7c3aed",
    "group": "Boundary links",
    "definition": "The half chiasm created by the connection between the upper left segment and the lower right segment.",
    "instances": 54,
@@ -71,6 +78,7 @@
   {
    "type": "ciasm2",
    "color": "Light Violet",
+   "hex": "#c026d3",
    "group": "Boundary links",
    "definition": "The half chiasm created by the connection between the upper right segment and the lower left segment.",
    "instances": 47,
@@ -84,6 +92,7 @@
  },
  "definitions_source": {
   "english": "https://chaver.com/General/Color%20Codes/English%20Color%20Code.htm",
-  "hebrew": "https://chaver.com/torah-weave/hebrew-color-code-guide"
+  "hebrew": "https://chaver.com/torah-weave/hebrew-color-code-guide",
+  "stylesheet": "https://chaver.com/torah-weave/Admin/Assets/CSS/main.css"
  }
 }
