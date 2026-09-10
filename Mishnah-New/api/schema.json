@@ -1,0 +1,139 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://chaver.com/Mishnah-New/api/schema.json",
+ "title": "Structured Mishnah — chapter document",
+ "description": "One chapter of the Mishnah presented as a two-dimensional table of labelled cells. Served by https://chaver.com/Mishnah-New/api/{tractate-slug}/{chapter}.json — for example /berakhot/1.json. Licensed CC BY 4.0; attribution to Moshe Kline, The Structured Mishnah (chaver.com), is required.",
+ "type": "object",
+ "required": ["_credit", "reference", "structure", "rows"],
+ "properties": {
+  "_credit": {
+   "type": "object",
+   "description": "Attribution and licence, repeated in every file so that the requirement travels with the data.",
+   "required": ["dataset", "attribution", "license", "license_url", "website"],
+   "properties": {
+    "dataset": { "type": "string" },
+    "version": { "type": "string", "description": "Revision of the source database this file was generated from." },
+    "attribution": { "type": "string", "description": "The credit line to reproduce when the data is used." },
+    "license": { "type": "string" },
+    "license_url": { "type": "string", "format": "uri" },
+    "website": { "type": "string", "format": "uri" },
+    "documentation": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "canonical": { "type": "string", "format": "uri", "description": "The address this document is served from." }
+   }
+  },
+  "reference": {
+   "type": "object",
+   "description": "Where this chapter sits in the Mishnah, in English and Hebrew, with the matching Sefaria title so the structure can be joined to any Mishnah text.",
+   "required": ["tractate", "seder", "chapter", "chapter_key"],
+   "properties": {
+    "tractate": { "type": "string", "description": "Tractate name in English, e.g. Berakhot." },
+    "tractate_he": { "type": "string", "description": "Tractate name in Hebrew, as printed in the source edition." },
+    "slug": { "type": "string", "description": "The tractate's address component, e.g. bava-batra." },
+    "seder": { "type": "string", "enum": ["Zeraim", "Moed", "Nashim", "Nezikin", "Kodashim", "Tohorot"] },
+    "seder_he": { "type": "string" },
+    "chapter": { "type": "integer", "minimum": 1, "description": "Chapter number." },
+    "chapter_key": { "type": "string", "pattern": "^[0-9]+[a-z]?$", "description": "The chapter's address component. Normally the chapter number. A trailing letter marks one of several tables published for a single chapter — at present only sotah 9a and 9b." },
+    "chapter_he": { "type": "string", "description": "Chapter number in Hebrew letters." },
+    "chapter_part_he": { "type": "string", "description": "Present only on a split chapter: the part designation in Hebrew." },
+    "sefaria_title": { "type": ["string", "null"], "description": "The title this tractate carries in Sefaria's library, verified against Sefaria's own index." },
+    "sefaria_ref": { "type": ["string", "null"], "description": "Sefaria title and chapter number joined, e.g. 'Mishnah Berakhot 1', for fetching the same chapter's text from Sefaria." }
+   }
+  },
+  "structure": {
+   "type": "object",
+   "description": "Counts and shape for this chapter, computed from the rows below.",
+   "required": ["shape", "rows", "cells"],
+   "properties": {
+    "shape": {
+     "type": "array",
+     "description": "The table's row widths, in order. Each entry is itself an array giving the column widths of that row, so [[2,2],[4],[2,2]] is a three-row table whose first and last rows carry two cells and whose middle row carries one full-width cell.",
+     "items": { "type": "array", "items": { "type": "integer", "minimum": 1 } }
+    },
+    "rows": { "type": "integer", "minimum": 1, "description": "Number of rows in the table." },
+    "cells": { "type": "integer", "minimum": 1, "description": "Number of cells in the table." },
+    "subdivisions": { "type": "integer", "minimum": 0, "description": "Number of labelled subdivisions inside cells." },
+    "markers": {
+     "type": "object",
+     "description": "Count of each marker type occurring in this chapter. Keys are the type names listed in markers.json.",
+     "additionalProperties": { "type": "integer", "minimum": 1 }
+    },
+    "marker_count": { "type": "integer", "minimum": 0 }
+   }
+  },
+  "rows": {
+   "type": "array",
+   "description": "The table itself, in reading order.",
+   "items": {
+    "type": "object",
+    "required": ["row_num", "cells"],
+    "properties": {
+     "row_num": { "type": "integer", "minimum": 1 },
+     "cells": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": ["label", "position", "text", "runs", "markers"],
+       "properties": {
+        "label": { "type": "string", "description": "The cell's label as printed, combining the row number with a Hebrew column letter, e.g. 1א." },
+        "position": {
+         "type": "object",
+         "required": ["row", "col", "colspan"],
+         "properties": {
+          "row": { "type": "integer", "minimum": 1 },
+          "col": { "type": "integer", "minimum": 1 },
+          "colspan": { "type": "integer", "minimum": 1, "description": "How many columns this cell occupies. Greater than 1 for a cell that runs across the table." }
+         }
+        },
+        "text": { "type": "string", "description": "The cell's full Hebrew text, with line breaks as printed." },
+        "runs": {
+         "type": "array",
+         "description": "The same text broken into consecutive spans, each either unmarked or carrying one marker type. Concatenating every run's text reproduces the cell's text exactly. Use this when rendering the chapter with its markings; use text when the markings are not needed.",
+         "items": {
+          "type": "object",
+          "required": ["text", "marker"],
+          "properties": {
+           "text": { "type": "string" },
+           "marker": { "type": ["string", "null"], "description": "Marker type for this span, or null where the span is unmarked. See markers.json." }
+          }
+         }
+        },
+        "markers": {
+         "type": "array",
+         "description": "The marked spans of this cell gathered together, in order of appearance. The same information as the marked runs above, in a form convenient for searching.",
+         "items": {
+          "type": "object",
+          "required": ["type", "text"],
+          "properties": {
+           "type": { "type": "string", "description": "One of the types listed in markers.json." },
+           "text": { "type": "string", "description": "The exact marked span." }
+          }
+         }
+        },
+        "subdivisions": {
+         "type": "array",
+         "description": "Present when a cell is divided into labelled parts.",
+         "items": {
+          "type": "object",
+          "required": ["label", "text"],
+          "properties": {
+           "label": { "type": "string", "description": "The subdivision's label, e.g. A, B, C." },
+           "text": { "type": "string" },
+           "markers": { "type": "array", "items": { "type": "object" } },
+           "mishnah_num_he": { "type": ["string", "null"], "description": "The mishnah number in Hebrew where the subdivision begins, or the opening word where the source edition prints no number. Null where neither could be determined." }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "source_page": {
+   "type": "string",
+   "format": "uri",
+   "description": "The chapter's page on chaver.com, from which this data was extracted."
+  }
+ }
+}

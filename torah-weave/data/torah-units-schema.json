@@ -1,0 +1,102 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://chaver.com/torah-weave/data/torah-units-schema.json",
+ "title": "Torah Literary Units Dataset",
+ "description": "The 86 literary units of the Torah as identified by the Woven Torah hypothesis, each a two-dimensional composition of rows and columns. The dataset carries no scriptural text: every cell is given as a verse range, so the woven reading can be reconstructed from any translation. Served at https://chaver.com/torah-weave/data/torah-units.json under CC BY 4.0.",
+ "type": "object",
+ "required": ["name", "version", "description", "author", "url", "license", "total_units", "books", "units"],
+ "properties": {
+  "$schema": { "type": "string", "format": "uri", "description": "This document." },
+  "name": { "type": "string" },
+  "version": { "type": "string" },
+  "description": { "type": "string" },
+  "author": { "type": "string" },
+  "url": { "type": "string", "format": "uri" },
+  "license": { "type": "string", "description": "CC BY 4.0. Attribution to Moshe Kline (chaver.com) is required." },
+  "citation": { "type": "string", "description": "The preferred citation for the dataset." },
+  "methodology": { "type": "string", "format": "uri", "description": "Page setting out the method by which the units were identified." },
+  "total_units": { "type": "integer", "const": 86 },
+  "total_cells": { "type": "integer", "description": "Cells across all units, counting each cell once." },
+  "total_cells_with_subdivisions": { "type": "integer", "description": "Cells across all units, counting subdivided cells by their parts." },
+  "books": {
+   "type": "object",
+   "description": "How the 86 units are distributed across the five books, and the range of serial numbers each book covers.",
+   "propertyNames": { "enum": ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"] },
+   "additionalProperties": {
+    "type": "object",
+    "required": ["units", "serial_range"],
+    "properties": {
+     "units": { "type": "integer", "minimum": 1 },
+     "serial_range": {
+      "type": "array",
+      "description": "First and last serial_number belonging to this book.",
+      "items": { "type": "integer", "minimum": 1, "maximum": 86 },
+      "minItems": 2,
+      "maxItems": 2
+     }
+    }
+   }
+  },
+  "format_key": {
+   "type": "object",
+   "description": "How to read the format field. Reproduced from the dataset itself.",
+   "properties": {
+    "NxM": { "type": "string" },
+    "digit_string": { "type": "string" }
+   }
+  },
+  "type_key": {
+   "type": "object",
+   "description": "How to read the type field. Reproduced from the dataset itself.",
+   "properties": {
+    "F": { "type": "string" },
+    "CL": { "type": "string" },
+    "U": { "type": "string" }
+   }
+  },
+  "units": {
+   "type": "array",
+   "minItems": 86,
+   "maxItems": 86,
+   "items": {
+    "type": "object",
+    "required": ["serial_number", "book", "unit_number", "title", "verses", "verse_range", "format", "irregular", "unique", "cells", "cells_detail"],
+    "properties": {
+     "serial_number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 86,
+      "description": "The unit's position in the Torah as a whole, from Creation at 1 to the close of Deuteronomy at 86."
+     },
+     "book": { "type": "string", "enum": ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"] },
+     "unit_number": { "type": "integer", "minimum": 1, "description": "The unit's position within its own book." },
+     "title": { "type": "string", "description": "The unit's name." },
+     "verses": { "type": "string", "description": "The unit's full extent including the book name, e.g. 'Genesis 1:1-2:3'." },
+     "verse_range": { "type": "string", "description": "The same extent without the book name, e.g. '1:1-2:3'." },
+     "format": {
+      "type": "string",
+      "description": "The unit's shape. Either 'NxM' for a regular unit of N rows by M columns, or a string of digits for an irregular unit, each digit giving the number of columns in that row. See format_key.",
+      "pattern": "^([0-9]+x[0-9]+|[0-9]+)$"
+     },
+     "irregular": { "type": "boolean", "description": "True when the rows do not all carry the same number of columns, in which case format is a digit string." },
+     "unique": { "type": "boolean", "description": "True when the unit is not grouped in a triadic pattern with other units." },
+     "cells": { "type": "integer", "minimum": 1, "description": "Number of cells in the unit, counting each cell once." },
+     "cell_count_with_subdivisions": { "type": "integer", "minimum": 0, "description": "Published per-unit count relating to subdivided cells. Note that this figure is not consistently derivable from cells_detail across the dataset; to count a unit's cells, read cells_detail directly." },
+     "type": {
+      "type": "string",
+      "enum": ["F", "CL", "U"],
+      "description": "Structural role, present only on units that carry one. See type_key."
+     },
+     "cells_detail": {
+      "type": "object",
+      "description": "The heart of the dataset: every cell label mapped to the verses it contains. A label is a row number followed by a column letter — 1A, 1B, 2A — with a further lowercase letter for a subdivision within a cell, as in 2Aa. Ranges are written 'chapter:verse' or 'chapter:verse-chapter:verse', and are relative to the unit's own book.",
+      "additionalProperties": {
+       "type": "string",
+       "pattern": "^[0-9]+:[0-9]+(-[0-9]+:[0-9]+)?$"
+      }
+     }
+    }
+   }
+  }
+ }
+}
