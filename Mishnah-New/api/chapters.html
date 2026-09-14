@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- E-1: Site-wide SEO/AEO boilerplate (canonical entity references) -->
+    <!-- Per-page canonical, og:url, og:title, og:description, og:type are E-2-injected just above this block -->
+    <meta property="og:site_name" content="Chaver.com">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:secure_url" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="The Woven Texts Project — Moshe Kline — chaver.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta name="author" content="Moshe Kline">
+    <!-- /E-1 -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <title>Every Chapter in the Structured Mishnah API | Chaver.com</title>
+    <meta name="description" content="A complete index of the Structured Mishnah API: all 63 tractate files and all 525 chapter files, grouped by the six orders of the Mishnah.">
+    
+    <!-- Schema.org JSON-LD -->
+<!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    
+    <!-- Page-specific style overrides can go here -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+    <link rel="canonical" href="https://chaver.com/Mishnah-New/api/chapters">
+    <meta property="og:url" content="https://chaver.com/Mishnah-New/api/chapters">
+    <meta property="og:title" content="Every Chapter in the Structured Mishnah API">
+    <meta property="og:description" content="A complete index of the Structured Mishnah API: all 63 tractate files and all 525 chapter files, grouped by the six orders of the Mishnah.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <div class="nav-row">
+            <div class="nav-brand">chaver.com</div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Torah</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/torah-weave/commentary">Commentary</a></li>
+                        <li><a href="/torah-weave/Genesis/genesis-complete-commentary">Genesis: Complete Commentary</a></li>
+                        <li><a href="/torah-weave/full-torah-map-2/">Full Torah Map</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Insights</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Mishnah</button>
+                    <ul class="submenu">
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to the Structured Mishnah</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">Download the Complete Mishnah (Hebrew)</a></li>
+                    </ul>
+                </li>
+                <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Free Books</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/English/Text/Torah-pdf">The Structured Torah (English PDF)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah (Hebrew PDF)</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+                <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </div>
+    </header>
+<div id="site-banner"></div>
+<main class="content-wrapper">
+<h1>Every Chapter in the Structured Mishnah API</h1>
+<p>This page lists every file the API serves: the four top-level files, all 63 tractate files, and all 525 chapter files, grouped by the six orders of the Mishnah. It exists so that a reader, a search engine or a research tool can reach any chapter directly, without having to guess an address. The documentation is on the <a href="/Mishnah-New/api/">main API page</a>.</p>
+<h2>The four top-level files</h2>
+<ul>
+<li><a href="/Mishnah-New/api/index.json"><code>index.json</code></a> &mdash; counts, the six orders, and all 63 tractates</li>
+<li><a href="/Mishnah-New/api/tractates.json"><code>tractates.json</code></a> &mdash; the 63 tractates as a flat list</li>
+<li><a href="/Mishnah-New/api/markers.json"><code>markers.json</code></a> &mdash; the eight marker types, with colour and definition</li>
+<li><a href="/Mishnah-New/api/schema.json"><code>schema.json</code></a> &mdash; every field of a chapter file, described</li>
+</ul>
+
+<h2>Seder Zeraim <span lang="he" dir="rtl">זרעים</span></h2>
+<ul>
+<li><a href="/Mishnah-New/api/berakhot.json"><strong>Berakhot</strong></a> <span lang="he" dir="rtl">מסכת ברכות</span> &mdash; 9 chapters: <a href="/Mishnah-New/api/berakhot/1.json">1</a> <a href="/Mishnah-New/api/berakhot/2.json">2</a> <a href="/Mishnah-New/api/berakhot/3.json">3</a> <a href="/Mishnah-New/api/berakhot/4.json">4</a> <a href="/Mishnah-New/api/berakhot/5.json">5</a> <a href="/Mishnah-New/api/berakhot/6.json">6</a> <a href="/Mishnah-New/api/berakhot/7.json">7</a> <a href="/Mishnah-New/api/berakhot/8.json">8</a> <a href="/Mishnah-New/api/berakhot/9.json">9</a></li>
+<li><a href="/Mishnah-New/api/bikkurim.json"><strong>Bikkurim</strong></a> <span lang="he" dir="rtl">מסכת בכורים</span> &mdash; 3 chapters: <a href="/Mishnah-New/api/bikkurim/1.json">1</a> <a href="/Mishnah-New/api/bikkurim/2.json">2</a> <a href="/Mishnah-New/api/bikkurim/3.json">3</a></li>
+<li><a href="/Mishnah-New/api/challah.json"><strong>Challah</strong></a> <span lang="he" dir="rtl">מסכת חלה</span> &mdash; 4 chapters: <a href="/Mishnah-New/api/challah/1.json">1</a> <a href="/Mishnah-New/api/challah/2.json">2</a> <a href="/Mishnah-New/api/challah/3.json">3</a> <a href="/Mishnah-New/api/challah/4.json">4</a></li>
+<li><a href="/Mishnah-New/api/demai.json"><strong>Demai</strong></a> <span lang="he" dir="rtl">מסכת דמאי</span> &mdash; 7 chapters: <a href="/Mishnah-New/api/demai/1.json">1</a> <a href="/Mishnah-New/api/demai/2.json">2</a> <a href="/Mishnah-New/api/demai/3.json">3</a> <a href="/Mishnah-New/api/demai/4.json">4</a> <a href="/Mishnah-New/api/demai/5.json">5</a> <a href="/Mishnah-New/api/demai/6.json">6</a> <a href="/Mishnah-New/api/demai/7.json">7</a></li>
+<li><a href="/Mishnah-New/api/kilayim.json"><strong>Kilayim</strong></a> <span lang="he" dir="rtl">מסכת כלאים</span> &mdash; 9 chapters: <a href="/Mishnah-New/api/kilayim/1.json">1</a> <a href="/Mishnah-New/api/kilayim/2.json">2</a> <a href="/Mishnah-New/api/kilayim/3.json">3</a> <a href="/Mishnah-New/api/kilayim/4.json">4</a> <a href="/Mishnah-New/api/kilayim/5.json">5</a> <a href="/Mishnah-New/api/kilayim/6.json">6</a> <a href="/Mishnah-New/api/kilayim/7.json">7</a> <a href="/Mishnah-New/api/kilayim/8.json">8</a> <a href="/Mishnah-New/api/kilayim/9.json">9</a></li>
+<li><a href="/Mishnah-New/api/maaser-sheni.json"><strong>Maaser Sheni</strong></a> <span lang="he" dir="rtl">מסכת מעשר שני</span> &mdash; 5 chapters: <a href="/Mishnah-New/api/maaser-sheni/1.json">1</a> <a href="/Mishnah-New/api/maaser-sheni/2.json">2</a> <a href="/Mishnah-New/api/maaser-sheni/3.json">3</a> <a href="/Mishnah-New/api/maaser-sheni/4.json">4</a> <a href="/Mishnah-New/api/maaser-sheni/5.json">5</a></li>
+<li><a href="/Mishnah-New/api/maasrot.json"><strong>Maasrot</strong></a> <span lang="he" dir="rtl">מסכת מעשרות</span> &mdash; 5 chapters: <a href="/Mishnah-New/api/maasrot/1.json">1</a> <a href="/Mishnah-New/api/maasrot/2.json">2</a> <a href="/Mishnah-New/api/maasrot/3.json">3</a> <a href="/Mishnah-New/api/maasrot/4.json">4</a> <a href="/Mishnah-New/api/maasrot/5.json">5</a></li>
+<li><a href="/Mishnah-New/api/orlah.json"><strong>Orlah</strong></a> <span lang="he" dir="rtl">מסכת ערלה</span> &mdash; 3 chapters: <a href="/Mishnah-New/api/orlah/1.json">1</a> <a href="/Mishnah-New/api/orlah/2.json">2</a> <a href="/Mishnah-New/api/orlah/3.json">3</a></li>
+<li><a href="/Mishnah-New/api/peah.json"><strong>Peah</strong></a> <span lang="he" dir="rtl">מסכת פאה</span> &mdash; 8 chapters: <a href="/Mishnah-New/api/peah/1.json">1</a> <a href="/Mishnah-New/api/peah/2.json">2</a> <a href="/Mishnah-New/api/peah/3.json">3</a> <a href="/Mishnah-New/api/peah/4.json">4</a> <a href="/Mishnah-New/api/peah/5.json">5</a> <a href="/Mishnah-New/api/peah/6.json">6</a> <a href="/Mishnah-New/api/peah/7.json">7</a> <a href="/Mishnah-New/api/peah/8.json">8</a></li>
+<li><a href="/Mishnah-New/api/sheviit.json"><strong>Sheviit</strong></a> <span lang="he" dir="rtl">מסכת שביעית</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/sheviit/1.json">1</a> <a href="/Mishnah-New/api/sheviit/2.json">2</a> <a href="/Mishnah-New/api/sheviit/3.json">3</a> <a href="/Mishnah-New/api/sheviit/4.json">4</a> <a href="/Mishnah-New/api/sheviit/5.json">5</a> <a href="/Mishnah-New/api/sheviit/6.json">6</a> <a href="/Mishnah-New/api/sheviit/7.json">7</a> <a href="/Mishnah-New/api/sheviit/8.json">8</a> <a href="/Mishnah-New/api/sheviit/9.json">9</a> <a href="/Mishnah-New/api/sheviit/10.json">10</a></li>
+<li><a href="/Mishnah-New/api/terumot.json"><strong>Terumot</strong></a> <span lang="he" dir="rtl">מסכת תרומות</span> &mdash; 11 chapters: <a href="/Mishnah-New/api/terumot/1.json">1</a> <a href="/Mishnah-New/api/terumot/2.json">2</a> <a href="/Mishnah-New/api/terumot/3.json">3</a> <a href="/Mishnah-New/api/terumot/4.json">4</a> <a href="/Mishnah-New/api/terumot/5.json">5</a> <a href="/Mishnah-New/api/terumot/6.json">6</a> <a href="/Mishnah-New/api/terumot/7.json">7</a> <a href="/Mishnah-New/api/terumot/8.json">8</a> <a href="/Mishnah-New/api/terumot/9.json">9</a> <a href="/Mishnah-New/api/terumot/10.json">10</a> <a href="/Mishnah-New/api/terumot/11.json">11</a></li>
+</ul>
+
+<h2>Seder Moed <span lang="he" dir="rtl">מועד</span></h2>
+<ul>
+<li><a href="/Mishnah-New/api/beitzah.json"><strong>Beitzah</strong></a> <span lang="he" dir="rtl">מסכת ביצה</span> &mdash; 5 chapters: <a href="/Mishnah-New/api/beitzah/1.json">1</a> <a href="/Mishnah-New/api/beitzah/2.json">2</a> <a href="/Mishnah-New/api/beitzah/3.json">3</a> <a href="/Mishnah-New/api/beitzah/4.json">4</a> <a href="/Mishnah-New/api/beitzah/5.json">5</a></li>
+<li><a href="/Mishnah-New/api/chagigah.json"><strong>Chagigah</strong></a> <span lang="he" dir="rtl">מסכת חגיגה</span> &mdash; 3 chapters: <a href="/Mishnah-New/api/chagigah/1.json">1</a> <a href="/Mishnah-New/api/chagigah/2.json">2</a> <a href="/Mishnah-New/api/chagigah/3.json">3</a></li>
+<li><a href="/Mishnah-New/api/eruvin.json"><strong>Eruvin</strong></a> <span lang="he" dir="rtl">מסכת ערובין</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/eruvin/1.json">1</a> <a href="/Mishnah-New/api/eruvin/2.json">2</a> <a href="/Mishnah-New/api/eruvin/3.json">3</a> <a href="/Mishnah-New/api/eruvin/4.json">4</a> <a href="/Mishnah-New/api/eruvin/5.json">5</a> <a href="/Mishnah-New/api/eruvin/6.json">6</a> <a href="/Mishnah-New/api/eruvin/7.json">7</a> <a href="/Mishnah-New/api/eruvin/8.json">8</a> <a href="/Mishnah-New/api/eruvin/9.json">9</a> <a href="/Mishnah-New/api/eruvin/10.json">10</a></li>
+<li><a href="/Mishnah-New/api/megillah.json"><strong>Megillah</strong></a> <span lang="he" dir="rtl">מסכת מגילה</span> &mdash; 4 chapters: <a href="/Mishnah-New/api/megillah/1.json">1</a> <a href="/Mishnah-New/api/megillah/2.json">2</a> <a href="/Mishnah-New/api/megillah/3.json">3</a> <a href="/Mishnah-New/api/megillah/4.json">4</a></li>
+<li><a href="/Mishnah-New/api/moed-katan.json"><strong>Moed Katan</strong></a> <span lang="he" dir="rtl">מסכת מועד קטן</span> &mdash; 3 chapters: <a href="/Mishnah-New/api/moed-katan/1.json">1</a> <a href="/Mishnah-New/api/moed-katan/2.json">2</a> <a href="/Mishnah-New/api/moed-katan/3.json">3</a></li>
+<li><a href="/Mishnah-New/api/pesachim.json"><strong>Pesachim</strong></a> <span lang="he" dir="rtl">מסכת פסחים</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/pesachim/1.json">1</a> <a href="/Mishnah-New/api/pesachim/2.json">2</a> <a href="/Mishnah-New/api/pesachim/3.json">3</a> <a href="/Mishnah-New/api/pesachim/4.json">4</a> <a href="/Mishnah-New/api/pesachim/5.json">5</a> <a href="/Mishnah-New/api/pesachim/6.json">6</a> <a href="/Mishnah-New/api/pesachim/7.json">7</a> <a href="/Mishnah-New/api/pesachim/8.json">8</a> <a href="/Mishnah-New/api/pesachim/9.json">9</a> <a href="/Mishnah-New/api/pesachim/10.json">10</a></li>
+<li><a href="/Mishnah-New/api/rosh-hashanah.json"><strong>Rosh Hashanah</strong></a> <span lang="he" dir="rtl">מסכת ראש השנה</span> &mdash; 4 chapters: <a href="/Mishnah-New/api/rosh-hashanah/1.json">1</a> <a href="/Mishnah-New/api/rosh-hashanah/2.json">2</a> <a href="/Mishnah-New/api/rosh-hashanah/3.json">3</a> <a href="/Mishnah-New/api/rosh-hashanah/4.json">4</a></li>
+<li><a href="/Mishnah-New/api/shabbat.json"><strong>Shabbat</strong></a> <span lang="he" dir="rtl">מסכת שבת</span> &mdash; 24 chapters: <a href="/Mishnah-New/api/shabbat/1.json">1</a> <a href="/Mishnah-New/api/shabbat/2.json">2</a> <a href="/Mishnah-New/api/shabbat/3.json">3</a> <a href="/Mishnah-New/api/shabbat/4.json">4</a> <a href="/Mishnah-New/api/shabbat/5.json">5</a> <a href="/Mishnah-New/api/shabbat/6.json">6</a> <a href="/Mishnah-New/api/shabbat/7.json">7</a> <a href="/Mishnah-New/api/shabbat/8.json">8</a> <a href="/Mishnah-New/api/shabbat/9.json">9</a> <a href="/Mishnah-New/api/shabbat/10.json">10</a> <a href="/Mishnah-New/api/shabbat/11.json">11</a> <a href="/Mishnah-New/api/shabbat/12.json">12</a> <a href="/Mishnah-New/api/shabbat/13.json">13</a> <a href="/Mishnah-New/api/shabbat/14.json">14</a> <a href="/Mishnah-New/api/shabbat/15.json">15</a> <a href="/Mishnah-New/api/shabbat/16.json">16</a> <a href="/Mishnah-New/api/shabbat/17.json">17</a> <a href="/Mishnah-New/api/shabbat/18.json">18</a> <a href="/Mishnah-New/api/shabbat/19.json">19</a> <a href="/Mishnah-New/api/shabbat/20.json">20</a> <a href="/Mishnah-New/api/shabbat/21.json">21</a> <a href="/Mishnah-New/api/shabbat/22.json">22</a> <a href="/Mishnah-New/api/shabbat/23.json">23</a> <a href="/Mishnah-New/api/shabbat/24.json">24</a></li>
+<li><a href="/Mishnah-New/api/shekalim.json"><strong>Shekalim</strong></a> <span lang="he" dir="rtl">מסכת שקלים</span> &mdash; 8 chapters: <a href="/Mishnah-New/api/shekalim/1.json">1</a> <a href="/Mishnah-New/api/shekalim/2.json">2</a> <a href="/Mishnah-New/api/shekalim/3.json">3</a> <a href="/Mishnah-New/api/shekalim/4.json">4</a> <a href="/Mishnah-New/api/shekalim/5.json">5</a> <a href="/Mishnah-New/api/shekalim/6.json">6</a> <a href="/Mishnah-New/api/shekalim/7.json">7</a> <a href="/Mishnah-New/api/shekalim/8.json">8</a></li>
+<li><a href="/Mishnah-New/api/sukkah.json"><strong>Sukkah</strong></a> <span lang="he" dir="rtl">מסכת סוכה</span> &mdash; 5 chapters: <a href="/Mishnah-New/api/sukkah/1.json">1</a> <a href="/Mishnah-New/api/sukkah/2.json">2</a> <a href="/Mishnah-New/api/sukkah/3.json">3</a> <a href="/Mishnah-New/api/sukkah/4.json">4</a> <a href="/Mishnah-New/api/sukkah/5.json">5</a></li>
+<li><a href="/Mishnah-New/api/taanit.json"><strong>Taanit</strong></a> <span lang="he" dir="rtl">מסכת תענית</span> &mdash; 4 chapters: <a href="/Mishnah-New/api/taanit/1.json">1</a> <a href="/Mishnah-New/api/taanit/2.json">2</a> <a href="/Mishnah-New/api/taanit/3.json">3</a> <a href="/Mishnah-New/api/taanit/4.json">4</a></li>
+<li><a href="/Mishnah-New/api/yoma.json"><strong>Yoma</strong></a> <span lang="he" dir="rtl">מסכת יומא</span> &mdash; 8 chapters: <a href="/Mishnah-New/api/yoma/1.json">1</a> <a href="/Mishnah-New/api/yoma/2.json">2</a> <a href="/Mishnah-New/api/yoma/3.json">3</a> <a href="/Mishnah-New/api/yoma/4.json">4</a> <a href="/Mishnah-New/api/yoma/5.json">5</a> <a href="/Mishnah-New/api/yoma/6.json">6</a> <a href="/Mishnah-New/api/yoma/7.json">7</a> <a href="/Mishnah-New/api/yoma/8.json">8</a></li>
+</ul>
+
+<h2>Seder Nashim <span lang="he" dir="rtl">נשים</span></h2>
+<ul>
+<li><a href="/Mishnah-New/api/gittin.json"><strong>Gittin</strong></a> <span lang="he" dir="rtl">מסכת גיטין</span> &mdash; 9 chapters: <a href="/Mishnah-New/api/gittin/1.json">1</a> <a href="/Mishnah-New/api/gittin/2.json">2</a> <a href="/Mishnah-New/api/gittin/3.json">3</a> <a href="/Mishnah-New/api/gittin/4.json">4</a> <a href="/Mishnah-New/api/gittin/5.json">5</a> <a href="/Mishnah-New/api/gittin/6.json">6</a> <a href="/Mishnah-New/api/gittin/7.json">7</a> <a href="/Mishnah-New/api/gittin/8.json">8</a> <a href="/Mishnah-New/api/gittin/9.json">9</a></li>
+<li><a href="/Mishnah-New/api/ketubot.json"><strong>Ketubot</strong></a> <span lang="he" dir="rtl">מסכת כתובות</span> &mdash; 14 chapters: <a href="/Mishnah-New/api/ketubot/1.json">1</a> <a href="/Mishnah-New/api/ketubot/2.json">2</a> <a href="/Mishnah-New/api/ketubot/3.json">3</a> <a href="/Mishnah-New/api/ketubot/4.json">4</a> <a href="/Mishnah-New/api/ketubot/5.json">5</a> <a href="/Mishnah-New/api/ketubot/6.json">6</a> <a href="/Mishnah-New/api/ketubot/7.json">7</a> <a href="/Mishnah-New/api/ketubot/8.json">8</a> <a href="/Mishnah-New/api/ketubot/9.json">9</a> <a href="/Mishnah-New/api/ketubot/10.json">10</a> <a href="/Mishnah-New/api/ketubot/11.json">11</a> <a href="/Mishnah-New/api/ketubot/12.json">12</a> <a href="/Mishnah-New/api/ketubot/13.json">13</a> <a href="/Mishnah-New/api/ketubot/14.json">14</a></li>
+<li><a href="/Mishnah-New/api/kiddushin.json"><strong>Kiddushin</strong></a> <span lang="he" dir="rtl">מסכת קדושין</span> &mdash; 4 chapters: <a href="/Mishnah-New/api/kiddushin/1.json">1</a> <a href="/Mishnah-New/api/kiddushin/2.json">2</a> <a href="/Mishnah-New/api/kiddushin/3.json">3</a> <a href="/Mishnah-New/api/kiddushin/4.json">4</a></li>
+<li><a href="/Mishnah-New/api/nazir.json"><strong>Nazir</strong></a> <span lang="he" dir="rtl">מסכת נזיר</span> &mdash; 9 chapters: <a href="/Mishnah-New/api/nazir/1.json">1</a> <a href="/Mishnah-New/api/nazir/2.json">2</a> <a href="/Mishnah-New/api/nazir/3.json">3</a> <a href="/Mishnah-New/api/nazir/4.json">4</a> <a href="/Mishnah-New/api/nazir/5.json">5</a> <a href="/Mishnah-New/api/nazir/6.json">6</a> <a href="/Mishnah-New/api/nazir/7.json">7</a> <a href="/Mishnah-New/api/nazir/8.json">8</a> <a href="/Mishnah-New/api/nazir/9.json">9</a></li>
+<li><a href="/Mishnah-New/api/nedarim.json"><strong>Nedarim</strong></a> <span lang="he" dir="rtl">מסכת נדרים</span> &mdash; 11 chapters: <a href="/Mishnah-New/api/nedarim/1.json">1</a> <a href="/Mishnah-New/api/nedarim/2.json">2</a> <a href="/Mishnah-New/api/nedarim/3.json">3</a> <a href="/Mishnah-New/api/nedarim/4.json">4</a> <a href="/Mishnah-New/api/nedarim/5.json">5</a> <a href="/Mishnah-New/api/nedarim/6.json">6</a> <a href="/Mishnah-New/api/nedarim/7.json">7</a> <a href="/Mishnah-New/api/nedarim/8.json">8</a> <a href="/Mishnah-New/api/nedarim/9.json">9</a> <a href="/Mishnah-New/api/nedarim/10.json">10</a> <a href="/Mishnah-New/api/nedarim/11.json">11</a></li>
+<li><a href="/Mishnah-New/api/sotah.json"><strong>Sotah</strong></a> <span lang="he" dir="rtl">מסכת סוטה</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/sotah/1.json">1</a> <a href="/Mishnah-New/api/sotah/2.json">2</a> <a href="/Mishnah-New/api/sotah/3.json">3</a> <a href="/Mishnah-New/api/sotah/4.json">4</a> <a href="/Mishnah-New/api/sotah/5.json">5</a> <a href="/Mishnah-New/api/sotah/6.json">6</a> <a href="/Mishnah-New/api/sotah/7.json">7</a> <a href="/Mishnah-New/api/sotah/8.json">8</a> <a href="/Mishnah-New/api/sotah/9a.json">9a</a> <a href="/Mishnah-New/api/sotah/9b.json">9b</a></li>
+<li><a href="/Mishnah-New/api/yevamot.json"><strong>Yevamot</strong></a> <span lang="he" dir="rtl">מסכת יבמות</span> &mdash; 16 chapters: <a href="/Mishnah-New/api/yevamot/1.json">1</a> <a href="/Mishnah-New/api/yevamot/2.json">2</a> <a href="/Mishnah-New/api/yevamot/3.json">3</a> <a href="/Mishnah-New/api/yevamot/4.json">4</a> <a href="/Mishnah-New/api/yevamot/5.json">5</a> <a href="/Mishnah-New/api/yevamot/6.json">6</a> <a href="/Mishnah-New/api/yevamot/7.json">7</a> <a href="/Mishnah-New/api/yevamot/8.json">8</a> <a href="/Mishnah-New/api/yevamot/9.json">9</a> <a href="/Mishnah-New/api/yevamot/10.json">10</a> <a href="/Mishnah-New/api/yevamot/11.json">11</a> <a href="/Mishnah-New/api/yevamot/12.json">12</a> <a href="/Mishnah-New/api/yevamot/13.json">13</a> <a href="/Mishnah-New/api/yevamot/14.json">14</a> <a href="/Mishnah-New/api/yevamot/15.json">15</a> <a href="/Mishnah-New/api/yevamot/16.json">16</a></li>
+</ul>
+
+<h2>Seder Nezikin <span lang="he" dir="rtl">נזיקין</span></h2>
+<ul>
+<li><a href="/Mishnah-New/api/avodah-zarah.json"><strong>Avodah Zarah</strong></a> <span lang="he" dir="rtl">מסכת עבודה זרה</span> &mdash; 5 chapters: <a href="/Mishnah-New/api/avodah-zarah/1.json">1</a> <a href="/Mishnah-New/api/avodah-zarah/2.json">2</a> <a href="/Mishnah-New/api/avodah-zarah/3.json">3</a> <a href="/Mishnah-New/api/avodah-zarah/4.json">4</a> <a href="/Mishnah-New/api/avodah-zarah/5.json">5</a></li>
+<li><a href="/Mishnah-New/api/avot.json"><strong>Avot</strong></a> <span lang="he" dir="rtl">מסכת אבות</span> &mdash; 5 chapters: <a href="/Mishnah-New/api/avot/1.json">1</a> <a href="/Mishnah-New/api/avot/2.json">2</a> <a href="/Mishnah-New/api/avot/3.json">3</a> <a href="/Mishnah-New/api/avot/4.json">4</a> <a href="/Mishnah-New/api/avot/5.json">5</a></li>
+<li><a href="/Mishnah-New/api/bava-batra.json"><strong>Bava Batra</strong></a> <span lang="he" dir="rtl">מסכת בבא בתרא</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/bava-batra/1.json">1</a> <a href="/Mishnah-New/api/bava-batra/2.json">2</a> <a href="/Mishnah-New/api/bava-batra/3.json">3</a> <a href="/Mishnah-New/api/bava-batra/4.json">4</a> <a href="/Mishnah-New/api/bava-batra/5.json">5</a> <a href="/Mishnah-New/api/bava-batra/6.json">6</a> <a href="/Mishnah-New/api/bava-batra/7.json">7</a> <a href="/Mishnah-New/api/bava-batra/8.json">8</a> <a href="/Mishnah-New/api/bava-batra/9.json">9</a> <a href="/Mishnah-New/api/bava-batra/10.json">10</a></li>
+<li><a href="/Mishnah-New/api/bava-kamma.json"><strong>Bava Kamma</strong></a> <span lang="he" dir="rtl">מסכת בבא קמא</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/bava-kamma/1.json">1</a> <a href="/Mishnah-New/api/bava-kamma/2.json">2</a> <a href="/Mishnah-New/api/bava-kamma/3.json">3</a> <a href="/Mishnah-New/api/bava-kamma/4.json">4</a> <a href="/Mishnah-New/api/bava-kamma/5.json">5</a> <a href="/Mishnah-New/api/bava-kamma/6.json">6</a> <a href="/Mishnah-New/api/bava-kamma/7.json">7</a> <a href="/Mishnah-New/api/bava-kamma/8.json">8</a> <a href="/Mishnah-New/api/bava-kamma/9.json">9</a> <a href="/Mishnah-New/api/bava-kamma/10.json">10</a></li>
+<li><a href="/Mishnah-New/api/bava-metzia.json"><strong>Bava Metzia</strong></a> <span lang="he" dir="rtl">מסכת בבא מציעא</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/bava-metzia/1.json">1</a> <a href="/Mishnah-New/api/bava-metzia/2.json">2</a> <a href="/Mishnah-New/api/bava-metzia/3.json">3</a> <a href="/Mishnah-New/api/bava-metzia/4.json">4</a> <a href="/Mishnah-New/api/bava-metzia/5.json">5</a> <a href="/Mishnah-New/api/bava-metzia/6.json">6</a> <a href="/Mishnah-New/api/bava-metzia/7.json">7</a> <a href="/Mishnah-New/api/bava-metzia/8.json">8</a> <a href="/Mishnah-New/api/bava-metzia/9.json">9</a> <a href="/Mishnah-New/api/bava-metzia/10.json">10</a></li>
+<li><a href="/Mishnah-New/api/eduyot.json"><strong>Eduyot</strong></a> <span lang="he" dir="rtl">מסכת עדיות</span> &mdash; 8 chapters: <a href="/Mishnah-New/api/eduyot/1.json">1</a> <a href="/Mishnah-New/api/eduyot/2.json">2</a> <a href="/Mishnah-New/api/eduyot/3.json">3</a> <a href="/Mishnah-New/api/eduyot/4.json">4</a> <a href="/Mishnah-New/api/eduyot/5.json">5</a> <a href="/Mishnah-New/api/eduyot/6.json">6</a> <a href="/Mishnah-New/api/eduyot/7.json">7</a> <a href="/Mishnah-New/api/eduyot/8.json">8</a></li>
+<li><a href="/Mishnah-New/api/horayot.json"><strong>Horayot</strong></a> <span lang="he" dir="rtl">מסכת הוריות</span> &mdash; 3 chapters: <a href="/Mishnah-New/api/horayot/1.json">1</a> <a href="/Mishnah-New/api/horayot/2.json">2</a> <a href="/Mishnah-New/api/horayot/3.json">3</a></li>
+<li><a href="/Mishnah-New/api/makkot.json"><strong>Makkot</strong></a> <span lang="he" dir="rtl">מסכת מכות</span> &mdash; 3 chapters: <a href="/Mishnah-New/api/makkot/1.json">1</a> <a href="/Mishnah-New/api/makkot/2.json">2</a> <a href="/Mishnah-New/api/makkot/3.json">3</a></li>
+<li><a href="/Mishnah-New/api/sanhedrin.json"><strong>Sanhedrin</strong></a> <span lang="he" dir="rtl">מסכת סנהדרין</span> &mdash; 11 chapters: <a href="/Mishnah-New/api/sanhedrin/1.json">1</a> <a href="/Mishnah-New/api/sanhedrin/2.json">2</a> <a href="/Mishnah-New/api/sanhedrin/3.json">3</a> <a href="/Mishnah-New/api/sanhedrin/4.json">4</a> <a href="/Mishnah-New/api/sanhedrin/5.json">5</a> <a href="/Mishnah-New/api/sanhedrin/6.json">6</a> <a href="/Mishnah-New/api/sanhedrin/7.json">7</a> <a href="/Mishnah-New/api/sanhedrin/8.json">8</a> <a href="/Mishnah-New/api/sanhedrin/9.json">9</a> <a href="/Mishnah-New/api/sanhedrin/10.json">10</a> <a href="/Mishnah-New/api/sanhedrin/11.json">11</a></li>
+<li><a href="/Mishnah-New/api/shevuot.json"><strong>Shevuot</strong></a> <span lang="he" dir="rtl">מסכת שבועות</span> &mdash; 8 chapters: <a href="/Mishnah-New/api/shevuot/1.json">1</a> <a href="/Mishnah-New/api/shevuot/2.json">2</a> <a href="/Mishnah-New/api/shevuot/3.json">3</a> <a href="/Mishnah-New/api/shevuot/4.json">4</a> <a href="/Mishnah-New/api/shevuot/5.json">5</a> <a href="/Mishnah-New/api/shevuot/6.json">6</a> <a href="/Mishnah-New/api/shevuot/7.json">7</a> <a href="/Mishnah-New/api/shevuot/8.json">8</a></li>
+</ul>
+
+<h2>Seder Kodashim <span lang="he" dir="rtl">קדשים</span></h2>
+<ul>
+<li><a href="/Mishnah-New/api/arakhin.json"><strong>Arakhin</strong></a> <span lang="he" dir="rtl">מסכת ערכין</span> &mdash; 9 chapters: <a href="/Mishnah-New/api/arakhin/1.json">1</a> <a href="/Mishnah-New/api/arakhin/2.json">2</a> <a href="/Mishnah-New/api/arakhin/3.json">3</a> <a href="/Mishnah-New/api/arakhin/4.json">4</a> <a href="/Mishnah-New/api/arakhin/5.json">5</a> <a href="/Mishnah-New/api/arakhin/6.json">6</a> <a href="/Mishnah-New/api/arakhin/7.json">7</a> <a href="/Mishnah-New/api/arakhin/8.json">8</a> <a href="/Mishnah-New/api/arakhin/9.json">9</a></li>
+<li><a href="/Mishnah-New/api/bekhorot.json"><strong>Bekhorot</strong></a> <span lang="he" dir="rtl">מסכת בכורות</span> &mdash; 9 chapters: <a href="/Mishnah-New/api/bekhorot/1.json">1</a> <a href="/Mishnah-New/api/bekhorot/2.json">2</a> <a href="/Mishnah-New/api/bekhorot/3.json">3</a> <a href="/Mishnah-New/api/bekhorot/4.json">4</a> <a href="/Mishnah-New/api/bekhorot/5.json">5</a> <a href="/Mishnah-New/api/bekhorot/6.json">6</a> <a href="/Mishnah-New/api/bekhorot/7.json">7</a> <a href="/Mishnah-New/api/bekhorot/8.json">8</a> <a href="/Mishnah-New/api/bekhorot/9.json">9</a></li>
+<li><a href="/Mishnah-New/api/chullin.json"><strong>Chullin</strong></a> <span lang="he" dir="rtl">מסכת חולין</span> &mdash; 12 chapters: <a href="/Mishnah-New/api/chullin/1.json">1</a> <a href="/Mishnah-New/api/chullin/2.json">2</a> <a href="/Mishnah-New/api/chullin/3.json">3</a> <a href="/Mishnah-New/api/chullin/4.json">4</a> <a href="/Mishnah-New/api/chullin/5.json">5</a> <a href="/Mishnah-New/api/chullin/6.json">6</a> <a href="/Mishnah-New/api/chullin/7.json">7</a> <a href="/Mishnah-New/api/chullin/8.json">8</a> <a href="/Mishnah-New/api/chullin/9.json">9</a> <a href="/Mishnah-New/api/chullin/10.json">10</a> <a href="/Mishnah-New/api/chullin/11.json">11</a> <a href="/Mishnah-New/api/chullin/12.json">12</a></li>
+<li><a href="/Mishnah-New/api/keritot.json"><strong>Keritot</strong></a> <span lang="he" dir="rtl">מסכת כריתות</span> &mdash; 6 chapters: <a href="/Mishnah-New/api/keritot/1.json">1</a> <a href="/Mishnah-New/api/keritot/2.json">2</a> <a href="/Mishnah-New/api/keritot/3.json">3</a> <a href="/Mishnah-New/api/keritot/4.json">4</a> <a href="/Mishnah-New/api/keritot/5.json">5</a> <a href="/Mishnah-New/api/keritot/6.json">6</a></li>
+<li><a href="/Mishnah-New/api/kinnim.json"><strong>Kinnim</strong></a> <span lang="he" dir="rtl">מסכת קינים</span> &mdash; 3 chapters: <a href="/Mishnah-New/api/kinnim/1.json">1</a> <a href="/Mishnah-New/api/kinnim/2.json">2</a> <a href="/Mishnah-New/api/kinnim/3.json">3</a></li>
+<li><a href="/Mishnah-New/api/meilah.json"><strong>Meilah</strong></a> <span lang="he" dir="rtl">מסכת מעילה</span> &mdash; 6 chapters: <a href="/Mishnah-New/api/meilah/1.json">1</a> <a href="/Mishnah-New/api/meilah/2.json">2</a> <a href="/Mishnah-New/api/meilah/3.json">3</a> <a href="/Mishnah-New/api/meilah/4.json">4</a> <a href="/Mishnah-New/api/meilah/5.json">5</a> <a href="/Mishnah-New/api/meilah/6.json">6</a></li>
+<li><a href="/Mishnah-New/api/menachot.json"><strong>Menachot</strong></a> <span lang="he" dir="rtl">מסכת מנחות</span> &mdash; 13 chapters: <a href="/Mishnah-New/api/menachot/1.json">1</a> <a href="/Mishnah-New/api/menachot/2.json">2</a> <a href="/Mishnah-New/api/menachot/3.json">3</a> <a href="/Mishnah-New/api/menachot/4.json">4</a> <a href="/Mishnah-New/api/menachot/5.json">5</a> <a href="/Mishnah-New/api/menachot/6.json">6</a> <a href="/Mishnah-New/api/menachot/7.json">7</a> <a href="/Mishnah-New/api/menachot/8.json">8</a> <a href="/Mishnah-New/api/menachot/9.json">9</a> <a href="/Mishnah-New/api/menachot/10.json">10</a> <a href="/Mishnah-New/api/menachot/11.json">11</a> <a href="/Mishnah-New/api/menachot/12.json">12</a> <a href="/Mishnah-New/api/menachot/13.json">13</a></li>
+<li><a href="/Mishnah-New/api/middot.json"><strong>Middot</strong></a> <span lang="he" dir="rtl">מסכת מידות</span> &mdash; 5 chapters: <a href="/Mishnah-New/api/middot/1.json">1</a> <a href="/Mishnah-New/api/middot/2.json">2</a> <a href="/Mishnah-New/api/middot/3.json">3</a> <a href="/Mishnah-New/api/middot/4.json">4</a> <a href="/Mishnah-New/api/middot/5.json">5</a></li>
+<li><a href="/Mishnah-New/api/tamid.json"><strong>Tamid</strong></a> <span lang="he" dir="rtl">מסכת תמיד</span> &mdash; 7 chapters: <a href="/Mishnah-New/api/tamid/1.json">1</a> <a href="/Mishnah-New/api/tamid/2.json">2</a> <a href="/Mishnah-New/api/tamid/3.json">3</a> <a href="/Mishnah-New/api/tamid/4.json">4</a> <a href="/Mishnah-New/api/tamid/5.json">5</a> <a href="/Mishnah-New/api/tamid/6.json">6</a> <a href="/Mishnah-New/api/tamid/7.json">7</a></li>
+<li><a href="/Mishnah-New/api/temurah.json"><strong>Temurah</strong></a> <span lang="he" dir="rtl">מסכת תמורה</span> &mdash; 7 chapters: <a href="/Mishnah-New/api/temurah/1.json">1</a> <a href="/Mishnah-New/api/temurah/2.json">2</a> <a href="/Mishnah-New/api/temurah/3.json">3</a> <a href="/Mishnah-New/api/temurah/4.json">4</a> <a href="/Mishnah-New/api/temurah/5.json">5</a> <a href="/Mishnah-New/api/temurah/6.json">6</a> <a href="/Mishnah-New/api/temurah/7.json">7</a></li>
+<li><a href="/Mishnah-New/api/zevachim.json"><strong>Zevachim</strong></a> <span lang="he" dir="rtl">מסכת זבחים</span> &mdash; 14 chapters: <a href="/Mishnah-New/api/zevachim/1.json">1</a> <a href="/Mishnah-New/api/zevachim/2.json">2</a> <a href="/Mishnah-New/api/zevachim/3.json">3</a> <a href="/Mishnah-New/api/zevachim/4.json">4</a> <a href="/Mishnah-New/api/zevachim/5.json">5</a> <a href="/Mishnah-New/api/zevachim/6.json">6</a> <a href="/Mishnah-New/api/zevachim/7.json">7</a> <a href="/Mishnah-New/api/zevachim/8.json">8</a> <a href="/Mishnah-New/api/zevachim/9.json">9</a> <a href="/Mishnah-New/api/zevachim/10.json">10</a> <a href="/Mishnah-New/api/zevachim/11.json">11</a> <a href="/Mishnah-New/api/zevachim/12.json">12</a> <a href="/Mishnah-New/api/zevachim/13.json">13</a> <a href="/Mishnah-New/api/zevachim/14.json">14</a></li>
+</ul>
+
+<h2>Seder Tohorot <span lang="he" dir="rtl">טהרות</span></h2>
+<ul>
+<li><a href="/Mishnah-New/api/kelim.json"><strong>Kelim</strong></a> <span lang="he" dir="rtl">מסכת כלים</span> &mdash; 30 chapters: <a href="/Mishnah-New/api/kelim/1.json">1</a> <a href="/Mishnah-New/api/kelim/2.json">2</a> <a href="/Mishnah-New/api/kelim/3.json">3</a> <a href="/Mishnah-New/api/kelim/4.json">4</a> <a href="/Mishnah-New/api/kelim/5.json">5</a> <a href="/Mishnah-New/api/kelim/6.json">6</a> <a href="/Mishnah-New/api/kelim/7.json">7</a> <a href="/Mishnah-New/api/kelim/8.json">8</a> <a href="/Mishnah-New/api/kelim/9.json">9</a> <a href="/Mishnah-New/api/kelim/10.json">10</a> <a href="/Mishnah-New/api/kelim/11.json">11</a> <a href="/Mishnah-New/api/kelim/12.json">12</a> <a href="/Mishnah-New/api/kelim/13.json">13</a> <a href="/Mishnah-New/api/kelim/14.json">14</a> <a href="/Mishnah-New/api/kelim/15.json">15</a> <a href="/Mishnah-New/api/kelim/16.json">16</a> <a href="/Mishnah-New/api/kelim/17.json">17</a> <a href="/Mishnah-New/api/kelim/18.json">18</a> <a href="/Mishnah-New/api/kelim/19.json">19</a> <a href="/Mishnah-New/api/kelim/20.json">20</a> <a href="/Mishnah-New/api/kelim/21.json">21</a> <a href="/Mishnah-New/api/kelim/22.json">22</a> <a href="/Mishnah-New/api/kelim/23.json">23</a> <a href="/Mishnah-New/api/kelim/24.json">24</a> <a href="/Mishnah-New/api/kelim/25.json">25</a> <a href="/Mishnah-New/api/kelim/26.json">26</a> <a href="/Mishnah-New/api/kelim/27.json">27</a> <a href="/Mishnah-New/api/kelim/28.json">28</a> <a href="/Mishnah-New/api/kelim/29.json">29</a> <a href="/Mishnah-New/api/kelim/30.json">30</a></li>
+<li><a href="/Mishnah-New/api/makhshirin.json"><strong>Makhshirin</strong></a> <span lang="he" dir="rtl">מסכת מכשירין</span> &mdash; 6 chapters: <a href="/Mishnah-New/api/makhshirin/1.json">1</a> <a href="/Mishnah-New/api/makhshirin/2.json">2</a> <a href="/Mishnah-New/api/makhshirin/3.json">3</a> <a href="/Mishnah-New/api/makhshirin/4.json">4</a> <a href="/Mishnah-New/api/makhshirin/5.json">5</a> <a href="/Mishnah-New/api/makhshirin/6.json">6</a></li>
+<li><a href="/Mishnah-New/api/mikvaot.json"><strong>Mikvaot</strong></a> <span lang="he" dir="rtl">מסכת מקואות</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/mikvaot/1.json">1</a> <a href="/Mishnah-New/api/mikvaot/2.json">2</a> <a href="/Mishnah-New/api/mikvaot/3.json">3</a> <a href="/Mishnah-New/api/mikvaot/4.json">4</a> <a href="/Mishnah-New/api/mikvaot/5.json">5</a> <a href="/Mishnah-New/api/mikvaot/6.json">6</a> <a href="/Mishnah-New/api/mikvaot/7.json">7</a> <a href="/Mishnah-New/api/mikvaot/8.json">8</a> <a href="/Mishnah-New/api/mikvaot/9.json">9</a> <a href="/Mishnah-New/api/mikvaot/10.json">10</a></li>
+<li><a href="/Mishnah-New/api/negaim.json"><strong>Negaim</strong></a> <span lang="he" dir="rtl">מסכת נגעים</span> &mdash; 14 chapters: <a href="/Mishnah-New/api/negaim/1.json">1</a> <a href="/Mishnah-New/api/negaim/2.json">2</a> <a href="/Mishnah-New/api/negaim/3.json">3</a> <a href="/Mishnah-New/api/negaim/4.json">4</a> <a href="/Mishnah-New/api/negaim/5.json">5</a> <a href="/Mishnah-New/api/negaim/6.json">6</a> <a href="/Mishnah-New/api/negaim/7.json">7</a> <a href="/Mishnah-New/api/negaim/8.json">8</a> <a href="/Mishnah-New/api/negaim/9.json">9</a> <a href="/Mishnah-New/api/negaim/10.json">10</a> <a href="/Mishnah-New/api/negaim/11.json">11</a> <a href="/Mishnah-New/api/negaim/12.json">12</a> <a href="/Mishnah-New/api/negaim/13.json">13</a> <a href="/Mishnah-New/api/negaim/14.json">14</a></li>
+<li><a href="/Mishnah-New/api/niddah.json"><strong>Niddah</strong></a> <span lang="he" dir="rtl">מסכת נידה</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/niddah/1.json">1</a> <a href="/Mishnah-New/api/niddah/2.json">2</a> <a href="/Mishnah-New/api/niddah/3.json">3</a> <a href="/Mishnah-New/api/niddah/4.json">4</a> <a href="/Mishnah-New/api/niddah/5.json">5</a> <a href="/Mishnah-New/api/niddah/6.json">6</a> <a href="/Mishnah-New/api/niddah/7.json">7</a> <a href="/Mishnah-New/api/niddah/8.json">8</a> <a href="/Mishnah-New/api/niddah/9.json">9</a> <a href="/Mishnah-New/api/niddah/10.json">10</a></li>
+<li><a href="/Mishnah-New/api/oholot.json"><strong>Oholot</strong></a> <span lang="he" dir="rtl">מסכת אהלות</span> &mdash; 18 chapters: <a href="/Mishnah-New/api/oholot/1.json">1</a> <a href="/Mishnah-New/api/oholot/2.json">2</a> <a href="/Mishnah-New/api/oholot/3.json">3</a> <a href="/Mishnah-New/api/oholot/4.json">4</a> <a href="/Mishnah-New/api/oholot/5.json">5</a> <a href="/Mishnah-New/api/oholot/6.json">6</a> <a href="/Mishnah-New/api/oholot/7.json">7</a> <a href="/Mishnah-New/api/oholot/8.json">8</a> <a href="/Mishnah-New/api/oholot/9.json">9</a> <a href="/Mishnah-New/api/oholot/10.json">10</a> <a href="/Mishnah-New/api/oholot/11.json">11</a> <a href="/Mishnah-New/api/oholot/12.json">12</a> <a href="/Mishnah-New/api/oholot/13.json">13</a> <a href="/Mishnah-New/api/oholot/14.json">14</a> <a href="/Mishnah-New/api/oholot/15.json">15</a> <a href="/Mishnah-New/api/oholot/16.json">16</a> <a href="/Mishnah-New/api/oholot/17.json">17</a> <a href="/Mishnah-New/api/oholot/18.json">18</a></li>
+<li><a href="/Mishnah-New/api/oktzin.json"><strong>Oktzin</strong></a> <span lang="he" dir="rtl">מסכת עוקצים</span> &mdash; 3 chapters: <a href="/Mishnah-New/api/oktzin/1.json">1</a> <a href="/Mishnah-New/api/oktzin/2.json">2</a> <a href="/Mishnah-New/api/oktzin/3.json">3</a></li>
+<li><a href="/Mishnah-New/api/parah.json"><strong>Parah</strong></a> <span lang="he" dir="rtl">מסכת פרה</span> &mdash; 12 chapters: <a href="/Mishnah-New/api/parah/1.json">1</a> <a href="/Mishnah-New/api/parah/2.json">2</a> <a href="/Mishnah-New/api/parah/3.json">3</a> <a href="/Mishnah-New/api/parah/4.json">4</a> <a href="/Mishnah-New/api/parah/5.json">5</a> <a href="/Mishnah-New/api/parah/6.json">6</a> <a href="/Mishnah-New/api/parah/7.json">7</a> <a href="/Mishnah-New/api/parah/8.json">8</a> <a href="/Mishnah-New/api/parah/9.json">9</a> <a href="/Mishnah-New/api/parah/10.json">10</a> <a href="/Mishnah-New/api/parah/11.json">11</a> <a href="/Mishnah-New/api/parah/12.json">12</a></li>
+<li><a href="/Mishnah-New/api/tahorot.json"><strong>Tahorot</strong></a> <span lang="he" dir="rtl">מסכת טהרות</span> &mdash; 10 chapters: <a href="/Mishnah-New/api/tahorot/1.json">1</a> <a href="/Mishnah-New/api/tahorot/2.json">2</a> <a href="/Mishnah-New/api/tahorot/3.json">3</a> <a href="/Mishnah-New/api/tahorot/4.json">4</a> <a href="/Mishnah-New/api/tahorot/5.json">5</a> <a href="/Mishnah-New/api/tahorot/6.json">6</a> <a href="/Mishnah-New/api/tahorot/7.json">7</a> <a href="/Mishnah-New/api/tahorot/8.json">8</a> <a href="/Mishnah-New/api/tahorot/9.json">9</a> <a href="/Mishnah-New/api/tahorot/10.json">10</a></li>
+<li><a href="/Mishnah-New/api/tevul-yom.json"><strong>Tevul Yom</strong></a> <span lang="he" dir="rtl">מסכת טבול יום</span> &mdash; 4 chapters: <a href="/Mishnah-New/api/tevul-yom/1.json">1</a> <a href="/Mishnah-New/api/tevul-yom/2.json">2</a> <a href="/Mishnah-New/api/tevul-yom/3.json">3</a> <a href="/Mishnah-New/api/tevul-yom/4.json">4</a></li>
+<li><a href="/Mishnah-New/api/yadayim.json"><strong>Yadayim</strong></a> <span lang="he" dir="rtl">מסכת ידים</span> &mdash; 4 chapters: <a href="/Mishnah-New/api/yadayim/1.json">1</a> <a href="/Mishnah-New/api/yadayim/2.json">2</a> <a href="/Mishnah-New/api/yadayim/3.json">3</a> <a href="/Mishnah-New/api/yadayim/4.json">4</a></li>
+<li><a href="/Mishnah-New/api/zavim.json"><strong>Zavim</strong></a> <span lang="he" dir="rtl">מסכת זבים</span> &mdash; 5 chapters: <a href="/Mishnah-New/api/zavim/1.json">1</a> <a href="/Mishnah-New/api/zavim/2.json">2</a> <a href="/Mishnah-New/api/zavim/3.json">3</a> <a href="/Mishnah-New/api/zavim/4.json">4</a> <a href="/Mishnah-New/api/zavim/5.json">5</a></li>
+</ul>
+
+<h2>Licence</h2>
+<p>The Structured Mishnah, Moshe Kline, chaver.com. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. No key, no registration, no rate limit.</p>
+</main>
+<footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                                <div class="footer-section">
+                    <h4>Key Insights</h4>
+                    <ul>
+                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah PDF</a></li>
+                        <li><a href="https://asitwaswritten.org/">As It Was Written &mdash; a primer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         SITE NAV SCRIPT
+         ========================================== -->
+    <script>
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var menu = document.querySelector('.nav-menu');
+
+            // Hamburger toggle
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('is-open-menu');
+                    toggle.setAttribute('aria-expanded',
+                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
+                });
+            }
+
+            // Dropdown toggles (via <button>, not <a>)
+            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var li = btn.parentElement;
+                    var wasOpen = li.classList.contains('is-open');
+
+                    // Close all dropdowns first
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
+                        other.classList.remove('is-open');
+                        var b = other.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open this one if it wasn't already
+                    if (!wasOpen) {
+                        li.classList.add('is-open');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Click outside closes everything
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    if (menu) menu.classList.remove('is-open-menu');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                        var b = li.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
+    </script>
+
+    
+</body>
+</html>

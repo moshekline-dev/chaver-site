@@ -198,6 +198,10 @@
 
 <link rel="canonical" href="https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-data">
 
+<!-- machine-readable alternates: the per-chapter API -->
+<link rel="alternate" type="application/json" href="https://chaver.com/Mishnah-New/api/index.json" title="Structured Mishnah API — index">
+<link rel="alternate" type="application/json" href="https://chaver.com/Mishnah-New/api/schema.json" title="Structured Mishnah API — chapter schema">
+
 <!-- Open Graph -->
 <meta property="og:title" content="The Structured Mishnah Dataset (JSON) — Free Download | Chaver.com">
 <meta property="og:description" content="The complete Mishnah as a structured JSON dataset — 524 chapters with cell-level position labels and 2,276 structural markers. Free, CC-BY licensed.">
@@ -348,6 +352,7 @@
                     <ul class="submenu">
                         <li><a href="/torah-weave/data/">&#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
                         <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">&#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/api/">API &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
                     </ul>
                 </li>
                 <li><a href="/General/Contact.htm">&#1510;&#1493;&#1512; &#1511;&#1513;&#1512;</a></li>
@@ -587,12 +592,14 @@ for key, chapter in data.items():
     <li><a href="/Mishnah-New/Hebrew/Text/mishnah-search"><strong>Search</strong> — Find text or structural patterns</a></li>
     <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf"><strong>Download PDF</strong></a> — The complete Mishnah as a printable, searchable PDF.</li>
     <li><strong>Download JSON dataset</strong> — This page. Machine-readable for computational research and AI systems.</li>
+    <li><a href="/Mishnah-New/api/"><strong>Use the API</strong></a> — The same data served one chapter at a time, as small JSON files at predictable addresses (for example <a href="/Mishnah-New/api/berakhot/1.json"><code>/Mishnah-New/api/berakhot/1.json</code></a>), instead of one 16&nbsp;MB download. No key, no rate limit.</li>
 </ul>
 
 <h2>Related</h2>
 
 <ul>
     <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to the Structured Mishnah</a></li>
+    <li><a href="/Mishnah-New/api/">The Structured Mishnah API</a> — per-chapter JSON, with <a href="/Mishnah-New/api/chapters">every chapter listed</a></li>
     <li><a href="/torah-weave/data/">Torah Units Dataset (JSON & CSV)</a> — companion structural dataset for the Torah</li>
     <li><a href="/Torah-New/English/Text/Torah-pdf">Download the Structured Torah PDF</a></li>
     <li><a href="/torah-weave/Woven-Torah-Method">The Woven Torah Method</a></li>
