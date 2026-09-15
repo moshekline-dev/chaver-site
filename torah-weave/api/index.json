@@ -10,15 +10,15 @@
   "schema": "https://chaver.com/torah-weave/api/schema.json",
   "canonical": "https://chaver.com/torah-weave/api/index.json"
  },
- "about": "The 86 literary units of the Torah as two-dimensional tables of labelled cells, with the full Hebrew text of every cell, the verse references printed in it, and the markings of the author’s apparatus. Static JSON, no key and no rate limit. Licensed CC BY 4.0; attribution to Moshe Kline, The Structured Torah (chaver.com), is required. The eighty-six units are a literary division proposed by this research rather than one already in general use, so by-verse.json provides an entrance from an ordinary chapter-and-verse reference; the units run continuously through all five books and do not overlap, so every verse of the Torah lies in exactly one of them.",
+ "about": "The 86 literary units of the Torah as two-dimensional tables of labelled cells, with the full Hebrew text of every cell, the verse references printed in it, and the markings of the author’s apparatus. Static JSON, no key and no rate limit. Licensed CC BY 4.0; attribution to Moshe Kline, The Structured Torah (chaver.com), is required.",
  "counts": {
   "units": 86,
   "books": 5,
-  "cells": 602,
-  "subdivisions": 421,
-  "marker_instances": 2262,
-  "marker_types": 8,
-  "units_carrying_markers": 82
+  "cells": 598,
+  "subdivisions": 455,
+  "marker_instances": 4763,
+  "marker_types": 10,
+  "units_carrying_markers": 86
  },
  "endpoints": [
   {
@@ -30,24 +30,12 @@
    "returns": "Flat list of the five books with their unit counts."
   },
   {
-   "address": "/torah-weave/api/by-verse.json",
-   "returns": "A way in from an ordinary chapter-and-verse reference: which unit contains it."
-  },
-  {
-   "address": "/torah-weave/api/by-parashah.json",
-   "returns": "The weekly reading as a way in: which units each of the 54 parashiyot touches."
-  },
-  {
    "address": "/torah-weave/api/markers.json",
    "returns": "The eight marker types with colour, hex, definition and counts."
   },
   {
    "address": "/torah-weave/api/schema.json",
    "returns": "Field-by-field description of a unit document."
-  },
-  {
-   "address": "/torah-weave/api/discrepancies.json",
-   "returns": "Every point where this data differs from the published Torah Units Dataset, and the verse references that could not be read."
   },
   {
    "address": "/torah-weave/api/{book}.json",
@@ -66,7 +54,7 @@
    "units": 19,
    "cells": 126,
    "subdivisions": 73,
-   "marker_count": 559,
+   "marker_count": 977,
    "url": "https://chaver.com/torah-weave/api/genesis.json"
   },
   {
@@ -75,8 +63,8 @@
    "slug": "exodus",
    "units": 19,
    "cells": 153,
-   "subdivisions": 90,
-   "marker_count": 503,
+   "subdivisions": 106,
+   "marker_count": 1056,
    "url": "https://chaver.com/torah-weave/api/exodus.json"
   },
   {
@@ -84,9 +72,9 @@
    "book_he": "ספר ויקרא",
    "slug": "leviticus",
    "units": 22,
-   "cells": 141,
-   "subdivisions": 47,
-   "marker_count": 350,
+   "cells": 137,
+   "subdivisions": 53,
+   "marker_count": 729,
    "url": "https://chaver.com/torah-weave/api/leviticus.json"
   },
   {
@@ -96,7 +84,7 @@
    "units": 13,
    "cells": 76,
    "subdivisions": 66,
-   "marker_count": 186,
+   "marker_count": 613,
    "url": "https://chaver.com/torah-weave/api/numbers.json"
   },
   {
@@ -105,8 +93,8 @@
    "slug": "deuteronomy",
    "units": 13,
    "cells": 106,
-   "subdivisions": 145,
-   "marker_count": 664,
+   "subdivisions": 157,
+   "marker_count": 1388,
    "url": "https://chaver.com/torah-weave/api/deuteronomy.json"
   }
  ],
@@ -119,7 +107,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 6,
-   "marker_count": 26,
+   "marker_count": 67,
    "url": "https://chaver.com/torah-weave/api/genesis/1.json"
   },
   {
@@ -130,7 +118,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 4,
-   "marker_count": 41,
+   "marker_count": 107,
    "url": "https://chaver.com/torah-weave/api/genesis/2.json"
   },
   {
@@ -141,7 +129,7 @@
    "format": "6x2",
    "cells": 12,
    "subdivisions": 10,
-   "marker_count": 80,
+   "marker_count": 133,
    "url": "https://chaver.com/torah-weave/api/genesis/3.json"
   },
   {
@@ -152,7 +140,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 8,
+   "marker_count": 14,
    "url": "https://chaver.com/torah-weave/api/genesis/4.json"
   },
   {
@@ -163,7 +151,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 2,
-   "marker_count": 6,
+   "marker_count": 15,
    "url": "https://chaver.com/torah-weave/api/genesis/5.json"
   },
   {
@@ -174,7 +162,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 4,
-   "marker_count": 16,
+   "marker_count": 22,
    "url": "https://chaver.com/torah-weave/api/genesis/6.json"
   },
   {
@@ -185,7 +173,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 2,
-   "marker_count": 22,
+   "marker_count": 48,
    "url": "https://chaver.com/torah-weave/api/genesis/7.json"
   },
   {
@@ -196,7 +184,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 4,
-   "marker_count": 29,
+   "marker_count": 50,
    "url": "https://chaver.com/torah-weave/api/genesis/8.json"
   },
   {
@@ -207,7 +195,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 4,
-   "marker_count": 27,
+   "marker_count": 67,
    "url": "https://chaver.com/torah-weave/api/genesis/9.json"
   },
   {
@@ -218,7 +206,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 2,
-   "marker_count": 44,
+   "marker_count": 75,
    "url": "https://chaver.com/torah-weave/api/genesis/10.json"
   },
   {
@@ -229,7 +217,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 0,
-   "marker_count": 8,
+   "marker_count": 12,
    "url": "https://chaver.com/torah-weave/api/genesis/11.json"
   },
   {
@@ -240,7 +228,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 13,
+   "marker_count": 24,
    "url": "https://chaver.com/torah-weave/api/genesis/12.json"
   },
   {
@@ -251,7 +239,7 @@
    "format": "12221",
    "cells": 8,
    "subdivisions": 0,
-   "marker_count": 15,
+   "marker_count": 21,
    "url": "https://chaver.com/torah-weave/api/genesis/13.json"
   },
   {
@@ -262,7 +250,7 @@
    "format": "12221",
    "cells": 8,
    "subdivisions": 0,
-   "marker_count": 10,
+   "marker_count": 46,
    "url": "https://chaver.com/torah-weave/api/genesis/14.json"
   },
   {
@@ -273,7 +261,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 2,
-   "marker_count": 10,
+   "marker_count": 18,
    "url": "https://chaver.com/torah-weave/api/genesis/15.json"
   },
   {
@@ -284,7 +272,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 4,
-   "marker_count": 41,
+   "marker_count": 50,
    "url": "https://chaver.com/torah-weave/api/genesis/16.json"
   },
   {
@@ -295,7 +283,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 20,
-   "marker_count": 71,
+   "marker_count": 83,
    "url": "https://chaver.com/torah-weave/api/genesis/17.json"
   },
   {
@@ -306,7 +294,7 @@
    "format": "6x3",
    "cells": 18,
    "subdivisions": 6,
-   "marker_count": 65,
+   "marker_count": 83,
    "url": "https://chaver.com/torah-weave/api/genesis/18.json"
   },
   {
@@ -317,7 +305,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 3,
-   "marker_count": 27,
+   "marker_count": 42,
    "url": "https://chaver.com/torah-weave/api/genesis/19.json"
   },
   {
@@ -328,7 +316,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 10,
-   "marker_count": 43,
+   "marker_count": 79,
    "url": "https://chaver.com/torah-weave/api/exodus/1.json"
   },
   {
@@ -339,7 +327,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 12,
-   "marker_count": 34,
+   "marker_count": 73,
    "url": "https://chaver.com/torah-weave/api/exodus/2.json"
   },
   {
@@ -350,7 +338,7 @@
    "format": "23332",
    "cells": 13,
    "subdivisions": 10,
-   "marker_count": 48,
+   "marker_count": 157,
    "url": "https://chaver.com/torah-weave/api/exodus/3.json"
   },
   {
@@ -361,7 +349,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 12,
-   "marker_count": 52,
+   "marker_count": 102,
    "url": "https://chaver.com/torah-weave/api/exodus/4.json"
   },
   {
@@ -372,7 +360,7 @@
    "format": "3x3",
    "cells": 9,
    "subdivisions": 6,
-   "marker_count": 41,
+   "marker_count": 84,
    "url": "https://chaver.com/torah-weave/api/exodus/5.json"
   },
   {
@@ -383,7 +371,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 4,
-   "marker_count": 27,
+   "marker_count": 66,
    "url": "https://chaver.com/torah-weave/api/exodus/6.json"
   },
   {
@@ -393,8 +381,8 @@
    "verses": "Exodus 18:1-20:22",
    "format": "4x2",
    "cells": 8,
-   "subdivisions": 4,
-   "marker_count": 43,
+   "subdivisions": 20,
+   "marker_count": 108,
    "url": "https://chaver.com/torah-weave/api/exodus/7.json"
   },
   {
@@ -405,7 +393,7 @@
    "format": "7x2",
    "cells": 14,
    "subdivisions": 6,
-   "marker_count": 25,
+   "marker_count": 31,
    "url": "https://chaver.com/torah-weave/api/exodus/8.json"
   },
   {
@@ -416,7 +404,7 @@
    "format": "5x3",
    "cells": 15,
    "subdivisions": 6,
-   "marker_count": 34,
+   "marker_count": 39,
    "url": "https://chaver.com/torah-weave/api/exodus/9.json"
   },
   {
@@ -427,7 +415,7 @@
    "format": "3x3",
    "cells": 9,
    "subdivisions": 0,
-   "marker_count": 14,
+   "marker_count": 31,
    "url": "https://chaver.com/torah-weave/api/exodus/10.json"
   },
   {
@@ -438,7 +426,7 @@
    "format": "12221",
    "cells": 8,
    "subdivisions": 4,
-   "marker_count": 15,
+   "marker_count": 17,
    "url": "https://chaver.com/torah-weave/api/exodus/11.json"
   },
   {
@@ -449,7 +437,7 @@
    "format": "1221",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 19,
+   "marker_count": 29,
    "url": "https://chaver.com/torah-weave/api/exodus/12.json"
   },
   {
@@ -460,7 +448,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 2,
-   "marker_count": 33,
+   "marker_count": 45,
    "url": "https://chaver.com/torah-weave/api/exodus/13.json"
   },
   {
@@ -471,7 +459,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 0,
-   "marker_count": 33,
+   "marker_count": 58,
    "url": "https://chaver.com/torah-weave/api/exodus/14.json"
   },
   {
@@ -482,7 +470,7 @@
    "format": "5x2",
    "cells": 10,
    "subdivisions": 4,
-   "marker_count": 23,
+   "marker_count": 70,
    "url": "https://chaver.com/torah-weave/api/exodus/15.json"
   },
   {
@@ -493,7 +481,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 10,
+   "marker_count": 29,
    "url": "https://chaver.com/torah-weave/api/exodus/16.json"
   },
   {
@@ -515,7 +503,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 4,
-   "marker_count": 0,
+   "marker_count": 9,
    "url": "https://chaver.com/torah-weave/api/exodus/18.json"
   },
   {
@@ -526,7 +514,7 @@
    "format": "131",
    "cells": 5,
    "subdivisions": 0,
-   "marker_count": 7,
+   "marker_count": 27,
    "url": "https://chaver.com/torah-weave/api/exodus/19.json"
   },
   {
@@ -537,7 +525,7 @@
    "format": "3x3",
    "cells": 9,
    "subdivisions": 0,
-   "marker_count": 5,
+   "marker_count": 35,
    "url": "https://chaver.com/torah-weave/api/leviticus/1.json"
   },
   {
@@ -548,7 +536,7 @@
    "format": "3x3",
    "cells": 9,
    "subdivisions": 2,
-   "marker_count": 8,
+   "marker_count": 41,
    "url": "https://chaver.com/torah-weave/api/leviticus/2.json"
   },
   {
@@ -559,7 +547,7 @@
    "format": "3x3",
    "cells": 9,
    "subdivisions": 0,
-   "marker_count": 37,
+   "marker_count": 67,
    "url": "https://chaver.com/torah-weave/api/leviticus/3.json"
   },
   {
@@ -570,7 +558,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 13,
-   "marker_count": 56,
+   "marker_count": 100,
    "url": "https://chaver.com/torah-weave/api/leviticus/4.json"
   },
   {
@@ -581,7 +569,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 6,
-   "marker_count": 39,
+   "marker_count": 43,
    "url": "https://chaver.com/torah-weave/api/leviticus/5.json"
   },
   {
@@ -592,7 +580,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 0,
-   "marker_count": 0,
+   "marker_count": 2,
    "url": "https://chaver.com/torah-weave/api/leviticus/6.json"
   },
   {
@@ -603,7 +591,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 4,
-   "marker_count": 28,
+   "marker_count": 29,
    "url": "https://chaver.com/torah-weave/api/leviticus/7.json"
   },
   {
@@ -614,7 +602,7 @@
    "format": "3x3",
    "cells": 9,
    "subdivisions": 0,
-   "marker_count": 8,
+   "marker_count": 19,
    "url": "https://chaver.com/torah-weave/api/leviticus/8.json"
   },
   {
@@ -625,7 +613,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 0,
-   "marker_count": 4,
+   "marker_count": 9,
    "url": "https://chaver.com/torah-weave/api/leviticus/9.json"
   },
   {
@@ -636,7 +624,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 4,
+   "marker_count": 16,
    "url": "https://chaver.com/torah-weave/api/leviticus/10.json"
   },
   {
@@ -647,7 +635,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 10,
+   "marker_count": 19,
    "url": "https://chaver.com/torah-weave/api/leviticus/11.json"
   },
   {
@@ -658,7 +646,7 @@
    "format": "3x3",
    "cells": 9,
    "subdivisions": 0,
-   "marker_count": 13,
+   "marker_count": 20,
    "url": "https://chaver.com/torah-weave/api/leviticus/12.json"
   },
   {
@@ -668,8 +656,8 @@
    "verses": "Leviticus 19:1-19:37",
    "format": "232",
    "cells": 7,
-   "subdivisions": 11,
-   "marker_count": 31,
+   "subdivisions": 12,
+   "marker_count": 59,
    "url": "https://chaver.com/torah-weave/api/leviticus/13.json"
   },
   {
@@ -680,7 +668,7 @@
    "format": "3x3",
    "cells": 9,
    "subdivisions": 0,
-   "marker_count": 13,
+   "marker_count": 19,
    "url": "https://chaver.com/torah-weave/api/leviticus/14.json"
   },
   {
@@ -691,7 +679,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 12,
+   "marker_count": 22,
    "url": "https://chaver.com/torah-weave/api/leviticus/15.json"
   },
   {
@@ -702,7 +690,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 11,
+   "marker_count": 25,
    "url": "https://chaver.com/torah-weave/api/leviticus/16.json"
   },
   {
@@ -713,7 +701,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 0,
-   "marker_count": 0,
+   "marker_count": 8,
    "url": "https://chaver.com/torah-weave/api/leviticus/17.json"
   },
   {
@@ -722,9 +710,9 @@
    "title": "Holiday Calendar",
    "verses": "Leviticus 23:1-23:44",
    "format": "2x2",
-   "cells": 8,
-   "subdivisions": 0,
-   "marker_count": 10,
+   "cells": 4,
+   "subdivisions": 5,
+   "marker_count": 85,
    "url": "https://chaver.com/torah-weave/api/leviticus/18.json"
   },
   {
@@ -735,7 +723,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 0,
-   "marker_count": 4,
+   "marker_count": 16,
    "url": "https://chaver.com/torah-weave/api/leviticus/19.json"
   },
   {
@@ -746,7 +734,7 @@
    "format": "323",
    "cells": 8,
    "subdivisions": 0,
-   "marker_count": 14,
+   "marker_count": 21,
    "url": "https://chaver.com/torah-weave/api/leviticus/20.json"
   },
   {
@@ -757,7 +745,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 8,
-   "marker_count": 12,
+   "marker_count": 22,
    "url": "https://chaver.com/torah-weave/api/leviticus/21.json"
   },
   {
@@ -768,7 +756,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 3,
-   "marker_count": 31,
+   "marker_count": 52,
    "url": "https://chaver.com/torah-weave/api/leviticus/22.json"
   },
   {
@@ -779,7 +767,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 12,
-   "marker_count": 44,
+   "marker_count": 77,
    "url": "https://chaver.com/torah-weave/api/numbers/1.json"
   },
   {
@@ -790,7 +778,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 0,
-   "marker_count": 10,
+   "marker_count": 33,
    "url": "https://chaver.com/torah-weave/api/numbers/2.json"
   },
   {
@@ -801,7 +789,7 @@
    "format": "3x3",
    "cells": 9,
    "subdivisions": 6,
-   "marker_count": 25,
+   "marker_count": 81,
    "url": "https://chaver.com/torah-weave/api/numbers/3.json"
   },
   {
@@ -812,7 +800,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 6,
-   "marker_count": 18,
+   "marker_count": 51,
    "url": "https://chaver.com/torah-weave/api/numbers/4.json"
   },
   {
@@ -823,7 +811,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 2,
-   "marker_count": 26,
+   "marker_count": 51,
    "url": "https://chaver.com/torah-weave/api/numbers/5.json"
   },
   {
@@ -834,7 +822,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 2,
+   "marker_count": 24,
    "url": "https://chaver.com/torah-weave/api/numbers/6.json"
   },
   {
@@ -845,7 +833,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 4,
-   "marker_count": 17,
+   "marker_count": 56,
    "url": "https://chaver.com/torah-weave/api/numbers/7.json"
   },
   {
@@ -856,7 +844,7 @@
    "format": "2x3",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 0,
+   "marker_count": 21,
    "url": "https://chaver.com/torah-weave/api/numbers/8.json"
   },
   {
@@ -867,7 +855,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 2,
-   "marker_count": 17,
+   "marker_count": 38,
    "url": "https://chaver.com/torah-weave/api/numbers/9.json"
   },
   {
@@ -878,7 +866,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 6,
-   "marker_count": 8,
+   "marker_count": 52,
    "url": "https://chaver.com/torah-weave/api/numbers/10.json"
   },
   {
@@ -889,7 +877,7 @@
    "format": "2x2",
    "cells": 4,
    "subdivisions": 4,
-   "marker_count": 4,
+   "marker_count": 22,
    "url": "https://chaver.com/torah-weave/api/numbers/11.json"
   },
   {
@@ -900,7 +888,7 @@
    "format": "1x2",
    "cells": 2,
    "subdivisions": 14,
-   "marker_count": 7,
+   "marker_count": 36,
    "url": "https://chaver.com/torah-weave/api/numbers/12.json"
   },
   {
@@ -911,7 +899,7 @@
    "format": "212",
    "cells": 5,
    "subdivisions": 10,
-   "marker_count": 8,
+   "marker_count": 71,
    "url": "https://chaver.com/torah-weave/api/numbers/13.json"
   },
   {
@@ -922,7 +910,7 @@
    "format": "13331",
    "cells": 11,
    "subdivisions": 0,
-   "marker_count": 35,
+   "marker_count": 88,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/1.json"
   },
   {
@@ -932,8 +920,8 @@
    "verses": "Deuteronomy 4:1-4:49",
    "format": "5x2",
    "cells": 10,
-   "subdivisions": 0,
-   "marker_count": 53,
+   "subdivisions": 2,
+   "marker_count": 98,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/2.json"
   },
   {
@@ -944,7 +932,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 10,
-   "marker_count": 34,
+   "marker_count": 71,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/3.json"
   },
   {
@@ -955,7 +943,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 14,
-   "marker_count": 56,
+   "marker_count": 127,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/4.json"
   },
   {
@@ -966,7 +954,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 4,
-   "marker_count": 43,
+   "marker_count": 94,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/5.json"
   },
   {
@@ -977,7 +965,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 0,
-   "marker_count": 22,
+   "marker_count": 67,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/6.json"
   },
   {
@@ -988,7 +976,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 42,
-   "marker_count": 113,
+   "marker_count": 285,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/7.json"
   },
   {
@@ -999,7 +987,7 @@
    "format": "1x3",
    "cells": 3,
    "subdivisions": 27,
-   "marker_count": 63,
+   "marker_count": 96,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/8.json"
   },
   {
@@ -1010,7 +998,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 10,
-   "marker_count": 60,
+   "marker_count": 102,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/9.json"
   },
   {
@@ -1021,7 +1009,7 @@
    "format": "4x3",
    "cells": 12,
    "subdivisions": 24,
-   "marker_count": 73,
+   "marker_count": 133,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/10.json"
   },
   {
@@ -1032,7 +1020,7 @@
    "format": "3x2",
    "cells": 6,
    "subdivisions": 6,
-   "marker_count": 42,
+   "marker_count": 89,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/11.json"
   },
   {
@@ -1043,7 +1031,7 @@
    "format": "4x2",
    "cells": 8,
    "subdivisions": 4,
-   "marker_count": 37,
+   "marker_count": 71,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/12.json"
   },
   {
@@ -1053,18 +1041,16 @@
    "verses": "Deuteronomy 32:48-34:12",
    "format": "5x2",
    "cells": 10,
-   "subdivisions": 4,
-   "marker_count": 33,
+   "subdivisions": 14,
+   "marker_count": 67,
    "url": "https://chaver.com/torah-weave/api/deuteronomy/13.json"
   }
  ],
  "related": {
   "structured_mishnah_api": "https://chaver.com/Mishnah-New/api/index.json",
   "torah_units_dataset": "https://chaver.com/torah-weave/data/torah-units.json",
-  "method": "https://chaver.com/torah-weave/Woven-Torah-Method.html",
-  "find_a_unit_by_chapter_and_verse": "https://chaver.com/torah-weave/api/by-verse.json",
-  "find_a_unit_by_parashah": "https://chaver.com/torah-weave/api/by-parashah.json"
+  "method": "https://chaver.com/torah-weave/Woven-Torah-Method.html"
  },
- "source": "Extracted from The Structured Torah (Hebrew edition), the author’s own Word document, in which the apparatus is applied as named character styles. Cross-checked against the published Torah Literary Units Dataset: every one of the 86 units now agrees with it on the verses it covers, and 84 of the 86 reproduce its recorded shape exactly. Five verse ranges that had disagreed were traced to unit headings that contradicted their own tables and were corrected in the dataset (version 1.1). The differences that remain, and the headings still to be corrected, are listed in discrepancies.json.",
+ "source": "Extracted from The Structured Torah (Hebrew edition), the author’s own Word document, in which the apparatus is applied as named character styles. Cross-checked against the published Torah Literary Units Dataset: 84 of the 86 units reproduce its recorded format exactly, and 918 of 938 cell and subdivision verse ranges match it exactly. The remaining differences are listed in discrepancies.json.",
  "discrepancies": "https://chaver.com/torah-weave/api/discrepancies.json"
 }

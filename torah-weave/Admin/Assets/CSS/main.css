@@ -487,6 +487,20 @@ table.MsoNormalTable td,
     font-weight: 500;
 }
 
+/* Divine appearances. Two distinct character styles in the source edition:
+   'a' marks יהוה, 'a0' marks אלהים. Colours as published in
+   /torah-weave/api/markers.json */
+
+span.a {
+    color: #4a7c1f;
+    font-weight: 500;
+}
+
+span.a0 {
+    color: #7b6aa8;
+    font-weight: 500;
+}
+
 .theme-covenant {
     color: #FFD700;
     font-weight: 500;
@@ -508,7 +522,9 @@ span[class*="vertical"],
 span[class*="closure"],
 span[class*="ciasm"],
 span[class*="internal"],
-span[class*="theme"] {
+span[class*="theme"],
+span.a,
+span.a0 {
     font-size: inherit;
     line-height: inherit;
     font-family: inherit;
@@ -3614,6 +3630,18 @@ main.content-wrapper:has(.Mesechet) .Perek {
     
     .internalparallel, .internal-parallel { 
         color: #16a34a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    span.a {
+        color: #4a7c1f !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    span.a0 {
+        color: #7b6aa8 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }

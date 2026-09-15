@@ -10,27 +10,8 @@
   "schema": "https://chaver.com/torah-weave/api/schema.json",
   "canonical": "https://chaver.com/torah-weave/api/discrepancies.json"
  },
- "about": "Points at which this dataset, extracted from the printed Hebrew edition, differs from the published Torah Units Dataset at /torah-weave/data/torah-units.json, together with verse references in the Word edition that could not be read and unit headings that disagree with their own tables. Recorded rather than quietly reconciled; where a difference has since been resolved, what was decided and why is recorded under \"resolved\".",
- "structure_and_verse_range_differences": [
-  {
-   "unit": 56,
-   "book": "Leviticus",
-   "unit_number": 18,
-   "title": "Holiday Calendar",
-   "field": "format",
-   "dataset": "2x2",
-   "source_edition": "4x2"
-  },
-  {
-   "unit": 79,
-   "book": "Deuteronomy",
-   "unit_number": 6,
-   "title": "Love and Obey",
-   "field": "format",
-   "dataset": "3x2",
-   "source_edition": "2x3"
-  }
- ],
+ "about": "Points at which this dataset, extracted from the printed Hebrew edition, differs from the published Torah Literary Units Dataset at /torah-weave/data/torah-units.json, together with verse references in the Word edition that could not be read. Recorded rather than resolved: neither source has been altered to agree with the other.",
+ "structure_and_verse_range_differences": [],
  "unreadable_verse_references": [
   {
    "kind": "unparsed",
@@ -112,128 +93,6 @@
    "unit": 85,
    "book": "Deuteronomy",
    "unit_number": 12
-  }
- ],
- "heading_disagrees_with_the_text_of_the_unit": {
-  "about": "Each unit in the source edition carries a printed heading giving its verse range. For these units that heading does not match the verses actually printed inside the unit. Both values are recorded; neither has been altered. Where the published Torah Units Dataset also differs from the text, it agrees with the heading, which suggests the dataset was compiled from the headings.",
-  "units": [
-   {
-    "book": "Exodus",
-    "unit": 13,
-    "title": "Consecration and Altars",
-    "heading": "29:1-30:10",
-    "text": "29:1-29:37",
-    "heading_he": "כט:א-ל:י",
-    "text_he": "כט:א-לז"
-   },
-   {
-    "book": "Exodus",
-    "unit": 14,
-    "title": "Tabernacle Supplements",
-    "heading": "30:11-31:17",
-    "text": "29:38-31:17",
-    "heading_he": "ל:יא-לא:יז",
-    "text_he": "כט:לח-לא:יז"
-   },
-   {
-    "book": "Leviticus",
-    "unit": 3,
-    "title": "Administrative Order",
-    "heading": "6:1-7:35",
-    "text": "6:1-7:38",
-    "heading_he": "ו:א-ז:לה",
-    "text_he": "ו:א-ז:לח"
-   },
-   {
-    "book": "Leviticus",
-    "unit": 21,
-    "title": "Blessings and Curses",
-    "heading": "26:1-26:47",
-    "text": "26:1-26:46",
-    "heading_he": "כו:א-מז",
-    "text_he": "כו:א-מו"
-   },
-   {
-    "book": "Numbers",
-    "unit": 10,
-    "title": "Balaam",
-    "heading": "22:2-25:16",
-    "text": "22:2-25:18",
-    "heading_he": "כב:ב-כה:טז",
-    "text_he": "כב:ב-כה:יח"
-   },
-   {
-    "book": "Deuteronomy",
-    "unit": 1,
-    "title": "Historical Prologue",
-    "heading": "1:1-3:23",
-    "text": "1:1-3:29",
-    "heading_he": "א:א-ג:כג",
-    "text_he": "א:א-ג:כט"
-   },
-   {
-    "book": "Deuteronomy",
-    "unit": 4,
-    "title": "Shema and Wilderness Lessons",
-    "heading": "6:4-8:18",
-    "text": "6:4-8:20",
-    "heading_he": "ו:ד-ח:יח",
-    "text_he": "ו:ד-ח:כ"
-   }
-  ]
- },
- "resolved": [
-  {
-   "date": "2026-09-15",
-   "what": "Five verse-range differences between the printed edition and the Torah Units Dataset, now resolved in favour of the printed tables.",
-   "reasoning": "In each case the dataset’s range had been copied from the unit heading in the printed edition, and that heading disagreed with the verses actually set in the unit’s table. The cells_detail map in the same dataset record already agreed with the table, so the dataset contradicted itself. In four of the five the heading also cut a cell in the middle, which the table structure does not allow. The dataset was corrected to agree with the tables in version 1.1; the headings in the source document have not been changed and are still listed below.",
-   "units": [
-    {
-     "unit": 32,
-     "book": "Exodus",
-     "unit_number": 13,
-     "title": "Consecration and Altars",
-     "field": "verse_range",
-     "dataset": "29:1-30:10",
-     "source_edition": "29:1-29:37"
-    },
-    {
-     "unit": 33,
-     "book": "Exodus",
-     "unit_number": 14,
-     "title": "Tabernacle Supplements",
-     "field": "verse_range",
-     "dataset": "30:11-31:17",
-     "source_edition": "29:38-31:17"
-    },
-    {
-     "unit": 70,
-     "book": "Numbers",
-     "unit_number": 10,
-     "title": "Balaam",
-     "field": "verse_range",
-     "dataset": "22:2-25:16",
-     "source_edition": "22:2-25:18"
-    },
-    {
-     "unit": 74,
-     "book": "Deuteronomy",
-     "unit_number": 1,
-     "title": "Historical Prologue",
-     "field": "verse_range",
-     "dataset": "1:1-3:23",
-     "source_edition": "1:1-3:29"
-    },
-    {
-     "unit": 77,
-     "book": "Deuteronomy",
-     "unit_number": 4,
-     "title": "Shema and Wilderness Lessons",
-     "field": "verse_range",
-     "dataset": "6:4-8:18",
-     "source_edition": "6:4-8:20"
-    }
-   ]
   }
  ]
 }
