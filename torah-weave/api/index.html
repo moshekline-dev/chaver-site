@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- E-1: Site-wide SEO/AEO boilerplate (canonical entity references) -->
+    <!-- Per-page canonical, og:url, og:title, og:description, og:type are E-2-injected just above this block -->
+    <meta property="og:site_name" content="Chaver.com">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:secure_url" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="The Woven Texts Project — Moshe Kline — chaver.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta name="author" content="Moshe Kline">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {"@type": "WebSite", "@id": "https://chaver.com/#website"},
+        {"@type": "Organization", "@id": "https://chaver.com/#organization"},
+        {"@type": "Person", "@id": "https://chaver.com/#moshe-kline"}
+      ]
+    }
+    </script>
+    <!-- /E-1 -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <title>The Structured Torah API &mdash; Open Data | Chaver.com</title>
+    <meta name="description" content="A free JSON API serving the 86 literary units of the Torah as two-dimensional tables of labelled cells, with the full Hebrew text and 2,262 structural markers. No key, no rate limit, CC BY 4.0.">
+    
+    <!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Dataset",
+ "name": "The Structured Torah API",
+ "alternateName": "Structured Torah — unit-level JSON API",
+ "description": "The eighty-six literary units of the Torah served as two-dimensional tables of labelled cells rather than a linear sequence of chapters and verses. 5 books, 86 unit files, 602 cells, 421 subdivisions and 2,262 structural markers across 8 types, with the full Hebrew text of every cell and every verse reference located inside it. One small JSON file per unit, at a predictable address. Built to the same plan as the Structured Mishnah API, so the two datasets share field names and a marker key.",
+ "url": "https://chaver.com/torah-weave/api/",
+ "identifier": "https://chaver.com/torah-weave/api/index.json",
+ "version": "2026-09-rev1",
+ "datePublished": "2026",
+ "dateModified": "2026",
+ "inLanguage": [
+  "he",
+  "en"
+ ],
+ "isAccessibleForFree": true,
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "creator": {
+  "@type": "Person",
+  "name": "Moshe Kline",
+  "url": "https://chaver.com/about-Moshe-Kline",
+  "affiliation": {
+   "@type": "Organization",
+   "name": "The Woven Texts Project",
+   "url": "https://chaver.com"
+  }
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Chaver.com — The Woven Texts Project",
+  "url": "https://chaver.com"
+ },
+ "citation": "Kline, Moshe. The Structured Torah Dataset. Chaver.com. https://chaver.com/torah-weave/api/",
+ "encodingFormat": "application/json",
+ "isBasedOn": "https://chaver.com/torah-weave/data/torah-units.json",
+ "distribution": [
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/json",
+   "contentUrl": "https://chaver.com/torah-weave/api/index.json",
+   "name": "API index"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/json",
+   "contentUrl": "https://chaver.com/torah-weave/data/torah-units.json",
+   "name": "Torah Units Dataset (verse ranges, no text)"
+  }
+ ],
+ "keywords": [
+  "Torah",
+  "structured Torah",
+  "woven Torah",
+  "literary structure",
+  "two-dimensional text",
+  "literary unit",
+  "Genesis",
+  "Exodus",
+  "Leviticus",
+  "Numbers",
+  "Deuteronomy",
+  "Pentateuch",
+  "open data",
+  "JSON API",
+  "Hebrew Bible",
+  "Moshe Kline",
+  "Woven Texts",
+  "chiasm",
+  "parallelism",
+  "closure",
+  "machine-readable Torah"
+ ],
+ "variableMeasured": [
+  {
+   "@type": "PropertyValue",
+   "name": "reference",
+   "description": "Book in English and Hebrew, unit number, Roman numeral, serial number 1-86, title and verse range"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "structure",
+   "description": "Recorded format, row widths, cell count, subdivision count and marker counts by type"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "rows",
+   "description": "The table itself: cells with label, grid position, Hebrew text, marked spans and subdivisions"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "runs",
+   "description": "The cell's text split into consecutive marked and unmarked spans"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "markers",
+   "description": "The marked spans of a cell, each with its type"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "verses",
+   "description": "Every verse reference printed in the cell, with its chapter, verse and position in the text"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "source_page",
+   "description": "The unit's page on chaver.com"
+  }
+ ]
+}
+</script>
+    
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    
+    <!-- Page-specific style overrides can go here -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+    <link rel="canonical" href="https://chaver.com/torah-weave/api/">
+    <meta property="og:url" content="https://chaver.com/torah-weave/api/">
+    <meta property="og:title" content="The Structured Torah API &mdash; Open Data">
+    <meta property="og:description" content="The 86 literary units of the Torah as two-dimensional tables of labelled cells, with the Hebrew text. Free JSON, no key, no rate limit, CC BY 4.0.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <div class="nav-row">
+            <div class="nav-brand">chaver.com</div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Torah</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/torah-weave/commentary">Commentary</a></li>
+                        <li><a href="/torah-weave/Genesis/genesis-complete-commentary">Genesis: Complete Commentary</a></li>
+                        <li><a href="/torah-weave/full-torah-map-2/">Full Torah Map</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Insights</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Mishnah</button>
+                    <ul class="submenu">
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to the Structured Mishnah</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">Download the Complete Mishnah (Hebrew)</a></li>
+                    </ul>
+                </li>
+                <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
+                        <li><a href="/Mishnah-New/api/">Structured Mishnah API</a></li>
+                        <li><a href="/torah-weave/api/">Structured Torah API</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Free Books</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/English/Text/Torah-pdf">The Structured Torah (English PDF)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah (Hebrew PDF)</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+                <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </div>
+    </header>
+<div id="site-banner"></div>
+<main class="content-wrapper">
+<nav class="breadcrumb"><a href="/">Home</a> &gt; <a href="/torah-weave/">Torah</a> &gt; API</nav>
+<article class="commentary-content">
+<header>
+<h1>The Structured Torah API</h1>
+<p class="unit-meta">5 books &middot; 86 unit files &middot; 602 cells &middot; 2,262 markers &middot; No key, no rate limit &middot; CC BY 4.0</p>
+</header>
+
+<style>
+.api-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.95rem}
+.api-table th{text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:.55rem .7rem;border-bottom:2px solid #d8d2c4;color:#6b6250}
+.api-table td{padding:.6rem .7rem;border-bottom:1px solid #e8e3d8;vertical-align:top;line-height:1.55}
+.api-table code{font-size:.86em;background:#f4f1e8;padding:.1em .4em;border-radius:3px;word-break:break-word}
+.api-num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.api-sw{display:inline-block;width:11px;height:11px;border-radius:2px}
+.api-scroll{overflow-x:auto}
+</style>
+
+<section class="commentary-section">
+<h2>What this is</h2>
+<p>The Torah is normally served as a linear sequence: book, chapter, verse. This API serves it as it
+is set in <em>The Structured Torah</em> &mdash; the eighty-six literary units of the Torah, each as a
+two-dimensional table of labelled cells, together with the markings that show how the cells answer
+one another.</p>
+<p>It is one small JSON file per unit. Fetching the first unit of Genesis costs about 30&nbsp;KB.
+There is no key to obtain, no registration and no rate limit. The licence is CC&nbsp;BY&nbsp;4.0: use
+it for anything, including commercially, provided the work is credited.</p>
+<p>This is the companion to the <a href="/Mishnah-New/api/">Structured Mishnah API</a>, and the two
+are built to the same plan. A unit file here has the same field names as a chapter file there, so
+anything written against one dataset reads the other without changes.</p>
+<p>It is also the text itself, not only a description of it. The
+<a href="/torah-weave/data/">Torah Units Dataset</a> gives each unit&rsquo;s verse ranges without the
+words, so that any translation can be laid under it. This API gives the Hebrew, cell by cell, with
+every verse reference located inside it.</p>
+</section>
+
+<section class="commentary-section">
+<h2>The addresses</h2>
+<div class="api-scroll"><table class="api-table">
+<thead><tr><th>Endpoint</th><th>Returns</th></tr></thead><tbody><tr><td><code>/torah-weave/api/index.json</code></td><td>Counts, the five books, and all 86 units with links.</td></tr><tr><td><code>/torah-weave/api/books.json</code></td><td>The five books as a flat list.</td></tr><tr><td><code>/torah-weave/api/markers.json</code></td><td>The eight marker types: colour, hex, definition, counts.</td></tr><tr><td><code>/torah-weave/api/schema.json</code></td><td>JSON Schema defining every field of a unit file.</td></tr><tr><td><code>/torah-weave/api/discrepancies.json</code></td><td>Every point where this data differs from the Torah Units Dataset.</td></tr><tr><td><code>/torah-weave/api/{book}.json</code></td><td>One book: its units, each with shape and counts.</td></tr><tr><td><code>/torah-weave/api/{book}/{unit}.json</code></td><td>One unit, complete.</td></tr></tbody></table></div>
+<p>A book&rsquo;s address component is its English name in lower case: <code>genesis</code>,
+<code>exodus</code>, <code>leviticus</code>, <code>numbers</code>, <code>deuteronomy</code>. The unit
+number is the one it carries within its book, so Genesis runs 1 to 19 and Deuteronomy 1 to 13.</p>
+<p>Every file the API serves is listed on one page:
+<a href="/torah-weave/api/units">all 5 book files and all 86 unit files</a>, grouped by book.</p>
+<div class="api-scroll"><table class="api-table">
+<thead><tr><th>Example</th><th></th></tr></thead><tbody><tr><td><a href="/torah-weave/api/genesis/1.json"><code>/torah-weave/api/genesis/1.json</code></a></td><td>Genesis unit 1 &mdash; Creation</td></tr><tr><td><a href="/torah-weave/api/exodus/8.json"><code>/torah-weave/api/exodus/8.json</code></a></td><td>Exodus unit 8 &mdash; Covenant Code I</td></tr><tr><td><a href="/torah-weave/api/leviticus/13.json"><code>/torah-weave/api/leviticus/13.json</code></a></td><td>Leviticus unit 13 &mdash; Holiness</td></tr><tr><td><a href="/torah-weave/api/deuteronomy/12.json"><code>/torah-weave/api/deuteronomy/12.json</code></a></td><td>Deuteronomy unit 12 &mdash; Song of Moses</td></tr></tbody></table></div>
+<p>Each unit also carries a <code>serial_number</code>, its place in the run of 86 across the whole
+Torah, which is the number the Torah Units Dataset uses. Genesis unit 1 is serial 1; Deuteronomy
+unit 13 is serial 86.</p>
+</section>
+
+<section class="commentary-section">
+<h2>What a unit file contains</h2>
+<div class="api-scroll"><table class="api-table">
+<thead><tr><th>Field</th><th>Contents</th></tr></thead><tbody><tr><td><code>_credit</code></td><td>Dataset name, the credit line to reproduce, the licence and its URL, and the address this file is served from. It is repeated in every file so the licence travels with the data.</td></tr><tr><td><code>reference</code></td><td>Where the unit sits: book in English and Hebrew, its number within the book, the Roman numeral the edition prints, the serial number 1&ndash;86, the title, and the verse range in both Arabic and Hebrew numerals.</td></tr><tr><td><code>structure</code></td><td>The recorded <code>format</code>, the <code>shape</code> row by row, the number of rows, columns, cells and subdivisions, and how many markers of each type the unit carries.</td></tr><tr><td><code>rows</code></td><td>The table itself. Each cell has a <code>label</code> (<code>1&#1488;</code>, <code>2&#1489;</code>) and a <code>label_key</code> (<code>1A</code>, <code>2B</code>), a <code>position</code> giving row, column and how many columns it spans, the full Hebrew <code>text</code>, the <code>runs</code> that split that text into marked and unmarked spans, the <code>markers</code> gathered for searching, the <code>verses</code> printed inside it, and any <code>subdivisions</code>.</td></tr><tr><td><code>verses</code></td><td>Every verse reference printed in the cell, in order, each with its chapter and verse as numbers and its <code>offset</code> &mdash; the exact position in the cell&rsquo;s text where that verse begins, so the cell can be split verse by verse.</td></tr><tr><td><code>source_page</code></td><td>The unit&rsquo;s Hebrew page on this site. <code>source_page_en</code> is the English one, and <code>commentary_page</code> appears on the units that have a published commentary.</td></tr></tbody></table></div>
+<p><code>shape</code> is an array of row widths, not a phrase like &ldquo;3&nbsp;&times;&nbsp;2&rdquo;.
+An irregular unit such as Genesis 13 is <code>[[2],[1,1],[1,1],[1,1],[2]]</code>: a five-row table
+whose first and last rows carry one cell spanning the full width. Reading it any other way loses the
+spanning cell.</p>
+<p>The authoritative description of every field is
+<a href="/torah-weave/api/schema.json"><code>schema.json</code></a>, which is a JSON Schema and can be
+validated against directly.</p>
+</section>
+
+<section class="commentary-section">
+<h2>The markers</h2>
+<p>A marker records a span of text inside a cell that is marked in the printed edition, and its type
+names the kind of connection. There are eight, the same eight the Mishnah uses. They are rendered as
+coloured words rather than as a background highlight. The definitions below are reproduced from the
+<a href="/torah-weave/hebrew-color-code-guide">Color Code guide</a>.</p>
+<div class="api-scroll"><table class="api-table">
+<thead><tr><th>Colour</th><th>Type</th><th>Group</th><th>Marks</th><th class="api-num">Instances</th><th class="api-num">Units</th></tr></thead>
+<tbody><tr><td><span class="api-sw" style="background:#2563eb"></span> <strong>Blue</strong></td><td><code>horizontal1</code></td><td>Horizontal links</td><td>Direct parallels between all segments of a horizontal thread.</td><td class="api-num">926</td><td class="api-num">71</td></tr><tr><td><span class="api-sw" style="background:#008080"></span> <strong>Teal</strong></td><td><code>horizontal2</code></td><td>Horizontal links</td><td>Key words that appear in both the first and second segments of a three-part horizontal thread.</td><td class="api-num">40</td><td class="api-num">13</td></tr><tr><td><span class="api-sw" style="background:#800000"></span> <strong>Maroon</strong></td><td><code>horizontal3</code></td><td>Horizontal links</td><td>Key words that appear in both the second and third segments of a three-part horizontal thread.</td><td class="api-num">35</td><td class="api-num">13</td></tr><tr><td><span class="api-sw" style="background:#d97706"></span> <strong>Gold</strong></td><td><code>vertical1</code></td><td>Vertical links</td><td>Repeating words or phrases within multiple segments of a warp thread.</td><td class="api-num">770</td><td class="api-num">64</td></tr><tr><td><span class="api-sw" style="background:#16a34a"></span> <strong>Green</strong></td><td><code>internalparallel</code></td><td>Vertical links</td><td>Parallels between parts of a single segment.</td><td class="api-num">191</td><td class="api-num">23</td></tr><tr><td><span class="api-sw" style="background:#db2777"></span> <strong>Rose</strong></td><td><code>closure</code></td><td>Boundary links</td><td>Linguistic connections between the first weft thread and the last, creating an envelope.</td><td class="api-num">139</td><td class="api-num">32</td></tr><tr><td><span class="api-sw" style="background:#7c3aed"></span> <strong>Violet</strong></td><td><code>ciasm1</code></td><td>Boundary links</td><td>The half chiasm created by the connection between the upper left segment and the lower right segment.</td><td class="api-num">92</td><td class="api-num">19</td></tr><tr><td><span class="api-sw" style="background:#c026d3"></span> <strong>Light Violet</strong></td><td><code>ciasm2</code></td><td>Boundary links</td><td>The half chiasm created by the connection between the upper right segment and the lower left segment.</td><td class="api-num">69</td><td class="api-num">20</td></tr></tbody></table></div>
+<p>Markers appear in 2,262 places across the 86 unit files, in 82 of the 86 units. Each cell gives
+them twice: inside <code>runs</code>, where the cell&rsquo;s text is broken into consecutive marked and
+unmarked spans so it can be rendered with the markings intact, and again in <code>markers</code>,
+gathered together for searching. Concatenating every run reproduces the cell&rsquo;s text exactly.</p>
+<p>The hex values above are the ones the site&rsquo;s own stylesheet uses, shared with the Structured
+Mishnah so that the two datasets have one key between them. Where the printed Hebrew edition assigns
+a different value to the same marker, <code>markers.json</code> records it as
+<code>source_edition_hex</code>.</p>
+</section>
+
+<section class="commentary-section">
+<h2>Reading it in Hebrew</h2>
+<p>The text is Hebrew and the tables read right to left: <strong>column 1 is the rightmost</strong>.
+A cell&rsquo;s <code>position</code> gives its column number, and a renderer that places column 1 on
+the left will mirror the structure and reverse the argument the table is making.</p>
+<p>Cell labels carry the same direction. A label is a row number followed by a Hebrew letter, so
+<code>2&#1488;</code> is row 2 of the rightmost column and <code>2&#1489;</code> is row 2 of the column
+to its left. <code>label_key</code> gives the same label with a Latin letter &mdash; <code>2A</code>,
+<code>2B</code> &mdash; which is the form the Torah Units Dataset uses, so the two can be joined.</p>
+</section>
+
+<section class="commentary-section">
+<h2>Where the data came from, and how it was checked</h2>
+<p>The data was extracted from <em>The Structured Torah</em> in Hebrew, the edition in which the
+apparatus is applied directly to the text. Every unit, cell, subdivision, verse reference and marked
+span in the API comes from that edition.</p>
+<p>It was then checked against the <a href="/torah-weave/data/">Torah Units Dataset</a>, which was
+compiled separately. Eighty-four of the eighty-six units reproduce that dataset&rsquo;s recorded shape
+exactly, row by row, and 918 of its 938 cell and subdivision verse ranges match to the verse.</p>
+<p>Seven points of substance remain where the two disagree &mdash; five verse ranges and two unit
+shapes. They are listed in <a href="/torah-weave/api/discrepancies.json"><code>discrepancies.json</code></a>,
+with the value each source gives. Neither source has been altered to agree with the other. That file
+also lists nine places in the printed edition where a verse reference could not be read.</p>
+</section>
+
+<section class="commentary-section">
+<h2>Licence and citation</h2>
+<p>CC&nbsp;BY&nbsp;4.0. The credit line to reproduce is carried in every file, in
+<code>_credit</code>.</p>
+<div class="citation-box">
+<p>Kline, Moshe. <em>The Structured Torah Dataset</em>. Chaver.com.
+https://chaver.com/torah-weave/api/</p>
+</div>
+<p>The companion Mishnah dataset, built to the same plan, is at
+<a href="/Mishnah-New/api/">/Mishnah-New/api/</a>. The verse-range dataset, which carries the
+eighty-six units without their text so that any translation can be used, is at
+<a href="/torah-weave/data/">/torah-weave/data/</a>. The method behind the tables is set out in
+<a href="/torah-weave/Woven-Torah-Method">The Woven Torah Method</a>.</p>
+</section>
+
+</article>
+</main>
+<footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                                <div class="footer-section">
+                    <h4>Key Insights</h4>
+                    <ul>
+                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah PDF</a></li>
+                        <li><a href="https://asitwaswritten.org/">As It Was Written &mdash; a primer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         SITE NAV SCRIPT
+         ========================================== -->
+    <script>
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var menu = document.querySelector('.nav-menu');
+
+            // Hamburger toggle
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('is-open-menu');
+                    toggle.setAttribute('aria-expanded',
+                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
+                });
+            }
+
+            // Dropdown toggles (via <button>, not <a>)
+            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var li = btn.parentElement;
+                    var wasOpen = li.classList.contains('is-open');
+
+                    // Close all dropdowns first
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
+                        other.classList.remove('is-open');
+                        var b = other.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open this one if it wasn't already
+                    if (!wasOpen) {
+                        li.classList.add('is-open');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Click outside closes everything
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    if (menu) menu.classList.remove('is-open-menu');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                        var b = li.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,163 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://chaver.com/torah-weave/api/schema.json",
+ "title": "Structured Torah — unit document",
+ "description": "One of the 86 literary units of the Torah presented as a two-dimensional table of labelled cells, with the full Hebrew text, the verse references printed in it, and the markings of the author's apparatus. Served by https://chaver.com/torah-weave/api/{book-slug}/{unit}.json — for example /genesis/1.json. Licensed CC BY 4.0; attribution to Moshe Kline, The Structured Torah (chaver.com), is required.",
+ "type": "object",
+ "required": ["_credit", "reference", "structure", "rows"],
+ "properties": {
+  "_credit": {
+   "type": "object",
+   "description": "Attribution and licence, repeated in every file so that the requirement travels with the data.",
+   "required": ["dataset", "attribution", "license", "license_url", "website"],
+   "properties": {
+    "dataset": { "type": "string" },
+    "version": { "type": "string", "description": "Revision of the source edition this file was generated from." },
+    "attribution": { "type": "string", "description": "The credit line to reproduce when the data is used." },
+    "license": { "type": "string" },
+    "license_url": { "type": "string", "format": "uri" },
+    "website": { "type": "string", "format": "uri" },
+    "documentation": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "canonical": { "type": "string", "format": "uri", "description": "The address this document is served from." }
+   }
+  },
+  "reference": {
+   "type": "object",
+   "description": "Where this unit sits in the Torah, in English and Hebrew, with the verse range it covers.",
+   "required": ["book", "slug", "unit", "serial_number"],
+   "properties": {
+    "book": { "type": "string", "enum": ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"] },
+    "book_he": { "type": "string", "description": "Book name in Hebrew, as printed in the source edition." },
+    "slug": { "type": "string", "description": "The book's address component, e.g. deuteronomy." },
+    "unit": { "type": "integer", "minimum": 1, "description": "The unit's number within its book." },
+    "unit_roman": { "type": "string", "description": "The unit number in Roman numerals, as the source edition prints it." },
+    "serial_number": { "type": "integer", "minimum": 1, "maximum": 86, "description": "The unit's number across the whole Torah, 1 to 86, matching the Torah Literary Units Dataset." },
+    "title": { "type": "string", "description": "The unit's title in English." },
+    "verses": { "type": ["string", "null"], "description": "Book name and verse range, e.g. 'Genesis 1:1-2:3'." },
+    "verse_range": { "type": ["string", "null"], "description": "Verse range alone, e.g. '1:1-2:3', computed from the verse references printed in the text." },
+    "verse_range_he": { "type": "string", "description": "The verse range as the source edition prints it, in Hebrew letters." },
+    "verse_range_dataset": { "type": "string", "description": "Present only where the published Torah Literary Units Dataset records a different range for this unit. Neither value has been altered; see discrepancies.json." },
+    "heading_he": { "type": "string", "description": "The unit's heading exactly as printed in the source edition." },
+    "sefaria_ref": { "type": ["string", "null"], "description": "Book and verse range in the form Sefaria uses, for fetching the same passage's text." }
+   }
+  },
+  "structure": {
+   "type": "object",
+   "description": "Counts and shape for this unit, computed from the rows below.",
+   "required": ["shape", "rows", "cells"],
+   "properties": {
+    "format": { "type": "string", "description": "The unit's shape as recorded in the Torah Literary Units Dataset: either NxM (N rows by M columns) or a digit string giving the width of each row in turn, e.g. 12221." },
+    "shape": {
+     "type": "array",
+     "description": "The table's row widths, in order. Each entry is itself an array giving the column widths of that row, so [[2],[1,1],[2]] is a three-row table whose first and last rows carry one full-width cell and whose middle row carries two.",
+     "items": { "type": "array", "items": { "type": "integer", "minimum": 1 } }
+    },
+    "rows": { "type": "integer", "minimum": 1, "description": "Number of rows in the table." },
+    "columns": { "type": "integer", "minimum": 1, "description": "Number of columns in the table." },
+    "cells": { "type": "integer", "minimum": 1, "description": "Number of labelled cells in the table." },
+    "subdivisions": { "type": "integer", "minimum": 0, "description": "Number of labelled subdivisions inside cells." },
+    "type": { "type": ["string", "null"], "description": "The unit's type as recorded in the Torah Literary Units Dataset: F (framed) or CL (concentric/linear)." },
+    "irregular": { "type": ["boolean", "null"], "description": "True where the rows are not all the same width." },
+    "unique": { "type": ["boolean", "null"] },
+    "markers": {
+     "type": "object",
+     "description": "Count of each marker type occurring in this unit. Keys are the type names listed in markers.json.",
+     "additionalProperties": { "type": "integer", "minimum": 1 }
+    },
+    "marker_count": { "type": "integer", "minimum": 0 }
+   }
+  },
+  "rows": {
+   "type": "array",
+   "description": "The table itself, in reading order. The text is Hebrew and the table is read right to left: column 1 is the rightmost.",
+   "items": {
+    "type": "object",
+    "required": ["row_num", "cells"],
+    "properties": {
+     "row_num": { "type": "integer", "minimum": 1 },
+     "cells": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": ["label", "position", "text", "runs", "markers"],
+       "properties": {
+        "label": { "type": "string", "description": "The cell's label as printed, combining the row number with a Hebrew column letter, e.g. 2א. A full-width cell carries the row number alone." },
+        "label_key": { "type": "string", "description": "The same label with a Latin column letter, e.g. 2A, matching the keys used in the Torah Literary Units Dataset." },
+        "position": {
+         "type": "object",
+         "required": ["row", "col", "colspan"],
+         "properties": {
+          "row": { "type": "integer", "minimum": 1 },
+          "col": { "type": "integer", "minimum": 1, "description": "Column number counting from the right, the direction the Hebrew is read." },
+          "colspan": { "type": "integer", "minimum": 1, "description": "How many columns this cell occupies. Equal to the table's width for a cell that runs across it." }
+         }
+        },
+        "text": { "type": "string", "description": "The cell's full Hebrew text, with line breaks as printed, opening with the cell's label. Verse references and subdivision letters appear inline exactly where the edition prints them." },
+        "runs": {
+         "type": "array",
+         "description": "The same text broken into consecutive spans, each either unmarked or carrying one marker type. Concatenating every run's text reproduces the cell's text exactly. Use this when rendering the unit with its markings; use text when the markings are not needed.",
+         "items": {
+          "type": "object",
+          "required": ["text", "marker"],
+          "properties": {
+           "text": { "type": "string" },
+           "marker": { "type": ["string", "null"], "description": "Marker type for this span, or null where the span is unmarked. See markers.json." }
+          }
+         }
+        },
+        "markers": {
+         "type": "array",
+         "description": "The marked spans of this cell gathered together, in order of appearance. The same information as the marked runs above, in a form convenient for searching.",
+         "items": {
+          "type": "object",
+          "required": ["type", "text"],
+          "properties": {
+           "type": { "type": "string", "description": "One of the types listed in markers.json." },
+           "text": { "type": "string", "description": "The exact marked span." }
+          }
+         }
+        },
+        "verses": {
+         "type": "array",
+         "description": "The verse references printed inside this cell, in order, each with its position in the cell's text.",
+         "items": {
+          "type": "object",
+          "required": ["ref_he", "chapter", "verse", "offset"],
+          "properties": {
+           "ref_he": { "type": "string", "description": "The reference as printed, in Hebrew letters, e.g. א:ט." },
+           "chapter": { "type": "integer", "minimum": 1 },
+           "verse": { "type": "integer", "minimum": 1 },
+           "ref": { "type": ["string", "null"], "description": "The same reference in English, e.g. 'Genesis 1:9'." },
+           "offset": { "type": "integer", "minimum": 0, "description": "Index into the cell's text at which this reference begins, so the text can be split verse by verse." }
+          }
+         }
+        },
+        "verse_range": { "type": ["string", "null"], "description": "First to last verse reference in this cell, e.g. '1:3-1:5'." },
+        "subdivisions": {
+         "type": "array",
+         "description": "Present when a cell is divided into labelled parts. The first part of a cell is the cell itself and is not repeated here; the parts that follow it are listed in order.",
+         "items": {
+          "type": "object",
+          "required": ["label", "text"],
+          "properties": {
+           "label": { "type": ["string", "null"], "description": "The subdivision's letter as printed in the source edition, e.g. B, C, ii." },
+           "label_key": { "type": "string", "description": "The subdivision's key in the form used by the Torah Literary Units Dataset, e.g. 2Aa." },
+           "text": { "type": "string" },
+           "markers": { "type": "array", "items": { "type": "object" } },
+           "verses": { "type": "array", "items": { "type": "object" } },
+           "verse_range": { "type": ["string", "null"] }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "source_page": { "type": "string", "format": "uri", "description": "The unit's Hebrew page on chaver.com." },
+  "source_page_en": { "type": "string", "format": "uri", "description": "The unit's English page on chaver.com." },
+  "commentary_page": { "type": "string", "format": "uri", "description": "The unit's commentary page, where one has been published." }
+ }
+}

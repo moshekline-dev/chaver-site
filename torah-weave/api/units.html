@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- E-1: Site-wide SEO/AEO boilerplate (canonical entity references) -->
+    <!-- Per-page canonical, og:url, og:title, og:description, og:type are E-2-injected just above this block -->
+    <meta property="og:site_name" content="Chaver.com">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:secure_url" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="The Woven Texts Project — Moshe Kline — chaver.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta name="author" content="Moshe Kline">
+    <!-- /E-1 -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <title>Every Unit in the Structured Torah API | Chaver.com</title>
+    <meta name="description" content="A complete list of the 86 unit files and 5 book files served by the Structured Torah API, grouped by book, each with its title, verse range, shape and marker count.">
+    
+    <!-- Schema.org JSON-LD -->
+<!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    
+    <!-- Page-specific style overrides can go here -->
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+    <link rel="canonical" href="https://chaver.com/torah-weave/api/units">
+    <meta property="og:url" content="https://chaver.com/torah-weave/api/units">
+    <meta property="og:title" content="Every Unit in the Structured Torah API">
+    <meta property="og:description" content="All 86 unit files and 5 book files of the Structured Torah API, grouped by book.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- ==========================================
+         SITE HEADER - FIXED ACROSS ALL PAGES
+         ========================================== -->
+    <header class="site-header">
+        <div class="nav-row">
+            <div class="nav-brand">chaver.com</div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Torah</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/torah-weave/commentary">Commentary</a></li>
+                        <li><a href="/torah-weave/Genesis/genesis-complete-commentary">Genesis: Complete Commentary</a></li>
+                        <li><a href="/torah-weave/full-torah-map-2/">Full Torah Map</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Insights</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Mishnah</button>
+                    <ul class="submenu">
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to the Structured Mishnah</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">Download the Complete Mishnah (Hebrew)</a></li>
+                    </ul>
+                </li>
+                <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
+                        <li><a href="/Mishnah-New/api/">Structured Mishnah API</a></li>
+                        <li><a href="/torah-weave/api/">Structured Torah API</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Free Books</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/English/Text/Torah-pdf">The Structured Torah (English PDF)</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah (Hebrew PDF)</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
+                <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+            </ul>
+        </div>
+    </header>
+<div id="site-banner"></div>
+<main class="content-wrapper">
+<nav class="breadcrumb"><a href="/">Home</a> &gt; <a href="/torah-weave/">Torah</a> &gt; <a href="/torah-weave/api/">API</a> &gt; Every file</nav>
+<h1>Every Unit in the Structured Torah API</h1>
+<p>This page lists every file the API serves: the five top-level files, all 5 book files, and all 86 unit files, grouped by book. It exists so that a reader, a search engine or a research tool can reach any unit directly, without having to guess an address. The documentation is on the <a href="/torah-weave/api/">main API page</a>.</p>
+<h2>The five top-level files</h2>
+<ul>
+<li><a href="/torah-weave/api/index.json"><code>index.json</code></a> &mdash; counts, the five books, and all 86 units</li>
+<li><a href="/torah-weave/api/books.json"><code>books.json</code></a> &mdash; the five books as a flat list</li>
+<li><a href="/torah-weave/api/markers.json"><code>markers.json</code></a> &mdash; the eight marker types, with colour and definition</li>
+<li><a href="/torah-weave/api/schema.json"><code>schema.json</code></a> &mdash; every field of a unit file, described</li>
+<li><a href="/torah-weave/api/discrepancies.json"><code>discrepancies.json</code></a> &mdash; where this data differs from the Torah Units Dataset</li>
+</ul>
+<h2>Genesis <span lang="he" dir="rtl">בראשית</span></h2>
+<p><a href="/torah-weave/api/genesis.json"><strong>genesis.json</strong></a> &mdash; 19 units, 126 cells, 73 subdivisions, 559 markers</p>
+<ul>
+<li><a href="/torah-weave/api/genesis/1.json"><strong>Unit 1 &mdash; Creation</strong></a> &mdash; Genesis 1:1-2:3 &middot; 3x2 &middot; 6 cells &middot; 6 subdivisions &middot; 26 markers</li>
+<li><a href="/torah-weave/api/genesis/2.json"><strong>Unit 2 &mdash; Generations of Heaven and Earth</strong></a> &mdash; Genesis 2:4-4:26 &middot; 3x2 &middot; 6 cells &middot; 4 subdivisions &middot; 41 markers</li>
+<li><a href="/torah-weave/api/genesis/3.json"><strong>Unit 3 &mdash; Book of Generations of Adam</strong></a> &mdash; Genesis 5:1-10:32 &middot; 6x2 &middot; 12 cells &middot; 10 subdivisions &middot; 80 markers</li>
+<li><a href="/torah-weave/api/genesis/4.json"><strong>Unit 4 &mdash; Tower of Babel</strong></a> &mdash; Genesis 11:1-11:9 &middot; 2x3 &middot; 6 cells &middot; 8 markers</li>
+<li><a href="/torah-weave/api/genesis/5.json"><strong>Unit 5 &mdash; Call of Abraham</strong></a> &mdash; Genesis 11:10-13:4 &middot; 2x2 &middot; 4 cells &middot; 2 subdivisions &middot; 6 markers</li>
+<li><a href="/torah-weave/api/genesis/6.json"><strong>Unit 6 &mdash; Abraham and Lot</strong></a> &mdash; Genesis 13:5-14:24 &middot; 2x2 &middot; 4 cells &middot; 4 subdivisions &middot; 16 markers</li>
+<li><a href="/torah-weave/api/genesis/7.json"><strong>Unit 7 &mdash; Covenant Ceremonies</strong></a> &mdash; Genesis 15:1-17:27 &middot; 2x2 &middot; 4 cells &middot; 2 subdivisions &middot; 22 markers</li>
+<li><a href="/torah-weave/api/genesis/8.json"><strong>Unit 8 &mdash; Sodom and Lot</strong></a> &mdash; Genesis 18:1-19:38 &middot; 2x2 &middot; 4 cells &middot; 4 subdivisions &middot; 29 markers</li>
+<li><a href="/torah-weave/api/genesis/9.json"><strong>Unit 9 &mdash; Abraham and Abimelech</strong></a> &mdash; Genesis 20:1-22:19 &middot; 2x2 &middot; 4 cells &middot; 4 subdivisions &middot; 27 markers</li>
+<li><a href="/torah-weave/api/genesis/10.json"><strong>Unit 10 &mdash; Death of Sarah</strong></a> &mdash; Genesis 22:20-25:11 &middot; 4x2 &middot; 8 cells &middot; 2 subdivisions &middot; 44 markers</li>
+<li><a href="/torah-weave/api/genesis/11.json"><strong>Unit 11 &mdash; Birth of Jacob and Esau</strong></a> &mdash; Genesis 25:12-25:34 &middot; 2x2 &middot; 4 cells &middot; 8 markers</li>
+<li><a href="/torah-weave/api/genesis/12.json"><strong>Unit 12 &mdash; Isaac in Gerar</strong></a> &mdash; Genesis 26:1-26:33 &middot; 3x2 &middot; 6 cells &middot; 13 markers</li>
+<li><a href="/torah-weave/api/genesis/13.json"><strong>Unit 13 &mdash; Blessing Deception</strong></a> &mdash; Genesis 26:34-28:9 &middot; 12221 &middot; 8 cells &middot; 15 markers</li>
+<li><a href="/torah-weave/api/genesis/14.json"><strong>Unit 14 &mdash; Jacob with Laban</strong></a> &mdash; Genesis 28:10-32:3 &middot; 12221 &middot; 8 cells &middot; 10 markers</li>
+<li><a href="/torah-weave/api/genesis/15.json"><strong>Unit 15 &mdash; Jacob and Esau Reconciliation</strong></a> &mdash; Genesis 32:4-33:16 &middot; 2x2 &middot; 4 cells &middot; 2 subdivisions &middot; 10 markers</li>
+<li><a href="/torah-weave/api/genesis/16.json"><strong>Unit 16 &mdash; Transition to Isaac's Death</strong></a> &mdash; Genesis 33:17-35:29 &middot; 4x2 &middot; 8 cells &middot; 4 subdivisions &middot; 41 markers</li>
+<li><a href="/torah-weave/api/genesis/17.json"><strong>Unit 17 &mdash; Joseph Sold and Elevated</strong></a> &mdash; Genesis 36:1-41:45 &middot; 3x2 &middot; 6 cells &middot; 20 subdivisions &middot; 71 markers</li>
+<li><a href="/torah-weave/api/genesis/18.json"><strong>Unit 18 &mdash; Joseph's Administration</strong></a> &mdash; Genesis 41:46-47:26 &middot; 6x3 &middot; 18 cells &middot; 6 subdivisions &middot; 65 markers</li>
+<li><a href="/torah-weave/api/genesis/19.json"><strong>Unit 19 &mdash; Blessings and Deaths</strong></a> &mdash; Genesis 47:27-50:26 &middot; 2x3 &middot; 6 cells &middot; 3 subdivisions &middot; 27 markers</li>
+</ul>
+<h2>Exodus <span lang="he" dir="rtl">שמות</span></h2>
+<p><a href="/torah-weave/api/exodus.json"><strong>exodus.json</strong></a> &mdash; 19 units, 153 cells, 90 subdivisions, 503 markers</p>
+<ul>
+<li><a href="/torah-weave/api/exodus/1.json"><strong>Unit 1 &mdash; Oppression and Call of Moses</strong></a> &mdash; Exodus 1:1-4:18 &middot; 3x2 &middot; 6 cells &middot; 10 subdivisions &middot; 43 markers</li>
+<li><a href="/torah-weave/api/exodus/2.json"><strong>Unit 2 &mdash; Moses Before Pharaoh</strong></a> &mdash; Exodus 4:19-6:28 &middot; 3x2 &middot; 6 cells &middot; 12 subdivisions &middot; 34 markers</li>
+<li><a href="/torah-weave/api/exodus/3.json"><strong>Unit 3 &mdash; The Nine Signs</strong></a> &mdash; Exodus 6:29-11:10 &middot; 23332 &middot; 13 cells &middot; 10 subdivisions &middot; 48 markers</li>
+<li><a href="/torah-weave/api/exodus/4.json"><strong>Unit 4 &mdash; Passover and Exodus</strong></a> &mdash; Exodus 12:1-13:16 &middot; 3x2 &middot; 6 cells &middot; 12 subdivisions &middot; 52 markers</li>
+<li><a href="/torah-weave/api/exodus/5.json"><strong>Unit 5 &mdash; Crossing the Sea</strong></a> &mdash; Exodus 13:17-15:21 &middot; 3x3 &middot; 9 cells &middot; 6 subdivisions &middot; 41 markers</li>
+<li><a href="/torah-weave/api/exodus/6.json"><strong>Unit 6 &mdash; Wilderness Complaints</strong></a> &mdash; Exodus 15:22-17:16 &middot; 3x2 &middot; 6 cells &middot; 4 subdivisions &middot; 27 markers</li>
+<li><a href="/torah-weave/api/exodus/7.json"><strong>Unit 7 &mdash; Sinai and the Decalogue</strong></a> &mdash; Exodus 18:1-20:22 &middot; 4x2 &middot; 8 cells &middot; 4 subdivisions &middot; 43 markers</li>
+<li><a href="/torah-weave/api/exodus/8.json"><strong>Unit 8 &mdash; Covenant Code I</strong></a> &mdash; Exodus 21:1-22:16 &middot; 7x2 &middot; 14 cells &middot; 6 subdivisions &middot; 25 markers</li>
+<li><a href="/torah-weave/api/exodus/9.json"><strong>Unit 9 &mdash; Covenant Code II</strong></a> &mdash; Exodus 22:17-23:19 &middot; 5x3 &middot; 15 cells &middot; 6 subdivisions &middot; 34 markers</li>
+<li><a href="/torah-weave/api/exodus/10.json"><strong>Unit 10 &mdash; Covenant Ratification</strong></a> &mdash; Exodus 23:20-24:18 &middot; 3x3 &middot; 9 cells &middot; 14 markers</li>
+<li><a href="/torah-weave/api/exodus/11.json"><strong>Unit 11 &mdash; Tabernacle Instructions I</strong></a> &mdash; Exodus 25:1-27:21 &middot; 12221 &middot; 8 cells &middot; 4 subdivisions &middot; 15 markers</li>
+<li><a href="/torah-weave/api/exodus/12.json"><strong>Unit 12 &mdash; Priestly Vestments</strong></a> &mdash; Exodus 28:1-28:43 &middot; 1221 &middot; 6 cells &middot; 19 markers</li>
+<li><a href="/torah-weave/api/exodus/13.json"><strong>Unit 13 &mdash; Consecration and Altars</strong></a> &mdash; Exodus 29:1-29:37 &middot; 4x2 &middot; 8 cells &middot; 2 subdivisions &middot; 33 markers</li>
+<li><a href="/torah-weave/api/exodus/14.json"><strong>Unit 14 &mdash; Tabernacle Supplements</strong></a> &mdash; Exodus 29:38-31:17 &middot; 4x2 &middot; 8 cells &middot; 33 markers</li>
+<li><a href="/torah-weave/api/exodus/15.json"><strong>Unit 15 &mdash; Golden Calf and Renewal</strong></a> &mdash; Exodus 31:18-34:35 &middot; 5x2 &middot; 10 cells &middot; 4 subdivisions &middot; 23 markers</li>
+<li><a href="/torah-weave/api/exodus/16.json"><strong>Unit 16 &mdash; Tabernacle Contributions</strong></a> &mdash; Exodus 35:1-36:7 &middot; 3x2 &middot; 6 cells &middot; 10 markers</li>
+<li><a href="/torah-weave/api/exodus/17.json"><strong>Unit 17 &mdash; Tabernacle Construction</strong></a> &mdash; Exodus 36:8-38:20 &middot; 3x2 &middot; 6 cells &middot; 6 subdivisions &middot; 2 markers</li>
+<li><a href="/torah-weave/api/exodus/18.json"><strong>Unit 18 &mdash; Tabernacle Inventory</strong></a> &mdash; Exodus 38:21-39:31 &middot; 2x2 &middot; 4 cells &middot; 4 subdivisions</li>
+<li><a href="/torah-weave/api/exodus/19.json"><strong>Unit 19 &mdash; Tabernacle Erected</strong></a> &mdash; Exodus 39:32-40:38 &middot; 131 &middot; 5 cells &middot; 7 markers</li>
+</ul>
+<h2>Leviticus <span lang="he" dir="rtl">ויקרא</span></h2>
+<p><a href="/torah-weave/api/leviticus.json"><strong>leviticus.json</strong></a> &mdash; 22 units, 141 cells, 47 subdivisions, 350 markers</p>
+<ul>
+<li><a href="/torah-weave/api/leviticus/1.json"><strong>Unit 1 &mdash; Three Spontaneous Private Sacrifices</strong></a> &mdash; Leviticus 1:1-3:17 &middot; 3x3 &middot; 9 cells &middot; 5 markers</li>
+<li><a href="/torah-weave/api/leviticus/2.json"><strong>Unit 2 &mdash; Sacrifices for Expiation</strong></a> &mdash; Leviticus 4:1-5:26 &middot; 3x3 &middot; 9 cells &middot; 2 subdivisions &middot; 8 markers</li>
+<li><a href="/torah-weave/api/leviticus/3.json"><strong>Unit 3 &mdash; Administrative Order</strong></a> &mdash; Leviticus 6:1-7:38 &middot; 3x3 &middot; 9 cells &middot; 37 markers</li>
+<li><a href="/torah-weave/api/leviticus/4.json"><strong>Unit 4 &mdash; Inauguration of the Cult</strong></a> &mdash; Leviticus 8:1-10:20 &middot; 2x2 &middot; 4 cells &middot; 13 subdivisions &middot; 56 markers</li>
+<li><a href="/torah-weave/api/leviticus/5.json"><strong>Unit 5 &mdash; Diet Laws</strong></a> &mdash; Leviticus 11:1-11:47 &middot; 2x2 &middot; 4 cells &middot; 6 subdivisions &middot; 39 markers</li>
+<li><a href="/torah-weave/api/leviticus/6.json"><strong>Unit 6 &mdash; Childbirth</strong></a> &mdash; Leviticus 12:1-12:8 &middot; 2x2 &middot; 4 cells</li>
+<li><a href="/torah-weave/api/leviticus/7.json"><strong>Unit 7 &mdash; Scale Disease Diagnosis</strong></a> &mdash; Leviticus 13:1-13:46 &middot; 2x2 &middot; 4 cells &middot; 4 subdivisions &middot; 28 markers</li>
+<li><a href="/torah-weave/api/leviticus/8.json"><strong>Unit 8 &mdash; Purification Procedures</strong></a> &mdash; Leviticus 13:47-14:57 &middot; 3x3 &middot; 9 cells &middot; 8 markers</li>
+<li><a href="/torah-weave/api/leviticus/9.json"><strong>Unit 9 &mdash; Genital Discharges</strong></a> &mdash; Leviticus 15:1-15:33 &middot; 2x2 &middot; 4 cells &middot; 4 markers</li>
+<li><a href="/torah-weave/api/leviticus/10.json"><strong>Unit 10 &mdash; Day of Purgation</strong></a> &mdash; Leviticus 16:1-16:34 &middot; 2x3 &middot; 6 cells &middot; 4 markers</li>
+<li><a href="/torah-weave/api/leviticus/11.json"><strong>Unit 11 &mdash; Slaughter and Blood</strong></a> &mdash; Leviticus 17:1-17:16 &middot; 2x3 &middot; 6 cells &middot; 10 markers</li>
+<li><a href="/torah-weave/api/leviticus/12.json"><strong>Unit 12 &mdash; Illicit Sexual Practices</strong></a> &mdash; Leviticus 18:1-18:30 &middot; 3x3 &middot; 9 cells &middot; 13 markers</li>
+<li><a href="/torah-weave/api/leviticus/13.json"><strong>Unit 13 &mdash; Holiness</strong></a> &mdash; Leviticus 19:1-19:37 &middot; 232 &middot; 7 cells &middot; 11 subdivisions &middot; 31 markers</li>
+<li><a href="/torah-weave/api/leviticus/14.json"><strong>Unit 14 &mdash; Penalties for Sexual Offenses</strong></a> &mdash; Leviticus 20:1-20:27 &middot; 3x3 &middot; 9 cells &middot; 13 markers</li>
+<li><a href="/torah-weave/api/leviticus/15.json"><strong>Unit 15 &mdash; Instructions for Priests</strong></a> &mdash; Leviticus 21:1-21:24 &middot; 2x3 &middot; 6 cells &middot; 12 markers</li>
+<li><a href="/torah-weave/api/leviticus/16.json"><strong>Unit 16 &mdash; Sanctified Objects</strong></a> &mdash; Leviticus 22:1-22:25 &middot; 2x3 &middot; 6 cells &middot; 11 markers</li>
+<li><a href="/torah-weave/api/leviticus/17.json"><strong>Unit 17 &mdash; Animal Birth</strong></a> &mdash; Leviticus 22:26-22:33 &middot; 2x2 &middot; 4 cells</li>
+<li><a href="/torah-weave/api/leviticus/18.json"><strong>Unit 18 &mdash; Holiday Calendar</strong></a> &mdash; Leviticus 23:1-23:44 &middot; 2x2 &middot; 8 cells &middot; 10 markers</li>
+<li><a href="/torah-weave/api/leviticus/19.json"><strong>Unit 19 &mdash; Tabernacle Oil and Blasphemy</strong></a> &mdash; Leviticus 24:1-24:23 &middot; 2x2 &middot; 4 cells &middot; 4 markers</li>
+<li><a href="/torah-weave/api/leviticus/20.json"><strong>Unit 20 &mdash; Jubilee</strong></a> &mdash; Leviticus 25:1-25:55 &middot; 323 &middot; 8 cells &middot; 14 markers</li>
+<li><a href="/torah-weave/api/leviticus/21.json"><strong>Unit 21 &mdash; Blessings and Curses</strong></a> &mdash; Leviticus 26:1-26:46 &middot; 3x2 &middot; 6 cells &middot; 8 subdivisions &middot; 12 markers</li>
+<li><a href="/torah-weave/api/leviticus/22.json"><strong>Unit 22 &mdash; Consecrations and Redemption</strong></a> &mdash; Leviticus 27:1-27:34 &middot; 2x3 &middot; 6 cells &middot; 3 subdivisions &middot; 31 markers</li>
+</ul>
+<h2>Numbers <span lang="he" dir="rtl">במדבר</span></h2>
+<p><a href="/torah-weave/api/numbers.json"><strong>numbers.json</strong></a> &mdash; 13 units, 76 cells, 66 subdivisions, 186 markers</p>
+<ul>
+<li><a href="/torah-weave/api/numbers/1.json"><strong>Unit 1 &mdash; Census and Camp</strong></a> &mdash; Numbers 1:1-4:49 &middot; 3x2 &middot; 6 cells &middot; 12 subdivisions &middot; 44 markers</li>
+<li><a href="/torah-weave/api/numbers/2.json"><strong>Unit 2 &mdash; Camp Purity and Nazirite</strong></a> &mdash; Numbers 5:1-6:21 &middot; 2x2 &middot; 4 cells &middot; 10 markers</li>
+<li><a href="/torah-weave/api/numbers/3.json"><strong>Unit 3 &mdash; Priestly Blessing and Departure</strong></a> &mdash; Numbers 6:22-10:36 &middot; 3x3 &middot; 9 cells &middot; 6 subdivisions &middot; 25 markers</li>
+<li><a href="/torah-weave/api/numbers/4.json"><strong>Unit 4 &mdash; Complaints Against Moses</strong></a> &mdash; Numbers 11:1-12:16 &middot; 2x3 &middot; 6 cells &middot; 6 subdivisions &middot; 18 markers</li>
+<li><a href="/torah-weave/api/numbers/5.json"><strong>Unit 5 &mdash; The Spies</strong></a> &mdash; Numbers 13:1-14:45 &middot; 4x2 &middot; 8 cells &middot; 2 subdivisions &middot; 26 markers</li>
+<li><a href="/torah-weave/api/numbers/6.json"><strong>Unit 6 &mdash; Supplementary Laws</strong></a> &mdash; Numbers 15:1-15:31 &middot; 2x3 &middot; 6 cells &middot; 2 markers</li>
+<li><a href="/torah-weave/api/numbers/7.json"><strong>Unit 7 &mdash; Korah Rebellion</strong></a> &mdash; Numbers 15:32-17:26 &middot; 2x2 &middot; 4 cells &middot; 4 subdivisions &middot; 17 markers</li>
+<li><a href="/torah-weave/api/numbers/8.json"><strong>Unit 8 &mdash; Priestly Duties and Red Heifer</strong></a> &mdash; Numbers 17:27-19:22 &middot; 2x3 &middot; 6 cells</li>
+<li><a href="/torah-weave/api/numbers/9.json"><strong>Unit 9 &mdash; Death of Miriam and Aaron</strong></a> &mdash; Numbers 20:1-22:1 &middot; 4x2 &middot; 8 cells &middot; 2 subdivisions &middot; 17 markers</li>
+<li><a href="/torah-weave/api/numbers/10.json"><strong>Unit 10 &mdash; Balaam</strong></a> &mdash; Numbers 22:2-25:18 &middot; 4x2 &middot; 8 cells &middot; 6 subdivisions &middot; 8 markers</li>
+<li><a href="/torah-weave/api/numbers/11.json"><strong>Unit 11 &mdash; Second Census and Succession</strong></a> &mdash; Numbers 26:1-27:23 &middot; 2x2 &middot; 4 cells &middot; 4 subdivisions &middot; 4 markers</li>
+<li><a href="/torah-weave/api/numbers/12.json"><strong>Unit 12 &mdash; Festival Calendar and Vows</strong></a> &mdash; Numbers 28:1-30:17 &middot; 1x2 &middot; 2 cells &middot; 14 subdivisions &middot; 7 markers</li>
+<li><a href="/torah-weave/api/numbers/13.json"><strong>Unit 13 &mdash; War, Boundaries, and Inheritance</strong></a> &mdash; Numbers 31:1-36:13 &middot; 212 &middot; 5 cells &middot; 10 subdivisions &middot; 8 markers</li>
+</ul>
+<h2>Deuteronomy <span lang="he" dir="rtl">דברים</span></h2>
+<p><a href="/torah-weave/api/deuteronomy.json"><strong>deuteronomy.json</strong></a> &mdash; 13 units, 106 cells, 145 subdivisions, 664 markers</p>
+<ul>
+<li><a href="/torah-weave/api/deuteronomy/1.json"><strong>Unit 1 &mdash; Historical Prologue</strong></a> &mdash; Deuteronomy 1:1-3:29 &middot; 13331 &middot; 11 cells &middot; 35 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/2.json"><strong>Unit 2 &mdash; Exhortation to Obedience</strong></a> &mdash; Deuteronomy 4:1-4:49 &middot; 5x2 &middot; 10 cells &middot; 53 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/3.json"><strong>Unit 3 &mdash; The Decalogue Restated</strong></a> &mdash; Deuteronomy 5:1-6:3 &middot; 4x2 &middot; 8 cells &middot; 10 subdivisions &middot; 34 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/4.json"><strong>Unit 4 &mdash; Shema and Wilderness Lessons</strong></a> &mdash; Deuteronomy 6:4-8:20 &middot; 4x2 &middot; 8 cells &middot; 14 subdivisions &middot; 56 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/5.json"><strong>Unit 5 &mdash; Golden Calf Recalled</strong></a> &mdash; Deuteronomy 9:1-10:11 &middot; 4x2 &middot; 8 cells &middot; 4 subdivisions &middot; 43 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/6.json"><strong>Unit 6 &mdash; Love and Obey</strong></a> &mdash; Deuteronomy 10:12-11:32 &middot; 3x2 &middot; 6 cells &middot; 22 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/7.json"><strong>Unit 7 &mdash; Deuteronomic Law Code</strong></a> &mdash; Deuteronomy 12:1-21:9 &middot; 4x2 &middot; 8 cells &middot; 42 subdivisions &middot; 113 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/8.json"><strong>Unit 8 &mdash; Case Laws</strong></a> &mdash; Deuteronomy 21:10-25:4 &middot; 1x3 &middot; 3 cells &middot; 27 subdivisions &middot; 63 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/9.json"><strong>Unit 9 &mdash; Firstfruits and Covenant Ceremony</strong></a> &mdash; Deuteronomy 25:5-27:26 &middot; 4x2 &middot; 8 cells &middot; 10 subdivisions &middot; 60 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/10.json"><strong>Unit 10 &mdash; Blessings and Curses</strong></a> &mdash; Deuteronomy 28:1-28:68 &middot; 4x3 &middot; 12 cells &middot; 24 subdivisions &middot; 73 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/11.json"><strong>Unit 11 &mdash; Covenant Renewal</strong></a> &mdash; Deuteronomy 28:69-30:20 &middot; 3x2 &middot; 6 cells &middot; 6 subdivisions &middot; 42 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/12.json"><strong>Unit 12 &mdash; Song of Moses</strong></a> &mdash; Deuteronomy 31:1-32:47 &middot; 4x2 &middot; 8 cells &middot; 4 subdivisions &middot; 37 markers</li>
+<li><a href="/torah-weave/api/deuteronomy/13.json"><strong>Unit 13 &mdash; Death of Moses</strong></a> &mdash; Deuteronomy 32:48-34:12 &middot; 5x2 &middot; 10 cells &middot; 4 subdivisions &middot; 33 markers</li>
+</ul>
+</main>
+<footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                                <div class="footer-section">
+                    <h4>Key Insights</h4>
+                    <ul>
+                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
+                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
+                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
+                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
+                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
+                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
+                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
+                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
+                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
+                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Featured Articles</h4>
+                    <ul>
+                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
+                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
+                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Full Texts</h4>
+                    <ul>
+                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
+                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
+                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
+                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah PDF</a></li>
+                        <li><a href="https://asitwaswritten.org/">As It Was Written &mdash; a primer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
+                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
+                        <li><a href="/Torah-New/English/Articles/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Moshe Kline</h4>
+                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
+                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
+                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==========================================
+         SITE NAV SCRIPT
+         ========================================== -->
+    <script>
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var menu = document.querySelector('.nav-menu');
+
+            // Hamburger toggle
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('is-open-menu');
+                    toggle.setAttribute('aria-expanded',
+                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
+                });
+            }
+
+            // Dropdown toggles (via <button>, not <a>)
+            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var li = btn.parentElement;
+                    var wasOpen = li.classList.contains('is-open');
+
+                    // Close all dropdowns first
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
+                        other.classList.remove('is-open');
+                        var b = other.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open this one if it wasn't already
+                    if (!wasOpen) {
+                        li.classList.add('is-open');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Click outside closes everything
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    if (menu) menu.classList.remove('is-open-menu');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                        var b = li.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
+    </script>
+
+    
+</body>
+</html>

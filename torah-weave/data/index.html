@@ -455,6 +455,7 @@
                         <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
                         <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
                         <li><a href="/Mishnah-New/api/">Structured Mishnah API</a></li>
+                        <li><a href="/torah-weave/api/">Structured Torah API</a></li>
                     </ul>
                 </li>
                 <li class="has-dropdown">
@@ -498,6 +499,7 @@
 <h3>Download</h3>
 <p><a href="/torah-weave/data/torah-units.json"><strong>torah-units.json</strong></a> (51 KB) &mdash; Full dataset with cell-level verse maps, formats, and metadata.</p>
 <p><a href="/torah-weave/data/torah-units.csv"><strong>torah-units.csv</strong></a> (23 KB) &mdash; Spreadsheet-friendly version with the same data.</p>
+<p>This dataset gives verse ranges without the words, so that any translation can be laid under it. If you want the Hebrew text itself, cell by cell, with the structural markings, see the <a href="/torah-weave/api/"><strong>Structured Torah API</strong></a> &mdash; one small JSON file per unit.</p>
 
 <h3>What Each Record Contains</h3>
 <p>For each of the 86 units: book, unit number, title, verse range, format (e.g., 3&times;2 or 12221 for irregular units), whether it is irregular or unique, cell count, structural type, and a <code>cells_detail</code> map giving the verse range for every cell position.</p>
@@ -648,6 +650,8 @@
   });</code></pre>
 
 <p>If you build something with this data &mdash; a study app, an API, a visualization &mdash; we would be glad to hear about it. <a href="/General/Contact.htm">Contact us</a>.</p>
+
+<p>The same 86 units are also served one at a time, with their Hebrew text, by the <a href="/torah-weave/api/">Structured Torah API</a>: <code>/torah-weave/api/genesis/7.json</code> returns Genesis unit 7 complete &mdash; every cell with its text, its markings and the verse references printed inside it. Each unit file carries the same <code>serial_number</code> used here, so the two can be joined. Where the two disagree, the differences are listed in <a href="/torah-weave/api/discrepancies.json"><code>discrepancies.json</code></a>.</p>
 
 <p>For the Mishnah there is a companion service: the <a href="/Mishnah-New/api/">Structured Mishnah API</a> serves each of the 525 chapters as its own small JSON file, with the structural markers included. Same licence, same terms — no key, no rate limit.</p>
 </section>
