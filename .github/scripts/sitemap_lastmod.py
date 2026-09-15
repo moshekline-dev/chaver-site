@@ -10,9 +10,14 @@ Usage:
 How it works:
     For each <url> in the sitemap, converts the URL path to a likely local
     file path, then runs `git log` to get the last commit date for that file.
-    If the file isn't found or has no git history, uses today's date.
 
-    Does NOT touch URLs that already have <lastmod> tags.
+    A URL with no <lastmod> gets one added; if the file isn't found or has no
+    git history, today's date is used.
+
+    A URL that already has a <lastmod> is refreshed when the file's commit date
+    is NEWER than the date recorded, and left alone otherwise. A date is only
+    ever moved forward, never backward, and an entry whose file cannot be dated
+    keeps whatever it already had.
 """
 
 import xml.etree.ElementTree as ET
@@ -77,7 +82,7 @@ def process_sitemap(input_file: str, output_file: str):
     ns = {"sm": NAMESPACE}
     today = date.today().isoformat()
 
-    stats = {"updated": 0, "already_had": 0, "fallback": 0, "total": 0}
+    stats = {"added": 0, "refreshed": 0, "unchanged": 0, "fallback": 0, "total": 0}
 
     for url_elem in root.findall("sm:url", ns):
         stats["total"] += 1
@@ -87,25 +92,30 @@ def process_sitemap(input_file: str, output_file: str):
         if loc_elem is None:
             continue
 
-        # Skip if lastmod already exists
-        if lastmod_elem is not None:
-            stats["already_had"] += 1
-            continue
-
         url = loc_elem.text
         candidates = url_to_filepath(url)
 
         git_date = None
-        found_file = None
         for candidate in candidates:
             if os.path.exists(candidate):
                 git_date = get_git_date(candidate)
-                found_file = candidate
                 if git_date:
                     break
 
+        if lastmod_elem is not None:
+            # Refresh an existing date only when the file is genuinely newer.
+            # Never move a date backwards, and never disturb an entry whose
+            # file cannot be dated - otherwise every run would churn.
+            current = (lastmod_elem.text or "").strip()
+            if git_date and git_date > current:
+                lastmod_elem.text = git_date
+                stats["refreshed"] += 1
+            else:
+                stats["unchanged"] += 1
+            continue
+
         if git_date:
-            stats["updated"] += 1
+            stats["added"] += 1
         else:
             git_date = today
             stats["fallback"] += 1
@@ -137,8 +147,9 @@ def process_sitemap(input_file: str, output_file: str):
 
     print(f"\nSitemap lastmod update complete:")
     print(f"  Total URLs:         {stats['total']}")
-    print(f"  Already had date:   {stats['already_had']}")
-    print(f"  Updated from git:   {stats['updated']}")
+    print(f"  Date added:         {stats['added']}")
+    print(f"  Date refreshed:     {stats['refreshed']}")
+    print(f"  Left unchanged:     {stats['unchanged']}")
     print(f"  Fallback (today):   {stats['fallback']}")
     print(f"\nOutput: {output_file}")
 
