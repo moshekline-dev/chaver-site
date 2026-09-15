@@ -562,7 +562,7 @@ every verse reference located inside it.</p>
 <section class="commentary-section">
 <h2>The addresses</h2>
 <div class="api-scroll"><table class="api-table">
-<thead><tr><th>Endpoint</th><th>Returns</th></tr></thead><tbody><tr><td><code>/torah-weave/api/index.json</code></td><td>Counts, the five books, and all 86 units with links.</td></tr><tr><td><code>/torah-weave/api/books.json</code></td><td>The five books as a flat list.</td></tr><tr><td><code>/torah-weave/api/markers.json</code></td><td>The eight marker types: colour, hex, definition, counts.</td></tr><tr><td><code>/torah-weave/api/schema.json</code></td><td>JSON Schema defining every field of a unit file.</td></tr><tr><td><code>/torah-weave/api/discrepancies.json</code></td><td>Every point where this data differs from the Torah Units Dataset.</td></tr><tr><td><code>/torah-weave/api/{book}.json</code></td><td>One book: its units, each with shape and counts.</td></tr><tr><td><code>/torah-weave/api/{book}/{unit}.json</code></td><td>One unit, complete.</td></tr></tbody></table></div>
+<thead><tr><th>Endpoint</th><th>Returns</th></tr></thead><tbody><tr><td><code>/torah-weave/api/index.json</code></td><td>Counts, the five books, and all 86 units with links.</td></tr><tr><td><code>/torah-weave/api/books.json</code></td><td>The five books as a flat list.</td></tr><tr><td><a href="/torah-weave/api/by-verse.json"><code>/torah-weave/api/by-verse.json</code></a></td><td>A way in from an ordinary chapter-and-verse reference: which unit contains it.</td></tr><tr><td><code>/torah-weave/api/markers.json</code></td><td>The eight marker types: colour, hex, definition, counts.</td></tr><tr><td><code>/torah-weave/api/schema.json</code></td><td>JSON Schema defining every field of a unit file.</td></tr><tr><td><code>/torah-weave/api/discrepancies.json</code></td><td>Every point where this data differs from the Torah Units Dataset.</td></tr><tr><td><code>/torah-weave/api/{book}.json</code></td><td>One book: its units, each with shape and counts.</td></tr><tr><td><code>/torah-weave/api/{book}/{unit}.json</code></td><td>One unit, complete.</td></tr></tbody></table></div>
 <p>A book&rsquo;s address component is its English name in lower case: <code>genesis</code>,
 <code>exodus</code>, <code>leviticus</code>, <code>numbers</code>, <code>deuteronomy</code>. The unit
 number is the one it carries within its book, so Genesis runs 1 to 19 and Deuteronomy 1 to 13.</p>
@@ -573,6 +573,14 @@ number is the one it carries within its book, so Genesis runs 1 to 19 and Deuter
 <p>Each unit also carries a <code>serial_number</code>, its place in the run of 86 across the whole
 Torah, which is the number the Torah Units Dataset uses. Genesis unit 1 is serial 1; Deuteronomy
 unit 13 is serial 86.</p>
+</section>
+
+<section class="commentary-section" id="by-verse">
+<h2>Finding a unit from a chapter and verse</h2>
+<p>A chapter of the Mishnah is a division the whole world already uses. A literary unit of the Torah is not: the eighty-six units are the finding this research proposes, and they do not follow the chapter breaks. So an address like <code>/genesis/7.json</code> is only useful to someone who already knows the division — which, at first, is nobody.</p>
+<p><a href="/torah-weave/api/by-verse.json"><code>by-verse.json</code></a> is the way in. Give it an ordinary reference and it tells you the unit that contains it. Its <code>by_chapter</code> section maps every chapter of every book to the unit or units covering it; its per-book <code>ranges</code> give each unit’s first and last verse, so a single verse can be placed by a simple scan.</p>
+<p>The units run continuously from Genesis 1:1 to the end of Deuteronomy and never overlap, so <strong>every verse of the Torah lies in exactly one unit</strong> and the lookup always returns one answer. The verse counts were checked chapter by chapter against Sefaria’s: all 5,846 verses are accounted for.</p>
+<p>One caution for anyone joining this to another edition. The two Decalogue passages, Exodus 20 and Deuteronomy 5, are divided into verses differently by different editions — a long-standing variation tied to the two cantillation traditions for the Ten Commandments. This edition gives Exodus 20 twenty-two verses where Sefaria gives twenty-three, and Deuteronomy 5 twenty-nine where Sefaria gives thirty, so a reference taken from elsewhere may sit one verse away from the same words here. It cannot send you to the wrong unit: each of those chapters lies wholly inside a single unit, so any verse of either resolves correctly under either numbering.</p>
 </section>
 
 <section class="commentary-section">

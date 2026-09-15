@@ -10,7 +10,7 @@
   "schema": "https://chaver.com/torah-weave/api/schema.json",
   "canonical": "https://chaver.com/torah-weave/api/index.json"
  },
- "about": "The 86 literary units of the Torah as two-dimensional tables of labelled cells, with the full Hebrew text of every cell, the verse references printed in it, and the markings of the author’s apparatus. Static JSON, no key and no rate limit. Licensed CC BY 4.0; attribution to Moshe Kline, The Structured Torah (chaver.com), is required.",
+ "about": "The 86 literary units of the Torah as two-dimensional tables of labelled cells, with the full Hebrew text of every cell, the verse references printed in it, and the markings of the author’s apparatus. Static JSON, no key and no rate limit. Licensed CC BY 4.0; attribution to Moshe Kline, The Structured Torah (chaver.com), is required. The eighty-six units are a literary division proposed by this research rather than one already in general use, so by-verse.json provides an entrance from an ordinary chapter-and-verse reference; the units run continuously through all five books and do not overlap, so every verse of the Torah lies in exactly one of them.",
  "counts": {
   "units": 86,
   "books": 5,
@@ -30,12 +30,20 @@
    "returns": "Flat list of the five books with their unit counts."
   },
   {
+   "address": "/torah-weave/api/by-verse.json",
+   "returns": "A way in from an ordinary chapter-and-verse reference: which unit contains it."
+  },
+  {
    "address": "/torah-weave/api/markers.json",
    "returns": "The eight marker types with colour, hex, definition and counts."
   },
   {
    "address": "/torah-weave/api/schema.json",
    "returns": "Field-by-field description of a unit document."
+  },
+  {
+   "address": "/torah-weave/api/discrepancies.json",
+   "returns": "Every point where this data differs from the published Torah Units Dataset, and the verse references that could not be read."
   },
   {
    "address": "/torah-weave/api/{book}.json",
@@ -1049,7 +1057,8 @@
  "related": {
   "structured_mishnah_api": "https://chaver.com/Mishnah-New/api/index.json",
   "torah_units_dataset": "https://chaver.com/torah-weave/data/torah-units.json",
-  "method": "https://chaver.com/torah-weave/Woven-Torah-Method.html"
+  "method": "https://chaver.com/torah-weave/Woven-Torah-Method.html",
+  "find_a_unit_by_chapter_and_verse": "https://chaver.com/torah-weave/api/by-verse.json"
  },
  "source": "Extracted from The Structured Torah (Hebrew edition), the author’s own Word document, in which the apparatus is applied as named character styles. Cross-checked against the published Torah Literary Units Dataset: 84 of the 86 units reproduce its recorded format exactly, and 918 of 938 cell and subdivision verse ranges match it exactly. The remaining differences are listed in discrepancies.json.",
  "discrepancies": "https://chaver.com/torah-weave/api/discrepancies.json"

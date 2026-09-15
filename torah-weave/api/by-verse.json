@@ -1,0 +1,1974 @@
+{
+ "_credit": {
+  "dataset": "The Structured Torah",
+  "version": "2026-09-rev1",
+  "attribution": "Moshe Kline, The Structured Torah (chaver.com)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "website": "https://chaver.com",
+  "documentation": "https://chaver.com/torah-weave/api/index.json",
+  "schema": "https://chaver.com/torah-weave/api/schema.json",
+  "canonical": "https://chaver.com/torah-weave/api/by-verse.json"
+ },
+ "about": "A way into this dataset from an ordinary chapter-and-verse reference. The eighty-six literary units are a division proposed by this research; they are not a division the wider world already uses, and they do not follow the chapter breaks. This file lets anyone holding a normal reference — Genesis 15:6, Leviticus 19 — find the unit that contains it without knowing the division in advance.",
+ "how_to_use": "For a whole chapter, read by_chapter: it gives the unit or units covering that chapter. For a single verse, scan that book’s ranges for the entry whose start is at or before your reference and whose end is at or after it. Every verse of the Torah lies in exactly one unit, so the scan always succeeds and never returns two answers.",
+ "coverage": {
+  "verses_in_the_torah": 5846,
+  "verses_placed_in_a_unit": 5846,
+  "units_run_continuously": true,
+  "units_overlap": false,
+  "verse_counts_checked_against": "Sefaria chapter lengths",
+  "unreadable_verse_numbers": [
+   "Genesis 21:2",
+   "Exodus 1:3",
+   "Numbers 3:10"
+  ],
+  "unreadable_note": "Three verses carry no readable verse number in the source edition. Their text is present and their chapters hold the expected number of verses; only the printed number could not be read. Each is placed by the range it falls inside. See discrepancies.json.",
+  "verse_division_differences": {
+   "chapters": [
+    "Exodus 20",
+    "Deuteronomy 5"
+   ],
+   "note": "The two Decalogue passages are divided into verses differently by different editions, a long-standing variation tied to the two cantillation traditions for the Ten Commandments. This edition gives Exodus 20 twenty-two verses where Sefaria gives twenty-three, and Deuteronomy 5 twenty-nine where Sefaria gives thirty. A reference taken from another edition may therefore sit one verse away from the same words here. It cannot lead to the wrong unit: each of those two chapters lies wholly inside a single unit — Exodus 20 in Exodus unit 7, Deuteronomy 5 in Deuteronomy unit 3 — so any verse of either chapter resolves to that unit under either numbering."
+  }
+ },
+ "books": {
+  "Genesis": {
+   "slug": "genesis",
+   "chapters": 50,
+   "verses": 1533,
+   "units": 19,
+   "ranges": [
+    {
+     "unit": 1,
+     "serial_number": 1,
+     "title": "Creation",
+     "start": {
+      "chapter": 1,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 2,
+      "verse": 3
+     },
+     "verses": "Genesis 1:1-2:3",
+     "url": "https://chaver.com/torah-weave/api/genesis/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 2,
+     "title": "Generations of Heaven and Earth",
+     "start": {
+      "chapter": 2,
+      "verse": 4
+     },
+     "end": {
+      "chapter": 4,
+      "verse": 26
+     },
+     "verses": "Genesis 2:4-4:26",
+     "url": "https://chaver.com/torah-weave/api/genesis/2.json"
+    },
+    {
+     "unit": 3,
+     "serial_number": 3,
+     "title": "Book of Generations of Adam",
+     "start": {
+      "chapter": 5,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 10,
+      "verse": 32
+     },
+     "verses": "Genesis 5:1-10:32",
+     "url": "https://chaver.com/torah-weave/api/genesis/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 4,
+     "title": "Tower of Babel",
+     "start": {
+      "chapter": 11,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 11,
+      "verse": 9
+     },
+     "verses": "Genesis 11:1-11:9",
+     "url": "https://chaver.com/torah-weave/api/genesis/4.json"
+    },
+    {
+     "unit": 5,
+     "serial_number": 5,
+     "title": "Call of Abraham",
+     "start": {
+      "chapter": 11,
+      "verse": 10
+     },
+     "end": {
+      "chapter": 13,
+      "verse": 4
+     },
+     "verses": "Genesis 11:10-13:4",
+     "url": "https://chaver.com/torah-weave/api/genesis/5.json"
+    },
+    {
+     "unit": 6,
+     "serial_number": 6,
+     "title": "Abraham and Lot",
+     "start": {
+      "chapter": 13,
+      "verse": 5
+     },
+     "end": {
+      "chapter": 14,
+      "verse": 24
+     },
+     "verses": "Genesis 13:5-14:24",
+     "url": "https://chaver.com/torah-weave/api/genesis/6.json"
+    },
+    {
+     "unit": 7,
+     "serial_number": 7,
+     "title": "Covenant Ceremonies",
+     "start": {
+      "chapter": 15,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 17,
+      "verse": 27
+     },
+     "verses": "Genesis 15:1-17:27",
+     "url": "https://chaver.com/torah-weave/api/genesis/7.json"
+    },
+    {
+     "unit": 8,
+     "serial_number": 8,
+     "title": "Sodom and Lot",
+     "start": {
+      "chapter": 18,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 19,
+      "verse": 38
+     },
+     "verses": "Genesis 18:1-19:38",
+     "url": "https://chaver.com/torah-weave/api/genesis/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 9,
+     "title": "Abraham and Abimelech",
+     "start": {
+      "chapter": 20,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 22,
+      "verse": 19
+     },
+     "verses": "Genesis 20:1-22:19",
+     "url": "https://chaver.com/torah-weave/api/genesis/9.json"
+    },
+    {
+     "unit": 10,
+     "serial_number": 10,
+     "title": "Death of Sarah",
+     "start": {
+      "chapter": 22,
+      "verse": 20
+     },
+     "end": {
+      "chapter": 25,
+      "verse": 11
+     },
+     "verses": "Genesis 22:20-25:11",
+     "url": "https://chaver.com/torah-weave/api/genesis/10.json"
+    },
+    {
+     "unit": 11,
+     "serial_number": 11,
+     "title": "Birth of Jacob and Esau",
+     "start": {
+      "chapter": 25,
+      "verse": 12
+     },
+     "end": {
+      "chapter": 25,
+      "verse": 34
+     },
+     "verses": "Genesis 25:12-25:34",
+     "url": "https://chaver.com/torah-weave/api/genesis/11.json"
+    },
+    {
+     "unit": 12,
+     "serial_number": 12,
+     "title": "Isaac in Gerar",
+     "start": {
+      "chapter": 26,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 26,
+      "verse": 33
+     },
+     "verses": "Genesis 26:1-26:33",
+     "url": "https://chaver.com/torah-weave/api/genesis/12.json"
+    },
+    {
+     "unit": 13,
+     "serial_number": 13,
+     "title": "Blessing Deception",
+     "start": {
+      "chapter": 26,
+      "verse": 34
+     },
+     "end": {
+      "chapter": 28,
+      "verse": 9
+     },
+     "verses": "Genesis 26:34-28:9",
+     "url": "https://chaver.com/torah-weave/api/genesis/13.json"
+    },
+    {
+     "unit": 14,
+     "serial_number": 14,
+     "title": "Jacob with Laban",
+     "start": {
+      "chapter": 28,
+      "verse": 10
+     },
+     "end": {
+      "chapter": 32,
+      "verse": 3
+     },
+     "verses": "Genesis 28:10-32:3",
+     "url": "https://chaver.com/torah-weave/api/genesis/14.json"
+    },
+    {
+     "unit": 15,
+     "serial_number": 15,
+     "title": "Jacob and Esau Reconciliation",
+     "start": {
+      "chapter": 32,
+      "verse": 4
+     },
+     "end": {
+      "chapter": 33,
+      "verse": 16
+     },
+     "verses": "Genesis 32:4-33:16",
+     "url": "https://chaver.com/torah-weave/api/genesis/15.json"
+    },
+    {
+     "unit": 16,
+     "serial_number": 16,
+     "title": "Transition to Isaac's Death",
+     "start": {
+      "chapter": 33,
+      "verse": 17
+     },
+     "end": {
+      "chapter": 35,
+      "verse": 29
+     },
+     "verses": "Genesis 33:17-35:29",
+     "url": "https://chaver.com/torah-weave/api/genesis/16.json"
+    },
+    {
+     "unit": 17,
+     "serial_number": 17,
+     "title": "Joseph Sold and Elevated",
+     "start": {
+      "chapter": 36,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 41,
+      "verse": 45
+     },
+     "verses": "Genesis 36:1-41:45",
+     "url": "https://chaver.com/torah-weave/api/genesis/17.json"
+    },
+    {
+     "unit": 18,
+     "serial_number": 18,
+     "title": "Joseph's Administration",
+     "start": {
+      "chapter": 41,
+      "verse": 46
+     },
+     "end": {
+      "chapter": 47,
+      "verse": 26
+     },
+     "verses": "Genesis 41:46-47:26",
+     "url": "https://chaver.com/torah-weave/api/genesis/18.json"
+    },
+    {
+     "unit": 19,
+     "serial_number": 19,
+     "title": "Blessings and Deaths",
+     "start": {
+      "chapter": 47,
+      "verse": 27
+     },
+     "end": {
+      "chapter": 50,
+      "verse": 26
+     },
+     "verses": "Genesis 47:27-50:26",
+     "url": "https://chaver.com/torah-weave/api/genesis/19.json"
+    }
+   ]
+  },
+  "Exodus": {
+   "slug": "exodus",
+   "chapters": 40,
+   "verses": 1210,
+   "units": 19,
+   "ranges": [
+    {
+     "unit": 1,
+     "serial_number": 20,
+     "title": "Oppression and Call of Moses",
+     "start": {
+      "chapter": 1,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 4,
+      "verse": 18
+     },
+     "verses": "Exodus 1:1-4:18",
+     "url": "https://chaver.com/torah-weave/api/exodus/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 21,
+     "title": "Moses Before Pharaoh",
+     "start": {
+      "chapter": 4,
+      "verse": 19
+     },
+     "end": {
+      "chapter": 6,
+      "verse": 28
+     },
+     "verses": "Exodus 4:19-6:28",
+     "url": "https://chaver.com/torah-weave/api/exodus/2.json"
+    },
+    {
+     "unit": 3,
+     "serial_number": 22,
+     "title": "The Nine Signs",
+     "start": {
+      "chapter": 6,
+      "verse": 29
+     },
+     "end": {
+      "chapter": 11,
+      "verse": 10
+     },
+     "verses": "Exodus 6:29-11:10",
+     "url": "https://chaver.com/torah-weave/api/exodus/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 23,
+     "title": "Passover and Exodus",
+     "start": {
+      "chapter": 12,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 13,
+      "verse": 16
+     },
+     "verses": "Exodus 12:1-13:16",
+     "url": "https://chaver.com/torah-weave/api/exodus/4.json"
+    },
+    {
+     "unit": 5,
+     "serial_number": 24,
+     "title": "Crossing the Sea",
+     "start": {
+      "chapter": 13,
+      "verse": 17
+     },
+     "end": {
+      "chapter": 15,
+      "verse": 21
+     },
+     "verses": "Exodus 13:17-15:21",
+     "url": "https://chaver.com/torah-weave/api/exodus/5.json"
+    },
+    {
+     "unit": 6,
+     "serial_number": 25,
+     "title": "Wilderness Complaints",
+     "start": {
+      "chapter": 15,
+      "verse": 22
+     },
+     "end": {
+      "chapter": 17,
+      "verse": 16
+     },
+     "verses": "Exodus 15:22-17:16",
+     "url": "https://chaver.com/torah-weave/api/exodus/6.json"
+    },
+    {
+     "unit": 7,
+     "serial_number": 26,
+     "title": "Sinai and the Decalogue",
+     "start": {
+      "chapter": 18,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 20,
+      "verse": 22
+     },
+     "verses": "Exodus 18:1-20:22",
+     "url": "https://chaver.com/torah-weave/api/exodus/7.json"
+    },
+    {
+     "unit": 8,
+     "serial_number": 27,
+     "title": "Covenant Code I",
+     "start": {
+      "chapter": 21,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 22,
+      "verse": 16
+     },
+     "verses": "Exodus 21:1-22:16",
+     "url": "https://chaver.com/torah-weave/api/exodus/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 28,
+     "title": "Covenant Code II",
+     "start": {
+      "chapter": 22,
+      "verse": 17
+     },
+     "end": {
+      "chapter": 23,
+      "verse": 19
+     },
+     "verses": "Exodus 22:17-23:19",
+     "url": "https://chaver.com/torah-weave/api/exodus/9.json"
+    },
+    {
+     "unit": 10,
+     "serial_number": 29,
+     "title": "Covenant Ratification",
+     "start": {
+      "chapter": 23,
+      "verse": 20
+     },
+     "end": {
+      "chapter": 24,
+      "verse": 18
+     },
+     "verses": "Exodus 23:20-24:18",
+     "url": "https://chaver.com/torah-weave/api/exodus/10.json"
+    },
+    {
+     "unit": 11,
+     "serial_number": 30,
+     "title": "Tabernacle Instructions I",
+     "start": {
+      "chapter": 25,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 27,
+      "verse": 21
+     },
+     "verses": "Exodus 25:1-27:21",
+     "url": "https://chaver.com/torah-weave/api/exodus/11.json"
+    },
+    {
+     "unit": 12,
+     "serial_number": 31,
+     "title": "Priestly Vestments",
+     "start": {
+      "chapter": 28,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 28,
+      "verse": 43
+     },
+     "verses": "Exodus 28:1-28:43",
+     "url": "https://chaver.com/torah-weave/api/exodus/12.json"
+    },
+    {
+     "unit": 13,
+     "serial_number": 32,
+     "title": "Consecration and Altars",
+     "start": {
+      "chapter": 29,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 29,
+      "verse": 37
+     },
+     "verses": "Exodus 29:1-29:37",
+     "url": "https://chaver.com/torah-weave/api/exodus/13.json"
+    },
+    {
+     "unit": 14,
+     "serial_number": 33,
+     "title": "Tabernacle Supplements",
+     "start": {
+      "chapter": 29,
+      "verse": 38
+     },
+     "end": {
+      "chapter": 31,
+      "verse": 17
+     },
+     "verses": "Exodus 29:38-31:17",
+     "url": "https://chaver.com/torah-weave/api/exodus/14.json"
+    },
+    {
+     "unit": 15,
+     "serial_number": 34,
+     "title": "Golden Calf and Renewal",
+     "start": {
+      "chapter": 31,
+      "verse": 18
+     },
+     "end": {
+      "chapter": 34,
+      "verse": 35
+     },
+     "verses": "Exodus 31:18-34:35",
+     "url": "https://chaver.com/torah-weave/api/exodus/15.json"
+    },
+    {
+     "unit": 16,
+     "serial_number": 35,
+     "title": "Tabernacle Contributions",
+     "start": {
+      "chapter": 35,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 36,
+      "verse": 7
+     },
+     "verses": "Exodus 35:1-36:7",
+     "url": "https://chaver.com/torah-weave/api/exodus/16.json"
+    },
+    {
+     "unit": 17,
+     "serial_number": 36,
+     "title": "Tabernacle Construction",
+     "start": {
+      "chapter": 36,
+      "verse": 8
+     },
+     "end": {
+      "chapter": 38,
+      "verse": 20
+     },
+     "verses": "Exodus 36:8-38:20",
+     "url": "https://chaver.com/torah-weave/api/exodus/17.json"
+    },
+    {
+     "unit": 18,
+     "serial_number": 37,
+     "title": "Tabernacle Inventory",
+     "start": {
+      "chapter": 38,
+      "verse": 21
+     },
+     "end": {
+      "chapter": 39,
+      "verse": 31
+     },
+     "verses": "Exodus 38:21-39:31",
+     "url": "https://chaver.com/torah-weave/api/exodus/18.json"
+    },
+    {
+     "unit": 19,
+     "serial_number": 38,
+     "title": "Tabernacle Erected",
+     "start": {
+      "chapter": 39,
+      "verse": 32
+     },
+     "end": {
+      "chapter": 40,
+      "verse": 38
+     },
+     "verses": "Exodus 39:32-40:38",
+     "url": "https://chaver.com/torah-weave/api/exodus/19.json"
+    }
+   ]
+  },
+  "Leviticus": {
+   "slug": "leviticus",
+   "chapters": 27,
+   "verses": 859,
+   "units": 22,
+   "ranges": [
+    {
+     "unit": 1,
+     "serial_number": 39,
+     "title": "Three Spontaneous Private Sacrifices",
+     "start": {
+      "chapter": 1,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 3,
+      "verse": 17
+     },
+     "verses": "Leviticus 1:1-3:17",
+     "url": "https://chaver.com/torah-weave/api/leviticus/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 40,
+     "title": "Sacrifices for Expiation",
+     "start": {
+      "chapter": 4,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 5,
+      "verse": 26
+     },
+     "verses": "Leviticus 4:1-5:26",
+     "url": "https://chaver.com/torah-weave/api/leviticus/2.json"
+    },
+    {
+     "unit": 3,
+     "serial_number": 41,
+     "title": "Administrative Order",
+     "start": {
+      "chapter": 6,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 7,
+      "verse": 38
+     },
+     "verses": "Leviticus 6:1-7:38",
+     "url": "https://chaver.com/torah-weave/api/leviticus/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 42,
+     "title": "Inauguration of the Cult",
+     "start": {
+      "chapter": 8,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 10,
+      "verse": 20
+     },
+     "verses": "Leviticus 8:1-10:20",
+     "url": "https://chaver.com/torah-weave/api/leviticus/4.json"
+    },
+    {
+     "unit": 5,
+     "serial_number": 43,
+     "title": "Diet Laws",
+     "start": {
+      "chapter": 11,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 11,
+      "verse": 47
+     },
+     "verses": "Leviticus 11:1-11:47",
+     "url": "https://chaver.com/torah-weave/api/leviticus/5.json"
+    },
+    {
+     "unit": 6,
+     "serial_number": 44,
+     "title": "Childbirth",
+     "start": {
+      "chapter": 12,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 12,
+      "verse": 8
+     },
+     "verses": "Leviticus 12:1-12:8",
+     "url": "https://chaver.com/torah-weave/api/leviticus/6.json"
+    },
+    {
+     "unit": 7,
+     "serial_number": 45,
+     "title": "Scale Disease Diagnosis",
+     "start": {
+      "chapter": 13,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 13,
+      "verse": 46
+     },
+     "verses": "Leviticus 13:1-13:46",
+     "url": "https://chaver.com/torah-weave/api/leviticus/7.json"
+    },
+    {
+     "unit": 8,
+     "serial_number": 46,
+     "title": "Purification Procedures",
+     "start": {
+      "chapter": 13,
+      "verse": 47
+     },
+     "end": {
+      "chapter": 14,
+      "verse": 57
+     },
+     "verses": "Leviticus 13:47-14:57",
+     "url": "https://chaver.com/torah-weave/api/leviticus/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 47,
+     "title": "Genital Discharges",
+     "start": {
+      "chapter": 15,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 15,
+      "verse": 33
+     },
+     "verses": "Leviticus 15:1-15:33",
+     "url": "https://chaver.com/torah-weave/api/leviticus/9.json"
+    },
+    {
+     "unit": 10,
+     "serial_number": 48,
+     "title": "Day of Purgation",
+     "start": {
+      "chapter": 16,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 16,
+      "verse": 34
+     },
+     "verses": "Leviticus 16:1-16:34",
+     "url": "https://chaver.com/torah-weave/api/leviticus/10.json"
+    },
+    {
+     "unit": 11,
+     "serial_number": 49,
+     "title": "Slaughter and Blood",
+     "start": {
+      "chapter": 17,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 17,
+      "verse": 16
+     },
+     "verses": "Leviticus 17:1-17:16",
+     "url": "https://chaver.com/torah-weave/api/leviticus/11.json"
+    },
+    {
+     "unit": 12,
+     "serial_number": 50,
+     "title": "Illicit Sexual Practices",
+     "start": {
+      "chapter": 18,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 18,
+      "verse": 30
+     },
+     "verses": "Leviticus 18:1-18:30",
+     "url": "https://chaver.com/torah-weave/api/leviticus/12.json"
+    },
+    {
+     "unit": 13,
+     "serial_number": 51,
+     "title": "Holiness",
+     "start": {
+      "chapter": 19,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 19,
+      "verse": 37
+     },
+     "verses": "Leviticus 19:1-19:37",
+     "url": "https://chaver.com/torah-weave/api/leviticus/13.json"
+    },
+    {
+     "unit": 14,
+     "serial_number": 52,
+     "title": "Penalties for Sexual Offenses",
+     "start": {
+      "chapter": 20,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 20,
+      "verse": 27
+     },
+     "verses": "Leviticus 20:1-20:27",
+     "url": "https://chaver.com/torah-weave/api/leviticus/14.json"
+    },
+    {
+     "unit": 15,
+     "serial_number": 53,
+     "title": "Instructions for Priests",
+     "start": {
+      "chapter": 21,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 21,
+      "verse": 24
+     },
+     "verses": "Leviticus 21:1-21:24",
+     "url": "https://chaver.com/torah-weave/api/leviticus/15.json"
+    },
+    {
+     "unit": 16,
+     "serial_number": 54,
+     "title": "Sanctified Objects",
+     "start": {
+      "chapter": 22,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 22,
+      "verse": 25
+     },
+     "verses": "Leviticus 22:1-22:25",
+     "url": "https://chaver.com/torah-weave/api/leviticus/16.json"
+    },
+    {
+     "unit": 17,
+     "serial_number": 55,
+     "title": "Animal Birth",
+     "start": {
+      "chapter": 22,
+      "verse": 26
+     },
+     "end": {
+      "chapter": 22,
+      "verse": 33
+     },
+     "verses": "Leviticus 22:26-22:33",
+     "url": "https://chaver.com/torah-weave/api/leviticus/17.json"
+    },
+    {
+     "unit": 18,
+     "serial_number": 56,
+     "title": "Holiday Calendar",
+     "start": {
+      "chapter": 23,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 23,
+      "verse": 44
+     },
+     "verses": "Leviticus 23:1-23:44",
+     "url": "https://chaver.com/torah-weave/api/leviticus/18.json"
+    },
+    {
+     "unit": 19,
+     "serial_number": 57,
+     "title": "Tabernacle Oil and Blasphemy",
+     "start": {
+      "chapter": 24,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 24,
+      "verse": 23
+     },
+     "verses": "Leviticus 24:1-24:23",
+     "url": "https://chaver.com/torah-weave/api/leviticus/19.json"
+    },
+    {
+     "unit": 20,
+     "serial_number": 58,
+     "title": "Jubilee",
+     "start": {
+      "chapter": 25,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 25,
+      "verse": 55
+     },
+     "verses": "Leviticus 25:1-25:55",
+     "url": "https://chaver.com/torah-weave/api/leviticus/20.json"
+    },
+    {
+     "unit": 21,
+     "serial_number": 59,
+     "title": "Blessings and Curses",
+     "start": {
+      "chapter": 26,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 26,
+      "verse": 46
+     },
+     "verses": "Leviticus 26:1-26:46",
+     "url": "https://chaver.com/torah-weave/api/leviticus/21.json"
+    },
+    {
+     "unit": 22,
+     "serial_number": 60,
+     "title": "Consecrations and Redemption",
+     "start": {
+      "chapter": 27,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 27,
+      "verse": 34
+     },
+     "verses": "Leviticus 27:1-27:34",
+     "url": "https://chaver.com/torah-weave/api/leviticus/22.json"
+    }
+   ]
+  },
+  "Numbers": {
+   "slug": "numbers",
+   "chapters": 36,
+   "verses": 1288,
+   "units": 13,
+   "ranges": [
+    {
+     "unit": 1,
+     "serial_number": 61,
+     "title": "Census and Camp",
+     "start": {
+      "chapter": 1,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 4,
+      "verse": 49
+     },
+     "verses": "Numbers 1:1-4:49",
+     "url": "https://chaver.com/torah-weave/api/numbers/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 62,
+     "title": "Camp Purity and Nazirite",
+     "start": {
+      "chapter": 5,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 6,
+      "verse": 21
+     },
+     "verses": "Numbers 5:1-6:21",
+     "url": "https://chaver.com/torah-weave/api/numbers/2.json"
+    },
+    {
+     "unit": 3,
+     "serial_number": 63,
+     "title": "Priestly Blessing and Departure",
+     "start": {
+      "chapter": 6,
+      "verse": 22
+     },
+     "end": {
+      "chapter": 10,
+      "verse": 36
+     },
+     "verses": "Numbers 6:22-10:36",
+     "url": "https://chaver.com/torah-weave/api/numbers/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 64,
+     "title": "Complaints Against Moses",
+     "start": {
+      "chapter": 11,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 12,
+      "verse": 16
+     },
+     "verses": "Numbers 11:1-12:16",
+     "url": "https://chaver.com/torah-weave/api/numbers/4.json"
+    },
+    {
+     "unit": 5,
+     "serial_number": 65,
+     "title": "The Spies",
+     "start": {
+      "chapter": 13,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 14,
+      "verse": 45
+     },
+     "verses": "Numbers 13:1-14:45",
+     "url": "https://chaver.com/torah-weave/api/numbers/5.json"
+    },
+    {
+     "unit": 6,
+     "serial_number": 66,
+     "title": "Supplementary Laws",
+     "start": {
+      "chapter": 15,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 15,
+      "verse": 31
+     },
+     "verses": "Numbers 15:1-15:31",
+     "url": "https://chaver.com/torah-weave/api/numbers/6.json"
+    },
+    {
+     "unit": 7,
+     "serial_number": 67,
+     "title": "Korah Rebellion",
+     "start": {
+      "chapter": 15,
+      "verse": 32
+     },
+     "end": {
+      "chapter": 17,
+      "verse": 26
+     },
+     "verses": "Numbers 15:32-17:26",
+     "url": "https://chaver.com/torah-weave/api/numbers/7.json"
+    },
+    {
+     "unit": 8,
+     "serial_number": 68,
+     "title": "Priestly Duties and Red Heifer",
+     "start": {
+      "chapter": 17,
+      "verse": 27
+     },
+     "end": {
+      "chapter": 19,
+      "verse": 22
+     },
+     "verses": "Numbers 17:27-19:22",
+     "url": "https://chaver.com/torah-weave/api/numbers/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 69,
+     "title": "Death of Miriam and Aaron",
+     "start": {
+      "chapter": 20,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 22,
+      "verse": 1
+     },
+     "verses": "Numbers 20:1-22:1",
+     "url": "https://chaver.com/torah-weave/api/numbers/9.json"
+    },
+    {
+     "unit": 10,
+     "serial_number": 70,
+     "title": "Balaam",
+     "start": {
+      "chapter": 22,
+      "verse": 2
+     },
+     "end": {
+      "chapter": 25,
+      "verse": 18
+     },
+     "verses": "Numbers 22:2-25:18",
+     "url": "https://chaver.com/torah-weave/api/numbers/10.json"
+    },
+    {
+     "unit": 11,
+     "serial_number": 71,
+     "title": "Second Census and Succession",
+     "start": {
+      "chapter": 26,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 27,
+      "verse": 23
+     },
+     "verses": "Numbers 26:1-27:23",
+     "url": "https://chaver.com/torah-weave/api/numbers/11.json"
+    },
+    {
+     "unit": 12,
+     "serial_number": 72,
+     "title": "Festival Calendar and Vows",
+     "start": {
+      "chapter": 28,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 30,
+      "verse": 17
+     },
+     "verses": "Numbers 28:1-30:17",
+     "url": "https://chaver.com/torah-weave/api/numbers/12.json"
+    },
+    {
+     "unit": 13,
+     "serial_number": 73,
+     "title": "War, Boundaries, and Inheritance",
+     "start": {
+      "chapter": 31,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 36,
+      "verse": 13
+     },
+     "verses": "Numbers 31:1-36:13",
+     "url": "https://chaver.com/torah-weave/api/numbers/13.json"
+    }
+   ]
+  },
+  "Deuteronomy": {
+   "slug": "deuteronomy",
+   "chapters": 34,
+   "verses": 956,
+   "units": 13,
+   "ranges": [
+    {
+     "unit": 1,
+     "serial_number": 74,
+     "title": "Historical Prologue",
+     "start": {
+      "chapter": 1,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 3,
+      "verse": 29
+     },
+     "verses": "Deuteronomy 1:1-3:29",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 75,
+     "title": "Exhortation to Obedience",
+     "start": {
+      "chapter": 4,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 4,
+      "verse": 49
+     },
+     "verses": "Deuteronomy 4:1-4:49",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/2.json"
+    },
+    {
+     "unit": 3,
+     "serial_number": 76,
+     "title": "The Decalogue Restated",
+     "start": {
+      "chapter": 5,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 6,
+      "verse": 3
+     },
+     "verses": "Deuteronomy 5:1-6:3",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 77,
+     "title": "Shema and Wilderness Lessons",
+     "start": {
+      "chapter": 6,
+      "verse": 4
+     },
+     "end": {
+      "chapter": 8,
+      "verse": 20
+     },
+     "verses": "Deuteronomy 6:4-8:20",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/4.json"
+    },
+    {
+     "unit": 5,
+     "serial_number": 78,
+     "title": "Golden Calf Recalled",
+     "start": {
+      "chapter": 9,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 10,
+      "verse": 11
+     },
+     "verses": "Deuteronomy 9:1-10:11",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/5.json"
+    },
+    {
+     "unit": 6,
+     "serial_number": 79,
+     "title": "Love and Obey",
+     "start": {
+      "chapter": 10,
+      "verse": 12
+     },
+     "end": {
+      "chapter": 11,
+      "verse": 32
+     },
+     "verses": "Deuteronomy 10:12-11:32",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/6.json"
+    },
+    {
+     "unit": 7,
+     "serial_number": 80,
+     "title": "Deuteronomic Law Code",
+     "start": {
+      "chapter": 12,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 21,
+      "verse": 9
+     },
+     "verses": "Deuteronomy 12:1-21:9",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/7.json"
+    },
+    {
+     "unit": 8,
+     "serial_number": 81,
+     "title": "Case Laws",
+     "start": {
+      "chapter": 21,
+      "verse": 10
+     },
+     "end": {
+      "chapter": 25,
+      "verse": 4
+     },
+     "verses": "Deuteronomy 21:10-25:4",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 82,
+     "title": "Firstfruits and Covenant Ceremony",
+     "start": {
+      "chapter": 25,
+      "verse": 5
+     },
+     "end": {
+      "chapter": 27,
+      "verse": 26
+     },
+     "verses": "Deuteronomy 25:5-27:26",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/9.json"
+    },
+    {
+     "unit": 10,
+     "serial_number": 83,
+     "title": "Blessings and Curses",
+     "start": {
+      "chapter": 28,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 28,
+      "verse": 68
+     },
+     "verses": "Deuteronomy 28:1-28:68",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/10.json"
+    },
+    {
+     "unit": 11,
+     "serial_number": 84,
+     "title": "Covenant Renewal",
+     "start": {
+      "chapter": 28,
+      "verse": 69
+     },
+     "end": {
+      "chapter": 30,
+      "verse": 20
+     },
+     "verses": "Deuteronomy 28:69-30:20",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/11.json"
+    },
+    {
+     "unit": 12,
+     "serial_number": 85,
+     "title": "Song of Moses",
+     "start": {
+      "chapter": 31,
+      "verse": 1
+     },
+     "end": {
+      "chapter": 32,
+      "verse": 47
+     },
+     "verses": "Deuteronomy 31:1-32:47",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/12.json"
+    },
+    {
+     "unit": 13,
+     "serial_number": 86,
+     "title": "Death of Moses",
+     "start": {
+      "chapter": 32,
+      "verse": 48
+     },
+     "end": {
+      "chapter": 34,
+      "verse": 12
+     },
+     "verses": "Deuteronomy 32:48-34:12",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/13.json"
+    }
+   ]
+  }
+ },
+ "by_chapter": {
+  "Genesis": {
+   "1": [
+    1
+   ],
+   "2": [
+    1,
+    2
+   ],
+   "3": [
+    2
+   ],
+   "4": [
+    2
+   ],
+   "5": [
+    3
+   ],
+   "6": [
+    3
+   ],
+   "7": [
+    3
+   ],
+   "8": [
+    3
+   ],
+   "9": [
+    3
+   ],
+   "10": [
+    3
+   ],
+   "11": [
+    4,
+    5
+   ],
+   "12": [
+    5
+   ],
+   "13": [
+    5,
+    6
+   ],
+   "14": [
+    6
+   ],
+   "15": [
+    7
+   ],
+   "16": [
+    7
+   ],
+   "17": [
+    7
+   ],
+   "18": [
+    8
+   ],
+   "19": [
+    8
+   ],
+   "20": [
+    9
+   ],
+   "21": [
+    9
+   ],
+   "22": [
+    9,
+    10
+   ],
+   "23": [
+    10
+   ],
+   "24": [
+    10
+   ],
+   "25": [
+    10,
+    11
+   ],
+   "26": [
+    12,
+    13
+   ],
+   "27": [
+    13
+   ],
+   "28": [
+    13,
+    14
+   ],
+   "29": [
+    14
+   ],
+   "30": [
+    14
+   ],
+   "31": [
+    14
+   ],
+   "32": [
+    14,
+    15
+   ],
+   "33": [
+    15,
+    16
+   ],
+   "34": [
+    16
+   ],
+   "35": [
+    16
+   ],
+   "36": [
+    17
+   ],
+   "37": [
+    17
+   ],
+   "38": [
+    17
+   ],
+   "39": [
+    17
+   ],
+   "40": [
+    17
+   ],
+   "41": [
+    17,
+    18
+   ],
+   "42": [
+    18
+   ],
+   "43": [
+    18
+   ],
+   "44": [
+    18
+   ],
+   "45": [
+    18
+   ],
+   "46": [
+    18
+   ],
+   "47": [
+    18,
+    19
+   ],
+   "48": [
+    19
+   ],
+   "49": [
+    19
+   ],
+   "50": [
+    19
+   ]
+  },
+  "Exodus": {
+   "1": [
+    1
+   ],
+   "2": [
+    1
+   ],
+   "3": [
+    1
+   ],
+   "4": [
+    1,
+    2
+   ],
+   "5": [
+    2
+   ],
+   "6": [
+    2,
+    3
+   ],
+   "7": [
+    3
+   ],
+   "8": [
+    3
+   ],
+   "9": [
+    3
+   ],
+   "10": [
+    3
+   ],
+   "11": [
+    3
+   ],
+   "12": [
+    4
+   ],
+   "13": [
+    4,
+    5
+   ],
+   "14": [
+    5
+   ],
+   "15": [
+    5,
+    6
+   ],
+   "16": [
+    6
+   ],
+   "17": [
+    6
+   ],
+   "18": [
+    7
+   ],
+   "19": [
+    7
+   ],
+   "20": [
+    7
+   ],
+   "21": [
+    8
+   ],
+   "22": [
+    8,
+    9
+   ],
+   "23": [
+    9,
+    10
+   ],
+   "24": [
+    10
+   ],
+   "25": [
+    11
+   ],
+   "26": [
+    11
+   ],
+   "27": [
+    11
+   ],
+   "28": [
+    12
+   ],
+   "29": [
+    13,
+    14
+   ],
+   "30": [
+    14
+   ],
+   "31": [
+    14,
+    15
+   ],
+   "32": [
+    15
+   ],
+   "33": [
+    15
+   ],
+   "34": [
+    15
+   ],
+   "35": [
+    16
+   ],
+   "36": [
+    16,
+    17
+   ],
+   "37": [
+    17
+   ],
+   "38": [
+    17,
+    18
+   ],
+   "39": [
+    18,
+    19
+   ],
+   "40": [
+    19
+   ]
+  },
+  "Leviticus": {
+   "1": [
+    1
+   ],
+   "2": [
+    1
+   ],
+   "3": [
+    1
+   ],
+   "4": [
+    2
+   ],
+   "5": [
+    2
+   ],
+   "6": [
+    3
+   ],
+   "7": [
+    3
+   ],
+   "8": [
+    4
+   ],
+   "9": [
+    4
+   ],
+   "10": [
+    4
+   ],
+   "11": [
+    5
+   ],
+   "12": [
+    6
+   ],
+   "13": [
+    7,
+    8
+   ],
+   "14": [
+    8
+   ],
+   "15": [
+    9
+   ],
+   "16": [
+    10
+   ],
+   "17": [
+    11
+   ],
+   "18": [
+    12
+   ],
+   "19": [
+    13
+   ],
+   "20": [
+    14
+   ],
+   "21": [
+    15
+   ],
+   "22": [
+    16,
+    17
+   ],
+   "23": [
+    18
+   ],
+   "24": [
+    19
+   ],
+   "25": [
+    20
+   ],
+   "26": [
+    21
+   ],
+   "27": [
+    22
+   ]
+  },
+  "Numbers": {
+   "1": [
+    1
+   ],
+   "2": [
+    1
+   ],
+   "3": [
+    1
+   ],
+   "4": [
+    1
+   ],
+   "5": [
+    2
+   ],
+   "6": [
+    2,
+    3
+   ],
+   "7": [
+    3
+   ],
+   "8": [
+    3
+   ],
+   "9": [
+    3
+   ],
+   "10": [
+    3
+   ],
+   "11": [
+    4
+   ],
+   "12": [
+    4
+   ],
+   "13": [
+    5
+   ],
+   "14": [
+    5
+   ],
+   "15": [
+    6,
+    7
+   ],
+   "16": [
+    7
+   ],
+   "17": [
+    7,
+    8
+   ],
+   "18": [
+    8
+   ],
+   "19": [
+    8
+   ],
+   "20": [
+    9
+   ],
+   "21": [
+    9
+   ],
+   "22": [
+    9,
+    10
+   ],
+   "23": [
+    10
+   ],
+   "24": [
+    10
+   ],
+   "25": [
+    10
+   ],
+   "26": [
+    11
+   ],
+   "27": [
+    11
+   ],
+   "28": [
+    12
+   ],
+   "29": [
+    12
+   ],
+   "30": [
+    12
+   ],
+   "31": [
+    13
+   ],
+   "32": [
+    13
+   ],
+   "33": [
+    13
+   ],
+   "34": [
+    13
+   ],
+   "35": [
+    13
+   ],
+   "36": [
+    13
+   ]
+  },
+  "Deuteronomy": {
+   "1": [
+    1
+   ],
+   "2": [
+    1
+   ],
+   "3": [
+    1
+   ],
+   "4": [
+    2
+   ],
+   "5": [
+    3
+   ],
+   "6": [
+    3,
+    4
+   ],
+   "7": [
+    4
+   ],
+   "8": [
+    4
+   ],
+   "9": [
+    5
+   ],
+   "10": [
+    5,
+    6
+   ],
+   "11": [
+    6
+   ],
+   "12": [
+    7
+   ],
+   "13": [
+    7
+   ],
+   "14": [
+    7
+   ],
+   "15": [
+    7
+   ],
+   "16": [
+    7
+   ],
+   "17": [
+    7
+   ],
+   "18": [
+    7
+   ],
+   "19": [
+    7
+   ],
+   "20": [
+    7
+   ],
+   "21": [
+    7,
+    8
+   ],
+   "22": [
+    8
+   ],
+   "23": [
+    8
+   ],
+   "24": [
+    8
+   ],
+   "25": [
+    8,
+    9
+   ],
+   "26": [
+    9
+   ],
+   "27": [
+    9
+   ],
+   "28": [
+    10,
+    11
+   ],
+   "29": [
+    11
+   ],
+   "30": [
+    11
+   ],
+   "31": [
+    12
+   ],
+   "32": [
+    12,
+    13
+   ],
+   "33": [
+    13
+   ],
+   "34": [
+    13
+   ]
+  }
+ }
+}
