@@ -9,6 +9,10 @@ on:
 jobs:
   update-sitemap:
     runs-on: ubuntu-latest
+    # the job commits the refreshed sitemap back, so it needs write access;
+    # without this the default token is read-only and the push fails with exit 128
+    permissions:
+      contents: write
     if: "!contains(github.event.head_commit.message, 'Auto-update sitemap')"
     steps:
       - uses: actions/checkout@v4
@@ -38,4 +42,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml
           git commit -m "Auto-update sitemap lastmod dates"
+          # rebase first so a push made while this job was running does not fail it
+          git pull --rebase origin main
           git push

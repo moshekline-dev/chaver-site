@@ -641,10 +641,14 @@ span in the API comes from that edition.</p>
 <p>It was then checked against the <a href="/torah-weave/data/">Torah Units Dataset</a>, which was
 compiled separately. Eighty-four of the eighty-six units reproduce that dataset&rsquo;s recorded shape
 exactly, row by row, and 918 of its 938 cell and subdivision verse ranges match to the verse.</p>
-<p>Seven points of substance remain where the two disagree &mdash; five verse ranges and two unit
-shapes. They are listed in <a href="/torah-weave/api/discrepancies.json"><code>discrepancies.json</code></a>,
-with the value each source gives. Neither source has been altered to agree with the other. That file
-also lists nine places in the printed edition where a verse reference could not be read.</p>
+<p>Five verse ranges that once disagreed have since been resolved. Each was traced to a unit
+heading that contradicted the verses set in its own table &mdash; in four of the five the heading cut
+a cell in the middle, which the table structure does not allow &mdash; and the dataset was corrected
+to agree with the tables in its version 1.1. <strong>All 86 units now agree on the verses they
+cover.</strong> Two differences of shape remain, in Leviticus 18 and Deuteronomy 6.
+All of this is recorded in <a href="/torah-weave/api/discrepancies.json"><code>discrepancies.json</code></a>:
+what differed, what was decided and why, the seven unit headings that still disagree with their own
+tables, and the three places where a verse number could not be read.</p>
 </section>
 
 <section class="commentary-section">
