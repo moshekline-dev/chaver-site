@@ -1,0 +1,2444 @@
+{
+ "_credit": {
+  "dataset": "The Structured Torah",
+  "version": "2026-09-rev1",
+  "attribution": "Moshe Kline, The Structured Torah (chaver.com)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "website": "https://chaver.com",
+  "documentation": "https://chaver.com/torah-weave/api/index.json",
+  "schema": "https://chaver.com/torah-weave/api/schema.json",
+  "canonical": "https://chaver.com/torah-weave/api/by-parashah.json"
+ },
+ "about": "The weekly Torah reading as a way into this dataset. Most people find their place in the Torah by parashah rather than by chapter, so this file maps each of the fifty-four parashiyot to the literary units it touches, and each unit to the parashiyot it falls in.",
+ "source_of_the_parashah_divisions": "The parashah boundaries are the standard ones, taken from Sefaria’s index of the Five Books. They are not a product of this research and have not been adjusted to fit it.",
+ "how_to_use": "Find the parashah by name or number and read its units list. Each entry says whether that unit lies wholly inside the parashah or continues past it, and gives the verses the two have in common. by_unit does the reverse, naming the parashiyot each unit falls in.",
+ "relationship": {
+  "note": "The two divisions are independent of one another. They are not in conflict; they answer different questions. The parashiyot divide the Torah for reading aloud across a year; the units divide it by literary composition. Where they coincide is as informative as where they do not, and both are recorded here without adjustment.",
+  "parashiyot": 54,
+  "units": 86,
+  "parashah_starts_that_are_also_a_unit_start": 24,
+  "parashiyot_that_are_exactly_one_unit": 2,
+  "parashiyot_made_of_whole_units_only": 10,
+  "parashiyot_that_divide_a_unit": 44,
+  "units_lying_within_a_single_parashah": 57,
+  "units_spanning_two_parashiyot": 28,
+  "units_spanning_three_parashiyot": 1
+ },
+ "parashiyot": [
+  {
+   "parashah": 1,
+   "name": "Bereshit",
+   "name_he": "בראשית",
+   "book": "Genesis",
+   "verses": "Genesis 1:1-6:8",
+   "start": {
+    "chapter": 1,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 6,
+    "verse": 8
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 1,
+     "serial_number": 1,
+     "title": "Creation",
+     "verses": "Genesis 1:1-2:3",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 1:1-2:3",
+     "url": "https://chaver.com/torah-weave/api/genesis/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 2,
+     "title": "Generations of Heaven and Earth",
+     "verses": "Genesis 2:4-4:26",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 2:4-4:26",
+     "url": "https://chaver.com/torah-weave/api/genesis/2.json"
+    },
+    {
+     "unit": 3,
+     "serial_number": 3,
+     "title": "Book of Generations of Adam",
+     "verses": "Genesis 5:1-10:32",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 5:1-6:8",
+     "url": "https://chaver.com/torah-weave/api/genesis/3.json"
+    }
+   ]
+  },
+  {
+   "parashah": 2,
+   "name": "Noach",
+   "name_he": "נח",
+   "book": "Genesis",
+   "verses": "Genesis 6:9-11:32",
+   "start": {
+    "chapter": 6,
+    "verse": 9
+   },
+   "end": {
+    "chapter": 11,
+    "verse": 32
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 3,
+     "serial_number": 3,
+     "title": "Book of Generations of Adam",
+     "verses": "Genesis 5:1-10:32",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 6:9-10:32",
+     "url": "https://chaver.com/torah-weave/api/genesis/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 4,
+     "title": "Tower of Babel",
+     "verses": "Genesis 11:1-11:9",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 11:1-11:9",
+     "url": "https://chaver.com/torah-weave/api/genesis/4.json"
+    },
+    {
+     "unit": 5,
+     "serial_number": 5,
+     "title": "Call of Abraham",
+     "verses": "Genesis 11:10-13:4",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 11:10-11:32",
+     "url": "https://chaver.com/torah-weave/api/genesis/5.json"
+    }
+   ]
+  },
+  {
+   "parashah": 3,
+   "name": "Lech Lecha",
+   "name_he": "לך לך",
+   "book": "Genesis",
+   "verses": "Genesis 12:1-17:27",
+   "start": {
+    "chapter": 12,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 17,
+    "verse": 27
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 5,
+     "serial_number": 5,
+     "title": "Call of Abraham",
+     "verses": "Genesis 11:10-13:4",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 12:1-13:4",
+     "url": "https://chaver.com/torah-weave/api/genesis/5.json"
+    },
+    {
+     "unit": 6,
+     "serial_number": 6,
+     "title": "Abraham and Lot",
+     "verses": "Genesis 13:5-14:24",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 13:5-14:24",
+     "url": "https://chaver.com/torah-weave/api/genesis/6.json"
+    },
+    {
+     "unit": 7,
+     "serial_number": 7,
+     "title": "Covenant Ceremonies",
+     "verses": "Genesis 15:1-17:27",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 15:1-17:27",
+     "url": "https://chaver.com/torah-weave/api/genesis/7.json"
+    }
+   ]
+  },
+  {
+   "parashah": 4,
+   "name": "Vayera",
+   "name_he": "וירא",
+   "book": "Genesis",
+   "verses": "Genesis 18:1-22:24",
+   "start": {
+    "chapter": 18,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 22,
+    "verse": 24
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 8,
+     "serial_number": 8,
+     "title": "Sodom and Lot",
+     "verses": "Genesis 18:1-19:38",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 18:1-19:38",
+     "url": "https://chaver.com/torah-weave/api/genesis/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 9,
+     "title": "Abraham and Abimelech",
+     "verses": "Genesis 20:1-22:19",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 20:1-22:19",
+     "url": "https://chaver.com/torah-weave/api/genesis/9.json"
+    },
+    {
+     "unit": 10,
+     "serial_number": 10,
+     "title": "Death of Sarah",
+     "verses": "Genesis 22:20-25:11",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 22:20-22:24",
+     "url": "https://chaver.com/torah-weave/api/genesis/10.json"
+    }
+   ]
+  },
+  {
+   "parashah": 5,
+   "name": "Chayei Sara",
+   "name_he": "חיי שרה",
+   "book": "Genesis",
+   "verses": "Genesis 23:1-25:18",
+   "start": {
+    "chapter": 23,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 25,
+    "verse": 18
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 10,
+     "serial_number": 10,
+     "title": "Death of Sarah",
+     "verses": "Genesis 22:20-25:11",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 23:1-25:11",
+     "url": "https://chaver.com/torah-weave/api/genesis/10.json"
+    },
+    {
+     "unit": 11,
+     "serial_number": 11,
+     "title": "Birth of Jacob and Esau",
+     "verses": "Genesis 25:12-25:34",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 25:12-25:18",
+     "url": "https://chaver.com/torah-weave/api/genesis/11.json"
+    }
+   ]
+  },
+  {
+   "parashah": 6,
+   "name": "Toldot",
+   "name_he": "תולדות",
+   "book": "Genesis",
+   "verses": "Genesis 25:19-28:9",
+   "start": {
+    "chapter": 25,
+    "verse": 19
+   },
+   "end": {
+    "chapter": 28,
+    "verse": 9
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 11,
+     "serial_number": 11,
+     "title": "Birth of Jacob and Esau",
+     "verses": "Genesis 25:12-25:34",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 25:19-25:34",
+     "url": "https://chaver.com/torah-weave/api/genesis/11.json"
+    },
+    {
+     "unit": 12,
+     "serial_number": 12,
+     "title": "Isaac in Gerar",
+     "verses": "Genesis 26:1-26:33",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 26:1-26:33",
+     "url": "https://chaver.com/torah-weave/api/genesis/12.json"
+    },
+    {
+     "unit": 13,
+     "serial_number": 13,
+     "title": "Blessing Deception",
+     "verses": "Genesis 26:34-28:9",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 26:34-28:9",
+     "url": "https://chaver.com/torah-weave/api/genesis/13.json"
+    }
+   ]
+  },
+  {
+   "parashah": 7,
+   "name": "Vayetzei",
+   "name_he": "ויצא",
+   "book": "Genesis",
+   "verses": "Genesis 28:10-32:3",
+   "start": {
+    "chapter": 28,
+    "verse": 10
+   },
+   "end": {
+    "chapter": 32,
+    "verse": 3
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 14,
+     "serial_number": 14,
+     "title": "Jacob with Laban",
+     "verses": "Genesis 28:10-32:3",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 28:10-32:3",
+     "url": "https://chaver.com/torah-weave/api/genesis/14.json"
+    }
+   ]
+  },
+  {
+   "parashah": 8,
+   "name": "Vayishlach",
+   "name_he": "וישלח",
+   "book": "Genesis",
+   "verses": "Genesis 32:4-36:43",
+   "start": {
+    "chapter": 32,
+    "verse": 4
+   },
+   "end": {
+    "chapter": 36,
+    "verse": 43
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 15,
+     "serial_number": 15,
+     "title": "Jacob and Esau Reconciliation",
+     "verses": "Genesis 32:4-33:16",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 32:4-33:16",
+     "url": "https://chaver.com/torah-weave/api/genesis/15.json"
+    },
+    {
+     "unit": 16,
+     "serial_number": 16,
+     "title": "Transition to Isaac's Death",
+     "verses": "Genesis 33:17-35:29",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Genesis 33:17-35:29",
+     "url": "https://chaver.com/torah-weave/api/genesis/16.json"
+    },
+    {
+     "unit": 17,
+     "serial_number": 17,
+     "title": "Joseph Sold and Elevated",
+     "verses": "Genesis 36:1-41:45",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 36:1-36:43",
+     "url": "https://chaver.com/torah-weave/api/genesis/17.json"
+    }
+   ]
+  },
+  {
+   "parashah": 9,
+   "name": "Vayeshev",
+   "name_he": "וישב",
+   "book": "Genesis",
+   "verses": "Genesis 37:1-40:23",
+   "start": {
+    "chapter": 37,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 40,
+    "verse": 23
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 17,
+     "serial_number": 17,
+     "title": "Joseph Sold and Elevated",
+     "verses": "Genesis 36:1-41:45",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 37:1-40:23",
+     "url": "https://chaver.com/torah-weave/api/genesis/17.json"
+    }
+   ]
+  },
+  {
+   "parashah": 10,
+   "name": "Miketz",
+   "name_he": "מקץ",
+   "book": "Genesis",
+   "verses": "Genesis 41:1-44:17",
+   "start": {
+    "chapter": 41,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 44,
+    "verse": 17
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 17,
+     "serial_number": 17,
+     "title": "Joseph Sold and Elevated",
+     "verses": "Genesis 36:1-41:45",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 41:1-41:45",
+     "url": "https://chaver.com/torah-weave/api/genesis/17.json"
+    },
+    {
+     "unit": 18,
+     "serial_number": 18,
+     "title": "Joseph's Administration",
+     "verses": "Genesis 41:46-47:26",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 41:46-44:17",
+     "url": "https://chaver.com/torah-weave/api/genesis/18.json"
+    }
+   ]
+  },
+  {
+   "parashah": 11,
+   "name": "Vayigash",
+   "name_he": "ויגש",
+   "book": "Genesis",
+   "verses": "Genesis 44:18-47:27",
+   "start": {
+    "chapter": 44,
+    "verse": 18
+   },
+   "end": {
+    "chapter": 47,
+    "verse": 27
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 18,
+     "serial_number": 18,
+     "title": "Joseph's Administration",
+     "verses": "Genesis 41:46-47:26",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 44:18-47:26",
+     "url": "https://chaver.com/torah-weave/api/genesis/18.json"
+    },
+    {
+     "unit": 19,
+     "serial_number": 19,
+     "title": "Blessings and Deaths",
+     "verses": "Genesis 47:27-50:26",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 47:27-47:27",
+     "url": "https://chaver.com/torah-weave/api/genesis/19.json"
+    }
+   ]
+  },
+  {
+   "parashah": 12,
+   "name": "Vayechi",
+   "name_he": "ויחי",
+   "book": "Genesis",
+   "verses": "Genesis 47:28-50:26",
+   "start": {
+    "chapter": 47,
+    "verse": 28
+   },
+   "end": {
+    "chapter": 50,
+    "verse": 26
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 19,
+     "serial_number": 19,
+     "title": "Blessings and Deaths",
+     "verses": "Genesis 47:27-50:26",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Genesis 47:28-50:26",
+     "url": "https://chaver.com/torah-weave/api/genesis/19.json"
+    }
+   ]
+  },
+  {
+   "parashah": 13,
+   "name": "Shemot",
+   "name_he": "שמות",
+   "book": "Exodus",
+   "verses": "Exodus 1:1-6:1",
+   "start": {
+    "chapter": 1,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 6,
+    "verse": 1
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 1,
+     "serial_number": 20,
+     "title": "Oppression and Call of Moses",
+     "verses": "Exodus 1:1-4:18",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 1:1-4:18",
+     "url": "https://chaver.com/torah-weave/api/exodus/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 21,
+     "title": "Moses Before Pharaoh",
+     "verses": "Exodus 4:19-6:28",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Exodus 4:19-6:1",
+     "url": "https://chaver.com/torah-weave/api/exodus/2.json"
+    }
+   ]
+  },
+  {
+   "parashah": 14,
+   "name": "Vaera",
+   "name_he": "וארא",
+   "book": "Exodus",
+   "verses": "Exodus 6:2-9:35",
+   "start": {
+    "chapter": 6,
+    "verse": 2
+   },
+   "end": {
+    "chapter": 9,
+    "verse": 35
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 2,
+     "serial_number": 21,
+     "title": "Moses Before Pharaoh",
+     "verses": "Exodus 4:19-6:28",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Exodus 6:2-6:28",
+     "url": "https://chaver.com/torah-weave/api/exodus/2.json"
+    },
+    {
+     "unit": 3,
+     "serial_number": 22,
+     "title": "The Nine Signs",
+     "verses": "Exodus 6:29-11:10",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Exodus 6:29-9:35",
+     "url": "https://chaver.com/torah-weave/api/exodus/3.json"
+    }
+   ]
+  },
+  {
+   "parashah": 15,
+   "name": "Bo",
+   "name_he": "בא",
+   "book": "Exodus",
+   "verses": "Exodus 10:1-13:16",
+   "start": {
+    "chapter": 10,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 13,
+    "verse": 16
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 3,
+     "serial_number": 22,
+     "title": "The Nine Signs",
+     "verses": "Exodus 6:29-11:10",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Exodus 10:1-11:10",
+     "url": "https://chaver.com/torah-weave/api/exodus/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 23,
+     "title": "Passover and Exodus",
+     "verses": "Exodus 12:1-13:16",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 12:1-13:16",
+     "url": "https://chaver.com/torah-weave/api/exodus/4.json"
+    }
+   ]
+  },
+  {
+   "parashah": 16,
+   "name": "Beshalach",
+   "name_he": "בשלח",
+   "book": "Exodus",
+   "verses": "Exodus 13:17-17:16",
+   "start": {
+    "chapter": 13,
+    "verse": 17
+   },
+   "end": {
+    "chapter": 17,
+    "verse": 16
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 5,
+     "serial_number": 24,
+     "title": "Crossing the Sea",
+     "verses": "Exodus 13:17-15:21",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 13:17-15:21",
+     "url": "https://chaver.com/torah-weave/api/exodus/5.json"
+    },
+    {
+     "unit": 6,
+     "serial_number": 25,
+     "title": "Wilderness Complaints",
+     "verses": "Exodus 15:22-17:16",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 15:22-17:16",
+     "url": "https://chaver.com/torah-weave/api/exodus/6.json"
+    }
+   ]
+  },
+  {
+   "parashah": 17,
+   "name": "Yitro",
+   "name_he": "יתרו",
+   "book": "Exodus",
+   "verses": "Exodus 18:1-20:23",
+   "start": {
+    "chapter": 18,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 20,
+    "verse": 23
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 7,
+     "serial_number": 26,
+     "title": "Sinai and the Decalogue",
+     "verses": "Exodus 18:1-20:22",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 18:1-20:22",
+     "url": "https://chaver.com/torah-weave/api/exodus/7.json"
+    }
+   ]
+  },
+  {
+   "parashah": 18,
+   "name": "Mishpatim",
+   "name_he": "משפטים",
+   "book": "Exodus",
+   "verses": "Exodus 21:1-24:18",
+   "start": {
+    "chapter": 21,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 24,
+    "verse": 18
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 8,
+     "serial_number": 27,
+     "title": "Covenant Code I",
+     "verses": "Exodus 21:1-22:16",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 21:1-22:16",
+     "url": "https://chaver.com/torah-weave/api/exodus/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 28,
+     "title": "Covenant Code II",
+     "verses": "Exodus 22:17-23:19",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 22:17-23:19",
+     "url": "https://chaver.com/torah-weave/api/exodus/9.json"
+    },
+    {
+     "unit": 10,
+     "serial_number": 29,
+     "title": "Covenant Ratification",
+     "verses": "Exodus 23:20-24:18",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 23:20-24:18",
+     "url": "https://chaver.com/torah-weave/api/exodus/10.json"
+    }
+   ]
+  },
+  {
+   "parashah": 19,
+   "name": "Terumah",
+   "name_he": "תרומה",
+   "book": "Exodus",
+   "verses": "Exodus 25:1-27:19",
+   "start": {
+    "chapter": 25,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 27,
+    "verse": 19
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 11,
+     "serial_number": 30,
+     "title": "Tabernacle Instructions I",
+     "verses": "Exodus 25:1-27:21",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Exodus 25:1-27:19",
+     "url": "https://chaver.com/torah-weave/api/exodus/11.json"
+    }
+   ]
+  },
+  {
+   "parashah": 20,
+   "name": "Tetzaveh",
+   "name_he": "תצוה",
+   "book": "Exodus",
+   "verses": "Exodus 27:20-30:10",
+   "start": {
+    "chapter": 27,
+    "verse": 20
+   },
+   "end": {
+    "chapter": 30,
+    "verse": 10
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 11,
+     "serial_number": 30,
+     "title": "Tabernacle Instructions I",
+     "verses": "Exodus 25:1-27:21",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Exodus 27:20-27:21",
+     "url": "https://chaver.com/torah-weave/api/exodus/11.json"
+    },
+    {
+     "unit": 12,
+     "serial_number": 31,
+     "title": "Priestly Vestments",
+     "verses": "Exodus 28:1-28:43",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 28:1-28:43",
+     "url": "https://chaver.com/torah-weave/api/exodus/12.json"
+    },
+    {
+     "unit": 13,
+     "serial_number": 32,
+     "title": "Consecration and Altars",
+     "verses": "Exodus 29:1-29:37",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 29:1-29:37",
+     "url": "https://chaver.com/torah-weave/api/exodus/13.json"
+    },
+    {
+     "unit": 14,
+     "serial_number": 33,
+     "title": "Tabernacle Supplements",
+     "verses": "Exodus 29:38-31:17",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Exodus 29:38-30:10",
+     "url": "https://chaver.com/torah-weave/api/exodus/14.json"
+    }
+   ]
+  },
+  {
+   "parashah": 21,
+   "name": "Ki Tisa",
+   "name_he": "כי תשא",
+   "book": "Exodus",
+   "verses": "Exodus 30:11-34:35",
+   "start": {
+    "chapter": 30,
+    "verse": 11
+   },
+   "end": {
+    "chapter": 34,
+    "verse": 35
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 14,
+     "serial_number": 33,
+     "title": "Tabernacle Supplements",
+     "verses": "Exodus 29:38-31:17",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Exodus 30:11-31:17",
+     "url": "https://chaver.com/torah-weave/api/exodus/14.json"
+    },
+    {
+     "unit": 15,
+     "serial_number": 34,
+     "title": "Golden Calf and Renewal",
+     "verses": "Exodus 31:18-34:35",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 31:18-34:35",
+     "url": "https://chaver.com/torah-weave/api/exodus/15.json"
+    }
+   ]
+  },
+  {
+   "parashah": 22,
+   "name": "Vayakhel",
+   "name_he": "ויקהל",
+   "book": "Exodus",
+   "verses": "Exodus 35:1-38:20",
+   "start": {
+    "chapter": 35,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 38,
+    "verse": 20
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 16,
+     "serial_number": 35,
+     "title": "Tabernacle Contributions",
+     "verses": "Exodus 35:1-36:7",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 35:1-36:7",
+     "url": "https://chaver.com/torah-weave/api/exodus/16.json"
+    },
+    {
+     "unit": 17,
+     "serial_number": 36,
+     "title": "Tabernacle Construction",
+     "verses": "Exodus 36:8-38:20",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 36:8-38:20",
+     "url": "https://chaver.com/torah-weave/api/exodus/17.json"
+    }
+   ]
+  },
+  {
+   "parashah": 23,
+   "name": "Pekudei",
+   "name_he": "פקודי",
+   "book": "Exodus",
+   "verses": "Exodus 38:21-40:38",
+   "start": {
+    "chapter": 38,
+    "verse": 21
+   },
+   "end": {
+    "chapter": 40,
+    "verse": 38
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 18,
+     "serial_number": 37,
+     "title": "Tabernacle Inventory",
+     "verses": "Exodus 38:21-39:31",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 38:21-39:31",
+     "url": "https://chaver.com/torah-weave/api/exodus/18.json"
+    },
+    {
+     "unit": 19,
+     "serial_number": 38,
+     "title": "Tabernacle Erected",
+     "verses": "Exodus 39:32-40:38",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Exodus 39:32-40:38",
+     "url": "https://chaver.com/torah-weave/api/exodus/19.json"
+    }
+   ]
+  },
+  {
+   "parashah": 24,
+   "name": "Vayikra",
+   "name_he": "ויקרא",
+   "book": "Leviticus",
+   "verses": "Leviticus 1:1-5:26",
+   "start": {
+    "chapter": 1,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 5,
+    "verse": 26
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 1,
+     "serial_number": 39,
+     "title": "Three Spontaneous Private Sacrifices",
+     "verses": "Leviticus 1:1-3:17",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 1:1-3:17",
+     "url": "https://chaver.com/torah-weave/api/leviticus/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 40,
+     "title": "Sacrifices for Expiation",
+     "verses": "Leviticus 4:1-5:26",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 4:1-5:26",
+     "url": "https://chaver.com/torah-weave/api/leviticus/2.json"
+    }
+   ]
+  },
+  {
+   "parashah": 25,
+   "name": "Tzav",
+   "name_he": "צו",
+   "book": "Leviticus",
+   "verses": "Leviticus 6:1-8:36",
+   "start": {
+    "chapter": 6,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 8,
+    "verse": 36
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 3,
+     "serial_number": 41,
+     "title": "Administrative Order",
+     "verses": "Leviticus 6:1-7:38",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 6:1-7:38",
+     "url": "https://chaver.com/torah-weave/api/leviticus/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 42,
+     "title": "Inauguration of the Cult",
+     "verses": "Leviticus 8:1-10:20",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Leviticus 8:1-8:36",
+     "url": "https://chaver.com/torah-weave/api/leviticus/4.json"
+    }
+   ]
+  },
+  {
+   "parashah": 26,
+   "name": "Shmini",
+   "name_he": "שמיני",
+   "book": "Leviticus",
+   "verses": "Leviticus 9:1-11:47",
+   "start": {
+    "chapter": 9,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 11,
+    "verse": 47
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 4,
+     "serial_number": 42,
+     "title": "Inauguration of the Cult",
+     "verses": "Leviticus 8:1-10:20",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Leviticus 9:1-10:20",
+     "url": "https://chaver.com/torah-weave/api/leviticus/4.json"
+    },
+    {
+     "unit": 5,
+     "serial_number": 43,
+     "title": "Diet Laws",
+     "verses": "Leviticus 11:1-11:47",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 11:1-11:47",
+     "url": "https://chaver.com/torah-weave/api/leviticus/5.json"
+    }
+   ]
+  },
+  {
+   "parashah": 27,
+   "name": "Tazria",
+   "name_he": "תזריע",
+   "book": "Leviticus",
+   "verses": "Leviticus 12:1-13:59",
+   "start": {
+    "chapter": 12,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 13,
+    "verse": 59
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 6,
+     "serial_number": 44,
+     "title": "Childbirth",
+     "verses": "Leviticus 12:1-12:8",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 12:1-12:8",
+     "url": "https://chaver.com/torah-weave/api/leviticus/6.json"
+    },
+    {
+     "unit": 7,
+     "serial_number": 45,
+     "title": "Scale Disease Diagnosis",
+     "verses": "Leviticus 13:1-13:46",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 13:1-13:46",
+     "url": "https://chaver.com/torah-weave/api/leviticus/7.json"
+    },
+    {
+     "unit": 8,
+     "serial_number": 46,
+     "title": "Purification Procedures",
+     "verses": "Leviticus 13:47-14:57",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Leviticus 13:47-13:59",
+     "url": "https://chaver.com/torah-weave/api/leviticus/8.json"
+    }
+   ]
+  },
+  {
+   "parashah": 28,
+   "name": "Metzora",
+   "name_he": "מצורע",
+   "book": "Leviticus",
+   "verses": "Leviticus 14:1-15:33",
+   "start": {
+    "chapter": 14,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 15,
+    "verse": 33
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 8,
+     "serial_number": 46,
+     "title": "Purification Procedures",
+     "verses": "Leviticus 13:47-14:57",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Leviticus 14:1-14:57",
+     "url": "https://chaver.com/torah-weave/api/leviticus/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 47,
+     "title": "Genital Discharges",
+     "verses": "Leviticus 15:1-15:33",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 15:1-15:33",
+     "url": "https://chaver.com/torah-weave/api/leviticus/9.json"
+    }
+   ]
+  },
+  {
+   "parashah": 29,
+   "name": "Achrei Mot",
+   "name_he": "אחרי מות",
+   "book": "Leviticus",
+   "verses": "Leviticus 16:1-18:30",
+   "start": {
+    "chapter": 16,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 18,
+    "verse": 30
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 10,
+     "serial_number": 48,
+     "title": "Day of Purgation",
+     "verses": "Leviticus 16:1-16:34",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 16:1-16:34",
+     "url": "https://chaver.com/torah-weave/api/leviticus/10.json"
+    },
+    {
+     "unit": 11,
+     "serial_number": 49,
+     "title": "Slaughter and Blood",
+     "verses": "Leviticus 17:1-17:16",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 17:1-17:16",
+     "url": "https://chaver.com/torah-weave/api/leviticus/11.json"
+    },
+    {
+     "unit": 12,
+     "serial_number": 50,
+     "title": "Illicit Sexual Practices",
+     "verses": "Leviticus 18:1-18:30",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 18:1-18:30",
+     "url": "https://chaver.com/torah-weave/api/leviticus/12.json"
+    }
+   ]
+  },
+  {
+   "parashah": 30,
+   "name": "Kedoshim",
+   "name_he": "קדושים",
+   "book": "Leviticus",
+   "verses": "Leviticus 19:1-20:27",
+   "start": {
+    "chapter": 19,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 20,
+    "verse": 27
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 13,
+     "serial_number": 51,
+     "title": "Holiness",
+     "verses": "Leviticus 19:1-19:37",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 19:1-19:37",
+     "url": "https://chaver.com/torah-weave/api/leviticus/13.json"
+    },
+    {
+     "unit": 14,
+     "serial_number": 52,
+     "title": "Penalties for Sexual Offenses",
+     "verses": "Leviticus 20:1-20:27",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 20:1-20:27",
+     "url": "https://chaver.com/torah-weave/api/leviticus/14.json"
+    }
+   ]
+  },
+  {
+   "parashah": 31,
+   "name": "Emor",
+   "name_he": "אמור",
+   "book": "Leviticus",
+   "verses": "Leviticus 21:1-24:23",
+   "start": {
+    "chapter": 21,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 24,
+    "verse": 23
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": true,
+   "units": [
+    {
+     "unit": 15,
+     "serial_number": 53,
+     "title": "Instructions for Priests",
+     "verses": "Leviticus 21:1-21:24",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 21:1-21:24",
+     "url": "https://chaver.com/torah-weave/api/leviticus/15.json"
+    },
+    {
+     "unit": 16,
+     "serial_number": 54,
+     "title": "Sanctified Objects",
+     "verses": "Leviticus 22:1-22:25",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 22:1-22:25",
+     "url": "https://chaver.com/torah-weave/api/leviticus/16.json"
+    },
+    {
+     "unit": 17,
+     "serial_number": 55,
+     "title": "Animal Birth",
+     "verses": "Leviticus 22:26-22:33",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 22:26-22:33",
+     "url": "https://chaver.com/torah-weave/api/leviticus/17.json"
+    },
+    {
+     "unit": 18,
+     "serial_number": 56,
+     "title": "Holiday Calendar",
+     "verses": "Leviticus 23:1-23:44",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 23:1-23:44",
+     "url": "https://chaver.com/torah-weave/api/leviticus/18.json"
+    },
+    {
+     "unit": 19,
+     "serial_number": 57,
+     "title": "Tabernacle Oil and Blasphemy",
+     "verses": "Leviticus 24:1-24:23",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 24:1-24:23",
+     "url": "https://chaver.com/torah-weave/api/leviticus/19.json"
+    }
+   ]
+  },
+  {
+   "parashah": 32,
+   "name": "Behar",
+   "name_he": "בהר",
+   "book": "Leviticus",
+   "verses": "Leviticus 25:1-26:2",
+   "start": {
+    "chapter": 25,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 26,
+    "verse": 2
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 20,
+     "serial_number": 58,
+     "title": "Jubilee",
+     "verses": "Leviticus 25:1-25:55",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 25:1-25:55",
+     "url": "https://chaver.com/torah-weave/api/leviticus/20.json"
+    },
+    {
+     "unit": 21,
+     "serial_number": 59,
+     "title": "Blessings and Curses",
+     "verses": "Leviticus 26:1-26:46",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Leviticus 26:1-26:2",
+     "url": "https://chaver.com/torah-weave/api/leviticus/21.json"
+    }
+   ]
+  },
+  {
+   "parashah": 33,
+   "name": "Bechukotai",
+   "name_he": "בחוקתי",
+   "book": "Leviticus",
+   "verses": "Leviticus 26:3-27:34",
+   "start": {
+    "chapter": 26,
+    "verse": 3
+   },
+   "end": {
+    "chapter": 27,
+    "verse": 34
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 21,
+     "serial_number": 59,
+     "title": "Blessings and Curses",
+     "verses": "Leviticus 26:1-26:46",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Leviticus 26:3-26:46",
+     "url": "https://chaver.com/torah-weave/api/leviticus/21.json"
+    },
+    {
+     "unit": 22,
+     "serial_number": 60,
+     "title": "Consecrations and Redemption",
+     "verses": "Leviticus 27:1-27:34",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Leviticus 27:1-27:34",
+     "url": "https://chaver.com/torah-weave/api/leviticus/22.json"
+    }
+   ]
+  },
+  {
+   "parashah": 34,
+   "name": "Bamidbar",
+   "name_he": "במדבר",
+   "book": "Numbers",
+   "verses": "Numbers 1:1-4:20",
+   "start": {
+    "chapter": 1,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 4,
+    "verse": 20
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 1,
+     "serial_number": 61,
+     "title": "Census and Camp",
+     "verses": "Numbers 1:1-4:49",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 1:1-4:20",
+     "url": "https://chaver.com/torah-weave/api/numbers/1.json"
+    }
+   ]
+  },
+  {
+   "parashah": 35,
+   "name": "Nasso",
+   "name_he": "נשא",
+   "book": "Numbers",
+   "verses": "Numbers 4:21-7:89",
+   "start": {
+    "chapter": 4,
+    "verse": 21
+   },
+   "end": {
+    "chapter": 7,
+    "verse": 89
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 1,
+     "serial_number": 61,
+     "title": "Census and Camp",
+     "verses": "Numbers 1:1-4:49",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 4:21-4:49",
+     "url": "https://chaver.com/torah-weave/api/numbers/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 62,
+     "title": "Camp Purity and Nazirite",
+     "verses": "Numbers 5:1-6:21",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Numbers 5:1-6:21",
+     "url": "https://chaver.com/torah-weave/api/numbers/2.json"
+    },
+    {
+     "unit": 3,
+     "serial_number": 63,
+     "title": "Priestly Blessing and Departure",
+     "verses": "Numbers 6:22-10:36",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 6:22-7:89",
+     "url": "https://chaver.com/torah-weave/api/numbers/3.json"
+    }
+   ]
+  },
+  {
+   "parashah": 36,
+   "name": "Beha'alotcha",
+   "name_he": "בהעלותך",
+   "book": "Numbers",
+   "verses": "Numbers 8:1-12:16",
+   "start": {
+    "chapter": 8,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 12,
+    "verse": 16
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 3,
+     "serial_number": 63,
+     "title": "Priestly Blessing and Departure",
+     "verses": "Numbers 6:22-10:36",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 8:1-10:36",
+     "url": "https://chaver.com/torah-weave/api/numbers/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 64,
+     "title": "Complaints Against Moses",
+     "verses": "Numbers 11:1-12:16",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Numbers 11:1-12:16",
+     "url": "https://chaver.com/torah-weave/api/numbers/4.json"
+    }
+   ]
+  },
+  {
+   "parashah": 37,
+   "name": "Sh'lach",
+   "name_he": "שלח",
+   "book": "Numbers",
+   "verses": "Numbers 13:1-15:41",
+   "start": {
+    "chapter": 13,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 15,
+    "verse": 41
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 5,
+     "serial_number": 65,
+     "title": "The Spies",
+     "verses": "Numbers 13:1-14:45",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Numbers 13:1-14:45",
+     "url": "https://chaver.com/torah-weave/api/numbers/5.json"
+    },
+    {
+     "unit": 6,
+     "serial_number": 66,
+     "title": "Supplementary Laws",
+     "verses": "Numbers 15:1-15:31",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Numbers 15:1-15:31",
+     "url": "https://chaver.com/torah-weave/api/numbers/6.json"
+    },
+    {
+     "unit": 7,
+     "serial_number": 67,
+     "title": "Korah Rebellion",
+     "verses": "Numbers 15:32-17:26",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 15:32-15:41",
+     "url": "https://chaver.com/torah-weave/api/numbers/7.json"
+    }
+   ]
+  },
+  {
+   "parashah": 38,
+   "name": "Korach",
+   "name_he": "קרח",
+   "book": "Numbers",
+   "verses": "Numbers 16:1-18:32",
+   "start": {
+    "chapter": 16,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 18,
+    "verse": 32
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 7,
+     "serial_number": 67,
+     "title": "Korah Rebellion",
+     "verses": "Numbers 15:32-17:26",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 16:1-17:26",
+     "url": "https://chaver.com/torah-weave/api/numbers/7.json"
+    },
+    {
+     "unit": 8,
+     "serial_number": 68,
+     "title": "Priestly Duties and Red Heifer",
+     "verses": "Numbers 17:27-19:22",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 17:27-18:32",
+     "url": "https://chaver.com/torah-weave/api/numbers/8.json"
+    }
+   ]
+  },
+  {
+   "parashah": 39,
+   "name": "Chukat",
+   "name_he": "חקת",
+   "book": "Numbers",
+   "verses": "Numbers 19:1-22:1",
+   "start": {
+    "chapter": 19,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 22,
+    "verse": 1
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 8,
+     "serial_number": 68,
+     "title": "Priestly Duties and Red Heifer",
+     "verses": "Numbers 17:27-19:22",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 19:1-19:22",
+     "url": "https://chaver.com/torah-weave/api/numbers/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 69,
+     "title": "Death of Miriam and Aaron",
+     "verses": "Numbers 20:1-22:1",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Numbers 20:1-22:1",
+     "url": "https://chaver.com/torah-weave/api/numbers/9.json"
+    }
+   ]
+  },
+  {
+   "parashah": 40,
+   "name": "Balak",
+   "name_he": "בלק",
+   "book": "Numbers",
+   "verses": "Numbers 22:2-25:9",
+   "start": {
+    "chapter": 22,
+    "verse": 2
+   },
+   "end": {
+    "chapter": 25,
+    "verse": 9
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 10,
+     "serial_number": 70,
+     "title": "Balaam",
+     "verses": "Numbers 22:2-25:18",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 22:2-25:9",
+     "url": "https://chaver.com/torah-weave/api/numbers/10.json"
+    }
+   ]
+  },
+  {
+   "parashah": 41,
+   "name": "Pinchas",
+   "name_he": "פנחס",
+   "book": "Numbers",
+   "verses": "Numbers 25:10-30:1",
+   "start": {
+    "chapter": 25,
+    "verse": 10
+   },
+   "end": {
+    "chapter": 30,
+    "verse": 1
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 10,
+     "serial_number": 70,
+     "title": "Balaam",
+     "verses": "Numbers 22:2-25:18",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 25:10-25:18",
+     "url": "https://chaver.com/torah-weave/api/numbers/10.json"
+    },
+    {
+     "unit": 11,
+     "serial_number": 71,
+     "title": "Second Census and Succession",
+     "verses": "Numbers 26:1-27:23",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Numbers 26:1-27:23",
+     "url": "https://chaver.com/torah-weave/api/numbers/11.json"
+    },
+    {
+     "unit": 12,
+     "serial_number": 72,
+     "title": "Festival Calendar and Vows",
+     "verses": "Numbers 28:1-30:17",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 28:1-30:1",
+     "url": "https://chaver.com/torah-weave/api/numbers/12.json"
+    }
+   ]
+  },
+  {
+   "parashah": 42,
+   "name": "Matot",
+   "name_he": "מטות",
+   "book": "Numbers",
+   "verses": "Numbers 30:2-32:42",
+   "start": {
+    "chapter": 30,
+    "verse": 2
+   },
+   "end": {
+    "chapter": 32,
+    "verse": 42
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 12,
+     "serial_number": 72,
+     "title": "Festival Calendar and Vows",
+     "verses": "Numbers 28:1-30:17",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 30:2-30:17",
+     "url": "https://chaver.com/torah-weave/api/numbers/12.json"
+    },
+    {
+     "unit": 13,
+     "serial_number": 73,
+     "title": "War, Boundaries, and Inheritance",
+     "verses": "Numbers 31:1-36:13",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 31:1-32:42",
+     "url": "https://chaver.com/torah-weave/api/numbers/13.json"
+    }
+   ]
+  },
+  {
+   "parashah": 43,
+   "name": "Masei",
+   "name_he": "מסעי",
+   "book": "Numbers",
+   "verses": "Numbers 33:1-36:13",
+   "start": {
+    "chapter": 33,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 36,
+    "verse": 13
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 13,
+     "serial_number": 73,
+     "title": "War, Boundaries, and Inheritance",
+     "verses": "Numbers 31:1-36:13",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Numbers 33:1-36:13",
+     "url": "https://chaver.com/torah-weave/api/numbers/13.json"
+    }
+   ]
+  },
+  {
+   "parashah": 44,
+   "name": "Devarim",
+   "name_he": "דברים",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 1:1-3:22",
+   "start": {
+    "chapter": 1,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 3,
+    "verse": 22
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 1,
+     "serial_number": 74,
+     "title": "Historical Prologue",
+     "verses": "Deuteronomy 1:1-3:29",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 1:1-3:22",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/1.json"
+    }
+   ]
+  },
+  {
+   "parashah": 45,
+   "name": "Vaetchanan",
+   "name_he": "ואתחנן",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 3:23-7:11",
+   "start": {
+    "chapter": 3,
+    "verse": 23
+   },
+   "end": {
+    "chapter": 7,
+    "verse": 11
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 1,
+     "serial_number": 74,
+     "title": "Historical Prologue",
+     "verses": "Deuteronomy 1:1-3:29",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 3:23-3:29",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/1.json"
+    },
+    {
+     "unit": 2,
+     "serial_number": 75,
+     "title": "Exhortation to Obedience",
+     "verses": "Deuteronomy 4:1-4:49",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Deuteronomy 4:1-4:49",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/2.json"
+    },
+    {
+     "unit": 3,
+     "serial_number": 76,
+     "title": "The Decalogue Restated",
+     "verses": "Deuteronomy 5:1-6:3",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Deuteronomy 5:1-6:3",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/3.json"
+    },
+    {
+     "unit": 4,
+     "serial_number": 77,
+     "title": "Shema and Wilderness Lessons",
+     "verses": "Deuteronomy 6:4-8:20",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 6:4-7:11",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/4.json"
+    }
+   ]
+  },
+  {
+   "parashah": 46,
+   "name": "Eikev",
+   "name_he": "עקב",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 7:12-11:25",
+   "start": {
+    "chapter": 7,
+    "verse": 12
+   },
+   "end": {
+    "chapter": 11,
+    "verse": 25
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 4,
+     "serial_number": 77,
+     "title": "Shema and Wilderness Lessons",
+     "verses": "Deuteronomy 6:4-8:20",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 7:12-8:20",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/4.json"
+    },
+    {
+     "unit": 5,
+     "serial_number": 78,
+     "title": "Golden Calf Recalled",
+     "verses": "Deuteronomy 9:1-10:11",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Deuteronomy 9:1-10:11",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/5.json"
+    },
+    {
+     "unit": 6,
+     "serial_number": 79,
+     "title": "Love and Obey",
+     "verses": "Deuteronomy 10:12-11:32",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 10:12-11:25",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/6.json"
+    }
+   ]
+  },
+  {
+   "parashah": 47,
+   "name": "Re'eh",
+   "name_he": "ראה",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 11:26-16:17",
+   "start": {
+    "chapter": 11,
+    "verse": 26
+   },
+   "end": {
+    "chapter": 16,
+    "verse": 17
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 6,
+     "serial_number": 79,
+     "title": "Love and Obey",
+     "verses": "Deuteronomy 10:12-11:32",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 11:26-11:32",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/6.json"
+    },
+    {
+     "unit": 7,
+     "serial_number": 80,
+     "title": "Deuteronomic Law Code",
+     "verses": "Deuteronomy 12:1-21:9",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 12:1-16:17",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/7.json"
+    }
+   ]
+  },
+  {
+   "parashah": 48,
+   "name": "Shoftim",
+   "name_he": "שופטים",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 16:18-21:9",
+   "start": {
+    "chapter": 16,
+    "verse": 18
+   },
+   "end": {
+    "chapter": 21,
+    "verse": 9
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 7,
+     "serial_number": 80,
+     "title": "Deuteronomic Law Code",
+     "verses": "Deuteronomy 12:1-21:9",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 16:18-21:9",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/7.json"
+    }
+   ]
+  },
+  {
+   "parashah": 49,
+   "name": "Ki Teitzei",
+   "name_he": "כי תצא",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 21:10-25:19",
+   "start": {
+    "chapter": 21,
+    "verse": 10
+   },
+   "end": {
+    "chapter": 25,
+    "verse": 19
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 8,
+     "serial_number": 81,
+     "title": "Case Laws",
+     "verses": "Deuteronomy 21:10-25:4",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Deuteronomy 21:10-25:4",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/8.json"
+    },
+    {
+     "unit": 9,
+     "serial_number": 82,
+     "title": "Firstfruits and Covenant Ceremony",
+     "verses": "Deuteronomy 25:5-27:26",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 25:5-25:19",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/9.json"
+    }
+   ]
+  },
+  {
+   "parashah": 50,
+   "name": "Ki Tavo",
+   "name_he": "כי תבוא",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 26:1-29:8",
+   "start": {
+    "chapter": 26,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 29,
+    "verse": 8
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 9,
+     "serial_number": 82,
+     "title": "Firstfruits and Covenant Ceremony",
+     "verses": "Deuteronomy 25:5-27:26",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 26:1-27:26",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/9.json"
+    },
+    {
+     "unit": 10,
+     "serial_number": 83,
+     "title": "Blessings and Curses",
+     "verses": "Deuteronomy 28:1-28:68",
+     "lies_wholly_within_this_parashah": true,
+     "overlap": "Deuteronomy 28:1-28:68",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/10.json"
+    },
+    {
+     "unit": 11,
+     "serial_number": 84,
+     "title": "Covenant Renewal",
+     "verses": "Deuteronomy 28:69-30:20",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 28:69-29:8",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/11.json"
+    }
+   ]
+  },
+  {
+   "parashah": 51,
+   "name": "Nitzavim",
+   "name_he": "נצבים",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 29:9-30:20",
+   "start": {
+    "chapter": 29,
+    "verse": 9
+   },
+   "end": {
+    "chapter": 30,
+    "verse": 20
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 11,
+     "serial_number": 84,
+     "title": "Covenant Renewal",
+     "verses": "Deuteronomy 28:69-30:20",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 29:9-30:20",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/11.json"
+    }
+   ]
+  },
+  {
+   "parashah": 52,
+   "name": "Vayeilech",
+   "name_he": "וילך",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 31:1-30",
+   "start": {
+    "chapter": 31,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 31,
+    "verse": 30
+   },
+   "begins_where_a_unit_begins": true,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 12,
+     "serial_number": 85,
+     "title": "Song of Moses",
+     "verses": "Deuteronomy 31:1-32:47",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 31:1-31:30",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/12.json"
+    }
+   ]
+  },
+  {
+   "parashah": 53,
+   "name": "Ha'Azinu",
+   "name_he": "האזינו",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 32:1-52",
+   "start": {
+    "chapter": 32,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 32,
+    "verse": 52
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": false,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 12,
+     "serial_number": 85,
+     "title": "Song of Moses",
+     "verses": "Deuteronomy 31:1-32:47",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 32:1-32:47",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/12.json"
+    },
+    {
+     "unit": 13,
+     "serial_number": 86,
+     "title": "Death of Moses",
+     "verses": "Deuteronomy 32:48-34:12",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 32:48-32:52",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/13.json"
+    }
+   ]
+  },
+  {
+   "parashah": 54,
+   "name": "V'Zot HaBerachah",
+   "name_he": "וזאת הברכה",
+   "book": "Deuteronomy",
+   "verses": "Deuteronomy 33:1-34:12",
+   "start": {
+    "chapter": 33,
+    "verse": 1
+   },
+   "end": {
+    "chapter": 34,
+    "verse": 12
+   },
+   "begins_where_a_unit_begins": false,
+   "ends_where_a_unit_ends": true,
+   "made_of_whole_units_only": false,
+   "units": [
+    {
+     "unit": 13,
+     "serial_number": 86,
+     "title": "Death of Moses",
+     "verses": "Deuteronomy 32:48-34:12",
+     "lies_wholly_within_this_parashah": false,
+     "overlap": "Deuteronomy 33:1-34:12",
+     "url": "https://chaver.com/torah-weave/api/deuteronomy/13.json"
+    }
+   ]
+  }
+ ],
+ "by_unit": {
+  "deuteronomy/1": [
+   "Devarim",
+   "Vaetchanan"
+  ],
+  "deuteronomy/10": [
+   "Ki Tavo"
+  ],
+  "deuteronomy/11": [
+   "Ki Tavo",
+   "Nitzavim"
+  ],
+  "deuteronomy/12": [
+   "Vayeilech",
+   "Ha'Azinu"
+  ],
+  "deuteronomy/13": [
+   "Ha'Azinu",
+   "V'Zot HaBerachah"
+  ],
+  "deuteronomy/2": [
+   "Vaetchanan"
+  ],
+  "deuteronomy/3": [
+   "Vaetchanan"
+  ],
+  "deuteronomy/4": [
+   "Vaetchanan",
+   "Eikev"
+  ],
+  "deuteronomy/5": [
+   "Eikev"
+  ],
+  "deuteronomy/6": [
+   "Eikev",
+   "Re'eh"
+  ],
+  "deuteronomy/7": [
+   "Re'eh",
+   "Shoftim"
+  ],
+  "deuteronomy/8": [
+   "Ki Teitzei"
+  ],
+  "deuteronomy/9": [
+   "Ki Teitzei",
+   "Ki Tavo"
+  ],
+  "exodus/1": [
+   "Shemot"
+  ],
+  "exodus/10": [
+   "Mishpatim"
+  ],
+  "exodus/11": [
+   "Terumah",
+   "Tetzaveh"
+  ],
+  "exodus/12": [
+   "Tetzaveh"
+  ],
+  "exodus/13": [
+   "Tetzaveh"
+  ],
+  "exodus/14": [
+   "Tetzaveh",
+   "Ki Tisa"
+  ],
+  "exodus/15": [
+   "Ki Tisa"
+  ],
+  "exodus/16": [
+   "Vayakhel"
+  ],
+  "exodus/17": [
+   "Vayakhel"
+  ],
+  "exodus/18": [
+   "Pekudei"
+  ],
+  "exodus/19": [
+   "Pekudei"
+  ],
+  "exodus/2": [
+   "Shemot",
+   "Vaera"
+  ],
+  "exodus/3": [
+   "Vaera",
+   "Bo"
+  ],
+  "exodus/4": [
+   "Bo"
+  ],
+  "exodus/5": [
+   "Beshalach"
+  ],
+  "exodus/6": [
+   "Beshalach"
+  ],
+  "exodus/7": [
+   "Yitro"
+  ],
+  "exodus/8": [
+   "Mishpatim"
+  ],
+  "exodus/9": [
+   "Mishpatim"
+  ],
+  "genesis/1": [
+   "Bereshit"
+  ],
+  "genesis/10": [
+   "Vayera",
+   "Chayei Sara"
+  ],
+  "genesis/11": [
+   "Chayei Sara",
+   "Toldot"
+  ],
+  "genesis/12": [
+   "Toldot"
+  ],
+  "genesis/13": [
+   "Toldot"
+  ],
+  "genesis/14": [
+   "Vayetzei"
+  ],
+  "genesis/15": [
+   "Vayishlach"
+  ],
+  "genesis/16": [
+   "Vayishlach"
+  ],
+  "genesis/17": [
+   "Vayishlach",
+   "Vayeshev",
+   "Miketz"
+  ],
+  "genesis/18": [
+   "Miketz",
+   "Vayigash"
+  ],
+  "genesis/19": [
+   "Vayigash",
+   "Vayechi"
+  ],
+  "genesis/2": [
+   "Bereshit"
+  ],
+  "genesis/3": [
+   "Bereshit",
+   "Noach"
+  ],
+  "genesis/4": [
+   "Noach"
+  ],
+  "genesis/5": [
+   "Noach",
+   "Lech Lecha"
+  ],
+  "genesis/6": [
+   "Lech Lecha"
+  ],
+  "genesis/7": [
+   "Lech Lecha"
+  ],
+  "genesis/8": [
+   "Vayera"
+  ],
+  "genesis/9": [
+   "Vayera"
+  ],
+  "leviticus/1": [
+   "Vayikra"
+  ],
+  "leviticus/10": [
+   "Achrei Mot"
+  ],
+  "leviticus/11": [
+   "Achrei Mot"
+  ],
+  "leviticus/12": [
+   "Achrei Mot"
+  ],
+  "leviticus/13": [
+   "Kedoshim"
+  ],
+  "leviticus/14": [
+   "Kedoshim"
+  ],
+  "leviticus/15": [
+   "Emor"
+  ],
+  "leviticus/16": [
+   "Emor"
+  ],
+  "leviticus/17": [
+   "Emor"
+  ],
+  "leviticus/18": [
+   "Emor"
+  ],
+  "leviticus/19": [
+   "Emor"
+  ],
+  "leviticus/2": [
+   "Vayikra"
+  ],
+  "leviticus/20": [
+   "Behar"
+  ],
+  "leviticus/21": [
+   "Behar",
+   "Bechukotai"
+  ],
+  "leviticus/22": [
+   "Bechukotai"
+  ],
+  "leviticus/3": [
+   "Tzav"
+  ],
+  "leviticus/4": [
+   "Tzav",
+   "Shmini"
+  ],
+  "leviticus/5": [
+   "Shmini"
+  ],
+  "leviticus/6": [
+   "Tazria"
+  ],
+  "leviticus/7": [
+   "Tazria"
+  ],
+  "leviticus/8": [
+   "Tazria",
+   "Metzora"
+  ],
+  "leviticus/9": [
+   "Metzora"
+  ],
+  "numbers/1": [
+   "Bamidbar",
+   "Nasso"
+  ],
+  "numbers/10": [
+   "Balak",
+   "Pinchas"
+  ],
+  "numbers/11": [
+   "Pinchas"
+  ],
+  "numbers/12": [
+   "Pinchas",
+   "Matot"
+  ],
+  "numbers/13": [
+   "Matot",
+   "Masei"
+  ],
+  "numbers/2": [
+   "Nasso"
+  ],
+  "numbers/3": [
+   "Nasso",
+   "Beha'alotcha"
+  ],
+  "numbers/4": [
+   "Beha'alotcha"
+  ],
+  "numbers/5": [
+   "Sh'lach"
+  ],
+  "numbers/6": [
+   "Sh'lach"
+  ],
+  "numbers/7": [
+   "Sh'lach",
+   "Korach"
+  ],
+  "numbers/8": [
+   "Korach",
+   "Chukat"
+  ],
+  "numbers/9": [
+   "Chukat"
+  ]
+ }
+}
