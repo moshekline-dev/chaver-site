@@ -363,6 +363,26 @@
         }
     }
     </style>
+    <style type="text/css">
+    /* Numbers book map: 5x5 grid around a central unit */
+    .numbers-map .color-ffccaa { background-color: #ffccaa !important; border-color: #e8926f !important; }
+    .numbers-map .color-c8e6d2 { background-color: #d4f2dd !important; border-color: #9fddb0 !important; }
+    .numbers-map .matrix-table { font-size: 1em; }
+    .numbers-map .numbers-matrix td { padding: 6px; vertical-align: middle; width: 20%; }
+    .numbers-map .numbers-matrix td.empty-cell { background: transparent; border: none; }
+    .numbers-map .unit { min-height: 0; padding: 12px 10px; text-align: center; }
+    .numbers-map .unit-title { font-size: 1.1em; font-weight: 700; margin-bottom: 2px; }
+    .numbers-map .unit-reference { font-size: 1.1em; font-weight: 600; font-style: normal; color: #1a1a1a; margin-bottom: 6px; }
+    .numbers-map .unit-description { font-size: 0.95em; line-height: 1.35; color: #333; }
+    .numbers-map .click-instruction { text-align: center; color: #666; font-style: italic; margin-bottom: 10px; }
+    .numbers-map .map-legend { text-align: center; font-size: 0.9em; color: #444; margin: 10px 0 30px; }
+    .numbers-map .legend-swatch { display: inline-block; width: 14px; height: 14px; border: 1px solid #999; border-radius: 3px; vertical-align: middle; margin-right: 4px; }
+    .numbers-map .legend-swatch.color-ffe6e6 { border: 2px solid #cc0066; }
+    @media (max-width: 768px) {
+        .numbers-map .matrix-table { min-width: 700px; }
+        .numbers-map .unit-title, .numbers-map .unit-reference { font-size: 1em; }
+    }
+    </style>
 </head>
 <body>
     <!-- ==========================================
@@ -434,8 +454,34 @@
          MAIN CONTENT AREA - EDITABLE REGION
          ========================================== -->
     <main class="content-wrapper">
-        <div>
-<h1>Numbers Book Map</h1>
+<div class="torah-map-container numbers-map">
+    <h1 class="torah-map-title" itemprop="headline">Numbers Book Map</h1>
+
+    <p class="torah-map-intro" itemprop="description">The thirteen units of Numbers arranged in a 5×5 grid around a central unit.</p>
+
+    <p class="click-instruction">Click on any unit to view its full text with literary structure. Hover over a unit for a fuller description.</p>
+
+    <div class="mobile-notice">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5090f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 5px;"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
+        Swipe left/right to explore the complete map
+    </div>
+
+    <div class="matrix-wrapper">
+        <table class="matrix-table numbers-matrix">
+            <tbody>
+                <tr><td class="empty-cell"></td><td><a href="/torah-weave/Numbers/numbers-unit-4/numbers-unit-4" class="unit color-c8e6d2" rel="bookmark" title="Complaints about food; seventy elders receive the spirit; quail and plague; Miriam and Aaron challenge Moses; Miriam&#x27;s leprosy and healing."><div class="unit-title">Unit 4</div><div class="unit-reference">11:1-12:16</div><div class="unit-description">Complaints about food</div></a></td><td><a href="/torah-weave/Numbers/numbers-unit-6/numbers-unit-6" class="unit color-c8e6d2" rel="bookmark" title="Laws concerning offerings in the land; same law for native and sojourner; unintentional and intentional sin; penalties for Sabbath violation."><div class="unit-title">Unit 6</div><div class="unit-reference">15:1-15:31</div><div class="unit-description">Laws concerning offerings in the land</div></a></td><td><a href="/torah-weave/Numbers/numbers-unit-9/numbers-unit-9" class="unit color-c8e6d2" rel="bookmark" title="Death of Miriam; Moses strikes the rock; Aaron&#x27;s death; bronze serpent; victory over Sihon and Og; arrival at the plains of Moab."><div class="unit-title">Unit 9</div><div class="unit-reference">20:1-22:1</div><div class="unit-description">Death of Miriam</div></a></td><td class="empty-cell"></td></tr>
+                <tr><td><a href="/torah-weave/Numbers/numbers-unit-1/numbers-unit-1" class="unit color-ffccaa" rel="bookmark" title="Census of the military-eligible men; tribal arrangement around the tabernacle; duties of the Levitical families for transporting sacred items."><div class="unit-title">Unit 1</div><div class="unit-reference">1:1-4:49</div><div class="unit-description">Census of the military-eligible men</div></a></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><a href="/torah-weave/Numbers/numbers-unit-11/numbers-unit-11" class="unit color-ffccaa" rel="bookmark" title="Second census of Israel; inheritance laws for daughters; Moses views the promised land from Mount Abarim; Joshua appointed as successor."><div class="unit-title">Unit 11</div><div class="unit-reference">26:1-27:23</div><div class="unit-description">Second census of Israel</div></a></td></tr>
+                <tr><td><a href="/torah-weave/Numbers/numbers-unit-2/numbers-unit-2" class="unit color-ffccaa" rel="bookmark" title="Removal of the impure; restitution for wrongs; trial of suspected adultery (sotah); Nazirite vow regulations."><div class="unit-title">Unit 2</div><div class="unit-reference">5:1-6:21</div><div class="unit-description">Removal of the impure</div></a></td><td class="empty-cell"></td><td><a href="/torah-weave/Numbers/numbers-unit-7/numbers-unit-7" class="unit color-ffe6e6 pivot" rel="bookmark" title="Sabbath violation; tassels command; Korah&#x27;s rebellion against Moses and Aaron&#x27;s authority; Aaron&#x27;s staff buds to confirm his priesthood."><div class="unit-title">Unit 7</div><div class="unit-reference">15:32-17:26</div><div class="unit-description">Sabbath violation</div></a></td><td class="empty-cell"></td><td><a href="/torah-weave/Numbers/numbers-unit-12/numbers-unit-12" class="unit color-ffccaa" rel="bookmark" title="Detailed calendar of offerings for daily, weekly, monthly and festival occasions; regulations concerning vows, particularly for women."><div class="unit-title">Unit 12</div><div class="unit-reference">28:1-30:17</div><div class="unit-description">Detailed calendar of offerings for daily, weekly, monthly and festival occasions</div></a></td></tr>
+                <tr><td><a href="/torah-weave/Numbers/numbers-unit-3/numbers-unit-3" class="unit color-ffccaa" rel="bookmark" title="Tribal offerings for tabernacle dedication; consecration of Levites; Passover regulations; departure from Sinai with cloud and trumpet guidance."><div class="unit-title">Unit 3</div><div class="unit-reference">7:1-10:36</div><div class="unit-description">Tribal offerings for tabernacle dedication</div></a></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><a href="/torah-weave/Numbers/numbers-unit-13/numbers-unit-13" class="unit color-ffccaa" rel="bookmark" title="War against Midian; division of spoils; Transjordanian tribes&#x27; settlement; journey summary; cities of refuge; inheritance laws for daughters."><div class="unit-title">Unit 13</div><div class="unit-reference">31:1-36:13</div><div class="unit-description">War against Midian</div></a></td></tr>
+                <tr><td class="empty-cell"></td><td><a href="/torah-weave/Numbers/numbers-unit-5/numbers-unit-5" class="unit color-c8e6d2" rel="bookmark" title="Twelve spies explore Canaan; their negative report; people&#x27;s rebellion; divine judgment of 40 years in wilderness; failed attempt to enter the land."><div class="unit-title">Unit 5</div><div class="unit-reference">13:1-14:45</div><div class="unit-description">Twelve spies explore Canaan</div></a></td><td><a href="/torah-weave/Numbers/numbers-unit-8/numbers-unit-8" class="unit color-c8e6d2" rel="bookmark" title="Duties and portions for priests and Levites; ritual of the red heifer; purification procedures for contact with the dead."><div class="unit-title">Unit 8</div><div class="unit-reference">17:27-19:22</div><div class="unit-description">Duties and portions for priests and Levites</div></a></td><td><a href="/torah-weave/Numbers/numbers-unit-10/numbers-unit-10" class="unit color-c8e6d2" rel="bookmark" title="Balak hires Balaam to curse Israel; Balaam&#x27;s oracles bless Israel instead; Israelites worship Baal of Peor; Phinehas&#x27; zealous action stops the plague."><div class="unit-title">Unit 10</div><div class="unit-reference">22:2-25:18</div><div class="unit-description">Balak hires Balaam to curse Israel</div></a></td><td class="empty-cell"></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="map-legend"><span class="legend-swatch color-ffccaa"></span> Units 1–3, 11–13 &nbsp; <span class="legend-swatch color-c8e6d2"></span> Units 4–6, 8–10 &nbsp; <span class="legend-swatch color-ffe6e6"></span> Unit 7 (central unit)</p>
+</div>
+
+        <div class="torah-book-description">
 <h2>Numbers within the Torah Weave Structure</h2>
 <div>
 <h3>Table of Contents</h3>
