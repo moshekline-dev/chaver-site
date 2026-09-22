@@ -437,50 +437,45 @@
     <main class="content-wrapper">
 <article class="research-article-page">
 <div class="nav-breadcrumb"><a href="/">Home</a> &rarr; <a href="/torah-weave/">Torah Weave</a> &rarr; <a href="/torah-weave/articles/">Articles</a> &rarr; Genesis Unit 1 (1:-2:3)</div>
-<div id="app" class="relative overflow-hidden min-h-screen p-4 flex flex-col items-center justify-center">
-
-        <!-- Highlighting Legend -->
-        <div id="legend" class="absolute top-4 right-4 bg-white p-4 rounded-lg shadow-lg hidden opacity-0 transition-opacity duration-500">
-            <h3 class="font-bold mb-2">Highlighting Legend</h3>
-            <div class="flex items-center mb-1"><span class="inline-block w-4 h-4 rounded-full mr-2 bg-[#3399FF]"></span> Horizontal Parallel</div>
-            <div class="flex items-center mb-1"><span class="inline-block w-4 h-4 rounded-full mr-2 bg-[#C09200]"></span> Vertical Parallel</div>
-            <div class="flex items-center mb-1"><span class="inline-block w-4 h-4 rounded-full mr-2 bg-[lime]"></span> Internal Parallel</div>
-            <div class="flex items-center mb-1"><span class="inline-block w-4 h-4 rounded-full mr-2 bg-[#CC0066]"></span> Closure</div>
-        </div>
-
-        <!-- Plain Text Container -->
-        <div id="plain-text-container" class="transition-opacity duration-500 max-w-2xl mx-auto p-4 bg-white rounded-lg shadow-lg">
-            <!-- Plain text will be inserted here and later transformed -->
-            <h1 class="unit-header">Genesis Unit 1 (1:-2:3)</h1>
-            <div id="plain-text-content" class="torah"></div>
-        </div>
-
-        <!-- Table Container (Initially Hidden) -->
-        <div id="table-container" class="absolute inset-0 flex items-center justify-center hidden opacity-0 transition-opacity duration-500">
-            <table id="scripture-table" class="scripture-table">
-                <!-- Table structure will be built here dynamically -->
-            </table>
-        </div>
-
-        <!-- Narration Box (removed 'hidden' class to control visibility purely by opacity) -->
-        <div id="narration-box" style="opacity: 0;"></div>
-
-        <!-- Control Buttons -->
-        <div id="controls" class="absolute bottom-4 flex space-x-4">
-            <button id="start-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold">
+<div class="relative overflow-hidden min-h-screen p-4 flex flex-col items-center justify-center" id="app">
+<!-- Highlighting Legend -->
+<div class="absolute top-4 right-4 bg-white p-4 rounded-lg shadow-lg hidden opacity-0 transition-opacity duration-500" id="legend">
+<h3 class="font-bold mb-2">Highlighting Legend</h3>
+<div class="flex items-center mb-1"><span class="inline-block w-4 h-4 rounded-full mr-2 bg-[#3399FF]"></span> Horizontal Parallel</div>
+<div class="flex items-center mb-1"><span class="inline-block w-4 h-4 rounded-full mr-2 bg-[#C09200]"></span> Vertical Parallel</div>
+<div class="flex items-center mb-1"><span class="inline-block w-4 h-4 rounded-full mr-2 bg-[lime]"></span> Internal Parallel</div>
+<div class="flex items-center mb-1"><span class="inline-block w-4 h-4 rounded-full mr-2 bg-[#CC0066]"></span> Closure</div>
+</div>
+<!-- Plain Text Container -->
+<div class="transition-opacity duration-500 max-w-2xl mx-auto p-4 bg-white rounded-lg shadow-lg" id="plain-text-container">
+<!-- Plain text will be inserted here and later transformed -->
+<h1 class="unit-header">Genesis Unit 1 (1:-2:3)</h1>
+<div class="torah" id="plain-text-content"></div>
+</div>
+<!-- Table Container (Initially Hidden) -->
+<div class="absolute inset-0 flex items-center justify-center hidden opacity-0 transition-opacity duration-500" id="table-container">
+<table class="scripture-table" id="scripture-table">
+<!-- Table structure will be built here dynamically -->
+</table>
+</div>
+<!-- Narration Box (removed 'hidden' class to control visibility purely by opacity) -->
+<div id="narration-box" style="opacity: 0;"></div>
+<!-- Control Buttons -->
+<div class="absolute bottom-4 flex space-x-4" id="controls">
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold" id="start-btn">
                 Start Demonstration
             </button>
-            <button id="next-btn" class="bg-green-500 hover:bg-green-700 text-white font-bold hidden">
+<button class="bg-green-500 hover:bg-green-700 text-white font-bold hidden" id="next-btn">
                 Next Stage
             </button>
-            <button id="auto-btn" class="bg-purple-500 hover:bg-purple-700 text-white font-bold hidden">
+<button class="bg-purple-500 hover:bg-purple-700 text-white font-bold hidden" id="auto-btn">
                 Auto-Play
             </button>
-            <button id="reset-btn" class="bg-red-500 hover:bg-red-700 text-white font-bold hidden">
+<button class="bg-red-500 hover:bg-red-700 text-white font-bold hidden" id="reset-btn">
                 Reset
             </button>
-        </div>
-    </div>
+</div>
+</div>
 </article>
     </main>
     
