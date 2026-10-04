@@ -208,460 +208,167 @@
   "isPartOf": {"@type": "Book", "name": "The Structured Mishnah", "url": "https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-pdf"}
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6ee;--bg-2:#f2ead8;--bg-3:#e8dcc4;--ink:#1c1610;--ink-mid:#3e2e1e;--ink-light:#5c4630;--ink-faint:#6e5a44;--burg:#7a1f2e;--burg-rule:rgba(122,31,46,.2);--rule:rgba(28,22,16,.1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:19px;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.75;overflow-x:hidden}
+a{color:var(--burg)}
+.cz{font-family:'Cinzel',serif}
+/* nav */
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 2rem;background:var(--burg);position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'Cinzel',serif;font-size:1rem;font-weight:500;letter-spacing:.1em;color:var(--bg);text-decoration:none;text-transform:uppercase}
+.nav-logo span{color:rgba(250,246,238,.7);font-weight:400}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,246,238,.92);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--bg)}
+@media (max-width:760px){.site-nav{flex-direction:column;align-items:flex-start;padding:.9rem 1.1rem}.nav-links{flex-wrap:wrap;gap:.4rem 1.2rem}}
+/* hero */
+.hero{padding:4.5rem 1.5rem 3.5rem;text-align:center;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);position:relative;overflow:hidden}
+.hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.kicker{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--burg);display:block;margin-bottom:1.4rem}
+.hero h1{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.8rem,4.6vw,3rem);line-height:1.15;letter-spacing:.02em;margin-bottom:.9rem}
+.hero .sub{color:var(--ink-light);margin-bottom:1.6rem}
+.hero .lead{font-size:1.05rem;line-height:1.85;color:var(--ink-mid);max-width:560px;margin:0 auto 2.2rem}
+.btn{display:inline-block;font-family:'Cinzel',serif;letter-spacing:.08em;text-decoration:none;border-radius:2px}
+.btn-main{background:var(--burg);color:var(--bg);font-size:.95rem;padding:1.05rem 2.6rem;box-shadow:0 6px 22px rgba(122,31,46,.18)}
+.btn-main:hover{background:#5a1622}
+.alt{margin-top:1.1rem;font-size:.95rem;color:var(--ink-light)}
+.alt a{text-decoration:none;border-bottom:1px solid var(--burg-rule)}
+.fine{margin-top:.5rem;font-size:.9rem;color:var(--ink-faint)}
+.ornament{display:block;margin-top:2.2rem;letter-spacing:.5em;color:rgba(122,31,46,.45)}
+/* facts strip */
+.strip{display:flex;justify-content:center;flex-wrap:wrap;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--bg-2)}
+.strip span{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light);padding:.8rem 1.5rem;border-right:1px solid var(--rule)}
+.strip span:last-child{border-right:0}
+/* sections */
+.section{max-width:760px;margin:0 auto;padding:3.5rem 1.5rem 0}
+.wide{max-width:980px}
+.label{font-family:'Cinzel',serif;font-size:1.15rem;letter-spacing:.06em;text-transform:none;font-weight:500;color:var(--burg);display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem}
+.label::after{content:'';flex:1;height:1px;background:var(--burg-rule)}
+.center-label{justify-content:center;color:var(--burg)}
+.center-label::before{content:'';flex:1;height:1px;background:var(--rule)}
+.center-label::after{background:var(--rule)}
+.prose p{margin-bottom:1.15rem;color:var(--ink-mid);line-height:1.85}
+/* featured card */
+.featured{background:var(--bg);border:1px solid var(--burg-rule);border-left:4px solid var(--burg);padding:2.2rem 2.4rem;box-shadow:0 4px 20px rgba(122,31,46,.06)}
+.featured h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.25rem;color:var(--burg);margin-bottom:1rem;line-height:1.35}
+.featured p{color:var(--ink-mid);margin-bottom:1.3rem}
+.six{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:8px;margin:0 0 1.5rem}
+.six .h{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--burg);padding:0 .2rem .2rem}
+.six .r{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);align-self:center;padding-right:.4rem}
+.six .c{background:var(--bg-2);border:.5px solid var(--burg-rule);padding:.7rem .9rem;font-size:.95rem;color:var(--ink-mid);line-height:1.35}
+.six .c b{font-family:'Cinzel',serif;font-weight:500;color:var(--burg);margin-right:.45rem}
+.go{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.then{margin-top:.7rem;font-size:.95rem;color:var(--ink-light)}
+@media (max-width:640px){.featured{padding:1.4rem 1rem}.six{gap:6px}.six .r{font-size:.72rem;letter-spacing:0;padding-right:.1rem}.six .c{font-size:.85rem;padding:.5rem .5rem}.strip span{flex:1 1 45%;text-align:center;border-bottom:1px solid var(--rule)}}
+/* cards */
+.intro-p{text-align:center;max-width:640px;margin:0 auto 2rem;color:var(--ink-mid);line-height:1.85}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+.card{background:var(--bg-2);border:.5px solid var(--rule);padding:1.5rem 1.5rem 1.3rem}
+.card .num{font-family:'Cinzel',serif;font-size:.82rem;color:var(--ink-faint);letter-spacing:.12em;display:block;margin-bottom:.6rem}
+.card h3{font-family:'Cinzel',serif;font-weight:500;font-size:.95rem;color:var(--ink);margin-bottom:.5rem}
+.card p{font-size:.95rem;line-height:1.6;color:var(--ink-mid)}
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.quote{border-left:3px solid var(--burg);background:var(--bg-2);padding:1.3rem 1.5rem}
+.quote blockquote{font-style:italic;color:var(--ink-mid);line-height:1.7;margin-bottom:.8rem}
+.quote figcaption{font-size:.85rem;color:var(--ink-light)}
+/* folds */
+details{border-bottom:1px solid var(--rule)}
+details summary{cursor:pointer;padding:.85rem 0;font-weight:500;color:var(--ink);list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:'+';display:inline-block;width:1.3rem;color:var(--burg)}
+details[open] summary::before{content:'\2212'}
+details > *:not(summary){margin-left:1.3rem}
+details p{margin-bottom:1rem;color:var(--ink-mid)}
+details.more summary{font-family:'Cinzel',serif;font-weight:400}
+details h3{font-family:'Cinzel',serif;font-weight:500;font-size:.95rem;margin:1.3rem 0 .5rem}
+details h4{font-weight:500;margin:1rem 0 .4rem}
+.final-table{border-collapse:collapse;width:100%;margin:.3rem 0 1rem}
+.final-table th{text-align:left;font-weight:500;padding:.4rem .8rem .4rem 0;width:35%;color:var(--ink-light)}
+.final-table td{padding:.4rem 0;border-bottom:1px solid var(--rule)}
+.publication-note{background:var(--bg-2);padding:1rem 1.2rem;margin:1rem 0}
+/* band */
+.band{background:var(--burg);text-align:center;padding:4rem 1.5rem;margin-top:4rem}
+.band .kicker{color:rgba(250,246,238,.85)}
+.band h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.5rem;color:var(--bg);margin-bottom:.8rem}
+.band p{color:rgba(250,246,238,.95);max-width:560px;margin:0 auto 1.8rem}
+.band .btn-main{background:var(--bg);color:var(--burg);box-shadow:none}
+.band .alt,.band .alt a{color:rgba(250,246,238,.95);border-color:rgba(250,246,238,.35)}
+.footer{background:var(--bg-3);padding:1.6rem 2rem;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem 1.5rem;font-size:.85rem;color:var(--ink-light)}
+.footer a{color:var(--ink-light);text-decoration:none}
 
-
-
-    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
-    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
-
-    
-    <!-- Page-specific style overrides can go here -->
-    
-    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
-    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
-    
-    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
-    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
-    
-    <style type="text/css">
-
-    /* ==========================================
-       CRITICAL DWT LAYOUT STYLES ONLY
-       Everything else comes from main.css
-       ========================================== */
-
-    /* Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* ==========================================
-       MAIN CONTENT AREA LAYOUT
-       ========================================== */
-
-    main.content-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        min-height: 500px;
-    }
-
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
-        margin-bottom: 30px;
-    }
-
-    .footer-section ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .footer-bottom {
-        text-align: center;
-        padding-top: 20px;
-    }
-
-    /* ==========================================
-       RESPONSIVE LAYOUT BREAKPOINTS
-       ========================================== */
-
-    @media (max-width: 768px) {
-
-        /* Landscape phones - hamburger menu */
-        @media (max-height: 500px) and (orientation: landscape) {
-
-            main.content-wrapper {
-                padding: 15px 10px;
-            }
-        }
-
-        /* Content adjustments */
-        main.content-wrapper {
-            padding: 30px 15px;
-        }
-
-        /* Footer adjustments */
-        .footer-content {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        main.content-wrapper {
-            padding: 20px 15px;
-        }
-    }
-
-    /* ==========================================
-       PRINT LAYOUT
-       ========================================== */
-
-    @media print {
-        header.site-header,
-        footer.site-footer {
-            display: none;
-        }
-
-        main.content-wrapper {
-            padding: 0;
-            max-width: 100%;
-        }
-    }
-    </style>
-    
-    <style type="text/css">
-
-    /* ==========================================
-       CRITICAL DWT LAYOUT STYLES ONLY
-       Everything else comes from main.css
-       ========================================== */
-    
-    /* Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    /* ==========================================
-       HEADER LAYOUT STRUCTURE
-       ========================================== */
-    
-    header.site-header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    
-    /* Navigation Container */
-    .main-nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0.3rem 20px;
-    }
-    
-    /* Navigation List */
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-    }
-    
-    nav a {
-        text-decoration: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    
-    /* ==========================================
-       MAIN CONTENT AREA LAYOUT
-       ========================================== */
-    
-    main.content-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        min-height: 500px;
-    }
-    
-    /* ==========================================
-       FOOTER LAYOUT STRUCTURE
-       ========================================== */
-    
-    footer.site-footer {
-        margin-top: 80px;
-        padding: 40px 20px 20px;
-    }
-    
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
-        margin-bottom: 30px;
-    }
-    
-    .footer-section ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .footer-bottom {
-        text-align: center;
-        padding-top: 20px;
-    }
-    
-    /* ==========================================
-       RESPONSIVE LAYOUT BREAKPOINTS
-       ========================================== */
-    
-    @media (max-width: 768px) {
-        /* Mobile header adjustments */
-        header.site-header {
-            position: relative;
-        }
-
-        nav ul {
-            display: none;
-            flex-direction: column;
-            gap: 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
-        
-        nav ul.show {
-            display: flex;
-        }
-        
-        nav li {
-            width: 100%;
-        }
-        
-        nav a {
-            display: block;
-            padding: 1rem;
-        }
-
-        /* Landscape phones - hamburger menu */
-        @media (max-height: 500px) and (orientation: landscape) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 0;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                width: 100%;
-                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav li {
-                width: 100%;
-            }
-            
-            nav a {
-                display: block;
-                padding: 0.75rem 1rem;
-                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
-            }
-            
-            main.content-wrapper {
-                padding: 15px 10px;
-            }
-        }
-        
-        /* Content adjustments */
-        main.content-wrapper {
-            padding: 30px 15px;
-        }
-        
-        /* Footer adjustments */
-        .footer-content {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        main.content-wrapper {
-            padding: 20px 15px;
-        }
-    }
-    
-    /* ==========================================
-       PRINT LAYOUT
-       ========================================== */
-    
-    @media print {
-        header.site-header,
-        footer.site-footer {
-            display: none;
-        }
-        
-        main.content-wrapper {
-            padding: 0;
-            max-width: 100%;
-        }
-    }
-    </style>
+/* Mishnah additions */
+.heb-card{direction:rtl;text-align:right;max-width:560px;margin:2rem auto 0;background:var(--bg);border:1px solid var(--burg-rule);border-right:4px solid var(--burg);padding:1.2rem 1.4rem;font-family:'Frank Ruehl CLM','David','SBL Hebrew','Times New Roman',serif}
+.heb-card h2{font-size:1.25rem;font-weight:700;color:var(--burg);margin-bottom:.4rem}
+.heb-card p{font-size:1.05rem;line-height:1.7;color:var(--ink-mid);margin-bottom:.8rem}
+.heb-card .btn-main{font-family:inherit;font-size:1.05rem;padding:.7rem 1.6rem;letter-spacing:0}
+.weave-wrap{overflow-x:auto;margin:0 0 1.3rem}
+.weave{width:100%;border-collapse:collapse;font-family:'Frank Ruehl CLM','David','SBL Hebrew','Times New Roman',serif;font-size:1rem;line-height:1.75;text-align:center}
+.weave th{background:var(--burg);color:var(--bg);font-weight:500;padding:.4rem;width:50%}
+.weave td{border:1px solid var(--burg-rule);padding:.9rem .8rem;vertical-align:top;background:var(--bg)}
+.weave td strong{display:block;font-family:'Cinzel',serif;color:var(--burg);margin-bottom:.3rem}
+.weave .horizontal1{color:#2563eb;font-weight:600}
+.orders{width:100%;border-collapse:collapse;margin:.3rem 0 1rem}
+.orders th{text-align:left;font-family:'Cinzel',serif;font-weight:500;font-size:.85rem;color:var(--bg);background:var(--burg);padding:.5rem .8rem}
+.orders td{padding:.55rem .8rem;border-bottom:1px solid var(--rule);color:var(--ink-mid)}
+.orders tr:nth-child(even) td{background:var(--bg-2)}
+.citation-box{background:var(--bg-2);padding:1rem 1.2rem;margin:1rem 0}
+.series-navigation ul{margin:0 0 1rem 1.2rem}
+.series-navigation li{margin-bottom:.4rem}
+@media (max-width:640px){.weave{font-size:.85rem;line-height:1.6}.weave td{padding:.6rem .4rem}.orders td,.orders th{padding:.45rem .3rem;font-size:.8rem;letter-spacing:0}.orders th:last-child,.orders td:last-child{text-align:center}}
+</style>
 </head>
 <body>
-    <!-- ==========================================
-         SITE HEADER - FIXED ACROSS ALL PAGES
-         ========================================== -->
-    <header class="site-header">
-        <div class="nav-row">
-            <div class="nav-brand">chaver.com</div>
-            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-            <ul class="nav-menu" id="primary-menu">
-                <li><a href="/">Home</a></li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Torah</button>
-                    <ul class="submenu">
-                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                        <li><a href="/torah-weave/commentary">Commentary</a></li>
-                        
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Insights</button>
-                    <ul class="submenu">
-                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Mishnah</button>
-                    <ul class="submenu">
-                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
-                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to the Structured Mishnah</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">Download the Complete Mishnah (Hebrew)</a></li>
-                    </ul>
-                </li>
-                <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
-                    <ul class="submenu">
-                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
-                        <li><a href="/Mishnah-New/api/">Structured Mishnah API</a></li>
-                        <li><a href="/torah-weave/api/">Structured Torah API</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Free Books</button>
-                    <ul class="submenu">
-                        <li><a href="/Torah-New/English/Text/Torah-pdf">The Structured Torah (English PDF)</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah (Hebrew PDF)</a></li>
-                    </ul>
-                </li>
-                <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
-                <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
-            </ul>
-        </div>
-    </header>
-    <!-- SITE BANNER -->
-<div id="site-banner"></div>
-    <!-- ==========================================
-         MAIN CONTENT AREA - EDITABLE REGION
-         ========================================== -->
-    <main class="content-wrapper">
-        <nav class="breadcrumb">
-            <a href="/">Home</a> &rsaquo;
-            <a href="/Mishnah/TheMishnah.htm">Mishnah</a> &rsaquo;
-            <span>Mishnah PDF</span>
-        </nav>
+<nav class="site-nav">
+  <a class="nav-logo" href="/">chaver<span>.com</span></a>
+  <ul class="nav-links">
+    <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline">About</a></li>
+    <li><a href="/hebrew%20index">עברית</a></li>
+  </ul>
+</nav>
 
-        <div class="unit-header-section">
-            <h1>Complete Mishnah PDF — Free Download</h1>
+<header class="hero">
+  <div class="hero-inner">
+    <span class="kicker">Free download · המשנה כדרכה</span>
+    <h1>Complete Mishnah PDF — Free Download</h1>
+    <p class="sub">Complete Hebrew Mishnah · Shas · Mishnayot · All Six Orders</p>
+    <p class="lead">The Structured Mishnah PDF is a free download of the complete Hebrew Mishnah — 63 tractates, 524 chapters — with every chapter laid out as a literary table revealing its two-dimensional compositional structure. No other Mishnah edition makes this architecture visible.</p>
+    <a class="btn btn-main" href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">Download Free PDF</a>
+    <p class="fine">Free for personal study, teaching, and research · No registration · Over 100,000 downloads since 1997</p>
+    <div class="heb-card">
+      <h2>להורדה חינם: המשנה כדרכה</h2>
+      <p>המשנה כדרכה היא מהדורה חדשה של המשנה המלאה בעברית, הכוללת את כל שישה סדרים, שישים ושלושה מסכתות ו-524 פרקים. כל פרק מוצג כטבלה המגלה את המבנה הספרותי הדו-ממדי שבנה רבי יהודה הנשיא לכל פרק ופרק. ניתן להוריד בחינם, ללא צורך ברישום.</p>
+      <a class="btn btn-main" href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">להורדת המשנה כדרכה PDF</a>
+    </div>
+    <span class="ornament">✦ &nbsp;✦ &nbsp;✦</span>
+  </div>
+</header>
+<div class="strip"><span>6 orders</span><span>63 tractates</span><span>524 chapters</span><span>Hebrew text</span><span>Searchable PDF</span></div>
 
-            <p class="subtitle">Complete Hebrew Mishnah · Shas · Mishnayot · All Six Orders</p>
-
-            <div class="publication-note">
-                <strong>Updated May 2026 · 524 Chapters · Free Download · No Registration Required</strong>
-            </div>
-        </div>
-
-        <div class="commentary-section">
-
-            <p><strong>The Structured Mishnah PDF is a free download of the complete Hebrew Mishnah — 63 tractates, 524 chapters — with every chapter laid out as a literary table revealing its two-dimensional compositional structure. No other Mishnah edition makes this architecture visible.</strong></p>
-            <p>Looking for the complete Mishnah as a downloadable PDF? <em>The Structured Mishnah</em> (המשנה כדרכה) gives you the full Hebrew text of all six orders — 63 tractates, 524 chapters — with each chapter laid out as a literary table rather than a list of laws. Free. No registration required.</p>
-
-            <p>
-                <a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf" class="cta-link">Download Free PDF</a>
-            </p>
-            <p class="related-resources"><strong>Related:</strong> Researchers and developers can also access the <a href="/Mishnah-New/Hebrew/Text/mishnah-data">structured JSON dataset</a> with literary-marker annotations (DOI: <a href="https://doi.org/10.5281/zenodo.20179532">10.5281/zenodo.20179532</a>).</p>
-
-            <div class="stats-highlight">
-                <strong>The Structured Mishnah at a glance</strong>
-                6 Orders (sedarim) · 63 Tractates (masechtot) · 524 Chapters (perakim) · Hebrew text · Searchable PDF · 100% Free
-            </div>
-
-            <div class="table-scroll-wrapper">
-                <table class="final-table">
-                    <thead>
-                        <tr>
-                            <th>Orders</th>
-                            <th>6</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Tractates</td><td>63</td></tr>
-                        <tr><td>Chapters</td><td>524</td></tr>
-                        <tr><td>Language</td><td>Hebrew</td></tr>
-                        <tr><td>Format</td><td>Searchable PDF</td></tr>
-                        <tr><td>Price</td><td>Free</td></tr>
-                        <tr><td>Registration</td><td>None required</td></tr>
-                        <tr><td>Downloads</td><td>Over 100,000 since 1997</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>What Is the Structured Mishnah?</h2>
-
-            <p>The Mishnah is the foundational code of Jewish oral law, compiled by Rabbi Yehudah HaNasi in the third century. It is organized into six orders (<em>sedarim</em>), 63 tractates (<em>masechtot</em>), and 524 chapters (<em>perakim</em>). Most available editions present the text as continuous paragraphs &mdash; a sequence of individual laws (<em>mishnayot</em>) one after another.</p>
-
-            <p>The Structured Mishnah (המשנה כדרכה) takes a different approach. Each chapter is laid out as a table, revealing the two-level compositional structure that organizes every chapter of the Mishnah. The major sections occupy the rows of the table; the minor divisions occupy the columns. What reads in linear format as an agglomeration of laws becomes, in the structured format, a single coherent composition &mdash; a conceptual unit with an internal architecture.</p>
-
-            <p>This architecture is not imposed on the text. It is recovered from it. The rules governing the construction of Mishnah chapters were identified by systematic analysis of all 524 chapters, then applied to produce the structured layout. The result is a presentation of the Mishnah as Rabbi Yehudah HaNasi composed it.</p>
-
-            <h2>Why This Mishnah PDF Is Different</h2>
-
-            <p>Most free Mishnah PDFs available online &mdash; Herbert Danby&rsquo;s 1933 English translation on the Internet Archive, the vowelized Hebrew texts on HebrewBooks.org, the online reader at Sefaria &mdash; give you the Mishnah&rsquo;s content in linear form. Laws appear one after another, just as in printed editions going back centuries. The Structured Mishnah does something none of those editions does: it recovers the compositional design that Rabbi Yehudah HaNasi built into each chapter.</p>
-
-            <p>Every chapter of the Mishnah has an internal architecture &mdash; major sections that function as rows, minor divisions that function as columns. When you read the chapter as a table rather than a list, parallel laws appear side by side, corresponding positions generate meaning, and the chapter reveals itself as a single coherent composition rather than an accumulation of rulings. This two-dimensional structure is present in all 524 chapters. No other edition makes it visible.</p>
-
-            <p>This two-dimensional reading was already practiced in abbreviated form by the Maharal of Prague in his commentary on tractate Avot (<em>Derech Chaim</em>). The Structured Mishnah extends that approach systematically to all 524 chapters.</p>
-
-            <h2>Berakhot Chapter 1: The Two-Dimensional Format</h2>
-
-            <p>Every chapter of the Structured Mishnah is presented in this format. The table below shows Tractate Berakhot, Chapter 1. Row 1 places the evening Shema law alongside the morning Shema law &mdash; the two parallel cases appear side by side rather than one after the other. Row 2 spans the full width because the Beit Shammai / Beit Hillel debate applies to both columns. Row 3 places the prayer structure law alongside the law about remembering the Exodus. Reading across each row reveals thematic correspondence; reading down each column reveals the chapter&rsquo;s two independent tracks. This structure is present in all 524 chapters. No other edition makes it visible.</p>
-
-            <div class="table-scroll-wrapper">
-            <table class="final-table" dir="rtl" style="font-family:'SBL Hebrew','Ezra SIL','David','Frank Ruehl',serif; text-align:center;">
+<section class="section">
+  <div class="label">Start here</div>
+  <div class="featured">
+    <h2>Berakhot Chapter 1: The Two-Dimensional Format</h2>
+    <p>Every chapter of the Structured Mishnah is presented in this format. The table below shows Tractate Berakhot, Chapter 1. Row 1 places the evening Shema law alongside the morning Shema law &mdash; the two parallel cases appear side by side rather than one after the other. Row 2 spans the full width because the Beit Shammai / Beit Hillel debate applies to both columns. Row 3 places the prayer structure law alongside the law about remembering the Exodus. Reading across each row reveals thematic correspondence; reading down each column reveals the chapter&rsquo;s two independent tracks.</p>
+    <div class="weave-wrap"><table class="weave" dir="rtl">
                 <thead>
                     <tr>
-                        <th style="text-align:center; width:50%;">א</th>
-                        <th style="text-align:center; width:50%;">ב</th>
+                        <th>א</th>
+                        <th>ב</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="text-align:center; vertical-align:top; padding:1rem;">
+                        <td>
                             <strong>1א</strong><br/>
                             (א) <span class="horizontal1">מאימתי קורין את שמע</span> בערבית<br/>
                             משעה שהכהנים נכנסים לאכול בתרומתן<br/>
@@ -678,7 +385,7 @@
                             אם כן למה אמרו חכמים עד חצות<br/>
                             כדי להרחיק את האדם מן העבירה
                         </td>
-                        <td style="text-align:center; vertical-align:top; padding:1rem;">
+                        <td>
                             <strong>1ב</strong><br/>
                             (ב) <span class="horizontal1">מאימתי קורין את שמע</span> בשחרית<br/>
                             משיכיר בין תכלת ללבן<br/>
@@ -692,7 +399,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" style="text-align:center; padding:1rem;">
+                        <td colspan="2">
                             <strong>2</strong><br/>
                             (ג) בית שמאי אומרים<br/>
                             בערב כל אדם יטו ויקראו ובבקר יעמדו<br/>
@@ -710,7 +417,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="text-align:center; vertical-align:top; padding:1rem;">
+                        <td>
                             <strong>3א</strong><br/>
                             (ד) <span class="horizontal1">בשחר</span> מברך שתים לפניה ואחת לאחריה<br/>
                             <span class="horizontal1">ובערב</span> שתים לפניה ושתים לאחריה<br/>
@@ -720,7 +427,7 @@
                             לחתום אינו רשאי שלא לחתום<br/>
                             שלא לחתום אינו רשאי לחתום
                         </td>
-                        <td style="text-align:center; vertical-align:top; padding:1rem;">
+                        <td>
                             <strong>3ב</strong><br/>
                             (ה) מזכירין יציאת מצרים בלילות<br/>
                             אמר רבי אלעזר בן עזריה<br/>
@@ -736,23 +443,52 @@
                         </td>
                     </tr>
                 </tbody>
-            </table>
-            </div>
+            </table></div>
+    <p style="margin:0"><a class="go doorway-link" href="/Mishnah/TheMishnah.htm">Browse all 524 chapters in this format &rarr;</a></p>
+  </div>
+</section>
 
-            <p><a href="/Mishnah/TheMishnah.htm">Browse all 524 chapters in this format &rarr;</a></p>
+<section class="section prose">
+  <div class="label">What the structured format reveals</div>
 
-            <h2>What the Structured Format Reveals</h2>
 
             <p>Every chapter of the Mishnah contains at least two levels of internal division. The structured layout makes both levels visible simultaneously. Reading the text as a table rather than a list reveals:</p>
 
             <p>The <strong>major divisions</strong> (rows) show how each chapter is organized into thematic sections &mdash; the groupings that give the chapter its argumentative shape. The <strong>minor divisions</strong> (columns) show how the laws within each section are arranged in parallel structures, with corresponding elements occupying corresponding positions. The chapter can be read linearly (left to right, row by row) as the traditional sequence, or spatially (column by column) as a set of parallel structures whose correspondences generate additional meaning.</p>
 
-            <p>This two-dimensional reading was already practiced in abbreviated form by the Maharal of Prague in his commentary on tractate Avot (<em>Derech Chaim</em>). The Structured Mishnah extends that approach to all 524 chapters.</p>
+            
+</section>
 
-            <h2>The Six Orders</h2>
+<section class="section prose">
+  <div class="label">What is the Structured Mishnah?</div>
+<p>Looking for the complete Mishnah as a downloadable PDF? <em>The Structured Mishnah</em> (המשנה כדרכה) gives you the full Hebrew text of all six orders — 63 tractates, 524 chapters — with each chapter laid out as a literary table rather than a list of laws. Free. No registration required.</p>
 
-            <div class="table-scroll-wrapper">
-                <table class="final-table">
+
+            <p>The Mishnah is the foundational code of Jewish oral law, compiled by Rabbi Yehudah HaNasi in the third century. It is organized into six orders (<em>sedarim</em>), 63 tractates (<em>masechtot</em>), and 524 chapters (<em>perakim</em>). Most available editions present the text as continuous paragraphs &mdash; a sequence of individual laws (<em>mishnayot</em>) one after another.</p>
+
+            <p>The Structured Mishnah (המשנה כדרכה) takes a different approach. Each chapter is laid out as a table, revealing the two-level compositional structure that organizes every chapter of the Mishnah. The major sections occupy the rows of the table; the minor divisions occupy the columns. What reads in linear format as an agglomeration of laws becomes, in the structured format, a single coherent composition &mdash; a conceptual unit with an internal architecture.</p>
+
+            <p>This architecture is not imposed on the text. It is recovered from it. The rules governing the construction of Mishnah chapters were identified by systematic analysis of all 524 chapters, then applied to produce the structured layout. The result is a presentation of the Mishnah as Rabbi Yehudah HaNasi composed it.</p>
+
+            
+</section>
+
+<section class="section prose">
+  <div class="label">Why this Mishnah PDF is different</div>
+
+
+            <p>Most free Mishnah PDFs available online &mdash; Herbert Danby&rsquo;s 1933 English translation on the Internet Archive, the vowelized Hebrew texts on HebrewBooks.org, the online reader at Sefaria &mdash; give you the Mishnah&rsquo;s content in linear form. Laws appear one after another, just as in printed editions going back centuries. The Structured Mishnah does something none of those editions does: it recovers the compositional design that Rabbi Yehudah HaNasi built into each chapter.</p>
+
+            <p>Every chapter of the Mishnah has an internal architecture &mdash; major sections that function as rows, minor divisions that function as columns. When you read the chapter as a table rather than a list, parallel laws appear side by side, corresponding positions generate meaning, and the chapter reveals itself as a single coherent composition rather than an accumulation of rulings. This two-dimensional structure is present in all 524 chapters. No other edition makes it visible.</p>
+
+            <p>This two-dimensional reading was already practiced in abbreviated form by the Maharal of Prague in his commentary on tractate Avot (<em>Derech Chaim</em>). The Structured Mishnah extends that approach systematically to all 524 chapters.</p>
+
+            
+</section>
+
+<section class="section">
+  <div class="label">The six orders</div>
+  <table class="orders">
                     <thead>
                         <tr>
                             <th>Order</th>
@@ -770,15 +506,11 @@
                         <tr><td>Tohorot</td><td>טָהֳרוֹת</td><td>Ritual purity laws</td><td>12</td></tr>
                     </tbody>
                 </table>
-            </div>
+</section>
 
-            <h2>להורדה חינם: המשנה כדרכה</h2>
+<section class="section prose">
+  <div class="label">Scholarly recognition</div>
 
-            <p dir="rtl">המשנה כדרכה היא מהדורה חדשה של המשנה המלאה בעברית, הכוללת את כל שישה סדרים, שישים ושלושה מסכתות ו-524 פרקים. כל פרק מוצג כטבלה המגלה את המבנה הספרותי הדו-ממדי שבנה רבי יהודה הנשיא לכל פרק ופרק. ניתן להוריד בחינם, ללא צורך ברישום.</p>
-
-            <p dir="rtl"><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">להורדת המשנה כדרכה PDF</a></p>
-
-            <h2>Scholarly Recognition</h2>
 
             <p>The Structured Mishnah is based on 40 years of systematic analysis by Moshe Kline. When the methodology was first presented to Professor David Weiss-Halivni (Columbia University / Hebrew University) in the early 1980s, Weiss-Halivni set a condition: the findings would be significant only if they applied to the whole of the Mishnah. When the complete analysis was done, he backed the project. Rabbi Leon Ashkenazi (&ldquo;Manitou&rdquo;) &mdash; one of the most influential Jewish thinkers of the twentieth century &mdash; also supported the work.</p>
 
@@ -788,26 +520,57 @@
 
             <p>Rabbi Adin Steinsaltz (Even-Israel) — whose Talmud commentary is the most widely distributed in modern history — wrote to Kibbutz Lavi's secretariat in February 1982 urging them to support Kline's research on tractate Avot. Steinsaltz wrote that the work "succeeds in showing connections and relationships that were not previously known" and deserved not merely silent acquiescence but active encouragement: <a href="/Mishnah-New/Hebrew/Recomendation%20from%20Rabbi%20Adin%20Steinsalz_0001.pdf">Steinsaltz letter of recommendation, 1982 (PDF, Hebrew)</a>.</p>
 
-            <h2>Hebrew Academic Articles</h2>
+            
+</section>
 
-            <p>Moshe Kline, <a href="/Mishnah-New/Hebrew/Articles/Ein%20Bein%20Bikurim.pdf">אין בין — פתח לפנימיות המשנה</a> (Ein Bein: An Introduction to the Inner Dimensions of the Mishnah). <em>Bikurim</em> 2 (Kislev 5745 / 1984), pp. 90–105. Analysis of Mishnah Megillah Chapter 1 as the methodological key to the Mishnah's two-dimensional compositional structure. Published by the Yeshiva of the Religious Kibbutz Movement, Ein Tzurim.</p>
+<section class="section wide">
+  <div class="label center-label">Scholarly endorsements</div>
+  <div class="quotes">
+<figure class="quote"><blockquote>"The Structured Mishnah was peer-reviewed and accepted for publication by Ben-Gurion University Press."</blockquote><figcaption>— Reviewed by Professor Daniel Boyarin (UC Berkeley) and Professor Shamma Friedman</figcaption></figure>
+<figure class="quote"><blockquote>"Findings of this kind become significant only if they apply to the whole of the Mishnah."</blockquote><figcaption>— Professor David Weiss-Halivni (Jewish Theological Seminary), the challenge that drove the complete analysis</figcaption></figure>
+<figure class="quote"><blockquote>"קרן אור."</blockquote><figcaption>— Rabbi Leon Ashkenazi ("Manitou"), on first encountering the Structured Mishnah</figcaption></figure>
+  </div>
+</section>
 
-            <p>Moshe Kline, <a href="/Mishnah-New/Hebrew/Articles/kol_helkei_hbayit.pdf">כל חלקי הבית אחוזים זה בזה — משנת עירובין פרק י'</a> (All Parts of the House Are Joined Together: Mishnah Eruvin Chapter X). <em>Alei Sefer</em> 14 (5747 / 1987). Structural analysis of Eruvin Chapter X demonstrating that what scholars had characterized as a miscellaneous collection of unrelated laws is in fact a precisely designed literary composition. The article is also available in a <a href="/Mishnah-New/Hebrew/Articles/literary-structure-mishnah-eruvin">formatted online version</a>.</p>
+<section class="section">
+  <div class="label">Frequently asked questions</div>
+<details class="faq"><summary>Is this Mishnah PDF free?</summary><p>Yes. The complete Mishnah PDF is free to download for personal study, teaching, and research. No registration or email is required. The Structured Mishnah is licensed for free distribution; attribution to Moshe Kline and chaver.com is appreciated.</p></details>
+<details class="faq"><summary>What text does this Mishnah PDF use?</summary><p>The Hebrew text was manually transcribed by Moshe Kline from the Albeck edition of the Mishnah, refined over decades of structural analysis. The text is consonantal, without niqqud (vowel marks), in the same orthography used in the printed Mishnah.</p></details>
+<details class="faq"><summary>How is this different from other Mishnah PDFs?</summary><p>Most Mishnah PDFs present the text as continuous paragraphs — one mishnah after another. The Structured Mishnah lays out every chapter as a two-dimensional table. The major sections (rows) reveal how each chapter is organized into thematic divisions; the minor divisions (columns) reveal how laws within each section form parallel structures. The chapter can be read linearly, in the traditional sequence, or spatially, as a set of parallel arguments whose correspondences generate additional meaning. This approach was practiced in abbreviated form by the Maharal of Prague in his commentary on tractate Avot (<em>Derech Chaim</em>) and is here extended to all 524 chapters.</p></details>
+<details class="faq"><summary>Does this include all six orders of the Mishnah?</summary><p>Yes. The PDF contains the complete text of all six orders (<em>sedarim</em>): Zeraim (agricultural laws and prayers), Moed (Sabbath and festivals), Nashim (marriage and family law), Nezikin (civil and criminal law), Kodashim (Temple service and sacrifices), and Tohorot (ritual purity laws). All 63 tractates and 524 chapters are included.</p></details>
+<details class="faq"><summary>Can I use this for study groups, classes, or my synagogue?</summary><p>Yes. The PDF is free for personal study, group study, classroom use, and synagogue study. The two-dimensional format is particularly useful for comparing parallel passages within and across chapters of the Mishnah. The structured layout makes the chapter's compositional logic visible to students, supporting both traditional and structural reading.</p></details>
+<details class="faq"><summary>Is this approach recognized in academic scholarship?</summary><p>Yes. The Structured Mishnah was peer-reviewed by Professor Daniel Boyarin (UC Berkeley) and Professor Shamma Friedman, and accepted for publication by Ben-Gurion University Press. The methodology was first presented to Professor David Weiss-Halivni (JTS), whose challenge that findings apply to the whole of the Mishnah drove the complete analysis. A progress report was published in <em>Alei Sefer</em> (1987). The same structural methodology applied to the Torah has been published in the <em>Journal of Biblical Literature</em> (2025), <em>SBL Press</em> (2015), and the <em>Journal of Hebrew Scriptures</em> (2008).</p></details>
+<details class="faq"><summary>Are other formats available?</summary><p>Yes. Three formats: read the Mishnah online at the <a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a>; download as <a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">PDF</a>; or work with the <a href="/Mishnah-New/Hebrew/Text/mishnah-data">structured JSON dataset</a> for computational research and AI applications. A <a href="/Mishnah-New/Hebrew/Text/mishnah-search">search interface</a> is also available for finding text and structural patterns across all 524 chapters.</p></details>
+</section>
 
-            <p>Moshe Kline, <a href="/Mishnah-New/Hebrew/Articles/Shmaatin_Mishnah_Shviit.pdf">משנת שביעית — מבנה פרקיה</a> (Mishnah Shvi'it: The Structure of Its Chapters). <em>Shmaatin</em> 24, no. 88–89 (Shevat–Nisan 5747 / 1987), pp. 66–78. Analysis of the literary structure of the third chapter of Tractate Shvi'it (Sabbatical Year). Published by the Teachers' Union of Religious Kibbutz Institutions, supported by the Ministry of Education.</p>
+<section class="section prose">
+  <div class="label">About the author</div>
 
-            <p>The Structured Mishnah PDF has been freely available at Chaver.com since 1997, with over 100,000 downloads to date. At peak it recorded over 750 downloads per day, with Mishnah-related queries accounting for 73% of all site traffic in that period. The PDF is indexed by and cited in major AI research tools including ChatGPT, Perplexity, and Claude.</p>
 
-            <p>The same structural methodology applied to the Mishnah was subsequently applied to the Torah, producing the Woven Torah hypothesis. Research has been published in the <em>Journal of Biblical Literature</em> (2025), <em>SBL Press</em> (2015), and the <em>Journal of Hebrew Scriptures</em> (2008). The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester).</p>
+            <p>Moshe Kline is a graduate of St. John&rsquo;s College and Yeshiva University. He studied under Jacob Klein and was influenced by Leo Strauss. He later studied with Rabbi Leon Ashkenazi (&ldquo;Manitou&rdquo;), who became a supporter of the Structured Mishnah project. His structural analysis of the Torah was mentored by Jacob Milgrom (UC Berkeley) and Mary Douglas. His research has been published in the <em>Journal of Biblical Literature</em>, <em>SBL Press</em>, and the <em>Journal of Hebrew Scriptures</em>. He is the author of <em>Before Chapter and Verse: Reading the Woven Torah</em> (2022), available in print and as a <a href="/Torah-New/English/Text/Torah-pdf.html">free PDF download</a>.</p>
 
-            <div class="citation-box">
-                <p>The Torah, like the Mishnah, is composed using a two-dimensional literary architecture &mdash; 86 units arranged in woven matrices whose rows and columns generate meaning through their spatial relationships.</p>
-                <p>Moshe Kline &mdash; <em>Journal of Biblical Literature</em> (2025) &middot; <em>SBL Press</em> (2015) &middot; <em>Journal of Hebrew Scriptures</em> (2008)</p>
-                <p><a href="/about-Moshe-Kline">Full publication list and academic credentials &rarr;</a></p>
-                <p><a href="/Torah-New/English/Text/Torah-pdf.html">Download the Structured Torah PDF &rarr;</a></p>
-            </div>
+            
+</section>
 
-<h2>Publications and Recognition</h2>
+<section class="section">
+  <details class="more"><summary>The Structured Mishnah at a glance</summary><table class="final-table">
+                    <thead>
+                        <tr>
+                            <th>Orders</th>
+                            <th>6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tractates</td><td>63</td></tr>
+                        <tr><td>Chapters</td><td>524</td></tr>
+                        <tr><td>Language</td><td>Hebrew</td></tr>
+                        <tr><td>Format</td><td>Searchable PDF</td></tr>
+                        <tr><td>Price</td><td>Free</td></tr>
+                        <tr><td>Registration</td><td>None required</td></tr>
+                        <tr><td>Downloads</td><td>Over 100,000 since 1997</td></tr>
+                    </tbody>
+                </table></details>
+  <details class="more"><summary>Publications and recognition</summary>
 
 <h3>Peer-Reviewed Articles</h3>
 
@@ -822,15 +585,23 @@
 <h4>In Hebrew</h4>
 
 <p><strong>משה קליין</strong>, "מה נאה משנה זו" ("How Lovely Is This Mishnah"), <em>עמודים</em> (<em>Amudim</em>), issue 438 (תשמ"ב / 1982), p. 306. Kline's earliest published work on the literary structure of the Mishnah.</p>
+<p>Moshe Kline, <a href="/Mishnah-New/Hebrew/Articles/Ein%20Bein%20Bikurim.pdf">אין בין — פתח לפנימיות המשנה</a> (Ein Bein: An Introduction to the Inner Dimensions of the Mishnah). <em>Bikurim</em> 2 (Kislev 5745 / 1984), pp. 90–105. Analysis of Mishnah Megillah Chapter 1 as the methodological key to the Mishnah's two-dimensional compositional structure. Published by the Yeshiva of the Religious Kibbutz Movement, Ein Tzurim. Ed. Rabbi Aharon Shemesh z"l. On the encoding of Lurianic Kabbalistic categories in the structural design of the Mishnah. <a href="https://www.academia.edu/125621790/">Academia.edu</a></p>
 
-<p><strong>משה קליין</strong>, "אין בין &mdash; פתח לפנימיות המשנה," <em>ביקורים</em>, ed. Rabbi Aharon Shemesh z"l, 1984. On the encoding of Lurianic Kabbalistic categories in the structural design of the Mishnah. <a href="https://www.academia.edu/125621790/">Academia.edu</a></p>
+            <p>Moshe Kline, <a href="/Mishnah-New/Hebrew/Articles/kol_helkei_hbayit.pdf">כל חלקי הבית אחוזים זה בזה — משנת עירובין פרק י'</a> (All Parts of the House Are Joined Together: Mishnah Eruvin Chapter X). <em>Alei Sefer</em> 14 (5747 / 1987): 5&ndash;28. Structural analysis of Eruvin Chapter X demonstrating that what scholars had characterized as a miscellaneous collection of unrelated laws is in fact a precisely designed literary composition. The article is also available in a <a href="/Mishnah-New/Hebrew/Articles/literary-structure-mishnah-eruvin">formatted online version</a>. <a href="https://www.jstor.org/stable/24158735">JSTOR: 24158735</a> · <a href="https://www.academia.edu/102742809/">Academia.edu</a></p>
 
-<p><strong>משה קליין</strong>, "שמעתין: משנת שביעית," <em>שמעתין</em> (Journal of the Israel Association of Talmud Teachers), 1987. The two-dimensional literary structure of Mishnah Shevi'it chapter 3. <a href="https://www.academia.edu/104288847/">Academia.edu</a></p>
+            <p>Moshe Kline, <a href="/Mishnah-New/Hebrew/Articles/Shmaatin_Mishnah_Shviit.pdf">משנת שביעית — מבנה פרקיה</a> (Mishnah Shvi'it: The Structure of Its Chapters). <em>Shmaatin</em> 24, no. 88–89 (Shevat–Nisan 5747 / 1987), pp. 66–78. Analysis of the literary structure of the third chapter of Tractate Shvi'it (Sabbatical Year). Published by the Teachers' Union of Religious Kibbutz Institutions, supported by the Ministry of Education. <a href="https://www.academia.edu/104288847/">Academia.edu</a></p>
 
-<p><strong>משה קליין</strong>, "כל חלקי הבית אחוזים זה בזה: משנת עירובין פרק עשירי" / "The Literary Structure of the Mishnah (Eruvin Chapter X)," <em>עלי ספר</em> (<em>Alei Sefer</em>) 14 (1987): 5&ndash;28. <a href="https://www.jstor.org/stable/24158735">JSTOR: 24158735</a> &middot; <a href="https://www.academia.edu/102742809/">Academia.edu</a></p>
+            <p>The Structured Mishnah PDF has been freely available at Chaver.com since 1997, with over 100,000 downloads to date. At peak it recorded over 750 downloads per day, with Mishnah-related queries accounting for 73% of all site traffic in that period. The PDF is indexed by and cited in major AI research tools including ChatGPT, Perplexity, and Claude.</p>
 
+            <p>The same structural methodology applied to the Mishnah was subsequently applied to the Torah, producing the Woven Torah hypothesis. Research has been published in the <em>Journal of Biblical Literature</em> (2025), <em>SBL Press</em> (2015), and the <em>Journal of Hebrew Scriptures</em> (2008). The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester).</p>
+
+            <div class="citation-box">
+                <p>The Torah, like the Mishnah, is composed using a two-dimensional literary architecture &mdash; 86 units arranged in woven matrices whose rows and columns generate meaning through their spatial relationships.</p>
+                <p>Moshe Kline &mdash; <em>Journal of Biblical Literature</em> (2025) &middot; <em>SBL Press</em> (2015) &middot; <em>Journal of Hebrew Scriptures</em> (2008)</p>
+                <p><a href="/about-Moshe-Kline">Full publication list and academic credentials &rarr;</a></p>
+                <p><a href="/Torah-New/English/Text/Torah-pdf.html">Download the Structured Torah PDF &rarr;</a></p>
+            </div>
 <p><strong>משה קליין וארי סטריקובסקי</strong>, "משנה שביעית פרק ז'" ("Mishnah Shevi'it Chapter 7"), in <em>גבורות הרמ"ח</em> (<em>Gevurot HaRamach</em>): Jubilee Volume in Honor of Moshe H. Weiler (Jerusalem, 5748/1988). Literary-structural analysis (Kline) and halakhic analysis (Strikovsky).</p>
-
 <h3>Books</h3>
 
 <p><strong>Moshe Kline</strong>, <em>Before Chapter and Verse: Reading the Woven Torah</em> (2022). ISBN 978-9655982718. <a href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718">Amazon</a> &middot; <a href="/Torah-New/English/Text/Torah-pdf">Free PDF</a>.</p>
@@ -849,78 +620,9 @@
     <strong>Independent Interview:</strong> <a href="https://kavvanah.blog/2010/01/18/moshe-kline-and-the-structured-mishnah/">Moshe Kline and the Structured Mishnah</a> &mdash; Prof. Alan Brill, <em>The Book of Doctrines and Opinions</em> (Seton Hall University). Covers the discovery, method, and intellectual background including Leo Strauss, the Maharal of Prague, and Rabbi Leon Ashkenazi (Manitou).
 </div>
 
-            <h2>Scholarly Endorsements</h2>
-
-            <div class="testimonial">
-                <p>"The Structured Mishnah was peer-reviewed and accepted for publication by Ben-Gurion University Press."</p>
-                <p class="testimonial-author">— Reviewed by Professor Daniel Boyarin (UC Berkeley) and Professor Shamma Friedman</p>
-            </div>
-
-            <div class="testimonial">
-                <p>"Findings of this kind become significant only if they apply to the whole of the Mishnah."</p>
-                <p class="testimonial-author">— Professor David Weiss-Halivni (Jewish Theological Seminary), the challenge that drove the complete analysis</p>
-            </div>
-
-            <div class="testimonial">
-                <p>"קרן אור."</p>
-                <p class="testimonial-author">— Rabbi Leon Ashkenazi ("Manitou"), on first encountering the Structured Mishnah</p>
-            </div>
-
-            <div class="faq-section">
-
-            <h2>Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <p class="faq-question">Is this Mishnah PDF free?</p>
-                <p class="faq-answer">Yes. The complete Mishnah PDF is free to download for personal study, teaching, and research. No registration or email is required. The Structured Mishnah is licensed for free distribution; attribution to Moshe Kline and chaver.com is appreciated.</p>
-            </div>
-
-            <div class="faq-item">
-                <p class="faq-question">What text does this Mishnah PDF use?</p>
-                <p class="faq-answer">The Hebrew text was manually transcribed by Moshe Kline from the Albeck edition of the Mishnah, refined over decades of structural analysis. The text is consonantal, without niqqud (vowel marks), in the same orthography used in the printed Mishnah.</p>
-            </div>
-
-            <div class="faq-item">
-                <p class="faq-question">How is this different from other Mishnah PDFs?</p>
-                <p class="faq-answer">Most Mishnah PDFs present the text as continuous paragraphs — one mishnah after another. The Structured Mishnah lays out every chapter as a two-dimensional table. The major sections (rows) reveal how each chapter is organized into thematic divisions; the minor divisions (columns) reveal how laws within each section form parallel structures. The chapter can be read linearly, in the traditional sequence, or spatially, as a set of parallel arguments whose correspondences generate additional meaning. This approach was practiced in abbreviated form by the Maharal of Prague in his commentary on tractate Avot (<em>Derech Chaim</em>) and is here extended to all 524 chapters.</p>
-            </div>
-
-            <div class="faq-item">
-                <p class="faq-question">Does this include all six orders of the Mishnah?</p>
-                <p class="faq-answer">Yes. The PDF contains the complete text of all six orders (<em>sedarim</em>): Zeraim (agricultural laws and prayers), Moed (Sabbath and festivals), Nashim (marriage and family law), Nezikin (civil and criminal law), Kodashim (Temple service and sacrifices), and Tohorot (ritual purity laws). All 63 tractates and 524 chapters are included.</p>
-            </div>
-
-            <div class="faq-item">
-                <p class="faq-question">Can I use this for study groups, classes, or my synagogue?</p>
-                <p class="faq-answer">Yes. The PDF is free for personal study, group study, classroom use, and synagogue study. The two-dimensional format is particularly useful for comparing parallel passages within and across chapters of the Mishnah. The structured layout makes the chapter's compositional logic visible to students, supporting both traditional and structural reading.</p>
-            </div>
-
-            <div class="faq-item">
-                <p class="faq-question">Is this approach recognized in academic scholarship?</p>
-                <p class="faq-answer">Yes. The Structured Mishnah was peer-reviewed by Professor Daniel Boyarin (UC Berkeley) and Professor Shamma Friedman, and accepted for publication by Ben-Gurion University Press. The methodology was first presented to Professor David Weiss-Halivni (JTS), whose challenge that findings apply to the whole of the Mishnah drove the complete analysis. A progress report was published in <em>Alei Sefer</em> (1987). The same structural methodology applied to the Torah has been published in the <em>Journal of Biblical Literature</em> (2025), <em>SBL Press</em> (2015), and the <em>Journal of Hebrew Scriptures</em> (2008).</p>
-            </div>
-
-            <div class="faq-item">
-                <p class="faq-question">Are other formats available?</p>
-                <p class="faq-answer">Yes. Three formats: read the Mishnah online at the <a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a>; download as <a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">PDF</a>; or work with the <a href="/Mishnah-New/Hebrew/Text/mishnah-data">structured JSON dataset</a> for computational research and AI applications. A <a href="/Mishnah-New/Hebrew/Text/mishnah-search">search interface</a> is also available for finding text and structural patterns across all 524 chapters.</p>
-            </div>
-
-            </div>
-
-            <h2>About the Author</h2>
-
-            <p>Moshe Kline is a graduate of St. John&rsquo;s College and Yeshiva University. He studied under Jacob Klein and was influenced by Leo Strauss. He later studied with Rabbi Leon Ashkenazi (&ldquo;Manitou&rdquo;), who became a supporter of the Structured Mishnah project. His structural analysis of the Torah was mentored by Jacob Milgrom (UC Berkeley) and Mary Douglas. His research has been published in the <em>Journal of Biblical Literature</em>, <em>SBL Press</em>, and the <em>Journal of Hebrew Scriptures</em>. He is the author of <em>Before Chapter and Verse: Reading the Woven Torah</em> (2022), available in print and as a <a href="/Torah-New/English/Text/Torah-pdf.html">free PDF download</a>.</p>
-
-            <h2>Download the Complete Mishnah PDF</h2>
-
-            <div class="stage-summary">
-                <p>The complete Hebrew Mishnah &mdash; all six orders, 524 chapters as literary tables, revealing the compositional design of every chapter. Free for personal study, teaching, and research. No registration required.</p>
-                <p><a href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">Download Free Mishnah PDF</a></p>
-                <p><a href="/Mishnah/TheMishnah.htm">Browse the Structured Mishnah online &rarr;</a></p>
-            </div>
-
-            <div class="series-navigation">
-                <h3>Related Resources</h3>
+            </details>
+  <details class="more"><summary>More to read, data and citation</summary><p class="related-resources"><strong>Related:</strong> Researchers and developers can also access the <a href="/Mishnah-New/Hebrew/Text/mishnah-data">structured JSON dataset</a> with literary-marker annotations (DOI: <a href="https://doi.org/10.5281/zenodo.20179532">10.5281/zenodo.20179532</a>).</p><div class="series-navigation">
+                
                 <ul>
                     <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to the Structured Mishnah: The Mishnah as Rabbi Yehudah HaNasi Composed It</a></li>
                    <li><a href="/Mishnah-New/Hebrew/Text/mishnah-search"><strong>Search</strong> — Find text or structural patterns</a></li> 
@@ -929,137 +631,33 @@
                     <li><a href="/torah-weave/commentary">Torah Weave Commentary: Structural Analysis of All 86 Units</a></li>
                     <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP: A Structural Alternative to the Documentary Hypothesis</a></li>
                 </ul>
-            </div>
-
-            <div class="citation-box">
+            </div><div class="citation-box">
                 Kline, Moshe. <em>The Structured Mishnah</em> (המשנה כדרכה). Chaver.com.
                 <a href="https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-pdf">https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-pdf</a>
-            </div>
+            </div></details>
+</section>
 
-        </div>
-    </main>
-    
-    <!-- ==========================================
-         SITE FOOTER - RICH 4-SECTION VERSION
-         ========================================== -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                                <div class="footer-section">
-                    <h4>Key Insights</h4>
-                    <ul>
-                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Featured Articles</h4>
-                    <ul>
-                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
-                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
-                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
-                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
-                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Full Texts</h4>
-                    <ul>
-                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
-                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
-                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah PDF</a></li>
-                        <li><a href="https://asitwaswritten.org/">As It Was Written &mdash; a primer</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
-                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
-                        <li><a href="/Dynamic%20Web%20Templates/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>About Moshe Kline</h4>
-                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
-                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
-                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- ==========================================
-         SITE NAV SCRIPT
-         ========================================== -->
-    <script>
-        (function() {
-            var toggle = document.querySelector('.nav-toggle');
-            var menu = document.querySelector('.nav-menu');
+<section class="band">
+  <span class="kicker">Free download</span>
+  <h2>Download the Complete Mishnah PDF</h2>
+  <p>The complete Hebrew Mishnah &mdash; all six orders, 524 chapters as literary tables, revealing the compositional design of every chapter. Free for personal study, teaching, and research. No registration required.</p>
+  <a class="btn btn-main" href="/Mishnah-New/Hebrew/Text/The%20Structured%20Mishnah.pdf">Download Free Mishnah PDF</a>
+  <p class="alt"><a class="doorway-link" href="/Mishnah/TheMishnah.htm">Browse the Structured Mishnah online &rarr;</a></p>
+</section>
 
-            // Hamburger toggle
-            if (toggle && menu) {
-                toggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    menu.classList.toggle('is-open-menu');
-                    toggle.setAttribute('aria-expanded',
-                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
-                });
-            }
-
-            // Dropdown toggles (via <button>, not <a>)
-            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    var li = btn.parentElement;
-                    var wasOpen = li.classList.contains('is-open');
-
-                    // Close all dropdowns first
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
-                        other.classList.remove('is-open');
-                        var b = other.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-
-                    // Open this one if it wasn't already
-                    if (!wasOpen) {
-                        li.classList.add('is-open');
-                        btn.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            });
-
-            // Click outside closes everything
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.site-header')) {
-                    if (menu) menu.classList.remove('is-open-menu');
-                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                        li.classList.remove('is-open');
-                        var b = li.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-                }
-            });
-        })();
-    </script>
-
-    
+<footer class="footer">
+  <span>&copy; 2026 Chaver.com · The Woven Texts Project</span>
+  <span><a href="/about-Moshe-Kline">About Moshe Kline</a> · <a href="/hebrew%20index">עברית</a> · <a href="https://asitwaswritten.org/">As It Was Written — a primer</a></span>
+</footer>
+<!-- click tracking v1: counts PDF downloads and doorway clicks in Google Analytics -->
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a'); if(!a||typeof gtag!=='function')return;
+  var h=a.getAttribute('href')||'';
+  if(/The%20Structured%20Mishnah\.pdf$/.test(h)){var all=[].slice.call(document.querySelectorAll('a[href$="The%20Structured%20Mishnah.pdf"]'));
+    gtag('event','mishnah_pdf_click',{button_position:all.indexOf(a)+1});}
+  else if(a.classList.contains('doorway-link')){gtag('event','doorway_click',{link_url:h});}
+});
+</script>
 </body>
 </html>
