@@ -41,7 +41,7 @@
         }
         .slideshow-intro h2 {
             font-size: 1.4rem;
-            color: #2c3e50;
+            color: var(--ink-mid);
             margin-bottom: 0.5rem;
             border: none;
             margin-top: 0;
@@ -54,7 +54,7 @@
         }
         .slideshow-container {
             position: relative;
-            background: #fdfcf8;
+            background: var(--bg);
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
             overflow: hidden;
@@ -78,11 +78,11 @@
         }
         .slide-title {
             font-size: 1.8rem;
-            color: #2c3e50;
+            color: var(--ink-mid);
             margin-bottom: 1.5rem;
             text-align: center;
             font-weight: 600;
-            border-bottom: 2px solid #8b7355;
+            border-bottom: 2px solid var(--accent-2);
             padding-bottom: 0.75rem;
         }
         .slide-content {
@@ -96,7 +96,7 @@
         }
         .slide-subtitle {
             font-size: 1.2rem;
-            color: #5d4e37;
+            color: var(--accent);
             font-style: italic;
             text-align: center;
             margin-bottom: 1.5rem;
@@ -106,13 +106,13 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 1.5rem;
-            background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
-            border-top: 1px solid #5d4e37;
+            background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
+            border-top: 1px solid var(--accent);
         }
         .slide-btn {
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #fdfcf8;
+            color: var(--bg);
             padding: 0.6rem 1.2rem;
             border-radius: 6px;
             cursor: pointer;
@@ -146,11 +146,11 @@
             background: rgba(255, 255, 255, 0.5);
         }
         .dot.active {
-            background: #fdfcf8;
+            background: var(--bg);
             transform: scale(1.2);
         }
         .key-point {
-            background: linear-gradient(to right, #fef5e7 0%, #fdebd0 100%);
+            background: linear-gradient(to right, var(--parchment) 0%, var(--parchment-2) 100%);
             border-left: 4px solid #d4a574;
             padding: 1rem 1.25rem;
             margin: 1.5rem 0;
@@ -174,7 +174,7 @@
             text-align: center;
         }
         .column-box h4 {
-            color: #8b7355;
+            color: var(--accent-2);
             margin-bottom: 0.75rem;
             font-size: 1.1rem;
             margin-top: 0;
@@ -189,7 +189,7 @@
             font-size: 1.5rem;
             font-style: italic;
             text-align: center;
-            color: #5d4e37;
+            color: var(--accent);
             padding: 2rem;
             line-height: 1.6;
         }
@@ -206,22 +206,22 @@
             border: 1px solid #d4cfc7;
         }
         .matrix-table-slide th.col-self {
-            background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
-            color: #fdfcf8;
+            background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
+            color: var(--bg);
         }
         .matrix-table-slide th.col-interaction {
-            background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
-            color: #3d2f1f;
+            background: linear-gradient(135deg, var(--sand) 0%, var(--sand-2) 100%);
+            color: var(--ink);
         }
         .matrix-table-slide th.col-other {
-            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
-            color: #5d4e37;
+            background: linear-gradient(135deg, var(--parchment) 0%, var(--parchment-2) 100%);
+            color: var(--accent);
         }
         .matrix-table-slide td {
             padding: 0.6rem 0.5rem;
             text-align: center;
             border: 1px solid #d4cfc7;
-            background: #fdfcf8;
+            background: var(--bg);
         }
         .matrix-table-slide .verse-ref {
             display: block;
@@ -233,7 +233,7 @@
             margin-top: 1rem;
         }
         .skip-slideshow a {
-            color: #8b7355;
+            color: var(--accent-2);
             font-size: 0.9rem;
         }
         @media (max-width: 768px) {

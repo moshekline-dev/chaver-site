@@ -211,120 +211,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#faf6ee;--bg-2:#f2ead8;--bg-3:#e8dcc4;--ink:#1c1610;--ink-mid:#3e2e1e;--ink-light:#5c4630;--ink-faint:#6e5a44;--burg:#7a1f2e;--burg-rule:rgba(122,31,46,.2);--rule:rgba(28,22,16,.1)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:19px;scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.75;overflow-x:hidden}
-a{color:var(--burg)}
-.cz{font-family:'Cinzel',serif}
-/* nav */
-.site-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 2rem;background:var(--burg);position:sticky;top:0;z-index:100}
-.nav-logo{font-family:'Cinzel',serif;font-size:1rem;font-weight:500;letter-spacing:.1em;color:var(--bg);text-decoration:none;text-transform:uppercase}
-.nav-logo span{color:rgba(250,246,238,.7);font-weight:400}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,246,238,.92);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--bg)}
-@media (max-width:760px){.site-nav{flex-direction:column;align-items:flex-start;padding:.9rem 1.1rem}.nav-links{flex-wrap:wrap;gap:.4rem 1.2rem}}
-/* hero */
-.hero{padding:4.5rem 1.5rem 3.5rem;text-align:center;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);position:relative;overflow:hidden}
-.hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
-.kicker{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--burg);display:block;margin-bottom:1.4rem}
-.hero h1{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.8rem,4.6vw,3rem);line-height:1.15;letter-spacing:.02em;margin-bottom:.9rem}
-.hero .sub{color:var(--ink-light);margin-bottom:1.6rem}
-.hero .lead{font-size:1.05rem;line-height:1.85;color:var(--ink-mid);max-width:560px;margin:0 auto 2.2rem}
-.btn{display:inline-block;font-family:'Cinzel',serif;letter-spacing:.08em;text-decoration:none;border-radius:2px}
-.btn-main{background:var(--burg);color:var(--bg);font-size:.95rem;padding:1.05rem 2.6rem;box-shadow:0 6px 22px rgba(122,31,46,.18)}
-.btn-main:hover{background:#5a1622}
-.alt{margin-top:1.1rem;font-size:.95rem;color:var(--ink-light)}
-.alt a{text-decoration:none;border-bottom:1px solid var(--burg-rule)}
-.fine{margin-top:.5rem;font-size:.9rem;color:var(--ink-faint)}
-.ornament{display:block;margin-top:2.2rem;letter-spacing:.5em;color:rgba(122,31,46,.45)}
-/* facts strip */
-.strip{display:flex;justify-content:center;flex-wrap:wrap;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--bg-2)}
-.strip span{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light);padding:.8rem 1.5rem;border-right:1px solid var(--rule)}
-.strip span:last-child{border-right:0}
-/* sections */
-.section{max-width:760px;margin:0 auto;padding:3.5rem 1.5rem 0}
-.wide{max-width:980px}
-.label{font-family:'Cinzel',serif;font-size:1.15rem;letter-spacing:.06em;text-transform:none;font-weight:500;color:var(--burg);display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem}
-.label::after{content:'';flex:1;height:1px;background:var(--burg-rule)}
-.center-label{justify-content:center;color:var(--burg)}
-.center-label::before{content:'';flex:1;height:1px;background:var(--rule)}
-.center-label::after{background:var(--rule)}
-.prose p{margin-bottom:1.15rem;color:var(--ink-mid);line-height:1.85}
-/* featured card */
-.featured{background:var(--bg);border:1px solid var(--burg-rule);border-left:4px solid var(--burg);padding:2.2rem 2.4rem;box-shadow:0 4px 20px rgba(122,31,46,.06)}
-.featured h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.25rem;color:var(--burg);margin-bottom:1rem;line-height:1.35}
-.featured p{color:var(--ink-mid);margin-bottom:1.3rem}
-.six{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:8px;margin:0 0 1.5rem}
-.six .h{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--burg);padding:0 .2rem .2rem}
-.six .r{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);align-self:center;padding-right:.4rem}
-.six .c{background:var(--bg-2);border:.5px solid var(--burg-rule);padding:.7rem .9rem;font-size:.95rem;color:var(--ink-mid);line-height:1.35}
-.six .c b{font-family:'Cinzel',serif;font-weight:500;color:var(--burg);margin-right:.45rem}
-.go{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
-.then{margin-top:.7rem;font-size:.95rem;color:var(--ink-light)}
-@media (max-width:640px){.featured{padding:1.4rem 1rem}.six{gap:6px}.six .r{font-size:.72rem;letter-spacing:0;padding-right:.1rem}.six .c{font-size:.85rem;padding:.5rem .5rem}.strip span{flex:1 1 45%;text-align:center;border-bottom:1px solid var(--rule)}}
-/* cards */
-.intro-p{text-align:center;max-width:640px;margin:0 auto 2rem;color:var(--ink-mid);line-height:1.85}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
-.card{background:var(--bg-2);border:.5px solid var(--rule);padding:1.5rem 1.5rem 1.3rem}
-.card .num{font-family:'Cinzel',serif;font-size:.82rem;color:var(--ink-faint);letter-spacing:.12em;display:block;margin-bottom:.6rem}
-.card h3{font-family:'Cinzel',serif;font-weight:500;font-size:.95rem;color:var(--ink);margin-bottom:.5rem}
-.card p{font-size:.95rem;line-height:1.6;color:var(--ink-mid)}
-/* quotes */
-.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
-.quote{border-left:3px solid var(--burg);background:var(--bg-2);padding:1.3rem 1.5rem}
-.quote blockquote{font-style:italic;color:var(--ink-mid);line-height:1.7;margin-bottom:.8rem}
-.quote figcaption{font-size:.85rem;color:var(--ink-light)}
-/* folds */
-details{border-bottom:1px solid var(--rule)}
-details summary{cursor:pointer;padding:.85rem 0;font-weight:500;color:var(--ink);list-style:none}
-details summary::-webkit-details-marker{display:none}
-details summary::before{content:'+';display:inline-block;width:1.3rem;color:var(--burg)}
-details[open] summary::before{content:'\2212'}
-details > *:not(summary){margin-left:1.3rem}
-details p{margin-bottom:1rem;color:var(--ink-mid)}
-details.more summary{font-family:'Cinzel',serif;font-weight:400}
-details h3{font-family:'Cinzel',serif;font-weight:500;font-size:.95rem;margin:1.3rem 0 .5rem}
-details h4{font-weight:500;margin:1rem 0 .4rem}
-.final-table{border-collapse:collapse;width:100%;margin:.3rem 0 1rem}
-.final-table th{text-align:left;font-weight:500;padding:.4rem .8rem .4rem 0;width:35%;color:var(--ink-light)}
-.final-table td{padding:.4rem 0;border-bottom:1px solid var(--rule)}
-.publication-note{background:var(--bg-2);padding:1rem 1.2rem;margin:1rem 0}
-/* band */
-.band{background:var(--burg);text-align:center;padding:4rem 1.5rem;margin-top:4rem}
-.band .kicker{color:rgba(250,246,238,.85)}
-.band h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.5rem;color:var(--bg);margin-bottom:.8rem}
-.band p{color:rgba(250,246,238,.95);max-width:560px;margin:0 auto 1.8rem}
-.band .btn-main{background:var(--bg);color:var(--burg);box-shadow:none}
-.band .alt,.band .alt a{color:rgba(250,246,238,.95);border-color:rgba(250,246,238,.35)}
-.footer{background:var(--bg-3);padding:1.6rem 2rem;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem 1.5rem;font-size:.85rem;color:var(--ink-light)}
-.footer a{color:var(--ink-light);text-decoration:none}
-
-/* Mishnah additions */
-.heb-card{direction:rtl;text-align:right;max-width:560px;margin:2rem auto 0;background:var(--bg);border:1px solid var(--burg-rule);border-right:4px solid var(--burg);padding:1.2rem 1.4rem;font-family:'Frank Ruehl CLM','David','SBL Hebrew','Times New Roman',serif}
-.heb-card h2{font-size:1.25rem;font-weight:700;color:var(--burg);margin-bottom:.4rem}
-.heb-card p{font-size:1.05rem;line-height:1.7;color:var(--ink-mid);margin-bottom:.8rem}
-.heb-card .btn-main{font-family:inherit;font-size:1.05rem;padding:.7rem 1.6rem;letter-spacing:0}
-.weave-wrap{overflow-x:auto;margin:0 0 1.3rem}
-.weave{width:100%;border-collapse:collapse;font-family:'Frank Ruehl CLM','David','SBL Hebrew','Times New Roman',serif;font-size:1rem;line-height:1.75;text-align:center}
-.weave th{background:var(--burg);color:var(--bg);font-weight:500;padding:.4rem;width:50%}
-.weave td{border:1px solid var(--burg-rule);padding:.9rem .8rem;vertical-align:top;background:var(--bg)}
-.weave td strong{display:block;font-family:'Cinzel',serif;color:var(--burg);margin-bottom:.3rem}
-.weave .horizontal1{color:#2563eb;font-weight:600}
-.orders{width:100%;border-collapse:collapse;margin:.3rem 0 1rem}
-.orders th{text-align:left;font-family:'Cinzel',serif;font-weight:500;font-size:.85rem;color:var(--bg);background:var(--burg);padding:.5rem .8rem}
-.orders td{padding:.55rem .8rem;border-bottom:1px solid var(--rule);color:var(--ink-mid)}
-.orders tr:nth-child(even) td{background:var(--bg-2)}
-.citation-box{background:var(--bg-2);padding:1rem 1.2rem;margin:1rem 0}
-.series-navigation ul{margin:0 0 1rem 1.2rem}
-.series-navigation li{margin-bottom:.4rem}
-.chapter{max-width:1120px}.chapter .featured{padding:2rem 1.6rem}
-.weave td{white-space:nowrap}
-.scroll-hint{display:none;font-size:.85rem;color:var(--ink-light);margin:-.6rem 0 .8rem}
-@media (max-width:640px){.weave{font-size:.8rem;line-height:1.6}.weave td{padding:.5rem .45rem}.scroll-hint{display:block}.orders td,.orders th{padding:.45rem .3rem;font-size:.8rem;letter-spacing:0}.orders th:last-child,.orders td:last-child{text-align:center}}
-</style>
+<link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/frontdoor.css">
 </head>
 <body>
 <nav class="site-nav">
@@ -652,8 +539,8 @@ details h4{font-weight:500;margin:1rem 0 .4rem}
 </section>
 
 <footer class="footer">
-  <span>&copy; 2026 Chaver.com · The Woven Texts Project</span>
-  <span><a href="/about-Moshe-Kline">About Moshe Kline</a> · <a href="/hebrew%20index">עברית</a> · <a href="https://asitwaswritten.org/">As It Was Written — a primer</a></span>
+  <span>&copy; 2026 chaver.com · The Woven Texts Project</span>
+  <span class="ft-links"><a href="/about-Moshe-Kline">About Moshe Kline</a><a href="https://independent.academia.edu/MosheKline">Academia</a><a href="/hebrew%20index" lang="he">עברית</a></span>
 </footer>
 <!-- click tracking v1: counts PDF downloads and doorway clicks in Google Analytics -->
 <script>

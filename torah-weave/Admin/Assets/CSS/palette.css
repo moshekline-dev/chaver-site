@@ -1,0 +1,53 @@
+/* ==========================================================
+   chaver.com PALETTE AND TYPEFACES — the one place where the
+   site's colours and fonts are defined (Oct 2026).
+   main.css (all older pages) and frontdoor.css (redesigned
+   pages) both import this file. Change a colour here and every
+   page follows. The structural colour codes (the coloured words
+   in the tables, the map unit colours) are NOT here — they stay
+   in main.css untouched.
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
+
+:root {
+  /* page backgrounds */
+  --bg: #faf6ee;          /* page, table cells */
+  --bg-2: #f2ead8;        /* cards, strips */
+  --bg-3: #e8dcc4;        /* footer */
+  --parchment: #faf6ee;   /* light column header, top */
+  --parchment-2: #f2ead8; /* light column header, bottom */
+  --sand: #ecdcba;        /* middle column header, top */
+  --sand-2: #e2cfa6;      /* middle column header, bottom; tan accents */
+  /* text */
+  --ink: #1c1610;         /* headings, strong text */
+  --ink-mid: #3e2e1e;     /* body text */
+  --ink-light: #5c4630;   /* secondary text */
+  --ink-faint: #6e5a44;   /* small labels */
+  /* accent: the site colour (asitwaswritten red) */
+  --accent: #7a1f2e;      /* bar, buttons, dark column headers, title boxes */
+  --accent-2: #8f3442;    /* lighter red: start of gradients, rules, small accents */
+  --accent-2-rgb: 143, 52, 66;
+  --accent-dark: #5a1622; /* hover, deepest shade */
+  --accent-rgb: 122, 31, 46;
+  --accent-rule: rgba(122, 31, 46, .2);
+  --rule: rgba(28, 22, 16, .1);
+  /* table column headers: dark / middle / light (order is structural, shades are the theme) */
+  --col-1-top: #8f3442; --col-1-bottom: #7a1f2e; --col-1-text: #faf6ee;
+  --col-2-top: #a8505c; --col-2-bottom: #97434f; --col-2-text: #faf6ee;
+  --col-3-top: #faf6ee; --col-3-bottom: #f2ead8; --col-3-text: #7a1f2e;
+  /* links */
+  --link: #7a1f2e;
+  --link-hover: #5a1622;
+  /* menu bar */
+  --bar: #7a1f2e;
+  --on-bar: #faf6ee;
+  /* footer: one quiet sand line, as on asitwaswritten */
+  --footer-bg: #e8dcc4;
+  --on-footer: #6e5a44;
+  --footer-link: #5c4630;
+  /* typefaces */
+  --font-text: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  --font-display: 'Cinzel', 'EB Garamond', Georgia, serif;
+  --font-hebrew: 'Frank Ruhl Libre', 'David', 'Times New Roman', serif;
+  --font-tables: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+}

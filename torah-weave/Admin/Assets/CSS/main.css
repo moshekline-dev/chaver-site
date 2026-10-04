@@ -1,3 +1,4 @@
+@import url('palette.css');
 ﻿/* ============================================
    TORAH COMMENTARY PROJECT - MAIN.CSS
    Consolidated & Cleaned Version
@@ -47,8 +48,8 @@ html {
 body {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
     line-height: 1.8;
-    color: #2c3e50;
-    background-color: #fdfcf8;
+    color: var(--ink-mid);
+    background-color: var(--bg);
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
@@ -63,7 +64,7 @@ body {
 h1 {
     font-size: 2.2em;
     color: #1a1a1a;
-    border-bottom: 2px solid #8b7355;
+    border-bottom: 2px solid var(--accent-2);
     padding-bottom: 12px;
     margin-bottom: 30px;
     font-weight: 600;
@@ -71,7 +72,7 @@ h1 {
 
 h2 {
     font-size: 1.6em;
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-top: 50px;
     margin-bottom: 20px;
     font-weight: 600;
@@ -79,7 +80,7 @@ h2 {
 
 h3 {
     font-size: 1.3em;
-    color: #34495e;
+    color: var(--ink);
     margin-top: 35px;
     margin-bottom: 15px;
     font-weight: 600;
@@ -87,7 +88,7 @@ h3 {
 
 h4 {
     font-size: 1.1em;
-    color: #546e7a;
+    color: var(--ink-light);
     margin-top: 25px;
     margin-bottom: 12px;
     font-style: italic;
@@ -99,14 +100,14 @@ p {
 }
 
 a {
-    color: #5d87a1;
+    color: var(--link);
     text-decoration: none;
-    border-bottom: 1px dotted #5d87a1;
+    border-bottom: 1px dotted var(--link);
 }
 
 a:hover {
-    color: #3d5770;
-    border-bottom: 1px solid #3d5770;
+    color: var(--link-hover);
+    border-bottom: 1px solid var(--link-hover);
 }
 
 blockquote {
@@ -139,11 +140,11 @@ p.Torah, li.Torah, div.Torah {
 p.UnitHeader, li.UnitHeader, div.UnitHeader {
     font-size: 1.5em;
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--ink-mid);
     text-align: center;
     margin: 30px 0 20px 0;
     padding-bottom: 10px;
-    border-bottom: 2px solid #8b7355;
+    border-bottom: 2px solid var(--accent-2);
 }
 
 p.CellLabel, li.CellLabel, div.CellLabel {
@@ -194,7 +195,7 @@ p.CellLabel, li.CellLabel, div.CellLabel {
 
 /* Site Header */
 header.site-header {
-    background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+    background: linear-gradient(135deg, var(--sand) 0%, var(--sand-2) 100%);
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     position: -webkit-sticky;
     position: sticky;
@@ -206,8 +207,8 @@ header.site-header {
 
 /* Site Footer */
 footer.site-footer {
-    background: linear-gradient(135deg, #b39f7d 0%, #9d8968 100%);
-    color: #2c1810;
+    background: linear-gradient(135deg, var(--sand-2) 0%, var(--sand-2) 100%);
+    color: var(--ink);
     margin-top: 80px;
     padding: 40px 20px 20px;
 }
@@ -225,7 +226,7 @@ footer.site-footer {
 }
 
 .footer-section h4 {
-    color: #2c1810;
+    color: var(--ink);
     font-size: 1.1rem;
     margin-bottom: 15px;
     font-weight: 600;
@@ -242,7 +243,7 @@ footer.site-footer {
 }
 
 .footer-section a {
-    color: #4a3220;
+    color: var(--ink-mid);
     text-decoration: none;
     border-bottom: none;
     transition: color 0.3s ease;
@@ -253,14 +254,14 @@ footer.site-footer {
 }
 
 .footer-section p {
-    color: #4a3220;
+    color: var(--ink-mid);
     line-height: 1.7;
     font-size: 0.95rem;
 }
 
 .footer-bottom {
     border-top: 1px solid rgba(61, 47, 31, 0.3);
-    color: #4a3220;
+    color: var(--ink-mid);
     font-size: 0.9rem;
     text-align: center;
     padding-top: 20px;
@@ -294,7 +295,7 @@ footer.site-footer {
 .commentary-header h1 {
     font-size: 36px;
     margin-bottom: 10px;
-    color: #2c3e50;
+    color: var(--ink-mid);
 }
 
 .commentary-section {
@@ -302,7 +303,7 @@ footer.site-footer {
 }
 
 .commentary-section h2 {
-    color: #2c3e50;
+    color: var(--ink-mid);
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
     margin-top: 40px;
@@ -310,7 +311,7 @@ footer.site-footer {
 }
 
 .commentary-section h3 {
-    color: #34495e;
+    color: var(--ink);
     margin-top: 25px;
     margin-bottom: 15px;
 }
@@ -364,14 +365,14 @@ table.MsoNormalTable td,
 }
 
 .scripture-table thead th {
-    color: #fdfcf8;
+    color: var(--bg);
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     padding: 1rem 1.5rem;
     text-align: center;
-    border-bottom: 3px solid #5d4e37;
+    border-bottom: 3px solid var(--accent);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     width: 50%;
 }
@@ -379,20 +380,20 @@ table.MsoNormalTable td,
 /* Column Header Colors */
 .scripture-table thead th.col-left,
 .scripture-table thead th.col-a {
-    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
-    color: #fdfcf8;
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
+    color: var(--bg);
 }
 
 .scripture-table thead th.col-middle,
 .scripture-table thead th.col-b {
-    background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
-    color: #3d2f1f;
+    background: linear-gradient(135deg, var(--sand) 0%, var(--sand-2) 100%);
+    color: var(--ink);
 }
 
 .scripture-table thead th.col-right,
 .scripture-table thead th.col-c {
-    background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
-    color: #5d4e37;
+    background: linear-gradient(135deg, var(--parchment) 0%, var(--parchment-2) 100%);
+    color: var(--accent);
 }
 
 .scripture-table thead th.col-full,
@@ -405,7 +406,7 @@ table.MsoNormalTable td,
     padding: 1rem 2rem;
     border-right: 1px solid #e8e4df;
     border-bottom: 1px solid #e8e4df;
-    background: #fdfcf8;
+    background: var(--bg);
 }
 
 .scripture-table tbody td:last-child {
@@ -423,7 +424,7 @@ table.MsoNormalTable td,
     line-height: 1.8;
     text-align: justify;
     hyphens: auto;
-    color: #2c3e50;
+    color: var(--ink-mid);
 }
 
 
@@ -584,8 +585,8 @@ span.HebrewParagraph {
 /* Structural element count badge (used in Fifty Gates overview) */
 strong.element-count {
     display: inline-block;
-    background-color: #8b7355;
-    color: #fdfcf8;
+    background-color: var(--accent-2);
+    color: var(--bg);
     font-size: 0.78em;
     font-weight: 600;
     padding: 2px 9px;
@@ -629,8 +630,8 @@ strong.element-count {
 /* Highlighted Boxes */
 .structural-note,
 .observation {
-    background-color: #f0f4f8;
-    border-left: 4px solid #5d87a1;
+    background-color: var(--bg-2);
+    border-left: 4px solid var(--link);
     padding: 18px;
     margin: 25px 0;
     font-size: 0.95em;
@@ -644,10 +645,10 @@ strong.element-count {
 }
 
 .structure-box {
-    border: 2px solid #2c3e50;
+    border: 2px solid var(--accent);
     padding: 15px;
     margin: 20px 0;
-    background-color: #ecf0f1;
+    background-color: var(--ink-mid);
 }
 
 .speculative {
@@ -695,8 +696,8 @@ strong.element-count {
 
 .pattern-tag {
     display: inline-block;
-    background-color: #e8f0fe;
-    color: #5090f0;
+    background-color: var(--bg-2);
+    color: var(--accent);
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 12px;
@@ -728,7 +729,7 @@ strong.element-count {
 
 .matrix-table .row-header {
     font-weight: 600;
-    background-color: #f0f4f8;
+    background-color: var(--bg-2);
 }
 
 .matrix-table td.irregular {
@@ -850,7 +851,7 @@ strong.element-count {
 }
 
 .breadcrumb a {
-    color: #3498db;
+    color: var(--link);
     text-decoration: none;
 }
 
@@ -860,7 +861,7 @@ strong.element-count {
 
 /* Unit Navigation */
 .unit-navigation {
-    background: linear-gradient(to bottom, #f8f6f2 0%, #f0ebe3 100%);
+    background: linear-gradient(to bottom, var(--bg) 0%, #f0ebe3 100%);
     padding: 1.25rem 1.5rem;
     margin-bottom: 2.5rem;
     border-radius: 6px;
@@ -874,7 +875,7 @@ strong.element-count {
 }
 
 .unit-navigation a {
-    color: #5d4e37;
+    color: var(--accent);
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -884,26 +885,26 @@ strong.element-count {
 }
 
 .unit-navigation a:hover {
-    background: rgba(139, 115, 85, 0.12);
-    color: #3d2f1f;
+    background: rgba(var(--accent-2-rgb), 0.12);
+    color: var(--ink);
     transform: translateY(-1px);
 }
 
 .nav-breadcrumb {
     font-size: 0.95rem;
-    color: #6b5d4f;
+    color: var(--accent);
     font-weight: 500;
 }
 
 .nav-breadcrumb a {
-    color: #8b7355;
-    border-bottom: 1px dotted #8b7355;
+    color: var(--accent-2);
+    border-bottom: 1px dotted var(--accent-2);
     padding: 0;
 }
 
 .nav-breadcrumb a:hover {
-    color: #5d4e37;
-    border-bottom: 1px solid #5d4e37;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
     background: none;
 }
 
@@ -925,10 +926,10 @@ strong.element-count {
 }
 
 .nav-arrows a:hover {
-    background: #8b7355;
+    background: var(--accent-2);
     color: white;
-    border-color: #8b7355;
-    box-shadow: 0 2px 6px rgba(139, 115, 85, 0.25);
+    border-color: var(--accent-2);
+    box-shadow: 0 2px 6px rgba(var(--accent-2-rgb), 0.25);
 }
 
 /* Unit Header Section */
@@ -936,8 +937,8 @@ strong.element-count {
     text-align: center;
     margin: 0 0 3rem 0;
     padding: 2.5rem 2rem;
-    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 50%, #5d4e37 100%);
-    color: #fdfcf8;
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 50%, var(--accent) 100%);
+    color: var(--bg);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -947,7 +948,7 @@ strong.element-count {
     margin: 0 0 0.75rem 0;
     font-size: 2.25rem;
     font-weight: 600;
-    color: #fdfcf8;
+    color: var(--bg);
     letter-spacing: -0.01em;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     border: none;
@@ -979,7 +980,7 @@ strong.element-count {
     bottom: 12px;
     right: 12px;
     z-index: 1001;
-    background: #1a5276;
+    background: var(--accent);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -1078,7 +1079,7 @@ strong.element-count {
 
 /* Commentary Link Callout */
 .commentary-link {
-    background: linear-gradient(to right, #fef5e7 0%, #fdebd0 100%);
+    background: linear-gradient(to right, var(--parchment) 0%, var(--parchment-2) 100%);
     border-left: 4px solid #d4a574;
     padding: 1.25rem 1.5rem;
     margin: 2.5rem 0;
@@ -1102,8 +1103,8 @@ strong.element-count {
 
 /* Citation Box */
 .citation-box {
-    background: linear-gradient(to right, #e8f4fd 0%, #d6ebfa 100%);
-    border-left: 4px solid #5d87a1;
+    background: linear-gradient(to right, var(--bg) 0%, var(--bg) 100%);
+    border-left: 4px solid var(--link);
     padding: 1.25rem 1.5rem;
     margin: 2.5rem 0;
     border-radius: 6px;
@@ -1112,7 +1113,7 @@ strong.element-count {
 }
 
 .citation-box strong {
-    color: #3d5770;
+    color: var(--link-hover);
     font-weight: 600;
 }
 
@@ -1128,11 +1129,11 @@ strong.element-count {
 .series-navigation h3 {
     margin-top: 0;
     margin-bottom: 15px;
-    color: #2c3e50;
+    color: var(--ink-mid);
 }
 
 .series-navigation span {
-    color: #6c757d;
+    color: var(--ink-faint);
     font-weight: bold;
     margin: 0 10px;
     display: inline-block;
@@ -1140,7 +1141,7 @@ strong.element-count {
 
 .series-navigation a {
     text-decoration: none;
-    color: #007bff;
+    color: var(--link);
     font-weight: bold;
     margin: 0 10px;
     display: inline-block;
@@ -1149,7 +1150,7 @@ strong.element-count {
 }
 
 .series-navigation a:hover {
-    color: #0056b3;
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
@@ -1289,8 +1290,8 @@ strong.element-count {
 
 .mobile-notice {
     display: none;
-    background-color: #e8f0fe;
-    color: #1967d2;
+    background-color: var(--bg-2);
+    color: var(--link);
     padding: 12px 20px;
     border-radius: 6px;
     text-align: center;
@@ -1357,8 +1358,8 @@ strong.element-count {
 
 /* Row Labels */
 .row-label {
-    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
-    color: #fdfcf8;
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
+    color: var(--bg);
     padding: 15px 10px;
     text-align: center;
     font-weight: 600;
@@ -1411,7 +1412,7 @@ strong.element-count {
     border: 2px solid #ddd;
     border-radius: 6px;
     text-decoration: none;
-    color: #2c3e50;
+    color: var(--ink-mid);
     transition: all 0.2s ease;
     min-height: 140px;
     background: white;
@@ -1420,7 +1421,7 @@ strong.element-count {
 .unit:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-color: #8b7355;
+    border-color: var(--accent-2);
 }
 
 .unit-title {
@@ -1467,21 +1468,21 @@ strong.element-count {
     max-width: 900px;
     margin: 50px auto;
     padding: 30px;
-    background: #fdfcf8;
+    background: var(--bg);
     border-radius: 8px;
 }
 
 .torah-book-description .main-heading {
     font-size: 1.8em;
     color: #1a1a1a;
-    border-bottom: 2px solid #8b7355;
+    border-bottom: 2px solid var(--accent-2);
     padding-bottom: 10px;
     margin-bottom: 25px;
 }
 
 .torah-book-description h3 {
     font-size: 1.4em;
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-top: 35px;
     margin-bottom: 15px;
 }
@@ -1500,7 +1501,7 @@ strong.element-count {
     display: inline-block;
     margin-top: 30px;
     padding: 10px 20px;
-    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -1509,7 +1510,7 @@ strong.element-count {
 }
 
 .back-to-top:hover {
-    background: linear-gradient(135deg, #6b5d4f 0%, #5d4e37 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent) 100%);
     transform: translateY(-1px);
 }
 
@@ -1544,7 +1545,7 @@ body.mishnah-portal {
 
 .mishnah-header h1 {
     font-size: 3em;
-    color: #8b7355;
+    color: var(--accent-2);
     border-bottom: none;
     margin-bottom: 5px;
 }
@@ -1565,7 +1566,7 @@ body.mishnah-portal {
 }
 
 .resource-card {
-    background: #fdfcf8;
+    background: var(--bg);
     border: 1px solid #d4cfc7;
     border-radius: 8px;
     padding: 20px;
@@ -1576,8 +1577,8 @@ body.mishnah-portal {
 
 .resource-card h3 {
     margin-top: 0;
-    color: #8b7355;
-    border-bottom: 2px solid #8b7355;
+    color: var(--accent-2);
+    border-bottom: 2px solid var(--accent-2);
     padding-bottom: 10px;
     font-size: 1.4em;
 }
@@ -1605,13 +1606,13 @@ body.mishnah-portal {
 
 .resource-list a:hover {
     background-color: #fff;
-    color: #8b7355;
+    color: var(--accent-2);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .resource-icon {
     margin-left: 8px;
-    color: #8b7355;
+    color: var(--accent-2);
 }
 
 /* Seder Sections */
@@ -1623,12 +1624,12 @@ body.mishnah-portal {
 }
 
 .seder-header {
-    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
     color: white;
     padding: 15px 30px;
     font-size: 1.8em;
     font-weight: bold;
-    border-bottom: 3px solid #5d4e37;
+    border-bottom: 3px solid var(--accent);
     position: relative;
     text-align: right;
 }
@@ -1649,7 +1650,7 @@ body.mishnah-portal {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
     padding: 25px;
-    background-color: #fdfcf8;
+    background-color: var(--bg);
 }
 
 .tractate-card {
@@ -1664,14 +1665,14 @@ body.mishnah-portal {
 .tractate-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-color: #8b7355;
+    border-color: var(--accent-2);
 }
 
 .tractate-title {
     display: block;
     font-size: 1.6em;
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-bottom: 5px;
 }
 
@@ -1708,9 +1709,9 @@ body.mishnah-portal {
 }
 
 .ch-btn:hover {
-    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
     color: white;
-    border-color: #8b7355;
+    border-color: var(--accent-2);
 }
 
 /* Portal Divider */
@@ -1731,7 +1732,7 @@ body.mishnah-portal {
 }
 
 .portal-footer a {
-    color: #8b7355;
+    color: var(--accent-2);
     text-decoration: none;
     border-bottom: none;
 }
@@ -1761,7 +1762,7 @@ body.mishnah-portal {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--ink-mid);
     border: none;
     padding: 0;
 }
@@ -1769,7 +1770,7 @@ body.mishnah-portal {
 .site-title .subtitle {
     font-size: 1.3rem;
     font-weight: normal;
-    color: #546e7a;
+    color: var(--ink-light);
     margin-bottom: 0.75rem;
 }
 
@@ -1787,12 +1788,12 @@ body.mishnah-portal {
 .hero-cta p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-bottom: 1rem;
 }
 
 .hero-cta strong {
-    color: #8b7355;
+    color: var(--accent-2);
     font-size: 1.15rem;
 }
 
@@ -1810,7 +1811,7 @@ body.mishnah-portal {
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: inline-block;
-    background: #2c3e50;
+    background: var(--accent);
     color: white !important;
     font-weight: 500;
     border: none;
@@ -1818,7 +1819,7 @@ body.mishnah-portal {
 
 .featured-links a:hover {
     transform: translateY(-2px);
-    background: #1a252f;
+    background: var(--accent-dark);
     box-shadow: 0 4px 8px rgba(44, 62, 80, 0.3);
 }
 
@@ -1860,12 +1861,12 @@ body.mishnah-portal {
 .video-context h3 {
     font-family: 'Crimson Pro', serif;
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-bottom: 0.5rem;
 }
 
 .video-context p {
-    color: #546e7a;
+    color: var(--ink-light);
     font-size: 1.1rem;
 }
 
@@ -1893,14 +1894,14 @@ body.mishnah-portal {
     font-family: 'Crimson Pro', serif;
     font-size: 2.25rem;
     font-weight: 700;
-    color: #1a252f;
+    color: var(--ink);
     margin-bottom: 0.75rem;
     letter-spacing: -0.02em;
 }
 
 .demo-header p {
     font-size: 1em;
-    color: #546e7a;
+    color: var(--ink-light);
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
@@ -1924,7 +1925,7 @@ body.mishnah-portal {
     font-size: 0.95em;
     font-weight: 600;
     letter-spacing: 0.5px;
-    background: #2c3e50;
+    background: var(--accent);
     color: white;
     border: none;
     border-radius: 50px;
@@ -1937,7 +1938,7 @@ body.mishnah-portal {
 }
 
 .transform-button:hover {
-    background: #34495e;
+    background: var(--accent-dark);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(44, 62, 80, 0.4);
 }
@@ -1961,9 +1962,9 @@ body.mishnah-portal {
     top: 1.5rem;
     right: 1.5rem;
     padding: 0.4rem 1rem;
-    background: rgba(139, 115, 85, 0.1);
-    color: #8b7355;
-    border: 1px solid #8b7355;
+    background: rgba(var(--accent-2-rgb), 0.1);
+    color: var(--accent-2);
+    border: 1px solid var(--accent-2);
     border-radius: 6px;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -2012,7 +2013,7 @@ body.mishnah-portal {
     font-weight: 600;
     border-bottom: 2px solid #dcd9d0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    color: #2c3e50;
+    color: var(--ink-mid);
 }
 
 .demonstration-section .col-header-a { 
@@ -2033,7 +2034,7 @@ body.mishnah-portal {
     display: block;
     font-weight: 400;
     font-size: 0.85rem;
-    color: #546e7a;
+    color: var(--ink-light);
     margin-top: 0.5rem;
     line-height: 1.4;
 }
@@ -2056,12 +2057,12 @@ body.mishnah-portal {
 /* Label Cell Styling */
 .label-cell {
     background: #fff;
-    border-right: 3px solid #c4a57b !important;
+    border-right: 3px solid var(--sand-2) !important;
 }
 
 .row-tag {
     display: inline-block;
-    background: #2c3e50;
+    background: var(--accent);
     color: white;
     padding: 3px 10px;
     border-radius: 4px;
@@ -2131,15 +2132,15 @@ body.mishnah-portal {
 /* Insights Box */
 .insights-box {
     margin-top: 3rem;
-    background: #2c3e50;
-    color: #ecf0f1;
+    background: var(--accent);
+    color: var(--ink-mid);
     padding: 2rem;
     border-radius: 8px;
 }
 
 .insights-box h4 {
     margin-top: 0;
-    color: #c4a57b;
+    color: var(--sand-2);
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -2164,7 +2165,7 @@ body.mishnah-portal {
 }
 
 .insights-box em {
-    color: #c4a57b;
+    color: var(--sand-2);
     font-style: italic;
 }
 
@@ -2226,14 +2227,14 @@ body.mishnah-portal {
 .book-highlight {
     padding: 2rem;
     margin: 2rem 0;
-    border: 3px solid #2c3e50;
+    border: 3px solid var(--accent);
     background: #f8f9fa;
     border-radius: 8px;
 }
 
 .book-highlight h2 {
     margin-top: 0;
-    color: #2c3e50;
+    color: var(--ink-mid);
 }
 
 .book-links {
@@ -2245,7 +2246,7 @@ body.mishnah-portal {
 
 .book-links a {
     padding: 0.75rem 1.5rem;
-    background: #2c3e50;
+    background: var(--accent);
     color: white !important;
     border-radius: 6px;
     text-decoration: none;
@@ -2254,7 +2255,7 @@ body.mishnah-portal {
 }
 
 .book-links a:hover {
-    background: #1a252f;
+    background: var(--accent-dark);
 }
 
 /* Testimonial */
@@ -2262,7 +2263,7 @@ body.mishnah-portal {
     padding: 1.5rem;
     margin: 1.5rem 0;
     background: #f8f9fa;
-    border-left: 4px solid #2c3e50;
+    border-left: 4px solid var(--accent);
     border-radius: 4px;
 }
 
@@ -2274,14 +2275,14 @@ body.mishnah-portal {
 .testimonial-author {
     font-weight: bold;
     font-style: normal;
-    color: #2c3e50;
+    color: var(--ink-mid);
 }
 
 /* Stats Highlight */
 .stats-highlight {
     padding: 1.5rem;
     margin: 2rem 0;
-    border-left: 4px solid #2c3e50;
+    border-left: 4px solid var(--accent);
     background: #f8f9fa;
     border-radius: 4px;
 }
@@ -2296,13 +2297,13 @@ body.mishnah-portal {
 .publication-note {
     padding: 1.5rem;
     margin: 2rem 0;
-    background: #e8f4f8;
-    border-left: 4px solid #3498db;
+    background: var(--bg-2);
+    border-left: 4px solid var(--link);
     border-radius: 4px;
 }
 
 .publication-note strong {
-    color: #2c3e50;
+    color: var(--ink-mid);
 }
 
 /* FAQ Section */
@@ -2320,7 +2321,7 @@ body.mishnah-portal {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 10px;
-    color: #2c3e50;
+    color: var(--ink-mid);
 }
 
 .faq-answer {
@@ -2357,7 +2358,7 @@ body.mishnah-portal {
 .slideshow-intro h2 {
     font-family: 'Crimson Pro', Georgia, serif;
     font-size: 2rem;
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-top: 0;
     margin-bottom: 1rem;
     border: none;
@@ -2366,7 +2367,7 @@ body.mishnah-portal {
 
 .slideshow-intro p {
     font-size: 1.1rem;
-    color: #3d5161;
+    color: var(--ink-light);
     line-height: 1.7;
     max-width: 700px;
     margin: 0 auto;
@@ -2406,14 +2407,14 @@ body.mishnah-portal {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    background: linear-gradient(135deg, #8b7355, #6b5d4f);
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
 }
 
 /* Navigation Buttons */
 .slide-btn {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fdfcf8;
+    color: var(--bg);
     padding: 0.6rem 1.2rem;
     border-radius: 6px;
     cursor: pointer;
@@ -2455,7 +2456,7 @@ body.mishnah-portal {
 }
 
 .slide-dot.active {
-    background: #fdfcf8;
+    background: var(--bg);
     transform: scale(1.2);
 }
 
@@ -2469,7 +2470,7 @@ body.mishnah-portal {
 }
 
 .slide-counter a {
-    color: #8b7355;
+    color: var(--accent-2);
 }
 
 
@@ -2481,7 +2482,7 @@ body.mishnah-portal {
 .chapter-grid-container {
     margin: 2rem 0;
     padding: 1.5rem;
-    background: #fdfcf8;
+    background: var(--bg);
     border: 1px solid #d4cfc7;
     border-radius: 8px;
 }
@@ -2490,10 +2491,10 @@ body.mishnah-portal {
     text-align: center;
     font-weight: 700;
     font-size: 1.1rem;
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #8b7355;
+    border-bottom: 2px solid var(--accent-2);
 }
 
 /* 50-Chapter Grid - 10 columns × 5 rows */
@@ -2549,7 +2550,7 @@ body.mishnah-portal {
     top: 2px;
     right: 4px;
     font-size: 0.6rem;
-    color: #1a237e;
+    color: var(--accent);
     font-weight: bold;
 }
 
@@ -2592,18 +2593,18 @@ body.mishnah-portal {
     margin: 2.5rem 0;
     padding: 1.5rem;
     background: white;
-    border-left: 4px solid #8b7355;
+    border-left: 4px solid var(--accent-2);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .stage-section h3 {
-    color: #8b7355;
+    color: var(--accent-2);
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
 .stage-section h4 {
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     font-style: normal;
@@ -2627,7 +2628,7 @@ body.mishnah-portal {
     margin-top: 0.75rem;
     margin-bottom: 0;
     font-style: italic;
-    color: #1565c0;
+    color: var(--link);
 }
 
 /* Verification Section */
@@ -2656,8 +2657,8 @@ body.mishnah-portal {
 .emphasis-box {
     margin: 1.5rem 0;
     padding: 1.25rem;
-    background: #e3f2fd;
-    border-left: 4px solid #1976d2;
+    background: var(--bg-2);
+    border-left: 4px solid var(--accent);
     border-radius: 0 6px 6px 0;
 }
 
@@ -2709,7 +2710,7 @@ body.mishnah-portal {
 }
 
 .final-table thead th {
-    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
     color: white;
     font-weight: 600;
 }
@@ -2730,7 +2731,7 @@ body.mishnah-portal {
 .key-terms h3 {
     margin-top: 0;
     color: #495057;
-    border-bottom: 2px solid #8b7355;
+    border-bottom: 2px solid var(--accent-2);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -2741,7 +2742,7 @@ body.mishnah-portal {
 
 .key-terms dt {
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-top: 1rem;
 }
 
@@ -2765,7 +2766,7 @@ body.mishnah-portal {
     text-align: center;
     padding: 60px 20px;
     margin-bottom: 40px;
-    border-bottom: 2px solid #8b7355;
+    border-bottom: 2px solid var(--accent-2);
 }
 
 .title-page h1 {
@@ -2777,14 +2778,14 @@ body.mishnah-portal {
 
 .title-page .subtitle {
     font-size: 1.4em;
-    color: #5d4e37;
+    color: var(--accent);
     margin-bottom: 30px;
     font-style: italic;
 }
 
 .title-page .document-type {
     font-size: 1.1em;
-    color: #6b5d4f;
+    color: var(--accent);
     margin-top: 20px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -2792,7 +2793,7 @@ body.mishnah-portal {
 
 /* Table of Contents */
 .toc {
-    background: #fdfcf8;
+    background: var(--bg);
     padding: 25px 30px;
     border: 1px solid #d4cfc7;
     border-radius: 6px;
@@ -2801,7 +2802,7 @@ body.mishnah-portal {
 
 .toc h2 {
     margin-top: 0;
-    border-bottom: 1px solid #8b7355;
+    border-bottom: 1px solid var(--accent-2);
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
@@ -2816,12 +2817,12 @@ body.mishnah-portal {
 }
 
 .toc a {
-    color: #5d4e37;
+    color: var(--accent);
     border-bottom: none;
 }
 
 .toc a:hover {
-    color: #8b7355;
+    color: var(--accent-2);
 }
 
 .toc-indent {
@@ -2852,11 +2853,11 @@ body.mishnah-portal {
 .epigraph .translation {
     font-style: italic;
     margin-bottom: 8px;
-    color: #2c3e50;
+    color: var(--ink-mid);
 }
 
 .epigraph .source {
-    color: #6b5d4f;
+    color: var(--accent);
     font-size: 0.9em;
 }
 
@@ -2865,7 +2866,7 @@ body.mishnah-portal {
     text-align: center;
     margin: 50px 0;
     font-size: 1.5em;
-    color: #8b7355;
+    color: var(--accent-2);
     letter-spacing: 0.3em;
 }
 
@@ -2904,14 +2905,14 @@ body.mishnah-portal {
 
 .article-header h1 {
     font-size: 2.4rem;
-    color: #2c3e50;
+    color: var(--ink-mid);
     margin-bottom: 1rem;
     line-height: 1.3;
 }
 
 .article-subtitle {
     font-size: 1.2rem;
-    color: #546e7a;
+    color: var(--ink-light);
     font-style: italic;
     max-width: 700px;
     margin: 0 auto 1.5rem;
@@ -2919,20 +2920,20 @@ body.mishnah-portal {
 
 .article-meta {
     font-size: 0.95rem;
-    color: #8b7355;
+    color: var(--accent-2);
 }
 
 /* Revelation Sections */
 .revelation-section {
     margin: 3rem 0;
     padding: 2rem;
-    background: linear-gradient(135deg, #fdfcf8 0%, #f5f3ee 100%);
-    border-left: 4px solid #c4a57b;
+    background: linear-gradient(135deg, var(--bg) 0%, #f5f3ee 100%);
+    border-left: 4px solid var(--sand-2);
     border-radius: 0 8px 8px 0;
 }
 
 .revelation-section h2 {
-    color: #5d4e37;
+    color: var(--accent);
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -2946,7 +2947,7 @@ body.mishnah-portal {
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    background: #8b7355;
+    background: var(--accent-2);
     color: #fff;
     border-radius: 50%;
     font-size: 1rem;
@@ -2957,7 +2958,7 @@ body.mishnah-portal {
 /* Key Insight */
 .key-insight {
     background: #fff8e1;
-    border: 1px solid #c4a57b;
+    border: 1px solid var(--sand-2);
     padding: 1.25rem 1.5rem;
     margin: 1.5rem 0;
     border-radius: 6px;
@@ -2965,7 +2966,7 @@ body.mishnah-portal {
 }
 
 .key-insight strong {
-    color: #8b7355;
+    color: var(--accent-2);
     font-style: normal;
 }
 
@@ -2999,15 +3000,15 @@ body.mishnah-portal {
 
 /* Conclusion Section */
 .conclusion-section {
-    background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%);
-    color: #fdfcf8;
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
+    color: var(--bg);
     padding: 2.5rem;
     border-radius: 12px;
     margin-top: 3rem;
 }
 
 .conclusion-section h2 {
-    color: #fef5e7;
+    color: var(--parchment);
     margin-bottom: 1.5rem;
 }
 
@@ -3032,8 +3033,8 @@ body.mishnah-portal {
 .tablets-cta a {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #fef5e7;
-    color: #5d4e37;
+    background: var(--parchment);
+    color: var(--accent);
     text-decoration: none;
     border-radius: 6px;
     font-weight: 500;
@@ -3056,8 +3057,8 @@ body.mishnah-portal {
 .cta-link {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #fef5e7;
-    color: #5d4e37;
+    background: var(--parchment);
+    color: var(--accent);
     text-decoration: none;
     border-radius: 6px;
     font-weight: 500;
@@ -3812,11 +3813,11 @@ main.content-wrapper:has(.Mesechet) .Perek {
 }
 .banner-inner {
     background: #f8f9fa;
-    border-left: 3px solid #5d87a1;
+    border-left: 3px solid var(--link);
     padding: 0.5rem 1rem;
     border-radius: 4px;
     font-size: 0.9rem;
-    color: #3d5770;
+    color: var(--link-hover);
 }
 .banner-new {
     font-weight: 600;
@@ -3824,7 +3825,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     font-size: 0.75em;
     letter-spacing: 0.06em;
     margin-right: 0.5em;
-    color: #3d5770;
+    color: var(--link-hover);
 }
 
 /* =====================================================
@@ -3848,7 +3849,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
 .nav-brand {
     font-weight: 600;
     font-size: 1.1rem;
-    color: #2c1810;
+    color: var(--ink);
 }
 
 /* Hamburger toggle — desktop hidden, mobile visible */
@@ -3856,7 +3857,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     display: none;
     background: none;
     border: none;
-    color: #2c1810;
+    color: var(--ink);
     font-size: 1.6rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
@@ -3881,7 +3882,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
 .nav-menu > li > button {
     display: block;
     padding: 0.75rem 1rem;
-    color: #2c1810;
+    color: var(--ink);
     text-decoration: none;
     background: none;
     border: none;
@@ -3910,7 +3911,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     padding: 0.4rem 0;
     margin: 0;
     background: #fff;
-    color: #2c1810;
+    color: var(--ink);
     border-radius: 4px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     min-width: 220px;
@@ -3924,7 +3925,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
 .submenu li a {
     display: block;
     padding: 0.5rem 1.25rem;
-    color: #2c1810;
+    color: var(--ink);
     text-decoration: none;
     white-space: nowrap;
 }
@@ -3970,7 +3971,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
         max-height: calc(100vh - var(--site-header-height, 60px));
         overflow-y: auto;
         flex-direction: column;
-        background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
+        background: linear-gradient(135deg, var(--sand) 0%, var(--sand-2) 100%);
         padding: 0.5rem 0;
         z-index: 999;
         box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -4000,7 +4001,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
         border-radius: 0;
         min-width: 0;
         padding: 0;
-        color: #2c1810;
+        color: var(--ink);
     }
 
     .submenu li a {
@@ -4126,3 +4127,73 @@ main.content-wrapper:has(.Mesechet) .Perek {
     .submenu { padding: 6.4px 0; }
     .submenu li a { padding: 8px 20px; }
 }
+
+
+/* ==========================================================
+   SITE LOOK (Oct 2026) — menu bar, footer, page colours and
+   typefaces, matching the redesigned front-door pages.
+   All colours and fonts come from palette.css (imported at the
+   top of this file). Tables, maps and their colour codes are
+   NOT touched: tables keep their own typeface and no table or
+   colour-code rule is changed here.
+   ========================================================== */
+body { background-color: var(--bg); font-family: var(--font-text); }
+html[lang="he"] body { font-family: var(--font-hebrew); }
+table, .unit, [class*="tmap"], [class*="map-"] { font-family: var(--font-tables); }
+
+:is(h1, h2, h3):not(:is(table, .unit, [class*="tmap"], [class*="map-"]) *) { font-family: var(--font-display); font-weight: 500; letter-spacing: .02em; }
+html[lang="he"] :is(h1, h2, h3):not(:is(table, .unit, [class*="tmap"], [class*="map-"]) *) { font-family: var(--font-hebrew); font-weight: 700; letter-spacing: 0; }
+
+/* menu bar */
+header.site-header { background: var(--bar); box-shadow: 0 2px 8px rgba(0,0,0,.15); max-height: none; }
+.nav-row { padding: 8px 12px; }
+.nav-brand { font-family: var(--font-display); font-size: 17.6px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--on-bar); }
+.nav-menu { gap: 4px; }
+.nav-menu > li > a, .nav-menu > li > button {
+  font-family: var(--font-display); text-transform: uppercase; letter-spacing: .06em;
+  font-size: 13.5px; color: var(--on-bar); opacity: .93; padding: 12px 11px; }
+html[lang="he"] .nav-menu > li > a, html[lang="he"] .nav-menu > li > button { font-family: var(--font-hebrew); font-size: 16px; letter-spacing: 0; }
+.nav-menu > li > a:hover, .nav-menu > li > button:hover { background: rgba(250,246,238,.12); opacity: 1; }
+.has-dropdown > button::after { color: var(--on-bar); }
+.nav-toggle { color: var(--on-bar); }
+.submenu { padding: 6px 0; }
+.submenu li a { font-family: var(--font-text); color: var(--ink-mid); padding: 8px 20px; }
+html[lang="he"] .submenu li a { font-family: var(--font-hebrew); }
+
+
+/* phones and tablets: no hamburger — the menu words sit under the name */
+@media (max-width: 1024px), (max-height: 500px) {
+  header.site-header { background: var(--bar) !important; position: sticky !important; top: 0; left: 0; right: 0; width: auto; }
+  .nav-toggle { display: none; }
+  .nav-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .nav-menu, .nav-menu.is-open-menu {
+    display: flex; position: static; flex-direction: row; flex-wrap: wrap;
+    width: auto; max-width: none; max-height: none; overflow: visible;
+    background: none; box-shadow: none; padding: 0; }
+  .nav-menu > li { width: auto; }
+  .nav-menu > li > a, .nav-menu > li > button { width: auto; padding: 5px 9px; font-size: 13px; line-height: 1.4; }
+  html[lang="he"] .nav-menu > li > a, html[lang="he"] .nav-menu > li > button { font-size: 15px; }
+  .has-dropdown.is-open { flex-basis: 100%; }
+  .submenu { background: rgba(250,246,238,.95); }
+}
+
+/* table column headers — shades from the palette (dark / middle / light order unchanged) */
+.scripture-table thead th.col-left, .scripture-table thead th.col-a { background: linear-gradient(135deg, var(--col-1-top) 0%, var(--col-1-bottom) 100%); color: var(--col-1-text); }
+.scripture-table thead th.col-middle, .scripture-table thead th.col-b,
+.scripture-table thead th.col-full, .scripture-table thead th.col-envelope { background: linear-gradient(135deg, var(--col-2-top) 0%, var(--col-2-bottom) 100%); color: var(--col-2-text); }
+.scripture-table thead th.col-right, .scripture-table thead th.col-c { background: linear-gradient(135deg, var(--col-3-top) 0%, var(--col-3-bottom) 100%); color: var(--col-3-text); }
+
+/* ONE FOOTER for every page, modelled on asitwaswritten.org: a single quiet line */
+html body footer.site-footer { all: unset; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 2rem;
+  box-sizing: border-box; width: 100%; margin-top: 4rem; padding: 1.6rem 2.5rem; background: var(--footer-bg); border-top: 1px solid var(--rule);
+  font-family: var(--font-text); font-size: 15px; line-height: 1.5; color: var(--on-footer); }
+html[lang="he"] body footer.site-footer, html body footer.site-footer[dir="rtl"] { font-family: var(--font-hebrew); }
+footer.site-footer .ft-links { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; }
+html body footer.site-footer a { color: var(--footer-link); text-decoration: none; border: 0; }
+html body footer.site-footer a:hover { color: var(--accent); }
+@media print { html body footer.site-footer { display: none; } }
+@media (max-width: 600px) { html body footer.site-footer { padding: 1.4rem 16px; justify-content: center; text-align: center; } footer.site-footer .ft-links { justify-content: center; } }
+
+/* note / citation boxes: cream card with a red edge, like asitwaswritten */
+.citation-box, .publication-note, .emphasis-box { background: var(--bg); border: 1px solid var(--accent-rule); border-left: 4px solid var(--accent); box-shadow: 0 4px 16px rgba(var(--accent-rgb), .06); }
+html[dir="rtl"] .citation-box, html[lang="he"] .citation-box { border-left: 1px solid var(--accent-rule); border-right: 4px solid var(--accent); }
