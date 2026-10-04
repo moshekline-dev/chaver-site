@@ -752,6 +752,29 @@
         }
     }
     </style>
+<style>
+.home-doors{max-width:1000px;margin:3rem auto 2rem;padding:0 1rem}
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.door{display:flex;flex-direction:column;gap:.35rem;padding:1.2rem 1.2rem 1.3rem;background:var(--bg);border:1px solid var(--accent-rule);border-top:3px solid var(--accent);text-decoration:none;color:var(--ink);transition:box-shadow .2s,transform .2s}
+.door:hover{box-shadow:0 6px 18px rgba(var(--accent-rgb),.12);transform:translateY(-2px)}
+.door-k{font-family:var(--font-display);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.door-t{font-family:var(--font-display);font-size:19px;line-height:1.3;color:var(--ink)}
+.door-d{font-size:16px;line-height:1.5;color:var(--ink-light)}
+.doors-h{font-family:var(--font-display);text-align:center;color:var(--accent);font-size:1.4rem;margin:2.6rem 0 1rem}
+.questions{list-style:none;padding:0;margin:0 auto;max-width:44rem}
+.questions li{padding:.75rem 0;border-bottom:1px solid var(--rule);font-size:17px;line-height:1.5}
+.questions a{font-family:var(--font-display);font-size:18px;color:var(--accent);text-decoration:none;margin-right:.4rem}
+.questions span{color:var(--ink-light)}
+#linearView{column-count:2;column-gap:2.6rem;column-rule:1px solid var(--rule);text-align:justify;max-width:56rem;margin:0 auto;font-size:17px;line-height:1.55}
+#linearView h3{column-span:all;text-align:center;margin-bottom:1.2rem}
+#linearView p.torah{display:inline;margin:0;font-size:17px;line-height:1.6;max-width:none}
+#linearView p.torah::after{content:" "}
+#linearView .VerseNumber{font-family:var(--font-text);font-size:11px;font-weight:600;vertical-align:super;line-height:0;color:var(--accent);margin-right:2px;letter-spacing:0}
+@media (max-width:700px){#linearView{column-count:1}}
+.home-question{font-family:var(--font-display);font-weight:500;color:var(--accent);font-size:2.6rem;line-height:1.2;text-align:center;margin:0 0 1.6rem;text-wrap:balance}
+@media (max-width:600px){.home-question{font-size:1.8rem}}
+.home-about{max-width:44rem;margin:2.4rem auto 0;text-align:center;font-size:18px;line-height:1.7;color:var(--ink-mid)}
+</style>
 </head>
 <body>
     <!-- ==========================================
@@ -824,128 +847,12 @@
          ========================================== -->
     <main class="content-wrapper">
         <!-- HERO -->
-        <section class="hero">
-            <div class="container">
-                <div class="site-title">
-                    <h1>chaver.com</h1>
-                    <p class="subtitle">The Woven Texts Project</p>
-                    <p class="credentials">40 Years of Academic Research</p>
-                </div>
-                
-                <div class="hero-cta">
-                    <p><strong>A Discovery in Biblical Literature</strong></p>
-                    <p>The Torah and Mishnah were composed as two-dimensional literary matrices—"woven texts"—with patterns that become visible only when the text is laid out in tabular format. This site presents four decades of research revealing the Torah's woven literary architecture hidden within these foundational texts.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- INFOGRAPHIC: TWO WAYS OF READING -->
-        <section class="infographic-section">
-            <h2>Two Ways of Reading</h2>
-            
-            <div class="infographic-wrapper">
-                <img src="/torah-weave/Admin/Assets/Images/two-ways-of-reading-800.webp" 
-                     srcset="/torah-weave/Admin/Assets/Images/two-ways-of-reading-800.webp 800w,
-                             /torah-weave/Admin/Assets/Images/two-ways-of-reading-1200.webp 1200w,
-                             /torah-weave/Admin/Assets/Images/two-ways-of-reading.webp 2752w"
-                     sizes="(max-width: 768px) 100vw, 1100px"
-                     alt="The Woven Torah: Two Ways of Reading - Infographic showing the contrast between piecemeal linear reading (shattered tablets) and woven structural reading (complete tapestry in ark)"
-                     fetchpriority="high"
-                     decoding="async">
-            </div>
-            
-            <p class="infographic-caption">As illustrated above, the Woven Torah reveals a second, "esoteric" structure hidden within the standard linear text—transforming a historical narrative into a timeless architectural map.</p>
-            
-            <div class="infographic-connector">
-                <strong>But where does this woven pattern originate?</strong> It begins with the Ten Commandments—the "source code" for the entire Torah. See how the Decalogue reveals its hidden structure when restored to its original two-tablet form.
-                <span class="arrow-down">↓</span>
-            </div>
-        </section>
-        
-        <!-- DECALOGUE SLIDESHOW -->
-        <section class="slideshow-section">
-            <div class="slideshow-container">
-                <div class="slideshow-intro">
-                    <h2>The Decalogue: More Than a List</h2>
-                    <p>The Ten Commandments weren't written as a numbered list—they were inscribed on two tablets, five on each side. When we restore this original arrangement, a structure emerges.</p>
-                </div>
-                
-                <div class="slideshow-wrapper">
-                    <div class="slide active" data-slide="1">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-01.webp" alt="Title: The Decalogue - More Than a List" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="2">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-02.webp" alt="A Divine Text, A Hidden Structure" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="3">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-03.webp" alt="The First Key: Division into Ten Words" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="4">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-04.webp" alt="The Second Key: Written on Both Their Sides" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="5">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-05.webp" alt="The Woven Paradigm Revealed" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="6">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-06.webp" alt="Reading the Weave: Hierarchical Flow" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="7">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-07.webp" alt="Reading the Weave: Concentric Vision" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="8">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-08.webp" alt="Thematic Coherence of Each Tablet" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="9">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-09.webp" alt="Tablet 1: Blueprint for the Self" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="10">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-10.webp" alt="Tablet 2: Foundation for Society" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="11">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-11.webp" alt="A Symphony of Meaning" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="12">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-12.webp" alt="The Key to the Entire Torah" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="13">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-13.webp" alt="Unlocking the Decalogue" decoding="async">
-                    </div>
-                    <div class="slide" data-slide="14">
-                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-14.webp" alt="Quote from Moshe Kline" decoding="async">
-                    </div>
-                    
-                    <div class="slide slide-final" data-slide="15">
-                        <h3>Source &amp; Further Reading</h3>
-                        <p>This presentation distills central arguments regarding the Decalogue from:</p>
-                        <p class="book-title">Before Chapter and Verse: Reading the Woven Torah</p>
-                        <p>by Moshe Kline</p>
-                        <a href="/Torah-New/English/Text/Torah-pdf" class="cta-button">Download Free PDF →</a>
-                    </div>
-                    
-                    <div class="slideshow-controls">
-                        <button class="slide-btn" id="prevSlide" onclick="changeSlide(-1)" aria-label="Previous slide">‹ Prev</button>
-                        <div class="slide-dots" id="slideDots"></div>
-                        <span class="slide-counter"><span id="currentSlide">1</span> / 15</span>
-                        <button class="slide-btn" id="nextSlide" onclick="changeSlide(1)" aria-label="Next slide">Next ›</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <p class="insight-link" style="text-align:center; margin: -0.5em 0 1em;"><a href="/torah-weave/ten-commandments-two-tablets">Read the full analysis: The Ten Commandments on Two Tablets</a></p>
-
-        <!-- CONNECTOR: Decalogue → Genesis -->
-        <div class="demo-connector">
-            <p><strong>The Decalogue provides the "source code" for the entire Torah.</strong> Just as the Ten Commandments are woven across two tablets, the narrative of Creation itself is woven across the six days. <a href="/torah-weave/six-days-of-creation-picture">See this "Woven Code" applied to Genesis 1</a>.</p>
-            <span class="arrow-down">↓</span>
-        </div>
-        
-        <!-- GENESIS 1 TOGGLE DEMONSTRATION -->
         <section class="demonstration-section">
             <div class="demo-container">
                 <div class="demo-header">
+                    <h1 class="home-question">Was the Torah Composed as a Weave?</h1>
                     <h2>Experience It Yourself: Genesis 1</h2>
-                    <p>Toggle between the familiar linear reading and the woven structure to see the creation narrative transform. The same two-column pattern from the Decalogue appears here: Days 1–3 create the elements <em>ex nihilo</em>, while Days 4–6 animate them with progressive degrees of freedom.</p>
+                    <p>Toggle between the familiar linear reading and the woven structure to see the creation narrative transform. Days 1–3 create the elements <em>ex nihilo</em>, while Days 4–6 animate them with progressive degrees of freedom.</p>
                 </div>
                 
                 <div class="controls">
@@ -1030,7 +937,7 @@
                                             <span class="row-desc"><b>FIRE</b> (light) created → Luminaries with <b>fixed motion</b></span>
                                         </td>
                                         <td>
-                                            <p class="torah"><b>Day 1</b> <span class="VerseNumber">1:3-5</span> And God said: '<span class="hl-blue"><b>Let there be light</b></span>.' And there was light... and God <span class="hl-blue"><b>divided the light from the darkness</b></span>. And there was evening and there was morning, one day.</p>
+                                            <p class="torah"><b>Day 1</b> <span class="VerseNumber">1:3-5</span> And God said: '<span class="hl-blue"><b>Let there be light</b></span>.' And there was light... and God <span class="hl-blue"><b>divided the light from the darkness</b></span>. And <span class="hl-gold"><b>God called</b></span> the light Day, and the darkness He called Night. And there was evening and there was morning, one day.</p>
                                         </td>
                                         <td>
                                             <p class="torah"><b>Day 4</b> <span class="VerseNumber">1:14-19</span> And God said: <span class="hl-blue"><b>'Let there be lights</b></span> in the firmament of the heaven <span class="hl-blue"><b>to divide the day from the night</b></span>... And God made the two great lights... and God saw that it was good.</p>
@@ -1044,7 +951,7 @@
                                             <span class="row-desc"><b>AIR</b> + <b>WATER</b> → Fish/birds with <b>partial freedom</b></span>
                                         </td>
                                         <td>
-                                            <p class="torah"><b>Day 2</b> <span class="VerseNumber">1:6-8</span> And God said: 'Let there be a firmament <span class="hl-blue"><b>in the midst of the waters</b></span>...' And God called <span class="hl-blue"><b>the firmament Heaven</b></span>.</p>
+                                            <p class="torah"><b>Day 2</b> <span class="VerseNumber">1:6-8</span> And God said: 'Let there be a firmament <span class="hl-blue"><b>in the midst of the waters</b></span>...' And <span class="hl-gold"><b>God called</b></span> <span class="hl-blue"><b>the firmament Heaven</b></span>.</p>
                                         </td>
                                         <td>
                                             <p class="torah"><b>Day 5</b> <span class="VerseNumber">1:20-23</span> And God said: '<span class="hl-blue"><b>Let the waters swarm</b></span>...' And God created the great sea-monsters... <span class="hl-gold"><b>And God blessed them</b></span>.</p>
@@ -1075,7 +982,7 @@
                                             <p class="torah"><span class="VerseNumber">2:1</span> And the <span class="hl-red"><b>heaven and the earth</b></span> were <span class="hl-blue"><b>finished</b></span>, and all the host of them.</p>
                                         </td>
                                         <td>
-                                            <p class="torah"><span class="VerseNumber">2:2-3</span> And on the seventh day God <span class="hl-blue"><b>finished</b></span> His work... And God blessed the seventh day, and hallowed it.</p>
+                                            <p class="torah"><span class="VerseNumber">2:2-3</span> And on the seventh day God <span class="hl-blue"><b>finished</b></span> His work... <span class="hl-gold"><b>And God blessed</b></span> the seventh day, and hallowed it.</p>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -1101,8 +1008,24 @@
             </div>
         </section>
 
-        <!-- GATEWAY SECTION -->
-        <section class="gateway-section">
+<section class="home-doors">
+  <div class="doors">
+    <a class="door" href="/Torah-New/English/Text/Torah-pdf"><span class="door-k">Free book</span><span class="door-t">The Complete Torah PDF</span><span class="door-d">All five books of Moses (Genesis–Deuteronomy) in JPS 1917 translation with 40 years of literary analysis.</span></a>
+    <a class="door" href="/Mishnah-New/Hebrew/Text/mishnah-pdf"><span class="door-k">Free book</span><span class="door-t">The Structured Mishnah</span><span class="door-d">The complete Hebrew Mishnah (המשנה כדרכה) — 524 chapters as two-dimensional matrices.</span></a>
+    <a class="door" href="/torah-weave/full-torah-map-2/"><span class="door-k">Map</span><span class="door-t">The Full Torah Map</span><span class="door-d">86 literary units across five books, on one map.</span></a>
+    <a class="door" href="/torah-weave/Woven-Torah-Method"><span class="door-k">Method</span><span class="door-t">The Woven Torah: A Two-Dimensional Reading</span><span class="door-d">The Torah is composed of 86 literary units arranged as two-dimensional weaves.</span></a>
+  </div>
+  <h2 class="doors-h">Questions the structure answers</h2>
+  <ul class="questions">
+    <li><a href="/torah-weave/ten-commandments-two-tablets">Why two tablets?</a> <span>The Ten Commandments were inscribed on two tablets as five pairs.</span></li>
+    <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days are a picture</a> <span>Lay days 1–3 and 4–6 side by side as a table and a two-dimensional picture emerges.</span></li>
+    <li><a href="/torah-weave/ten-plagues-creation-in-reverse">The plagues: creation in reverse</a> <span>Why blood first? Why darkness before death?</span></li>
+    <li><a href="/torah-weave/bible-contradictions-explained">Bible contradictions explained</a> <span>Eight puzzles in the Five Books of Moses — and what they look like when you read the text as a composed whole.</span></li>
+  </ul>
+  <p class="home-about">The Torah and Mishnah were composed as two-dimensional literary matrices—"woven texts"—with patterns that become visible only when the text is laid out in tabular format. This site presents four decades of research revealing the Torah's woven literary architecture hidden within these foundational texts. <a href="/about-Moshe-Kline">About Moshe Kline →</a></p>
+</section>
+
+<section class="gateway-section">
             <div class="gateway-intro">
                 <h2>Explore the Research</h2>
                 <p>Four pathways into four decades of scholarship on the Torah and Mishnah as two-dimensional literary compositions.</p>
@@ -1168,6 +1091,7 @@
                 </div>
             </div>
         </section>
+
         
         <!-- CONNECTOR: Gateway → Video -->
         
@@ -1256,7 +1180,105 @@
             <strong>How to cite this site:</strong> Kline, Moshe. "Chaver.com: The Woven Texts Project." 
             <em>Chaver.com</em>, https://chaver.com/. Accessed [date].
         </div>
-    </main>
+    
+<section class="infographic-section">
+            <h2>Two Ways of Reading</h2>
+            
+            <div class="infographic-wrapper">
+                <img src="/torah-weave/Admin/Assets/Images/two-ways-of-reading-800.webp" 
+                     srcset="/torah-weave/Admin/Assets/Images/two-ways-of-reading-800.webp 800w,
+                             /torah-weave/Admin/Assets/Images/two-ways-of-reading-1200.webp 1200w,
+                             /torah-weave/Admin/Assets/Images/two-ways-of-reading.webp 2752w"
+                     sizes="(max-width: 768px) 100vw, 1100px"
+                     alt="The Woven Torah: Two Ways of Reading - Infographic showing the contrast between piecemeal linear reading (shattered tablets) and woven structural reading (complete tapestry in ark)"
+                     fetchpriority="high"
+                     decoding="async">
+            </div>
+            
+            <p class="infographic-caption">As illustrated above, the Woven Torah reveals a second, "esoteric" structure hidden within the standard linear text—transforming a historical narrative into a timeless architectural map.</p>
+            
+            <div class="infographic-connector">
+                <strong>But where does this woven pattern originate?</strong> It begins with the Ten Commandments—the "source code" for the entire Torah. See how the Decalogue reveals its hidden structure when restored to its original two-tablet form.
+                <span class="arrow-down">↓</span>
+            </div>
+        </section>
+<section class="slideshow-section">
+            <div class="slideshow-container">
+                <div class="slideshow-intro">
+                    <h2>The Decalogue: More Than a List</h2>
+                    <p>The Ten Commandments weren't written as a numbered list—they were inscribed on two tablets, five on each side. When we restore this original arrangement, a structure emerges.</p>
+                </div>
+                
+                <div class="slideshow-wrapper">
+                    <div class="slide active" data-slide="1">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-01.webp" alt="Title: The Decalogue - More Than a List" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="2">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-02.webp" alt="A Divine Text, A Hidden Structure" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="3">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-03.webp" alt="The First Key: Division into Ten Words" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="4">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-04.webp" alt="The Second Key: Written on Both Their Sides" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="5">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-05.webp" alt="The Woven Paradigm Revealed" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="6">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-06.webp" alt="Reading the Weave: Hierarchical Flow" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="7">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-07.webp" alt="Reading the Weave: Concentric Vision" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="8">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-08.webp" alt="Thematic Coherence of Each Tablet" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="9">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-09.webp" alt="Tablet 1: Blueprint for the Self" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="10">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-10.webp" alt="Tablet 2: Foundation for Society" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="11">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-11.webp" alt="A Symphony of Meaning" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="12">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-12.webp" alt="The Key to the Entire Torah" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="13">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-13.webp" alt="Unlocking the Decalogue" decoding="async">
+                    </div>
+                    <div class="slide" data-slide="14">
+                        <img src="/torah-weave/Admin/Assets/Slide-Shows/decalogue/slide-14.webp" alt="Quote from Moshe Kline" decoding="async">
+                    </div>
+                    
+                    <div class="slide slide-final" data-slide="15">
+                        <h3>Source &amp; Further Reading</h3>
+                        <p>This presentation distills central arguments regarding the Decalogue from:</p>
+                        <p class="book-title">Before Chapter and Verse: Reading the Woven Torah</p>
+                        <p>by Moshe Kline</p>
+                        <a href="/Torah-New/English/Text/Torah-pdf" class="cta-button">Download Free PDF →</a>
+                    </div>
+                    
+                    <div class="slideshow-controls">
+                        <button class="slide-btn" id="prevSlide" onclick="changeSlide(-1)" aria-label="Previous slide">‹ Prev</button>
+                        <div class="slide-dots" id="slideDots"></div>
+                        <span class="slide-counter"><span id="currentSlide">1</span> / 15</span>
+                        <button class="slide-btn" id="nextSlide" onclick="changeSlide(1)" aria-label="Next slide">Next ›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- INFOGRAPHIC: TWO WAYS OF READING --><!-- DECALOGUE SLIDESHOW --><p class="insight-link" style="text-align:center; margin: -0.5em 0 1em;"><a href="/torah-weave/ten-commandments-two-tablets">Read the full analysis: The Ten Commandments on Two Tablets</a></p>
+
+        <!-- CONNECTOR: Decalogue → Genesis -->
+        <div class="demo-connector">
+            <p><strong>The Decalogue provides the "source code" for the entire Torah.</strong> Just as the Ten Commandments are woven across two tablets, the narrative of Creation itself is woven across the six days. <a href="/torah-weave/six-days-of-creation-picture">See this "Woven Code" applied to Genesis 1</a>.</p>
+            <span class="arrow-down">↓</span>
+        </div>
+        
+        <!-- GENESIS 1 TOGGLE DEMONSTRATION --><!-- GATEWAY SECTION --></main>
     
     <!-- ==========================================
          SITE FOOTER - RICH 4-SECTION VERSION
