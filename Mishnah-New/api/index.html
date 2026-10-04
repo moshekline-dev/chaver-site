@@ -48,7 +48,7 @@
  "@type": "Dataset",
  "name": "The Structured Mishnah API",
  "alternateName": "Structured Mishnah — chapter-level JSON API",
- "description": "Every chapter of the Mishnah served as a two-dimensional table of labelled cells rather than a linear sequence of paragraphs. 63 tractates, 525 chapter files, 4,476 cells, 3,906 subdivisions and 6,953 structural markers across 8 types. One small JSON file per chapter, at a predictable address. Each chapter carries its matching Sefaria reference so the structure can be laid over any edition of the text.",
+ "description": "Every chapter of the Mishnah served as a two-dimensional table of labelled cells rather than a linear sequence of paragraphs. 63 tractates, 524 chapter files, 4,470 cells, 3,888 subdivisions and 6,953 structural markers across 8 types. One small JSON file per chapter, at a predictable address. Each chapter carries its matching Sefaria reference so the structure can be laid over any edition of the text.",
  "url": "https://chaver.com/Mishnah-New/api/",
  "identifier": "https://chaver.com/Mishnah-New/api/index.json",
  "version": "2026-05-rev9",
@@ -518,7 +518,7 @@
 <article class="commentary-content">
 <header>
 <h1>The Structured Mishnah API</h1>
-<p class="unit-meta">63 tractates &middot; 525 chapter files &middot; 4,476 cells &middot; 6,953 markers &middot; No key, no rate limit &middot; CC BY 4.0</p>
+<p class="unit-meta">63 tractates &middot; 524 chapter files &middot; 4,470 cells &middot; 6,953 markers &middot; No key, no rate limit &middot; CC BY 4.0</p>
 </header>
 
 <style>
@@ -553,12 +553,12 @@ has in Sefaria&rsquo;s library, so the structure can be laid over any edition of
 <code>berakhot</code>, <code>bava-batra</code>, <code>avodah-zarah</code>, <code>rosh-hashanah</code>,
 <code>maaser-sheni</code>, <code>tevul-yom</code>, <code>moed-katan</code>. The full list is in
 <code>tractates.json</code>.</p>
-<p>Every file the API serves is listed on one page: <a href="/Mishnah-New/api/chapters">all 63 tractate files and all 525 chapter files</a>, grouped by order.</p>
+<p>Every file the API serves is listed on one page: <a href="/Mishnah-New/api/chapters">all 63 tractate files and all 524 chapter files</a>, grouped by order.</p>
 <div class="api-scroll"><table class="api-table">
 <thead><tr><th>Example</th><th></th></tr></thead><tbody><tr><td><a href="/Mishnah-New/api/berakhot/1.json"><code>/Mishnah-New/api/berakhot/1.json</code></a></td><td>Berakhot, chapter 1</td></tr><tr><td><a href="/Mishnah-New/api/bava-batra/10.json"><code>/Mishnah-New/api/bava-batra/10.json</code></a></td><td>Bava Batra, chapter 10</td></tr><tr><td><a href="/Mishnah-New/api/avodah-zarah/5.json"><code>/Mishnah-New/api/avodah-zarah/5.json</code></a></td><td>Avodah Zarah, chapter 5</td></tr><tr><td><a href="/Mishnah-New/api/moed-katan/1.json"><code>/Mishnah-New/api/moed-katan/1.json</code></a></td><td>Moed Katan, chapter 1</td></tr></tbody></table></div>
 <p><strong>One irregularity.</strong> Sotah chapter 9 is set as two separate tables and is served as
 <code>/sotah/9a.json</code> and <code>/sotah/9b.json</code>. There is no <code>/sotah/9.json</code>.
-That is why 525 chapter files cover 524 chapters. Anything that walks chapter numbers
+That is why 524 chapter files cover 523 chapters. Anything that walks chapter numbers
 should read the chapter list in the tractate file rather than counting.</p>
 </section>
 
@@ -584,7 +584,7 @@ background highlight. The definitions below are reproduced from the
 <div class="api-scroll"><table class="api-table">
 <thead><tr><th>Colour</th><th>Type</th><th>Group</th><th>Marks</th><th class="api-num">Instances</th></tr></thead>
 <tbody><tr><td><span class="api-sw" style="background:#2563eb"></span> <strong>Blue</strong></td><td><code>horizontal1</code></td><td>Horizontal links</td><td>Direct parallels between all segments of a horizontal thread.</td><td class="api-num">3,602</td></tr><tr><td><span class="api-sw" style="background:#008080"></span> <strong>Teal</strong></td><td><code>horizontal2</code></td><td>Horizontal links</td><td>Key words that appear in both the first and second segments of a three-part horizontal thread.</td><td class="api-num">414</td></tr><tr><td><span class="api-sw" style="background:#800000"></span> <strong>Maroon</strong></td><td><code>horizontal3</code></td><td>Horizontal links</td><td>Key words that appear in both the second and third segments of a three-part horizontal thread.</td><td class="api-num">400</td></tr><tr><td><span class="api-sw" style="background:#d97706"></span> <strong>Gold</strong></td><td><code>vertical1</code></td><td>Vertical links</td><td>Repeating words or phrases within multiple segments of a warp thread.</td><td class="api-num">1,010</td></tr><tr><td><span class="api-sw" style="background:#16a34a"></span> <strong>Green</strong></td><td><code>internalparallel</code></td><td>Vertical links</td><td>Parallels between parts of a single segment.</td><td class="api-num">1,298</td></tr><tr><td><span class="api-sw" style="background:#db2777"></span> <strong>Rose</strong></td><td><code>closure</code></td><td>Boundary links</td><td>Linguistic connections between the first weft thread and the last, creating an envelope.</td><td class="api-num">128</td></tr><tr><td><span class="api-sw" style="background:#7c3aed"></span> <strong>Violet</strong></td><td><code>ciasm1</code></td><td>Boundary links</td><td>The half chiasm created by the connection between the upper left segment and the lower right segment.</td><td class="api-num">54</td></tr><tr><td><span class="api-sw" style="background:#c026d3"></span> <strong>Light Violet</strong></td><td><code>ciasm2</code></td><td>Boundary links</td><td>The half chiasm created by the connection between the upper right segment and the lower left segment.</td><td class="api-num">47</td></tr></tbody></table></div>
-<p>Markers appear in 6,953 places across the 525 chapter files. Each cell
+<p>Markers appear in 6,953 places across the 524 chapter files. Each cell
 gives them twice: inside <code>runs</code>, where the cell&rsquo;s text is broken into consecutive
 marked and unmarked spans so it can be rendered with the markings intact, and again in
 <code>markers</code>, gathered together for searching. Concatenating every run reproduces the
