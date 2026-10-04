@@ -130,7 +130,7 @@
           "name": "How many pages is this Torah PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The complete PDF is 275 pages: 170 pages of full Torah text (Genesis through Deuteronomy) plus a 110-page introduction explaining the literary architecture and research methodology."
+            "text": "The book runs to 275 numbered pages: a 110-page introduction explaining the literary architecture and research methodology, followed by the complete Torah text (Genesis through Deuteronomy) on pages 111–275."
           }
         },
         {
@@ -162,389 +162,149 @@
     </script>
     
     
-    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
-    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
-    
-    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
-    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
-    
-    <style type="text/css">
 
-
-
-
-
-
-
-    .hero-section { 
-        background: linear-gradient(to bottom, #f8f6f2 0%, #f0ebe3 100%);
-        padding: 4rem 2rem; text-align: center; 
-        margin: -2rem -2rem 2rem -2rem;
-        border-bottom: 2px solid #d4cfc7;
-    }
-    .hero-section h1 { font-size: 2.5em; margin-bottom: 1rem; color: #1a1a1a; font-weight: 600; border-bottom: none; }
-    .hero-section .subtitle { font-size: 1.3em; color: #666; margin-bottom: 0.5rem; text-align: center; }
-    .hero-section .freshness { font-size: 0.95em; color: #8b7355; margin-bottom: 0; text-align: center; }
-    .download-hero { padding: 3rem; margin: 2rem 0; border: 4px solid #8b7355; background: #fdfcf8; border-radius: 8px; text-align: center; box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15); }
-    .download-hero h2 { color: #2c3e50; margin-bottom: 1.5rem; font-size: 2em; font-weight: 600; border-bottom: none; margin-top: 0; }
-    .download-hero p { text-align: center; }
-    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0; }
-    .cta-buttons a { padding: 1.2rem 2.5rem; border-radius: 6px; text-decoration: none; font-size: 1.2em; font-weight: bold; transition: all 0.3s; display: inline-block; background: linear-gradient(135deg, #5d87a1 0%, #4a6d85 100%); color: white !important; box-shadow: 0 2px 6px rgba(93, 135, 161, 0.3); border: none; }
-    .cta-buttons a:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(93, 135, 161, 0.4); background: linear-gradient(135deg, #4a6d85 0%, #3d5770 100%); }
-    .cta-buttons a:first-child { background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 100%); box-shadow: 0 2px 6px rgba(139, 115, 85, 0.3); }
-    .cta-buttons a:first-child:hover { background: linear-gradient(135deg, #6b5d4f 0%, #5d4e37 100%); box-shadow: 0 4px 12px rgba(139, 115, 85, 0.4); }
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
-    .feature-card { padding: 2rem; background: linear-gradient(to bottom, #f8f6f2 0%, #f0ebe3 100%); border-radius: 8px; border-top: 4px solid #8b7355; box-shadow: 0 2px 6px rgba(139, 115, 85, 0.1); transition: transform 0.2s; }
-    .feature-card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(139, 115, 85, 0.2); }
-    .feature-card h3 { color: #2c3e50; margin-bottom: 1rem; margin-top: 0; font-weight: 600; }
-    .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; margin: 2rem 0; padding: 2rem; background: linear-gradient(to right, #fef5e7 0%, #fdebd0 100%); border-radius: 8px; border-left: 4px solid #d4a574; box-shadow: 0 2px 6px rgba(212, 165, 116, 0.15); }
-    .stat { text-align: center; }
-    .stat-number { font-size: 2.5em; font-weight: bold; color: #5d4e37; display: block; }
-    .stat-label { color: #666; margin-top: 0.5rem; }
-    .faq-section { margin: 3rem 0; }
-    .faq-item { margin-bottom: 1.5rem; padding: 1.5rem 2rem; background: #f8f6f2; border-radius: 8px; border-left: 3px solid #8b7355; }
-    .faq-item h3 { color: #2c3e50; margin-top: 0; margin-bottom: 0.75rem; font-size: 1.15em; }
-    .faq-item p { margin-bottom: 0; text-align: left; }
-    @media (max-width: 768px) {
-        .hero-section { padding: 2rem 1rem; }
-        .hero-section h1 { font-size: 2em; }
-        .cta-buttons { flex-direction: column; }
-        .cta-buttons a { text-align: center; }
-        .features-grid, .stats-bar { grid-template-columns: 1fr; }
-        .download-hero { padding: 2rem 1.5rem; }
-    }
-    </style>
-    
-    <style type="text/css">
-
-    /* ==========================================
-       CRITICAL DWT LAYOUT STYLES ONLY
-       Everything else comes from main.css
-       ========================================== */
-    
-    /* Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    /* ==========================================
-       HEADER LAYOUT STRUCTURE
-       ========================================== */
-    
-    header.site-header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    
-    /* Navigation Container */
-    .main-nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0.3rem 20px;
-    }
-    
-    /* Navigation List */
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-    }
-    
-    nav a {
-        text-decoration: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    
-    /* ==========================================
-       MAIN CONTENT AREA LAYOUT
-       ========================================== */
-    
-    main.content-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        min-height: 500px;
-    }
-    
-    /* ==========================================
-       FOOTER LAYOUT STRUCTURE
-       ========================================== */
-    
-    footer.site-footer {
-        margin-top: 80px;
-        padding: 40px 20px 20px;
-    }
-    
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
-        margin-bottom: 30px;
-    }
-    
-    .footer-section ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .footer-bottom {
-        text-align: center;
-        padding-top: 20px;
-    }
-    
-    /* ==========================================
-       RESPONSIVE LAYOUT BREAKPOINTS
-       ========================================== */
-    
-    @media (max-width: 768px) {
-        /* Mobile header adjustments */
-        header.site-header {
-            position: relative;
-        }
-
-        nav ul {
-            display: none;
-            flex-direction: column;
-            gap: 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
-        
-        nav ul.show {
-            display: flex;
-        }
-        
-        nav li {
-            width: 100%;
-        }
-        
-        nav a {
-            display: block;
-            padding: 1rem;
-        }
-
-        /* Landscape phones - hamburger menu */
-        @media (max-height: 500px) and (orientation: landscape) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 0;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                width: 100%;
-                background: linear-gradient(135deg, #c9b899 0%, #b39f7d 100%);
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav li {
-                width: 100%;
-            }
-            
-            nav a {
-                display: block;
-                padding: 0.75rem 1rem;
-                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
-            }
-            
-            main.content-wrapper {
-                padding: 15px 10px;
-            }
-        }
-        
-        /* Content adjustments */
-        main.content-wrapper {
-            padding: 30px 15px;
-        }
-        
-        /* Footer adjustments */
-        .footer-content {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        main.content-wrapper {
-            padding: 20px 15px;
-        }
-    }
-    
-    /* ==========================================
-       PRINT LAYOUT
-       ========================================== */
-    
-    @media print {
-        header.site-header,
-        footer.site-footer {
-            display: none;
-        }
-        
-        main.content-wrapper {
-            padding: 0;
-            max-width: 100%;
-        }
-    }
-    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:19px;scroll-behavior:smooth}
+@media (max-width:640px){html{font-size:19px}}
+body{background:#faf6ee;color:#1c1610;font-family:'EB Garamond',Georgia,serif;line-height:1.75;overflow-x:hidden}
+a{color:#7a1f2e}
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 2rem;background:#7a1f2e;position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'Cinzel',serif;font-size:1.05rem;font-weight:500;letter-spacing:.08em;color:#faf6ee;text-decoration:none}
+.nav-links{display:flex;gap:1.6rem;list-style:none;flex-wrap:wrap}
+.nav-links a{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.06em;color:rgba(250,246,238,.85);text-decoration:none}
+.nav-links a:hover{color:#fff}
+@media (max-width:760px){.site-nav{flex-direction:column;align-items:flex-start;padding:.9rem 1.1rem}.nav-links{gap:.4rem 1.1rem}}
+.wrap{max-width:720px;margin:0 auto;padding:3rem 1.5rem 3.5rem}
+@media (max-width:640px){.wrap{padding:2rem 1.1rem 2.5rem}}
+.label{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:#7a1f2e;margin-bottom:.8rem}
+h1{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.2;margin-bottom:.6rem}
+.subtitle{color:#7a6040;margin-bottom:1.4rem}
+.intro{color:#3e2e1e;margin-bottom:1.6rem}
+.intro strong{font-weight:400}
+.download{background:#f2ead8;border-left:4px solid #7a1f2e;padding:1.4rem 1.5rem;margin-bottom:1.6rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:.7rem}
+.btn{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.06em;text-decoration:none;padding:.85rem 1.6rem;border-radius:3px;display:inline-block}
+.btn-main{background:#7a1f2e;color:#faf6ee}
+.btn-main:hover{background:#5a1622}
+.btn-quiet{border:1px solid rgba(122,31,46,.45);color:#7a1f2e}
+.small{font-size:.85rem;color:#7a6040}
+.freshness{font-size:.85rem;color:#7a6040;margin-top:.3rem}
+.door{border:1px solid rgba(122,31,46,.25);padding:1.3rem 1.5rem;margin-bottom:2.5rem}
+.door h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.1rem;margin-bottom:.5rem;border:0;padding:0}
+.door p{margin-bottom:.5rem;color:#3e2e1e}
+.door p:last-child{margin-bottom:0}
+.body h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.25rem;margin:2.6rem 0 1rem;padding-bottom:.5rem;border-bottom:.5px solid rgba(28,22,16,.18)}
+.body h3{font-family:'Cinzel',serif;font-weight:500;font-size:1rem;margin:1.6rem 0 .5rem;color:#3e2e1e}
+.body h4{font-weight:500;margin:1.2rem 0 .4rem}
+.body p{margin-bottom:1.1rem;color:#3e2e1e;line-height:1.8}
+.body em{font-style:italic}
+.features .feature{margin-bottom:1rem}
+.features .feature h3{margin:0 0 .2rem;font-size:.95rem}
+.final-table{border-collapse:collapse;width:100%;margin:0 0 1rem;font-size:.95rem}
+.final-table th{text-align:left;font-weight:500;padding:.45rem .8rem .45rem 0;width:35%;color:#7a6040}
+.final-table td{padding:.45rem 0;border-bottom:.5px solid rgba(28,22,16,.12)}
+details{border-bottom:.5px solid rgba(28,22,16,.15)}
+details summary{cursor:pointer;padding:.8rem 0;font-weight:500;color:#1c1610;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:'+';display:inline-block;width:1.2rem;color:#7a1f2e}
+details[open] summary::before{content:'\2212'}
+details > *:not(summary){margin-left:1.2rem}
+details.more summary{font-family:'Cinzel',serif;font-weight:400;font-size:1.05rem}
+blockquote{border-left:3px solid #b09878;padding:.2rem 0 .2rem 1.2rem;margin:1rem 0;font-style:italic}
+blockquote p:last-child{font-style:normal;font-size:.9rem;color:#7a6040}
+.publication-note{background:#f2ead8;padding:1rem 1.2rem;margin:1rem 0}
+.band{background:#7a1f2e;color:#faf6ee;text-align:center;padding:2.2rem 1.5rem;margin:3rem 0 0;border-radius:3px}
+.band h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.2rem;border:0;margin:0 0 .6rem;padding:0;color:#faf6ee}
+.band p{color:rgba(250,246,238,.85);margin-bottom:1.2rem}
+.band .btns{justify-content:center}
+.band .btn-main{background:#faf6ee;color:#7a1f2e}
+.band .btn-quiet{border-color:rgba(250,246,238,.5);color:#faf6ee}
+.site-footer{background:#e8dcc4;padding:1.4rem 2rem;font-size:.85rem;color:#7a6040;display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;justify-content:space-between}
+.site-footer a{text-decoration:none}
+</style>
 </head>
 <body>
-    <!-- ==========================================
-         SITE HEADER - FIXED ACROSS ALL PAGES
-         ========================================== -->
-    <header class="site-header">
-        <div class="nav-row">
-            <div class="nav-brand">chaver.com</div>
-            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-            <ul class="nav-menu" id="primary-menu">
-                <li><a href="/">Home</a></li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Torah</button>
-                    <ul class="submenu">
-                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                        <li><a href="/torah-weave/commentary">Commentary</a></li>
-                        <li><a href="/torah-weave/Genesis/genesis-complete-commentary">Genesis: Complete Commentary</a></li>
-                        <li><a href="/torah-weave/full-torah-map-2/">Full Torah Map</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Insights</button>
-                    <ul class="submenu">
-                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Mishnah</button>
-                    <ul class="submenu">
-                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
-                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to the Structured Mishnah</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">Download the Complete Mishnah (Hebrew)</a></li>
-                    </ul>
-                </li>
-                <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
-                    <ul class="submenu">
-                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></li>
-                        <li><a href="/Mishnah-New/api/">Structured Mishnah API</a></li>
-                        <li><a href="/torah-weave/api/">Structured Torah API</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">Free Books</button>
-                    <ul class="submenu">
-                        <li><a href="/Torah-New/English/Text/Torah-pdf">The Structured Torah (English PDF)</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah (Hebrew PDF)</a></li>
-                    </ul>
-                </li>
-                <li><a href="/about-Moshe-Kline">About Moshe Kline</a></li>
-                <li><a href="/hebrew%20index">&#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
-            </ul>
-        </div>
-    </header>
-    <!-- SITE BANNER -->
-<div id="site-banner"></div>
-    <!-- ==========================================
-         MAIN CONTENT AREA - EDITABLE REGION
-         ========================================== -->
-    <main class="content-wrapper">
-        <section class="hero-section">
-    <h1>Complete Torah PDF — Free Download</h1>
-    <p class="subtitle">All Five Books of Moses · Chumash · Pentateuch · JPS 1917 Translation</p>
-    <p><strong>Before Chapter and Verse is a free 275-page Torah PDF containing the complete text of all five books of Moses (JPS 1917 translation) plus 40 years of peer-reviewed literary analysis revealing 86 discrete literary units arranged as two-dimensional woven matrices. No other Torah edition makes this architecture visible.</strong></p>
-    <p class="freshness">Updated May 2026 · Over 10,000 downloads</p>
-</section>
-<!-- aiww-callout v1 -->
-<p class="feature-card">New to reading the Bible structurally? <a href="https://asitwaswritten.org/">See how it was built &rarr;</a> &mdash; a short, plain-language primer on the literary structure behind this edition.</p>
-<!-- /aiww-callout v1 -->
+<nav class="site-nav">
+  <a class="nav-logo" href="/">chaver.com</a>
+  <ul class="nav-links">
+    <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
+    <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
+    <li><a href="/torah-weave/Woven-Torah-Method">The Method</a></li>
+    <li><a href="/torah-weave/data/">Data</a></li>
+    <li><a href="/about-Moshe-Kline">About</a></li>
+    <li><a href="/hebrew%20index">עברית</a></li>
+  </ul>
+</nav>
+<main class="wrap">
+  <p class="label">Free book</p>
+  <h1>Complete Torah PDF — Free Download</h1>
+  <p class="subtitle">All Five Books of Moses · Chumash · Pentateuch · JPS 1917 Translation</p>
+  <div class="intro"><p><strong>Before Chapter and Verse is a free 275-page Torah PDF containing the complete text of all five books of Moses (JPS 1917 translation) plus 40 years of peer-reviewed literary analysis revealing 86 discrete literary units arranged as two-dimensional woven matrices. No other Torah edition makes this architecture visible.</strong></p></div>
 
-
-<div class="download-hero">
-    <h2>📖 Before Chapter and Verse: Reading the Woven Torah</h2>
-    <p style="font-size: 1.2em; margin: 1.5rem 0;">Download the complete Torah text (Genesis through Deuteronomy) plus 40 years of research into the Torah's literary architecture</p>
-    <div class="cta-buttons">
-        <a href="/torah.pdf">Download Free PDF (275 pages)</a>
-        <a href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/">Buy Print Edition on Amazon</a>
+  <div class="download">
+    <div class="btns">
+      <a class="btn btn-main" href="/torah.pdf">Download Free PDF (275 pages)</a>
+      <a class="btn btn-quiet" href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/">Buy Print Edition on Amazon</a>
     </div>
-    <p style="margin-top: 1.5rem; font-size: 0.95em;">Free for personal study and research · JPS 1917 Translation · ISBN 978-9655982718</p>
+    <p class="small">Free for personal study and research · JPS 1917 Translation · ISBN 978-9655982718</p>
+    <p class="freshness">Updated May 2026 · Over 10,000 downloads</p>
+  </div>
+
+  <section class="door">
+    <h2>Before you open the PDF: see one unit in two minutes</h2>
+    <p>The six days of creation, laid out as a table: three days beside three. Read across the rows and a picture appears.</p>
+    <p><a class="doorway-link" href="/torah-weave/six-days-of-creation-picture"><strong>The Six Days Are a Picture &rarr;</strong></a></p>
+    <p>Then: <a class="doorway-link" href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a> &middot; <a class="doorway-link" href="/torah-weave/full-torah-map-2/">The Full Torah Map</a></p>
+  </section>
+
+  <div class="body">
+<h2>What's Inside This Torah PDF</h2>
+
+<p>Looking for the complete Torah text as a downloadable PDF? <em>Before Chapter and Verse</em> gives you the full Chumash—all five books from Genesis (Bereshit) through Deuteronomy (Devarim)—plus a comprehensive introduction revealing the literary architecture underlying the Pentateuch. Whether you call it the Torah, Chumash, Pentateuch, or Five Books of Moses, the complete text is here in a trusted English translation.</p>
+
+<div class="features">
+    <div class="feature">
+        <h3>Complete Torah Text</h3>
+        <p>All five books: Genesis, Exodus, Leviticus, Numbers, and Deuteronomy in full. 165 pages of complete biblical text using the JPS 1917 translation, widely used in academic and synagogue settings.</p>
+    </div>
+    <div class="feature">
+        <h3>Extended Introduction</h3>
+        <p>110 pages explaining the woven text concept, methodology, and implications. Learn how the Torah's structure creates meaning—an approach published in the Journal of Biblical Literature.</p>
+    </div>
+    <div class="feature">
+        <h3>86 Literary Units</h3>
+        <p>The Torah organized into discrete literary units with clear boundaries. See how each unit functions as a complete composition within the larger architecture of the five books.</p>
+    </div>
+    <div class="feature">
+        <h3>Two-Dimensional Format</h3>
+        <p>Units displayed as tables revealing both horizontal and vertical relationships—the "warp and weft" of biblical composition. This format is unique to the Woven Torah approach. <a href="/torah-weave/six-days-of-creation-picture">See Genesis 1 displayed as a woven unit</a>.</p>
+    </div>
+    <div class="feature">
+        <h3>Peer-Reviewed Research</h3>
+        <p>Based on 40 years of scholarship published in the Journal of Biblical Literature (2025), SBL Press (2015), and Journal of Hebrew Scriptures (2008).</p>
+    </div>
+    <div class="feature">
+        <h3>Visual Torah Map</h3>
+        <p>A map showing how all 86 units relate to each other across the five books—the complete Torah architecture at a glance, from Genesis through Deuteronomy.</p>
+    </div>
 </div>
 
-<div class="stats-bar">
-    <div class="stat"><span class="stat-number">275</span><span class="stat-label">Total Pages</span></div>
-    <div class="stat"><span class="stat-number">170</span><span class="stat-label">Pages Torah Text</span></div>
-    <div class="stat"><span class="stat-number">86</span><span class="stat-label">Literary Units</span></div>
-    <div class="stat"><span class="stat-number">100%</span><span class="stat-label">Free</span></div>
-</div>
+
+<h2>The book at a glance</h2>
 <table class="final-table">
 <tr><th>Translation</th><td>JPS 1917 (Public Domain)</td></tr>
 <tr><th>Language</th><td>English</td></tr>
-<tr><th>Pages</th><td>275 (170 text + 110 introduction)</td></tr>
+<tr><th>Pages</th><td>275 (110 introduction + 165 Torah text)</td></tr>
 <tr><th>Format</th><td>Searchable PDF</td></tr>
 <tr><th>Structure</th><td>86 Literary Units (Woven)</td></tr>
 <tr><th>Price</th><td>Free</td></tr>
 <tr><th>ISBN</th><td>978-9655982718</td></tr>
 <tr><th>Author</th><td>Moshe Kline</td></tr>
 </table>
-<h2>What's Inside This Torah PDF</h2>
-
-<p>Looking for the complete Torah text as a downloadable PDF? <em>Before Chapter and Verse</em> gives you the full Chumash—all five books from Genesis (Bereshit) through Deuteronomy (Devarim)—plus a comprehensive introduction revealing the literary architecture underlying the Pentateuch. Whether you call it the Torah, Chumash, Pentateuch, or Five Books of Moses, the complete text is here in a trusted English translation.</p>
-
-<div class="features-grid">
-    <div class="feature-card">
-        <h3>Complete Torah Text</h3>
-        <p>All five books: Genesis, Exodus, Leviticus, Numbers, and Deuteronomy in full. 170 pages of complete biblical text using the JPS 1917 translation, widely used in academic and synagogue settings.</p>
-    </div>
-    <div class="feature-card">
-        <h3>Extended Introduction</h3>
-        <p>110 pages explaining the woven text concept, methodology, and implications. Learn how the Torah's structure creates meaning—an approach published in the Journal of Biblical Literature.</p>
-    </div>
-    <div class="feature-card">
-        <h3>86 Literary Units</h3>
-        <p>The Torah organized into discrete literary units with clear boundaries. See how each unit functions as a complete composition within the larger architecture of the five books.</p>
-    </div>
-    <div class="feature-card">
-        <h3>Two-Dimensional Format</h3>
-        <p>Units displayed as tables revealing both horizontal and vertical relationships—the "warp and weft" of biblical composition. This format is unique to the Woven Torah approach. <a href="/torah-weave/six-days-of-creation-picture">See Genesis 1 displayed as a woven unit</a>.</p>
-    </div>
-    <div class="feature-card">
-        <h3>Peer-Reviewed Research</h3>
-        <p>Based on 40 years of scholarship published in the Journal of Biblical Literature (2025), SBL Press (2015), and Journal of Hebrew Scriptures (2008).</p>
-    </div>
-    <div class="feature-card">
-        <h3>Visual Torah Map</h3>
-        <p>A map showing how all 86 units relate to each other across the five books—the complete Torah architecture at a glance, from Genesis through Deuteronomy.</p>
-    </div>
-</div>
-
 <h2>Why This Torah PDF Is Different</h2>
 
 <p>Most Torah PDFs and Chumash downloads give you just the text. <em>Before Chapter and Verse</em> gives you the text plus understanding. This is the result of four decades of research into the Torah's literary structure, published in top academic journals and recognized by scholars across denominations.</p>
@@ -553,7 +313,38 @@
 
 <p>Whether you are a student, scholar, rabbi, pastor, teacher, or simply someone curious about the Hebrew Bible, this PDF provides both the complete Torah text you need and the tools to understand its composition.</p>
 
-<h2>Publications and Recognition</h2>
+
+<h2>Frequently Asked Questions</h2>
+<details class="faq"><summary>Is this Torah PDF free?</summary><p>Yes. The complete 275-page PDF is free to download for personal study, research, and educational use. No registration or email is required. A print edition is also available on Amazon for those who prefer a physical book.</p></details>
+<details class="faq"><summary>What translation does this Torah PDF use?</summary><p>The Torah text uses the JPS (Jewish Publication Society) 1917 translation, a respected English translation widely used in academic and synagogue settings. The text is in the public domain.</p></details>
+<details class="faq"><summary>How many pages is this Torah PDF?</summary><p>The book runs to 275 numbered pages: a 110-page introduction explaining the literary architecture and research methodology, followed by the complete Torah text (Genesis through Deuteronomy) on pages 111–275.</p></details>
+<details class="faq"><summary>What makes this different from other Torah PDFs?</summary><p>Most Torah PDFs provide only the linear text. This edition includes 40 years of peer-reviewed literary analysis showing the Torah's two-dimensional "woven" structure—86 discrete literary units organized in architectural patterns. The research has been published in the Journal of Biblical Literature, SBL Press, and the Journal of Hebrew Scriptures.</p></details>
+<details class="faq"><summary>Does this include all five books of Moses?</summary><p>Yes. The PDF contains the complete text of all five books: Genesis (Bereshit), Exodus (Shemot), Leviticus (Vayikra), Numbers (Bamidbar), and Deuteronomy (Devarim)—the entire Chumash/Pentateuch.</p></details>
+<details class="faq"><summary>Can I use this for study groups or classes?</summary><p>Yes. The PDF is free for personal study, group study, research, and classroom use. The two-dimensional format is particularly useful for comparing parallel passages across the Torah's literary units.</p></details>
+
+<h2>About the Author</h2>
+
+
+<p>Moshe Kline is a graduate of St. John's College and Yeshiva University. He studied under Jacob Klein and was influenced by Leo Strauss, later studying with Rabbi Leon Ashkenazi ("Manitou"). His work was mentored by Jacob Milgrom (UC Berkeley) and Mary Douglas.</p>
+
+<p>His research has been published in the <strong>Journal of Biblical Literature</strong> (2025), <strong>Society of Biblical Literature Press</strong> (2015), and <strong>Journal of Hebrew Scriptures</strong> (2008). <em>Before Chapter and Verse</em> represents 40 years of systematic analysis of the Torah's literary structure. The book is available at academic libraries worldwide and has been cited in biblical scholarship.</p>
+
+
+<h3>Reader Reviews</h3>
+
+<blockquote>
+<p>"For students and scholars of the Torah/Pentateuch, 'Before Chapter and Verse' by Moshe Kline represents a fresh insight... Kline's analysis and literary evidence is rigorous and impressive, and I feel convinced of the validity and reliability of his thesis across the whole Torah in its final form."</p>
+<p>— Amazon Reviewer</p>
+</blockquote>
+
+<blockquote>
+<p>"The more I read and examine what Moshe has seen, the more convinced I am that he is truly on to something important and game changing. For it gives us a glimpse of God and his work in history that is akin to something like a fourth or fifth dimension of thought."</p>
+<p>— Doug Van Dorn, Reformed Baptist Pastor and Author</p>
+</blockquote>
+
+
+<details class="more"><summary>Publications and recognition</summary>
+
 
 <h3>Peer-Reviewed Articles</h3>
 
@@ -597,69 +388,10 @@
 
 <p><a href="/about-Moshe-Kline">Full publication list and academic credentials &rarr;</a></p>
 
-<h2>About the Author</h2>
 
-<p>Moshe Kline is a graduate of St. John's College and Yeshiva University. He studied under Jacob Klein and was influenced by Leo Strauss, later studying with Rabbi Leon Ashkenazi ("Manitou"). His work was mentored by Jacob Milgrom (UC Berkeley) and Mary Douglas.</p>
+</details>
+<details class="more"><summary>More to read on chaver.com</summary>
 
-<p>His research has been published in the <strong>Journal of Biblical Literature</strong> (2025), <strong>Society of Biblical Literature Press</strong> (2015), and <strong>Journal of Hebrew Scriptures</strong> (2008). <em>Before Chapter and Verse</em> represents 40 years of systematic analysis of the Torah's literary structure. The book is available at academic libraries worldwide and has been cited in biblical scholarship.</p>
-
-<h2>Reader Reviews</h2>
-
-<blockquote>
-<p>"For students and scholars of the Torah/Pentateuch, 'Before Chapter and Verse' by Moshe Kline represents a fresh insight... Kline's analysis and literary evidence is rigorous and impressive, and I feel convinced of the validity and reliability of his thesis across the whole Torah in its final form."</p>
-<p>— Amazon Reviewer</p>
-</blockquote>
-
-<blockquote>
-<p>"The more I read and examine what Moshe has seen, the more convinced I am that he is truly on to something important and game changing. For it gives us a glimpse of God and his work in history that is akin to something like a fourth or fifth dimension of thought."</p>
-<p>— Doug Van Dorn, Reformed Baptist Pastor and Author</p>
-</blockquote>
-
-<h2>How to Get Your Free Torah PDF</h2>
-
-<p><strong>Option 1: Download Free PDF</strong> — Click the button below to download the complete 275-page book as a PDF file. Free for personal study, research, and educational use. No registration required.</p>
-
-<p><strong>Option 2: Purchase Print Edition</strong> — Available on <a href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/">Amazon</a> for those who prefer a physical book. Same complete content in professional print binding. ISBN: 9655982718.</p>
-
-<div class="download-hero" style="margin-top: 3rem;">
-    <h2>Ready to Download Your Torah PDF?</h2>
-    <p style="font-size: 1.1em; margin: 1.5rem 0;">Get the complete Chumash text plus literary analysis — free, no registration required.</p>
-    <div class="cta-buttons">
-        <a href="/torah.pdf">Download Free Torah PDF Now</a>
-        <a href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/">View on Amazon</a>
-    </div>
-</div>
-
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq-section">
-    <div class="faq-item">
-        <h3>Is this Torah PDF free?</h3>
-        <p>Yes. The complete 275-page PDF is free to download for personal study, research, and educational use. No registration or email is required. A print edition is also available on Amazon for those who prefer a physical book.</p>
-    </div>
-    <div class="faq-item">
-        <h3>What translation does this Torah PDF use?</h3>
-        <p>The Torah text uses the JPS (Jewish Publication Society) 1917 translation, a respected English translation widely used in academic and synagogue settings. The text is in the public domain.</p>
-    </div>
-    <div class="faq-item">
-        <h3>How many pages is this Torah PDF?</h3>
-        <p>The complete PDF is 275 pages: 170 pages of full Torah text (Genesis through Deuteronomy) plus a 110-page introduction explaining the literary architecture and research methodology.</p>
-    </div>
-    <div class="faq-item">
-        <h3>What makes this different from other Torah PDFs?</h3>
-        <p>Most Torah PDFs provide only the linear text. This edition includes 40 years of peer-reviewed literary analysis showing the Torah's two-dimensional "woven" structure—86 discrete literary units organized in architectural patterns. The research has been published in the Journal of Biblical Literature, SBL Press, and the Journal of Hebrew Scriptures.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Does this include all five books of Moses?</h3>
-        <p>Yes. The PDF contains the complete text of all five books: Genesis (Bereshit), Exodus (Shemot), Leviticus (Vayikra), Numbers (Bamidbar), and Deuteronomy (Devarim)—the entire Chumash/Pentateuch.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Can I use this for study groups or classes?</h3>
-        <p>Yes. The PDF is free for personal study, group study, research, and classroom use. The two-dimensional format is particularly useful for comparing parallel passages across the Torah's literary units.</p>
-    </div>
-</div>
-
-<h2>Related Resources on Chaver.com</h2>
 
 <p><strong><a href="/torah-weave/Genesis/genesis-analysis/overview">Genesis Commentary Series</a></strong> — Unit-by-unit structural analysis of all 19 Genesis literary units. How the woven architecture creates meaning at every scale, from individual scenes to the book as a whole.</p>
 
@@ -692,128 +424,32 @@
 <p><strong><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></strong> — Machine-readable dataset with 4,442 cells and 2,276 structural markers.</p>
 
 <p><strong><a href="/Mishnah-New/Hebrew/Text/mishnah-search">Search the Mishnah</a></strong> — Full-text Hebrew search and structural pattern queries across all 524 chapters.</p>
-    </main>
     
-    <!-- ==========================================
-         SITE FOOTER - RICH 4-SECTION VERSION
-         ========================================== -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                                <div class="footer-section">
-                    <h4>Key Insights</h4>
-                    <ul>
-                        <li><a href="/torah-weave/bible-contradictions-explained">Bible Contradictions Explained</a></li>
-                        <li><a href="/torah-weave/yhwh-and-elohim-two-names">YHWH and Elohim: Two Names</a></li>
-                        <li><a href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture</a></li>
-                        <li><a href="/torah-weave/cain-and-abel-two-fathers">Why Was Cain's Offering Rejected?</a></li>
-                        <li><a href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a></li>
-                        <li><a href="/torah-weave/leviticus-19-ark-at-the-center">The Ark at the Center</a></li>
-                        <li><a href="/torah-weave/ten-plagues-creation-in-reverse">Plagues: Creation in Reverse</a></li>
-                        <li><a href="/torah-weave/book-of-numbers-camp-map">Numbers: Map of the Camp</a></li>
-                        <li><a href="/torah-weave/who-wrote-the-bible-theories-compared">Who Wrote the Bible?</a></li>
-                        <li><a href="/torah-weave/documentary-hypothesis-alternative">Beyond JEDP</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Featured Articles</h4>
-                    <ul>
-                        <li><a href="/The%20Esoteric%20Woven%20Torah,%20An%20Alternative%20to%20the%20Documentary%20Hypothesis.pdf">The Esoteric Woven Torah</a></li>
-                        <li><a href="/Torah/Structure%20is%20Theology%20Published%20Version.pdf">Structure is Theology (SBL)</a></li>
-                        <li><a href="/Torah-New/English/Articles/The%20Editor%20was%20Nodding.pdf">"The Editor was Nodding"</a></li>
-                        <li><a href="/Mishnah-New/English/Articles/Introduction%20to%20the%20Structured%20Mishnah.htm">Introduction to The Structured Mishnah</a></li>
-                        <li><a href="/Torah-New/English/Articles/The%20Decalogue">The Decalogue</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Full Texts</h4>
-                    <ul>
-                        <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah Portal</a></li>
-                        <li><a href="/Mishnah/TheMishnah.htm">Mishnah Portal</a></li>
-                        <li><a href="/Torah-New/English/Text/The%20Structured%20Torah%20(JPS%201917).pdf">Structured Torah (PDF)</a></li>
-                        <li><a href="/Torah-New/Hebrew/Text/The%20Structured%20Torah.pdf">&#1492;&#1514;&#1493;&#1512;&#1492; &#1499;&#1491;&#1512;&#1499;&#1492;</a></li>
-                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-pdf">The Structured Mishnah PDF</a></li>
-                        <li><a href="https://asitwaswritten.org/">As It Was Written &mdash; a primer</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="/torah-weave/data/">Torah Units Dataset (JSON &amp; CSV)</a></li>
-                        <li><a href="/General/Color%20Codes/English%20Color%20Code.htm">Color Code Guide</a></li>
-                        <li><a href="/Torah-New/English/Articles/The%20Compositional%20Hypothesis%20Links.pdf">The Compositional Hypothesis</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=Wx_unjn3AmU">Full Video Presentation on the Covenant Code</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=j4fnY52xkVg">Video Part 1</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=vy7n_5amTn4">Video Part 2</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>About Moshe Kline</h4>
-                    <p>Graduate of St. John's College and Yeshiva University. Studied under Jacob Klein, influenced by Leo Strauss. Later studied with Rabbi Leon Ashkenazi ("Manitou"). Mentored by Jacob Milgrom and Mary Douglas.</p>
-                    <p>The Woven Torah methodology has been independently validated in a PhD thesis by Paul Hocking (University of Chester, 2021), supervised by Philip Alexander (University of Manchester). The literary structure of Leviticus was verified by Jacob Milgrom and published by David Noel Freedman.</p>
-                    <p><a href="/about-Moshe-Kline">Read more &rarr;</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&#169; 2026 Chaver.com. The Woven Texts Project.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- ==========================================
-         SITE NAV SCRIPT
-         ========================================== -->
-    <script>
-        (function() {
-            var toggle = document.querySelector('.nav-toggle');
-            var menu = document.querySelector('.nav-menu');
+</details>
 
-            // Hamburger toggle
-            if (toggle && menu) {
-                toggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    menu.classList.toggle('is-open-menu');
-                    toggle.setAttribute('aria-expanded',
-                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
-                });
-            }
-
-            // Dropdown toggles (via <button>, not <a>)
-            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    var li = btn.parentElement;
-                    var wasOpen = li.classList.contains('is-open');
-
-                    // Close all dropdowns first
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
-                        other.classList.remove('is-open');
-                        var b = other.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-
-                    // Open this one if it wasn't already
-                    if (!wasOpen) {
-                        li.classList.add('is-open');
-                        btn.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            });
-
-            // Click outside closes everything
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.site-header')) {
-                    if (menu) menu.classList.remove('is-open-menu');
-                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
-                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
-                        li.classList.remove('is-open');
-                        var b = li.querySelector('button');
-                        if (b) b.setAttribute('aria-expanded', 'false');
-                    });
-                }
-            });
-        })();
-    </script>
-
+  <section class="band">
+    <h2>Ready to Download Your Torah PDF?</h2>
+    <p>Get the complete Chumash text plus literary analysis — free, no registration required.</p>
+    <div class="btns">
+      <a class="btn btn-main" href="/torah.pdf">Download Free Torah PDF Now</a>
+      <a class="btn btn-quiet" href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/">View on Amazon</a>
+    </div>
+  </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <span>&copy; 2026 Chaver.com · The Woven Texts Project</span>
+  <span><a href="/about-Moshe-Kline">About Moshe Kline</a> · <a href="/hebrew%20index">עברית</a> · <a href="https://asitwaswritten.org/">As It Was Written — a primer</a></span>
+</footer>
+<!-- click tracking v1: counts PDF downloads and doorway clicks in Google Analytics -->
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a'); if(!a||typeof gtag!=='function')return;
+  var h=a.getAttribute('href')||'';
+  if(/\/torah\.pdf$/.test(h)){var all=[].slice.call(document.querySelectorAll('a[href$="/torah.pdf"]'));
+    gtag('event','torah_pdf_click',{button_position:all.indexOf(a)+1});}
+  else if(a.classList.contains('doorway-link')){gtag('event','doorway_click',{link_url:h});}
+});
+</script>
 </body>
 </html>
