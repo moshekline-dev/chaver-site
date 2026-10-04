@@ -4197,3 +4197,27 @@ html body footer.site-footer a:hover { color: var(--accent); }
 /* note / citation boxes: cream card with a red edge, like asitwaswritten */
 .citation-box, .publication-note, .emphasis-box { background: var(--bg); border: 1px solid var(--accent-rule); border-left: 4px solid var(--accent); box-shadow: 0 4px 16px rgba(var(--accent-rgb), .06); }
 html[dir="rtl"] .citation-box, html[lang="he"] .citation-box { border-left: 1px solid var(--accent-rule); border-right: 4px solid var(--accent); }
+
+/* PAGE TITLES (Oct 2026): a quiet title on the page, no red block — as on the Insight pages */
+html body .unit-header-section { background: none; box-shadow: none; border: 0; border-bottom: 1px solid var(--accent-rule); border-radius: 0; padding: 1.25rem 0 1.25rem; margin: 0 auto 2.5rem; max-width: 62rem; color: var(--ink); }
+html body .unit-header-section h1 { color: var(--ink); font-size: 1.9rem; line-height: 1.3; text-shadow: none; text-wrap: balance; max-width: none; unicode-bidi: plaintext; }
+/* a title's subtitle (the words after its colon) moves to the next line as a whole when the title doesn't fit on one line */
+html body .unit-header-section h1 :is(.t-head, .t-rest) { display: inline-block; text-wrap: balance; unicode-bidi: plaintext; }
+html body .unit-header-section :is(p, div, span, .subtitle, .unit-meta) { color: var(--ink-light); opacity: 1; }
+html body .unit-header-section a { color: var(--accent); }
+.unit-meta { color: var(--ink-light); }
+@media (max-width: 600px) { html body .unit-header-section h1 { font-size: 1.35rem; } }
+
+/* READING COLUMN (Oct 2026): prose held to a comfortable width, slightly larger;
+   tables, maps, charts and card grids keep their full width */
+:is(main, article, .content-wrapper) :is(h1, h2, h3, h4, p, ul, ol, dl, blockquote, .citation-box, .publication-note, .emphasis-box, .structure-box):not(:is(table, .unit, [class*="tmap"], [class*="map"], .hero, .unit-header-section, header, footer, nav, [class*="grid"], [class*="card"], [class*="gateway"], .breadcrumb, .research-article-page, li, blockquote, .citation-box, .publication-note, .emphasis-box, .structure-box) *) {
+  max-width: 40rem; margin-left: auto; margin-right: auto; box-sizing: border-box;
+}
+@media (min-width: 900px) {
+  :is(main, article, .content-wrapper) :is(p, li):not(:is(table, .unit, [class*="tmap"], [class*="map"], .hero, header, footer, nav, [class*="grid"], [class*="card"], [class*="gateway"], .research-article-page) *) { font-size: 19px; }
+}
+
+/* summary boxes: sand with a red edge, like the other note boxes */
+html body .stage-summary { background: var(--bg-2); border-left: 4px solid var(--accent); }
+html body .stage-summary strong { color: var(--accent); }
+html body .stage-summary:dir(rtl) { border-left: 0; border-right: 4px solid var(--accent); }
