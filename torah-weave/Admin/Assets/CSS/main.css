@@ -63,7 +63,7 @@ body {
 
 h1 {
     font-size: 2.2em;
-    color: #1a1a1a;
+    color: var(--ink);
     border-bottom: 2px solid var(--accent-2);
     padding-bottom: 12px;
     margin-bottom: 30px;
@@ -111,10 +111,10 @@ a:hover {
 }
 
 blockquote {
-    border-left: 3px solid #bdc3c7;
+    border-left: 3px solid var(--sand-2);
     padding-left: 20px;
     margin: 25px 0;
-    color: #555;
+    color: var(--ink-mid);
     font-style: italic;
 }
 
@@ -150,9 +150,9 @@ p.UnitHeader, li.UnitHeader, div.UnitHeader {
 p.CellLabel, li.CellLabel, div.CellLabel {
     font-size: 0.9em;
     font-weight: bold;
-    color: #666;
+    color: var(--ink-faint);
     text-align: center;
-    background: #f0f0f0;
+    background: var(--bg-2);
     padding: 5px;
     margin: 0;
 }
@@ -177,7 +177,7 @@ p.CellLabel, li.CellLabel, div.CellLabel {
 .InternalParallel { color: #16a34a; font-weight: 500; }
 
 .Subunit { font-weight: 700; }
-.Albeck  { color: #555; font-size: 0.95em; }
+.Albeck  { color: var(--ink-mid); font-size: 0.95em; }
 
 /* The "Red" run style appears as an empty span in the source —
    left harmless if it ever has content. */
@@ -289,7 +289,7 @@ footer.site-footer {
     text-align: center;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 3px solid #7ab0f7;
+    border-bottom: 3px solid var(--sand-2);
 }
 
 .commentary-header h1 {
@@ -304,7 +304,7 @@ footer.site-footer {
 
 .commentary-section h2 {
     color: var(--ink-mid);
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--sand-2);
     padding-bottom: 10px;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -336,7 +336,7 @@ table.MsoNormalTable td,
 .scripture-table tbody td {
     vertical-align: top;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--sand-2);
     text-align: left;
     width: 50%;
 }
@@ -357,7 +357,7 @@ table.MsoNormalTable td,
 .scripture-table {
     max-width: 1000px;
     margin: 2.5rem auto;
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -556,20 +556,20 @@ span.VerseNumber,
 .verse-number, 
 .verse-num {
     font-weight: bold;
-    color: #999;
+    color: var(--ink-faint);
     font-family: 'Courier New', monospace;
     margin-right: 5px;
 }
 
 span.CellSubdivision {
     font-weight: bold;
-    color: #666;
+    color: var(--ink-faint);
     margin-right: 5px;
 }
 
 span.HebrewParagraph {
     font-style: italic;
-    color: #999;
+    color: var(--ink-faint);
     font-size: 0.9em;
 }
 
@@ -599,11 +599,11 @@ strong.element-count {
 /* Element tally line (running count at section ends) */
 .element-tally {
     font-size: 0.9em;
-    color: #666;
+    color: var(--ink-faint);
     font-style: italic;
     margin-top: 30px;
     padding-top: 12px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--sand-2);
 } 
 
 /* Hebrew text (RTL) */
@@ -648,7 +648,7 @@ strong.element-count {
     border: 2px solid var(--accent);
     padding: 15px;
     margin: 20px 0;
-    background-color: var(--ink-mid);
+    background-color: var(--bg-2);
 }
 
 .speculative {
@@ -684,10 +684,10 @@ strong.element-count {
 .diagram,
 .matrix-display {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #f8f9fa;
+    background-color: var(--bg-2);
     padding: 20px;
     margin: 25px 0;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--sand-2);
     overflow-x: auto;
     font-size: 0.9em;
     line-height: 1.6;
@@ -711,19 +711,19 @@ strong.element-count {
     width: 100%;
     border-collapse: collapse;
     margin: 25px 0;
-    background-color: #f8f9fa;
+    background-color: var(--bg-2);
     font-size: 0.95em;
 }
 
 .matrix-table th, 
 .matrix-table td {
     padding: 12px;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--sand-2);
     text-align: center;
 }
 
 .matrix-table thead th {
-    background-color: #e9ecef;
+    background-color: var(--bg-3);
     font-weight: 600;
 }
 
@@ -743,12 +743,12 @@ strong.element-count {
 }
 
 .matrix-table .family-cell {
-    background-color: #d1ecf1;
+    background-color: var(--bg-3);
 }
 
 .matrix-table .cell-label {
     font-size: 0.9em;
-    color: #666;
+    color: var(--ink-faint);
 }
 
 /* === Mishnah chapter page — D-1 pilot styling === */
@@ -769,14 +769,14 @@ strong.element-count {
     width: 100%;
     border-collapse: collapse;
     margin: 25px 0;
-    background-color: #f8f9fa;
+    background-color: var(--bg-2);
     font-size: 0.95em;
     direction: rtl;
     font-family: 'SBL Hebrew', 'Ezra SIL', 'David', 'Frank Ruehl', serif;
 }
 .mishnah-cell {
     padding: 12px;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--sand-2);
     text-align: center;
     vertical-align: top;
 }
@@ -789,7 +789,7 @@ strong.element-count {
 .mishnah-chapter .cell-label {
     display: inline-block;
     font-size: 0.9em;
-    color: #666;
+    color: var(--ink-faint);
     font-weight: bold;
     margin-bottom: 0.5em;
 }
@@ -846,7 +846,7 @@ strong.element-count {
 
 .breadcrumb {
     margin: 20px 0;
-    color: #666;
+    color: var(--ink-faint);
     font-size: 14px;
 }
 
@@ -865,7 +865,7 @@ strong.element-count {
     padding: 1.25rem 1.5rem;
     margin-bottom: 2.5rem;
     border-radius: 6px;
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: space-between;
@@ -916,12 +916,12 @@ strong.element-count {
 
 .nav-arrows a {
     background: white;
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .nav-disabled {
-    color: #999;
+    color: var(--ink-faint);
     font-style: italic;
 }
 
@@ -1000,7 +1000,7 @@ strong.element-count {
     right: 12px;
     z-index: 1000;
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid var(--sand-2);
     border-radius: 6px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
     padding: 10px 12px 8px;
@@ -1022,8 +1022,8 @@ strong.element-count {
     font-weight: 600;
     padding: 2px 6px;
     text-align: center;
-    color: #666;
-    border-bottom: 1px solid #ccc;
+    color: var(--ink-faint);
+    border-bottom: 1px solid var(--sand-2);
 }
 
 .unit-nav-panel td {
@@ -1036,7 +1036,7 @@ strong.element-count {
     padding: 3px 4px;
     border-radius: 3px;
     text-decoration: none;
-    color: #333;
+    color: var(--ink-mid);
     font-size: 0.72rem;
     line-height: 1.2;
     white-space: nowrap;
@@ -1044,7 +1044,7 @@ strong.element-count {
 }
 
 .unit-nav-panel td a:hover {
-    background: #eef6fc;
+    background: var(--bg-2);
 }
 
 .unit-nav-panel td.irregular a {
@@ -1059,7 +1059,7 @@ strong.element-count {
 
 .unit-nav-panel .row-label {
     font-weight: 600;
-    color: #666;
+    color: var(--ink-faint);
     padding-right: 6px;
     text-align: right;
     font-size: 0.7rem;
@@ -1067,12 +1067,12 @@ strong.element-count {
 
 .unit-nav-panel .deut-row td {
     padding-top: 6px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--sand-2);
 }
 
 .unit-nav-title {
     font-size: 0.7rem;
-    color: #666;
+    color: var(--ink-faint);
     text-align: center;
     margin-bottom: 4px;
 }
@@ -1109,7 +1109,7 @@ strong.element-count {
     margin: 2.5rem 0;
     border-radius: 6px;
     font-size: 0.95rem;
-    box-shadow: 0 2px 6px rgba(93, 135, 161, 0.12);
+    box-shadow: 0 2px 6px rgba(var(--accent-rgb), 0.12);
 }
 
 .citation-box strong {
@@ -1121,7 +1121,7 @@ strong.element-count {
 .series-navigation {
     text-align: center;
     padding: 30px;
-    background-color: #f8f9fa;
+    background-color: var(--bg-2);
     border-radius: 8px;
     margin-top: 40px;
 }
@@ -1180,11 +1180,11 @@ strong.element-count {
 /* Genesis - Blue */
 .genesis-section h1,
 .genesis-section h2 {
-    color: #7ab0f7;
+    color: var(--accent);
 }
 
 .genesis-section .commentary-header {
-    border-bottom-color: #7ab0f7;
+    border-bottom-color: var(--sand-2);
 }
 
 .genesis-map .matrix-table thead th,
@@ -1244,11 +1244,11 @@ strong.element-count {
 /* Deuteronomy - Blue */
 .deuteronomy-section h1,
 .deuteronomy-section h2 {
-    color: #7ab0f7;
+    color: var(--accent);
 }
 
 .deuteronomy-section .commentary-header {
-    border-bottom-color: #7ab0f7;
+    border-bottom-color: var(--sand-2);
 }
 
 .deuteronomy-map .matrix-table thead th,
@@ -1302,7 +1302,7 @@ strong.element-count {
 .matrix-wrapper {
     overflow-x: auto;
     margin: 30px 0;
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
     border-radius: 8px;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -1380,8 +1380,8 @@ strong.element-count {
 }
 
 .empty-cell {
-    background: #f5f5f5;
-    border: 1px solid #e0e0e0;
+    background: var(--bg-2);
+    border: 1px solid var(--sand-2);
 }
 
 /* Column Header Variations */
@@ -1409,7 +1409,7 @@ strong.element-count {
 .unit {
     display: block;
     padding: 15px;
-    border: 2px solid #ddd;
+    border: 2px solid var(--sand-2);
     border-radius: 6px;
     text-decoration: none;
     color: var(--ink-mid);
@@ -1428,12 +1428,12 @@ strong.element-count {
     font-weight: 700;
     font-size: 1.1em;
     margin-bottom: 5px;
-    color: #1a1a1a;
+    color: var(--ink);
 }
 
 .unit-reference {
     font-size: 0.85em;
-    color: #666;
+    color: var(--ink-faint);
     margin-bottom: 8px;
     font-style: italic;
 }
@@ -1441,7 +1441,7 @@ strong.element-count {
 .unit-description {
     font-size: 0.85em;
     line-height: 1.4;
-    color: #444;
+    color: var(--ink-mid);
 }
 
 /* Unit Background Colors */
@@ -1474,7 +1474,7 @@ strong.element-count {
 
 .torah-book-description .main-heading {
     font-size: 1.8em;
-    color: #1a1a1a;
+    color: var(--ink);
     border-bottom: 2px solid var(--accent-2);
     padding-bottom: 10px;
     margin-bottom: 25px;
@@ -1531,7 +1531,7 @@ body.mishnah-portal {
     margin: 0 auto;
     background: white;
     padding: 40px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--sand-2);
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     direction: rtl !important;
     text-align: right;
@@ -1552,7 +1552,7 @@ body.mishnah-portal {
 
 .mishnah-header .subtitle {
     font-size: 1.3em;
-    color: #666;
+    color: var(--ink-faint);
     font-family: Georgia, serif;
 }
 
@@ -1567,7 +1567,7 @@ body.mishnah-portal {
 
 .resource-card {
     background: var(--bg);
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
     border-radius: 8px;
     padding: 20px;
     flex: 1 1 300px;
@@ -1595,7 +1595,7 @@ body.mishnah-portal {
 
 .resource-list a {
     text-decoration: none;
-    color: #333;
+    color: var(--ink-mid);
     font-size: 1.1em;
     display: block;
     padding: 5px 10px;
@@ -1618,7 +1618,7 @@ body.mishnah-portal {
 /* Seder Sections */
 .seder-block {
     margin-bottom: 50px;
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -1655,7 +1655,7 @@ body.mishnah-portal {
 
 .tractate-card {
     background: white;
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
     border-radius: 6px;
     padding: 15px;
     text-align: center;
@@ -1679,10 +1679,10 @@ body.mishnah-portal {
 .tractate-eng {
     display: block;
     font-size: 0.9em;
-    color: #888;
+    color: var(--ink-faint);
     font-family: Georgia, serif;
     margin-bottom: 15px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--sand-2);
     padding-bottom: 10px;
 }
 
@@ -1700,8 +1700,8 @@ body.mishnah-portal {
     height: 30px;
     line-height: 30px;
     background-color: #fff;
-    border: 1px solid #bbb;
-    color: #333;
+    border: 1px solid var(--sand-2);
+    color: var(--ink-mid);
     text-decoration: none;
     border-radius: 4px;
     font-size: 1.1em;
@@ -1717,7 +1717,7 @@ body.mishnah-portal {
 /* Portal Divider */
 .portal-divider {
     border: 0;
-    border-top: 1px solid #d4cfc7;
+    border-top: 1px solid var(--sand-2);
     margin-bottom: 50px;
 }
 
@@ -1726,9 +1726,9 @@ body.mishnah-portal {
     text-align: center;
     margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--sand-2);
     font-family: Georgia, serif;
-    color: #777;
+    color: var(--ink-faint);
 }
 
 .portal-footer a {
@@ -1776,7 +1776,7 @@ body.mishnah-portal {
 
 .site-title .credentials {
     font-size: 1rem;
-    color: #7f8c8d;
+    color: var(--ink-faint);
     font-style: italic;
 }
 
@@ -1820,7 +1820,7 @@ body.mishnah-portal {
 .featured-links a:hover {
     transform: translateY(-2px);
     background: var(--accent-dark);
-    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.3);
+    box-shadow: 0 4px 8px rgba(var(--accent-rgb), 0.3);
 }
 
 /* Video Section */
@@ -1887,7 +1887,7 @@ body.mishnah-portal {
     text-align: center;
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #dcd9d0;
+    border-bottom: 1px solid var(--sand-2);
 }
 
 .demo-header h2 {
@@ -1931,7 +1931,7 @@ body.mishnah-portal {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+    box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.3);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -1940,7 +1940,7 @@ body.mishnah-portal {
 .transform-button:hover {
     background: var(--accent-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(44, 62, 80, 0.4);
+    box-shadow: 0 6px 16px rgba(var(--accent-rgb), 0.4);
 }
 
 .transform-button:active {
@@ -1987,7 +1987,7 @@ body.mishnah-portal {
 .table-scroll-wrapper {
     overflow-x: auto;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--sand-2);
 }
 
 /* Homepage Scripture Table Overrides - NO min-width to prevent Chrome zoom-out */
@@ -2011,13 +2011,13 @@ body.mishnah-portal {
     text-align: left;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    border-bottom: 2px solid #dcd9d0;
+    border-bottom: 2px solid var(--sand-2);
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
     color: var(--ink-mid);
 }
 
 .demonstration-section .col-header-a { 
-    background: #f4f8fb; 
+    background: var(--bg-2); 
 }
 
 .demonstration-section .col-header-b { 
@@ -2025,9 +2025,9 @@ body.mishnah-portal {
 }
 
 .demonstration-section .col-header-struct { 
-    background: #f5f5f5; 
+    background: var(--bg-2); 
     width: 200px; 
-    border-right: 1px solid #eee; 
+    border-right: 1px solid var(--sand-2); 
 }
 
 .demonstration-section .header-desc {
@@ -2042,12 +2042,12 @@ body.mishnah-portal {
 .demonstration-section .scripture-table td {
     padding: 1.5rem;
     vertical-align: top;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--sand-2);
 }
 
 .demonstration-section .scripture-table td:nth-child(2) { 
-    background: rgba(244, 248, 251, 0.3); 
-    border-right: 1px solid #eee; 
+    background: rgba(250, 246, 238, 0.3); 
+    border-right: 1px solid var(--sand-2); 
 }
 
 .demonstration-section .scripture-table td:nth-child(3) { 
@@ -2133,7 +2133,7 @@ body.mishnah-portal {
 .insights-box {
     margin-top: 3rem;
     background: var(--accent);
-    color: var(--ink-mid);
+    color: var(--on-bar);
     padding: 2rem;
     border-radius: 8px;
 }
@@ -2156,7 +2156,7 @@ body.mishnah-portal {
 .insights-box li {
     margin-bottom: 1rem;
     font-size: 0.95rem;
-    color: #bdc3c7;
+    color: var(--ink-faint);
     line-height: 1.6;
 }
 
@@ -2228,7 +2228,7 @@ body.mishnah-portal {
     padding: 2rem;
     margin: 2rem 0;
     border: 3px solid var(--accent);
-    background: #f8f9fa;
+    background: var(--bg-2);
     border-radius: 8px;
 }
 
@@ -2262,7 +2262,7 @@ body.mishnah-portal {
 .testimonial {
     padding: 1.5rem;
     margin: 1.5rem 0;
-    background: #f8f9fa;
+    background: var(--bg-2);
     border-left: 4px solid var(--accent);
     border-radius: 4px;
 }
@@ -2283,7 +2283,7 @@ body.mishnah-portal {
     padding: 1.5rem;
     margin: 2rem 0;
     border-left: 4px solid var(--accent);
-    background: #f8f9fa;
+    background: var(--bg-2);
     border-radius: 4px;
 }
 
@@ -2310,7 +2310,7 @@ body.mishnah-portal {
 .faq-section {
     margin-top: 40px;
     padding-top: 40px;
-    border-top: 2px solid #e0e0e0;
+    border-top: 2px solid var(--sand-2);
 }
 
 .faq-item {
@@ -2326,7 +2326,7 @@ body.mishnah-portal {
 
 .faq-answer {
     line-height: 1.7;
-    color: #555;
+    color: var(--ink-mid);
 }
 
 
@@ -2465,7 +2465,7 @@ body.mishnah-portal {
     text-align: center;
     margin-top: 1rem;
     padding: 0;
-    color: #666;
+    color: var(--ink-faint);
     font-size: 0.9rem;
 }
 
@@ -2483,7 +2483,7 @@ body.mishnah-portal {
     margin: 2rem 0;
     padding: 1.5rem;
     background: var(--bg);
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
     border-radius: 8px;
 }
 
@@ -2572,7 +2572,7 @@ body.mishnah-portal {
     gap: 1rem 2rem;
     margin-top: 1rem;
     font-size: 0.85rem;
-    color: #555;
+    color: var(--ink-mid);
 }
 
 .legend-item {
@@ -2706,7 +2706,7 @@ body.mishnah-portal {
 .final-table td {
     padding: 0.6rem 1rem;
     text-align: left;
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
 }
 
 .final-table thead th {
@@ -2716,21 +2716,21 @@ body.mishnah-portal {
 }
 
 .final-table tbody tr:nth-child(even) {
-    background: #f5f5f5;
+    background: var(--bg-2);
 }
 
 /* Key Terms Box */
 .key-terms {
     margin: 2rem 0;
     padding: 1.5rem;
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
+    background: var(--bg-2);
+    border: 1px solid var(--sand-2);
     border-radius: 8px;
 }
 
 .key-terms h3 {
     margin-top: 0;
-    color: #495057;
+    color: var(--ink-mid);
     border-bottom: 2px solid var(--accent-2);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
@@ -2752,7 +2752,7 @@ body.mishnah-portal {
 
 .key-terms dd {
     margin-left: 1.5rem;
-    color: #555;
+    color: var(--ink-mid);
     margin-bottom: 0.5rem;
 }
 
@@ -2795,7 +2795,7 @@ body.mishnah-portal {
 .toc {
     background: var(--bg);
     padding: 25px 30px;
-    border: 1px solid #d4cfc7;
+    border: 1px solid var(--sand-2);
     border-radius: 6px;
     margin: 30px 0;
 }
@@ -2809,7 +2809,7 @@ body.mishnah-portal {
 
 .toc li {
     padding: 6px 0;
-    border-bottom: 1px dotted #d4cfc7;
+    border-bottom: 1px dotted var(--sand-2);
 }
 
 .toc li:last-child {
@@ -2838,8 +2838,8 @@ body.mishnah-portal {
     text-align: center;
     padding: 25px 40px;
     margin: 40px 0;
-    border-top: 1px solid #d4cfc7;
-    border-bottom: 1px solid #d4cfc7;
+    border-top: 1px solid var(--sand-2);
+    border-bottom: 1px solid var(--sand-2);
 }
 
 .epigraph .hebrew {
@@ -2900,7 +2900,7 @@ body.mishnah-portal {
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 2px solid #dcd9d0;
+    border-bottom: 2px solid var(--sand-2);
 }
 
 .article-header h1 {
@@ -3671,7 +3671,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     h2 {
         margin-top: 24pt;
         padding-top: 12pt;
-        border-top: 1pt solid #ccc;
+        border-top: 1pt solid var(--sand-2);
     }
     
     .commentary-section h2,
@@ -3691,16 +3691,16 @@ main.content-wrapper:has(.Mesechet) .Perek {
         page-break-inside: avoid;
         margin: 12pt 0;
         box-shadow: none;
-        border: 1pt solid #999;
+        border: 1pt solid var(--ink-faint);
         width: 100%;
     }
     
     .scripture-table thead th {
-        background: #e0e0e0 !important;
+        background: var(--bg-3) !important;
         color: #000 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        border-bottom: 2pt solid #666;
+        border-bottom: 2pt solid var(--ink-faint);
         padding: 4pt 6pt;
         font-size: 9pt;
         line-height: 1.2;
@@ -3708,18 +3708,18 @@ main.content-wrapper:has(.Mesechet) .Perek {
     
     .scripture-table thead th.col-a,
     .scripture-table thead th.col-left {
-        background: #d0d0d0 !important;
+        background: var(--bg-3) !important;
     }
     
     .scripture-table thead th.col-b,
     .scripture-table thead th.col-middle {
-        background: #e8e8e8 !important;
+        background: var(--bg-3) !important;
     }
     
     /* Single spacing in all table cells */
     .scripture-table tbody td {
         padding: 4pt 6pt;
-        border: 0.5pt solid #ccc;
+        border: 0.5pt solid var(--sand-2);
         font-size: 10pt;
         line-height: 1.2;
     }
@@ -3772,7 +3772,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     
     /* === BLOCKQUOTES === */
     blockquote {
-        border-left: 2pt solid #666;
+        border-left: 2pt solid var(--ink-faint);
         padding-left: 12pt;
         margin: 12pt 0 12pt 12pt;
         font-size: 10pt;
@@ -3781,7 +3781,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     /* === HEADER SECTION === */
     .unit-header-section {
         text-align: center;
-        border-bottom: 2pt solid #333;
+        border-bottom: 2pt solid var(--ink-faint);
         padding-bottom: 12pt;
         margin-bottom: 24pt;
     }
@@ -3794,7 +3794,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     
     .unit-meta {
         font-size: 11pt;
-        color: #666;
+        color: var(--ink-faint);
     }
     
     /* === HIDE NAVIGATION === */
@@ -3812,7 +3812,7 @@ main.content-wrapper:has(.Mesechet) .Perek {
     padding: 0 20px;
 }
 .banner-inner {
-    background: #f8f9fa;
+    background: var(--bg-2);
     border-left: 3px solid var(--link);
     padding: 0.5rem 1rem;
     border-radius: 4px;
