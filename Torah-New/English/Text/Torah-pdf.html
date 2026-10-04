@@ -167,69 +167,100 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
 <style>
+:root{--bg:#faf6ee;--bg-2:#f2ead8;--bg-3:#e8dcc4;--ink:#1c1610;--ink-mid:#3e2e1e;--ink-light:#5c4630;--ink-faint:#6e5a44;--burg:#7a1f2e;--burg-rule:rgba(122,31,46,.2);--rule:rgba(28,22,16,.1)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:19px;scroll-behavior:smooth}
-@media (max-width:640px){html{font-size:19px}}
-body{background:#faf6ee;color:#1c1610;font-family:'EB Garamond',Georgia,serif;line-height:1.75;overflow-x:hidden}
-a{color:#7a1f2e}
-.site-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 2rem;background:#7a1f2e;position:sticky;top:0;z-index:100}
-.nav-logo{font-family:'Cinzel',serif;font-size:1.05rem;font-weight:500;letter-spacing:.08em;color:#faf6ee;text-decoration:none}
-.nav-links{display:flex;gap:1.6rem;list-style:none;flex-wrap:wrap}
-.nav-links a{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.06em;color:rgba(250,246,238,.85);text-decoration:none}
-.nav-links a:hover{color:#fff}
-@media (max-width:760px){.site-nav{flex-direction:column;align-items:flex-start;padding:.9rem 1.1rem}.nav-links{gap:.4rem 1.1rem}}
-.wrap{max-width:720px;margin:0 auto;padding:3rem 1.5rem 3.5rem}
-@media (max-width:640px){.wrap{padding:2rem 1.1rem 2.5rem}}
-.label{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:#7a1f2e;margin-bottom:.8rem}
-h1{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.2;margin-bottom:.6rem}
-.subtitle{color:#7a6040;margin-bottom:1.4rem}
-.intro{color:#3e2e1e;margin-bottom:1.6rem}
-.intro strong{font-weight:400}
-.download{background:#f2ead8;border-left:4px solid #7a1f2e;padding:1.4rem 1.5rem;margin-bottom:1.6rem}
-.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:.7rem}
-.btn{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.06em;text-decoration:none;padding:.85rem 1.6rem;border-radius:3px;display:inline-block}
-.btn-main{background:#7a1f2e;color:#faf6ee}
+body{background:var(--bg);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.75;overflow-x:hidden}
+a{color:var(--burg)}
+.cz{font-family:'Cinzel',serif}
+/* nav */
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 2rem;background:var(--burg);position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'Cinzel',serif;font-size:1rem;font-weight:500;letter-spacing:.1em;color:var(--bg);text-decoration:none;text-transform:uppercase}
+.nav-logo span{color:rgba(250,246,238,.7);font-weight:400}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,246,238,.92);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--bg)}
+@media (max-width:760px){.site-nav{flex-direction:column;align-items:flex-start;padding:.9rem 1.1rem}.nav-links{flex-wrap:wrap;gap:.4rem 1.2rem}}
+/* hero */
+.hero{padding:4.5rem 1.5rem 3.5rem;text-align:center;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);position:relative;overflow:hidden}
+.hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.kicker{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--burg);display:block;margin-bottom:1.4rem}
+.hero h1{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.8rem,4.6vw,3rem);line-height:1.15;letter-spacing:.02em;margin-bottom:.9rem}
+.hero .sub{color:var(--ink-light);margin-bottom:1.6rem}
+.hero .lead{font-size:1.05rem;line-height:1.85;color:var(--ink-mid);max-width:560px;margin:0 auto 2.2rem}
+.btn{display:inline-block;font-family:'Cinzel',serif;letter-spacing:.08em;text-decoration:none;border-radius:2px}
+.btn-main{background:var(--burg);color:var(--bg);font-size:.95rem;padding:1.05rem 2.6rem;box-shadow:0 6px 22px rgba(122,31,46,.18)}
 .btn-main:hover{background:#5a1622}
-.btn-quiet{border:1px solid rgba(122,31,46,.45);color:#7a1f2e}
-.small{font-size:.85rem;color:#7a6040}
-.freshness{font-size:.85rem;color:#7a6040;margin-top:.3rem}
-.door{border:1px solid rgba(122,31,46,.25);padding:1.3rem 1.5rem;margin-bottom:2.5rem}
-.door h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.1rem;margin-bottom:.5rem;border:0;padding:0}
-.door p{margin-bottom:.5rem;color:#3e2e1e}
-.door p:last-child{margin-bottom:0}
-.body h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.25rem;margin:2.6rem 0 1rem;padding-bottom:.5rem;border-bottom:.5px solid rgba(28,22,16,.18)}
-.body h3{font-family:'Cinzel',serif;font-weight:500;font-size:1rem;margin:1.6rem 0 .5rem;color:#3e2e1e}
-.body h4{font-weight:500;margin:1.2rem 0 .4rem}
-.body p{margin-bottom:1.1rem;color:#3e2e1e;line-height:1.8}
-.body em{font-style:italic}
-.features .feature{margin-bottom:1rem}
-.features .feature h3{margin:0 0 .2rem;font-size:.95rem}
-.final-table{border-collapse:collapse;width:100%;margin:0 0 1rem;font-size:.95rem}
-.final-table th{text-align:left;font-weight:500;padding:.45rem .8rem .45rem 0;width:35%;color:#7a6040}
-.final-table td{padding:.45rem 0;border-bottom:.5px solid rgba(28,22,16,.12)}
-details{border-bottom:.5px solid rgba(28,22,16,.15)}
-details summary{cursor:pointer;padding:.8rem 0;font-weight:500;color:#1c1610;list-style:none}
+.alt{margin-top:1.1rem;font-size:.95rem;color:var(--ink-light)}
+.alt a{text-decoration:none;border-bottom:1px solid var(--burg-rule)}
+.fine{margin-top:.5rem;font-size:.9rem;color:var(--ink-faint)}
+.ornament{display:block;margin-top:2.2rem;letter-spacing:.5em;color:rgba(122,31,46,.45)}
+/* facts strip */
+.strip{display:flex;justify-content:center;flex-wrap:wrap;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--bg-2)}
+.strip span{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-light);padding:.8rem 1.5rem;border-right:1px solid var(--rule)}
+.strip span:last-child{border-right:0}
+/* sections */
+.section{max-width:760px;margin:0 auto;padding:3.5rem 1.5rem 0}
+.wide{max-width:980px}
+.label{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--burg);display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem}
+.label::after{content:'';flex:1;height:1px;background:var(--burg-rule)}
+.center-label{justify-content:center;color:var(--ink-faint)}
+.center-label::before{content:'';flex:1;height:1px;background:var(--rule)}
+.center-label::after{background:var(--rule)}
+.prose p{margin-bottom:1.15rem;color:var(--ink-mid);line-height:1.85}
+/* featured card */
+.featured{background:var(--bg);border:1px solid var(--burg-rule);border-left:4px solid var(--burg);padding:2.2rem 2.4rem;box-shadow:0 4px 20px rgba(122,31,46,.06)}
+.featured h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.25rem;color:var(--burg);margin-bottom:1rem;line-height:1.35}
+.featured p{color:var(--ink-mid);margin-bottom:1.3rem}
+.six{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:8px;margin:0 0 1.5rem}
+.six .h{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--burg);padding:0 .2rem .2rem}
+.six .r{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);align-self:center;padding-right:.4rem}
+.six .c{background:var(--bg-2);border:.5px solid var(--burg-rule);padding:.7rem .9rem;font-size:.95rem;color:var(--ink-mid);line-height:1.35}
+.six .c b{font-family:'Cinzel',serif;font-weight:500;color:var(--burg);margin-right:.45rem}
+.go{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.then{margin-top:.7rem;font-size:.95rem;color:var(--ink-light)}
+@media (max-width:640px){.featured{padding:1.4rem 1rem}.six{gap:6px}.six .r{font-size:.55rem;letter-spacing:.06em;padding-right:.1rem}.six .c{font-size:.85rem;padding:.5rem .5rem}.strip span{flex:1 1 45%;text-align:center;border-bottom:1px solid var(--rule)}}
+/* cards */
+.intro-p{text-align:center;max-width:640px;margin:0 auto 2rem;color:var(--ink-mid);line-height:1.85}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+.card{background:var(--bg-2);border:.5px solid var(--rule);padding:1.5rem 1.5rem 1.3rem}
+.card .num{font-family:'Cinzel',serif;font-size:.68rem;color:var(--ink-faint);letter-spacing:.12em;display:block;margin-bottom:.6rem}
+.card h3{font-family:'Cinzel',serif;font-weight:500;font-size:.95rem;color:var(--ink);margin-bottom:.5rem}
+.card p{font-size:.95rem;line-height:1.6;color:var(--ink-mid)}
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.quote{border-left:3px solid var(--burg);background:var(--bg-2);padding:1.3rem 1.5rem}
+.quote blockquote{font-style:italic;color:var(--ink-mid);line-height:1.7;margin-bottom:.8rem}
+.quote figcaption{font-size:.85rem;color:var(--ink-light)}
+/* folds */
+details{border-bottom:1px solid var(--rule)}
+details summary{cursor:pointer;padding:.85rem 0;font-weight:500;color:var(--ink);list-style:none}
 details summary::-webkit-details-marker{display:none}
-details summary::before{content:'+';display:inline-block;width:1.2rem;color:#7a1f2e}
+details summary::before{content:'+';display:inline-block;width:1.3rem;color:var(--burg)}
 details[open] summary::before{content:'\2212'}
-details > *:not(summary){margin-left:1.2rem}
-details.more summary{font-family:'Cinzel',serif;font-weight:400;font-size:1.05rem}
-blockquote{border-left:3px solid #b09878;padding:.2rem 0 .2rem 1.2rem;margin:1rem 0;font-style:italic}
-blockquote p:last-child{font-style:normal;font-size:.9rem;color:#7a6040}
-.publication-note{background:#f2ead8;padding:1rem 1.2rem;margin:1rem 0}
-.band{background:#7a1f2e;color:#faf6ee;text-align:center;padding:2.2rem 1.5rem;margin:3rem 0 0;border-radius:3px}
-.band h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.2rem;border:0;margin:0 0 .6rem;padding:0;color:#faf6ee}
-.band p{color:rgba(250,246,238,.85);margin-bottom:1.2rem}
-.band .btns{justify-content:center}
-.band .btn-main{background:#faf6ee;color:#7a1f2e}
-.band .btn-quiet{border-color:rgba(250,246,238,.5);color:#faf6ee}
-.site-footer{background:#e8dcc4;padding:1.4rem 2rem;font-size:.85rem;color:#7a6040;display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;justify-content:space-between}
-.site-footer a{text-decoration:none}
+details > *:not(summary){margin-left:1.3rem}
+details p{margin-bottom:1rem;color:var(--ink-mid)}
+details.more summary{font-family:'Cinzel',serif;font-weight:400}
+details h3{font-family:'Cinzel',serif;font-weight:500;font-size:.95rem;margin:1.3rem 0 .5rem}
+details h4{font-weight:500;margin:1rem 0 .4rem}
+.final-table{border-collapse:collapse;width:100%;margin:.3rem 0 1rem}
+.final-table th{text-align:left;font-weight:500;padding:.4rem .8rem .4rem 0;width:35%;color:var(--ink-light)}
+.final-table td{padding:.4rem 0;border-bottom:1px solid var(--rule)}
+.publication-note{background:var(--bg-2);padding:1rem 1.2rem;margin:1rem 0}
+/* band */
+.band{background:var(--burg);text-align:center;padding:4rem 1.5rem;margin-top:4rem}
+.band .kicker{color:rgba(250,246,238,.85)}
+.band h2{font-family:'Cinzel',serif;font-weight:400;font-size:1.5rem;color:var(--bg);margin-bottom:.8rem}
+.band p{color:rgba(250,246,238,.95);max-width:560px;margin:0 auto 1.8rem}
+.band .btn-main{background:var(--bg);color:var(--burg);box-shadow:none}
+.band .alt,.band .alt a{color:rgba(250,246,238,.95);border-color:rgba(250,246,238,.35)}
+.footer{background:var(--bg-3);padding:1.6rem 2rem;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem 1.5rem;font-size:.85rem;color:var(--ink-light)}
+.footer a{color:var(--ink-light);text-decoration:none}
 </style>
 </head>
 <body>
 <nav class="site-nav">
-  <a class="nav-logo" href="/">chaver.com</a>
+  <a class="nav-logo" href="/">chaver<span>.com</span></a>
   <ul class="nav-links">
     <li><a href="/Torah-New/English/Torah%20Portal.htm">Torah</a></li>
     <li><a href="/Mishnah/TheMishnah.htm">Mishnah</a></li>
@@ -239,73 +270,53 @@ blockquote p:last-child{font-style:normal;font-size:.9rem;color:#7a6040}
     <li><a href="/hebrew%20index">עברית</a></li>
   </ul>
 </nav>
-<main class="wrap">
-  <p class="label">Free book</p>
-  <h1>Complete Torah PDF — Free Download</h1>
-  <p class="subtitle">All Five Books of Moses · Chumash · Pentateuch · JPS 1917 Translation</p>
-  <div class="intro"><p><strong>Before Chapter and Verse is a free 275-page Torah PDF containing the complete text of all five books of Moses (JPS 1917 translation) plus 40 years of peer-reviewed literary analysis revealing 86 discrete literary units arranged as two-dimensional woven matrices. No other Torah edition makes this architecture visible.</strong></p></div>
 
-  <div class="download">
-    <div class="btns">
-      <a class="btn btn-main" href="/torah.pdf">Download Free PDF (275 pages)</a>
-      <a class="btn btn-quiet" href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/">Buy Print Edition on Amazon</a>
-    </div>
-    <p class="small">Free for personal study and research · JPS 1917 Translation · ISBN 978-9655982718</p>
-    <p class="freshness">Updated May 2026 · Over 10,000 downloads</p>
+<header class="hero">
+  <div class="hero-inner">
+    <span class="kicker">Free book · Before Chapter and Verse</span>
+    <h1>Complete Torah PDF — Free Download</h1>
+    <p class="sub">All Five Books of Moses · Chumash · Pentateuch · JPS 1917 Translation</p>
+    <p class="lead">Before Chapter and Verse is a free 275-page Torah PDF containing the complete text of all five books of Moses (JPS 1917 translation) plus 40 years of peer-reviewed literary analysis revealing 86 discrete literary units arranged as two-dimensional woven matrices. No other Torah edition makes this architecture visible.</p>
+    <a class="btn btn-main" href="/torah.pdf">Download Free PDF</a>
+    <p class="alt">or <a href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/">buy the print edition on Amazon</a></p>
+    <p class="fine">Free for personal study and research · No registration · Updated May 2026 · Over 10,000 downloads</p>
+    <span class="ornament">✦ &nbsp;✦ &nbsp;✦</span>
   </div>
+</header>
+<div class="strip"><span>275 pages</span><span>86 literary units</span><span>JPS 1917 translation</span><span>Searchable PDF</span></div>
 
-  <section class="door">
+<section class="section">
+  <div class="label">Start here</div>
+  <div class="featured">
     <h2>Before you open the PDF: see one unit in two minutes</h2>
     <p>The six days of creation, laid out as a table: three days beside three. Read across the rows and a picture appears.</p>
-    <p><a class="doorway-link" href="/torah-weave/six-days-of-creation-picture"><strong>The Six Days Are a Picture &rarr;</strong></a></p>
-    <p>Then: <a class="doorway-link" href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a> &middot; <a class="doorway-link" href="/torah-weave/full-torah-map-2/">The Full Torah Map</a></p>
-  </section>
-
-  <div class="body">
-<h2>What's Inside This Torah PDF</h2>
-
-<p>Looking for the complete Torah text as a downloadable PDF? <em>Before Chapter and Verse</em> gives you the full Chumash—all five books from Genesis (Bereshit) through Deuteronomy (Devarim)—plus a comprehensive introduction revealing the literary architecture underlying the Pentateuch. Whether you call it the Torah, Chumash, Pentateuch, or Five Books of Moses, the complete text is here in a trusted English translation.</p>
-
-<div class="features">
-    <div class="feature">
-        <h3>Complete Torah Text</h3>
-        <p>All five books: Genesis, Exodus, Leviticus, Numbers, and Deuteronomy in full. 165 pages of complete biblical text using the JPS 1917 translation, widely used in academic and synagogue settings.</p>
-    </div>
-    <div class="feature">
-        <h3>Extended Introduction</h3>
-        <p>110 pages explaining the woven text concept, methodology, and implications. Learn how the Torah's structure creates meaning—an approach published in the Journal of Biblical Literature.</p>
-    </div>
-    <div class="feature">
-        <h3>86 Literary Units</h3>
-        <p>The Torah organized into discrete literary units with clear boundaries. See how each unit functions as a complete composition within the larger architecture of the five books.</p>
-    </div>
-    <div class="feature">
-        <h3>Two-Dimensional Format</h3>
-        <p>Units displayed as tables revealing both horizontal and vertical relationships—the "warp and weft" of biblical composition. This format is unique to the Woven Torah approach. <a href="/torah-weave/six-days-of-creation-picture">See Genesis 1 displayed as a woven unit</a>.</p>
-    </div>
-    <div class="feature">
-        <h3>Peer-Reviewed Research</h3>
-        <p>Based on 40 years of scholarship published in the Journal of Biblical Literature (2025), SBL Press (2015), and Journal of Hebrew Scriptures (2008).</p>
-    </div>
-    <div class="feature">
-        <h3>Visual Torah Map</h3>
-        <p>A map showing how all 86 units relate to each other across the five books—the complete Torah architecture at a glance, from Genesis through Deuteronomy.</p>
-    </div>
+    <div class="six" aria-label="The six days of creation arranged as a table">
+  <span></span><span class="h">Days 1–3</span><span class="h">Days 4–6</span>
+  <span class="r">Sky</span><div class="c"><b>1</b>Light</div><div class="c"><b>4</b>Luminaries</div>
+  <span class="r">Between</span><div class="c"><b>2</b>Firmament</div><div class="c"><b>5</b>Birds and fish</div>
+  <span class="r">Earth</span><div class="c"><b>3</b>Dry land and seas</div><div class="c"><b>6</b>Animals and humans</div>
 </div>
+    <a class="go doorway-link" href="/torah-weave/six-days-of-creation-picture">The Six Days Are a Picture &rarr;</a>
+    <p class="then">Then: <a class="doorway-link" href="/torah-weave/ten-commandments-two-tablets">Why Two Tablets?</a> &middot; <a class="doorway-link" href="/torah-weave/full-torah-map-2/">The Full Torah Map</a></p>
+  </div>
+</section>
 
+<section class="section wide">
+  <div class="label center-label">What's inside this Torah PDF</div>
+  <div class="intro-p"><p>Looking for the complete Torah text as a downloadable PDF? <em>Before Chapter and Verse</em> gives you the full Chumash—all five books from Genesis (Bereshit) through Deuteronomy (Devarim)—plus a comprehensive introduction revealing the literary architecture underlying the Pentateuch. Whether you call it the Torah, Chumash, Pentateuch, or Five Books of Moses, the complete text is here in a trusted English translation.</p></div>
+  <div class="cards">
+<div class="card"><span class="num">01</span><h3>Complete Torah Text</h3><p>All five books: Genesis, Exodus, Leviticus, Numbers, and Deuteronomy in full. 165 pages of complete biblical text using the JPS 1917 translation, widely used in academic and synagogue settings.</p></div>
+<div class="card"><span class="num">02</span><h3>Extended Introduction</h3><p>110 pages explaining the woven text concept, methodology, and implications. Learn how the Torah's structure creates meaning—an approach published in the Journal of Biblical Literature.</p></div>
+<div class="card"><span class="num">03</span><h3>86 Literary Units</h3><p>The Torah organized into discrete literary units with clear boundaries. See how each unit functions as a complete composition within the larger architecture of the five books.</p></div>
+<div class="card"><span class="num">04</span><h3>Two-Dimensional Format</h3><p>Units displayed as tables revealing both horizontal and vertical relationships—the "warp and weft" of biblical composition. This format is unique to the Woven Torah approach. <a href="/torah-weave/six-days-of-creation-picture">See Genesis 1 displayed as a woven unit</a>.</p></div>
+<div class="card"><span class="num">05</span><h3>Peer-Reviewed Research</h3><p>Based on 40 years of scholarship published in the Journal of Biblical Literature (2025), SBL Press (2015), and Journal of Hebrew Scriptures (2008).</p></div>
+<div class="card"><span class="num">06</span><h3>Visual Torah Map</h3><p>A map showing how all 86 units relate to each other across the five books—the complete Torah architecture at a glance, from Genesis through Deuteronomy.</p></div>
+  </div>
+</section>
 
-<h2>The book at a glance</h2>
-<table class="final-table">
-<tr><th>Translation</th><td>JPS 1917 (Public Domain)</td></tr>
-<tr><th>Language</th><td>English</td></tr>
-<tr><th>Pages</th><td>275 (110 introduction + 165 Torah text)</td></tr>
-<tr><th>Format</th><td>Searchable PDF</td></tr>
-<tr><th>Structure</th><td>86 Literary Units (Woven)</td></tr>
-<tr><th>Price</th><td>Free</td></tr>
-<tr><th>ISBN</th><td>978-9655982718</td></tr>
-<tr><th>Author</th><td>Moshe Kline</td></tr>
-</table>
-<h2>Why This Torah PDF Is Different</h2>
+<section class="section prose">
+  <div class="label">Why this Torah PDF is different</div>
+
 
 <p>Most Torah PDFs and Chumash downloads give you just the text. <em>Before Chapter and Verse</em> gives you the text plus understanding. This is the result of four decades of research into the Torah's literary structure, published in top academic journals and recognized by scholars across denominations.</p>
 
@@ -314,15 +325,20 @@ blockquote p:last-child{font-style:normal;font-size:.9rem;color:#7a6040}
 <p>Whether you are a student, scholar, rabbi, pastor, teacher, or simply someone curious about the Hebrew Bible, this PDF provides both the complete Torah text you need and the tools to understand its composition.</p>
 
 
-<h2>Frequently Asked Questions</h2>
+</section>
+
+<section class="section">
+  <div class="label">Frequently asked questions</div>
 <details class="faq"><summary>Is this Torah PDF free?</summary><p>Yes. The complete 275-page PDF is free to download for personal study, research, and educational use. No registration or email is required. A print edition is also available on Amazon for those who prefer a physical book.</p></details>
 <details class="faq"><summary>What translation does this Torah PDF use?</summary><p>The Torah text uses the JPS (Jewish Publication Society) 1917 translation, a respected English translation widely used in academic and synagogue settings. The text is in the public domain.</p></details>
 <details class="faq"><summary>How many pages is this Torah PDF?</summary><p>The book runs to 275 numbered pages: a 110-page introduction explaining the literary architecture and research methodology, followed by the complete Torah text (Genesis through Deuteronomy) on pages 111–275.</p></details>
 <details class="faq"><summary>What makes this different from other Torah PDFs?</summary><p>Most Torah PDFs provide only the linear text. This edition includes 40 years of peer-reviewed literary analysis showing the Torah's two-dimensional "woven" structure—86 discrete literary units organized in architectural patterns. The research has been published in the Journal of Biblical Literature, SBL Press, and the Journal of Hebrew Scriptures.</p></details>
 <details class="faq"><summary>Does this include all five books of Moses?</summary><p>Yes. The PDF contains the complete text of all five books: Genesis (Bereshit), Exodus (Shemot), Leviticus (Vayikra), Numbers (Bamidbar), and Deuteronomy (Devarim)—the entire Chumash/Pentateuch.</p></details>
 <details class="faq"><summary>Can I use this for study groups or classes?</summary><p>Yes. The PDF is free for personal study, group study, research, and classroom use. The two-dimensional format is particularly useful for comparing parallel passages across the Torah's literary units.</p></details>
+</section>
 
-<h2>About the Author</h2>
+<section class="section prose">
+  <div class="label">About the author</div>
 
 
 <p>Moshe Kline is a graduate of St. John's College and Yeshiva University. He studied under Jacob Klein and was influenced by Leo Strauss, later studying with Rabbi Leon Ashkenazi ("Manitou"). His work was mentored by Jacob Milgrom (UC Berkeley) and Mary Douglas.</p>
@@ -330,21 +346,28 @@ blockquote p:last-child{font-style:normal;font-size:.9rem;color:#7a6040}
 <p>His research has been published in the <strong>Journal of Biblical Literature</strong> (2025), <strong>Society of Biblical Literature Press</strong> (2015), and <strong>Journal of Hebrew Scriptures</strong> (2008). <em>Before Chapter and Verse</em> represents 40 years of systematic analysis of the Torah's literary structure. The book is available at academic libraries worldwide and has been cited in biblical scholarship.</p>
 
 
-<h3>Reader Reviews</h3>
+</section>
 
-<blockquote>
-<p>"For students and scholars of the Torah/Pentateuch, 'Before Chapter and Verse' by Moshe Kline represents a fresh insight... Kline's analysis and literary evidence is rigorous and impressive, and I feel convinced of the validity and reliability of his thesis across the whole Torah in its final form."</p>
-<p>— Amazon Reviewer</p>
-</blockquote>
+<section class="section wide">
+  <div class="label center-label">Reader reviews</div>
+  <div class="quotes">
+<figure class="quote"><blockquote>"For students and scholars of the Torah/Pentateuch, 'Before Chapter and Verse' by Moshe Kline represents a fresh insight... Kline's analysis and literary evidence is rigorous and impressive, and I feel convinced of the validity and reliability of his thesis across the whole Torah in its final form."</blockquote><figcaption>— Amazon Reviewer</figcaption></figure>
+<figure class="quote"><blockquote>"The more I read and examine what Moshe has seen, the more convinced I am that he is truly on to something important and game changing. For it gives us a glimpse of God and his work in history that is akin to something like a fourth or fifth dimension of thought."</blockquote><figcaption>— Doug Van Dorn, Reformed Baptist Pastor and Author</figcaption></figure>
+  </div>
+</section>
 
-<blockquote>
-<p>"The more I read and examine what Moshe has seen, the more convinced I am that he is truly on to something important and game changing. For it gives us a glimpse of God and his work in history that is akin to something like a fourth or fifth dimension of thought."</p>
-<p>— Doug Van Dorn, Reformed Baptist Pastor and Author</p>
-</blockquote>
-
-
-<details class="more"><summary>Publications and recognition</summary>
-
+<section class="section">
+  <details class="more"><summary>The book at a glance</summary><table class="final-table">
+<tr><th>Translation</th><td>JPS 1917 (Public Domain)</td></tr>
+<tr><th>Language</th><td>English</td></tr>
+<tr><th>Pages</th><td>275 (110 introduction + 165 Torah text)</td></tr>
+<tr><th>Format</th><td>Searchable PDF</td></tr>
+<tr><th>Structure</th><td>86 Literary Units (Woven)</td></tr>
+<tr><th>Price</th><td>Free</td></tr>
+<tr><th>ISBN</th><td>978-9655982718</td></tr>
+<tr><th>Author</th><td>Moshe Kline</td></tr>
+</table></details>
+  <details class="more"><summary>Publications and recognition</summary>
 
 <h3>Peer-Reviewed Articles</h3>
 
@@ -388,10 +411,8 @@ blockquote p:last-child{font-style:normal;font-size:.9rem;color:#7a6040}
 
 <p><a href="/about-Moshe-Kline">Full publication list and academic credentials &rarr;</a></p>
 
-
 </details>
-<details class="more"><summary>More to read on chaver.com</summary>
-
+  <details class="more"><summary>More to read on chaver.com</summary>
 
 <p><strong><a href="/torah-weave/Genesis/genesis-analysis/overview">Genesis Commentary Series</a></strong> — Unit-by-unit structural analysis of all 19 Genesis literary units. How the woven architecture creates meaning at every scale, from individual scenes to the book as a whole.</p>
 
@@ -424,20 +445,18 @@ blockquote p:last-child{font-style:normal;font-size:.9rem;color:#7a6040}
 <p><strong><a href="/Mishnah-New/Hebrew/Text/mishnah-data">Mishnah Dataset (JSON)</a></strong> — Machine-readable dataset with 4,442 cells and 2,276 structural markers.</p>
 
 <p><strong><a href="/Mishnah-New/Hebrew/Text/mishnah-search">Search the Mishnah</a></strong> — Full-text Hebrew search and structural pattern queries across all 524 chapters.</p>
-    
-</details>
+    </details>
+</section>
 
-  <section class="band">
-    <h2>Ready to Download Your Torah PDF?</h2>
-    <p>Get the complete Chumash text plus literary analysis — free, no registration required.</p>
-    <div class="btns">
-      <a class="btn btn-main" href="/torah.pdf">Download Free Torah PDF Now</a>
-      <a class="btn btn-quiet" href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/">View on Amazon</a>
-    </div>
-  </section>
-  </div>
-</main>
-<footer class="site-footer">
+<section class="band">
+  <span class="kicker">Free download</span>
+  <h2>Ready to Download Your Torah PDF?</h2>
+  <p>Get the complete Chumash text plus literary analysis — free, no registration required.</p>
+  <a class="btn btn-main" href="/torah.pdf">Download Free Torah PDF Now</a>
+  <p class="alt">or <a href="https://www.amazon.com/Before-Chapter-Verse-Reading-Woven/dp/9655982718/">view on Amazon</a></p>
+</section>
+
+<footer class="footer">
   <span>&copy; 2026 Chaver.com · The Woven Texts Project</span>
   <span><a href="/about-Moshe-Kline">About Moshe Kline</a> · <a href="/hebrew%20index">עברית</a> · <a href="https://asitwaswritten.org/">As It Was Written — a primer</a></span>
 </footer>
