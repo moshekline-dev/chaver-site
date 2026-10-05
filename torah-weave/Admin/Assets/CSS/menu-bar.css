@@ -1,0 +1,60 @@
+@import url('palette.css');
+/* ==========================================================
+   chaver.com MENU BAR — for the few older pages that do not
+   load main.css (Oct 2026). Gives them the same red menu bar
+   as every other page: a bar on phones too, no hamburger.
+   Every rule is scoped to header.site-header so it does not
+   touch the rest of the page. Colours and fonts come from
+   palette.css. Keep in step with the menu rules in main.css.
+   ========================================================== */
+
+/* neutralise the older pages' general header/list/link styles inside the bar */
+header.site-header, header.site-header * { box-sizing: border-box; }
+header.site-header ul, header.site-header li { margin: 0; padding: 0; list-style: none; float: none; border: 0; background: none; text-align: start; width: auto; height: auto; }
+header.site-header a { text-decoration: none; border: 0; background: none; }
+
+header.site-header {
+  display: block; position: -webkit-sticky; position: sticky; top: 0; z-index: 1000;
+  margin: 0; padding: 0; width: auto; height: auto; text-align: start;
+  background: var(--bar); box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  font-size: 16px; line-height: 1.4;
+}
+header.site-header .nav-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; max-width: 1200px; margin: 0 auto; }
+header.site-header .nav-brand { font-family: var(--font-display); font-size: 17.6px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--on-bar); }
+header.site-header .nav-toggle { display: none; }
+
+header.site-header .nav-menu { display: flex; gap: 4px; align-items: center; }
+header.site-header .nav-menu > li { position: relative; }
+header.site-header .nav-menu > li > a,
+header.site-header .nav-menu > li > button {
+  display: block; padding: 12px 11px; margin: 0; background: none; border: none; border-radius: 4px; cursor: pointer; white-space: nowrap;
+  font-family: var(--font-display); font-weight: 400; text-transform: uppercase; letter-spacing: .06em;
+  font-size: 13.5px; line-height: 1.4; color: var(--on-bar); opacity: .93; }
+header.site-header:lang(he) .nav-menu > li > a,
+header.site-header:lang(he) .nav-menu > li > button { font-family: var(--font-hebrew); font-size: 16px; letter-spacing: 0; }
+header.site-header .nav-menu > li > a:hover,
+header.site-header .nav-menu > li > button:hover { background: rgba(250,246,238,.12); opacity: 1; color: var(--on-bar); }
+header.site-header .has-dropdown > button::after { content: " \25BE"; font-size: .75em; opacity: .7; margin-inline-start: .25em; color: var(--on-bar); }
+
+header.site-header .submenu {
+  display: none; position: absolute; top: 100%; inset-inline-start: 0; z-index: 1000;
+  min-width: 220px; padding: 6px 0; background: #fff; border-radius: 4px; box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+header.site-header .submenu li a { display: block; padding: 8px 20px; white-space: nowrap; font-family: var(--font-text); font-size: 16px; color: var(--ink-mid); }
+header.site-header:lang(he) .submenu li a { font-family: var(--font-hebrew); }
+header.site-header .submenu li a:hover { background: var(--bg-2); }
+@media (hover: hover) and (pointer: fine) { header.site-header .has-dropdown:hover .submenu { display: block; } }
+header.site-header .has-dropdown.is-open > .submenu { display: block; }
+
+/* phones and tablets: no hamburger — the menu words sit under the name */
+@media (max-width: 1024px), (max-height: 500px) {
+  header.site-header .nav-row { flex-direction: column; align-items: flex-start; gap: 4px; max-width: none; }
+  header.site-header .nav-menu { flex-direction: row; flex-wrap: wrap; gap: 4px; }
+  header.site-header .nav-menu > li > a,
+  header.site-header .nav-menu > li > button { padding: 5px 9px; font-size: 13px; }
+  header.site-header:lang(he) .nav-menu > li > a,
+  header.site-header:lang(he) .nav-menu > li > button { font-size: 15px; }
+  header.site-header .has-dropdown.is-open { flex-basis: 100%; }
+  header.site-header .submenu { position: static; min-width: 0; box-shadow: none; border-radius: 0; background: rgba(250,246,238,.95); }
+  header.site-header .submenu li a { white-space: normal; padding-inline-start: 2rem; }
+}
+@media print { header.site-header { display: none; } }
