@@ -4219,3 +4219,32 @@ html body .unit-header-section a { color: var(--accent); }
 html body .stage-summary { background: var(--bg-2); border-left: 4px solid var(--accent); }
 html body .stage-summary strong { color: var(--accent); }
 html body .stage-summary:dir(rtl) { border-left: 0; border-right: 4px solid var(--accent); }
+
+/* ==========================================================
+   HEBREW UNIT PAGES (Oct 2026) - the same look as the English
+   unit pages, mirrored right to left. Scoped to the unit
+   section (.unit-content), so Mishnah chapter tables are not
+   touched. Title face: Bellefair (Moshe's choice).
+   ========================================================== */
+html[lang="he"] body .unit-header-section h1 { font-family: var(--font-hebrew-display); font-weight: 400; font-size: 2.6rem; letter-spacing: .01em; }
+html[lang="he"] .unit-content .scripture-table .torah { font-family: var(--font-hebrew); font-size: 1.3rem; line-height: 1.75; text-align: justify; }
+html[lang="he"] .unit-content .scripture-table tbody td { text-align: right; border-right: none; border-left: 1px solid #e8e4df; }
+html[lang="he"] .unit-content .scripture-table tbody td:last-child { border-left: none; }
+html[lang="he"] .unit-content span.VerseNumber { font-family: var(--font-hebrew); font-size: .85em; }
+html[lang="he"] .unit-content span.VerseNumber,
+html[lang="he"] .unit-content span.CellSubdivision { margin-right: 0; margin-left: 5px; }
+@media (max-width: 600px) {
+  html[lang="he"] body .unit-header-section h1 { font-size: 1.8rem; }
+  html[lang="he"] .unit-content .scripture-table .torah { font-size: 1.2rem; }
+}
+
+/* Unit tables on phones (both languages): more room on each side of the column divider */
+@media (max-width: 768px) {
+  html body .unit-content .scripture-table tbody td { padding: 6px 12px !important; }
+  html body .unit-content .scripture-table tbody tr:has(td:nth-child(3)) td { padding: 6px 8px !important; }
+  html body .unit-content .scripture-table tbody tr:has(td:nth-child(4)) td { padding: 6px 6px !important; }
+}
+
+/* Decalogue laid out as a small table inside a cell (Hebrew Exodus unit 7) */
+html[lang="he"] .unit-content .inner-table { width: 100%; margin: .75rem 0; border-collapse: collapse; }
+html[lang="he"] .unit-content .inner-table td { font-family: var(--font-hebrew); font-size: 1.15rem; line-height: 1.6; color: var(--ink-mid); background: transparent; padding: 6px 8px !important; border: 1px solid #e8e4df; vertical-align: top; }

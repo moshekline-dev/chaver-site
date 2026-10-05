@@ -444,6 +444,8 @@
             max-width: 100%;
         }
     }
+    /* phones: a wide Torah table scrolls sideways inside its own box, so the page itself keeps the screen width */
+    .table-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     </style>
     
     <!-- #BeginEditable "additional-styles" -->
@@ -540,7 +542,7 @@
 		</span><span class="Vertical1">This color is used for parallels between 
 		cells in the same column.</span><h1>&nbsp;</h1>
 		<h1>ספר בראשית</h1>
-		<table class="TorahTable">
+		<div class="table-scroll"><table class="TorahTable">
 			<caption>ספר בראשית יחידה I (א:א-ב:ג)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -660,8 +662,8 @@
 				אלהים את</span> יום השביעי ויקדש אתו כי <span class="Closure">בו 
 				שבת מכל מלאכתו </span>אשר ברא אלהים לעשות {פ}</td>
 			</tr>
-		</table>
-		<table class="TorahTable" dir="rtl">
+		</table></div>
+		<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה II (ב:ד-ד:כו) </caption>
 			<tr>
 				<td class="twocolumnR">
@@ -839,8 +841,8 @@
 				את שמו אנוש <span class="Horizontal1">אז הוחל</span>
 				<span class="Vertical1">לקרא בשם</span> יהוה {ס}</td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">III</span> (ה:א-י:לב)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -1217,8 +1219,8 @@
 				ללשנתם בארצתם לגויהם <span class="versenumber">י:לב</span>&nbsp;אלה 
 				משפחת בני נח לתולדתם בגויהם ומאלה נפרדו הגוים בארץ אחר המבול {פ}</td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה<span lang="en-us"> IV</span>&nbsp; (יא:א-יא:ט)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -1257,8 +1259,8 @@
 				<span class="versenumber">יא:ט</span>&nbsp;על כן קרא שמה בבל כי שם 
 				בלל יהוה שפת כל הארץ ומשם הפיצם יהוה על פני כל הארץ {פ}</td>
 			</tr>
-		</table>
-		&nbsp;&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">V</span> (יא:י-יג:ד)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -1360,8 +1362,8 @@
 				ובין העי</span> <span class="versenumber">יג:ד</span>&nbsp;<span class="Horizontal1">אל 
 				מקום המזבח אשר עשה שם בראשנה ויקרא שם אברם בשם יהוה</span></td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">VI</span> (יג:ה-יד:כד)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -1470,8 +1472,8 @@
 				<span class="Horizontal1">רק אשר אכלו </span>הנערים וחלק האנשים 
 				אשר הלכו אתי ענר אשכל וממרא הם יקחו חלקם {ס}</td>
 			</tr>
-		</table>
-		&nbsp; &nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp; &nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">VII</span> (טו:א-יז:כז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -1611,8 +1613,8 @@
 				<span class="versenumber">יז:כז</span>&nbsp;וכל אנשי ביתו יליד בית 
 				ומקנת כסף מאת בן נכר נמלו אתו {פ}</td>
 			</tr>
-		</table>
-		&nbsp;&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">VIII</span> (יח:א-יט:לח)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -1792,8 +1794,8 @@
 				<span class="versenumber">יט:לח</span>&nbsp;והצעירה גם הוא ילדה בן 
 				ותקרא שמו בן עמי הוא אבי בני עמון עד היום {ס}</td>
 			</tr>
-		</table>
-		<table class="TorahTable" dir="rtl">
+		</table></div>
+		<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">IX</span> (כ:א-כב:יט)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -1958,8 +1960,8 @@
 				אברהם אל נעריו ויקמו וילכו יחדו אל באר שבע וישב אברהם בבאר שבע</span> 
 				{פ}</td>
 			</tr>
-		</table>
-		&nbsp;&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">X</span> (כב:כ-כה:יא)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -2197,8 +2199,8 @@
 				אלהים את יצחק בנו <span class="Vertical1">וישב יצחק עם באר לחי 
 				ראי</span> {פ}</td>
 			</tr>
-		</table>
-		<table class="TorahTable" dir="rtl">
+		</table></div>
+		<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">XI</span> (כה:יב-כה:לד)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -2254,8 +2256,8 @@
 				נתן לעשו לחם ונזיד עדשים ויאכל וישת ויקם וילך ויבז עשו את הבכרה 
 				{פ}</td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">XII</span> (כו:א-כו:לג)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -2339,8 +2341,8 @@
 				אשר חפרו</span> ויאמרו לו מצאנו מים <span class="versenumber">כו:לג</span>&nbsp;ויקרא 
 				אתה שבעה על כן שם העיר באר שבע עד היום הזה {ס}</td>
 			</tr>
-		</table>
-		<table class="TorahTable" dir="rtl">
+		</table></div>
+		<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">XIII</span> (כו:לד-כח:ט)</caption>
 			<tr>
 				<td class="onecolumn" colspan="2">
@@ -2471,8 +2473,8 @@
 				ויקח את מחלת בת ישמעאל בן אברהם אחות נביות על נשיו לו לאשה</span> 
 				{ס}</td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">XIV</span> (כח:י-לב:ג)</caption>
 			<tr>
 				<td class="onecolumn" colspan="2">
@@ -2753,8 +2755,8 @@
 				לב:ג</span>&nbsp;ויאמר יעקב כאשר ראם מחנה אלהים <span class="Closure">
 				זה ויקרא שם המקום ההוא</span> מחנים {פ} </td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">XV</span> (לב:ד-לג:טז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -2866,8 +2868,8 @@
 				<span class="versenumber">לג:טז</span>&nbsp;וישב ביום ההוא עשו לדרכו 
 				שעירה </td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">XVI</span> (לג:יז-לה:כט)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -3039,8 +3041,8 @@
 				ושמנים שנה <span class="versenumber">לה:כט</span>&nbsp;ויגוע יצחק 
 				וימת ויאסף אל עמיו זקן ושבע ימים ויקברו אתו עשו ויעקב בניו {פ}</td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">XVII</span> (לו:א-מא:מה)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -3511,8 +3513,8 @@
 				פענח ויתן לו את אסנת בת פוטי פרע כהן אן לאשה ויצא יוסף על ארץ 
 				מצרים</td>
 			</tr>
-		</table>
-		<table class="TorahTable" dir="rtl">
+		</table></div>
+		<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">XVIII</span> (מא:מו-מז:כו)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -3980,8 +3982,8 @@
 				הזה על אדמת מצרים לפרעה לחמש <span class="Horizontal3">רק אדמת 
 				הכהנים לבדם לא היתה לפרעה</span></td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר בראשית יחידה&nbsp;<span lang="en-us">XIX </span>(מז:כז-נ:כו)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -4169,9 +4171,9 @@
 				נ:כו</span>&nbsp;וימת יוסף בן מאה ועשר שנים ויחנטו אתו ויישם בארון 
 				במצרים {ש}</td>
 			</tr>
-		</table>
+		</table></div>
 		<h1>ספר שמות</h1>
-		<table class="TorahTable" dir="rtl">
+		<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">I</span> (א:א-ד:יח)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -4413,8 +4415,8 @@
 				ואראה העודם חיים ויאמר יתרו למשה <span class="Horizontal1">לך
 				</span>לשלום </td>
 			</tr>
-		</table>
-		&nbsp;&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">II</span> (ד:יט-ו:כח)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -4614,8 +4616,8 @@
 				<span class="versenumber">ו:כח</span>&nbsp;ויהי ביום דבר יהוה אל משה 
 				בארץ מצרים {ס}&nbsp;</td>
 			</tr>
-		</table>
-		&nbsp;<table class="TorahTable" dir="rtl">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">III</span> (ו:כט-יא:י)</caption>
 			<tr>
 				<td class="twocolumnR" colspan="2">
@@ -4978,8 +4980,8 @@
 				האלה לפני פרעה</span> ויחזק יהוה את לב פרעה ולא שלח את בני ישראל 
 				מארצו {ס}</td>
 			</tr>
-		</table>
-		&nbsp;<table dir="rtl" class="TorahTable">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">IV</span> (יב:א-יג:טז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -5192,8 +5194,8 @@
 				לאות על ידכה ולטוטפת בין עיניך <span class="InternalParallel">כי 
 				בחזק יד הוציאנו יהוה ממצרים</span> {ס}&nbsp;</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">V</span> (יג:יז-טו:כא)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -5365,8 +5367,8 @@
 				<span class="versenumber">טו:כא</span>&nbsp;ותען להם מרים שירו ליהוה 
 				כי גאה גאה סוס ורכבו רמה בים </td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">VI</span> (טו:כב-יח:כז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -5586,8 +5588,8 @@
 				<span class="versenumber">יח:כז</span>&nbsp;וישלח משה את חתנו וילך לו 
 				אל ארצו {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">VII</span> (יט:א-כ:כב)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -5699,8 +5701,8 @@
 				<span class="versenumber">כ:כב</span>&nbsp;ולא תעלה במעלת על מזבחי 
 				אשר לא תגלה ערותך עליו {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">VIII</span> (כא:א-כב:טז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -5873,8 +5875,8 @@
 				ארשה ושכב עמה מהר ימהרנה לו לאשה <span class="versenumber">כב:טז</span>&nbsp;אם 
 				מאן ימאן אביה לתתה לו כסף ישקל כמהר הבתולת {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">IX</span> (כב:יז-כג:יט)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -6009,8 +6011,8 @@
 				אדמתך תביא בית יהוה <span class="Horizontal2">אלהיך</span> לא 
 				תבשל גדי בחלב אמו {פ}</td>
 			</tr>
-		</table>
-		&nbsp;<table dir="rtl" class="TorahTable">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">X</span> (כג:כ-כד:יח)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -6097,8 +6099,8 @@
 				משה בתוך הענן ויעל אל ההר ויהי משה בהר ארבעים יום וארבעים לילה 
 				{פ}</td>
 			</tr>
-		</table>
-		&nbsp;<table dir="rtl" class="TorahTable">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">XI</span> (כה:א-כז:כא)</caption>
 			<tr>
 				<td class="onecolumn" colspan="2">
@@ -6312,8 +6314,8 @@
 				לפרכת אשר על העדת יערך אתו אהרן ובניו מערב עד בקר לפני יהוה חקת 
 				עולם לדרתם מאת בני ישראל {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">XII</span> (כח:א-מג)</caption>
 			<tr>
 				<td class="onecolumn" colspan="2">
@@ -6411,8 +6413,8 @@
 				על אהרן ועל בניו בבאם אל אהל מועד או בגשתם אל המזבח לשרת בקדש 
 				ולא ישאו עון ומתו חקת עולם לו ולזרעו אחריו {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">XIII</span> (כט:א-ל:י)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -6567,8 +6569,8 @@
 				אהרן על קרנתיו אחת בשנה מדם חטאת הכפרים אחת בשנה יכפר עליו
 				<span class="Closure">לדרתיכם</span> קדש קדשים הוא ליהוה {פ}</td>
 			</tr>
-		</table>
-		&nbsp;<table dir="rtl" class="TorahTable">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">XIV</span> (ל:יא-לא:יז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -6666,8 +6668,8 @@
 				ובין בני ישראל אות הוא לעלם כי ששת ימים עשה יהוה את השמים ואת 
 				הארץ וביום השביעי שבת וינפש {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">XV</span> (לא:יח-לד:לה)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -6898,8 +6900,8 @@
 				את פני משה כי קרן עור פני משה והשיב משה את המסוה על פניו עד באו 
 				לדבר אתו {ס} </td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">XVI</span> (לה:א-לו:ז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -6995,8 +6997,8 @@
 				<span class="versenumber">לו:ז</span>&nbsp;והמלאכה היתה דים לכל 
 				המלאכה לעשות אתה והותר {ס} </td>
 			</tr>
-		</table>
-		&nbsp;<table dir="rtl" class="TorahTable">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">XVII</span> (לו:ח-לח:כ)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -7175,8 +7177,8 @@
 				<span class="versenumber">לח:כ</span>&nbsp;וכל היתדת למשכן ולחצר סביב 
 				נחשת {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">XVIII</span> (לח:כא-לט:לא)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -7279,8 +7281,8 @@
 				<span class="versenumber">לט:לא</span>&nbsp;ויתנו עליו פתיל תכלת לתת 
 				על המצנפת מלמעלה כאשר צוה יהוה את משה {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר שמות יחידה&nbsp;<span lang="en-us">XIX</span> (לט:לב-מ:לח)</caption>
 			<tr>
 				<td class="onecolumn" colspan="3">
@@ -7380,9 +7382,9 @@
 				מ:לח</span>&nbsp;כי ענן יהוה על המשכן יומם ואש תהיה לילה בו לעיני כל 
 				בית ישראל בכל מסעיהם {ש} </td>
 			</tr>
-		</table>
+		</table></div>
 		<h1>ספר ויקרא</h1>
-		<table dir="rtl" class="TorahTable">
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">I</span> (א:א-ג:יז)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -7497,8 +7499,8 @@
 				אשה לריח ניחח כל חלב ליהוה <span class="versenumber">ג:יז</span>&nbsp;חקת 
 				עולם לדרתיכם בכל מושבתיכם כל חלב וכל דם לא תאכלו {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">II</span> (ד:א-ה:כו)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -7656,8 +7658,8 @@
 				<span class="versenumber">ה:כו</span>&nbsp;וכפר עליו הכהן לפני יהוה 
 				ונסלח לו על אחת מכל אשר יעשה לאשמה בה {פ}</td>
 			</tr>
-		</table>
-		&nbsp;<table dir="rtl" class="TorahTable">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">III</span> (ו:א-ז:לה)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -7806,8 +7808,8 @@
 				סיני ביום צותו את בני ישראל להקריב את קרבניהם ליהוה במדבר סיני 
 				{פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">IV</span> (ח:א-י:כ)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -7974,8 +7976,8 @@
 				היום הייטב בעיני יהוה <span class="versenumber">י:כ</span>&nbsp;וישמע 
 				משה וייטב בעיניו {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">V</span> (יא:א-מז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -8111,8 +8113,8 @@
 				<span class="Vertical1">הטמא</span> ובין הטהר ובין החיה הנאכלת 
 				ובין החיה אשר לא תאכל {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">VI</span> (יב:א-ח)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -8142,8 +8144,8 @@
 				ולקחה שתי תרים או שני בני יונה אחד לעלה ואחד לחטאת וכפר עליה 
 				הכהן וטהרה {פ}&nbsp;</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">VII</span> (יג:א-מו)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -8258,8 +8260,8 @@
 				יקרא <span class="versenumber">יג:מו</span>&nbsp;כל ימי אשר הנגע בו 
 				יטמא טמא הוא בדד ישב מחוץ למחנה מושבו {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">VIII</span> (יג:מז-יד:נז)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -8416,8 +8418,8 @@
 				<span class="versenumber">יד:נז</span>&nbsp;להורת ביום הטמא וביום 
 				הטהר זאת תורת הצרעת {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">IX</span> (טו:א-לג)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -8488,8 +8490,8 @@
 				ממנו שכבת זרע לטמאה בה <span class="versenumber">טו:לג</span>&nbsp;והדוה 
 				בנדתה והזב את זובו לזכר ולנקבה ולאיש אשר ישכב עם טמאה {פ}</td>
 			</tr>
-		</table>
-		&nbsp;<table dir="rtl" class="TorahTable">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">X</span> (טז:א-לד)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -8575,8 +8577,8 @@
 				<span class="Vertical1">לכפר על בני ישראל</span> מכל חטאתם אחת 
 				בשנה ויעש כאשר צוה יהוה את משה {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XI</span> (יז:א-טז)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -8633,8 +8635,8 @@
 				וכבס בגדיו ורחץ במים וטמא עד הערב וטהר <span class="versenumber">
 				יז:טז</span>&nbsp;ואם לא יכבס ובשרו לא ירחץ ונשא עונו {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XII</span> (יח:א-ל)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -8712,8 +8714,8 @@
 				<span class="Horizontal1">לבלתי עשות מחקות התועבת אשר נעשו 
 				לפניכם</span> ולא תטמאו בהם אני יהוה אלהיכם {פ}</td>
 			</tr>
-		</table>
-		<table class="TorahTable" dir="rtl">
+		</table></div>
+		<div class="table-scroll"><table class="TorahTable" dir="rtl">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XIII</span> (יט:א-לז)</caption>
 			<tr>
 				<td class="twocolumnR" colspan="2">
@@ -8851,8 +8853,8 @@
 				<span class="versenumber">יט:לז</span>&nbsp;ושמרתם את כל חקתי ואת כל 
 				משפטי ועשיתם אתם אני יהוה {פ}&nbsp;</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XIV</span> (כ:א-כז)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -8932,8 +8934,8 @@
 				&nbsp;<span class="versenumber">כ:כז</span>&nbsp;ואיש או אשה כי יהיה בהם 
 				אוב או ידעני מות יומתו באבן ירגמו אתם דמיהם בם {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XV</span> (כא:א-כד)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -8998,8 +9000,8 @@
 				אני יהוה מקדשם <span class="versenumber">כא:כד</span>&nbsp;וידבר משה 
 				אל אהרן ואל בניו ואל כל בני ישראל {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XVI</span> (כב:א-כה)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -9067,8 +9069,8 @@
 				תעשו <span class="versenumber">כב:כה</span>&nbsp;ומיד בן נכר לא 
 				תקריבו את לחם אלהיכם מכל אלה כי משחתם בהם מום בם לא ירצו לכם {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XVII</span> (כב:כו-לג)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -9095,8 +9097,8 @@
 				כב:לג</span>&nbsp;המוציא אתכם מארץ מצרים להיות לכם לאלהים אני יהוה 
 				{פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XVIII</span> (כג:א-מד)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -9208,8 +9210,8 @@
 				אני יהוה אלהיכם <span class="versenumber">כג:מד</span>&nbsp;<span class="Ciasm1">וידבר 
 				משה את מעדי יהוה אל בני ישראל</span> {פ}</td>
 			</tr>
-		</table>
-		&nbsp;<table dir="rtl" class="TorahTable">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XIX</span> (כד:א-כג)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -9263,8 +9265,8 @@
 				ויוציאו את המקלל אל מחוץ למחנה וירגמו אתו אבן ובני ישראל עשו 
 				כאשר צוה יהוה את משה {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XX</span> (כה:א-נה)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -9391,8 +9393,8 @@
 				לי בני ישראל עבדים עבדי הם אשר הוצאתי אותם מארץ מצרים אני יהוה 
 				אלהיכם</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XXI</span> (כו:א-מז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -9528,8 +9530,8 @@
 				<span class="versenumber">כו:מו</span>&nbsp;אלה החקים והמשפטים והתורת 
 				אשר נתן יהוה בינו ובין בני ישראל בהר סיני ביד משה {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר ויקרא יחידה&nbsp;<span lang="en-us">XXII</span> (כז:א-לד)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -9634,9 +9636,9 @@
 				<span class="versenumber">כז:לד</span>&nbsp;אלה המצות אשר צוה יהוה את 
 				משה אל בני ישראל בהר סיני {ש}</td>
 			</tr>
-		</table>
+		</table></div>
 		<h1>ספר במדבר</h1>
-		<table dir="rtl" class="TorahTable">
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">I</span> (א:א-ד:מט)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -10028,8 +10030,8 @@
 				פי יהוה פקד אותם ביד משה איש איש על עבדתו ועל משאו ופקדיו אשר 
 				צוה יהוה את משה {פ} </td>
 			</tr>
-		</table>
-		&nbsp;<table dir="rtl" class="TorahTable">
+		</table></div>
+		&nbsp;<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">II</span> (ה:א-ו:כא)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -10144,8 +10146,8 @@
 				תורת </span>הנזיר אשר ידר קרבנו ליהוה על נזרו מלבד אשר תשיג ידו 
 				כפי נדרו אשר ידר כן יעשה על תורת נזרו {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">III</span> (ו:כב-י:לו)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -10496,8 +10498,8 @@
 				משנאיך מפניך <span class="versenumber">י:לו</span>&nbsp;ובנחה יאמר 
 				שובה יהוה רבבות אלפי ישראל {ס} ] {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">IV</span> (יא:א-יב:טז)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -10635,8 +10637,8 @@
 				<span class="versenumber">יב:טז</span>&nbsp;ואחר נסעו העם מחצרות 
 				ויחנו במדבר פארן {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">V</span> (יג:א-יד:מה)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -10813,8 +10815,8 @@
 				<span class="versenumber">יד:מה</span>&nbsp;וירד העמלקי והכנעני הישב 
 				בהר ההוא ויכום ויכתום עד החרמה {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">VI</span> (טו:א-לא)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -10886,8 +10888,8 @@
 				<span class="versenumber">טו:לא</span>&nbsp;כי דבר יהוה בזה ואת מצותו 
 				הפר הכרת תכרת הנפש ההוא עונה בה {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">VII</span> (טו:לב-יז:כו)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -11049,8 +11051,8 @@
 				<span class="Horizontal1">ימתו</span> <span class="versenumber">
 				יז:כו</span>&nbsp;ויעש משה כאשר צוה יהוה אתו כן עשה {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">VIII</span> (יז:כז-יט:כב)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -11175,8 +11177,8 @@
 				הערב <span class="versenumber">יט:כב</span>&nbsp;וכל אשר יגע בו הטמא 
 				יטמא והנפש הנגעת תטמא עד הערב {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">IX</span> (כ:א-כב:א)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -11332,8 +11334,8 @@
 				ארצו</span> <span class="versenumber">כב:א</span>&nbsp;ויסעו בני 
 				ישראל ויחנו בערבות מואב מעבר לירדן ירחו {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">X</span> (כב:ב-כה:טז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -11583,8 +11585,8 @@
 				בנכליהם אשר נכלו לכם על דבר פעור ועל דבר כזבי בת נשיא מדין אחתם 
 				המכה ביום המגפה על דבר פעור</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">XI</span> (כו:א-כז:כג)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -11750,8 +11752,8 @@
 				<span class="versenumber">כז:כג</span>&nbsp;ויסמך את ידיו עליו ויצוהו 
 				כאשר דבר יהוה ביד משה {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">XII</span> (כח:א-ל:יז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -11955,8 +11957,8 @@
 				החקים אשר צוה יהוה את משה בין איש לאשתו בין אב לבתו בנעריה בית 
 				אביה</span> {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר במדבר יחידה&nbsp;<span lang="en-us">XIII</span> (לא:א-לו:יג)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -12374,9 +12376,9 @@
 				<span class="versenumber">לו:יג</span>&nbsp;אלה המצות והמשפטים אשר 
 				צוה יהוה ביד משה אל בני ישראל בערבת מואב על ירדן ירחו {ש}&nbsp;</td>
 			</tr>
-		</table>
+		</table></div>
 		<h1>ספר דברים</h1>
-		<table dir="rtl" class="TorahTable">
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">I</span> (א:א-ג:כג)</caption>
 			<tr>
 				<td class="column" colspan="3">
@@ -12632,8 +12634,8 @@
 				את הארץ אשר תראה <span class="versenumber">ג:כט</span>&nbsp;ונשב בגיא 
 				מול בית פעור {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">II</span> (ד:א-ד:מט)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -12782,8 +12784,8 @@
 				<span class="versenumber">ד:מט</span>&nbsp;וכל הערבה עבר הירדן מזרחה 
 				ועד ים הערבה תחת אשדת הפסגה {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">III</span> (ה:א-ו:ג)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -12927,8 +12929,8 @@
 				יהוה אלהי <span class="Closure">אבתיך</span> לך ארץ זבת חלב ודבש 
 				{פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">IV</span> (ו:ד-ח:יח)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -13158,8 +13160,8 @@
 				<span class="versenumber">ח:כ</span>&nbsp;כגוים אשר יהוה מאביד מפניכם 
 				כן תאבדון עקב לא תשמעון בקול יהוה אלהיכם {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">V</span> (ט:א-י:יא)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -13303,8 +13305,8 @@
 				<span class="Ciasm1">לך למסע לפני העם</span> ויבאו ויירשו את 
 				הארץ <span class="Ciasm1">אשר נשבעתי לאבתם</span> לתת להם {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">VI</span> (י:יב-יא:לב)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -13413,8 +13415,8 @@
 				וירשתם אתה וישבתם בה</span> <span class="versenumber">יא:לב</span>&nbsp;ושמרתם 
 				לעשות את כל החקים ואת המשפטים אשר אנכי נתן לפניכם היום </td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">VII</span> (יב:א-כא:ט)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -13739,8 +13741,8 @@
 				<span class="versenumber">טז:יז</span>&nbsp;איש כמתנת ידו כברכת יהוה 
 				אלהיך אשר נתן לך {ס}&nbsp;</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<tr>
 				<td class="twocolumnwithupperlineR">
 				<h3>3א</h3>
@@ -13904,8 +13906,8 @@
 				<span class="Horizontal1">בזדון דברו</span> הנביא לא תגור ממנו 
 				{ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<tr>
 				<td class="twocolumnwithupperlineR">
 				<h3>4א</h3>
@@ -14065,8 +14067,8 @@
 				<span class="Horizontal1">תבער הדם הנקי מקרבך</span> כי תעשה 
 				הישר בעיני יהוה {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">VIII</span> (כא:י-כה:ד)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -14383,8 +14385,8 @@
 				יסיף להכתו על אלה מכה רבה ונקלה אחיך לעיניך&nbsp;<span class="versenumber">כה:ד</span>&nbsp;לא 
 				תחסם <span class="Horizontal1">שור בדישו </span>{ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה<span lang="en-us"> IX </span>(כה:ה-כז:כו)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -14592,8 +14594,8 @@
 				<span class="Vertical1">דברי התורה הזאת</span> לעשות אותם ואמר 
 				כל העם אמן {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">X</span> (כח:א-כח:סח)</caption>
 			<tr>
 				<td class="threecolumnR">
@@ -14872,8 +14874,8 @@
 				בדרך אשר אמרתי לך לא תסיף עוד לראתה <span class="Vertical1">
 				והתמכרתם שם לאיביך לעבדים </span>ולשפחות ואין קנה {ס}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">XI</span> (כח:סט-ל:כ)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -15041,8 +15043,8 @@
 				<span class="Closure">נשבע יהוה לאבתיך לאברהם ליצחק וליעקב</span> 
 				לתת להם {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">XII</span> (לא:א-לב:מז)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -15244,8 +15246,8 @@
 				הוא חייכם ובדבר הזה תאריכו <span class="Closure">ימים על האדמה 
 				אשר אתם עברים את הירדן שמה לרשתה</span> {פ}</td>
 			</tr>
-		</table>
-		<table dir="rtl" class="TorahTable">
+		</table></div>
+		<div class="table-scroll"><table dir="rtl" class="TorahTable">
 			<caption>ספר דברים יחידה&nbsp;<span lang="en-us">XIII</span> (לב:מח-לד:יב)</caption>
 			<tr>
 				<td class="twocolumnR">
@@ -15391,7 +15393,7 @@
 				<span class="versenumber">לד:יב</span>&nbsp;ולכל היד החזקה ולכל המורא 
 				הגדול אשר עשה משה לעיני כל ישראל {ש}</td>
 			</tr>
-		</table>
+		</table></div>
 		
                 <!-- #EndEditable -->
             </div>
