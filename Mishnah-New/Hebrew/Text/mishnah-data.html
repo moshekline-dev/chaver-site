@@ -93,7 +93,7 @@
         "@id": "https://chaver.com/#website"
       },
       "inLanguage": "he",
-      "description": "The complete Mishnah as a structured JSON dataset — 524 chapters across 63 tractates, encoded as two-dimensional matrices with cell-level position labels, mishnah verse numbers, and 2,276 structural markers. Free download. CC-BY license."
+      "description": "The complete Mishnah as a structured JSON dataset — 524 chapters across 63 tractates, encoded as two-dimensional weaves with cell-level position labels, mishnah verse numbers, and 2,276 structural markers. Free download. CC-BY license."
     }
     </script>
     <!-- /E-2 -->
@@ -192,7 +192,7 @@
     
 
     
-    <meta name="description" content="The complete Mishnah as a structured JSON dataset — 524 chapters across 63 tractates, encoded as two-dimensional matrices with cell-level position labels, mishnah verse numbers, and 2,276 structural markers. Free download. CC-BY license.">
+    <meta name="description" content="The complete Mishnah as a structured JSON dataset — 524 chapters across 63 tractates, encoded as two-dimensional weaves with cell-level position labels, mishnah verse numbers, and 2,276 structural markers. Free download. CC-BY license.">
 
 <meta name="keywords" content="Mishnah JSON, Mishnah dataset, structured Mishnah, Mishnah data, Mishnah API, machine readable Mishnah, Hebrew text dataset, Jewish text computational, Mishnah research data, המשנה כדרכה JSON">
 
@@ -380,7 +380,7 @@
 <p class="subtitle">המשנה כדרכה — Machine-Readable Dataset · 524 Chapters · 4,442 Cells · 2,276 Structural Markers · Free</p>
 
 <p><strong>The Structured Mishnah Dataset is the only machine-readable Mishnah edition that encodes compositional structure — cell positions, row/column labels, and 2,276 structural markers across all 524 chapters. Free JSON download, CC-BY license.</strong></p>
-<p>The complete Hebrew text of the Mishnah as a structured JSON dataset. All six orders, sixty-three tractates, and 524 chapters — encoded as two-dimensional matrices with cell-level position labels, mishnah verse numbers, and structural markers identifying parallels, chiastic patterns, and envelope closures across forty years of compositional analysis.</p>
+<p>The complete Hebrew text of the Mishnah as a structured JSON dataset. All six orders, sixty-three tractates, and 524 chapters — encoded as two-dimensional weaves with cell-level position labels, mishnah verse numbers, and structural markers identifying parallels, chiastic patterns, and envelope closures across forty years of compositional analysis.</p>
 
 <p>
     <a href="/Mishnah-New/English/mishnah_db.json" class="cta-link download-button-large" download>Download mishnah_db.json</a>
@@ -416,7 +416,7 @@
 
 <h2>What's in the Dataset</h2>
 
-<p>Every chapter of the Mishnah is encoded as a two-dimensional matrix. The text is laid out as rows and columns, with every cell carrying a structural label that records its position in the chapter's compositional architecture. This is the same data that drives the Structured Mishnah's online presentation and the printed PDF — exposed in a form that machines can read directly.</p>
+<p>Every chapter of the Mishnah is encoded as a two-dimensional weave. The text is laid out as rows and columns, with every cell carrying a structural label that records its position in the chapter's compositional architecture. This is the same data that drives the Structured Mishnah's online presentation and the printed PDF — exposed in a form that machines can read directly.</p>
 
 <p>The dataset preserves three kinds of information that no other digital Mishnah edition publishes:</p>
 
@@ -484,7 +484,7 @@ for key, chapter in data.items():
     <pre class="ai-prompt-text">Load https://chaver.com/Mishnah-New/English/mishnah_db.json and examine the structural markers across the dataset. Count how many markers of each type (HorizontalParallel, VerticalThread, InternalParallel, EnvelopeClosure, etc.) appear across all 525 chapters. Which tractates have the highest density of structural markers per cell? Display the top 10.</pre>
 </div>
 
-<h3>Prompt 3 &mdash; Read a chapter as a matrix</h3>
+<h3>Prompt 3 &mdash; Read a chapter as a weave</h3>
 <div class="ai-prompt-block">
     <button type="button" class="ai-prompt-copy" aria-label="Copy prompt to clipboard">Copy</button>
     <pre class="ai-prompt-text">Fetch https://chaver.com/Mishnah-New/English/mishnah_db.json and load the chapter "berakhot_1". Display it as a table matching its shape field, with each cell showing its structural label and Hebrew text. Highlight any cells that contain structural markers. Then explain what the horizontal parallels between cells in the same row reveal about the chapter's compositional logic.</pre>
@@ -570,7 +570,7 @@ for key, chapter in data.items():
 
 <h2>להורדה חינם: בסיס הנתונים של המשנה כדרכה</h2>
 
-<p>הטקסט המלא של המשנה בעברית כבסיס נתונים מובנה (JSON). כל שישה סדרים, שישים ושלושה מסכתות ו-524 פרקים — מקודדים כמטריצות דו-ממדיות עם תוויות מיקום ברמת התא, מספרי משנה, וסימוני מבנה המזהים מקבילות, תבניות כיאסטיות וסגירות מעטפת מתוך ארבעים שנות ניתוח קומפוזיציוני.</p>
+<p>הטקסט המלא של המשנה בעברית כבסיס נתונים מובנה (JSON). כל שישה סדרים, שישים ושלושה מסכתות ו-524 פרקים — מקודדים כאריגים דו-ממדיים עם תוויות מיקום ברמת התא, מספרי משנה, וסימוני מבנה המזהים מקבילות, תבניות כיאסטיות וסגירות מעטפת מתוך ארבעים שנות ניתוח קומפוזיציוני.</p>
 
 <p>הנתונים מתאימים לשימוש בכלי מחקר ממוחשבים, מערכות בינה מלאכותית, וכל יישום הזקוק לטקסט המשנה במבנה ספרותי שלו. רישיון: CC-BY. ללא צורך ברישום.</p>
 
