@@ -4248,3 +4248,16 @@ html[lang="he"] .unit-content span.CellSubdivision { margin-right: 0; margin-lef
 /* Decalogue laid out as a small table inside a cell (Hebrew Exodus unit 7) */
 html[lang="he"] .unit-content .inner-table { width: 100%; margin: .75rem 0; border-collapse: collapse; }
 html[lang="he"] .unit-content .inner-table td { font-family: var(--font-hebrew); font-size: 1.15rem; line-height: 1.6; color: var(--ink-mid); background: transparent; padding: 6px 8px !important; border: 1px solid #e8e4df; vertical-align: top; }
+
+/* Breadcrumb on phones (Oct 2026): keep the links on one line. An older rule
+   ("nav a" display:block, padding 1rem, for the old phone menus) was stacking each link. */
+@media (max-width: 768px) {
+  html body nav.breadcrumb a { display: inline; padding: 0; }
+}
+
+/* Phones (Oct 2026): insight and commentary pages had 16px text on phones against 19px on PC.
+   Body text 18px, breadcrumb 15px. Tables and maps are not touched. */
+@media (max-width: 899px) {
+  html body :is(.commentary-content, .commentary-section) :is(p, li):not(:is(table, .unit, [class*="tmap"], [class*="map"]) *) { font-size: 18px; }
+  html body nav.breadcrumb, html body nav.breadcrumb a { font-size: 15px; }
+}
