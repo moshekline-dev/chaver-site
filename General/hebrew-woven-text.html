@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYXKY3VV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYXKY3VV1');
+</script>
+<!-- rest of head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- E-1: Site-wide SEO/AEO boilerplate (canonical entity references) -->
+    <!-- Per-page canonical, og:url, og:title, og:description, og:type are E-2-injected just above this block -->
+    <meta property="og:site_name" content="Chaver.com">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:secure_url" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="The Woven Texts Project — Moshe Kline — chaver.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://chaver.com/torah-weave/Admin/Assets/Images/og-default-1200x630.jpg">
+    <meta name="author" content="Moshe Kline">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {"@type": "WebSite", "@id": "https://chaver.com/#website"},
+        {"@type": "Organization", "@id": "https://chaver.com/#organization"},
+        {"@type": "Person", "@id": "https://chaver.com/#moshe-kline"}
+      ]
+    }
+    </script>
+    <!-- /E-1 -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <title>מהם טקסטים ארוגים? | chaver.com</title>
+    
+    <meta name="description" content="מהם טקסטים ארוגים? מבוא לחיבור הדו־ממדי, שאינו קווי, שביסוד שיטת התורה הארוגה.">
+    
+    <link rel="canonical" href="https://chaver.com/General/hebrew-woven-text">
+    <link rel="alternate" hreflang="en" href="https://chaver.com/General/Woven%20Text">
+    <link rel="alternate" hreflang="he" href="https://chaver.com/General/hebrew-woven-text">
+    <link rel="alternate" hreflang="x-default" href="https://chaver.com/General/Woven%20Text">
+
+    <!-- Machine-readable dataset alternates -->
+    <link rel="alternate" type="application/json"
+          href="https://chaver.com/torah-weave/data/torah-units.json"
+          title="Torah Literary Units Dataset — 86 units, JSON" />
+    <link rel="alternate" type="text/csv"
+          href="https://chaver.com/torah-weave/data/torah-units.csv"
+          title="Torah Literary Units Dataset — 86 units, CSV" />
+    <link rel="alternate" type="application/json"
+          href="https://chaver.com/Mishnah-New/English/mishnah_db.json"
+          title="Structured Mishnah Dataset — 524 chapters, JSON" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="מהם טקסטים ארוגים?">
+    <meta property="og:description" content="מבוא לחיבור הדו־ממדי, שאינו קווי, שביסוד שיטת התורה הארוגה.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chaver.com/General/hebrew-woven-text">
+    
+    <!-- Schema.org JSON-LD (Hebrew) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "inLanguage": "he",
+  "headline": "מהם טקסטים ארוגים?",
+  "description": "מבוא לחיבור הדו־ממדי, שאינו קווי, שביסוד שיטת התורה הארוגה.",
+  "author": {
+    "@type": "Person",
+    "@id": "https://chaver.com/#moshe-kline",
+    "name": "Moshe Kline",
+    "alternateName": "משה קליין"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Torah Weave Project",
+    "url": "https://chaver.com"
+  },
+  "datePublished": "2026-10-07",
+  "dateModified": "2026-10-07",
+  "mainEntityOfPage": "https://chaver.com/General/hebrew-woven-text",
+  "translationOfWork": {
+    "@type": "ScholarlyArticle",
+    "url": "https://chaver.com/General/Woven%20Text"
+  }
+}
+    </script>
+    
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <!-- Link to site-wide CSS - THIS DOES ALL THE STYLING -->
+    <link rel="stylesheet" href="/torah-weave/Admin/Assets/CSS/main.css">
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+}
+
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+    
+    <style type="text/css">
+
+    /* ==========================================
+       CRITICAL DWT LAYOUT STYLES ONLY
+       Everything else comes from main.css
+       ========================================== */
+    
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ==========================================
+       HEADER LAYOUT STRUCTURE
+       ========================================== */
+    
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Container */
+    .main-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.3rem 20px;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    /* ==========================================
+       MAIN CONTENT AREA LAYOUT
+       ========================================== */
+    
+    main.content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 500px;
+    }
+    
+    /* ==========================================
+       FOOTER LAYOUT STRUCTURE
+       ========================================== */
+    
+    footer.site-footer {
+        margin-top: 80px;
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    /* ==========================================
+       RESPONSIVE LAYOUT BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile header adjustments */
+        header.site-header {
+            position: relative;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        nav ul.show {
+            display: flex;
+        }
+        
+        nav li {
+            width: 100%;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem;
+        }
+
+        /* Landscape phones - hamburger menu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--sand) 0%, var(--sand-2) 100%);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid rgba(61, 47, 31, 0.2);
+            }
+            
+            main.content-wrapper {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Content adjustments */
+        main.content-wrapper {
+            padding: 30px 15px;
+        }
+        
+        /* Footer adjustments */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        main.content-wrapper {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* ==========================================
+       PRINT LAYOUT
+       ========================================== */
+    
+    @media print {
+        header.site-header,
+        footer.site-footer {
+            display: none;
+        }
+        
+        main.content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    </style>
+<style>
+/* Hebrew page: right-to-left adjustments */
+.structural-note,.observation{border-left:0;border-right:4px solid var(--link)}
+.cell-label{font-size:.75em;font-weight:400;color:var(--ink-light)}
+.commentary-section img{display:block;max-width:100%;height:auto;margin:1.2rem auto}
+</style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-row">
+            <div class="nav-brand">chaver.com</div>
+            <button class="nav-toggle" aria-label="&#1508;&#1514;&#1495;/&#1505;&#1490;&#1493;&#1512; &#1514;&#1508;&#1512;&#1497;&#1496;" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/hebrew%20index">&#1491;&#1507; &#1492;&#1489;&#1497;&#1514;</a></li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1514;&#1493;&#1512;&#1492;</button>
+                    <ul class="submenu">
+                        <li><a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal.htm">&#1513;&#1506;&#1512; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-full-torah-map/">&#1502;&#1508;&#1514; &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1502;&#1513;&#1504;&#1492;</button>
+                    <ul class="submenu">
+                        <li><a href="/Mishnah-New/Hebrew/Text/Shishah%20Sidrei%20Mishnah.htm">&#1513;&#1506;&#1512; &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Articles/MAVO.htm">&#1502;&#1489;&#1493;&#1488;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/hamishnah-kedarka">PDF &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/torah-weave/hebrew-color-code-guide/">&#1511;&#1493;&#1491; &#1492;&#1510;&#1489;&#1506;&#1497;&#1501;</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">&#1504;&#1514;&#1493;&#1504;&#1497;&#1501;</button>
+                    <ul class="submenu">
+                        <li><a href="/torah-weave/data/">&#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/Hebrew/Text/mishnah-data">&#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/Mishnah-New/api/">API &#1492;&#1502;&#1513;&#1504;&#1492;</a></li>
+                        <li><a href="/torah-weave/api/">API &#1492;&#1514;&#1493;&#1512;&#1492;</a></li>
+                    </ul>
+                </li>
+                <li><a href="/General/Contact.htm">&#1510;&#1493;&#1512; &#1511;&#1513;&#1512;</a></li>
+                <li><a href="/General/Woven%20Text" lang="en">English</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- SITE BANNER -->
+<div id="site-banner"></div>
+<main class="content-wrapper">
+        <article class="commentary-section">
+    <h1>מהם טקסטים ארוגים?</h1>
+
+    <p>הנה דבר שעשוי לשנות את האופן שבו אתם קוראים את המקרא: כמה מן הקטעים החשובים ביותר בו לא נועדו להיקרא כרשימות פשוטות או כרצף קווי. הם חוברו כמבנים דו־ממדיים — טקסטים המגלים את משמעותם המלאה רק כשפורשים אותם כטבלאות, שבהן גם השורות וגם העמודות יוצרות דפוסים של התאמה. אנו קוראים להם ״טקסטים ארוגים״.</p>
+
+    <p>חשבו על פיסת בד. יש בה חוטי שתי העוברים לאורכה וחוטי ערב העוברים לרוחבה. אף אחת משתי מערכות החוטים אינה יוצרת לבדה את הדוגמה — המשמעות נולדת מן ההצטלבות ביניהן. אותו עיקרון חל על טקסטים ארוגים: כל קטע עומד בנקודת ההצטלבות של שני עקרונות ארגון, ומשמעותו נובעת משניהם.</p>
+
+    <h2>עשרת הדברים: הדוגמה הבהירה ביותר</h2>
+
+    <p>עשרת הדברים הם ההדגמה הנגישה ביותר. התרגלנו למספר אותם מ־1 עד 10, כרשימה פשוטה. אבל הביטו בהם מבחינה מבנית: הם ניתנו על שני לוחות — ואין זה רק עניין של מקום על האבן. החלוקה לשתי עמודות היא חלוקה רעיונית.</p>
+
+    <p>כשמסדרים את עשרת הדברים כטבלה של שתי עמודות וחמש שורות, קורה דבר מפתיע. כל שורה מצמידה שני דברים המגדירים קטגוריה רעיונית אחת משתי נקודות מבט שונות. העמודה הראשונה פונה אל היחיד העומד לבדו לפני האל; השנייה פונה אל היחיד בתוך יחסיו עם אחרים. והזוגות אינם שרירותיים — ״זָכוֹר אֶת־יוֹם הַשַּׁבָּת״ עומד מול ״כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ״: שתי מצוות העשה היחידות בעשרת הדברים, ושתיהן מעשים שנקבעו ברצון האל.</p>
+
+    <p>המבנה הזה יוצר מה שאפשר לכנות ״על־טקסט״ — משמעות הקיימת ביחסים שבין הקטעים, שאינה נראית בקריאה קווית אבל מתגלה מיד כשהטקסט פרוש כטבלה. הפילוסוף ליאו שטראוס דיבר על ״כתיבה בין השורות״. טקסטים ארוגים כותבים בין העמודות.</p>
+
+    <p><a href="/Torah-New/English/Articles/The%20Decalogue">← לעשרת הדברים בפריסה ארוגה</a> (באנגלית)</p>
+
+    <h2>שמונים ושש היחידות של התורה</h2>
+
+    <p>עשרת הדברים הם הדגם, אבל התופעה מתפשטת על פני התורה כולה. ארבעה עשורים של ניתוח מבני הראו שחמשת חומשי תורה מורכבים מ־86 יחידות ספרותיות נפרדות — 76 יחידות סדירות ו־10 יחידות לא סדירות, שרוחב שורותיהן משתנה אבל הן תמיד סימטריות. שבע יחידות ייחודיות אינן מקובצות עם יחידות אחרות; הן משמשות מחיצות. בכל יחידה יש ארגון פנימי דו־ממדי וסימני גבול ברורים.</p>
+
+    <p>אין אלה הפרקים המוכרים (שנוספו מאות שנים מאוחר יותר, בידי עורכים בימי הביניים). היחידות המקוריות של התורה מסומנות בסימנים כמו נוסחאות ה״תולדות״ (״אֵלֶּה תּוֹלְדֹת…״), ידיעות על מיתה, מעברים ממקום למקום, ומבני מעטפת שבהם הסיום מהדהד את הפתיחה.</p>
+
+    <p>כשפורשים כל אחת משמונים ושש היחידות האלה כטבלה, מתגלים דפוסים: קטעים מקבילים מאירים זה את זה, מבנים כיאסטיים מבליטים את מה שמודגש, והיחס בין השורות לעמודות יוצר משמעות שאין באף אחד משני הממדים לבדו.</p>
+
+    <p><a href="/torah-weave/Genesis/hebrew-genesis-unit-1/hebrew-genesis-unit-1">← לבראשית, יחידה 1, בפריסה ארוגה</a></p>
+
+    <h2>קריאת הסימון</h2>
+
+    <div class="structural-note">
+        <p>לנוחות הקורא מופיעים לפני כל פסוק מספרי הפרק והפסוק המקובלים. כל יחידה ערוכה לפי המבנה הפנימי שלה כטבלה — או, בלשון מדויקת יותר, כאריג. החלוקות העיקריות הן ה<strong>שורות</strong>, או חוטי הערב, המסומנות ב<strong>ספרות</strong> (1, 2, 3...). השורות מתחלקות ל<strong>קטעים</strong>, המסומנים ב<strong>אותיות לטיניות גדולות</strong> (<span dir="ltr">A–C</span>). לקטעים יכולות להיות חלוקות־משנה נוספות: הרמה הראשונה מסומנת ב<strong>אותיות לטיניות קטנות</strong> (<span dir="ltr">a, b, c</span>), והשנייה ב<strong>ספרות רומיות קטנות</strong> בסוגריים (<span dir="ltr">i, ii, iii</span>). סדר הקריאה הקווית עובר שורה אחר שורה: <span dir="ltr">1A, 1B, 1C, 2A, 2B...</span></p>
+    </div>
+
+    <h2>מן התורה אל המשנה</h2>
+
+    <p>היכולת לחבר טקסטים ארוגים ולקרוא אותם לא פסקה עם תקופת המקרא. המשנה, שנערכה בסביבות שנת 200 לספירה, נבנתה על פי אותם עקרונות. הדבר מרמז על מסורת ספרותית רציפה, הנמשכת הרבה יותר מאלף שנה — מסורת שנעלמה במידה רבה מן העין, משום שקראנו את הטקסטים האלה בממד אחד בלבד.</p>
+
+    <p>את התופעה הזאת תיעדתי לראשונה במאמרים על המשנה שפרסמתי בעברית מ־1982 ואילך, ובהם <a href="/Articles/TheWholeStructure.htm">״כל חלקי הבית אחוזים זה בזה: משנת עירובין פרק עשירי״</a> (עלי ספר יד, אוניברסיטת בר־אילן, תשמ״ז). במאמר <a href="/Mishnah-New/English/Articles/TheArt-H.htm">״אמנות הכתיבה של התורה שבעל פה״</a> (באנגלית) אני בוחן מה קורה כשקוראים את פרקי אבות כטקסט ארוג — ה״אקראיות״ נעלמת, ומתגלה אדריכלות רעיונית מתוחכמת.</p>
+
+    <h2>המחשה חזותית</h2>
+
+    <p>לפעמים תמונה עוזרת. הביטו בתמונת השער של ספרו של הובס, ״לוויתן״, שעוצבה בידי המחבר עצמו:</p>
+
+    <img src="/General/Leviathan%20Frontispiece.jpg" alt="תמונת השער של ״לוויתן״ להובס: שתי עמודות של חמישה איורים כל אחת">
+
+    <p>הלוויתן מחזיק בידו הימנית (בצד שמאל של הדף) את סמל השלטון האזרחי, ובידו השמאלית (בצד ימין) את סמל השלטון הכנסייתי. מתחתיו שתי עמודות של חמישה איורים כל אחת. כל איור מקביל לאיור שמולו, וכך נוצרים חמישה זוגות. לכל זוג נושא משותף; כל עמודה הולכת לפי היגיון משלה. כל תמונה בודדת מקבלת את משמעותה ממקומה בנקודת ההצטלבות של שורה ועמודה.</p>
+
+    <p>זהו העיקרון הראשון של הטקסט הארוג: כל רכיב עומד בנקודת ההצטלבות של שני קווי תכנון, כמו נקודה במערכת צירים קרטזית, המוגדרת בשיעור ה־x ובשיעור ה־y שלה. אותו עיקרון — אבל בתחכום רב בהרבה — פועל בתורה ובמשנה.</p>
+
+    <h2>להמשך העיון</h2>
+
+    <ul>
+        <li><a href="/Torah-New/Hebrew/Hebrew%20Torah%20Portal">שער התורה</a> — מפות וטקסטים של כל 86 היחידות, והפירושים</li>
+        <li><a href="/torah-weave/Genesis/hebrew-genesis-map/hebrew-genesis-map">מפת ספר בראשית</a> — 19 היחידות של בראשית באריג של <span dir="ltr">3×7</span></li>
+        <li><a href="/Torah-New/Hebrew/Text/hatorah-kedarka">להורדת ״התורה כדרכה״</a> — כל 86 יחידות התורה במבנה הארוג (PDF חינם)</li>
+        <li><a href="/Torah-New/English/Articles/The%20Decalogue">עשרת הדברים</a> (באנגלית) — הסבר על אב הטיפוס של הטקסט הארוג</li>
+        <li><a href="/Mishnah-New/Hebrew/Text/Shishah%20Sidrei%20Mishnah.htm">שער המשנה</a> — המשנה במבנה הארוג</li>
+    </ul>
+
+</article>
+
+    </main>
+
+    <footer class="site-footer" dir="rtl">
+  <span dir="ltr">&copy; 2026 chaver.com · The Woven Texts Project</span>
+  <span class="ft-links"><a href="/hebrew-about-Moshe-Kline">על משה קליין</a><a href="https://independent.academia.edu/MosheKline">Academia</a><a href="/General/Woven%20Text" lang="en">English</a></span>
+</footer>
+    <script>
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var menu = document.querySelector('.nav-menu');
+
+            // Hamburger toggle
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('is-open-menu');
+                    toggle.setAttribute('aria-expanded',
+                        menu.classList.contains('is-open-menu') ? 'true' : 'false');
+                });
+            }
+
+            // Dropdown toggles (via <button>, not <a>)
+            document.querySelectorAll('.has-dropdown > button').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var li = btn.parentElement;
+                    var wasOpen = li.classList.contains('is-open');
+
+                    // Close all dropdowns first
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(other) {
+                        other.classList.remove('is-open');
+                        var b = other.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open this one if it wasn't already
+                    if (!wasOpen) {
+                        li.classList.add('is-open');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Click outside closes everything
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    if (menu) menu.classList.remove('is-open-menu');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.has-dropdown.is-open').forEach(function(li) {
+                        li.classList.remove('is-open');
+                        var b = li.querySelector('button');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
