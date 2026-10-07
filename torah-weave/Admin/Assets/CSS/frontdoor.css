@@ -310,3 +310,19 @@ html[lang="he"] .nav-menu > li > a, html[lang="he"] .nav-menu > li > button{font
 .has-dropdown.is-open{flex-basis: 100%;}
 .submenu{background: rgba(250,246,238,.95);}
 }
+
+/* Torah weave table and colour key on the Hebrew Torah download page (hatorah-kedarka, Oct 2026).
+   Colours as in main.css section 6 (pattern highlighting) and /torah-weave/api/markers.json. */
+.weave.torah-weave td, html[lang="he"] .weave.torah-weave td{white-space:normal;text-align:justify;width:50%;font-size:1.1rem;line-height:1.85}
+.weave.torah-weave td p{margin:.55rem 0}
+.weave .vn{font-size:.72em;font-weight:700;color:var(--ink-light);margin-inline-end:.3em}
+.weave .sub-l{font-family:var(--font-display);color:var(--accent);font-size:.85em;margin-inline-end:.35em}
+.weave .vertical1, .legend .vertical1{color:#d97706;font-weight:600}
+.weave .closure, .legend .closure{color:#db2777;font-weight:600}
+.legend .horizontal1{color:#2563eb;font-weight:600}
+.weave span.a, .legend span.a, .facts span.a{color:#4a7c1f;font-weight:600}
+.weave span.a0, .legend span.a0, .facts span.a0{color:#7b6aa8;font-weight:600}
+.legend{font-size:1rem;color:var(--ink-mid);text-align:center;margin:.5rem 0 1.1rem;line-height:1.7}
+.facts{list-style:none;padding:0;margin:0}
+.facts li{padding:.7rem 0;border-bottom:1px solid var(--accent-rule);line-height:1.75}
+@media (max-width:640px){.weave.torah-weave{min-width:620px}.weave.torah-weave td, html[lang="he"] .weave.torah-weave td{font-size:.95rem}}
