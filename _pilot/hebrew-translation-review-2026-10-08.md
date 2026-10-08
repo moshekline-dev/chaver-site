@@ -1,6 +1,8 @@
 # Hebrew translation review — completed report of proposed corrections
 
-8 October 2026 · all 35 requested pages · report only
+8 October 2026 · original 35 pages plus Genesis 13–16 · report only
+
+**Latest addition:** Genesis commentaries 13–16 are now reviewed in full. [Section 8](<C:/GitHub/chaver-site/_pilot/hebrew-translation-review-2026-10-08.md:401>) records six additional passage proposals, optional wording improvements and source questions. Total coverage: **39 pages**. The original 35-page results below retain their earlier review status.
 
 **The editorial review is complete. I did not edit any website HTML.** All 33 direct translations received a full main-text comparison with their local English counterparts. The two Hebrew download introductions were reviewed on their own terms, with their embedded examples. Navigation, captions and text outside ordinary paragraphs were also inspected. This is an editorial review, not verification of every scholarly claim, linked PDF, or rendered page.
 
@@ -395,3 +397,113 @@ In the seven-level exposition, [Level 6](<C:/GitHub/chaver-site/torah-weave/hebr
 4. Inspect edited passages and mixed-direction labels in a browser.
 
 The requested review is finished. Applying these proposals is a separate step. This report is the only deliverable written by this review; concurrent website edits were neither overwritten nor attributed to it.
+
+## 8. Addendum: Genesis commentaries 13–16
+
+8 October 2026 · completed bilingual editorial reading · proposals only
+
+All four additional Hebrew commentaries were read in full against their local English counterparts, including their tables, quotations, diagram labels, supplementary explanations and page descriptions. This extends the review to **39 requested pages**. No website HTML was changed. The observations below describe the local copies; this was not a deployment check.
+
+The translations generally preserve the English argument. I found **six additional passage proposals (C29–C34)**, followed by optional wording improvements and five questions inherited from the English sources. Unit 13 has no clear Hebrew-only correction from this reading; its main questions concern clarity and source wording.
+
+| Commentary | Review outcome |
+|---|---|
+| Genesis 13 | Close translation; optional distinction between book rows and internal rows; S11 |
+| Genesis 14 | C33; optional striped-rods and affliction wording; S10 |
+| Genesis 15 | C29–C30; optional wording for the gift/blessing connection |
+| Genesis 16 | C31–C32, C34; optional restoration of name explanations; S12–S14 |
+
+### C29. “The wrestler,” not “the struggle”
+
+[Genesis Unit 15](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-15/hebrew-genesis-unit-15-commentary.html:595>)
+
+- Current: העוקב נעשה המאבק.
+- Proposed: **העוקב נעשה המתאבק.**
+- Reason: The English says “The supplanter becomes the wrestler.” The Hebrew mistakenly substitutes the struggle itself for the person wrestling. Keep the עקב wordplay; change only המאבק.
+
+### C30. Repair the description of Jacob’s injured hip
+
+[Genesis Unit 15](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-15/hebrew-genesis-unit-15-commentary.html:655>)
+
+- Current: כף ירכו של יעקב נגעת; הוא צולע.
+- Proposed: **כף ירכו של יעקב נפגעת; הוא צולע.**
+- Reason: נגעת does not naturally express the intended passive event here. The paragraph concerns the injury and subsequent limp. If retaining the source’s specific “touched” wording matters, use **״הדמות נוגעת בכף ירכו של יעקב; הוא צולע״**.
+
+### C31. Put the definite article on the second word of the construct phrase
+
+[Genesis Unit 16](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-16/hebrew-genesis-unit-16-commentary.html:673>)
+
+- Current: אבל הקנה מידה שונה.
+- Proposed: **אבל קנה המידה שונה.**
+- Reason: The definite form of קנה מידה is קנה המידה.
+
+### C32. Identify the verb בא explicitly
+
+[Genesis Unit 16](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-16/hebrew-genesis-unit-16-commentary.html:731>)
+
+- Current: לבסוף, הבא שהיה צריך לפתוח את היחידה מופיע בסופה.
+- Proposed: **לבסוף, הפועל ״בא״, שהיה צריך לפתוח את היחידה, מופיע בסופה.**
+- Reason: English explicitly marks בא as the verb “came/arrived.” Joining the article directly to it produces הבא, normally read as “the next” or “the one coming,” and obscures the grammatical argument. This proposal preserves the source’s claim; it does not mean that the verb is absent earlier in the unit.
+
+### C33. Make the bridging construction natural Hebrew
+
+[Genesis Unit 14](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-14/hebrew-genesis-unit-14-commentary.html:761>)
+
+- Current: מה שיחידה 7 חילקה, יחידה 14 מגשרת.
+- Proposed: **יחידה 14 מגשרת על ההפרדה שיצרה יחידה 7.**
+- Reason: English can use “bridges” with a direct object; Hebrew מגשרת normally needs על or בין. The proposal preserves the contrast between division and connection.
+
+### C34. Complete the Genesis 41:25 excerpt
+
+[Genesis Unit 16](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-16/hebrew-genesis-unit-16-commentary.html:713>)
+
+- Current: ״אֵת אֲשֶׁר הָאֱלֹהִים עֹשֶׂה הִגִּיד״
+- Proposed: **״אֵת אֲשֶׁר הָאֱלֹהִים עֹשֶׂה הִגִּיד לְפַרְעֹה״**
+- Reason: The source’s English quotation includes Pharaoh as the recipient. Restore that final word in the Hebrew excerpt as well. The shortened Hebrew can be understood in context, so this is a quotation-completeness recommendation rather than a claim that the existing words are ungrammatical. The wording was checked against the local Hebrew Unit 17 text.
+
+### Optional wording and localization
+
+These suggestions should remain separate from the corrections above.
+
+**Unit 13 — distinguish the two levels of row numbering.** The heading at [Genesis Unit 13](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-13/hebrew-genesis-unit-13-commentary.html:622>) says ״שורה 2 כשכבת ממשק״ immediately after a table with five internal rows. Here שורה 2 means the book-map row, not the unit’s second internal row. Consider **״הקול והידיים: שורה 2 במפת בראשית כשכבת ממשק״**. At line 697, the reference to Isaac in Column B likewise recalls the Unit 11 arrangement; **״מקומו של יצחק בעמודה B ביחידה 11״** would prevent confusion with the present unit’s table. The English has the same level-switching, so this is explanatory clarification, not a mistranslation.
+
+**Unit 14 — clarify the striped rods.** At [Genesis Unit 14](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-14/hebrew-genesis-unit-14-commentary.html:654>), ״מקלות מפוצלים״ translates “striped rods.” The biblical text does use ויפצל / אשר פצל, so the wording has a textual basis; it should not be called an outright mistranslation. Modern readers may nevertheless imagine split or forked sticks. Prefer **״מקלות שקליפתם קולפה בפסים״** or **״מקלות מפוספסים, שקליפתם קולפה לסירוגין״**. Genesis 30:37 explicitly connects the peeling with exposed white areas.
+
+**Unit 14 — distinguish affliction from poverty.** At [Genesis Unit 14](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-14/hebrew-genesis-unit-14-commentary.html:753>), ״יהוה הנותן דעתו על העוני״ translates “YHWH addressing affliction.” The context is Leah’s suffering at being unloved, not necessarily financial poverty. The biblical resonance with בעניי is legitimate. In the modern explanatory prose, **״יהוה הנותן דעתו על סבלה של לאה״** is clearer. At line 761 similarly consider **״ראה בסבלה של לאה״**. Preserve biblical quotations themselves.
+
+**Unit 15 — explain the gift/blessing connection instead of repeating the same word.** At [Genesis Unit 15](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-15/hebrew-genesis-unit-15-commentary.html:641>), ״המילה למתנה כאן היא ברכה — אותה מילה כמו הברכה״ carries over an English-language gloss that becomes circular in Hebrew. Proposed: **״יעקב מכנה את המתנה ׳ברכתי׳ — ובכך מהדהד את הברכה שנטל מעשו״**. The following paragraph already supplies the fuller interpretation. At line 637, **״המסר שיעקב שולח לעשו״** is also more exact for “Jacob’s message to Esau” than ״שליחות יעקב אל עשו״.
+
+**Unit 16 — consider retaining the explanations of the names.** At [Genesis Unit 16](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-16/hebrew-genesis-unit-16-commentary.html:721>), the English explains Ben-oni as “son of my sorrow” and Benjamin as “son of the right hand,” then interprets the renaming as loss becoming legacy. The Hebrew retains only ״יעקב משנה את השם שנתנה רחל״ before that conclusion. For a general reader, consider **״רחל קוראת לו בן־אוני — בן צערי; יעקב קורא לו בנימין — בן הימין״**. This restores the source’s stated interpretation rather than introducing a new etymological claim.
+
+The extensive ״פרוטוקול / וקטור / קלט / פלט / כתובת״ vocabulary in Units 13–15 is deliberate in the English. A less technical Hebrew register would be a broader authorial style decision, not a set of translation-error fixes. Similarly, ״מלאכים פוגעים ביעקב״ echoes the biblical ויפגעו בו; retain that echo if intentional, or use ״פוגשים את יעקב״ in explanatory prose for modern readability.
+
+### Additional source questions — review in both languages
+
+#### S10. Unit 14 does not end with the births
+
+[Genesis Unit 14](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-14/hebrew-genesis-unit-14-commentary.html:544>) says ״היחידה ... נחתמת בנשותיו המבחינות ביניהם בתחום האינטימי של הלידה״. The English also says the unit “closes” with the wives’ discernment in childbirth. The table places the births in **2B**, while **row 5 closes at Mahanaim**. Proposed: **״היחידה שנפתחת ביעקב הרואה את השמות האלוהיים נפרדים במרחב, מציגה בהמשכה את נשותיו המבחינות ביניהם בתחום האינטימי של הלידה״**. This retains the comparison without misidentifying the ending.
+
+#### S11. Goatskin and goat-hair fabric are related, but not the same material
+
+[Genesis Unit 13](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-13/hebrew-genesis-unit-13-commentary.html:656>) follows the quotation about עורות גדיי העזים with ״כיסוי המשכן עשוי מאותו חומר: יריעות עזים״. The English likewise says “the same material,” then specifies goat-hair curtains. The proposed parallel can remain, but the material distinction should be explicit: **״גם בכיסוי המשכן משמש חומר שמקורו בעזים: יריעות משער עזים״**. Jacob’s covering is skin; the cited curtains are hair fabric. This is a precision issue shared with the source, not a failure peculiar to the Hebrew.
+
+#### S12. “Dualism” conflicts with the account of collapsing two aspects into one
+
+[Genesis Unit 16](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-16/hebrew-genesis-unit-16-commentary.html:705>) begins ״יעקב תפס משהו אחר — מעין דואליזם״, then explains ״אין עוד שני צדדים ... רק אחד״. The English has the same wording and tension. If the paragraph’s intended point is absorption of the transcendent into the immanent, use **״יעקב תפס משהו אחר — מיזוג של שני הצדדים לאחד״** or another formulation chosen by the author. Do not simply replace it with a different technical theological label without settling the intended distinction.
+
+#### S13. Clarify when the foreign gods entered the household
+
+[Genesis Unit 16](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-16/hebrew-genesis-unit-16-commentary.html:745>) says ״העיקוף לשכם הביא אלהי נכר אל הבית״. Earlier, the same commentary identifies those gods with the teraphim Rachel stole from Laban before the journey to Shechem; Unit 14 develops that connection too. English contains both claims. Under that reading, the detour did not introduce the teraphim. Proposed: **״העיקוף לשכם הביא אסון על המשפחה; אלהי הנכר שנלקחו מבית לבן עדיין היו עמה״**. If the author instead means additional gods acquired at Shechem, identify that as a separate claim and explain the distinction. Genesis 35:4 itself says ״כל אלהי הנכר אשר בידם״ without naming the origin of every object.
+
+#### S14. The narrator, not Jacob speaking, states the destination in Genesis 31:18
+
+[Genesis Unit 16](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-16/hebrew-genesis-unit-16-commentary.html:542>) says ״יעקב עצמו מצהיר על כוונתו: לבוא אל יצחק אביו ארצה כנען״. English similarly says Jacob “states his intention.” The cited wording belongs to the narrator’s account of Jacob taking his household and property, not to direct speech by Jacob. Proposed: **״המספר מציין את יעדו של יעקב: ׳לבוא אל יצחק אביו ארצה כנען׳״**. This distinction matters particularly here because the preceding paragraph explicitly distinguishes the narrator’s report from Jacob’s reported speech.
+
+### Verification for this addendum
+
+- All four main texts compared in full: 60, 70, 55 and 61 extracted heading/paragraph/list/table/quotation blocks respectively, with matching counterpart counts. Counts aided coverage; they were not used as proof of fidelity.
+- Additional diagram labels, explanatory boxes, navigation, titles and descriptions inspected separately.
+- All four declare Hebrew and right-to-left direction. Both structured-data blocks in each page parse successfully.
+- Local biblical passages checked where needed for the proposals; no exhaustive vowel/accent collation or independent adjudication of the author’s theology was undertaken.
+- The earlier 35-page findings were not re-audited in this addendum. Their statuses remain those recorded in the earlier review.
+- No website HTML, English source, linked text, commit or deployment was changed by this review.
