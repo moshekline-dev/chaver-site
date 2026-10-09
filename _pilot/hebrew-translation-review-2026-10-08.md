@@ -1,8 +1,8 @@
 # Hebrew translation review — completed report of proposed corrections
 
-8 October 2026 · original 35 pages plus Genesis 13–16 · report only
+8 October 2026 · original 35 pages plus Genesis 13–19 · report only
 
-**Latest addition:** Genesis commentaries 13–16 are now reviewed in full. [Section 8](<C:/GitHub/chaver-site/_pilot/hebrew-translation-review-2026-10-08.md:401>) records six additional passage proposals, optional wording improvements and source questions. Total coverage: **39 pages**. The original 35-page results below retain their earlier review status.
+**Latest addition:** Genesis commentaries 17–19 are now reviewed in full. Section 9 records seven additional correction proposals (C35–C41), optional wording improvements and shared source questions. Total coverage: **42 pages**. Sections 1–8 retain their earlier review status.
 
 **The editorial review is complete. I did not edit any website HTML.** All 33 direct translations received a full main-text comparison with their local English counterparts. The two Hebrew download introductions were reviewed on their own terms, with their embedded examples. Navigation, captions and text outside ordinary paragraphs were also inspected. This is an editorial review, not verification of every scholarly claim, linked PDF, or rendered page.
 
@@ -507,3 +507,159 @@ The extensive ״פרוטוקול / וקטור / קלט / פלט / כתובת״ v
 - Local biblical passages checked where needed for the proposals; no exhaustive vowel/accent collation or independent adjudication of the author’s theology was undertaken.
 - The earlier 35-page findings were not re-audited in this addendum. Their statuses remain those recorded in the earlier review.
 - No website HTML, English source, linked text, commit or deployment was changed by this review.
+
+## 9. Addendum: Genesis commentaries 17–19
+
+8 October 2026 · completed bilingual editorial reading · proposals only
+
+All three Hebrew commentaries were compared in full with their local English counterparts, including tables, quotations, headings, diagram labels, navigation, titles and page descriptions. Total coverage now reaches **42 requested pages**. This addendum concerns the local files, not a check of the deployed website. No HTML was edited.
+
+The translations generally carry the English argument clearly. There are **seven correction proposals (C35–C41)**, several optional wording improvements, and ten source questions or internal consistency checks shared with the English. Unit 19 has no clear Hebrew-only error requiring correction; its suggestions concern smoother wording and two shared source issues.
+
+| Commentary | Hebrew correction proposals | Other findings |
+|---|---|---|
+| Genesis 17 | C35–C38 | Optional wording; S15–S19 |
+| Genesis 18 | C39–C41 | Optional wording; S20–S22 |
+| Genesis 19 | None required from this reading | Optional wording; S23–S24 |
+
+### Deliberate adaptations retained
+
+The original Hebrew verse quotations are appropriate; they do not need to reproduce the English translations word for word. This applies to the specified quotations from Samuel, Numbers, Deuteronomy and Exodus as well as Genesis. I have not proposed restoring transliterations or glosses that merely repeat Hebrew words. C41 concerns how an excerpt fits its surrounding sentence, not the decision to quote Hebrew scripture.
+
+The chosen terms **שמעל לטבע, עטוף, ״האלהים״, דברי ימים מלכותיים, סיפור נבואי, צנטריפטלית**, and the three zones **החצר / הקודש / קודש הקודשים** work in context. The wrapping metaphor is unusual but intelligible and consistent with the argument. Latin cell labels remain appropriate. Right-to-left sequence arrows are appropriate; C38 identifies one remaining exception in the file.
+
+Unit 17's **חפצים** is a sensible correction of the English description of Judah's pledge. C37 carries that choice through two residual phrases. Unit 19 explicitly explains the future-camp count: exclude Levi from the twelve camps and count Joseph through Ephraim and Manasseh. Its six-before/six-after description agrees with the English and is **not flagged as an error**. The Hebrew titles and page descriptions are coherent adaptations, including **המושל שבכה**; no correction is needed merely because the English browser title uses different wording.
+
+### C35. Express attribution and recording clearly
+
+[Genesis Unit 17](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:643>)
+
+- Current: הפועל נקרא בשמו, משום שדברי ימים מלכותיים קיימים כדי לשמר זהות — מי עשה מה, בזכותו וברשומה.
+- Proposed: **עושה המעשה נקרא בשמו, משום שדברי ימים מלכותיים נועדו לשמר את זהותו — לתעד מי עשה מה ולייחס את המעשה לעושהו.**
+- Reason: The source's “credited and catalogued” means attribution and documentation. בזכותו וברשומה does not convey that clearly. עושה המעשה also avoids reading הפועל as “the verb” in this discussion of grammatical subjects. In the contrasting sentence, consider **״עושה המעשה אלמוני״** for the same reason. Preserve דברי ימים מלכותיים.
+
+### C36. Keep רֹעִים as an activity in the vocabulary table
+
+[Genesis Unit 17](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:664>)
+
+- Current: רֹעִים (רועי הצאן)
+- Proposed: **רֹעִים (את הצאן)**, or simply **רֹעִים**.
+- Reason: In ״איפה הם רֹעים״, the word describes what the brothers are doing. The English table likewise says “tending / shepherding.” רועי הצאן changes the gloss to the people doing it and weakens the parallel with ברעתו. Omitting the redundant gloss is consistent with the requested localization policy.
+
+### C37. Complete the חפצים adaptation
+
+[Genesis Unit 17, parallel descents](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:701>)
+
+- Current: שני האנשים משאירים חפצים אצל נשים, ושני החפצים נעשים ראיה.
+- Proposed: **שני האנשים משאירים חפצים אצל נשים, ובשני המקרים החפצים נעשים ראיה.**
+- Reason: Judah leaves three objects and Joseph one garment. “The two objects” is a residue of the English's “both garments”; the intended comparison is between two cases.
+
+At [the following paragraph](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:703>):
+
+- Current: דגם הבגד שנשאר אצל האשה קושר אותם זה לזה.
+- Proposed: **דגם החפצים שנותרו אצל האשה קושר את שני הסיפורים זה לזה.**
+- Reason: This sentence reintroduces a garment as the common element, undoing the deliberate clarification. Keep **חוט הבגד** for the following discussion of Joseph's own garments; that separate thread is accurate.
+
+### C38. Bring the subdivision sequence into the chosen arrow convention
+
+[Genesis Unit 17](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:581>)
+
+- Current source: **8→3→2**, explicitly enclosed in a left-to-right span.
+- Proposed: A right-to-left sequence reading **8 ← 3 ← 2**, with 8 on the right and 2 on the left.
+- Reason: The current sequence is internally understandable in its LTR span, but it is an exception to the requested RTL sequence convention. Change both the arrow direction and the span direction if implementing this proposal; replacing the glyphs alone inside the existing LTR span would misrepresent the progression. This does not concern the right-pointing “previous unit” navigation arrow.
+
+### C39. Repair the bridging construction, as in C33
+
+[Genesis Unit 18](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:658>)
+
+- Current: מה שיחידה 2 חילקה, יחידה 18 מגשרת באמצעות העוברים ביניהם.
+- Proposed: **יחידה 18 מגשרת על ההפרדה שיצרה יחידה 2, באמצעות העוברים בין התחומים.**
+- Reason: מגשרת needs על or בין in this construction. Naming התחומים also gives ביניהם an explicit referent. This is the same translation pattern identified in section 8, C33.
+
+### C40. Use להתקרב for approaching
+
+[Genesis Unit 18, Tabernacle table](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:1010>) and [Leviticus comparison](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:1031>)
+
+- Current: העמים יכולים לקרב / מי רשאי לקרב אל מי
+- Proposed: **העמים יכולים להתקרב / מי רשאי להתקרב אל מי**
+- Reason: לקרב ordinarily means to bring something or someone closer. Here the English means that the people themselves approach. This is a grammatical proposal; it does not independently endorse the source's claim about access to the Tabernacle court.
+
+### C41. Integrate the Genesis 46:34 quotation grammatically
+
+[Genesis Unit 18](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:719>)
+
+- Current: רועי צאן בארץ שבה רעיית צאן היא ״כִּי־תוֹעֲבַת מִצְרַיִם״ (מו:לד).
+- Proposed: **רועי צאן בארץ שנאמר עליה: ״כִּי־תוֹעֲבַת מִצְרַיִם כָּל־רֹעֵה צֹאן״ (מו:לד).**
+- Reason: The current excerpt leaves the conjunction כי after היא and cuts off the subject of the biblical clause. Quoting the complete clause produces natural syntax and preserves the original Hebrew wording. The clause was checked against the local Hebrew Unit 18 text.
+
+### Optional wording improvements
+
+These are readability proposals, not demands for literal agreement with English.
+
+**Unit 17 — creation by speech.** At [line 621](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:621>), **״ומדבר את הקיום אל תוך ההוויה״** is a conspicuous calque of “speaking existence into being.” Consider **״ובורא בדיבורו״**. At [line 550](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:550>), consider **״מן החצר אל קודש הקודשים״** instead of ״מן החצר החיצונית אל הקודש הפנימי״, so the destination cannot be mistaken for the middle zone. At line 625, the same clarification could replace ״הקודש הפנימי״ when naming row 3. This preserves the chosen three-zone terminology.
+
+**Unit 18 — make references to speech and revival idiomatic.** At [line 615](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:615>) and line 788, **״יוסף מדבר רק ׳אלהים׳״** / **״הוא מדבר רק ׳אלהים׳״** can become **״יוסף משתמש רק בשם ׳אלהים׳״** / **״הוא משתמש רק בשם ׳אלהים׳״**. At [line 930](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:930>), **״האב שחי יורד למצרים״** would carry “the revived father” more clearly as **״האב שרוחו חייתה מחדש יורד למצרים״**. At [line 988](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:988>), consider **״האב שחווה אבל על מות בנו חווה עכשיו דבר אחר — תחייה״** in place of ״האב שקיים את אבל המוות מקיים עכשיו דבר אחר — תחייה״.
+
+**Unit 18 — the divine modes are not themselves confused.** At [line 847](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:847>), **״לא מוזגו, לא התבלבלו״** follows “not fused, not confused.” A clearer expression of the distinction is **״הן לא מוזגו זו בזו, ולא אבדה ההבחנה ביניהן; הן פועלות יחד״**. The current התבלבלו can suggest that the modes became mentally confused.
+
+**Unit 19 — remove two small English-shaped constructions.** At [line 540](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-19/hebrew-genesis-unit-19-commentary.html:540>), **״אותה מילה שתקרא מאוחר יותר לארון הברית״** can become **״אותה מילה שתציין בהמשך גם את ארון הברית״**. Apply the same construction to the recurrence near the conclusion. At [line 544](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-19/hebrew-genesis-unit-19-commentary.html:544>), **״יוסף מייחס לאלהים״** leaves the object implicit; **״יוסף מייחס לאלהים את הולדת בניו״** prepares the following quotation more smoothly.
+
+### Additional source questions — review in both languages
+
+These are not Hebrew mistranslations. They arise from the source text, its own tables, or the cited biblical context; they should be settled in the English as well if adopted. They do not constitute an independent review of the underlying theological thesis.
+
+#### S15. The three תולדות formulas span both cells
+
+[Genesis Unit 17, architecture table](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:564>) labels **1A** ״תולדות משולשות (לו:א, לו:ט)״. Only two references are listed there; the third is correctly placed in **1B**, Genesis 37:2. English has the same mismatch. Proposed for 1A: **״שתי נוסחאות תולדות (לו:א, לו:ט)״**. Keep the later heading **התולדות המשולשות**, which correctly describes the three formulas across the whole row.
+
+#### S16. Column A is not all Esau's descendants
+
+[Genesis Unit 17](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:625>) concludes ״שושלת עשו יורדת דרך השחתה; שושלת יעקב עולה דרך יושר״. The preceding examples in column A include Judah and the Egyptian prisoners, not successive members of Esau's genealogy. The English makes the same identification. If this is a structural analogy, say so: **״עמודה A, הנפתחת בתולדות עשו, מתווה מסלול של ירידה והשחתה; עמודה B, הנפתחת בתולדות יעקב, מתווה את עליית יוסף מתוך שמירה על יושרו״**. This preserves the reading without implying literal descent from Esau.
+
+#### S17. Succession does not by itself establish hereditary monarchy
+
+[Genesis Unit 17](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:761>) calls the Edomite monarchy ״טריטוריאלית ותורשתית״, following “territorial, hereditary kingship.” The cited succession list says one king reigns after another; it does not establish father-to-son inheritance. For example, Bela son of Beor is followed by Jobab son of Zerah. Proposed: **״זו מלוכה טריטוריאלית, המתוארת כרצף של מלכים המחליפים זה את זה״**. Retain the stronger hereditary claim only if the author supplies its separate basis.
+
+#### S18. Keep the two dreams and the two creation days distinct
+
+Two passages in Unit 17 compress distinctions that matter to the argument:
+
+- [Opening, line 540](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:540>): the brothers' ״המלך תמלך עלינו״ (37:8) responds to the sheaves dream, before the sun/moon dream (37:9). Both languages present it as a response to the latter. Introduce it as **״כבר בתגובה לחלומו הראשון אמרו אחיו...״**.
+- [Conclusion, line 771](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:771>): ״השמש שפרצה ביום 1״ follows the English “sun ... on Day 1,” but the article itself distinguishes day 1's light from day 4's luminaries. Proposed: **״האור שפרץ ביום 1 פועל עכשיו באמצעות המאורות המושלים במסלולים קבועים״**.
+
+#### S19. Four references to divine accompaniment are not four identical quotations
+
+[Genesis Unit 17, opening discussion](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-17/hebrew-genesis-unit-17-commentary.html:544>) says the quoted formula ״ויהי יהוה את יוסף״ appears four times, citing 39:2, 3, 21, 23; the parallel-descents discussion repeats the claim. The fourfold motif is present, but only verses 2 and 21 use that exact wording. Verse 3 has ״כי יהוה אתו״ and verse 23 ״באשר יהוה אתו״. Proposed: **״ארבע פעמים נאמר שיהוה עם יוסף, בניסוחים קרובים״**. Preserve the fourfold argument while distinguishing the motif from a verbatim repeated formula. The English also treats the wording as a repeated phrase.
+
+#### S20. Two Unit 18 descriptions fall outside the cited cells
+
+- [Opening, line 542](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:542>) places ״כל הארץ״ coming to Egypt in row 1. The article's table places Genesis 41:57 at the beginning of **2A**, with row 1 ending at 41:56. Proposed: **״שבע שנות שובע ושבע שנות רעב (שורה 1), ו׳כל הארץ׳ באה למצרים בפתח שורה 2״**. The universal frame can still be argued, but the verse should not be assigned to the wrong row.
+- [Table, line 595](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:595>) describes **5A, 46:1–27**, as ״יעקב יורד; יוסף מקבל את אביו״. The actual meeting is at **46:29**, within **5B**. Proposed for 5A: **״יעקב יורד למצרים עם בני ביתו״**; keep the encounter and weeping in 5B.
+
+Both problems are present in the English table or exposition. Neither requires changing the unit's boundaries.
+
+#### S21. Distinguish the divine-name pair from the murder pair
+
+[Genesis Unit 18](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:970>) says ״בני חוה בשני השמות: קין הורג את הבל״. The preceding paragraphs correctly associate the two divine names with **Cain and Seth** (4:1, 4:25), not Cain and Abel. The source makes the same compressed transition. Proposed: **״אצל חוה, שני השמות מלווים את לידת קין ואת לידת שת, שבא תחת הבל שנרצח. אצל רחל, שני השמות מלווים את לידת יוסף ואת הבקשה לבן אחר. סיפור בני חוה כולל רצח; סיפור בני רחל מגיע לחיבוק״**. This keeps the thematic parallel while identifying its different pairs.
+
+#### S22. One river waters the garden before dividing into four
+
+[Genesis Unit 18](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-18/hebrew-genesis-unit-18-commentary.html:928>) says ״ארבעה נהרות יצאו מעדן להשקות את הגן״; the earlier reading section also speaks of four rivers watering it. English says the same. Genesis 2:10 describes one river going out from Eden to water the garden, dividing from there into four heads. Proposed: **״נהר יוצא מעדן להשקות את הגן, ומשם הוא נפרד לארבעה ראשים (ב:י). ארבעת הראשים מוצאים כאן הד בארבעת זרמי הדמעות״**. The fourfold comparison survives with the biblical sequence made precise.
+
+#### S23. Unit 19's column summaries do not describe all their cells
+
+[Genesis Unit 19, architecture introduction and table](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-19/hebrew-genesis-unit-19-commentary.html:558>) says column B contains the blessings and column C follows Joseph's words and deeds. Yet **1C** contains Jacob's tribal blessings and burial charge, while **2B** contains Joseph's reply to his brothers. The English has the same generalization. If the displayed allocation is intended, revise the summaries rather than moving cells. A descriptive alternative is **״עמודה B מציבה את ברכת בני יוסף מול תשובתו המרגיעה לאחיו; עמודה C מציבה את ברכות יעקב וציוויו האחרון מול ימיו האחרונים וציוויו של יוסף״**. Adjust the B/C table headings to match. Keep Latin labels, including **1Cb**, unchanged. This question is independent of the accepted future-camp count.
+
+#### S24. Joseph is thirty at appointment, before the years of famine
+
+[Genesis Unit 19](<C:/GitHub/chaver-site/torah-weave/Genesis/genesis-unit-19/hebrew-genesis-unit-19-commentary.html:634>) says ״יוסף בן שלושים מנהל בשנות הרעב״, matching the English “Joseph at thirty administers during famine.” Genesis 41:46 places him at thirty when he stands before Pharaoh; seven years of plenty precede the famine (41:53–54). Proposed: **״יוסף, שהתמנה בגיל שלושים, מנהל את מצרים בשנות השובע ואחריהן בשנות הרעב״**. This preserves the age-formula comparison without placing the famine at age thirty.
+
+### Verification for this addendum
+
+- Full bilingual reading of **78, 122 and 74** extracted heading/paragraph/list/table/quotation blocks for Units 17, 18 and 19 respectively. Each matched its English counterpart in block count; the counts served only as coverage checks, not as evidence of translation quality.
+- All tables were read cell by cell. Text outside those blocks, including the book-map labels, navigation, citation boxes, titles, descriptions and accessible text labels, was inspected separately. No additional untranslated passage or substantive description omission was found. Retained English project names and the explicitly identified English-source citations were not treated as untranslated commentary.
+- All three pages declare Hebrew and RTL direction. Both structured-data blocks in each page parse successfully. This was a source-text editorial check, not a rendered-layout audit; arrow rendering should be checked when C38 is implemented.
+- Relevant local biblical passages were checked for the specific quotation and context proposals. This was not an exhaustive vowel/accent collation or independent verification of every historical or theological claim.
+- Fingerprints of all six compared HTML files were checked after the report update. No Hebrew or English HTML was edited, and no publication, commit or deployment was performed.
+- Sections 1–8 were not re-audited. Their findings and earlier statuses remain as recorded.
+
