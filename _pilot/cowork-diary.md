@@ -725,6 +725,20 @@ The same atomic-write string-replace script that fixed the Mishnah chapter pages
 **Next step:**
 - After deploy: check the live page and the PDF link.
 
+### 2026-10-19 — Torah dropdown: added "The Art of Writing the Oral Tradition"
+
+**What was done:**
+- Added a separate entry to the Torah dropdown in the site menu, after "Full Torah Map": `<li><a href="/Mishnah-New/English/Articles/TheArt-H.htm">The Art of Writing the Oral Tradition</a></li>`.
+- Applied to `_templates/Academic-Content-EN.html` and to every rendered English page carrying the Torah dropdown (210 files including the template; two menu variants, with and without the "Genesis: Complete Commentary" line, both handled). Hebrew menus untouched.
+
+**Verification:**
+- Atomic writes, bytes read back identical; only the inserted line differs in each file; no NUL; no truncated files among those edited.
+- Every Torah dropdown in the repo now contains the new entry exactly once (210/210).
+- Idempotent: re-running skips files that already have the entry.
+
+**Current state:**
+- In working tree, NOT committed. Moshe to review, commit, push, purge Cloudflare cache.
+
 ## Standing reference
 
 ### CSS class quick-reference (from main.css)
