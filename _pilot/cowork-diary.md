@@ -698,6 +698,33 @@ The same atomic-write string-replace script that fixed the Mishnah chapter pages
 - Moshe: review combined diff in GitHub Desktop (or use `git diff --stat HEAD | tail -30` to get just the per-file change counts). Push, then purge Cloudflare cache (whole-site purge would be cleanest given the breadth). Spot-check 3 different page types in a browser: a Mishnah chapter, a Torah-weave commentary, and an English article — confirm each shows `chaver.com` brand and the PDF CTA / footer link goes to the landing page rather than the .pdf file.
 - Out of scope but discoverable later: 70 non-UTF-8 legacy files were skipped. If any are still deployed (rather than superseded by Pattern-B versions), they'll need an encoding-aware pass to receive the same fix. Worth a future "legacy-encoding sweep" task.
 
+### 2026-10-19 — TheArt-H.htm replaced with the new essay "The Art of Writing the Oral Tradition"
+
+**What was done:**
+- Replaced the article inside `Mishnah-New/English/Articles/TheArt-H.htm` with the new essay "The Art of Writing the Oral Tradition: How Rabbi Judah the Prince Read the Decalogue" (Introduction, Parts One to Four, Conclusion, Sources; 19 figures). Same URL kept.
+- Site header, nav, footer and template chrome left byte-for-byte as they were; only the `<main>` content, the title/keywords/description line, og:title, og:description were replaced, the unused `.style5` page style removed, and an Article JSON-LD block added before the canonical link.
+- Body follows the layout of `the-esoteric-decalogue.html`: nav-breadcrumb, unit-header-section (t-head/t-rest, unit-meta), unit-content blockquote epigraphs, one commentary-section per Part, all figures as `scripture-table` (col-full/col-a/col-b). Hebrew in `<span dir="rtl" lang="he">`; the Hebrew Decalogue table uses `dir="rtl"` so tablet A is on the right.
+- Old top link to `The Exoteric Decologue Section II.pdf` replaced with a link to the new PDF. Closing line links to five-pairs-avot-1 and the-esoteric-decalogue.
+- Added `Mishnah-New/English/Articles/The-Art-of-Writing-the-Oral-Tradition.pdf` (the typeset essay).
+
+**Files modified:**
+- `Mishnah-New/English/Articles/TheArt-H.htm` (78,094 → 146,450 bytes)
+- `Mishnah-New/English/Articles/The-Art-of-Writing-the-Oral-Tradition.pdf` — NEW (376,302 bytes)
+- `_pilot/cowork-diary.md` (this entry)
+
+**Verification:**
+- Atomic write; bytes read back identical to source; ends with `</html>`; no NUL; all JSON-LD blocks reparse; 19 tables present.
+- Source draft and preview kept outside the repo in `Documents\Research\Divine Writing\chaver.com draft\`.
+
+**Decisions locked:**
+- The new essay replaces the old TheArt-H article at the same address. The other Avot/Decalogue articles (five-pairs-avot-1, the-esoteric-decalogue, the torah-weave "Bidirectional Reading" and "Five Pairs" articles) are left unchanged for now.
+
+**Current state:**
+- In working tree, NOT committed. Moshe to review in GitHub Desktop, commit, push, purge Cloudflare cache.
+
+**Next step:**
+- After deploy: check the live page and the PDF link.
+
 ## Standing reference
 
 ### CSS class quick-reference (from main.css)
