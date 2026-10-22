@@ -739,6 +739,26 @@ The same atomic-write string-replace script that fixed the Mishnah chapter pages
 **Current state:**
 - In working tree, NOT committed. Moshe to review, commit, push, purge Cloudflare cache.
 
+### 2026-10-21 — Hebrew translation of "The Art of Writing the Oral Tradition" added to the site
+
+**What was done:**
+- New Hebrew page `Mishnah-New/Hebrew/Articles/hebrew-the-art-of-writing.html` (served at `/Mishnah-New/Hebrew/Articles/hebrew-the-art-of-writing`): the full Hebrew translation, 18 figures, built inside the chrome of `General/hebrew-woven-text.html` (Academic-Content-HE). Canonical, og tags, Article JSON-LD (inLanguage he, translationOfWork pointing at the English essay), hreflang en/he/x-default. Its "English" links (menu and footer) go to the English essay.
+- New PDF beside it: `Mishnah-New/Hebrew/Articles/The-Art-of-Writing-the-Oral-Tradition-Hebrew.pdf` (the Academia edition).
+- `Mishnah-New/English/Articles/TheArt-H.htm`: hreflang en/he/x-default added after the canonical link; the PDF line now also says "A Hebrew translation is available here" with a link to the Hebrew page.
+- `General/hebrew-woven-text.html`: the link to "אמנות הכתיבה של התורה שבעל פה" now goes to the Hebrew page, and "(באנגלית)" after it was removed.
+- Hebrew menu: added an entry after "מפת התורה" in the תורה dropdown, `<li><a href="/Mishnah-New/Hebrew/Articles/hebrew-the-art-of-writing">אמנות הכתיבה של התורה שבעל פה</a></li>` (label as numeric entities like its neighbours). Applied to `_templates/Academic-Content-HE.html` and every rendered Hebrew page with that dropdown: 702 files including the new page and the template. Line endings and indentation copied from the line above in each file. `_pilot/hebrew-nav-render-preview.html` left alone. `torah-weave/full-torah-map-2/index.html` is not a Hebrew menu (its link to the Hebrew map is labelled "עברית") and was not touched.
+
+**Verification:**
+- Atomic writes (temp file, fsync, rename); bytes read back identical; every edited file ends with `</html>`; all JSON-LD blocks reparse.
+- New page 169,325 bytes before the menu entry was added; PDF 418,013 bytes.
+- Every Hebrew menu now contains the new entry exactly once (702/702). Idempotent: a second run changes nothing.
+
+**Current state:**
+- In working tree, NOT committed. Moshe to review in GitHub Desktop, commit, push, purge Cloudflare cache.
+
+**Next step:**
+- After deploy: open the Hebrew page and its PDF link live; check the menu entry on a Hebrew page and the Hebrew link on the English essay.
+
 ## Standing reference
 
 ### CSS class quick-reference (from main.css)
