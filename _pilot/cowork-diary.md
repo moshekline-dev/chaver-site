@@ -759,6 +759,39 @@ The same atomic-write string-replace script that fixed the Mishnah chapter pages
 **Next step:**
 - After deploy: open the Hebrew page and its PDF link live; check the menu entry on a Hebrew page and the Hebrew link on the English essay.
 
+### 2026-10-30 — Akedah divine-names essay revised (chat)
+
+**What was done:**
+- `torah-weave/Genesis/genesis-unit-9/Akedah-divine-names-essay.html` replaced with the reviewed draft (draft and original kept outside the repo in `Documents\Research\TORAH\Individual Books\Genesis\Akedah essay draft\`).
+- Removed the "Contemporary Application: Why the Distinction Still Matters" section (Moshe: "remove the aplication"). No dedication added (Moshe: "leave out the dedication").
+- "How to Cite" link corrected to `https://chaver.com/torah-weave/Genesis/genesis-unit-9/Akedah-divine-names-essay` (was a non-existent `akedah-divine-names-study.html` under genesis-unit-9).
+- "God" rendered "the deity" / "deity" wherever it was not the translators' word in quotation marks (THE God, God of heaven and God of earth, God of my master Abraham, God Most High, the Deuteronomy formulas, etc.). The quoted "God tested Abraham…" passages and "Reading 'God' Instead of Names" kept.
+- Content-convention words replaced: theological/theology (5), "religion of grace" → "religion of revelation", "remarkably", "This is revolutionary.", "critical differences", "transforms into clarity", "hidden" → "enclosed" (6, incl. one heading), Appendix A column "Significance" → "What It Marks".
+- Joseph passages corrected to the Hebrew: Joseph says Elohim 14 times and haElohim in 41:25, 28, 32; 42:18; 45:8; never YHWH (narrator only, 39:2–5, 21–23). 44:16 (Judah) and 48:15 (Jacob) no longer attributed to Joseph; 45:8 quoted correctly. Section heading now "Genesis 39-50"; Appendix B label "Joseph narrative (7 verses)".
+
+**Files modified:**
+- `torah-weave/Genesis/genesis-unit-9/Akedah-divine-names-essay.html` (86,855 → 85,867 bytes)
+- `torah-weave/Genesis/genesis-unit-9/Akedah divine names essay.html` — DELETED
+- `_redirects`, `htm-file-list.txt`
+- `_pilot/cowork-diary.md` (this entry)
+
+**Verification:**
+- Repo file confirmed unchanged since the draft copy before writing. Atomic write; bytes read back identical to draft; ends with `</html>`; no NUL; both JSON-LD blocks reparse; tag counts balanced. git diff: 49 insertions, 77 deletions in one file.
+
+**Older version retired (Moshe, 14:08: "yes"):**
+- Deleted `torah-weave/Genesis/genesis-unit-9/Akedah divine names essay.html` (the December 2025 version, "…and the End of Primitive Religion"; nothing in the repo linked to it; not in sitemap.xml). Copy kept outside the repo as `Documents\Research\TORAH\Individual Books\Genesis\Akedah essay draft\december-2025-version.html`, and in git history.
+- `_redirects` section 0 (retired pages): two 301 rules added, rule positions 15–16 of 171, from `/torah-weave/Genesis/genesis-unit-9/Akedah%20divine%20names%20essay` and its `.html` form to `/torah-weave/Genesis/genesis-unit-9/Akedah-divine-names-essay`; section header extended with the date and reason.
+- `htm-file-list.txt`: the old file's line removed.
+
+**Cassuto note added (Moshe, 14:21: "yes"):**
+- A `structural-note` box ("Note on divine-name scholarship": Wellhausen/Friedman, Cassuto, Alter) added at the end of the opening section, before the Key Definitions box. Adapted from the December 2025 version's note, reworded to the current reading of haElohim (both modes present, distinction not yet drawn; no longer "regression to a primeval mode"). The claims about those scholars are carried over from Moshe's December text, not checked against the books. Essay now 85,867 bytes; all checks repeated and passed.
+
+**Current state:**
+- In working tree, NOT committed. Moshe to review in GitHub Desktop, commit, push, purge Cloudflare cache.
+
+**Next step:**
+- After deploy: open the live page and check the citation link and the Joseph section; open the old address `/torah-weave/Genesis/genesis-unit-9/Akedah%20divine%20names%20essay` and confirm it lands on the current essay.
+
 ## Standing reference
 
 ### CSS class quick-reference (from main.css)
