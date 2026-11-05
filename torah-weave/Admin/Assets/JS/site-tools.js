@@ -19,7 +19,7 @@
   /* 2. printing — only on unit pages and Mishnah chapter pages */
   var path = decodeURIComponent(location.pathname);
   var isUnit = /\/(hebrew-)?[a-z]+-unit-\d+\/(hebrew-)?[a-z]+-unit-\d+(\.html?)?$/i.test(path);
-  var isChapter = /\/Mishnah-New\/Hebrew\/Text\/.+ Perek \d+[ab]?(\.html?)?$/i.test(path);
+  var isChapter = /\/Mishnah-New\/Hebrew\/Text\/.+ Perek \d+( ?[ab])? ?(\.html?)?$/i.test(path);
   if (!isUnit && !isChapter) return;
 
   var tables = document.querySelectorAll('table.scripture-table');

@@ -1,9 +1,11 @@
 /* ==========================================================
-   chaver.com VERSE SEARCH — the "Find a verse" box in the menu bar
-   (Nov 2026). Type a Torah reference (Genesis 22:3, Gen 22, בראשית כב ג)
-   and go to the literary unit that contains it. English pages go to the
-   English unit page, Hebrew pages to the Hebrew one.
-   Data: /torah-weave/api/by-verse.json (loaded only when the box is used).
+   chaver.com VERSE SEARCH — the "Find a verse or Mishnah chapter" box in
+   the menu bar (Nov 2026). Type a Torah reference (Genesis 22:3, Gen 22,
+   בראשית כב ג) and go to the literary unit that contains it — English pages
+   to the English unit page, Hebrew pages to the Hebrew one; or a Mishnah
+   chapter (Berakhot 2, Avot 1:1, ברכות ב) and go to its chapter page.
+   Data, loaded only when the box is used: /torah-weave/api/by-verse.json
+   and /torah-weave/Admin/Assets/JS/mishnah-chapters.json.
    Chapter lengths below follow the Hebrew verse numbering used on the site
    (checked: 5,846 verses).
    Styles: /torah-weave/Admin/Assets/CSS/verse-search.css
@@ -92,6 +94,66 @@
     return { error: 'verse', ref: ref, max: lens[ref.chapter - 1] };
   }
 
+  /* ---------- Mishnah ---------- */
+  /* Fold small spelling differences: Latin kh/ch, tz/ts and doubled letters
+     ('Berachot', 'Berakhot'); Hebrew final letters and doubled ו/י ('כלאים',
+     'כלאיים'). Other variants are listed by name in mishnah-chapters.json. */
+  function fold(s) {
+    s = String(s).toLowerCase().replace(/[֑-ׇ]/g, '').replace(/[״׳"'`’.\-]/g, '').replace(/\s+/g, '');
+    if (/[א-ת]/.test(s)) {
+      return s.replace(/ך/g, 'כ').replace(/ם/g, 'מ').replace(/ן/g, 'נ').replace(/ף/g, 'פ').replace(/ץ/g, 'צ').replace(/([וי])\1+/g, '$1');
+    }
+    return s.replace(/kh|ch/g, 'h').replace(/tz|ts/g, 'z').replace(/(.)\1+/g, '$1');
+  }
+
+  /* Read a Mishnah reference. Returns {tractate, chapter|null, part|null} or null. */
+  function parseMishnah(input, index) {
+    var s = String(input || '').replace(/[֑-ׇ]/g, '').toLowerCase()
+      .replace(/[‐-―]/g, '-').replace(/[:,;]/g, ' ').replace(/\s+/g, ' ').trim();
+    s = s.replace(/^((mishnah|mishna|m\.|tractate|masechet|massekhet|masekhet|משנה|מסכת)\s+)+/, '');
+    var toks = s.split(' ').filter(Boolean);
+    if (!index._folded) {
+      index.tractates.forEach(function (tr) { tr._f = tr.names.map(fold); });
+      index._folded = true;
+    }
+    for (var k = toks.length; k >= 1; k--) {
+      var name = fold(toks.slice(0, k).join(' '));
+      var hit = null;
+      for (var i = 0; i < index.tractates.length && !hit; i++) {
+        if (index.tractates[i]._f.indexOf(name) !== -1) hit = index.tractates[i];
+      }
+      if (!hit) continue;
+      var rest = toks.slice(k).join(' ').replace(/\./g, ' ').split(/[\s-]+/).filter(function (x) {
+        return x && !/^(פרק|משנה|chapter|chap|ch|mishnah|mishna)$/.test(x);
+      });
+      if (!rest.length) return { tractate: hit, chapter: null, part: null };
+      if (rest.length > 2) return null;
+      var part = null, first = rest[0];
+      var m = /^(\d+)([ab])$/.exec(first);
+      if (m) { first = m[1]; part = m[2]; }
+      var ch = toNumber(first);
+      if (ch === null) return null;
+      if (rest.length === 2 && toNumber(rest[1]) === null) {
+        if (/^[ab]$/.test(rest[1]) && !part) part = rest[1]; else return null;
+      }
+      return { tractate: hit, chapter: ch, part: part };
+    }
+    return null;
+  }
+
+  /* Find the page(s) for a parsed Mishnah reference. */
+  function resolveMishnah(ref) {
+    var tr = ref.tractate;
+    var last = tr.chapters[tr.chapters.length - 1].n;
+    if (ref.chapter === null) {
+      return tr.list ? { url: tr.list } : { list: tr.chapters, tractate: tr };
+    }
+    var hits = tr.chapters.filter(function (c) { return c.n === ref.chapter; });
+    if (!hits.length) return { error: 'mishnah-chapter', tractate: tr, max: last };
+    if (hits.length > 1 && ref.part) hits = hits.filter(function (c) { return c.part === ref.part; });
+    return hits.length === 1 ? { url: hits[0].url } : { list: hits, tractate: tr };
+  }
+
   function unitUrl(book, slug, n, hebrew) {
     return hebrew
       ? '/torah-weave/' + book + '/hebrew-' + slug + '-unit-' + n + '/hebrew-' + slug + '-unit-' + n
@@ -99,7 +161,8 @@
   }
 
   /* Exposed for testing. */
-  var api = { parse: parse, resolve: resolve, unitUrl: unitUrl, CHAPTER_LENGTHS: CHAPTER_LENGTHS };
+  var api = { parse: parse, resolve: resolve, unitUrl: unitUrl, CHAPTER_LENGTHS: CHAPTER_LENGTHS,
+              parseMishnah: parseMishnah, resolveMishnah: resolveMishnah, fold: fold };
   if (typeof module !== 'undefined' && module.exports) { module.exports = api; return; }
   window.ChaverVerseSearch = api;
 
@@ -110,13 +173,19 @@
   var root = document.documentElement;
   var hebrew = /^he/i.test(root.getAttribute('lang') || '') || (root.getAttribute('dir') || '').toLowerCase() === 'rtl';
   var T = hebrew ? {
-    label: 'חיפוש פסוק', placeholder: 'חיפוש פסוק', go: 'חיפוש',
-    help: 'נסו למשל: בראשית כב ג, או שמות כ',
+    label: 'חיפוש פסוק או פרק משנה', placeholder: 'פסוק או פרק משנה', go: 'חיפוש',
+    help: 'נסו למשל: בראשית כב ג, שמות כ, או משנה אבות א',
+    mchapter: function (tr, m) { return 'במסכת ' + tr.he + ' ' + m + ' פרקים. '; },
+    mlist: function (tr) { return 'פרקי מסכת ' + tr.he + ':'; },
+    mlabel: function (tr, c) { return tr.he + ' פרק ' + c.he + (c.part ? (c.part === 'a' ? ', חלק א' : ', חלק ב') : ''); },
     chapter: 'אין פרק כזה. ', verse: function (b, c, m) { return 'בפרק זה ' + m + ' פסוקים. '; },
     choose: 'הפרק מתחלק בין יחידות:', unit: 'יחידה', fail: 'החיפוש אינו זמין כרגע. נסו שוב מאוחר יותר.'
   } : {
-    label: 'Find a verse', placeholder: 'Find a verse, e.g. Genesis 22:3', go: 'Go',
-    help: 'Try a reference such as Genesis 22:3 or Exodus 20.',
+    label: 'Find a verse or Mishnah chapter', placeholder: 'Verse or Mishnah, e.g. Gen 22:3, Avot 1', go: 'Go',
+    help: 'Try a reference such as Genesis 22:3, Exodus 20, or Mishnah Avot 1.',
+    mchapter: function (tr, m) { return 'Tractate ' + tr.en + ' has ' + m + ' chapters. '; },
+    mlist: function (tr) { return 'Chapters of tractate ' + tr.en + ':'; },
+    mlabel: function (tr, c) { return 'Mishnah ' + tr.en + ' ' + c.n + (c.part || ''); },
     chapter: 'There is no such chapter. ', verse: function (b, c, m) { return b + ' ' + c + ' has ' + m + ' verses in the Hebrew numbering used on this site. '; },
     choose: 'This chapter spans more than one unit:', unit: 'Unit', fail: 'The verse search is not available right now. Please try again later.'
   };
@@ -154,6 +223,26 @@
   }
   input.addEventListener('focus', function () { load().catch(function () {}); }, { once: true });
 
+  var mishnahPromise = null;
+  function loadMishnah() {
+    if (!mishnahPromise) {
+      mishnahPromise = fetch('/torah-weave/Admin/Assets/JS/mishnah-chapters.json').then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status); return r.json();
+      });
+      mishnahPromise.catch(function () { mishnahPromise = null; });
+    }
+    return mishnahPromise;
+  }
+  function chooser(head, items) {
+    var p = document.createElement('p'); p.textContent = head;
+    var ul = document.createElement('ul');
+    items.forEach(function (it) {
+      var li = document.createElement('li'); var a = document.createElement('a');
+      a.href = encodeURI(it.url); a.textContent = it.text; li.appendChild(a); ul.appendChild(li);
+    });
+    show([p, ul]);
+  }
+
   function show(nodes) {
     panel.innerHTML = '';
     nodes.forEach(function (n) { panel.appendChild(n); });
@@ -172,7 +261,18 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var ref = parse(input.value);
-    if (!ref) { message(T.help); return; }
+    if (!ref) {
+      var typed = input.value;
+      loadMishnah().then(function (idx) {
+        var mref = parseMishnah(typed, idx);
+        if (!mref) { message(T.help); return; }
+        var res = resolveMishnah(mref);
+        if (res.error) { message(T.mchapter(res.tractate, res.max) + T.help); return; }
+        if (res.url) { window.location.href = encodeURI(res.url); return; }
+        chooser(T.mlist(res.tractate), res.list.map(function (c) { return { url: c.url, text: T.mlabel(res.tractate, c) }; }));
+      }).catch(function () { message(T.fail); });
+      return;
+    }
     load().then(function (data) {
       window.__vsData = data;
       var res = resolve(ref, data);
