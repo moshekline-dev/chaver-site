@@ -106,7 +106,7 @@
       "@id": "https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-data#dataset",
       "name": "The Structured Mishnah Dataset: 525 Chapters in Two-Dimensional Literary Format (JSON)",
       "alternateName": "מאגר המשנה המובנית",
-      "description": "The complete Hebrew text of the Mishnah — all six orders, 63 tractates, and 525 chapters — encoded as a structured JSON dataset with cell-level position labels, mishnah verse numbers, and structural markers identifying horizontal parallels, vertical threads, internal parallels, chiastic patterns, and envelope closures.",
+      "description": "The complete Hebrew text of the Mishnah — all six orders, 63 tractates, and 524 chapters — encoded as a structured JSON dataset with cell-level position labels, mishnah verse numbers, and structural markers identifying horizontal parallels, vertical threads, internal parallels, chiastic patterns, and envelope closures.",
       "url": "https://chaver.com/Mishnah-New/Hebrew/Text/mishnah-data",
       "identifier": [
         "https://doi.org/10.5281/zenodo.20179532",
@@ -381,7 +381,7 @@
 <p class="subtitle">המשנה כדרכה — Machine-Readable Dataset · 524 Chapters · 4,442 Cells · 2,276 Structural Markers · Free</p>
 
 <p><strong>The Structured Mishnah Dataset is the only machine-readable Mishnah edition that encodes compositional structure — cell positions, row/column labels, and 2,276 structural markers across all 524 chapters. Free JSON download, CC-BY license.</strong></p>
-<p>The complete Hebrew text of the Mishnah as a structured JSON dataset. All six orders, sixty-three tractates, and 524 chapters — encoded as two-dimensional weaves with cell-level position labels, mishnah verse numbers, and structural markers identifying parallels, chiastic patterns, and envelope closures across forty years of compositional analysis.</p>
+<p>The complete Hebrew text of the Mishnah as a structured JSON dataset. All six orders, sixty-three tractates, and 524 chapters — encoded as two-dimensional weaves with cell-level position labels, mishnah verse numbers, and structural markers identifying parallels, chiastic patterns, and envelope closures across more than four decades of compositional analysis.</p>
 
 <p>
     <a href="/Mishnah-New/English/mishnah_db.json" class="cta-link download-button-large" download>Download mishnah_db.json</a>
@@ -465,7 +465,7 @@ for key, chapter in data.items():
     if shape == shape[::-1]:
         print(f"{key}: {shape}")</code></pre>
 
-<p>The same approach works for any structural query: chapters with column headers, chapters with envelope closures, chapters whose first and last rows match, chapters with InternalParallel patterns. The structural markers are the queryable surface; forty years of analysis is encoded as data.</p>
+<p>The same approach works for any structural query: chapters with column headers, chapters with envelope closures, chapters whose first and last rows match, chapters with InternalParallel patterns. The structural markers are the queryable surface; more than four decades of analysis are encoded as data.</p>
 
 <!-- analyze-with-ai v1 -->
 <section id="analyze-with-ai" dir="ltr">
@@ -476,13 +476,13 @@ for key, chapter in data.items():
 <h3>Prompt 1 &mdash; Find palindromic chapters</h3>
 <div class="ai-prompt-block">
     <button type="button" class="ai-prompt-copy" aria-label="Copy prompt to clipboard">Copy</button>
-    <pre class="ai-prompt-text">Fetch the Mishnah dataset from https://chaver.com/Mishnah-New/English/mishnah_db.json. Find all chapters whose "shape" field is a palindrome (the array reads the same forwards and backwards). For each palindromic chapter, display the tractate name, chapter number, and shape. What proportion of all 525 chapters are palindromes? What does this imply about the compositional intent of the Mishnah's editors?</pre>
+    <pre class="ai-prompt-text">Fetch the Mishnah dataset from https://chaver.com/Mishnah-New/English/mishnah_db.json. Find all chapters whose "shape" field is a palindrome (the array reads the same forwards and backwards). For each palindromic chapter, display the tractate name, chapter number, and shape. What proportion of all 524 chapters are palindromes? What does this imply about the compositional intent of the Mishnah's editors?</pre>
 </div>
 
 <h3>Prompt 2 &mdash; Explore structural markers</h3>
 <div class="ai-prompt-block">
     <button type="button" class="ai-prompt-copy" aria-label="Copy prompt to clipboard">Copy</button>
-    <pre class="ai-prompt-text">Load https://chaver.com/Mishnah-New/English/mishnah_db.json and examine the structural markers across the dataset. Count how many markers of each type (HorizontalParallel, VerticalThread, InternalParallel, EnvelopeClosure, etc.) appear across all 525 chapters. Which tractates have the highest density of structural markers per cell? Display the top 10.</pre>
+    <pre class="ai-prompt-text">Load https://chaver.com/Mishnah-New/English/mishnah_db.json and examine the structural markers across the dataset. Count how many markers of each type (HorizontalParallel, VerticalThread, InternalParallel, EnvelopeClosure, etc.) appear across all 524 chapters. Which tractates have the highest density of structural markers per cell? Display the top 10.</pre>
 </div>
 
 <h3>Prompt 3 &mdash; Read a chapter as a weave</h3>
@@ -571,7 +571,7 @@ for key, chapter in data.items():
 
 <h2>להורדה חינם: בסיס הנתונים של המשנה כדרכה</h2>
 
-<p>הטקסט המלא של המשנה בעברית כבסיס נתונים מובנה (JSON). כל שישה סדרים, שישים ושלושה מסכתות ו-524 פרקים — מקודדים כאריגים דו-ממדיים עם תוויות מיקום ברמת התא, מספרי משנה, וסימוני מבנה המזהים מקבילות, תבניות כיאסטיות וסגירות מעטפת מתוך ארבעים שנות ניתוח קומפוזיציוני.</p>
+<p>הטקסט המלא של המשנה בעברית כבסיס נתונים מובנה (JSON). כל שישה סדרים, שישים ושלושה מסכתות ו-524 פרקים — מקודדים כאריגים דו-ממדיים עם תוויות מיקום ברמת התא, מספרי משנה, וסימוני מבנה המזהים מקבילות, תבניות כיאסטיות וסגירות מעטפת מתוך יותר מארבעה עשורים של ניתוח קומפוזיציוני.</p>
 
 <p>הנתונים מתאימים לשימוש בכלי מחקר ממוחשבים, מערכות בינה מלאכותית, וכל יישום הזקוק לטקסט המשנה במבנה ספרותי שלו. רישיון: CC-BY. ללא צורך ברישום.</p>
 
@@ -581,7 +581,7 @@ for key, chapter in data.items():
 
 <h2>About the Research</h2>
 
-<p>The Structured Mishnah is based on forty years of systematic analysis by Moshe Kline. The methodology was first presented to Professor David Weiss-Halivni in the early 1980s, who indicated that findings would be significant only if they applied to the whole of the Mishnah — a challenge that drove the complete analysis. The Structured Mishnah was accepted for publication by Ben-Gurion University Press following peer review by Professor Daniel Boyarin (UC Berkeley) and Professor Shamma Friedman.</p>
+<p>The Structured Mishnah is based on more than four decades of systematic analysis by Moshe Kline. The methodology was first presented to Professor David Weiss-Halivni in the early 1980s, who indicated that findings would be significant only if they applied to the whole of the Mishnah — a challenge that drove the complete analysis. The Structured Mishnah was accepted for publication by Ben-Gurion University Press following peer review by Professor Daniel Boyarin (UC Berkeley) and Professor Shamma Friedman.</p>
 
 <p>The same structural methodology applied to the Mishnah was subsequently applied to the Torah, producing the Woven Torah hypothesis. Research on the Torah has been published in the <em>Journal of Biblical Literature</em> (2025), <em>SBL Press</em> (2015), and the <em>Journal of Hebrew Scriptures</em> (2008).</p>
 
