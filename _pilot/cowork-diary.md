@@ -2127,3 +2127,17 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 **Verification:** JSON-LD parses; ends `</html>`; head unchanged. Original kept in `plan\exodus-commentary\site-joined\backup-exodus-map-before-2026-11-16.html`.
 
 **Current state:** in the working tree, NOT committed. The intro paragraph above the map (his text, "quadrant", "pivot points") was not touched.
+
+### 2026-11-16 — Print button on every torah-weave page; Exodus introduction map mended for phones
+
+**What was done:**
+- `torah-weave/Admin/Assets/JS/site-tools.js`: the Print button now also appears on every `/torah-weave/` page with a `main h1` that is not a unit-text or Mishnah-chapter table page; such pages get `body.print-plain`. Unit-text and chapter pages unchanged (`print-ready`, heading and table only).
+- `torah-weave/Admin/Assets/CSS/print.css`: new `@media print` block for `body.print-plain` — whole page, plain: no header, footer, breadcrumb, series navigation; fills and shadows off; tables, `.structure-box` and `.table-scroll-wrapper` kept whole; `.matrix-table` un-shrunk (a printed page is phone-width to the browser).
+- `torah-weave/Exodus/exodus-analysis/overview.html` replaced (216,353 bytes): the map's inner tables are `matrix-table` without `small-table`, outer layout table `width="100%"`; `small-table` kept only on tables whose first column is short labels. Words unchanged.
+
+**What failed and why:**
+- The page published earlier today broke on phones and in browser print: `.matrix-table.small-table :first-child { white-space: nowrap }` with the phone rule `word-break: break-word` crushed the second column of each two-column map table to one letter wide. Do not put `small-table` on a table whose first column is not a short label. Test new pages at 400px and in print emulation, not only at desktop width.
+
+**Verification:** tested on local copies served at their site paths (Chrome): Exodus introduction, Genesis Unit 7 commentary, Genesis and Leviticus overviews, plagues article — one button each, plain print; Genesis Unit 7 text page as before; no script errors. Hebrew pages and pages outside `/torah-weave/` not tested (the latter get no button).
+
+**Current state:** in the working tree, NOT committed. Originals of the two site-wide files kept in `plan\exodus-commentary\site-joined\backup-*-before-2026-11-16.*`.

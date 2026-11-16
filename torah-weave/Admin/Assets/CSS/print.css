@@ -75,3 +75,30 @@ html[lang="he"] .print-button { font-family: var(--font-hebrew, 'Frank Ruhl Libr
   body.print-ready table.scripture-table thead { display: table-header-group; }
   body.print-ready table.scripture-table tr { break-inside: avoid; page-break-inside: avoid; }
 }
+
+/* ==========================================================
+   A PLAIN COPY OF A WHOLE PAGE (16 Nov 2026) — commentaries, the
+   introductions to the books, articles. site-tools.js puts the class
+   print-plain on the body of every torah-weave page that is not a
+   unit-text or Mishnah-chapter page. White paper, no menu or footer,
+   the whole text; tables, maps and framed boxes are kept whole and
+   keep their lines; fills and shadows are dropped to save ink.
+   ========================================================== */
+@media print {
+  body.print-plain, body.print-plain main, body.print-plain article { max-width: none !important; width: auto !important; margin: 0 !important; padding: 0 !important; }
+  body.print-plain .breadcrumb, body.print-plain .series-navigation, body.print-plain .unit-navigation { display: none !important; }
+  body.print-plain *, body.print-plain *::before, body.print-plain *::after { background: none !important; background-color: transparent !important; background-image: none !important; box-shadow: none !important; text-shadow: none !important; }
+  body.print-plain, body.print-plain p, body.print-plain li, body.print-plain td, body.print-plain th, body.print-plain h1, body.print-plain h2, body.print-plain h3, body.print-plain h4 { color: #111 !important; }
+  body.print-plain a { color: #111 !important; border-bottom: 0 !important; text-decoration: none !important; }
+  body.print-plain .unit-header-section { border: 0 !important; border-bottom: 1px solid #999 !important; border-radius: 0 !important; padding: 0 0 8pt !important; margin: 0 0 14pt !important; }
+  body.print-plain .unit-header-section h1, body.print-plain .unit-header-section .unit-meta { color: #111 !important; }
+  body.print-plain h1, body.print-plain h2, body.print-plain h3, body.print-plain h4 { break-after: avoid; page-break-after: avoid; }
+  body.print-plain p { orphans: 3; widows: 3; }
+  body.print-plain table, body.print-plain tr, body.print-plain .structure-box, body.print-plain .table-scroll-wrapper, body.print-plain blockquote { break-inside: avoid; page-break-inside: avoid; }
+  body.print-plain .table-scroll-wrapper { overflow: visible !important; border: 0 !important; }
+  /* a printed page is as narrow as a phone to the browser: undo the phone shrink of the tables */
+  body.print-plain .matrix-table { font-size: 0.85em !important; line-height: 1.35 !important; }
+  body.print-plain .matrix-table th, body.print-plain .matrix-table td { padding: 5px 6px !important; word-break: normal !important; border: 0.6pt solid #999 !important; }
+  body.print-plain .structure-box { border: 1.2pt solid #333 !important; }
+  body.print-plain p:has(+ .table-scroll-wrapper), body.print-plain p:has(+ table) { break-after: avoid; page-break-after: avoid; }
+}
