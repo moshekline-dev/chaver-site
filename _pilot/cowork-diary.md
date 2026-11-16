@@ -2081,3 +2081,38 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 
 **Next step:**
 - Moshe: review diff in GitHub Desktop (the diff will show the restored script handlers + closing tags as additions), commit + push, purge Cloudflare cache. After deploy: confirm nav dropdowns work on the live Torah-pdf page.
+
+
+### 2026-11-16 — Exodus introduction: one joined page in place of five
+
+**What was done:**
+- `torah-weave/Exodus/exodus-analysis/overview.html` replaced by the joined introduction (overview and Parts A-D on one page, with a table of contents and notes at the end): 216,734 bytes, SHA-256 9f062295f54de3023340d4e117ea39559f538fcec478edde3c3a6c0964169a99, copied byte for byte from `plan\exodus-commentary\site-joined\overview.html` (rendered from `_templates/Academic-Content-EN.html`).
+- The four separate part pages of 2026-10-18 removed: `units-of-exodus.html`, `the-map-of-exodus.html`, `the-five-columns.html`, `architecture-and-meaning-in-exodus.html`.
+- The five pages as they were copied first to `_backup-exodus-intro-2026-10-18/` (byte counts verified: 36,151; 76,932; 66,508; 61,299; 63,978).
+- `_redirects`: eight rules added at the top of section 0 (each old part address, with and without `.html`, to the overview, 301); the section's comment line extended. 172 rules before, 180 after.
+- `sitemap.xml`: the four old entries removed; the overview's lastmod set to 2026-11-16. 902 url blocks before, 898 after; parses; CRLF kept.
+- `llms.txt`: the five Exodus introduction lines replaced by one.
+
+**Files modified:**
+- `torah-weave/Exodus/exodus-analysis/overview.html` (replaced), four files in the same folder (deleted), `_redirects`, `sitemap.xml`, `llms.txt`, `_backup-exodus-intro-2026-10-18/` (new, five files), `_pilot/cowork-diary.md`.
+
+**NOT modified:**
+- `torah-weave/commentary.html`, the nineteen Exodus unit pages (their links to the overview stay good), the old `exodus-map` page, `main.css`, the templates, anything Hebrew.
+
+**Verification:**
+- New page: begins with DOCTYPE and the rendered-from marker, ends `</html>`; two JSON-LD blocks parse; one canonical tag; every in-page link has its target; every class used in the article is in `main.css` (breadcrumb, cell-label, matrix-table, row-header, section-divider, small-table, structure-box, t-head, table-scroll-wrapper, toc, unit-header-section, unit-meta).
+- Internal links: all resolve in the repo except three in the template's own menu and footer that use old `.htm` addresses forwarded by `_redirects` section 1 (`Torah Portal.htm`, `TheMishnah.htm`, `Introduction to the Structured Mishnah.htm`); these are on every English page and were not touched.
+- Repo-wide search for the four old page names: only the new rules in `_redirects`.
+
+**Decisions locked:**
+- Moshe, 2026-11-16: the one joined page replaces the four part pages ("replace"). The joined page takes the overview's address so that no existing link changes.
+- The map of Exodus is drawn with each quarter in a frame using existing classes only: a `structure-box` holding a small `matrix-table`, set in a plain layout table. The chapter grid of Part A is a small plain `matrix-table small-table` with X, / and a flag mark, not the coloured `chapter-grid`.
+
+**What failed and why:**
+- A `git status` run from the linked Linux shell hung for two minutes. No git command was used for this task.
+
+**Current state:**
+- All changes in the working tree, NOT committed. The page is rebuilt from the drafts by `plan\commentary\tools\site\build_joined.py`; this task was carried out by `plan\exodus-commentary\tools\publish_exodus_joined_intro.py`.
+
+**Next step:**
+- Moshe: review in GitHub Desktop, commit, push, purge the Cloudflare cache. Then check live: the overview address shows the joined page; `/torah-weave/Exodus/exodus-analysis/units-of-exodus` lands on it.
