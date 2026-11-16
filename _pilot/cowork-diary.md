@@ -2116,3 +2116,14 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 
 **Next step:**
 - Moshe: review in GitHub Desktop, commit, push, purge the Cloudflare cache. Then check live: the overview address shows the joined page; `/torah-weave/Exodus/exodus-analysis/units-of-exodus` lands on it.
+
+### 2026-11-16 — Exodus map page: table corrected, essay replaced by a pointer
+
+**What was done:**
+- `torah-weave/Exodus/exodus-map/exodus-map.html` (47,181 -> 28,355 bytes), exact-match edits: the nineteen unit names set to those of the introduction's map; verses corrected for Unit 7 (18:1-20:22), Unit 13 (29:1-37), Unit 14 (29:38-31:17); each unit's `title` text set to its name (the older descriptions removed); "Hover over a unit for a fuller description." removed; legend "pivot units" -> "stand alone".
+- The essay in `div.torah-book-description` ("The Sophisticated Structure of Exodus", nine sections) removed on Moshe's word; one paragraph in its place linking to `/torah-weave/Exodus/exodus-analysis/overview`.
+- `sitemap.xml`: lastmod of the map page set to 2026-11-16.
+
+**Verification:** JSON-LD parses; ends `</html>`; head unchanged. Original kept in `plan\exodus-commentary\site-joined\backup-exodus-map-before-2026-11-16.html`.
+
+**Current state:** in the working tree, NOT committed. The intro paragraph above the map (his text, "quadrant", "pivot points") was not touched.
