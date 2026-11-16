@@ -101,4 +101,16 @@ html[lang="he"] .print-button { font-family: var(--font-hebrew, 'Frank Ruhl Libr
   body.print-plain .matrix-table th, body.print-plain .matrix-table td { padding: 5px 6px !important; word-break: normal !important; border: 0.6pt solid #999 !important; }
   body.print-plain .structure-box { border: 1.2pt solid #333 !important; }
   body.print-plain p:has(+ .table-scroll-wrapper), body.print-plain p:has(+ table) { break-after: avoid; page-break-after: avoid; }
+  /* pages: each part of a joined introduction starts a new page */
+  body.print-plain section[id^="part-"], body.print-plain section#notes-section { break-before: page; page-break-before: always; }
 }
+
+/* ==========================================================
+   PAGE NUMBERS (16 Nov 2026) — every printed page of the site, the
+   unit tables included, carries its number at the foot. Browsers
+   that do not know page-margin boxes simply leave it out.
+   ========================================================== */
+@media print {
+  @page { margin: 14mm 12mm 18mm; @bottom-center { content: counter(page); font-family: Georgia, 'Times New Roman', serif; font-size: 9pt; color: #555; } }
+}
+

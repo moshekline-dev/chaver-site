@@ -2141,3 +2141,4 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 **Verification:** tested on local copies served at their site paths (Chrome): Exodus introduction, Genesis Unit 7 commentary, Genesis and Leviticus overviews, plagues article — one button each, plain print; Genesis Unit 7 text page as before; no script errors. Hebrew pages and pages outside `/torah-weave/` not tested (the latter get no button).
 
 **Current state:** in the working tree, NOT committed. Originals of the two site-wide files kept in `plan\exodus-commentary\site-joined\backup-*-before-2026-11-16.*`.
+- Later the same day: `print.css` also sets a page number at the foot of every printed page (`@page { @bottom-center { content: counter(page) } }`, margins 14mm 12mm 18mm) and, for `body.print-plain`, starts `section[id^="part-"]` and `#notes-section` on a new page. Tested in Chrome; not committed.
