@@ -2143,3 +2143,37 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 **Current state:** in the working tree, NOT committed. Originals of the two site-wide files kept in `plan\exodus-commentary\site-joined\backup-*-before-2026-11-16.*`.
 - Later the same day: `print.css` also sets a page number at the foot of every printed page (`@page { @bottom-center { content: counter(page) } }`, margins 14mm 12mm 18mm) and, for `body.print-plain`, starts `section[id^="part-"]` and `#notes-section` on a new page. Tested in Chrome; not committed.
 - Later the same day: `torah-weave/commentary.html`, four exact-match edits on Moshe's word ("yes change"): Exodus now listed as available; "(commentary forthcoming)" removed from its heading; its description replaced (four quarters and three units that stand alone, in place of quadrants and Ezekiel's chariot); its first link renamed "The Architecture of Exodus: overview and Parts A–D". `sitemap.xml` lastmod for the page set to 2026-11-16. Original kept in `plan\exodus-commentary\site-joined\backup-commentary-page-before-2026-11-16.html`. Not committed.
+
+### 2026-11-25 — Exodus Unit 1 commentary published; links made
+
+**What was done:**
+- New page `torah-weave/Exodus/exodus-unit-1/exodus-unit-1-commentary.html` (73,998 bytes, SHA-256 32b2c4ef8d9b61a9234253125a45da8e3007008ce9fc8ed027bf5ca4b628f313), copied byte for byte from `plan\exodus-commentary\site-unit-1-2026-11-25-draft-14\` (rendered from `_templates/Academic-Content-EN.html` by `plan\commentary\tools\site\build_unit_commentary.py` from draft 14 of the commentary). Title: "Exodus Unit 1: The People in Egypt, and One Man at the Bush". The first Exodus unit commentary.
+- `torah-weave/Exodus/exodus-unit-1/exodus-unit-1.html`: the `aside.commentary-link` block added after the header, word for word as on the Leviticus unit pages, pointing to the new page (42,449 -> 42,746 bytes; CRLF kept).
+- `sitemap.xml`: one url block added for the commentary (priority 0.70, lastmod 2026-11-25); lastmod of the Unit 1 text page set to 2026-11-25. 898 url blocks before, 899 after; parses; CRLF kept.
+- `llms.txt`: the Exodus 1 line now ends with its commentary, as the Genesis and Leviticus lines do; "Genesis complete; Leviticus in progress." -> "Genesis complete; Leviticus and Exodus in progress."
+
+**Files modified:**
+- The new page; `torah-weave/Exodus/exodus-unit-1/exodus-unit-1.html`; `sitemap.xml`; `llms.txt`; `_pilot/cowork-diary.md`.
+
+**NOT modified:**
+- `torah-weave/commentary.html` (it lists no single unit commentary for any book), the Exodus introduction, the other Exodus unit pages, `main.css`, the templates, `_redirects`, anything Hebrew.
+
+**Decisions locked:**
+- Moshe, 2026-11-25: "publish the commentary to the site and make necessary links". The page is in the form of the finished Genesis and Leviticus unit commentaries (breadcrumb, header, small map of the book with the unit marked, sections, matrix-table of the unit, link box, unit navigation, citation box, series navigation), with every figure numbered and captioned (`<caption align="bottom">`), table cells `valign="top"`.
+
+**Proven patterns:**
+- The small map and the large map of Exodus are drawn as in the introduction: each quarter a `structure-box` holding a `matrix-table`, in a plain layout table (`width="250"` for the small one, `width="100%"` for the large). `small-table` only on the table whose first column is short labels (Figure 3).
+- Unit navigation: where the neighbouring unit has no commentary yet, `span.nav-disabled`. When the Unit 2 commentary is published, the "next" link on this page is to be made live.
+
+**Verification:**
+- New page: DOCTYPE and rendered-from marker, ends `</html>`, three JSON-LD blocks parse, one canonical, no inline style in the article, classes all from `main.css` except `unit-position-map` and `unit-link-box` (the class names the finished unit commentaries use; `main.css` has no rule for them). Every internal link in the article has its file in the repo and every `overview#...` anchor its id. At 400px wide (Chrome): no sideways overflow, no column crushed; the wide tables shrink as every `matrix-table` does under `main.css`.
+
+**What failed and why:**
+- A recursive grep over the whole repo from the linked shell timed out (two minutes). Search named files, not the tree.
+
+**Current state:**
+- All changes in the working tree, NOT committed. The linking edits were made by `plan\exodus-commentary\tools\publish_exodus_unit_1_commentary.py`; the originals of the three edited files are in `plan\exodus-commentary\site-unit-1-published-2026-11-25\`.
+
+**Next step:**
+- Moshe: review in GitHub Desktop, commit, push, purge the Cloudflare cache. Then check live: `/torah-weave/Exodus/exodus-unit-1/exodus-unit-1-commentary` shows the page, and the Unit 1 text page shows the link to it.
+- Later the same day, on Moshe's word ("yes"): `torah-weave/commentary.html`, one exact-match addition under Exodus, between the link to the introduction and the link to the map: "Commentary on Unit 1: The People in Egypt, and One Man at the Bush" -> the new page (25898 -> 26053 bytes). `sitemap.xml`: lastmod of the Commentary page set to 2026-11-25. Original kept in `plan\exodus-commentary\site-unit-1-published-2026-11-25\`. Not committed. The first single unit commentary named on that page; later Exodus unit commentaries can be added as lines beside it.
