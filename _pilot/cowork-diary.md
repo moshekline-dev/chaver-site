@@ -2177,3 +2177,42 @@ EN files: 5 `.has-dropdown` items + 5 `.submenu` blocks (Torah/Insights/Mishnah/
 **Next step:**
 - Moshe: review in GitHub Desktop, commit, push, purge the Cloudflare cache. Then check live: `/torah-weave/Exodus/exodus-unit-1/exodus-unit-1-commentary` shows the page, and the Unit 1 text page shows the link to it.
 - Later the same day, on Moshe's word ("yes"): `torah-weave/commentary.html`, one exact-match addition under Exodus, between the link to the introduction and the link to the map: "Commentary on Unit 1: The People in Egypt, and One Man at the Bush" -> the new page (25898 -> 26053 bytes). `sitemap.xml`: lastmod of the Commentary page set to 2026-11-25. Original kept in `plan\exodus-commentary\site-unit-1-published-2026-11-25\`. Not committed. The first single unit commentary named on that page; later Exodus unit commentaries can be added as lines beside it.
+
+### 2026-11-27 — Exodus Unit 2 commentary published; links made
+
+**What was done:**
+- New page `torah-weave/Exodus/exodus-unit-2/exodus-unit-2-commentary.html` (88,957 bytes, SHA-256 faaa3dc049d1f35402214387ba5b986af6c0f516698b1a6c4487f2b83b1049ba), copied byte for byte from `plan\exodus-commentary\site-unit-2-2026-11-27-draft-13-for-publishing\` (rendered from `_templates/Academic-Content-EN.html` by `plan\commentary\tools\site\build_exodus_unit_commentary.py` from draft 13 of the commentary). Title: "Exodus Unit 2: Before Pharaoh: The Refusing Begins". The second Exodus unit commentary.
+- `torah-weave/Exodus/exodus-unit-1/exodus-unit-1-commentary.html`: the "next" link in the unit navigation made live (`span.nav-disabled` -> `a rel="next"` to the new page; 73,998 -> 74,048 bytes). No other byte changed.
+- `torah-weave/Exodus/exodus-unit-2/exodus-unit-2.html`: the placeholder box (`aside.commentary-link-box`, "Analysis of this unit's structure and patterns coming soon.") replaced by the `aside.commentary-link` block, word for word as on the Unit 1 text page and the Leviticus unit pages, pointing to the new page (36,848 -> 36,966 bytes; CRLF kept).
+- `sitemap.xml`: one url block added for the commentary (priority 0.70, lastmod 2026-11-27); lastmod set to 2026-11-27 for the Unit 2 text page, the Unit 1 commentary and the Commentary page. 899 url blocks before, 900 after; parses; CRLF kept.
+- `llms.txt`: the Exodus 2 line now ends with its commentary, as the Exodus 1 line does.
+- `torah-weave/commentary.html`: one line added under Exodus, after the line for Unit 1: "Commentary on Unit 2: Before Pharaoh: The Refusing Begins" -> the new page (26,053 -> 26,199 bytes).
+
+**Files modified:**
+- The new page; `torah-weave/Exodus/exodus-unit-1/exodus-unit-1-commentary.html`; `torah-weave/Exodus/exodus-unit-2/exodus-unit-2.html`; `sitemap.xml`; `llms.txt`; `torah-weave/commentary.html`; `_pilot/cowork-diary.md`.
+
+**NOT modified:**
+- The Exodus introduction, the other Exodus unit pages (Units 3 to 19 still carry the "coming soon" box where they have one), the Hebrew pages, `main.css`, the templates, `_redirects`.
+
+**Decisions locked:**
+- Moshe, 2026-11-27, 05:50: "yes", to publishing draft 13 to the site. The page has the form of the Unit 1 commentary, with one section more at the end, "For Further Reflection" (reasoned speculation, said to be so in its first paragraph).
+- Moshe, 2026-11-26: the commentary speaks of the text, not of the marks. This page does not mention marks. The Unit 1 commentary does, in four places; whether it is brought into line is his to say.
+
+**Proven patterns:**
+- The same builder serves any Exodus unit (`build_exodus_unit_commentary.py N draft.md REPO OUTDIR`); the tables of the draft are recognised by what they are. The linking edits are made by `plan\exodus-commentary\tools\publish_exodus_unit_2_commentary.py`, which can be run twice.
+- Where a unit's text page has the "coming soon" box, it is replaced by the link block; where it has none (Unit 1), the block is added after the header.
+- The reading copy (PDF) is made from the standalone file, not from this page. Its print block must name its paper (`@page { size: A4 }`), because `main.css` has `@page { size: letter }` for another article.
+
+**Verification:**
+- New page: DOCTYPE and rendered-from marker, ends `</html>`, JSON-LD blocks parse, one canonical, no inline style in the article, classes all from `main.css` except `unit-position-map` and `unit-link-box` (as on the Unit 1 commentary). Every internal link in the article has its file in the repo and every `overview#...` anchor its id; three links of the template's menu have no file and are served by `_redirects`, as on every page. 91 paragraphs of the draft, all on the page word for word. At 400px wide (Chrome): no sideways overflow; the wide tables shrink as every `matrix-table` does under `main.css`.
+- Each edited file compared with its original line by line: only the lines named above differ.
+
+**What failed and why:**
+- Nothing in the publishing. Before it: the reading copy had 13 mm of extra blank at the head and foot of every page, from the `size: letter` rule named above (found 26 Nov at Moshe's word, mended in the builder).
+
+**Current state:**
+- All changes in the working tree, NOT committed. The originals of the six edited files are in `plan\exodus-commentary\site-unit-2-published-2026-11-27\`.
+
+**Next step:**
+- Moshe: review in GitHub Desktop, commit, push, purge the Cloudflare cache. Then check live: `/torah-weave/Exodus/exodus-unit-2/exodus-unit-2-commentary` shows the page; the Unit 2 text page shows the link to it; the Unit 1 commentary's "next" arrow leads to it; the Commentary page lists it under Exodus.
+- When the Unit 3 commentary is published, the "next" link on the Unit 2 commentary is to be made live.
